@@ -1,10 +1,11 @@
 import clsx from 'clsx';
+import { motion } from 'framer-motion';
 
 import styles from './index.module.css';
 
 import ArrowLink from '../../links/ArrowLink';
 import ButtonLink from '../../links/ButtonLink';
-
+import { underline } from '../../../lib/animationConfig';
 const ColumnSection = ({
   id,
   imgSrc,
@@ -27,7 +28,12 @@ const ColumnSection = ({
         <img className={styles.img} src={imgSrc} alt={title} />
         <div className={styles.infoContainer}>
           <h2 className='h1'>{title}</h2>
-          <hr className='styled-hr' />
+          <motion.hr
+            variants={underline}
+            initial='hidden'
+            whileInView='visible'
+            className='styled-hr'
+          />
           <ul>{children}</ul>
           <div className={styles.btns}>
             {buttonLinks?.map((buttonLink) => (

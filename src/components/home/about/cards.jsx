@@ -1,10 +1,26 @@
 import clsx from 'clsx';
+import { motion, useAnimation } from 'framer-motion';
+import { useEffect } from 'react';
+import { useInView } from 'react-intersection-observer';
 
 import styles from './index.module.css';
 
-import ArrowLink from '../../links/ArrowLink';
-import ButtonLink from '../../links/ButtonLink';
-const cards = ({ background = 'static' }) => {
+import CardLayout from './CardLayout';
+import { container, items } from '../../../lib/animationConfig';
+
+const Cards = ({ background = 'static' }) => {
+  const [ref, inView] = useInView({
+    threshold: 0.19,
+    // triggerOnce:true,
+  });
+  const animation = useAnimation();
+  useEffect(() => {
+    if (inView) {
+      animation.start('visible');
+    } else {
+      animation.start('hidden');
+    }
+  });
   return (
     <section
       className={clsx(
@@ -13,30 +29,23 @@ const cards = ({ background = 'static' }) => {
       )}
     >
       <div className={clsx('layout', styles.layout)}>
-        <div className={styles.cards}>
+        <motion.div
+          ref={ref}
+          variants={container}
+          initial='hidden'
+          animate={animation}
+          className={styles.cards}
+        >
           {data.map((item) => (
-            <Card key={item.title} {...item} />
+            <CardLayout variants={items} key={item.title} {...item} />
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );
 };
 
-export default cards;
-
-const Card = ({ title, link, description, btnText }) => {
-  return (
-    <div className={styles.card} key={title}>
-      <h2 className='h1'> {title} </h2>
-      <hr className='styled-hr styled-hr--dark'></hr>
-      <p>{description}</p>
-      <ArrowLink as={ButtonLink} className={styles.btn} href={link}>
-        {btnText}
-      </ArrowLink>
-    </div>
-  );
-};
+export default Cards;
 
 const data = [
   {

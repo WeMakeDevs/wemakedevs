@@ -1,45 +1,54 @@
 import clsx from 'clsx';
+import { motion, useAnimation } from 'framer-motion';
+import { useEffect } from 'react';
 import { FaDiscord, FaScroll, FaTelegram } from 'react-icons/fa';
+import { useInView } from 'react-intersection-observer';
 
 import styles from './index.module.css';
 
-import UnstyledLink from '../../links/UnstyledLink';
+import JoinusCardLayout from './JoinUsCardLayout';
+import { container, items, underline } from '../../../lib/animationConfig';
 
 function JoinUs() {
+  const [ref, inView] = useInView({
+    threshold: 0.19,
+    // triggerOnce:true,
+  });
+  const animation = useAnimation();
+  useEffect(() => {
+    if (inView) {
+      animation.start('visible');
+    } else {
+      animation.start('hidden');
+    }
+  });
   return (
     <section className={styles.section} id='joinus'>
       <div className={clsx(styles.layout, 'layout')}>
         <h2 className='h1'>Join Us</h2>
-        <hr className='styled-hr' />
-        <div className={styles.wrapperCard}>
+        <motion.hr
+          variants={underline}
+          intial='hidden'
+          whileInView='visible'
+          className='styled-hr'
+        />
+        <motion.div
+          ref={ref}
+          variants={container}
+          initial='hidden'
+          animate={animation}
+          className={styles.wrapperCard}
+        >
           {data.map((item) => (
-            <JoinUsCard key={item.title} {...item} />
+            <JoinusCardLayout variants={items} key={item.title} {...item} />
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );
 }
 
 export default JoinUs;
-
-const JoinUsCard = ({ title, href, description, icon }) => {
-  return (
-    <UnstyledLink href={href} className={styles.container}>
-      <div className={clsx(styles.card, styles[title])}>
-        <div className={clsx(styles.face, styles.face1)}>
-          <div className={styles.icon}>{icon}</div>
-        </div>
-        <div className={clsx(styles.face, styles.face2)}>
-          <div className={styles.content}>
-            <h3>{title}</h3>
-            <p>{description}</p>
-          </div>
-        </div>
-      </div>
-    </UnstyledLink>
-  );
-};
 
 const data = [
   {

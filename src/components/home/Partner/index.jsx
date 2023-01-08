@@ -1,4 +1,5 @@
 import clsx from 'clsx';
+import { motion } from 'framer-motion';
 import * as React from 'react';
 import { BsClipboard } from 'react-icons/bs';
 
@@ -6,6 +7,7 @@ import styles from './index.module.css';
 
 import Button from '../../Button';
 import ButtonLink from '../../links/ButtonLink';
+import { underline } from '../../../lib/animationConfig';
 const Partner = ({ background = 'static' }) => {
   const [copied, setCopied] = React.useState(false);
   const copyEmail = () => {
@@ -31,7 +33,12 @@ const Partner = ({ background = 'static' }) => {
     >
       <div className={clsx('layout', styles.layout)}>
         <h2 className='h1'>Partner with us</h2>
-        <hr className='styled-hr' />
+        <motion.hr
+          variants={underline}
+          initial='hidden'
+          whileInView='visible'
+          className='styled-hr'
+        />
         <p>
           You can partner with us if you want to host hackathons, talks and
           events. Let’s help each other and grow together!

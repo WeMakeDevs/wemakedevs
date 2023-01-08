@@ -1,16 +1,24 @@
 import clsx from 'clsx';
+import { motion } from 'framer-motion';
 
 import styles from './index.module.css';
 
 import ArrowLink from '../../links/ArrowLink';
 import ButtonLink from '../../links/ButtonLink';
-
+import { container1, items1 } from '../../../lib/animationConfig';
 const Header = () => {
   return (
     <section className={styles['header-container']}>
-      <div className={clsx('layout', styles.layout)}>
-        <h1 className={styles.h1}>Inspire, Educate, Empower</h1>
-        <p className={styles.tagLine}>
+      <motion.div
+        variants={container1}
+        initial='hidden'
+        animate='visible'
+        className={clsx('layout', styles.layout)}
+      >
+        <motion.h1 variants={items1} className={styles.h1}>
+          Inspire, Educate, Empower
+        </motion.h1>
+        <motion.p variants={items1} className={styles.tagLine}>
           This is a community which provides{' '}
           <span className='highlight highlight--light'>
             free hands-on training
@@ -19,8 +27,8 @@ const Header = () => {
           focusing on a{' '}
           <span className='highlight highlight--light'>learn by doing</span>{' '}
           approach.
-        </p>
-        <div className={styles.links}>
+        </motion.p>
+        <motion.div variants={items1} className={styles.links}>
           <ArrowLink
             variant='outline'
             as={ButtonLink}
@@ -34,8 +42,8 @@ const Header = () => {
           >
             See Courses
           </ArrowLink>
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </section>
   );
 };

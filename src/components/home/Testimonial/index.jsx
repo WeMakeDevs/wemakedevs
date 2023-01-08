@@ -1,11 +1,29 @@
 import clsx from 'clsx';
+import { motion, useAnimation } from 'framer-motion';
+import { useEffect } from 'react';
+import { useInView } from 'react-intersection-observer';
 
 import styles from './index.module.css';
 
 import ekjottest2 from './../../../assets/home/ekjottest2.jpg';
 import rahultest1 from './../../../assets/home/rahultest1.jpg';
 import sajjantest3 from './../../../assets/home/sajjantest3.jpg';
+import TestimonialLayout from './TestimonialLayout';
+import { container, items, underline } from '../../../lib/animationConfig';
+
 const Testimonials = ({ background = 'static' }) => {
+  const [ref, inView] = useInView({
+    threshold: 0.19,
+    // triggerOnce:true,
+  });
+  const animation = useAnimation();
+  useEffect(() => {
+    if (inView) {
+      animation.start('visible');
+    } else {
+      animation.start('hidden');
+    }
+  });
   return (
     <section
       id='testimonials'
@@ -13,30 +31,29 @@ const Testimonials = ({ background = 'static' }) => {
     >
       <div className={clsx('layout', styles.layout)}>
         <h2 className='h1'>Testimonials</h2>
-        <hr className={clsx('styled-hr', styles.headingLine)} />
-        <div className={styles.cardWrapper}>
+        <motion.hr
+          variants={underline}
+          initial='hidden'
+          whileInView='visible'
+          className={clsx('styled-hr', styles.headingLine)}
+        />
+        <motion.div
+          ref={ref}
+          variants={container}
+          initial='hidden'
+          animate={animation}
+          className={styles.cardWrapper}
+        >
           {data.map((item) => (
-            <TestimonialCard key={item.from} {...item} />
+            <TestimonialLayout variants={items} key={item.from} {...item} />
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );
 };
 
 export default Testimonials;
-
-const TestimonialCard = ({ src, description, from, designation }) => {
-  return (
-    <div className={styles.card}>
-      <img alt='testimonial' className={styles.img} src={src} />
-      <p className={styles.description}>{description}</p>
-      <hr className={clsx('styled-hr styled-hr--light', styles.hr)} />
-      <h2 className={styles.name}>{from}</h2>
-      <p className={styles.designation}>{designation}</p>
-    </div>
-  );
-};
 
 const data = [
   {

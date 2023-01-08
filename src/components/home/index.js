@@ -12,4 +12,4 @@ export { default as Partner } from './Partner';
 export { default as Podcast } from './Podcast';
 export { default as Stats } from './Stats';
 export { default as Testimonials } from './Testimonial';
-export { default as Work } from './Work';
+export { default as Work } from './Work/index';
