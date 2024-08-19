@@ -39,4 +39,7 @@
   body {
     @apply bg-background text-foreground;
   }
+  .nav-h-mobile {
+    height: calc(100dvh - 80px);
+  }
 }
