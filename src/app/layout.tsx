@@ -3,6 +3,7 @@ import { Space_Grotesk as FontMono } from "next/font/google";
 import localFont from 'next/font/local'
 import "./globals.css";
 import { cn } from "@/lib/utils";
+import Navbar from "@/components/Navbar";
 
 const fontMono = FontMono({
   subsets: ['latin'],
@@ -37,7 +38,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={cn('min-h-screen bg-background font-body antialiased', fontSans.variable, fontMono.variable)}>{children}</body>
+      <body className={cn('min-h-screen bg-background font-body antialiased', fontSans.variable, fontMono.variable)}>
+        <Navbar />
+        {children}
+      </body>
     </html>
   );
 }
