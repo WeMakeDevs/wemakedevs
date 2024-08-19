@@ -1,8 +1,29 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Space_Grotesk as FontMono } from "next/font/google";
+import localFont from 'next/font/local'
 import "./globals.css";
+import { cn } from "@/lib/utils";
 
-const inter = Inter({ subsets: ["latin"] });
+const fontMono = FontMono({
+  subsets: ['latin'],
+  variable: '--font-mono'
+})
+
+const fontSans = localFont({
+  src: [
+    {
+      path: '../assets/fonts/Satoshi-Variable.woff2',
+      weight: '300 900',
+      style: 'normal'
+    },
+    {
+      path: '../assets/fonts/Satoshi-VariableItalic.woff2',
+      weight: '300 900',
+      style: 'italic'
+    }
+  ],
+  variable: '--font-sans'
+})
 
 export const metadata: Metadata = {
   title: "WeMakeDevs | The home for hackers",
@@ -16,7 +37,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={cn('min-h-screen bg-background font-body antialiased', fontSans.variable, fontMono.variable)}>{children}</body>
     </html>
   );
 }
