@@ -4,3 +4,7 @@ export type navLinksType = {
   type: "link" | "button";
   openInNewTab?: boolean;
 }[];
+
+export interface GeneralComponent extends React.HTMLAttributes<HTMLDivElement> {
+  className?: string;
+}
