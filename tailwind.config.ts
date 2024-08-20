@@ -1,13 +1,13 @@
-import type { Config } from "tailwindcss"
-import { fontFamily } from 'tailwindcss/defaultTheme'
+import type { Config } from "tailwindcss";
+import { fontFamily } from "tailwindcss/defaultTheme";
 
 const config = {
   darkMode: ["class"],
   content: [
-    './pages/**/*.{ts,tsx}',
-    './components/**/*.{ts,tsx}',
-    './app/**/*.{ts,tsx}',
-    './src/**/*.{ts,tsx}',
+    "./pages/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+    "./app/**/*.{ts,tsx}",
+    "./src/**/*.{ts,tsx}",
   ],
   prefix: "",
   theme: {
@@ -74,12 +74,15 @@ const config = {
         "accordion-up": "accordion-up 0.2s ease-out",
       },
       fontFamily: {
-        "title": ["var(--font-mono)", ...fontFamily.mono],
-        "body": ["var(--font-sans)", ...fontFamily.sans]
-      }
+        title: ["var(--font-mono)", ...fontFamily.mono],
+        body: ["var(--font-sans)", ...fontFamily.sans],
+      },
+      transitionDuration: {
+        slow: "12000ms",
+      },
     },
   },
   plugins: [require("tailwindcss-animate")],
-} satisfies Config
+} satisfies Config;
 
-export default config
+export default config;
