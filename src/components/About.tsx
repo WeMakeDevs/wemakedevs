@@ -9,7 +9,9 @@ import { ViewContainer } from "./ui/view-container";
 const About = ({ className, ...props }: GeneralComponent) => {
   return (
     <section {...props} className={cn(className, "my-14")} id="about">
-      <ViewContainer className="grid grid-cols-1 gap-5 lg:gap-10 md:grid-cols-2 px-6 md:px-8 py-10 md:py-16 rounded-xl bg-foreground/[.02] border border-foreground/10">
+      <ViewContainer className="relative overflow-clip grid grid-cols-1 gap-5 lg:gap-10 md:grid-cols-2 px-6 md:px-8 py-10 md:py-16 rounded-xl bg-foreground/[.02] border border-foreground/10">
+        <div className="absolute w-[200px] h-[200px] rounded-full bg-primary top-0 left-0 blur-[200px] -z-10"></div>
+        <div className="absolute w-[200px] h-[200px] rounded-full bg-secondary bottom-0 right-0 blur-[200px] -z-10"></div>
         <div className="relative hidden md:block">
           <Image
             src={aboutUfo}
