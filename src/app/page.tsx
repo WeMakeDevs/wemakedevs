@@ -1,16 +1,15 @@
 import About from "@/components/About";
+import Hackathons from "@/components/Hackathons";
 import Header from "@/components/Header";
 import Numbers from "@/components/Numbers";
-import { fetchHackathonData } from "@/lib/hackathons";
 
-export default async function Home() {
-  const hackathons = await fetchHackathonData();
-  console.log(hackathons);
+export default function Home() {
   return (
     <div>
       <Header />
       <About />
       <Numbers />
+      <Hackathons />
     </div>
   );
 }
