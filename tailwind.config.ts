@@ -83,6 +83,9 @@ const config = {
       transitionDuration: {
         slow: "12000ms",
       },
+      boxShadow: {
+        secondaryNav: "inset 0 -2px 0 hsl(var(--primary))",
+      },
     },
   },
   plugins: [require("tailwindcss-animate")],
