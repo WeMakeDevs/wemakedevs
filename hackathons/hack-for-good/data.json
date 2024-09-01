@@ -1,0 +1,14 @@
+{
+  "title": "Hack For Good",
+  "image": {
+    "thumbnail": "./thumbnail.jpg",
+    "cover": "./cover.png"
+  },
+  "status": "upcoming",
+  "prize": 7500,
+  "type": "offline",
+  "startDate": "2024-10-01",
+  "endDate": "2024-10-30",
+  "description": "Join the biggest online coding festival of the year and showcase your skills.",
+  "slug": "hack-for-good"
+}
