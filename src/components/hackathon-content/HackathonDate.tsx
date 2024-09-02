@@ -38,9 +38,4 @@ const HackathonDate = ({
   );
 };
 
-// TODO: Add time and date
-// TODO: Make sure to add status based difference
-// TODO: Remove statusChange everywhere
-// NOTE: If needed, remove the functionality of updating every 60 seconds
-
 export default HackathonDate;

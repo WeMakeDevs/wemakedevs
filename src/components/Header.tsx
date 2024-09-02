@@ -1,4 +1,3 @@
-// TODO: Make the section responsive by adding responsive font sizing
 import { heroBg } from "@/assets/images";
 import { cn } from "@/lib/utils";
 import { GeneralComponent } from "@/types";
