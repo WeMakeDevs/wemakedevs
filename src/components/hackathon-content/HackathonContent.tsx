@@ -70,7 +70,13 @@ const HackathonContent = ({
       </nav>
       <ViewContainer>
         {tab == "overview" ? (
-          <Overview />
+          <Overview
+            title={hackathon.title}
+            description={hackathon.description}
+            status={hackathon.status}
+            startDate={hackathon.startDate}
+            endDate={hackathon.endDate}
+          />
         ) : tab == "resources" ? (
           <Resources />
         ) : tab == "rules" ? (

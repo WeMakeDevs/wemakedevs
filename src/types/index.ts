@@ -62,3 +62,12 @@ export interface HackathonCardDatesType extends GeneralComponent {
 export interface HackathonContentType extends GeneralComponent {
   hackathon: HackathonData;
 }
+
+export interface HackathonContentOverview extends GeneralComponent {
+  title: string;
+  description: string;
+  status: HackathonStatusType;
+  startDate: string;
+  endDate: string;
+}
+
