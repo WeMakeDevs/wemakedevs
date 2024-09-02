@@ -71,3 +71,8 @@ export interface HackathonContentOverview extends GeneralComponent {
   endDate: string;
 }
 
+export interface HackathonDateInterface extends GeneralComponent {
+  status: HackathonStatusType;
+  startDate: string;
+  endDate: string;
+}

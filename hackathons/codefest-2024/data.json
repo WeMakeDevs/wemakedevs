@@ -7,8 +7,8 @@
   "status": "upcoming",
   "prize": 5000,
   "type": "online",
-  "startDate": "2024-09-15",
-  "endDate": "2024-09-17",
+  "startDate": "2024-09-03T07:30:00Z",
+  "endDate": "2024-09-27T18:29:00Z",
   "description": "Join the biggest online coding festival of the year and showcase your skills.",
   "slug": "codefest-2024"
 }
