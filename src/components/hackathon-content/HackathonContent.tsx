@@ -68,9 +68,10 @@ const HackathonContent = ({
           </button>
         </ViewContainer>
       </nav>
-      <ViewContainer>
+      <ViewContainer className="py-10">
         {tab == "overview" ? (
           <Overview
+            prize={hackathon.prize}
             title={hackathon.title}
             description={hackathon.description}
             status={hackathon.status}

@@ -2,6 +2,7 @@
 import { cn } from "@/lib/utils";
 import { HackathonDateInterface } from "@/types";
 import { useHackathonStatus } from "@/lib/hooks";
+import { CalendarIcon } from "@radix-ui/react-icons";
 
 const HackathonDate = ({
   startDate,
@@ -21,7 +22,8 @@ const HackathonDate = ({
 
   return (
     <div className={cn(className, "flex justify-between")} {...props}>
-      <div className="">
+      <div className="flex gap-4 items-center">
+        <CalendarIcon className="size-5" />
         {new Date(startDate).toLocaleString("en-GB", options)} -{" "}
         {new Date(endDate).toLocaleString("en-GB", options)}
       </div>
