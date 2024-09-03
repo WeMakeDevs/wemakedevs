@@ -2,6 +2,8 @@ import { HackathonCardStatus } from "@/components/HackathonCard";
 import { cn } from "@/lib/utils";
 import { HackathonContentOverview } from "@/types";
 import HackathonDate from "./HackathonDate";
+import HackathonContentTitle from "./HackathonContentTitle";
+import HackathonContentBody from "./HackathonContentBody";
 
 const Overview = ({
   title,
@@ -10,6 +12,7 @@ const Overview = ({
   startDate,
   endDate,
   prize,
+  about,
   className,
   ...props
 }: HackathonContentOverview) => {
@@ -25,8 +28,15 @@ const Overview = ({
         <HackathonDate startDate={startDate} endDate={endDate} />
         <p className="">Prizes worth: {prize}₹+</p>
       </div>
+      <div className="">
+        <HackathonContentTitle>Overview</HackathonContentTitle>
+        <HackathonContentBody></HackathonContentBody>
+      </div>
     </div>
   );
 };
+
+// TODO: Add UI ELEMENts
+// RENDER ALL THE TABS
 
 export default Overview;

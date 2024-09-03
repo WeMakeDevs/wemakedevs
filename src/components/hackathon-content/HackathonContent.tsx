@@ -6,6 +6,8 @@ import { useState } from "react";
 import { ViewContainer } from "../ui/view-container";
 
 import { Overview, Resources, Rules, Projects, Submit } from "./index";
+import HackathonContentTitle from "./HackathonContentTitle";
+import HackathonContentBody from "./HackathonContentBody";
 
 const HackathonContent = ({
   hackathon,
@@ -77,6 +79,7 @@ const HackathonContent = ({
             status={hackathon.status}
             startDate={hackathon.startDate}
             endDate={hackathon.endDate}
+            about={hackathon.about}
           />
         ) : tab == "resources" ? (
           <Resources />
@@ -91,5 +94,7 @@ const HackathonContent = ({
     </div>
   );
 };
+
+// TODO: Render MDX
 
 export default HackathonContent;

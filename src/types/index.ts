@@ -70,6 +70,7 @@ export interface HackathonContentOverview extends GeneralComponent {
   startDate: string;
   endDate: string;
   prize: number;
+  about: string;
 }
 
 export interface HackathonDateInterface extends GeneralComponent {
