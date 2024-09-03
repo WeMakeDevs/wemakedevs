@@ -4,10 +4,9 @@ import { cn } from "@/lib/utils";
 import { HackathonContentType } from "@/types";
 import { useState } from "react";
 import { ViewContainer } from "../ui/view-container";
+import { MDXRemote } from "next-mdx-remote/rsc";
 
 import { Overview, Resources, Rules, Projects, Submit } from "./index";
-import HackathonContentTitle from "./HackathonContentTitle";
-import HackathonContentBody from "./HackathonContentBody";
 
 const HackathonContent = ({
   hackathon,
@@ -80,7 +79,9 @@ const HackathonContent = ({
             startDate={hackathon.startDate}
             endDate={hackathon.endDate}
             about={hackathon.about}
-          />
+          >
+            {/* <MDXRemote source={hackathon.about} /> */}
+          </Overview>
         ) : tab == "resources" ? (
           <Resources />
         ) : tab == "rules" ? (
@@ -96,5 +97,6 @@ const HackathonContent = ({
 };
 
 // TODO: Render MDX
+// TODO : Install next-mdx-remote
 
 export default HackathonContent;

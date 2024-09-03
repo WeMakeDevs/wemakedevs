@@ -1,3 +1,4 @@
+"use server";
 import { cn } from "@/lib/utils";
 import { GeneralComponent } from "@/types";
 

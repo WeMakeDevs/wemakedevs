@@ -4,6 +4,7 @@ import { HackathonContentOverview } from "@/types";
 import HackathonDate from "./HackathonDate";
 import HackathonContentTitle from "./HackathonContentTitle";
 import HackathonContentBody from "./HackathonContentBody";
+import { MDXRemote } from "next-mdx-remote/rsc";
 
 const Overview = ({
   title,
@@ -14,6 +15,7 @@ const Overview = ({
   prize,
   about,
   className,
+  children,
   ...props
 }: HackathonContentOverview) => {
   console.log(title);
@@ -30,7 +32,9 @@ const Overview = ({
       </div>
       <div className="">
         <HackathonContentTitle>Overview</HackathonContentTitle>
-        <HackathonContentBody></HackathonContentBody>
+        <HackathonContentBody>
+          <MDXRemote source={about} />
+        </HackathonContentBody>
       </div>
     </div>
   );
