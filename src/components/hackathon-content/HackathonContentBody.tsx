@@ -8,7 +8,7 @@ const HackathonContentBody = ({
   ...props
 }: GeneralComponent) => {
   return (
-    <div className={cn(className, "")} {...props}>
+    <div className={cn(className, "my-5")} {...props}>
       {children}
     </div>
   );
