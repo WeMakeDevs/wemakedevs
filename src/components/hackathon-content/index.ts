@@ -3,4 +3,3 @@ import HackathonDate from './HackathonDate';
 import HackathonNav from "./HackathonNav";
 
 export { HackathonCoverImage, HackathonDate, HackathonNav };
-

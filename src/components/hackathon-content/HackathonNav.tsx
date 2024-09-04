@@ -9,7 +9,7 @@ const HackathonNav = ({ page, slug, className, ...props }: HackathonNavInterface
       <ViewContainer className="flex justify-between flex-col md:flex-row">
         <ul className="flex flex-col md:flex-row list-none">
           <li>
-            <Link href={`/hackathons/${slug}/overview`}
+            <Link href={`/hackathons/${slug}`}
               className={cn(
                 "px-6 py-4 font-medium hover:bg-foreground/10 inline-block",
                 page == "overview" && "shadow-secondaryNav",
