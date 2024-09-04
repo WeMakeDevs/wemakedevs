@@ -80,7 +80,12 @@ export interface HackathonDateInterface extends GeneralComponent {
 
 export type PageType = "overview" | "submit" | "resources" | "rules" | "projects"
 
-export interface HackathonNavInterface {
+export interface HackathonNavInterface extends GeneralComponent {
   slug: string;
   page: PageType
+}
+
+export interface HackathonCoverImageInterface extends GeneralComponent {
+  src: StaticImageData;
+  alt: string;
 }
