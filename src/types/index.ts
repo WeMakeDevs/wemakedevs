@@ -77,3 +77,10 @@ export interface HackathonDateInterface extends GeneralComponent {
   startDate: string;
   endDate: string;
 }
+
+export type PageType = "overview" | "submit" | "resources" | "rules" | "projects"
+
+export interface HackathonNavInterface {
+  slug: string;
+  page: PageType
+}
