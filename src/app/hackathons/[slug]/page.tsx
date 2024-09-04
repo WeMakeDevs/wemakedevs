@@ -2,10 +2,10 @@ import { HackathonCoverImage, HackathonDate, HackathonNav } from "@/components/h
 import HackathonContentBody from "@/components/hackathon-content/HackathonContentBody";
 import HackathonContentTitle from "@/components/hackathon-content/HackathonContentTitle";
 import { HackathonCardStatus } from "@/components/HackathonCard";
+import { CustomMDX } from "@/components/mdx-remote";
 import { ViewContainer } from "@/components/ui/view-container";
 import { fetchHackathonData } from "@/lib/hackathon";
 import { cn } from "@/lib/utils";
-import { MDXRemote } from "next-mdx-remote/rsc";
 import { notFound } from "next/navigation";
 
 export async function generateStaticParams() {
@@ -41,11 +41,11 @@ const HackathonPage = async ({ params }: { params: { slug: string } }) => {
           <div className="">
             <HackathonContentTitle>Hackathon Overview</HackathonContentTitle>
             <HackathonContentBody>
-              <MDXRemote source={hackathon.about} />
+              <CustomMDX source={hackathon.about} />
             </HackathonContentBody>
             <HackathonContentTitle>Requirements</HackathonContentTitle>
             <HackathonContentBody>
-              <MDXRemote source={hackathon.requirements} />
+              <CustomMDX source={hackathon.requirements} />
             </HackathonContentBody>
           </div>
         </div>

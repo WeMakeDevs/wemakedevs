@@ -1,9 +1,9 @@
-import { HackathonNav, HackathonCoverImage } from "@/components/hackathon-content"
+import { HackathonCoverImage, HackathonNav } from "@/components/hackathon-content"
 import HackathonContentBody from "@/components/hackathon-content/HackathonContentBody"
 import HackathonContentTitle from "@/components/hackathon-content/HackathonContentTitle"
+import { CustomMDX } from "@/components/mdx-remote"
 import { ViewContainer } from "@/components/ui/view-container"
 import { fetchHackathonData } from "@/lib/hackathon"
-import { MDXRemote } from "next-mdx-remote/rsc"
 import { notFound } from "next/navigation"
 
 const HackathonResources = async ({ params }: { params: { slug: string } }) => {
@@ -19,7 +19,7 @@ const HackathonResources = async ({ params }: { params: { slug: string } }) => {
       <ViewContainer>
         <HackathonContentTitle>Resources</HackathonContentTitle>
         <HackathonContentBody>
-          <MDXRemote source={hackathon.resources} />
+          <CustomMDX source={hackathon.resources} />
         </HackathonContentBody>
       </ViewContainer>
     </div>

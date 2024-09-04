@@ -1,10 +1,10 @@
-import { HackathonNav, HackathonCoverImage } from "@/components/hackathon-content"
+import { HackathonCoverImage, HackathonNav } from "@/components/hackathon-content"
 import HackathonContentBody from "@/components/hackathon-content/HackathonContentBody"
 import HackathonContentTitle from "@/components/hackathon-content/HackathonContentTitle"
-import { fetchHackathonData } from "@/lib/hackathon"
-import { MDXRemote } from "next-mdx-remote/rsc"
-import { notFound } from "next/navigation"
+import { CustomMDX } from "@/components/mdx-remote"
 import { ViewContainer } from "@/components/ui/view-container"
+import { fetchHackathonData } from "@/lib/hackathon"
+import { notFound } from "next/navigation"
 
 const HackathonRules = async ({ params }: { params: { slug: string } }) => {
   const hackathons = await fetchHackathonData()
@@ -19,7 +19,7 @@ const HackathonRules = async ({ params }: { params: { slug: string } }) => {
       <ViewContainer className="">
         <HackathonContentTitle>Rules of the hackathon</HackathonContentTitle>
         <HackathonContentBody>
-          <MDXRemote source={hackathon.rules} />
+          <CustomMDX source={hackathon.rules} />
         </HackathonContentBody>
       </ViewContainer>
     </div >
