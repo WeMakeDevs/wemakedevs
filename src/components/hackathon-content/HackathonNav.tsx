@@ -5,13 +5,13 @@ import Link from 'next/link'
 
 const HackathonNav = ({ page, slug, className, ...props }: HackathonNavInterface) => {
   return (
-    <nav aria-label="secondary nav" className={cn(className, "bg-foreground/5 border border-foreground/10")} {...props}>
+    <nav aria-label="secondary nav" className={cn(className, "bg-foreground/5 border-t border-b border-foreground/10")} {...props}>
       <ViewContainer className="flex justify-between flex-col md:flex-row">
-        <ul className="flex flex-col md:flex-row">
+        <ul className="flex flex-col md:flex-row list-none">
           <li>
             <Link href={`/hackathons/${slug}/overview`}
               className={cn(
-                "px-6 py-4 font-medium hover:bg-foreground/10",
+                "px-6 py-4 font-medium hover:bg-foreground/10 inline-block",
                 page == "overview" && "shadow-secondaryNav",
               )}
             >
@@ -20,7 +20,7 @@ const HackathonNav = ({ page, slug, className, ...props }: HackathonNavInterface
           <li>
             <Link href={`/hackathons/${slug}/resources`}
               className={cn(
-                "px-6 py-4 font-medium hover:bg-foreground/10",
+                "px-6 py-4 font-medium hover:bg-foreground/10 inline-block",
                 page == "resources" && "shadow-secondaryNav",
               )}
             >
@@ -29,7 +29,7 @@ const HackathonNav = ({ page, slug, className, ...props }: HackathonNavInterface
           <li>
             <Link href={`/hackathons/${slug}/rules`}
               className={cn(
-                "px-6 py-4 font-medium hover:bg-foreground/10",
+                "px-6 py-4 font-medium hover:bg-foreground/10 inline-block",
                 page == "rules" && "shadow-secondaryNav",
               )}
             >
@@ -38,23 +38,22 @@ const HackathonNav = ({ page, slug, className, ...props }: HackathonNavInterface
           <li>
             <Link href={`/hackathons/${slug}/projects`}
               className={cn(
-                "px-6 py-4 font-medium hover:bg-foreground/10",
+                "px-6 py-4 font-medium hover:bg-foreground/10 inline-block",
                 page == "projects" && "shadow-secondaryNav",
               )}
             >
               Projects</Link>
           </li>
-        </ul>
-        <li>
-          <Link href={`/hackathons/${slug}/submit`}
-            className={cn(
-              "px-6 py-4 font-medium bg-blue-600 hover:bg-blue-800",
-            )}
-          >
 
-            Submit Project
-          </Link>
-        </li>
+        </ul>
+        <Link href={`/hackathons/${slug}/submit`}
+          className={cn(
+            "px-6 py-4 font-medium bg-blue-600 hover:bg-blue-800 inline-block ml-auto",
+          )}
+        >
+
+          Submit Project
+        </Link>
       </ViewContainer >
     </nav >
   )
