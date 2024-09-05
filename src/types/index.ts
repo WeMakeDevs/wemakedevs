@@ -45,6 +45,8 @@ export interface HackathonData {
   resources: string;
   rules: string;
   prizes: PrizeType[]
+  registrationLink: string;
+  submissionLink?: string;
 }
 
 export interface HackathonCardType extends GeneralComponent {
