@@ -22,6 +22,11 @@ export interface GeneralComponent extends React.HTMLAttributes<HTMLDivElement> {
 
 type HackathonStatusType = "upcoming" | "ongoing" | "ended";
 
+type PrizeType = {
+  name: string;
+  description: string;
+}
+
 export interface HackathonData {
   title: string;
   image: {
@@ -39,6 +44,7 @@ export interface HackathonData {
   requirements: string;
   resources: string;
   rules: string;
+  prizes: PrizeType[]
 }
 
 export interface HackathonCardType extends GeneralComponent {

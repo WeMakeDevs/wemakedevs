@@ -6,6 +6,7 @@ import { CustomMDX } from "@/components/mdx-remote";
 import { ViewContainer } from "@/components/ui/view-container";
 import { fetchHackathonData } from "@/lib/hackathon";
 import { cn } from "@/lib/utils";
+import { Star } from "lucide-react";
 import { notFound } from "next/navigation";
 
 export async function generateStaticParams() {
@@ -46,6 +47,15 @@ const HackathonPage = async ({ params }: { params: { slug: string } }) => {
             <HackathonContentTitle>Requirements</HackathonContentTitle>
             <HackathonContentBody>
               <CustomMDX source={hackathon.requirements} />
+            </HackathonContentBody>
+            <HackathonContentTitle>Prizes</HackathonContentTitle>
+            <HackathonContentBody className="grid grid-cols-1 lg:grid-cols-2 gap-10">
+              {hackathon.prizes.map((prize, index) => (
+                <div className="space-y-4" key={index}>
+                  <p className="text-lg md:text-xl font-semibold flex gap-2 items-center"><Star size={20} strokeWidth={0} fill="#ffd333" /> {prize.name}</p>
+                  <p className="text-foreground/85">{prize.description}</p>
+                </div>
+              ))}
             </HackathonContentBody>
           </div>
         </div>
