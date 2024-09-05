@@ -4,6 +4,7 @@ import localFont from 'next/font/local'
 import "./globals.css";
 import { cn } from "@/lib/utils";
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 const fontMono = FontMono({
   subsets: ['latin'],
@@ -41,6 +42,7 @@ export default function RootLayout({
       <body className={cn('min-h-screen bg-background font-body antialiased', fontSans.variable, fontMono.variable)}>
         <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );
