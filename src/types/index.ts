@@ -83,3 +83,12 @@ export interface HackathonCoverImageInterface extends GeneralComponent {
   src: StaticImageData;
   alt: string;
 }
+
+export interface TestimonialInterface {
+  profileImage: StaticImageData;
+  name: string;
+  platform: "twitter" | "linkedin";
+  testimonialText: string;
+}
+
+export type TestimonialCardType = GeneralComponent & TestimonialInterface; 
