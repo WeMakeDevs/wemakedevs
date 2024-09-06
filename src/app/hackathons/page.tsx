@@ -5,16 +5,16 @@ import {
   HackathonCardImage,
   HackathonCardDates,
   HackathonCardTitle,
-  HackathonCardStatus,
   HackathonCardDescription,
 } from "@/components/HackathonCard";
+import HackathonStatus from "@/components/HackathonStatus";
 
 const Hackathons = async () => {
   const hackathons = await fetchHackathonData();
 
   return (
-    <main className="">
-      <ViewContainer className="my-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <main className=''>
+      <ViewContainer className='my-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
         {hackathons.map((hackathon, index) => (
           <HackathonCard key={index} href={`/hackathons/${hackathon.slug}`}>
             <HackathonCardImage
@@ -22,8 +22,11 @@ const Hackathons = async () => {
               alt={hackathon.title}
             />
             <HackathonCardTitle>{hackathon.title}</HackathonCardTitle>
-            <div className="flex justify-between items-center">
-              <HackathonCardStatus status={hackathon.status} />
+            <div className='flex justify-between items-center'>
+              <HackathonStatus
+                startDate={hackathon.startDate}
+                endDate={hackathon.endDate}
+              />
               <HackathonCardDates
                 startDate={hackathon.startDate}
                 endDate={hackathon.endDate}

@@ -5,7 +5,7 @@ import {
 } from "@/components/hackathon-content/";
 import HackathonContentBody from "@/components/hackathon-content/HackathonContentBody";
 import HackathonContentTitle from "@/components/hackathon-content/HackathonContentTitle";
-import { HackathonCardStatus } from "@/components/HackathonCard";
+import HackathonStatus from "@/components/HackathonStatus";
 import { CustomMDX } from "@/components/mdx-remote";
 import { ViewContainer } from "@/components/ui/view-container";
 import { fetchHackathonData } from "@/lib/hackathon";
@@ -30,25 +30,29 @@ const HackathonPage = async ({ params }: { params: { slug: string } }) => {
   return (
     <main>
       <HackathonCoverImage src={hackathon.image.cover} alt={hackathon.title} />
-      <HackathonNav slug={hackathon.slug} page="overview" />
+      <HackathonNav slug={hackathon.slug} page='overview' />
       <ViewContainer>
         <div className={cn("")}>
-          <div className="bg-foreground/5 border border-foreground/10 rounded-lg px-6 py-8">
-            <HackathonCardStatus className="w-fit" status={hackathon.status} />
-            <h1 className="text-4xl md:text-6xl font-bold mt-6">
+          <div className='bg-foreground/5 border border-foreground/10 rounded-lg px-6 py-8'>
+            <HackathonStatus
+              className='w-fit'
+              startDate={hackathon.startDate}
+              endDate={hackathon.endDate}
+            />
+            <h1 className='text-4xl md:text-6xl font-bold mt-6'>
               {hackathon.title}
             </h1>
-            <p className="text-base md:text-lg text-foreground/90 font-medium leading-snug mt-4 tracking-wide">
+            <p className='text-base md:text-lg text-foreground/90 font-medium leading-snug mt-4 tracking-wide'>
               {hackathon.description}
             </p>
             <HackathonDate
               startDate={hackathon.startDate}
               endDate={hackathon.endDate}
             />
-            <p className="">Prizes worth: {hackathon.prize}₹+</p>
+            <p className=''>Prizes worth: {hackathon.prize}₹+</p>
           </div>
           {/* MDX File information renders from here */}
-          <div className="">
+          <div className=''>
             <HackathonContentTitle>Hackathon Overview</HackathonContentTitle>
             <HackathonContentBody>
               <CustomMDX source={hackathon.about} />
@@ -58,14 +62,14 @@ const HackathonPage = async ({ params }: { params: { slug: string } }) => {
               <CustomMDX source={hackathon.requirements} />
             </HackathonContentBody>
             <HackathonContentTitle>Prizes</HackathonContentTitle>
-            <HackathonContentBody className="grid grid-cols-1 lg:grid-cols-2 gap-10">
+            <HackathonContentBody className='grid grid-cols-1 lg:grid-cols-2 gap-10'>
               {hackathon.prizes.map((prize, index) => (
-                <div className="space-y-4" key={index}>
-                  <p className="text-lg md:text-xl font-semibold flex gap-2 items-center">
-                    <Star size={20} strokeWidth={0} fill="#ffd333" />{" "}
+                <div className='space-y-4' key={index}>
+                  <p className='text-lg md:text-xl font-semibold flex gap-2 items-center'>
+                    <Star size={20} strokeWidth={0} fill='#ffd333' />{" "}
                     {prize.name}
                   </p>
-                  <p className="text-foreground/85">{prize.description}</p>
+                  <p className='text-foreground/85'>{prize.description}</p>
                 </div>
               ))}
             </HackathonContentBody>
