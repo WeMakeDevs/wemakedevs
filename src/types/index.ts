@@ -25,7 +25,7 @@ type HackathonStatusType = "upcoming" | "ongoing" | "ended";
 type PrizeType = {
   name: string;
   description: string;
-}
+};
 
 export interface HackathonData {
   title: string;
@@ -44,7 +44,7 @@ export interface HackathonData {
   requirements: string;
   resources: string;
   rules: string;
-  prizes: PrizeType[]
+  prizes: PrizeType[];
   registrationLink: string;
   submissionLink?: string;
 }
@@ -72,11 +72,16 @@ export interface HackathonDateInterface extends GeneralComponent {
   endDate: string;
 }
 
-export type PageType = "overview" | "submit" | "resources" | "rules" | "projects"
+export type PageType =
+  | "overview"
+  | "submit"
+  | "resources"
+  | "rules"
+  | "projects";
 
 export interface HackathonNavInterface extends GeneralComponent {
   slug: string;
-  page: PageType
+  page: PageType;
 }
 
 export interface HackathonCoverImageInterface extends GeneralComponent {
@@ -91,4 +96,4 @@ export interface TestimonialInterface {
   testimonialText: string;
 }
 
-export type TestimonialCardType = GeneralComponent & TestimonialInterface; 
+export type TestimonialCardType = GeneralComponent & TestimonialInterface;

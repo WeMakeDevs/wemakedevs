@@ -57,7 +57,7 @@ const Footer = ({ className, ...props }: GeneralComponent) => {
     <footer
       className={cn(
         className,
-        "border-t border-foreground/25 py-12 bg-black/10"
+        "border-t border-foreground/25 py-12 bg-black/10",
       )}
       {...props}
     >
