@@ -58,8 +58,9 @@ export interface HackathonCardImageType extends GeneralComponent {
   alt: string;
 }
 
-export interface HackathonCardStatusType extends GeneralComponent {
-  status: HackathonStatusType;
+export interface HackathonStatusComponentInterface extends GeneralComponent {
+  startDate: string;
+  endDate: string;
 }
 
 export interface HackathonCardDatesType extends GeneralComponent {

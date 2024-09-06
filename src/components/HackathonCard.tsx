@@ -4,7 +4,6 @@ import {
   GeneralComponent,
   HackathonCardDatesType,
   HackathonCardImageType,
-  HackathonCardStatusType,
   HackathonCardType,
 } from "@/types";
 import Link from "next/link";
@@ -16,18 +15,18 @@ const HackathonCard = ({ className, children, href }: HackathonCardType) => {
       href={href}
       className={cn(
         className,
-        "relative hover:-translate-x-4 hover:-translate-y-4 transition-all group",
+        "relative hover:-translate-x-4 hover:-translate-y-4 transition-all group"
       )}
     >
       <div
         className={cn(
           "absolute top-0 left-0 w-full h-full p-2 md:p-4 -z-10 overflow-clip border-4 border-tertiary bg-tertiary/20",
-          "group-hover:translate-x-4 group-hover:translate-y-4 transition-transform",
+          "group-hover:translate-x-4 group-hover:translate-y-4 transition-transform"
         )}
       ></div>
       <div
         className={cn(
-          "border-4 border-primary p-2 md:p-4 space-y-4 bg-background",
+          "border-4 border-primary p-2 md:p-4 space-y-4 bg-background"
         )}
       >
         {children}
@@ -76,27 +75,6 @@ const HackathonCardImage = ({
   );
 };
 
-const HackathonCardStatus = ({
-  className,
-  status,
-  ...props
-}: HackathonCardStatusType) => {
-  return (
-    <p
-      className={cn(
-        className,
-        "rounded-full px-2 py-1 bg-primary font-semibold text-sm tracking-wide",
-        status == "upcoming" && "bg-[#ee5b24]",
-        status == "ongoing" && "bg-[#23a394]",
-        status == "ended" && "bg-foreground/10",
-      )}
-      {...props}
-    >
-      {status.toUpperCase()}
-    </p>
-  );
-};
-
 const HackathonCardDates = ({
   startDate,
   endDate,
@@ -105,7 +83,7 @@ const HackathonCardDates = ({
 }: HackathonCardDatesType) => {
   return (
     <p className={cn(className, "flex gap-2 items-center")} {...props}>
-      <CalendarIcon className="size-5" />
+      <CalendarIcon className='size-5' />
       {new Date(startDate).toLocaleDateString("en-US", {
         month: "short",
         day: "numeric",
@@ -122,7 +100,6 @@ const HackathonCardDates = ({
 export {
   HackathonCard,
   HackathonCardTitle,
-  HackathonCardStatus,
   HackathonCardDates,
   HackathonCardImage,
   HackathonCardDescription,
