@@ -54,7 +54,7 @@ export async function fetchHackathonData(): Promise<HackathonData[]> {
       if (stat.isDirectory()) {
         const dataPath = path.join(hackathonPath, "data.json");
         const dataContent = await fs.readFile(dataPath, "utf-8");
-        const data: Omit<HackathonData, "image"> = JSON.parse(dataContent);
+        const data: Omit<HackathonData, "image"> & Record<string, any> = JSON.parse(dataContent);
 
         // Set image paths
         const images = getImagePaths(data.slug);
