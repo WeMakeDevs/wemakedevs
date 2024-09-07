@@ -1,10 +1,5 @@
 {
   "title": "CodeFest 2024",
-  "image": {
-    "thumbnail": "./thumbnail.jpg",
-    "cover": "./cover.png"
-  },
-  "status": "upcoming",
   "prize": 5000,
   "type": "online",
   "startDate": "2024-09-03T07:30:00Z",

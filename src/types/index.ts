@@ -33,7 +33,6 @@ export interface HackathonData {
     thumbnail: StaticImageData;
     cover: StaticImageData;
   };
-  status: HackathonStatusType;
   prize: number;
   type: string;
   startDate: string;
