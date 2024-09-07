@@ -15,45 +15,45 @@ const Navbar = () => {
   const navLinks: navLinksType = [
     {
       name: "Header",
-      url: "#header",
+      url: "/#header",
       type: "link",
     },
     {
       name: "About",
-      url: "#about",
+      url: "/#about",
       type: "link",
     },
     {
       name: "Testimonials",
-      url: "#testimonials",
+      url: "/#testimonials",
       type: "link",
     },
     {
       name: "Sponsors",
-      url: "#sponsors",
+      url: "/#sponsors",
       type: "link",
     },
     {
       name: "FAQs",
-      url: "#faq",
+      url: "/#faq",
       type: "link",
     },
   ];
 
   return (
-    <nav className="">
-      <ViewContainer className="flex justify-between items-center h-20 relative overflow-x-clip">
-        <Link href="https://wemakedevs.org/">
-          <Image src={logo} alt="WeMakeDevs Logo" className="w-12" />
+    <nav className=''>
+      <ViewContainer className='flex justify-between items-center h-20 relative overflow-x-clip'>
+        <Link href='https://wemakedevs.org/'>
+          <Image src={logo} alt='WeMakeDevs Logo' className='w-12' />
         </Link>
         <Button
-          variant="outline"
-          size="icon"
-          aria-label="Toggle menu button"
+          variant='outline'
+          size='icon'
+          aria-label='Toggle menu button'
           onClick={() => {
             setIsOpen((prev) => !prev);
           }}
-          className="md:hidden"
+          className='md:hidden'
         >
           {isOpen ? <Cross2Icon /> : <HamburgerMenuIcon />}
         </Button>
@@ -62,16 +62,16 @@ const Navbar = () => {
             "flex flex-col md:flex-row gap-4 justify-center items-center transition-[left] absolute md:static w-screen md:w-auto nav-h-mobile md:h-auto top-20",
             "bg-background transition-[left] ease-in-out duration-300 px-5 md:px-0",
             isOpen && "left-0",
-            !isOpen && "left-full",
+            !isOpen && "left-full"
           )}
         >
           {navLinks.map((link, index) => (
-            <li key={index} className="w-full">
+            <li key={index} className='w-full'>
               <Link
                 href={link.url}
                 className={cn(
                   buttonVariants({ variant: "ghost", size: "default" }),
-                  "w-full md:w-auto",
+                  "w-full md:w-auto"
                 )}
                 onClick={() => {
                   setIsOpen((prev) => !prev);
@@ -83,9 +83,9 @@ const Navbar = () => {
               </Link>
             </li>
           ))}
-          <li className="w-full">
+          <li className='w-full'>
             <Link
-              href=""
+              href='#hackathons'
               className={cn(buttonVariants({ variant: "default" }), "w-full")}
             >
               Hackathons
