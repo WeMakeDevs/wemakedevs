@@ -28,8 +28,23 @@ const fontSans = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "WeMakeDevs | The home for hackers",
-  description: "WeMakeDevs website",
+  title: "WeMakeDevs",
+  description:
+    "WeMakeDevs hosts hackathons and competitions for designers, developers and everyone interested in tech.",
+  metadataBase: new URL("https://wemakedevs.org"),
+  openGraph: {
+    title: "WeMakeDevs",
+    description:
+      "WeMakeDevs hosts hackathons and competitions for designers, developers and everyone interested in tech.",
+    url: "https://wemakedevs.org",
+    siteName: "WeMakeDevs",
+    images: {
+      url: "/opengraph-image.png",
+      width: 1920,
+      height: 960,
+      alt: "Hackathons for everyone",
+    },
+  },
 };
 
 export default function RootLayout({
@@ -38,12 +53,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang='en'>
       <body
         className={cn(
           "min-h-screen bg-background font-body antialiased",
           fontSans.variable,
-          fontMono.variable,
+          fontMono.variable
         )}
       >
         <Navbar />
