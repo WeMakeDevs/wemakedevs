@@ -41,7 +41,7 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className=''>
+    <nav className='relative z-10'>
       <ViewContainer className='flex justify-between items-center h-20 relative overflow-x-clip'>
         <Link href='https://wemakedevs.org/'>
           <Image src={logo} alt='WeMakeDevs Logo' className='w-12' />
@@ -60,7 +60,7 @@ const Navbar = () => {
         <ul
           className={cn(
             "flex flex-col md:flex-row gap-4 justify-center items-center transition-[left] absolute md:static w-screen md:w-auto nav-h-mobile md:h-auto top-20",
-            "bg-background transition-[left] ease-in-out duration-300 px-5 md:px-0",
+            "bg-background md:bg-transparent transition-[left] ease-in-out duration-300 px-5 md:px-0",
             isOpen && "left-0",
             !isOpen && "left-full"
           )}
