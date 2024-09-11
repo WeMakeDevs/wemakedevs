@@ -1,5 +1,8 @@
 blank_issues_enabled: true 
 contact_links:
+  - name: Feature discussion
+    url: https://github.com/WeMakeDevs/wemakedevs/discussions/10
+    about: If you have a feature and want to discuss more about it, please feel free to continue in this discussion channel.
   - name: Questions about website
     url: https://discord.gg/wemakedevs
     about: Please ask questions in our Discord server
