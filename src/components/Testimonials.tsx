@@ -15,6 +15,13 @@ import {
 import { ViewContainer } from "./ui/view-container";
 import TestimonialCard from "./TestimonialCard";
 import Image from "next/image";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "./ui/carousel";
 
 const testimonials: TestimonialInterface[] = [
   {
@@ -88,28 +95,23 @@ const Testimonials = ({ className, ...props }: GeneralComponent) => {
         <h2 className='text-4xl md:text-5xl text-center mx-auto'>
           Testimonials
         </h2>
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 my-10'>
-          <div className='space-y-4 md:space-y-6'>
-            <TestimonialCard {...testimonials[0]} />
-            <TestimonialCard {...testimonials[1]} />
-            <TestimonialCard {...testimonials[2]} />
-          </div>
-          <div className='space-y-4 md:space-y-6'>
-            <TestimonialCard {...testimonials[3]} />
-            <TestimonialCard {...testimonials[4]} />
-            <TestimonialCard {...testimonials[5]} />
-          </div>
-          <div className='space-y-4 md:space-y-6 md:hidden lg:block'>
-            <TestimonialCard {...testimonials[6]} />
-            <TestimonialCard {...testimonials[7]} />
-            <TestimonialCard {...testimonials[8]} />
-          </div>
-        </div>
-        <Image
-          src={testimonialBg}
-          alt='testimonial mesh gradient bg'
-          className='absolute w-full bottom-0 left-0 -z-10 h-[80%]'
-        />
+        <Carousel
+          className='mt-10 overflow-clip md:overflow-visible'
+          opts={{
+            align: "center",
+            loop: true,
+          }}
+        >
+          <CarouselContent>
+            {testimonials.map((item, index) => (
+              <CarouselItem key={index} className='lg:basis-1/3'>
+                <TestimonialCard {...item} />
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+          <CarouselPrevious />
+          <CarouselNext />
+        </Carousel>
       </ViewContainer>
     </section>
   );
