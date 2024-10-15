@@ -43,8 +43,11 @@ const Navbar = () => {
   return (
     <nav className='relative z-10'>
       <ViewContainer className='flex justify-between items-center h-20 relative overflow-x-clip'>
-        <Link href='https://wemakedevs.org/'>
-          <Image src={logo} alt='WeMakeDevs Logo' className='w-12' />
+        <Link href='#' className='flex items-center gap-4'>
+          <Image src={logo} alt='WeMakeDevs Logo' className='w-12' />{" "}
+          <span className='font-title text-lg md:text-xl text-primary font-semibold'>
+            WeMakeDevs
+          </span>
         </Link>
         <Button
           variant='outline'
