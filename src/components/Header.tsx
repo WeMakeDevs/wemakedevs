@@ -12,13 +12,13 @@ const Header = ({ className, ...props }: GeneralComponent) => {
         <h1 className='font-title text-4xl sm:text-5xl lg:text-7xl font-bold leading-tight mt-8 w-fit mx-auto'>
           Hackathons & meetups for <br />
           <div className='my-2.5 relative h-20'>
-            <span className='opacity-0 animate-fade1 px-2 bg-tertiary rounded-xl absolute top-0 left-1/2 -translate-x-1/2'>
+            <span className='opacity-0 animate-fade1 px-2 bg-accent-1 rounded-xl absolute top-0 left-1/2 -translate-x-1/2'>
               Everyone
             </span>
-            <span className='opacity-0 animate-fade2 px-2 bg-[#3be898] rounded-xl absolute top-0 left-1/2 -translate-x-1/2'>
+            <span className='opacity-0 animate-fade2 px-2 bg-accent-2 rounded-xl absolute top-0 left-1/2 -translate-x-1/2'>
               Students
             </span>
-            <span className='opacity-0 animate-fade3 px-2 bg-[#c599ff] rounded-xl absolute top-0 left-1/2 -translate-x-1/2'>
+            <span className='opacity-0 animate-fade3 px-2 bg-accent-3 rounded-xl absolute top-0 left-1/2 -translate-x-1/2'>
               Professionals
             </span>
           </div>
