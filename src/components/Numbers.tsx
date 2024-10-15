@@ -17,28 +17,28 @@ const Numbers = ({ className, ...props }: GeneralComponent) => {
       name: "Discord",
       number: 65000,
       icon: SiDiscord,
-      color: "#93a0f6",
+      color: "accent-1",
       href: "https://discord.gg/wemakedevs",
     },
     {
       name: "Twitter",
       number: 60000,
       icon: SiX,
-      color: "#e7f433",
+      color: "accent-2",
       href: "https://x.com/wemakedevs",
     },
     {
       name: "LinkedIn",
       number: 20000,
       icon: SiLinkedin,
-      color: "#FE446D",
+      color: "accent-3",
       href: "https://linkedin.com/company/wemakdevs",
     },
     {
       name: "Telegram",
       number: 10000,
       icon: SiTelegram,
-      color: "#75dbb6",
+      color: "accent-4",
       href: "https://t.me/WeMakeDevs",
     },
   ];
@@ -53,12 +53,11 @@ const Numbers = ({ className, ...props }: GeneralComponent) => {
           {numbers.map((item, index) => (
             <Link
               href={item.href}
-              className='bg-foreground/[.02] border border-foreground/10 rounded-xl p-5 relative group hover:scale-110 transition-transform hover:rotate-3'
+              className='bg-foreground/[.02] border border-foreground/10 rounded-xl p-5 relative group overflow-clip'
               key={index}
             >
               <div
-                className={`absolute top-1/2 left-1/2 translate-x-1/2 -translate-y-1/2 w-[0px] h-[0px] blur-[70px] rounded-full group-hover:w-[50px] group-hover:h-[50px] transition-all`}
-                style={{ backgroundColor: item.color }}
+                className={`duration-300 -z-10 absolute bottom-0 left-0 w-full h-full transition-transform origin-top group-hover:origin-bottom scale-y-0 group-hover:scale-y-100 bg-${item.color}`}
               ></div>
               <item.icon className='opacity-80' size={28} />
               <p className='text-4xl md:text-5xl font-title font-medium mt-12 md:mt-20'>
