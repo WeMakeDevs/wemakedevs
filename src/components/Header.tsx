@@ -1,7 +1,6 @@
 import { heroBg } from "@/assets/images";
 import { cn } from "@/lib/utils";
 import { GeneralComponent } from "@/types";
-import { SiDiscord } from "@icons-pack/react-simple-icons";
 import Image from "next/image";
 import Link from "next/link";
 import { buttonVariants } from "./ui/button";
@@ -35,7 +34,7 @@ const Header = ({ className, ...props }: GeneralComponent) => {
             href='#hackathons'
             className={cn(
               buttonVariants({ variant: "default" }),
-              "text-base flex-auto sm:flex-initial sm:w-auto w-full"
+              "flex-auto sm:flex-initial sm:w-auto w-full"
             )}
           >
             Hackathons
@@ -44,10 +43,10 @@ const Header = ({ className, ...props }: GeneralComponent) => {
             href='https://discord.gg/wemakedevs/'
             className={cn(
               buttonVariants({ variant: "outline" }),
-              "text-base flex gap-2 flex-auto sm:flex-initial sm:w-auto w-full"
+              "flex gap-2 flex-auto sm:flex-initial sm:w-auto w-full"
             )}
           >
-            Join community <SiDiscord size={20} />
+            Join community
           </Link>
         </div>
       </ViewContainer>
