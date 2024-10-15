@@ -37,7 +37,7 @@ const Header = ({ className, ...props }: GeneralComponent) => {
             Hackathons
           </Link>
           <Link
-            href='https://discord.gg/wemakedevs/'
+            href='#numbers'
             className={cn(
               buttonVariants({ variant: "outline" }),
               "flex gap-2 flex-auto sm:flex-initial sm:w-auto w-full"
