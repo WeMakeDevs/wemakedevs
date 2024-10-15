@@ -46,8 +46,8 @@ const Numbers = ({ className, ...props }: GeneralComponent) => {
   return (
     <section className={cn(className, "my-16")} {...props} id='numbers'>
       <ViewContainer className='relative'>
-        <h2 className='text-center text-4xl md:text-5xl'>
-          Numbers say it all<span className='text-primary'>_</span>
+        <h2 className='text-center text-4xl md:text-5xl mx-auto'>
+          Numbers say it all{" "}
         </h2>
         <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 mt-12'>
           {numbers.map((item, index) => (

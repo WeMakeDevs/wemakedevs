@@ -23,9 +23,7 @@ const Hackathons = async ({ className, ...props }: GeneralComponent) => {
     >
       <ViewContainer className=''>
         <div className='flex justify-between flex-col md:flex-row '>
-          <h2 className='text-4xl md:text-5xl'>
-            Hackathons<span className='text-primary'>_</span>
-          </h2>
+          <h2 className='text-4xl md:text-5xl'>Hackathons</h2>
           <Link
             href='/hackathons'
             className='font-title underline hover:no-underline'

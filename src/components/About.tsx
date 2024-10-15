@@ -20,9 +20,7 @@ const About = ({ className, ...props }: GeneralComponent) => {
           />
         </div>
         <div className='space-y-8'>
-          <h2 className='text-4xl md:text-5xl'>
-            About us<span className='text-primary'>_</span>
-          </h2>
+          <h2 className='text-4xl md:text-5xl'>About us</h2>
           <p className='text-lg leading-snug font-medium text-foreground/90'>
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
             Exercitationem, inventore numquam voluptate ab maiores non

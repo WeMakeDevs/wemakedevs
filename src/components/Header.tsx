@@ -16,7 +16,7 @@ const Header = ({ className, ...props }: GeneralComponent) => {
           className='absolute -top-[100px] w-[100%] sm:-top-[200px] sm:w-[80%] md:w-[60%] md:-top-[250px] max-w-[750px] left-1/2 -translate-x-1/2 opacity-40 -z-10'
         />
         <div className='absolute -top-[250px] left-1/2 -translate-x-1/2 w-[300px] h-[300px] rounded-full blur-[150px] bg-primary'></div>
-        <h1 className='font-title text-4xl sm:text-5xl lg:text-7xl font-bold tracking-wide leading-tight mt-8'>
+        <h1 className='font-title text-4xl sm:text-5xl lg:text-7xl font-bold tracking-wide leading-tight mt-8 text-white mx-auto'>
           Hackathons for <br />
           {"{"}EVERYONE{"}"}
         </h1>

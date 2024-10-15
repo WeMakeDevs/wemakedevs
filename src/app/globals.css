@@ -10,7 +10,7 @@
     --card-foreground: 0 0% 98%;
     --popover: 240 10% 3.9%;
     --popover-foreground: 0 0% 98%;
-    --primary: 232 84% 77%;
+    --primary: 232 79% 66%;
     --primary-foreground: 240 5.9% 10%;
     --secondary: 347 99% 63%;
     --secondary-foreground: 0 0% 98%;
@@ -56,6 +56,6 @@
   h5,
   h6,
   h7 {
-    @apply font-title font-bold;
+    @apply font-title font-bold text-transparent bg-gradient-to-br from-white to-primary bg-clip-text w-fit;
   }
 }
