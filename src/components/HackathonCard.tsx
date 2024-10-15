@@ -11,25 +11,12 @@ import { CalendarIcon } from "@radix-ui/react-icons";
 
 const HackathonCard = ({ className, children, href }: HackathonCardType) => {
   return (
-    <Link
-      href={href}
-      className={cn(
-        className,
-        "relative hover:-translate-x-4 hover:-translate-y-4 transition-all group"
-      )}
-    >
-      <div
-        className={cn(
-          "absolute top-0 left-0 w-full h-full p-2 md:p-4 -z-10 overflow-clip border-4 border-tertiary bg-tertiary/20",
-          "group-hover:translate-x-4 group-hover:translate-y-4 transition-transform"
-        )}
-      ></div>
-      <div
-        className={cn(
-          "border-4 border-primary p-2 md:p-4 space-y-4 bg-background"
-        )}
-      >
+    <Link href={href} className={cn(className, "rounded overflow-clip group")}>
+      <div className='rounded border-4 border-primary p-2 md:p-4 space-y-4 bg-background relative z-10'>
         {children}
+      </div>
+      <div className='rounded-b -translate-y-[100%] group-hover:-translate-y-1 transition-transform w-full bg-primary border-b-4 border-t-4 border-primary flex justify-center items-center gap-2 font-medium tracking-wider uppercase text-white'>
+        Explore
       </div>
     </Link>
   );
@@ -53,7 +40,7 @@ const HackathonCardDescription = ({
   ...props
 }: GeneralComponent) => {
   return (
-    <p className={cn(className, "leading-snug")} {...props}>
+    <p className={cn(className, "leading-snug font-medium")} {...props}>
       {children}
     </p>
   );
@@ -67,7 +54,7 @@ const HackathonCardImage = ({
 }: HackathonCardImageType) => {
   return (
     <Image
-      className={cn(className, "aspect-video object-cover")}
+      className={cn(className, "aspect-video object-cover rounded")}
       {...props}
       src={src}
       alt={alt}
@@ -82,7 +69,10 @@ const HackathonCardDates = ({
   ...props
 }: HackathonCardDatesType) => {
   return (
-    <p className={cn(className, "flex gap-2 items-center")} {...props}>
+    <p
+      className={cn(className, "flex gap-2 items-center font-medium")}
+      {...props}
+    >
       <CalendarIcon className='size-5' />
       {new Date(startDate).toLocaleDateString("en-US", {
         month: "short",
