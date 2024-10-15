@@ -71,10 +71,31 @@ const config = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
+        cycleText: {
+          '0%, 4%': {
+            opacity: '0',
+            transform: 'translate(-50%, 5px)',
+          },
+          '4%, 33%': {
+            opacity: '1',
+            transform: 'translate(-50%, 0)',
+          },
+          '34%, 66%': {
+            opacity: '0',
+            transform: 'translate(-50%, 20px)',
+          },
+          '67%, 100%': {
+            opacity: '0',
+            transform: 'translate(-50%, -20px)',
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "fade1": 'cycleText 15s ease-in-out infinite 0s',
+        "fade2": 'cycleText 15s ease-in-out infinite -10s',
+        "fade3": 'cycleText 15s ease-in-out infinite -5s',
       },
       fontFamily: {
         title: ["var(--font-mono)", ...fontFamily.mono],

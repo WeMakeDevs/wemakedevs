@@ -1,4 +1,3 @@
-import { heroBg } from "@/assets/images";
 import { cn } from "@/lib/utils";
 import { GeneralComponent } from "@/types";
 import Image from "next/image";
@@ -10,17 +9,21 @@ const Header = ({ className, ...props }: GeneralComponent) => {
   return (
     <header {...props} className={cn(className, "py-10 lg:py-14")}>
       <ViewContainer className='text-center'>
-        <Image
-          src={heroBg}
-          alt='Hero background gradient'
-          className='absolute -top-[100px] w-[100%] sm:-top-[200px] sm:w-[80%] md:w-[60%] md:-top-[250px] max-w-[750px] left-1/2 -translate-x-1/2 opacity-40 -z-10'
-        />
-        <div className='absolute -top-[250px] left-1/2 -translate-x-1/2 w-[300px] h-[300px] rounded-full blur-[150px] bg-primary'></div>
-        <h1 className='font-title text-4xl sm:text-5xl lg:text-7xl font-bold tracking-wide leading-tight mt-8 text-white mx-auto'>
-          Hackathons for <br />
-          {"{"}EVERYONE{"}"}
+        <h1 className='font-title text-4xl sm:text-5xl lg:text-7xl font-bold leading-tight mt-8 w-fit mx-auto'>
+          Hackathons & meetups for <br />
+          <div className='my-2.5 relative h-20'>
+            <span className='opacity-0 animate-fade1 px-2 bg-tertiary rounded-xl absolute top-0 left-1/2 -translate-x-1/2'>
+              Everyone
+            </span>
+            <span className='opacity-0 animate-fade2 px-2 bg-[#3be898] rounded-xl absolute top-0 left-1/2 -translate-x-1/2'>
+              Students
+            </span>
+            <span className='opacity-0 animate-fade3 px-2 bg-[#c599ff] rounded-xl absolute top-0 left-1/2 -translate-x-1/2'>
+              Professionals
+            </span>
+          </div>
         </h1>
-        <p className='max-w-2xl w-full text-sm md:text-lg lg:text-lg mx-auto mt-10'>
+        <p className='max-w-3xl w-full text-sm md:text-lg lg:text-xl mx-auto mt-10 font-medium'>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi eos
           similique perspiciatis nam? Ratione numquam sapiente accusamus
           consectetur, debitis reprehenderit eos delectus similique
