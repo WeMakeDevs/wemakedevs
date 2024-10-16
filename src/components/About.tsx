@@ -7,7 +7,7 @@ import { ViewContainer } from "./ui/view-container";
 const About = ({ className, ...props }: GeneralComponent) => {
   return (
     <section {...props} className={cn(className, "my-14")} id='about'>
-      <ViewContainer className='relative overflow-clip flex flex-col md:flex-row gap-10 lg:gap-20 p-8 md:p-12 rounded-xl bg-white shadow-xl border border-foreground/10 items-center'>
+      <ViewContainer className='relative overflow-clip flex flex-col lg:flex-row gap-10 lg:gap-20 p-8 md:p-12 rounded-xl bg-white shadow-xl border border-foreground/10 items-center'>
         <Image
           src={aboutImage}
           alt='About Us Image'

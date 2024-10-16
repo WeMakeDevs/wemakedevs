@@ -49,7 +49,7 @@ const Numbers = ({ className, ...props }: GeneralComponent) => {
         <h2 className='text-center text-4xl md:text-5xl mx-auto'>
           Numbers say it all{" "}
         </h2>
-        <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 mt-12'>
+        <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8 mt-12'>
           {numbers.map((item, index) => (
             <Link
               href={item.href}
@@ -60,7 +60,7 @@ const Numbers = ({ className, ...props }: GeneralComponent) => {
                 className={`duration-300 z-0 absolute bottom-0 left-0 w-full h-full transition-transform origin-top group-hover:origin-bottom scale-y-0 group-hover:scale-y-100 bg-${item.color}`}
               ></div>
               <item.icon className='opacity-80 z-10' size={28} />
-              <p className='relative text-4xl md:text-5xl font-title font-medium mt-12 md:mt-20 z-10'>
+              <p className='relative text-4xl md:text-5xl lg:text-4xl xl:text-5xl font-title font-medium mt-12 md:mt-20 z-10'>
                 <CountUp end={item.number} start={0} suffix='+' enableScrollSpy>
                   {({ countUpRef }) => <span ref={countUpRef} />}
                 </CountUp>
