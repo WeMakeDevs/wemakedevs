@@ -11,7 +11,7 @@ const Header = ({ className, ...props }: GeneralComponent) => {
       <ViewContainer className='text-center'>
         <h1 className='font-title text-4xl sm:text-5xl lg:text-7xl font-bold leading-tight mt-8 w-fit mx-auto'>
           Hackathons & meetups for <br />
-          <div className='my-2.5 relative h-20'>
+          <div className='my-2 relative h-20'>
             <span className='opacity-0 animate-fade1 px-2 bg-accent-1 rounded-xl absolute top-0 left-1/2 -translate-x-1/2'>
               Everyone
             </span>

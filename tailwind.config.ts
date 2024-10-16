@@ -78,11 +78,11 @@ const config = {
         cycleText: {
           '0%, 4%': {
             opacity: '0',
-            transform: 'translate(-50%, 5px)',
+            transform: 'translate(-50%, 5px) rotate(-3deg)',
           },
           '4%, 33%': {
             opacity: '1',
-            transform: 'translate(-50%, 0)',
+            transform: 'translate(-50%, 0) rotate(-3deg)',
           },
           '34%, 66%': {
             opacity: '0',
