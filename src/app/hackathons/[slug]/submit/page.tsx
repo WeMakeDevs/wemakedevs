@@ -19,7 +19,7 @@ const HackathonSubmit = async ({ params }: { params: { slug: string } }) => {
   if (!hackathon) notFound();
 
   return (
-    <div className='mb-10'>
+    <div className='mb-10 pt-20'>
       <HackathonCoverImage src={hackathon.image.cover} alt={hackathon.title} />
       <HackathonNav slug={hackathon.slug} page='submit' />
       <ViewContainer>

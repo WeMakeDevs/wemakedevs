@@ -13,7 +13,7 @@ const Hackathons = async () => {
   const hackathons = await fetchHackathonData();
 
   return (
-    <main className=''>
+    <main className='py-20'>
       <ViewContainer className='my-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
         {hackathons.map((hackathon, index) => (
           <HackathonCard key={index} href={`/hackathons/${hackathon.slug}`}>

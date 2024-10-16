@@ -12,16 +12,16 @@ import { notFound } from "next/navigation";
 const HackathonRules = async ({ params }: { params: { slug: string } }) => {
   const hackathons = await fetchHackathonData();
   const hackathon = hackathons.find(
-    (hackathon) => hackathon.slug == params.slug,
+    (hackathon) => hackathon.slug == params.slug
   );
 
   if (!hackathon) notFound();
 
   return (
-    <div>
+    <div className='pt-20'>
       <HackathonCoverImage src={hackathon.image.cover} alt={hackathon.title} />
-      <HackathonNav slug={hackathon.slug} page="rules" />
-      <ViewContainer className="">
+      <HackathonNav slug={hackathon.slug} page='rules' />
+      <ViewContainer className=''>
         <HackathonContentTitle>Rules of the hackathon</HackathonContentTitle>
         <HackathonContentBody>
           <CustomMDX source={hackathon.rules} />

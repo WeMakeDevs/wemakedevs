@@ -30,7 +30,7 @@ const HackathonPage = async ({ params }: { params: { slug: string } }) => {
   if (!hackathon) notFound();
 
   return (
-    <main>
+    <main className='pt-20'>
       <HackathonCoverImage src={hackathon.image.cover} alt={hackathon.title} />
       <HackathonNav slug={hackathon.slug} page='overview' />
       <ViewContainer className='my-10'>
