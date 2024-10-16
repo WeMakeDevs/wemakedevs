@@ -11,11 +11,14 @@ import { CalendarIcon } from "@radix-ui/react-icons";
 
 const HackathonCard = ({ className, children, href }: HackathonCardType) => {
   return (
-    <Link href={href} className={cn(className, "rounded overflow-clip group")}>
-      <div className='rounded border-4 border-primary p-2 md:p-4 space-y-4 bg-background relative z-10'>
+    <Link
+      href={href}
+      className={cn(className, "rounded group relative shadow-xl")}
+    >
+      <div className='rounded border-4 border-primary p-2 md:p-4 space-y-4 bg-card'>
         {children}
       </div>
-      <div className='rounded-b -translate-y-[100%] group-hover:-translate-y-1 transition-transform w-full bg-primary border-b-4 border-t-4 border-primary flex justify-center items-center gap-2 font-medium tracking-wider uppercase text-white'>
+      <div className='absolute bottom-0 left-0 rounded-b group-hover:translate-y-[90%] -z-10 transition-transform w-full bg-primary border-b-4 border-t-4 border-primary font-medium tracking-wider uppercase text-white flex justify-center items-center'>
         Explore
       </div>
     </Link>
