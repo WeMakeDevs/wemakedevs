@@ -1,6 +1,7 @@
 import logo from "./logo.svg";
 import heroBg from "./wemakedevs_hero_bg.png";
 import aboutImage from './wemakedevs_about.png'
+import quotation from './quotation.svg'
 
 import hackForGoodCover from "./hack-for-good-cover.png";
 import hackForGoodThumbnail from "./hack-for-good-thumbnail.jpg";
@@ -14,5 +15,6 @@ export {
   hackForGoodThumbnail,
   codefest2024Cover,
   codefest2024Thumbnail,
-  aboutImage
+  aboutImage,
+  quotation
 };

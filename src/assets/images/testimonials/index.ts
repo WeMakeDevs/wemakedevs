@@ -6,7 +6,6 @@ import avatar5 from "./avatar_5.png";
 import avatar6 from "./avatar_6.png";
 import avatar7 from "./avatar_7.png";
 import avatar8 from "./avatar_8.png";
-import testimonialBg from "./testimonial-bg.png";
 
 export {
   avatar1,
@@ -17,5 +16,4 @@ export {
   avatar6,
   avatar7,
   avatar8,
-  testimonialBg,
 };

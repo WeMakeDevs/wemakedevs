@@ -4,17 +4,14 @@ import { TestimonialInterface } from "@/types";
 import {
   avatar1,
   avatar2,
-  avatar3,
   avatar4,
   avatar5,
   avatar6,
   avatar7,
   avatar8,
-  testimonialBg,
 } from "@/assets/images/testimonials";
 import { ViewContainer } from "./ui/view-container";
 import TestimonialCard from "./TestimonialCard";
-import Image from "next/image";
 import {
   Carousel,
   CarouselContent,
@@ -37,13 +34,6 @@ const testimonials: TestimonialInterface[] = [
     platform: "linkedin",
     testimonialText:
       "A well-organized event with lots of opportunities to network and learn. Had a fantastic time! The challenges were tough but rewarding.",
-  },
-  {
-    profileImage: avatar3,
-    name: "Alice Johnson",
-    platform: "twitter",
-    testimonialText:
-      "Had a fantastic time! The challenges were tough but rewarding.",
   },
   {
     profileImage: avatar4,
@@ -91,7 +81,7 @@ const testimonials: TestimonialInterface[] = [
 const Testimonials = ({ className, ...props }: GeneralComponent) => {
   return (
     <section className={cn(className, "mt-20 pb-16 relative")} {...props}>
-      <ViewContainer>
+      <ViewContainer className=''>
         <h2 className='text-4xl md:text-5xl text-center mx-auto'>
           Testimonials
         </h2>
@@ -102,10 +92,18 @@ const Testimonials = ({ className, ...props }: GeneralComponent) => {
             loop: true,
           }}
         >
-          <CarouselContent>
+          <CarouselContent className=''>
             {testimonials.map((item, index) => (
-              <CarouselItem key={index} className='lg:basis-1/3'>
-                <TestimonialCard {...item} />
+              <CarouselItem key={index} className='md:basis-1/2 lg:basis-1/3'>
+                <TestimonialCard
+                  {...item}
+                  className={cn(
+                    index % 4 == 0 && "bg-accent-1",
+                    index % 4 == 1 && "bg-accent-2",
+                    index % 4 == 2 && "bg-accent-3",
+                    index % 4 == 3 && "bg-accent-4"
+                  )}
+                />
               </CarouselItem>
             ))}
           </CarouselContent>

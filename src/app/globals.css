@@ -98,4 +98,20 @@
   h7 {
     @apply font-title font-bold text-foreground;
   }
+
+  .testimonial-card:nth-child(4n + 1) {
+    @apply bg-accent-1;
+  }
+
+  .testimonial-card:nth-child(4n + 2) {
+    @apply bg-accent-2;
+  }
+
+  .testimonial-card:nth-child(4n + 3) {
+    @apply bg-accent-3;
+  }
+
+  .testimonial-card:nth-child(4n + 4) {
+    @apply bg-accent-4;
+  }
 }
