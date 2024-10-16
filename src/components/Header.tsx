@@ -7,7 +7,11 @@ import { ViewContainer } from "./ui/view-container";
 
 const Header = ({ className, ...props }: GeneralComponent) => {
   return (
-    <header {...props} className={cn(className, "py-10 lg:py-14")}>
+    <header
+      {...props}
+      className={cn(className, "pb-10 lg:pb-14 pt-20 lg:pt-36")}
+    >
+      {/* <div className='w-full h-[500px] bg-gradient-to-b from-primary to-transparent absolute -top-36 left-0 z-0'></div> */}
       <ViewContainer className='text-center'>
         <h1 className='font-title text-4xl sm:text-5xl lg:text-7xl font-bold leading-tight mt-8 w-fit mx-auto'>
           Hackathons & meetups for <br />
