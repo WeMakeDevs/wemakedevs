@@ -4,6 +4,7 @@ import {
   HackathonCardDates,
   HackathonCardImage,
   HackathonCardDescription,
+  HackathonLastCard,
 } from "@/components/HackathonCard";
 import { fetchHackathonData } from "@/lib/hackathon";
 import { cn } from "@/lib/utils";
@@ -22,14 +23,13 @@ const Hackathons = async ({ className, ...props }: GeneralComponent) => {
       {...props}
     >
       <ViewContainer className=''>
-        <div className='flex justify-between flex-col md:flex-row items-center'>
+        <div className='flex justify-between flex-col items-center'>
           <h2 className='text-4xl md:text-5xl'>Hackathons</h2>
-          <Link
-            href='/hackathons'
-            className='font-title underline hover:no-underline'
-          >
-            See all hackathons
-          </Link>
+          <p className='max-w-2xl font-medium leading-snug mt-2 md:mt-3 text-center text-base md:text-lg'>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita
+            suscipit magni saepe, repellat officia quos earum optio corrupti a
+            excepturi ipsum et sunt facilis rerum. Vel doloribus quia ad.
+          </p>
         </div>
         <div className='my-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-6'>
           {hackathons.map((hackathon, index) => (
@@ -54,6 +54,7 @@ const Hackathons = async ({ className, ...props }: GeneralComponent) => {
               </HackathonCardDescription>
             </HackathonCard>
           ))}
+          <HackathonLastCard />
         </div>
       </ViewContainer>
     </section>
