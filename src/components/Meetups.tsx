@@ -16,19 +16,15 @@ const Hackathons = async ({ className, ...props }: GeneralComponent) => {
   const hackathons = await fetchHackathonData();
 
   return (
-    <section
-      className={cn(className, "mt-24 mb-16 scroll-m-[100px]")}
-      id='hackathons'
-      {...props}
-    >
+    <section className={cn(className, "mt-24 mb-16")} {...props}>
       <ViewContainer className=''>
         <div className='flex justify-between flex-col md:flex-row items-center'>
-          <h2 className='text-4xl md:text-5xl'>Hackathons</h2>
+          <h2 className='text-4xl md:text-5xl'>Meetups</h2>
           <Link
             href='/hackathons'
             className='font-title underline hover:no-underline'
           >
-            See all hackathons
+            See all meetups
           </Link>
         </div>
         <div className='my-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-6'>

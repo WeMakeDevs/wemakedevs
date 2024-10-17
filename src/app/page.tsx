@@ -3,6 +3,7 @@ import Hackathons from "@/components/Hackathons";
 import Header from "@/components/Header";
 import Numbers from "@/components/Numbers";
 import Testimonials from "@/components/Testimonials";
+import Meetups from "@/components/Meetups";
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
       <About />
       <Numbers />
       <Hackathons />
+      <Meetups />
       <Testimonials />
     </div>
   );

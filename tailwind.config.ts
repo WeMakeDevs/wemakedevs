@@ -110,6 +110,7 @@ const config = {
       },
       boxShadow: {
         secondaryNav: "inset 0 -2px 0 hsl(var(--primary))",
+        'custom-hard': '2px 2px 0px 0px rgba(0, 0, 0, 1)',
       },
     },
   },

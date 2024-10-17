@@ -6,7 +6,11 @@ import { ViewContainer } from "./ui/view-container";
 
 const About = ({ className, ...props }: GeneralComponent) => {
   return (
-    <section {...props} className={cn(className, "my-14")} id='about'>
+    <section
+      {...props}
+      className={cn(className, "my-14 scroll-m-[100px]")}
+      id='about'
+    >
       <ViewContainer className='relative overflow-clip flex flex-col lg:flex-row gap-10 lg:gap-20 p-8 md:p-12 rounded-xl bg-white shadow-xl border border-foreground/10 items-center'>
         <Image
           src={aboutImage}

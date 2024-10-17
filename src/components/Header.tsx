@@ -1,6 +1,5 @@
 import { cn } from "@/lib/utils";
 import { GeneralComponent } from "@/types";
-import Image from "next/image";
 import Link from "next/link";
 import { buttonVariants } from "./ui/button";
 import { ViewContainer } from "./ui/view-container";
@@ -9,15 +8,32 @@ const Header = ({ className, ...props }: GeneralComponent) => {
   return (
     <header
       {...props}
-      className={cn(className, "pb-10 lg:pb-14 pt-20 lg:pt-36")}
+      className={cn(className, "pb-10 lg:pb-14 pt-20 lg:pt-28")}
     >
       {/* <div className='w-full h-[500px] bg-gradient-to-b from-primary to-transparent absolute -top-36 left-0 z-0'></div> */}
       <ViewContainer className='text-center'>
+        <p className='mb-8 font-semibold flex gap-3 justify-center items-center'>
+          <span className='rounded-full border bg-accent-1 p-1 shadow-custom-hard block'>
+            <span className='bg-accent-1 px-3 py-2 border rounded-full block'>
+              Code.
+            </span>
+          </span>
+          <span className='rounded-full border bg-accent-2 p-1 shadow-custom-hard block'>
+            <span className='bg-transparent px-3 py-2 border rounded-full block'>
+              Create.
+            </span>
+          </span>
+          <span className='rounded-full border bg-accent-3 p-1 shadow-custom-hard block'>
+            <span className='bg-transparent px-3 py-2 border rounded-full block'>
+              Connect.
+            </span>
+          </span>
+        </p>
         <h1 className='font-title text-4xl sm:text-5xl lg:text-7xl font-bold leading-tight mt-8 w-fit mx-auto'>
           Hackathons & meetups for <br />
           <div className='my-2 relative h-20'>
             <span className='opacity-0 animate-fade1 px-2 bg-accent-1 rounded-xl absolute top-0 left-1/2 -translate-x-1/2'>
-              Everyone
+              Developers
             </span>
             <span className='opacity-0 animate-fade2 px-2 bg-accent-2 rounded-xl absolute top-0 left-1/2 -translate-x-1/2'>
               Students
@@ -41,7 +57,7 @@ const Header = ({ className, ...props }: GeneralComponent) => {
               "flex-auto sm:flex-initial sm:w-auto w-full"
             )}
           >
-            Hackathons
+            Events
           </Link>
           <Link
             href='#numbers'

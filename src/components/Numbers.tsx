@@ -44,7 +44,11 @@ const Numbers = ({ className, ...props }: GeneralComponent) => {
   ];
 
   return (
-    <section className={cn(className, "my-16")} {...props} id='numbers'>
+    <section
+      className={cn(className, "my-16 scroll-m-[100px]")}
+      {...props}
+      id='numbers'
+    >
       <ViewContainer className='relative'>
         <h2 className='text-center text-4xl md:text-5xl mx-auto'>
           Numbers say it all{" "}

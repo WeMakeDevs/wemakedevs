@@ -4,7 +4,6 @@ import { useEffect, useState } from "react";
 import { logo } from "@/assets/images";
 import Image from "next/image";
 import Link from "next/link";
-import { ViewContainer } from "./ui/view-container";
 import { NavContainer } from "./ui/nav-container";
 import { Button, buttonVariants } from "./ui/button";
 import { Cross2Icon, HamburgerMenuIcon } from "@radix-ui/react-icons";
@@ -96,7 +95,7 @@ const Navbar = () => {
             "hover:bg-primary hover:text-white hover:border-primary font-semibold bg-transparent py-2 px-4"
           )}
         >
-          Hackathons
+          Events
         </Link>
       </NavContainer>
       <div
