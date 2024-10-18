@@ -5,6 +5,7 @@ import "./globals.css";
 import { cn } from "@/lib/utils";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import Banner from "@/components/Banner";
 
 const fontMono = FontMono({
   subsets: ["latin"],
@@ -64,6 +65,8 @@ export default function RootLayout({
         <Navbar />
         {children}
         <Footer />
+
+        <Banner>Hello world!</Banner>
       </body>
     </html>
   );

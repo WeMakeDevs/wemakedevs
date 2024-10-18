@@ -114,4 +114,8 @@
   .testimonial-card:nth-child(4n + 4) {
     @apply bg-accent-4;
   }
+
+  .banner-width {
+    width: calc(100vw - 2rem);
+  }
 }
