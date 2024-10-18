@@ -4,6 +4,7 @@ import Header from "@/components/Header";
 import Numbers from "@/components/Numbers";
 import Testimonials from "@/components/Testimonials";
 import Meetups from "@/components/Meetups";
+import Faq from "@/components/Faq";
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
       <Numbers />
       <Hackathons />
       <Meetups />
+      <Faq />
       <Testimonials />
     </div>
   );
