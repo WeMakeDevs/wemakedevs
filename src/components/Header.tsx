@@ -8,23 +8,22 @@ const Header = ({ className, ...props }: GeneralComponent) => {
   return (
     <header
       {...props}
-      className={cn(className, "pb-10 lg:pb-14 pt-20 lg:pt-28")}
+      className={cn(className, "pb-10 lg:pb-14 pt-20 lg:pt-36")}
     >
-      {/* <div className='w-full h-[500px] bg-gradient-to-b from-primary to-transparent absolute -top-36 left-0 z-0'></div> */}
       <ViewContainer className='text-center'>
-        <p className='mb-8 font-semibold flex gap-3 justify-center items-center'>
+        <p className='mb-8 font-semibold flex gap-3 justify-center items-center text-sm md:text-base'>
           <span className='rounded-full border bg-accent-1 p-1 shadow-custom-hard block'>
-            <span className='bg-accent-1 px-3 py-2 border rounded-full block'>
+            <span className='bg-transparent px-2 md:px-3 py-1.5 md:py-2 border rounded-full block'>
               Code.
             </span>
           </span>
           <span className='rounded-full border bg-accent-2 p-1 shadow-custom-hard block'>
-            <span className='bg-transparent px-3 py-2 border rounded-full block'>
+            <span className='bg-transparent px-2 md:px-3 py-1.5 md:py-2 border rounded-full block'>
               Create.
             </span>
           </span>
           <span className='rounded-full border bg-accent-3 p-1 shadow-custom-hard block'>
-            <span className='bg-transparent px-3 py-2 border rounded-full block'>
+            <span className='bg-transparent px-2 md:px-3 py-1.5 md:py-2 border rounded-full block'>
               Connect.
             </span>
           </span>

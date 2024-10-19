@@ -17,7 +17,7 @@ const About = ({ className, ...props }: GeneralComponent) => {
           alt='About Us Image'
           className='flex-1 max-w-md w-full'
         />
-        <div className='space-y-6 flex-1'>
+        <div className='space-y-6 flex-1 max-w-md lg:max-w-none'>
           <h2 className='text-4xl md:text-5xl'>About us</h2>
           <p className='text-lg leading-snug font-medium text-foreground/90'>
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
