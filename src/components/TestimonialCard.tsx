@@ -16,7 +16,7 @@ const TestimonialCard = ({
     <div
       className={cn(
         className,
-        "space-y-10 p-4 md:p-6 rounded rounded-tr-[50px] sm:max-w-[400px] md:max-w-[500px] mx-auto"
+        "flex flex-col gap-10 p-4 md:p-6 rounded rounded-tr-[50px] sm:max-w-[400px] md:max-w-[500px] mx-auto h-full"
       )}
       {...props}
     >
@@ -25,7 +25,7 @@ const TestimonialCard = ({
         alt='Quotation symbol'
         className='w-10 mix-blend-multiply opacity-50'
       />
-      <p className='text-lg md:text-xl font-medium'>{testimonialText}</p>
+      <p className='text-lg md:text-xl font-medium grow'>{testimonialText}</p>
       <div className='flex justify-between items-center'>
         <div className='flex gap-4 items-center'>
           <Image src={profileImage} alt={name} className='w-6 md:w-8' />

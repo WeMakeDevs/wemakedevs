@@ -93,7 +93,7 @@ const Testimonials = ({ className, ...props }: GeneralComponent) => {
             loop: true,
           }}
         >
-          <CarouselContent className=''>
+          <CarouselContent className='h-[400px]'>
             {testimonials.map((item, index) => (
               <CarouselItem key={index} className='md:basis-1/2 lg:basis-1/3'>
                 <TestimonialCard
