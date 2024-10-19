@@ -28,7 +28,11 @@ const TestimonialCard = ({
       <p className='text-lg md:text-xl font-medium grow'>{testimonialText}</p>
       <div className='flex justify-between items-center'>
         <div className='flex gap-4 items-center'>
-          <Image src={profileImage} alt={name} className='w-6 md:w-8' />
+          <Image
+            src={profileImage}
+            alt={name}
+            className='w-6 md:w-8 rounded-full'
+          />
           <span className='font-title font-medium text-base md:text-lg text-foreground/70'>
             {name}
           </span>

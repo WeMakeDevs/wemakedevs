@@ -4,11 +4,10 @@ import { TestimonialInterface } from "@/types";
 import {
   avatar1,
   avatar2,
+  avatar3,
   avatar4,
   avatar5,
   avatar6,
-  avatar7,
-  avatar8,
 } from "@/assets/images/testimonials";
 import { ViewContainer } from "./ui/view-container";
 import TestimonialCard from "./TestimonialCard";
@@ -22,65 +21,56 @@ import {
 
 const testimonials: TestimonialInterface[] = [
   {
-    profileImage: avatar1,
-    name: "John Doe",
+    profileImage: avatar4,
+    name: "Rahul Kumar",
     platform: "twitter",
     testimonialText:
-      "This hackathon was an amazing experience! Learned a lot and met great people.",
+      "The way this guy is teaching me Java is just Mind Blowing and Brilliant. I've never thought that these topics would be that much easier. Kudos to @kunalstwt #DSAwithKunal",
   },
   {
     profileImage: avatar2,
-    name: "Jane Smith",
-    platform: "linkedin",
+    name: "Ekjot Singh",
+    platform: "twitter",
     testimonialText:
-      "A well-organized event with lots of opportunities to network and learn. Had a fantastic time! The challenges were tough but rewarding.",
-  },
-  {
-    profileImage: avatar4,
-    name: "Bob Brown",
-    platform: "linkedin",
-    testimonialText:
-      "Great event! The mentors were very helpful and the atmosphere was inspiring.",
+      "Thanks @kunalstwt for helping me understand the benefits of Binary Search and how it's a lot effective than linear search. Understood the theory now and will be solving questions with @WeMakeDevs and build up the concept. #DSAwithKunal",
   },
   {
     profileImage: avatar5,
-    name: "Charlie Davis",
+    name: "Sajjan Yadav",
     platform: "twitter",
-    testimonialText: "Loved every moment of it! Can't wait for the next one.",
+    testimonialText:
+      "Done with amazing playlist of Object Oriented Programming by @kunalstwt bhaiya. Every concept was explained very well and got to know so many new things. Thanks kunal bhaiya for such an amazing playlist. #DSAwithKunal",
+  },
+  {
+    profileImage: avatar1,
+    name: "Anurag Pathak",
+    platform: "twitter",
+    testimonialText:
+      "Completed @kunalstwt's DevOps bootcamp networking video. Really awesome explanation, got a clear overview of whole networking process. Application layer is perfectly understood. #DevOpswithkunal  #networking",
+  },
+  {
+    profileImage: avatar3,
+    name: "Prasanna",
+    platform: "twitter",
+    testimonialText:
+      "Finally, completed 4 hour long video on computer networking. Amazing content @kunalstwt. Thanks for creating such an educational content for us 🙌🙌 #DevOpswithkunal",
   },
   {
     profileImage: avatar6,
-    name: "Dana White",
-    platform: "linkedin",
-    testimonialText:
-      "An excellent platform to showcase skills and learn from others.",
-  },
-  {
-    profileImage: avatar7,
-    name: "Eve Black",
+    name: "Siva Nithin",
     platform: "twitter",
     testimonialText:
-      "The hackathon was well-organized and the challenges were very engaging. An excellent platform to showcase skills and learn from others",
-  },
-  {
-    profileImage: avatar8,
-    name: "Frank Green",
-    platform: "linkedin",
-    testimonialText:
-      "A wonderful experience! The event was both fun and educational.",
-  },
-  {
-    profileImage: avatar7,
-    name: "Eve Black",
-    platform: "twitter",
-    testimonialText:
-      "The hackathon was well-organized and the challenges were very engaging.",
+      "What an explanation 🔥 on recursion! This dsa course is just absolutely amazing. Thank you Kunal Kushwaha for this amazing course. #DSAwithKunal #dsa",
   },
 ];
 
 const Testimonials = ({ className, ...props }: GeneralComponent) => {
   return (
-    <section className={cn(className, "mt-20 pb-16 relative")} {...props}>
+    <section
+      className={cn(className, "mt-20 pb-16 relative scroll-m-[100px]")}
+      {...props}
+      id='testimonials'
+    >
       <div className='w-full h-[400px] absolute bottom-0 left-0 bg-gradient-to-b from-background to-white -z-10'></div>
       <ViewContainer className=''>
         <h2 className='text-4xl md:text-5xl text-center mx-auto'>
@@ -93,7 +83,7 @@ const Testimonials = ({ className, ...props }: GeneralComponent) => {
             loop: true,
           }}
         >
-          <CarouselContent className='h-[400px]'>
+          <CarouselContent className='h-[480px]'>
             {testimonials.map((item, index) => (
               <CarouselItem key={index} className='md:basis-1/2 lg:basis-1/3'>
                 <TestimonialCard
