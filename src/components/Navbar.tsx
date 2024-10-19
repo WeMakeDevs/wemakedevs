@@ -41,13 +41,13 @@ const Navbar = () => {
       type: "link",
     },
     {
-      name: "Testimonials",
-      url: "/#testimonials",
+      name: "Blog",
+      url: "/blog",
       type: "link",
     },
     {
-      name: "FAQs",
-      url: "/#faq",
+      name: "Testimonials",
+      url: "/#testimonials",
       type: "link",
     },
     {
@@ -56,8 +56,8 @@ const Navbar = () => {
       type: "link",
     },
     {
-      name: "Blog",
-      url: "/blog",
+      name: "FAQs",
+      url: "/#faq",
       type: "link",
     },
   ];
@@ -100,9 +100,9 @@ const Navbar = () => {
           href='#hackathons'
           className={cn(
             buttonVariants({
-              variant: "outline",
+              variant: "default",
             }),
-            "hover:bg-primary hover:text-white hover:border-primary font-semibold bg-transparent py-2 px-4"
+            "font-semibold py-2 px-4"
           )}
         >
           Events

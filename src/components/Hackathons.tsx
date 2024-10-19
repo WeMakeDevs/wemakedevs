@@ -26,9 +26,8 @@ const Hackathons = async ({ className, ...props }: GeneralComponent) => {
         <div className='flex justify-between flex-col items-center'>
           <h2 className='text-4xl md:text-5xl'>Hackathons</h2>
           <p className='max-w-2xl font-medium leading-snug mt-2 md:mt-3 text-center text-base md:text-lg'>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita
-            suscipit magni saepe, repellat officia quos earum optio corrupti a
-            excepturi ipsum et sunt facilis rerum. Vel doloribus quia ad.
+            Join in our hackathons with your team of programmers, designers and
+            other tech enthusiasts to collaborate & build fascinating projects.
           </p>
         </div>
         <div className='my-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-6'>

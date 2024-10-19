@@ -43,10 +43,9 @@ const Header = ({ className, ...props }: GeneralComponent) => {
           </div>
         </h1>
         <p className='max-w-3xl w-full text-sm md:text-lg lg:text-xl mx-auto mt-10 font-medium'>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi eos
-          similique perspiciatis nam? Ratione numquam sapiente accusamus
-          consectetur, debitis reprehenderit eos delectus similique
-          perspiciatis.
+          WeMakeDevs is an inclusive global community for anyone passionate
+          about technology. We foster collaboration and innovation through
+          global events.
         </p>
         <div className='mx-auto flex flex-wrap gap-5 md:gap-10 justify-center mt-12'>
           <Link

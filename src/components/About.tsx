@@ -20,19 +20,17 @@ const About = ({ className, ...props }: GeneralComponent) => {
         <div className='space-y-6 flex-1 max-w-md lg:max-w-none'>
           <h2 className='text-4xl md:text-5xl'>About us</h2>
           <p className='text-lg leading-snug font-medium text-foreground/90'>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Exercitationem, inventore numquam voluptate ab maiores non
-            laudantium nobis consectetur fugiat aliquam sed officia, iusto animi
-            incidunt rem expedita labore. Velit, laborum!
+            WeMakeDevs is an inclusive global community for anyone passionate
+            about technology. We foster collaboration and innovation through
+            global hackathons and events, partnering with leading and emerging
+            companies, as well as open source projects.
           </p>
           <p className='text-lg leading-snug font-medium text-foreground/90'>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure
-            voluptatibus quasi ipsa excepturi id deleniti ad possimus placeat
-            officia doloremque, commodi dolore ratione omnis explicabo
-            molestias, amet repudiandae ab! Cupiditate minima numquam tempore
-            iure officiis vel corporis. Minima autem reprehenderit excepturi
-            maxime quibusdam, cupiditate cumque placeat ipsa dolores facere
-            eveniet.
+            If you are someone who is looking to discuss the latest
+            advancements, discover valuable resources and opportunities, engage
+            with tech events, share your ideas, or seek guidance, you&apos;re in
+            the right place. Welcome to a vibrant, dynamic community pushing the
+            boundaries of what we can achieve together.
           </p>
         </div>
       </ViewContainer>

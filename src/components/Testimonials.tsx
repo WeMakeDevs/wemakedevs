@@ -67,11 +67,10 @@ const testimonials: TestimonialInterface[] = [
 const Testimonials = ({ className, ...props }: GeneralComponent) => {
   return (
     <section
-      className={cn(className, "mt-20 pb-16 relative scroll-m-[100px]")}
+      className={cn(className, "mt-20 pb-16 scroll-m-[100px]")}
       {...props}
       id='testimonials'
     >
-      <div className='w-full h-[400px] absolute bottom-0 left-0 bg-gradient-to-b from-background to-white -z-10'></div>
       <ViewContainer className=''>
         <h2 className='text-4xl md:text-5xl text-center mx-auto'>
           Testimonials

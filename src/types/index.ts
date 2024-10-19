@@ -97,3 +97,16 @@ export interface TestimonialInterface {
 }
 
 export type TestimonialCardType = GeneralComponent & TestimonialInterface;
+
+export interface MeetupData {
+  title: string;
+  image: StaticImageData;
+  date: string;
+  description: string;
+  url: string;
+  location: string;
+}
+
+export interface MeetupCardInterface extends MeetupData {
+  className?: string;
+}

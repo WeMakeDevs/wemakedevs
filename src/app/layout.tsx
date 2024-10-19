@@ -6,6 +6,7 @@ import { cn } from "@/lib/utils";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Banner from "@/components/Banner";
+import { Button } from "@/components/ui/button";
 
 const fontMono = FontMono({
   subsets: ["latin"],
@@ -66,7 +67,14 @@ export default function RootLayout({
         {children}
         <Footer />
 
-        <Banner>Hello world!</Banner>
+        <Banner className='flex items-center text-base md:text-lg font-medium'>
+          <span className=''>
+            Our next event, Delhi Meetup is on 24th of September!
+          </span>
+          <Button className='mt-4 md:mt-0 md:ml-8 px-3 py-2 bg-white hover:bg-primary text-primary hover:text-white'>
+            Register now!
+          </Button>
+        </Banner>
       </body>
     </html>
   );

@@ -1,55 +1,47 @@
-import {
-  HackathonCard,
-  HackathonCardTitle,
-  HackathonCardDates,
-  HackathonCardImage,
-  HackathonCardDescription,
-} from "@/components/HackathonCard";
-import { fetchHackathonData } from "@/lib/hackathon";
 import { cn } from "@/lib/utils";
-import { GeneralComponent } from "@/types";
+import { GeneralComponent, MeetupData } from "@/types";
 import Link from "next/link";
 import { ViewContainer } from "./ui/view-container";
-import HackathonStatus from "./HackathonStatus";
+import { MeetupCard, MeetupLastCard } from "./MeetupCard";
 
-const Hackathons = async ({ className, ...props }: GeneralComponent) => {
-  const hackathons = await fetchHackathonData();
+import { aimlMeetup, webdevWorkshop } from "@/assets/images/meetups";
 
+const meetupEntries: MeetupData[] = [
+  {
+    title: "Web Development Workshop",
+    image: webdevWorkshop,
+    date: "2024-11-05",
+    description: "A hands-on workshop to build modern web applications.",
+    url: "https://example.com/workshop",
+    location: "Banglore, India",
+  },
+  {
+    title: "AI and Machine Learning Meetup",
+    image: aimlMeetup,
+    date: "2024-12-10",
+    description: "Join us for discussions on the latest in AI and ML.",
+    url: "https://example.com/ai-meetup",
+    location: "Delhi, India",
+  },
+];
+
+const Hackathons = ({ className, ...props }: GeneralComponent) => {
   return (
     <section className={cn(className, "mt-24 mb-16")} {...props}>
       <ViewContainer className=''>
-        <div className='flex justify-between flex-col md:flex-row items-center'>
-          <h2 className='text-4xl md:text-5xl'>Meetups</h2>
-          <Link
-            href='/hackathons'
-            className='font-title underline hover:no-underline'
-          >
-            See all meetups
-          </Link>
+        <div className='flex justify-between flex-col items-center'>
+          <h2 className='text-4xl md:text-5xl'>Meetups / Workshops</h2>
+          <p className='max-w-2xl font-medium leading-snug mt-2 md:mt-3 text-center text-base md:text-lg'>
+            Participate in our meetups where professionals, developers and
+            industry leaders come together to network and talk about latest tech
+            innovations.
+          </p>
         </div>
         <div className='my-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-6'>
-          {hackathons.map((hackathon, index) => (
-            <HackathonCard key={index} href={`/hackathons/${hackathon.slug}`}>
-              <HackathonCardImage
-                src={hackathon.image.thumbnail}
-                alt={hackathon.title}
-              />
-              <HackathonCardTitle>{hackathon.title}</HackathonCardTitle>
-              <div className='flex justify-between items-center'>
-                <HackathonStatus
-                  startDate={hackathon.startDate}
-                  endDate={hackathon.endDate}
-                />
-                <HackathonCardDates
-                  startDate={hackathon.startDate}
-                  endDate={hackathon.endDate}
-                />
-              </div>
-              <HackathonCardDescription>
-                {hackathon.description}
-              </HackathonCardDescription>
-            </HackathonCard>
+          {meetupEntries.map((meetup, index) => (
+            <MeetupCard key={index} {...meetup} />
           ))}
+          <MeetupLastCard />
         </div>
       </ViewContainer>
     </section>

@@ -13,44 +13,34 @@ type FaqType = {
 
 const FAQS: FaqType[] = [
   {
-    question: "Lorem ipsum dolor sit amet consectetur?",
+    question: "Is WeMakeDevs community beginner friendly?",
     answer:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi laudantium nesciunt pariatur iusto deleniti at ratione aperiam nostrum repellendus. Sequi?",
+      "Yes! Even non-coders are welcome. Our courses are designed in such a way that anyone can get started with it. Even people who have never programmed before!",
   },
   {
-    question: "Lorem ipsum dolor sit amet consectetur?",
+    question: "How do I stay up to date on the latest updates?",
     answer:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi laudantium nesciunt pariatur iusto deleniti at ratione aperiam nostrum repellendus. Sequi?",
+      "Please subscribe to our newsletter to stay up to date on the latest updates.",
   },
   {
-    question: "Lorem ipsum dolor sit amet consectetur?",
+    question: "What are the types of events hosted at WeMakeDevs?",
     answer:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi laudantium nesciunt pariatur iusto deleniti at ratione aperiam nostrum repellendus. Sequi?",
+      "We host all types of events such as online, in-person and hybrid events.",
   },
   {
-    question: "Lorem ipsum dolor sit amet consectetur?",
+    question: "How do I join WeMakeDevs community?",
     answer:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi laudantium nesciunt pariatur iusto deleniti at ratione aperiam nostrum repellendus. Sequi?",
+      "Make sure to join our Discord and Telegram channels. You can find us on all social media platforms as @wemakedevs",
   },
   {
-    question: "Lorem ipsum dolor sit amet consectetur?",
+    question: "How to take part in events hosted?",
     answer:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi laudantium nesciunt pariatur iusto deleniti at ratione aperiam nostrum repellendus. Sequi?",
+      "For hackathons, you can use our website to register. For meetups, you can visit our guild page.",
   },
   {
-    question: "Lorem ipsum dolor sit amet consectetur?",
-    answer:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi laudantium nesciunt pariatur iusto deleniti at ratione aperiam nostrum repellendus. Sequi?",
-  },
-  {
-    question: "Lorem ipsum dolor sit amet consectetur?",
-    answer:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi laudantium nesciunt pariatur iusto deleniti at ratione aperiam nostrum repellendus. Sequi?",
-  },
-  {
-    question: "Lorem ipsum dolor sit amet consectetur?",
-    answer:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi laudantium nesciunt pariatur iusto deleniti at ratione aperiam nostrum repellendus. Sequi?",
+    question:
+      "Do I have to pay for registering/attending events at WeMakeDevs?",
+    answer: "No! All events from WeMakeDevs are absolutely free to attend.",
   },
 ];
 
@@ -58,15 +48,10 @@ const halfLength = Math.ceil(FAQS.length / 2);
 
 const Faq = () => {
   return (
-    <section id='faq' className='my-32'>
+    <section id='faq' className='my-14 md:my-32 scroll-m-[100px] realtive'>
       <ViewContainer>
         <div className='flex justify-between flex-col items-center'>
           <h2 className='text-4xl md:text-5xl'>Frequently Asked Questions</h2>
-          <p className='max-w-2xl font-medium leading-snug mt-2 md:mt-3 text-center text-base md:text-lg'>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita
-            suscipit magni saepe, repellat officia quos earum optio corrupti a
-            excepturi ipsum et sunt facilis rerum. Vel doloribus quia ad.
-          </p>
         </div>
         <Accordion
           type='single'

@@ -14,8 +14,8 @@ export default function Home() {
       <Numbers />
       <Hackathons />
       <Meetups />
-      <Faq />
       <Testimonials />
+      <Faq />
     </div>
   );
 }
