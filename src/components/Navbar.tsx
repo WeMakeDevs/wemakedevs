@@ -36,11 +36,6 @@ const Navbar = () => {
 
   const navLinks: navLinksType = [
     {
-      name: "Header",
-      url: "/#header",
-      type: "link",
-    },
-    {
       name: "About",
       url: "/#about",
       type: "link",
@@ -48,6 +43,21 @@ const Navbar = () => {
     {
       name: "Testimonials",
       url: "/#testimonials",
+      type: "link",
+    },
+    {
+      name: "FAQs",
+      url: "/#faq",
+      type: "link",
+    },
+    {
+      name: "Newsletter",
+      url: "/#newsletter",
+      type: "link",
+    },
+    {
+      name: "Blog",
+      url: "/blog",
       type: "link",
     },
   ];
@@ -58,7 +68,7 @@ const Navbar = () => {
         className={cn(
           "items-center justify-between rounded transition-all py-3",
           isScrolled && "bg-white shadow-lg",
-          "hidden md:flex"
+          "hidden lg:flex"
         )}
       >
         <Link href='#' className='flex items-center gap-4'>
@@ -71,7 +81,7 @@ const Navbar = () => {
             WeMakeDevs
           </span>
         </Link>
-        <ul className='flex lg:gap-2'>
+        <ul className='absolute left-1/2 -translate-x-1/2 flex lg:gap-2 grow justify-center'>
           {navLinks.map((link, index) => (
             <li key={index}>
               <Link
@@ -100,7 +110,7 @@ const Navbar = () => {
       </NavContainer>
       <div
         className={cn(
-          "px-5 py-2 md:hidden",
+          "px-5 py-2 lg:hidden",
           isOpen && "pb-4",
           "bg-white shadow-md "
         )}
