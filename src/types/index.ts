@@ -110,3 +110,19 @@ export interface MeetupData {
 export interface MeetupCardInterface extends MeetupData {
   className?: string;
 }
+
+export type FooterSocialLink = {
+  name: string;
+  href: string;
+  icon: IconType;
+}
+
+type FooterLink = {
+  name: string;
+  href: string;
+}
+
+export type FooterLinkSection = {
+  title: string;
+  links: FooterLink[];
+}
