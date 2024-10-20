@@ -127,3 +127,11 @@ export type FooterLinkSection = {
   title: string;
   links: FooterLink[];
 }
+
+export type PartnerData = {
+  image: StaticImageData;
+  logo: StaticImageData;
+  name: string;
+  quote: string;
+  author: string;
+}

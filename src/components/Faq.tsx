@@ -48,7 +48,7 @@ const halfLength = Math.ceil(FAQS.length / 2);
 
 const Faq = () => {
   return (
-    <section id='faq' className='my-14 md:my-32 scroll-m-[100px] realtive'>
+    <section id='faq' className='my-14 md:my-24 scroll-m-[100px] realtive'>
       <ViewContainer>
         <div className='flex justify-between flex-col items-center'>
           <h2 className='text-4xl md:text-5xl'>Frequently Asked Questions</h2>
