@@ -27,7 +27,11 @@ const meetupEntries: MeetupData[] = [
 
 const Hackathons = ({ className, ...props }: GeneralComponent) => {
   return (
-    <section className={cn(className, "mt-24 mb-16")} {...props}>
+    <section
+      id='meetups'
+      className={cn(className, "mt-24 mb-16 scroll-m-[100px]")}
+      {...props}
+    >
       <ViewContainer className=''>
         <div className='flex justify-between flex-col items-center'>
           <h2 className='text-4xl md:text-5xl'>Meetups / Workshops</h2>

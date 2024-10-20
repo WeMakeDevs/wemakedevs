@@ -49,22 +49,22 @@ const Header = ({ className, ...props }: GeneralComponent) => {
         </p>
         <div className='mx-auto flex flex-wrap gap-5 md:gap-10 justify-center mt-12'>
           <Link
-            href='#hackathons'
+            href='#join'
             className={cn(
               buttonVariants({ variant: "default" }),
-              "flex-auto sm:flex-initial sm:w-auto w-full"
-            )}
-          >
-            Events
-          </Link>
-          <Link
-            href='#numbers'
-            className={cn(
-              buttonVariants({ variant: "outline" }),
               "flex gap-2 flex-auto sm:flex-initial sm:w-auto w-full"
             )}
           >
             Join community
+          </Link>
+          <Link
+            href='#hackathons'
+            className={cn(
+              buttonVariants({ variant: "outline" }),
+              "flex-auto sm:flex-initial sm:w-auto w-full"
+            )}
+          >
+            Events
           </Link>
         </div>
       </ViewContainer>
