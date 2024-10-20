@@ -7,6 +7,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Banner from "@/components/Banner";
 import { Button } from "@/components/ui/button";
+import { Toaster } from "sonner";
 
 const fontMono = FontMono({
   subsets: ["latin"],
@@ -66,7 +67,6 @@ export default function RootLayout({
         <Navbar />
         {children}
         <Footer />
-
         <Banner className='flex items-center text-base md:text-lg font-medium'>
           <span className=''>
             Our next event, Delhi Meetup is on 24th of September!
@@ -75,6 +75,7 @@ export default function RootLayout({
             Register now!
           </Button>
         </Banner>
+        <Toaster />
       </body>
     </html>
   );

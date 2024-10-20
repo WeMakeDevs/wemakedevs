@@ -5,6 +5,7 @@ import Numbers from "@/components/Numbers";
 import Testimonials from "@/components/Testimonials";
 import Meetups from "@/components/Meetups";
 import Faq from "@/components/Faq";
+import Newsletter from "@/components/Newsletter";
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
       <Hackathons />
       <Meetups />
       <Testimonials />
+      <Newsletter />
       <Faq />
     </div>
   );
