@@ -41,23 +41,28 @@ const Navbar = () => {
       type: "link",
     },
     {
-      name: "Blog",
-      url: "/blog",
+      name: "Join",
+      url: "/#join",
       type: "link",
     },
     {
-      name: "Testimonials",
-      url: "/#testimonials",
+      name: "Hackathons",
+      url: "/#hackathons",
       type: "link",
     },
     {
-      name: "Newsletter",
-      url: "/#newsletter",
+      name: "Meetups",
+      url: "/#meetups",
       type: "link",
     },
     {
       name: "FAQs",
       url: "/#faq",
+      type: "link",
+    },
+    {
+      name: "Blog",
+      url: "/blog",
       type: "link",
     },
   ];
@@ -71,7 +76,7 @@ const Navbar = () => {
           "hidden lg:flex"
         )}
       >
-        <Link href='#' className='flex items-center gap-4'>
+        <Link href='/' className='flex items-center gap-4'>
           <Image src={logo} alt='WeMakeDevs Logo' className='w-12' />
           <span
             className={cn(
@@ -81,7 +86,7 @@ const Navbar = () => {
             WeMakeDevs
           </span>
         </Link>
-        <ul className='absolute left-1/2 -translate-x-1/2 flex lg:gap-2 grow justify-center'>
+        <ul className='flex lg:gap-2'>
           {navLinks.map((link, index) => (
             <li key={index}>
               <Link
@@ -96,17 +101,6 @@ const Navbar = () => {
             </li>
           ))}
         </ul>
-        <Link
-          href='#hackathons'
-          className={cn(
-            buttonVariants({
-              variant: "default",
-            }),
-            "font-semibold py-2 px-4"
-          )}
-        >
-          Events
-        </Link>
       </NavContainer>
       <div
         className={cn(
@@ -116,7 +110,7 @@ const Navbar = () => {
         )}
       >
         <div className='flex w-full justify-between items-center'>
-          <Link href='#' className='flex items-center gap-4'>
+          <Link href='/' className='flex items-center gap-4'>
             <Image src={logo} alt='WeMakeDevs Logo' className='w-12' />{" "}
             <span className='font-title text-lg md:text-xl text-primary font-semibold'>
               WeMakeDevs
