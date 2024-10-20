@@ -120,6 +120,7 @@ export type FooterSocialLink = {
 type FooterLink = {
   name: string;
   href: string;
+  opensInNewTab?: boolean;
 }
 
 export type FooterLinkSection = {

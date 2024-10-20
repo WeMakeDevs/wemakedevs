@@ -12,15 +12,13 @@ import {
   SiYoutube,
   SiTelegram,
   SiGmail,
-  SiHashnode,
-  SiThreads,
 } from "@icons-pack/react-simple-icons";
 import Link from "next/link";
 
 const footerSocialLinks: FooterSocialLink[] = [
   {
     name: "YouTube",
-    href: "https://youtube.com/WeMakeDevs",
+    href: "https://youtube.com/@WeMakeDevs",
     icon: SiYoutube,
   },
   {
@@ -58,16 +56,6 @@ const footerSocialLinks: FooterSocialLink[] = [
     href: "https://discord.gg/weMakeDevs",
     icon: SiDiscord,
   },
-  {
-    name: "Hashnode",
-    href: "#",
-    icon: SiHashnode,
-  },
-  {
-    name: "Threads",
-    href: "https://www.threads.net/@wemakedevs",
-    icon: SiThreads,
-  },
 ];
 
 const footerLinks: FooterLinkSection[] = [
@@ -83,8 +71,8 @@ const footerLinks: FooterLinkSection[] = [
         href: "/#faq",
       },
       {
-        name: "Newsletter",
-        href: "/#newsletter",
+        name: "Join",
+        href: "/#join",
       },
     ],
   },
@@ -94,14 +82,17 @@ const footerLinks: FooterLinkSection[] = [
       {
         name: "Discord",
         href: "https://discord.gg/wemakedevs",
+        opensInNewTab: true,
       },
       {
         name: "Telegram",
         href: "https://t.me/WeMakeDevs",
+        opensInNewTab: true,
       },
       {
         name: "Blog",
         href: "#",
+        opensInNewTab: true,
       },
     ],
   },
@@ -124,14 +115,22 @@ const footerLinks: FooterLinkSection[] = [
       {
         name: "Twitter",
         href: "https://twitter.com/WeMakeDevs",
+        opensInNewTab: true,
       },
       {
         name: "Linkedin",
         href: "https://www.linkedin.com/company/wemakedevs/",
+        opensInNewTab: true,
       },
       {
         name: "Instagram",
         href: "https://www.instagram.com/wemakedevs/",
+        opensInNewTab: true,
+      },
+      {
+        name: "YouTube",
+        href: "https://youtube.com/@WeMakeDevs",
+        opensInNewTab: true,
       },
     ],
   },
@@ -141,6 +140,7 @@ const footerLinks: FooterLinkSection[] = [
       {
         name: "contact@wemakedevs.org",
         href: "mailto:contact@wemakedevs.org",
+        opensInNewTab: true,
       },
     ],
   },
@@ -168,6 +168,8 @@ const Footer = ({ className, ...props }: GeneralComponent) => {
                     <Link
                       href={link.href}
                       className='text-white text-base md:text-lg font-medium'
+                      target={link.opensInNewTab ? "_blank" : "_self"}
+                      rel={link.opensInNewTab ? "noreferrer noopener" : ""}
                     >
                       {link.name}
                     </Link>
@@ -195,6 +197,7 @@ const Footer = ({ className, ...props }: GeneralComponent) => {
                 <Link
                   href={link.href}
                   target='_blank'
+                  rel='noreferrer noopener'
                   className='text-white hover:text-white/50 transition-colors'
                 >
                   <link.icon className='w-5 h-5' />
