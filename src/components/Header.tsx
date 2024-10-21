@@ -42,7 +42,7 @@ const Header = ({ className, ...props }: GeneralComponent) => {
             </span>
           </div>
         </h1>
-        <p className='max-w-3xl w-full text-sm md:text-lg lg:text-xl mx-auto mt-10 font-medium'>
+        <p className='max-w-3xl w-full text-lg lg:text-xl mx-auto mt-10 font-medium'>
           WeMakeDevs is an inclusive global community for anyone passionate
           about technology. We foster collaboration and innovation through
           global events.
