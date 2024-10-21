@@ -5,8 +5,6 @@ import "./globals.css";
 import { cn } from "@/lib/utils";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import Banner from "@/components/Banner";
-import { Button } from "@/components/ui/button";
 import { Toaster } from "sonner";
 
 const fontMono = FontMono({
@@ -33,12 +31,12 @@ const fontSans = localFont({
 export const metadata: Metadata = {
   title: "WeMakeDevs",
   description:
-    "WeMakeDevs hosts hackathons and competitions for designers, developers and everyone interested in tech.",
+    "WeMakeDevs is an inclusive global community for anyone passionate about technology. We foster collaboration and innovation through global events.",
   metadataBase: new URL("https://wemakedevs.org"),
   openGraph: {
     title: "WeMakeDevs",
     description:
-      "WeMakeDevs hosts hackathons and competitions for designers, developers and everyone interested in tech.",
+      "WeMakeDevs is an inclusive global community for anyone passionate about technology. We foster collaboration and innovation through global events.",
     url: "https://wemakedevs.org",
     siteName: "WeMakeDevs",
     images: {
