@@ -5,11 +5,11 @@ import {
   HackathonCardImage,
   HackathonCardDescription,
   HackathonLastCard,
+  HackathonComingSoonCard,
 } from "@/components/HackathonCard";
 import { fetchHackathonData } from "@/lib/hackathon";
 import { cn } from "@/lib/utils";
 import { GeneralComponent } from "@/types";
-import Link from "next/link";
 import { ViewContainer } from "./ui/view-container";
 import HackathonStatus from "./HackathonStatus";
 
@@ -31,7 +31,7 @@ const Hackathons = async ({ className, ...props }: GeneralComponent) => {
           </p>
         </div>
         <div className='my-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-6'>
-          {hackathons.map((hackathon, index) => (
+          {/* {hackathons.map((hackathon, index) => (
             <HackathonCard key={index} href={`/hackathons/${hackathon.slug}`}>
               <HackathonCardImage
                 src={hackathon.image.thumbnail}
@@ -52,8 +52,8 @@ const Hackathons = async ({ className, ...props }: GeneralComponent) => {
                 {hackathon.description}
               </HackathonCardDescription>
             </HackathonCard>
-          ))}
-          <HackathonLastCard />
+          ))} */}
+          <HackathonComingSoonCard />
         </div>
       </ViewContainer>
     </section>

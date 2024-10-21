@@ -13,7 +13,6 @@ export type numbersType = {
   number: number;
   icon: IconType;
   color: string;
-  href: string;
 }[];
 
 export interface GeneralComponent extends React.HTMLAttributes<HTMLDivElement> {

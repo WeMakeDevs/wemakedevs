@@ -3,6 +3,7 @@ import { cn } from "@/lib/utils";
 import { MeetupCardInterface } from "@/types";
 import Link from "next/link";
 import { MapPin, CalendarIcon, ArrowUpRight } from "lucide-react";
+import { meetupImage } from "@/assets/images";
 
 const MeetupCard = ({
   title,
@@ -56,7 +57,9 @@ const MeetupLastCard = () => {
   return (
     <Link
       className='overflow-clip p-5 rounded group relative shadow-xl bg-accent-2 text-[#12462e] '
-      href='#'
+      href='https://guild.host/wemakedevs/guilds'
+      target='_blank'
+      rel='noreferrer noopener'
     >
       <svg
         className='-translate-x-4 w-16 mx-auto'
@@ -122,4 +125,17 @@ const MeetupLastCard = () => {
   );
 };
 
-export { MeetupCard, MeetupLastCard };
+const MeetupComingSoonCard = () => {
+  return (
+    <div className='overflow-clip p-5 rounded group relative shadow-xl bg-accent-2 text-[#12462e] '>
+      <Image src={meetupImage} alt='Hackathon Image' className='rounded' />
+      <div className='mt-16'>
+        <h3 className='text-center leading-tight text-2xl md:text-3xl text-[#12462e]'>
+          Coming Soon!
+        </h3>
+      </div>
+    </div>
+  );
+};
+
+export { MeetupCard, MeetupLastCard, MeetupComingSoonCard };

@@ -36,11 +36,6 @@ const Navbar = () => {
 
   const navLinks: navLinksType = [
     {
-      name: "About",
-      url: "/#about",
-      type: "link",
-    },
-    {
       name: "Join",
       url: "/#join",
       type: "link",
@@ -62,8 +57,14 @@ const Navbar = () => {
     },
     {
       name: "Blog",
-      url: "/blog",
+      url: "https://blog.wemakedevs.org/",
       type: "link",
+      openInNewTab: true,
+    },
+    {
+      name: "Partner with us",
+      url: "/#partners",
+      type: "button",
     },
   ];
 
@@ -92,9 +93,14 @@ const Navbar = () => {
               <Link
                 href={link.url}
                 className={cn(
-                  buttonVariants({ variant: "ghost" }),
-                  "px-4 py-2 text-foreground"
+                  buttonVariants({
+                    variant: link.type == "button" ? "default" : "ghost",
+                  }),
+                  "px-4 py-2 text-foreground",
+                  link.type == "button" && "text-white"
                 )}
+                target={link.openInNewTab ? "_blank" : "_self"}
+                rel={link.openInNewTab ? "noreferrer noopener" : ""}
               >
                 {link.name}
               </Link>
@@ -137,7 +143,10 @@ const Navbar = () => {
               <Link
                 href={link.url}
                 className={cn(
-                  "w-full px-4 py-2 border-b border-accent-3 hover:bg-black/[0.04] bg-transparent flex justify-center items-center"
+                  "w-full px-4 py-2 border-b border-accent-3 flex justify-center items-center",
+                  link.type == "button"
+                    ? "bg-primary hover:bg-blue-700 text-white"
+                    : "hover:bg-black/[0.04] bg-transparent"
                 )}
                 onClick={handleToggle}
               >

@@ -9,6 +9,7 @@ import {
 import Link from "next/link";
 import { CalendarIcon } from "@radix-ui/react-icons";
 import { ArrowUpRight } from "lucide-react";
+import { hackathonImage } from "@/assets/images";
 
 const HackathonCard = ({ className, children, href }: HackathonCardType) => {
   return (
@@ -164,6 +165,19 @@ const HackathonLastCard = () => {
   );
 };
 
+const HackathonComingSoonCard = () => {
+  return (
+    <div className='overflow-clip p-5 rounded group relative shadow-xl bg-accent-4 text-[#0A3D71] '>
+      <Image src={hackathonImage} alt='Hackathon Image' className='rounded' />
+      <div className='mt-16'>
+        <h3 className='text-center leading-tight text-2xl md:text-3xl text-[#0A3D71]'>
+          Coming Soon!
+        </h3>
+      </div>
+    </div>
+  );
+};
+
 export {
   HackathonCard,
   HackathonCardTitle,
@@ -171,4 +185,5 @@ export {
   HackathonCardImage,
   HackathonLastCard,
   HackathonCardDescription,
+  HackathonComingSoonCard,
 };

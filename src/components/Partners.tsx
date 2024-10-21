@@ -69,11 +69,15 @@ const partnersData: PartnerData[] = [
 
 const Partners = () => {
   return (
-    <section id='partners' className='my-28'>
+    <section id='partners' className='my-28 scroll-m-[100px]'>
       <ViewContainer>
-        <h2 className='text-4xl md:text-5xl text-center mb-8'>
-          Partner With Us
-        </h2>
+        <div className='mb-8 space-y-6'>
+          <h2 className='text-4xl md:text-5xl text-center'>Partner With Us</h2>
+          <p className='text-center text-lg leading-snug font-medium text-foreground/90'>
+            Collaborate with us to support innovation in global hackathons and
+            tech events.
+          </p>
+        </div>
         <div className='space-y-6'>
           <div className='grid grid-cols-1 md:grid-cols-7 gap-6'>
             <PartnerCard className='relative md:col-span-2'>

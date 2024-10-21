@@ -8,6 +8,9 @@ import hackForGoodThumbnail from "./hack-for-good-thumbnail.jpg";
 import codefest2024Cover from "./codefest-2024-cover.png";
 import codefest2024Thumbnail from "./codefest-2024-thumbnail.jpg";
 
+import hackathonImage from './wemakedevs_hackathon.png'
+import meetupImage from './wemakedevs_meetup.jpg'
+
 export {
   logo,
   heroBg,
@@ -16,5 +19,7 @@ export {
   codefest2024Cover,
   codefest2024Thumbnail,
   aboutImage,
+  hackathonImage,
+  meetupImage,
   quotation
 };

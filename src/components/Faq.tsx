@@ -13,34 +13,34 @@ type FaqType = {
 
 const FAQS: FaqType[] = [
   {
-    question: "Is WeMakeDevs community beginner friendly?",
+    question: "How can I join the community?",
     answer:
-      "Yes! Even non-coders are welcome. Our courses are designed in such a way that anyone can get started with it. Even people who have never programmed before!",
+      'Simply head over to the "Join" section on this page, where you’ll find links to our Discord and Telegram groups.',
   },
   {
-    question: "How do I stay up to date on the latest updates?",
+    question: "What kind of events do you host?",
     answer:
-      "Please subscribe to our newsletter to stay up to date on the latest updates.",
+      "We regularly organize hackathons and meetups to bring developers together for learning and collaboration.",
   },
   {
-    question: "What are the types of events hosted at WeMakeDevs?",
+    question: "How can I partner with WeMakeDevs?",
     answer:
-      "We host all types of events such as online, in-person and hybrid events.",
+      "To explore partnership opportunities, send an email to contact@wemakedevs.org.",
   },
   {
-    question: "How do I join WeMakeDevs community?",
+    question: "How do I stay updated with the latest events?",
     answer:
-      "Make sure to join our Discord and Telegram channels. You can find us on all social media platforms as @wemakedevs",
+      "Sign up for our newsletter to receive the latest news and updates on upcoming hackathons and tech events",
   },
   {
-    question: "How to take part in events hosted?",
+    question: "Who can participate in the events?",
     answer:
-      "For hackathons, you can use our website to register. For meetups, you can visit our guild page.",
+      "Our events are open to developers of all levels, from beginners to experts, and anyone passionate about technology.",
   },
   {
-    question:
-      "Do I have to pay for registering/attending events at WeMakeDevs?",
-    answer: "No! All events from WeMakeDevs are absolutely free to attend.",
+    question: "Are the events free to join?",
+    answer:
+      "Yes, all of our hackathons are free to join for community members.",
   },
 ];
 

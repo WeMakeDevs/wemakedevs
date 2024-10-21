@@ -86,12 +86,12 @@ const Newsletter = ({ className, ...props }: GeneralComponent) => {
     >
       <ViewContainer className='space-y-10'>
         <h2 className='text-4xl md:text-5xl text-white text-center'>
-          Join our community
+          Join Our Community
         </h2>
         <div className='flex justify-between p-10 md:p-12 lg:p-16 shadow-xl bg-gray-50 rounded-[8px] flex-col md:flex-row gap-8 lg:gap-10'>
           <div className='grow'>
             <h2 className='text-2xl md:text-[28px] font-semibold'>
-              Join the newsletter
+              Join the Newsletter
             </h2>
             <p className='font-medium text-gray-500 text-lg md:text-[20px] mt-2 md:mt-3'>
               Get the latest insights and updates straight to your inbox.

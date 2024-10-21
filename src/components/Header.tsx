@@ -14,22 +14,22 @@ const Header = ({ className, ...props }: GeneralComponent) => {
         <p className='mb-8 font-semibold flex gap-3 justify-center items-center text-sm md:text-base'>
           <span className='rounded-full border bg-accent-1 p-1 shadow-custom-hard block'>
             <span className='bg-transparent px-2 md:px-3 py-1.5 md:py-2 border rounded-full block'>
-              Code.
+              Code
             </span>
           </span>
           <span className='rounded-full border bg-accent-2 p-1 shadow-custom-hard block'>
             <span className='bg-transparent px-2 md:px-3 py-1.5 md:py-2 border rounded-full block'>
-              Create.
+              Create
             </span>
           </span>
           <span className='rounded-full border bg-accent-3 p-1 shadow-custom-hard block'>
             <span className='bg-transparent px-2 md:px-3 py-1.5 md:py-2 border rounded-full block'>
-              Connect.
+              Connect
             </span>
           </span>
         </p>
         <h1 className='font-title text-4xl sm:text-5xl lg:text-7xl font-bold leading-tight mt-8 w-fit mx-auto'>
-          Hackathons & meetups for <br />
+          Hackathons & Meetups For <br />
           <div className='my-2 relative h-20'>
             <span className='opacity-0 animate-fade1 px-2 bg-accent-1 rounded-xl absolute top-0 left-1/2 -translate-x-1/2'>
               Developers
@@ -55,7 +55,7 @@ const Header = ({ className, ...props }: GeneralComponent) => {
               "flex gap-2 flex-auto sm:flex-initial sm:w-auto w-full"
             )}
           >
-            Join community
+            Join our community
           </Link>
           <Link
             href='#hackathons'

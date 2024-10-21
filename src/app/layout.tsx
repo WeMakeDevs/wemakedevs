@@ -67,14 +67,14 @@ export default function RootLayout({
         <Navbar />
         {children}
         <Footer />
-        <Banner className='flex items-center text-base md:text-lg font-medium'>
+        {/* <Banner className='flex items-center text-base md:text-lg font-medium'>
           <span className=''>
             Our next event, Delhi Meetup is on 24th of September!
           </span>
           <Button className='mt-4 md:mt-0 md:ml-8 px-3 py-2 bg-white hover:bg-primary text-primary hover:text-white'>
             Register now!
           </Button>
-        </Banner>
+        </Banner> */}
         <Toaster />
       </body>
     </html>

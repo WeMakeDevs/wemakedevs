@@ -91,7 +91,7 @@ const footerLinks: FooterLinkSection[] = [
       },
       {
         name: "Blog",
-        href: "#",
+        href: "https://blog.wemakedevs.org/",
         opensInNewTab: true,
       },
     ],

@@ -2,7 +2,7 @@ import { cn } from "@/lib/utils";
 import { GeneralComponent, MeetupData } from "@/types";
 import Link from "next/link";
 import { ViewContainer } from "./ui/view-container";
-import { MeetupCard, MeetupLastCard } from "./MeetupCard";
+import { MeetupCard, MeetupComingSoonCard, MeetupLastCard } from "./MeetupCard";
 
 import { aimlMeetup, webdevWorkshop } from "@/assets/images/meetups";
 
@@ -34,7 +34,7 @@ const Hackathons = ({ className, ...props }: GeneralComponent) => {
     >
       <ViewContainer className=''>
         <div className='flex justify-between flex-col items-center'>
-          <h2 className='text-4xl md:text-5xl'>Meetups / Workshops</h2>
+          <h2 className='text-4xl md:text-5xl'>Meetups</h2>
           <p className='max-w-2xl font-medium leading-snug mt-2 md:mt-3 text-center text-base md:text-lg'>
             Participate in our meetups where professionals, developers and
             industry leaders come together to network and talk about latest tech
@@ -42,10 +42,10 @@ const Hackathons = ({ className, ...props }: GeneralComponent) => {
           </p>
         </div>
         <div className='my-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-6'>
-          {meetupEntries.map((meetup, index) => (
+          {/* {meetupEntries.map((meetup, index) => (
             <MeetupCard key={index} {...meetup} />
-          ))}
-          <MeetupLastCard />
+          ))} */}
+          <MeetupComingSoonCard />
         </div>
       </ViewContainer>
     </section>

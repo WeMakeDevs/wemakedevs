@@ -18,7 +18,7 @@ const About = ({ className, ...props }: GeneralComponent) => {
           className='flex-1 max-w-md w-full'
         />
         <div className='space-y-6 flex-1 max-w-md lg:max-w-none'>
-          <h2 className='text-4xl md:text-5xl'>About us</h2>
+          <h2 className='text-4xl md:text-5xl'>About Us</h2>
           <p className='text-lg leading-snug font-medium text-foreground/90'>
             WeMakeDevs is an inclusive global community for anyone passionate
             about technology. We foster collaboration and innovation through
