@@ -1,73 +1,74 @@
 "use client";
-import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { GeneralComponent, numbersType } from "@/types";
 import { ViewContainer } from "./ui/view-container";
-import {
-  SiDiscord,
-  SiLinkedin,
-  SiTelegram,
-  SiX,
-} from "@icons-pack/react-simple-icons";
 import CountUp from "react-countup";
+import { CircleDollarSign, Globe, Handshake, Users } from "lucide-react";
 
 const Numbers = ({ className, ...props }: GeneralComponent) => {
   const numbers: numbersType = [
     {
-      name: "Discord",
-      number: 65000,
-      icon: SiDiscord,
-      color: "#93a0f6",
-      href: "https://discord.gg/wemakedevs",
+      name: "Community of",
+      number: 150000,
+      icon: Users,
+      color: "accent-1",
     },
     {
-      name: "Twitter",
-      number: 60000,
-      icon: SiX,
-      color: "#e7f433",
-      href: "https://x.com/wemakedevs",
+      name: "Prices in $ worth",
+      number: 40000,
+      icon: CircleDollarSign,
+      color: "accent-2",
     },
     {
-      name: "LinkedIn",
-      number: 20000,
-      icon: SiLinkedin,
-      color: "#FE446D",
-      href: "https://linkedin.com/company/wemakdevs",
+      name: "Partners",
+      number: 100,
+      icon: Handshake,
+      color: "accent-3",
     },
     {
-      name: "Telegram",
-      number: 10000,
-      icon: SiTelegram,
-      color: "#75dbb6",
-      href: "https://t.me/WeMakeDevs",
+      name: "Countries",
+      number: 14,
+      icon: Globe,
+      color: "accent-4",
     },
   ];
 
   return (
-    <section className={cn(className, "my-16")} {...props}>
+    <section
+      className={cn(className, "my-16 scroll-m-[100px]")}
+      {...props}
+      id='numbers'
+    >
       <ViewContainer className='relative'>
-        <h2 className='text-center text-4xl md:text-5xl'>
-          Numbers say it all<span className='text-primary'>_</span>
+        <h2 className='text-center text-4xl md:text-5xl mx-auto'>
+          Numbers Say It All
         </h2>
-        <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 mt-12'>
+        <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8 mt-12'>
           {numbers.map((item, index) => (
-            <Link
-              href={item.href}
-              className='bg-foreground/[.02] border border-foreground/10 rounded-xl p-5 relative group hover:scale-110 transition-transform hover:rotate-3'
+            <div
+              className='group bg-white shadow-lg hover:shadow-xl transition-shadow border border-foreground/10 rounded-xl p-5 pb-4 relative group overflow-clip'
               key={index}
             >
               <div
-                className={`absolute top-1/2 left-1/2 translate-x-1/2 -translate-y-1/2 w-[0px] h-[0px] blur-[70px] rounded-full group-hover:w-[50px] group-hover:h-[50px] transition-all`}
-                style={{ backgroundColor: item.color }}
+                className={`duration-300 z-0 absolute bottom-0 left-0 w-full h-full transition-transform origin-top group-hover:origin-bottom scale-y-0 group-hover:scale-y-100 bg-${item.color}`}
               ></div>
-              <item.icon className='opacity-80' size={28} />
-              <p className='text-4xl md:text-5xl font-title font-medium mt-12 md:mt-20'>
-                <CountUp end={item.number} start={0} suffix='+' enableScrollSpy>
-                  {({ countUpRef }) => <span ref={countUpRef} />}
-                </CountUp>
-              </p>
-              <h3 className='font-body font-medium mt-3'>{item.name}</h3>
-            </Link>
+              <item.icon className='opacity-80 z-10' size={28} />
+              <div className='mt-6 md:mt-12 group-hover:-translate-y-4 transition-transform'>
+                <h3 className='font-body font-medium relative z-10'>
+                  {item.name}
+                </h3>
+                <p className='relative text-4xl md:text-5xl lg:text-4xl xl:text-5xl font-title font-medium mt-3 z-10'>
+                  <CountUp
+                    end={item.number}
+                    start={0}
+                    suffix='+'
+                    enableScrollSpy
+                  >
+                    {({ countUpRef }) => <span ref={countUpRef} />}
+                  </CountUp>
+                </p>
+              </div>
+            </div>
           ))}
         </div>
       </ViewContainer>

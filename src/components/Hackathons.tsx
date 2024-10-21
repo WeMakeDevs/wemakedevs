@@ -4,11 +4,12 @@ import {
   HackathonCardDates,
   HackathonCardImage,
   HackathonCardDescription,
+  HackathonLastCard,
+  HackathonComingSoonCard,
 } from "@/components/HackathonCard";
 import { fetchHackathonData } from "@/lib/hackathon";
 import { cn } from "@/lib/utils";
 import { GeneralComponent } from "@/types";
-import Link from "next/link";
 import { ViewContainer } from "./ui/view-container";
 import HackathonStatus from "./HackathonStatus";
 
@@ -17,24 +18,20 @@ const Hackathons = async ({ className, ...props }: GeneralComponent) => {
 
   return (
     <section
-      className={cn(className, "mt-24 mb-16")}
+      className={cn(className, "mt-24 mb-16 scroll-m-[100px]")}
       id='hackathons'
       {...props}
     >
       <ViewContainer className=''>
-        <div className='flex justify-between flex-col md:flex-row '>
-          <h2 className='text-4xl md:text-5xl'>
-            Hackathons<span className='text-primary'>_</span>
-          </h2>
-          <Link
-            href='/hackathons'
-            className='font-title underline hover:no-underline'
-          >
-            See all hackathons
-          </Link>
+        <div className='flex justify-between flex-col items-center'>
+          <h2 className='text-4xl md:text-5xl'>Hackathons</h2>
+          <p className='max-w-2xl font-medium leading-snug mt-2 md:mt-3 text-center text-base md:text-lg'>
+            Join in our hackathons with your team of programmers, designers and
+            other tech enthusiasts to collaborate & build fascinating projects.
+          </p>
         </div>
-        <div className='my-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
-          {hackathons.map((hackathon, index) => (
+        <div className='my-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-6'>
+          {/* {hackathons.map((hackathon, index) => (
             <HackathonCard key={index} href={`/hackathons/${hackathon.slug}`}>
               <HackathonCardImage
                 src={hackathon.image.thumbnail}
@@ -55,7 +52,8 @@ const Hackathons = async ({ className, ...props }: GeneralComponent) => {
                 {hackathon.description}
               </HackathonCardDescription>
             </HackathonCard>
-          ))}
+          ))} */}
+          <HackathonComingSoonCard />
         </div>
       </ViewContainer>
     </section>

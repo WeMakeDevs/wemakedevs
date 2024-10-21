@@ -8,15 +8,15 @@ import { notFound } from "next/navigation";
 const HackathonProjects = async ({ params }: { params: { slug: string } }) => {
   const hackathons = await fetchHackathonData();
   const hackathon = hackathons.find(
-    (hackathon) => hackathon.slug == params.slug,
+    (hackathon) => hackathon.slug == params.slug
   );
 
   if (!hackathon) notFound();
 
   return (
-    <div>
+    <div className='pt-20'>
       <HackathonCoverImage src={hackathon.image.cover} alt={hackathon.title} />
-      <HackathonNav slug={hackathon.slug} page="projects" />
+      <HackathonNav slug={hackathon.slug} page='projects' />
     </div>
   );
 };

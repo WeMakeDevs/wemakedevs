@@ -1,61 +1,37 @@
-import { aboutUfo } from "@/assets/images";
+import { aboutImage } from "@/assets/images";
 import { cn } from "@/lib/utils";
 import { GeneralComponent } from "@/types";
-import { SiLinkedin, SiX } from "@icons-pack/react-simple-icons";
 import Image from "next/image";
-import Link from "next/link";
 import { ViewContainer } from "./ui/view-container";
 
 const About = ({ className, ...props }: GeneralComponent) => {
   return (
-    <section {...props} className={cn(className, "my-14")} id="about">
-      <ViewContainer className="relative overflow-clip grid grid-cols-1 gap-5 lg:gap-10 md:grid-cols-2 px-6 md:px-8 py-10 md:py-16 rounded-xl bg-foreground/[.02] border border-foreground/10">
-        <div className="absolute w-[200px] h-[200px] rounded-full bg-primary top-0 left-0 blur-[200px] -z-10"></div>
-        <div className="absolute w-[200px] h-[200px] rounded-full bg-secondary bottom-0 right-0 blur-[200px] -z-10"></div>
-        <div className="relative hidden md:block">
-          <Image
-            src={aboutUfo}
-            alt="Ufo Illustration"
-            className="w-[300px] absolute md: left-[25px] lg:left-[100px] top-[100px] translate-x-1/2 animate-bounce transition-all duration-slow ease-in-out"
-          />
-        </div>
-        <div className="space-y-8">
-          <h2 className="text-4xl md:text-5xl">
-            About us<span className="text-primary">_</span>
-          </h2>
-          <p className="text-lg leading-snug font-medium text-foreground/90">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Exercitationem, inventore numquam voluptate ab maiores non
-            laudantium nobis consectetur fugiat aliquam sed officia, iusto animi
-            incidunt rem expedita labore. Velit, laborum!
+    <section
+      {...props}
+      className={cn(className, "my-14 scroll-m-[100px]")}
+      id='about'
+    >
+      <ViewContainer className='relative overflow-clip flex flex-col lg:flex-row gap-10 lg:gap-20 p-8 md:p-12 rounded-xl bg-white shadow-xl border border-foreground/10 items-center'>
+        <Image
+          src={aboutImage}
+          alt='About Us Image'
+          className='flex-1 max-w-md w-full'
+        />
+        <div className='space-y-6 flex-1 max-w-md lg:max-w-none'>
+          <h2 className='text-4xl md:text-5xl'>About Us</h2>
+          <p className='text-lg leading-snug font-medium text-foreground/90'>
+            WeMakeDevs is an inclusive global community for anyone passionate
+            about technology. We foster collaboration and innovation through
+            global hackathons and events, partnering with leading and emerging
+            companies, as well as open source projects.
           </p>
-          <p className="text-lg leading-snug font-medium text-foreground/90">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure
-            voluptatibus quasi ipsa excepturi id deleniti ad possimus placeat
-            officia doloremque, commodi dolore ratione omnis explicabo
-            molestias, amet repudiandae ab! Cupiditate minima numquam tempore
-            iure officiis vel corporis. Minima autem reprehenderit excepturi
-            maxime quibusdam, cupiditate cumque placeat ipsa dolores facere
-            eveniet.
+          <p className='text-lg leading-snug font-medium text-foreground/90'>
+            If you are someone who is looking to discuss the latest
+            advancements, discover valuable resources and opportunities, engage
+            with tech events, share your ideas, or seek guidance, you&apos;re in
+            the right place. Welcome to a vibrant, dynamic community pushing the
+            boundaries of what we can achieve together.
           </p>
-          <div className="flex gap-8">
-            <Link
-              href="https://x.com/wemakedevs"
-              className={cn(
-                "flex gap-2 items-center text-lg font-medium text-foreground/90 hover:text-foreground transition-colors hover:underline",
-              )}
-            >
-              Twitter <SiX size={18} />
-            </Link>
-            <Link
-              href="https://linkedin.com/company/wemakedevs"
-              className={cn(
-                "flex gap-2 items-center text-lg font-medium text-foreground/90 hover:text-foreground transition-colors hover:underline",
-              )}
-            >
-              LinkedIn <SiLinkedin size={18} />
-            </Link>
-          </div>
         </div>
       </ViewContainer>
     </section>

@@ -13,7 +13,6 @@ export type numbersType = {
   number: number;
   icon: IconType;
   color: string;
-  href: string;
 }[];
 
 export interface GeneralComponent extends React.HTMLAttributes<HTMLDivElement> {
@@ -97,3 +96,41 @@ export interface TestimonialInterface {
 }
 
 export type TestimonialCardType = GeneralComponent & TestimonialInterface;
+
+export interface MeetupData {
+  title: string;
+  image: StaticImageData;
+  date: string;
+  description: string;
+  url: string;
+  location: string;
+}
+
+export interface MeetupCardInterface extends MeetupData {
+  className?: string;
+}
+
+export type FooterSocialLink = {
+  name: string;
+  href: string;
+  icon: IconType;
+}
+
+type FooterLink = {
+  name: string;
+  href: string;
+  opensInNewTab?: boolean;
+}
+
+export type FooterLinkSection = {
+  title: string;
+  links: FooterLink[];
+}
+
+export type PartnerData = {
+  image: StaticImageData;
+  logo: StaticImageData;
+  name: string;
+  quote: string;
+  author: string;
+}

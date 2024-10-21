@@ -5,6 +5,7 @@ import "./globals.css";
 import { cn } from "@/lib/utils";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { Toaster } from "sonner";
 
 const fontMono = FontMono({
   subsets: ["latin"],
@@ -30,12 +31,12 @@ const fontSans = localFont({
 export const metadata: Metadata = {
   title: "WeMakeDevs",
   description:
-    "WeMakeDevs hosts hackathons and competitions for designers, developers and everyone interested in tech.",
+    "WeMakeDevs is an inclusive global community for anyone passionate about technology. We foster collaboration and innovation through global events.",
   metadataBase: new URL("https://wemakedevs.org"),
   openGraph: {
     title: "WeMakeDevs",
     description:
-      "WeMakeDevs hosts hackathons and competitions for designers, developers and everyone interested in tech.",
+      "WeMakeDevs is an inclusive global community for anyone passionate about technology. We foster collaboration and innovation through global events.",
     url: "https://wemakedevs.org",
     siteName: "WeMakeDevs",
     images: {
@@ -64,6 +65,15 @@ export default function RootLayout({
         <Navbar />
         {children}
         <Footer />
+        {/* <Banner className='flex items-center text-base md:text-lg font-medium'>
+          <span className=''>
+            Our next event, Delhi Meetup is on 24th of September!
+          </span>
+          <Button className='mt-4 md:mt-0 md:ml-8 px-3 py-2 bg-white hover:bg-primary text-primary hover:text-white'>
+            Register now!
+          </Button>
+        </Banner> */}
+        <Toaster />
       </body>
     </html>
   );

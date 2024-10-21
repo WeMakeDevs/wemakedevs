@@ -14,9 +14,9 @@ const HackathonStatus = ({
     <p
       className={cn(
         className,
-        "rounded-full px-2 py-1 bg-primary font-semibold text-sm tracking-wide",
-        status == "upcoming" && "bg-[#ee5b24]",
-        status == "ongoing" && "bg-[#23a394]",
+        "rounded-full px-3 py-1.5 bg-primary font-semibold text-sm tracking-wide",
+        status == "upcoming" && "bg-accent-1",
+        status == "ongoing" && "bg-accent-2",
         status == "ended" && "bg-foreground/10"
       )}
       {...props}

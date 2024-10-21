@@ -1,36 +1,53 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { logo } from "@/assets/images";
 import Image from "next/image";
 import Link from "next/link";
-import { ViewContainer } from "./ui/view-container";
+import { NavContainer } from "./ui/nav-container";
 import { Button, buttonVariants } from "./ui/button";
 import { Cross2Icon, HamburgerMenuIcon } from "@radix-ui/react-icons";
 import { cn } from "@/lib/utils";
 import { navLinksType } from "@/types";
 
 const Navbar = () => {
+  const [isScrolled, setIsScrolled] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
+
+  const handleToggle = () => {
+    setIsOpen((prev) => !prev);
+  };
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   const navLinks: navLinksType = [
     {
-      name: "Header",
-      url: "/#header",
+      name: "Join",
+      url: "/#join",
       type: "link",
     },
     {
-      name: "About",
-      url: "/#about",
+      name: "Hackathons",
+      url: "/#hackathons",
       type: "link",
     },
     {
-      name: "Testimonials",
-      url: "/#testimonials",
-      type: "link",
-    },
-    {
-      name: "Sponsors",
-      url: "/#sponsors",
+      name: "Meetups",
+      url: "/#meetups",
       type: "link",
     },
     {
@@ -38,61 +55,107 @@ const Navbar = () => {
       url: "/#faq",
       type: "link",
     },
+    {
+      name: "Blog",
+      url: "https://blog.wemakedevs.org/",
+      type: "link",
+      openInNewTab: true,
+    },
+    {
+      name: "Partner with us",
+      url: "/#partners",
+      type: "button",
+    },
   ];
 
   return (
-    <nav className='relative z-10'>
-      <ViewContainer className='flex justify-between items-center h-20 relative overflow-x-clip'>
-        <Link href='https://wemakedevs.org/'>
+    <nav id='nav' className='fixed mx-auto w-full z-[100] md:py-4'>
+      <NavContainer
+        className={cn(
+          "items-center justify-between rounded transition-all py-3",
+          isScrolled && "bg-white shadow-lg",
+          "hidden lg:flex"
+        )}
+      >
+        <Link href='/' className='flex items-center gap-4'>
           <Image src={logo} alt='WeMakeDevs Logo' className='w-12' />
+          <span
+            className={cn(
+              "font-title text-lg md:text-xl text-primary font-semibold"
+            )}
+          >
+            WeMakeDevs
+          </span>
         </Link>
-        <Button
-          variant='outline'
-          size='icon'
-          aria-label='Toggle menu button'
-          onClick={() => {
-            setIsOpen((prev) => !prev);
-          }}
-          className='md:hidden'
-        >
-          {isOpen ? <Cross2Icon /> : <HamburgerMenuIcon />}
-        </Button>
-        <ul
-          className={cn(
-            "flex flex-col md:flex-row gap-4 justify-center items-center transition-[left] absolute md:static w-screen md:w-auto nav-h-mobile md:h-auto top-20",
-            "bg-background md:bg-transparent transition-[left] ease-in-out duration-300 px-5 md:px-0",
-            isOpen && "left-0",
-            !isOpen && "left-full"
-          )}
-        >
+        <ul className='flex lg:gap-2'>
           {navLinks.map((link, index) => (
-            <li key={index} className='w-full'>
+            <li key={index}>
               <Link
                 href={link.url}
                 className={cn(
-                  buttonVariants({ variant: "ghost", size: "default" }),
-                  "w-full md:w-auto"
+                  buttonVariants({
+                    variant: link.type == "button" ? "default" : "ghost",
+                  }),
+                  "px-4 py-2 text-foreground",
+                  link.type == "button" && "text-white"
                 )}
-                onClick={() => {
-                  setIsOpen((prev) => !prev);
-                }}
-                target={link.openInNewTab ? "_blank" : ""}
+                target={link.openInNewTab ? "_blank" : "_self"}
                 rel={link.openInNewTab ? "noreferrer noopener" : ""}
               >
                 {link.name}
               </Link>
             </li>
           ))}
-          <li className='w-full'>
-            <Link
-              href='#hackathons'
-              className={cn(buttonVariants({ variant: "default" }), "w-full")}
-            >
-              Hackathons
-            </Link>
-          </li>
         </ul>
-      </ViewContainer>
+      </NavContainer>
+      <div
+        className={cn(
+          "px-5 py-2 lg:hidden",
+          isOpen && "pb-4",
+          "bg-white shadow-md "
+        )}
+      >
+        <div className='flex w-full justify-between items-center'>
+          <Link href='/' className='flex items-center gap-4'>
+            <Image src={logo} alt='WeMakeDevs Logo' className='w-12' />{" "}
+            <span className='font-title text-lg md:text-xl text-primary font-semibold'>
+              WeMakeDevs
+            </span>
+          </Link>
+          <Button
+            variant='outline'
+            size='icon'
+            aria-label='Menu button'
+            className='bg-transparent'
+          >
+            {isOpen ? (
+              <Cross2Icon onClick={handleToggle} />
+            ) : (
+              <HamburgerMenuIcon onClick={handleToggle} />
+            )}
+          </Button>
+        </div>
+        <ul
+          className={cn("flex flex-col gap-4 mt-4", isOpen ? "flex" : "hidden")}
+        >
+          {navLinks.map((link, index) => (
+            <li key={index}>
+              <Link
+                href={link.url}
+                className={cn(
+                  "w-full px-4 py-2 border-b border-accent-3 flex justify-center items-center",
+                  link.type == "button"
+                    ? "bg-primary hover:bg-blue-700 text-white"
+                    : "hover:bg-black/[0.04] bg-transparent"
+                )}
+                onClick={handleToggle}
+              >
+                {link.name}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </div>
     </nav>
   );
 };
