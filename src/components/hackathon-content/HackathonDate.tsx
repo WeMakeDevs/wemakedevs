@@ -29,7 +29,7 @@ const HackathonDate = ({
           {new Date(endDate).toLocaleString("en-GB", options)}
         </p>
       </div>
-      <div className='border border-foreground/40 rounded-full text-sm md:text-base px-3 py-2 flex justify-center items-center w-fit gap-1 md:gap-2 mt-4'>
+      <div className='border border-foreground/40 rounded-full text-sm md:text-base px-3 py-2 flex justify-center items-center w-fit gap-1 md:gap-2 mt-4 bg-white'>
         <div
           className={cn(
             "w-4 h-4 rounded-full",

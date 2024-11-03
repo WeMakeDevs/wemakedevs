@@ -26,8 +26,8 @@ const HackathonMain = ({ hackathon }: { hackathon: HackathonData }) => {
             <Link
               href={`/hackathons/${hackathon.slug}/submit`}
               className={cn(
-                buttonVariants({ variant: "outline" }),
-                "mt-4 md:mt-6 bg-transparent hover:bg-white/80"
+                buttonVariants({ variant: "default" }),
+                "mt-4 md:mt-6"
               )}
             >
               Register for Hackathon
