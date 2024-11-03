@@ -24,6 +24,7 @@ type HackathonStatusType = "upcoming" | "ongoing" | "ended";
 type PrizeType = {
   name: string;
   description: string;
+  prize: string;
 };
 
 export interface HackathonData {
@@ -42,7 +43,10 @@ export interface HackathonData {
   requirements: string;
   resources: string;
   rules: string;
-  prizes: PrizeType[];
+  prizes: {
+    special: PrizeType[];
+    general: PrizeType[];
+  };
   registrationLink: string;
   submissionLink?: string;
 }

@@ -1,4 +1,5 @@
 import {
+  HackathonContentTitleH3,
   HackathonCoverImage,
   HackathonNav,
 } from "@/components/hackathon-content/";
@@ -45,14 +46,50 @@ const HackathonPage = async ({ params }: { params: { slug: string } }) => {
           </HackathonContentBody>
           <HackathonContentTitle>Prizes</HackathonContentTitle>
           <HackathonContentBody className='grid grid-cols-1 lg:grid-cols-2 gap-10'>
-            {hackathon.prizes.map((prize, index) => (
-              <div className='space-y-4' key={index}>
-                <p className='text-lg md:text-xl font-semibold flex gap-2 items-center'>
-                  <Star size={20} strokeWidth={0} fill='#ffd333' /> {prize.name}
-                </p>
-                <p className='text-foreground/85'>{prize.description}</p>
-              </div>
-            ))}
+            <div className='space-y-8'>
+              <HackathonContentTitleH3>General Prizes</HackathonContentTitleH3>
+              {hackathon.prizes.general.map((prize, index) => (
+                <div className='space-y-4' key={index}>
+                  <p className='text-lg md:text-xl font-semibold flex gap-2 items-center'>
+                    <Star
+                      size={20}
+                      strokeWidth={0}
+                      fill='#ffd333'
+                      className='shrink-0'
+                    />{" "}
+                    <div className='flex flex-wrap gap-2 items-center'>
+                      {prize.name} -
+                      <span className='px-2 py-1 bg-blue-600 text-white rounded-[4px]'>
+                        {prize.prize}
+                      </span>
+                    </div>
+                  </p>
+                  <p className='text-foreground/85'>{prize.description}</p>
+                </div>
+              ))}
+            </div>
+            <div className='space-y-8'>
+              <HackathonContentTitleH3>Special Prizes</HackathonContentTitleH3>
+              {hackathon.prizes.special.map((prize, index) => (
+                <div className='space-y-4' key={index}>
+                  <p className='text-lg md:text-xl font-semibold flex gap-2 items-center'>
+                    <Star
+                      size={20}
+                      strokeWidth={0}
+                      fill='#ffd333'
+                      className='shrink-0'
+                    />{" "}
+                    <div className='flex flex-wrap gap-2 items-center'>
+                      {prize.name} -
+                      <span className='px-2 py-1 bg-blue-600 text-white rounded-[4px]'>
+                        {prize.prize}
+                      </span>
+                    </div>
+                  </p>
+                  <p className='text-foreground/85'>{prize.description}</p>
+                </div>
+              ))}
+            </div>
           </HackathonContentBody>
         </div>
       </ViewContainer>

@@ -6,28 +6,67 @@
   "endDate": "2024-12-01T16:30:00Z",
   "description": "Join the biggest online coding festival of the year and showcase your skills.",
   "slug": "hackfrost-hackathon",
-  "prizes": [
-    {
-      "name": "Best Innovation",
-      "description": "Awarded to the team with the most innovative project, showcasing creativity and unique problem-solving approaches."
-    },
-    {
-      "name": "Best Design",
-      "description": "Given to the team that demonstrates exceptional user interface and user experience design in their project."
-    },
-    {
-      "name": "Top Performer",
-      "description": "Presented to the team with the most efficient and high-performance solution."
-    },
-    {
-      "name": "Community Choice",
-      "description": "Selected by the audience, this award goes to the most popular project as voted by participants and viewers."
-    },
-    {
-      "name": "Best Use of Technology",
-      "description": "Awarded for the most effective and innovative use of cutting-edge technology in the project."
-    }
-  ],
+  "prizes": {
+    "general": [
+      {
+        "name": "Grand winner",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "prize": "Macbook ($1300)"
+      },
+      {
+        "name": "1st runner up",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "prize": "Ipad ($700)"
+      },
+      {
+        "name": "2nd runner up",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "prize": "Macmini ($350)"
+      },
+      {
+        "name": "Best Open Source Practices Followed",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "prize": "Sony Headphones ($200) + Swags"
+      },
+      {
+        "name": "Best UI/UX Design",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "prize": "Monitor ($200) + Swags"
+      },
+      {
+        "name": "Sustainability Award",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "prize": "Airpod ($200) + Swags"
+      },
+      {
+        "name": "Health Trackers Award",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "prize": "Fit bands ($200) + Swags"
+      },
+      {
+        "name": "Top 20",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "prize": "Exclusive Swag Bags ($250 in pool)"
+      }
+    ],
+    "special": [
+      {
+        "name": "Best use of Kestra",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "prize": "Smartwatch ($300)"
+      },
+      {
+        "name": "All girls team",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "prize": "Smart Phone ($300)"
+      },
+      {
+        "name": "Beginner's team",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "prize": "Mouse ($300)"
+      }
+    ]
+  },
   "submissionLink": "https://github.com/codefest-2024/submissions",
   "registrationLink": "https://github.com/codefest-2024/registrations"
 }
