@@ -21,7 +21,7 @@ const HackathonDate = ({
   };
 
   return (
-    <div className={cn(className, "")} {...props}>
+    <div className={cn(className, "font-medium")} {...props}>
       <div className=''>
         <CalendarIcon className='size-8 text-foreground/70' />
         <p className='mt-4'>

@@ -7,6 +7,7 @@ import Meetups from "@/components/Meetups";
 import Faq from "@/components/Faq";
 import Newsletter from "@/components/Newsletter";
 import Partners from "@/components/Partners";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
       <Meetups />
       <Faq />
       <Partners />
+      <Footer />
     </div>
   );
 }

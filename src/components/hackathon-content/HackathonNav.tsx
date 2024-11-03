@@ -54,7 +54,7 @@ const HackathonNav = ({
               Rules
             </Link>
           </li>
-          <li>
+          {/* <li>
             <Link
               href={`/hackathons/${slug}/projects`}
               className={cn(
@@ -64,9 +64,9 @@ const HackathonNav = ({
             >
               Projects
             </Link>
-          </li>
+          </li> */}
         </ul>
-        <Link
+        {/* <Link
           href={`/hackathons/${slug}/submit`}
           className={cn(
             buttonVariants(),
@@ -74,7 +74,7 @@ const HackathonNav = ({
           )}
         >
           Submit Project
-        </Link>
+        </Link> */}
       </ViewContainer>
     </nav>
   );

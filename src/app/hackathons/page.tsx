@@ -8,6 +8,7 @@ import {
   HackathonCardDescription,
 } from "@/components/HackathonCard";
 import HackathonStatus from "@/components/HackathonStatus";
+import Footer from "@/components/Footer";
 
 const Hackathons = async () => {
   const hackathons = await fetchHackathonData();
@@ -38,6 +39,7 @@ const Hackathons = async () => {
           </HackathonCard>
         ))}
       </ViewContainer>
+    <Footer />
     </main>
   );
 };

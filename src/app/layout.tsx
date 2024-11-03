@@ -64,7 +64,6 @@ export default function RootLayout({
       >
         <Navbar />
         {children}
-        <Footer />
         {/* <Banner className='flex items-center text-base md:text-lg font-medium'>
           <span className=''>
             Our next event, Delhi Meetup is on 24th of September!

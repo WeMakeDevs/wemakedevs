@@ -1,11 +1,11 @@
 {
-  "title": "Hack For Good",
-  "prize": 7500,
+  "title": "HackFrost Open Source Hackathon",
+  "prize": 6000,
   "type": "offline",
-  "startDate": "2024-10-04T18:31:00Z",
-  "endDate": "2024-10-30T18:29:00Z",
+  "startDate": "2024-11-29T04:30:00Z",
+  "endDate": "2024-12-01T16:30:00Z",
   "description": "Join the biggest online coding festival of the year and showcase your skills.",
-  "slug": "hack-for-good",
+  "slug": "hackfrost-hackathon",
   "prizes": [
     {
       "name": "Best Innovation",
