@@ -27,6 +27,16 @@ type PrizeType = {
   prize: string;
 };
 
+type ScheduleElement = {
+  title: string;
+  dateTime: string; // ISO 8601
+  description?: string;
+  link?: {
+    name: string;
+    url: string;
+  };
+}
+
 export interface HackathonData {
   title: string;
   image: {
@@ -49,6 +59,7 @@ export interface HackathonData {
   };
   registrationLink: string;
   submissionLink?: string;
+  schedule: ScheduleElement[];
 }
 
 export interface HackathonCardType extends GeneralComponent {
@@ -77,6 +88,7 @@ export interface HackathonDateInterface extends GeneralComponent {
 
 export type PageType =
   | "overview"
+  | "schedule"
   | "submit"
   | "resources"
   | "rules"

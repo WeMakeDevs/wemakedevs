@@ -34,6 +34,17 @@ const HackathonNav = ({
           </li>
           <li>
             <Link
+              href={`/hackathons/${slug}/schedule`}
+              className={cn(
+                "px-6 py-4 font-medium hover:bg-foreground/10 inline-block w-full md:w-auto text-center",
+                page == "schedule" && "shadow-secondaryNav"
+              )}
+            >
+              Schedule
+            </Link>
+          </li>
+          <li>
+            <Link
               href={`/hackathons/${slug}/resources`}
               className={cn(
                 "px-6 py-4 font-medium hover:bg-foreground/10 inline-block w-full md:w-auto text-center",

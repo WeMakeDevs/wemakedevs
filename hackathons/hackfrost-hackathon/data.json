@@ -68,5 +68,46 @@
     ]
   },
   "submissionLink": "https://github.com/codefest-2024/submissions",
-  "registrationLink": "https://github.com/codefest-2024/registrations"
+  "registrationLink": "https://github.com/codefest-2024/registrations",
+  "schedule": [
+    {
+      "title": "Some timeline element title",
+      "dateTime": "2024-11-29T04:30:00Z",
+      "description": "Join the biggest online coding festival of the year and showcase your skills."
+    },
+    {
+      "title": "Some timeline element title",
+      "dateTime": "2024-11-29T04:30:00Z",
+      "link": {
+        "name": "Some link name",
+        "url": "#"
+      }
+    },
+    {
+      "title": "Some timeline element title",
+      "dateTime": "2024-11-29T04:30:00Z",
+      "description": "Join the biggest online coding festival of the year and showcase your skills.",
+      "link": {
+        "name": "Some link name",
+        "url": "#"
+      }
+    },
+    {
+      "title": "Some timeline element title",
+      "dateTime": "2024-11-29T04:30:00Z"
+    },
+    {
+      "title": "Some timeline element title",
+      "dateTime": "2024-11-29T04:30:00Z",
+      "link": {
+        "name": "Some link name",
+        "url": "#"
+      }
+    },
+    {
+      "title": "Some timeline element title",
+      "dateTime": "2024-11-29T04:30:00Z",
+      "description": "Join the biggest online coding festival of the year and showcase your skills."
+    }
+  ]
 }
