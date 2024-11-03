@@ -7,9 +7,12 @@ import HackathonContentBody from "@/components/hackathon-content/HackathonConten
 import HackathonContentTitle from "@/components/hackathon-content/HackathonContentTitle";
 import HackathonMain from "@/components/hackathon-content/HackathonMain";
 import { CustomMDX } from "@/components/mdx-remote";
+import { buttonVariants } from "@/components/ui/button";
 import { ViewContainer } from "@/components/ui/view-container";
 import { fetchHackathonData } from "@/lib/hackathon";
+import { cn } from "@/lib/utils";
 import { Star } from "lucide-react";
+import Link from "next/link";
 import { notFound } from "next/navigation";
 
 export async function generateStaticParams() {
@@ -90,6 +93,23 @@ const HackathonPage = async ({ params }: { params: { slug: string } }) => {
                 </div>
               ))}
             </div>
+          </HackathonContentBody>
+          <HackathonContentTitle id='need-help'>
+            Need Help?
+          </HackathonContentTitle>
+          <HackathonContentBody className='text-base md:text-lg'>
+            <ul className='list-disc list-inside'>
+              <li className=''>Find a team or teammate</li>
+              <li className=''>Talk to other participants</li>
+              <li className=''>Get help from us</li>
+            </ul>
+            <p className=''>... and a lot more at our Discord server!</p>
+            <Link
+              href='https://discord.gg/wemakedevs'
+              className={cn(buttonVariants({ variant: "default" }), "mt-4")}
+            >
+              Join Discord Server
+            </Link>
           </HackathonContentBody>
         </div>
       </ViewContainer>
