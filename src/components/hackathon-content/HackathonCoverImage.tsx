@@ -11,7 +11,7 @@ const HackathonCoverImage = ({
 }: HackathonCoverImageInterface) => {
   return (
     <ViewContainer>
-      <Image src={src} alt={alt} className={cn(className, "my-4")} {...props} />
+      <Image src={src} alt={alt} className={cn(className, "mt-4")} {...props} />
     </ViewContainer>
   );
 };
