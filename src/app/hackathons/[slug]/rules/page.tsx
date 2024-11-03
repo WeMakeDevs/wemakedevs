@@ -22,8 +22,8 @@ const HackathonRules = async ({ params }: { params: { slug: string } }) => {
     <div className='pt-20'>
       <HackathonCoverImage src={hackathon.image.cover} alt={hackathon.title} />
       <HackathonNav slug={hackathon.slug} page='rules' />
+      <HackathonMain hackathon={hackathon} />
       <ViewContainer className=''>
-        <HackathonMain hackathon={hackathon} />
         <HackathonContentTitle>Rules of the hackathon</HackathonContentTitle>
         <HackathonContentBody>
           <CustomMDX source={hackathon.rules} />

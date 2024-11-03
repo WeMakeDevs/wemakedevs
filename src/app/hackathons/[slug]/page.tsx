@@ -29,8 +29,8 @@ const HackathonPage = async ({ params }: { params: { slug: string } }) => {
     <main className='pt-20'>
       <HackathonCoverImage src={hackathon.image.cover} alt={hackathon.title} />
       <HackathonNav slug={hackathon.slug} page='overview' />
+      <HackathonMain hackathon={hackathon} />
       <ViewContainer className=''>
-        <HackathonMain hackathon={hackathon} />
         {/* MDX File information renders from here */}
         <div className=''>
           <HackathonContentTitle>Hackathon Overview</HackathonContentTitle>

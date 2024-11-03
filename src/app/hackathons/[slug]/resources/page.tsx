@@ -22,8 +22,8 @@ const HackathonResources = async ({ params }: { params: { slug: string } }) => {
     <div className='pt-20'>
       <HackathonCoverImage src={hackathon.image.cover} alt={hackathon.title} />
       <HackathonNav slug={hackathon.slug} page='resources' />
+      <HackathonMain hackathon={hackathon} />
       <ViewContainer>
-        <HackathonMain hackathon={hackathon} />
         <HackathonContentTitle>Resources</HackathonContentTitle>
         <HackathonContentBody>
           <CustomMDX source={hackathon.resources} />

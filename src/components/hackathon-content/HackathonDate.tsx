@@ -29,20 +29,20 @@ const HackathonDate = ({
           {new Date(endDate).toLocaleString("en-GB", options)}
         </p>
       </div>
-      <div className='border border-foreground/10 rounded-full text-sm px-3 py-2 flex justify-center items-center w-fit gap-1 md:gap-2 mt-4'>
+      <div className='border border-foreground/40 rounded-full text-sm md:text-base px-3 py-2 flex justify-center items-center w-fit gap-1 md:gap-2 mt-4'>
         <div
           className={cn(
             "w-4 h-4 rounded-full",
             status == "ongoing" && "bg-[#23a394]",
             status == "upcoming" && "bg-[#ee5b24]",
-            status == "ended" && "bg-foreground/10"
+            status == "ended" && "bg-foreground/40"
           )}
         ></div>
         {status == "upcoming" &&
-          `Hackathon starts in ${timeDifference.daysStartToNow} days and ${timeDifference.hoursStartToNow} hours`}
+          `Starts in ${timeDifference.daysStartToNow} days and ${timeDifference.hoursStartToNow} hours`}
 
         {status == "ongoing" &&
-          `Hackathon ends in ${timeDifference.daysEndToNow} days and ${timeDifference.hoursEndToNow} hours`}
+          `Ends in ${timeDifference.daysEndToNow} days and ${timeDifference.hoursEndToNow} hours`}
 
         {status == "ended" && "Hackathon has ended"}
       </div>
