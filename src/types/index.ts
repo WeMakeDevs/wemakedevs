@@ -49,8 +49,7 @@ export interface HackathonData {
   endDate: string;
   description: string;
   slug: string;
-  about: string;
-  requirements: string;
+  overview: string;
   resources: string;
   rules: string;
   prizes: {
