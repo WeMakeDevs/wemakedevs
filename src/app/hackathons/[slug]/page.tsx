@@ -37,7 +37,6 @@ const HackathonPage = async ({ params }: { params: { slug: string } }) => {
       <ViewContainer className=''>
         {/* MDX File information renders from here */}
         <div className=''>
-          <HackathonContentTitle id='overview'>Overview</HackathonContentTitle>
           <HackathonContentBody>
             <CustomMDX source={hackathon.overview} />
           </HackathonContentBody>
