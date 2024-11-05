@@ -55,43 +55,36 @@
   "registrationLink": "https://github.com/codefest-2024/registrations",
   "schedule": [
     {
-      "title": "Some timeline element title",
-      "dateTime": "2024-11-29T04:30:00Z",
-      "description": "Join the biggest online coding festival of the year and showcase your skills."
+      "title": "Registration Closes",
+      "dateTime": "2024-11-29T08:00:00+05:30"
     },
     {
-      "title": "Some timeline element title",
-      "dateTime": "2024-11-29T04:30:00Z",
+      "title": "Hacking Begins",
+      "dateTime": "2024-11-29T10:00:00+05:30"
+    },
+    {
+      "title": "Welcome stream on WeMakeDevs YouTube channel and explanation of Hackathon",
+      "dateTime": "2024-11-29T10:05:00+05:30",
       "link": {
-        "name": "Some link name",
-        "url": "#"
+        "name": "WeMakeDevs YouTube",
+        "url": "https://www.youtube.com/@wemakedevs"
       }
     },
     {
-      "title": "Some timeline element title",
-      "dateTime": "2024-11-29T04:30:00Z",
-      "description": "Join the biggest online coding festival of the year and showcase your skills.",
-      "link": {
-        "name": "Some link name",
-        "url": "#"
-      }
+      "title": "Contest Announcement",
+      "dateTime": "2024-11-29T12:00:00+05:30"
     },
     {
-      "title": "Some timeline element title",
-      "dateTime": "2024-11-29T04:30:00Z"
+      "title": "Webinar by Will",
+      "dateTime": "2024-11-29T19:00:00+05:30"
     },
     {
-      "title": "Some timeline element title",
-      "dateTime": "2024-11-29T04:30:00Z",
-      "link": {
-        "name": "Some link name",
-        "url": "#"
-      }
+      "title": "Fun activity like smashkarts",
+      "dateTime": "2024-11-29T22:00:00+05:30"
     },
     {
-      "title": "Some timeline element title",
-      "dateTime": "2024-11-29T04:30:00Z",
-      "description": "Join the biggest online coding festival of the year and showcase your skills."
+      "title": "Discord community call to motivate hackers and boost confidence",
+      "dateTime": "2024-11-30T00:00:00+05:30"
     }
   ]
 }
