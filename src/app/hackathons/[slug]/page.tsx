@@ -133,23 +133,6 @@ const HackathonPage = async ({ params }: { params: { slug: string } }) => {
               <CustomMDX source={hackathon.judgingCriteria} />
             )}
           </HackathonContentBody>
-          <HackathonContentTitle id='need-help'>
-            Need Help?
-          </HackathonContentTitle>
-          <HackathonContentBody className='text-base md:text-lg'>
-            <ul className='list-disc list-inside'>
-              <li className=''>Find a team or teammate</li>
-              <li className=''>Talk to other participants</li>
-              <li className=''>Get help from us</li>
-            </ul>
-            <p className=''>... and a lot more at our Discord server!</p>
-            <Link
-              href='https://discord.gg/wemakedevs'
-              className={cn(buttonVariants({ variant: "default" }), "mt-4")}
-            >
-              Join Discord Server
-            </Link>
-          </HackathonContentBody>
         </div>
       </ViewContainer>
     </main>
