@@ -12,11 +12,11 @@ const components = {
   h1: (
     props: JSX.IntrinsicAttributes &
       ClassAttributes<HTMLHeadingElement> &
-      HTMLAttributes<HTMLHeadingElement>,
+      HTMLAttributes<HTMLHeadingElement>
   ) => (
     <h3
       {...props}
-      className="text-2xl md:text-3xl font-medium tracking-wide mt-8 mb-4"
+      className='text-2xl md:text-3xl font-medium tracking-wide mt-8 mb-4'
     >
       {props.children}
     </h3>
@@ -25,11 +25,11 @@ const components = {
   h2: (
     props: JSX.IntrinsicAttributes &
       ClassAttributes<HTMLHeadingElement> &
-      HTMLAttributes<HTMLHeadingElement>,
+      HTMLAttributes<HTMLHeadingElement>
   ) => (
     <h4
       {...props}
-      className="text-xl md:text-2xl font-medium tracking-wide mt-6 mb-3"
+      className='text-xl md:text-2xl font-medium tracking-wide mt-6 mb-3'
     >
       {props.children}
     </h4>
@@ -38,11 +38,11 @@ const components = {
   h3: (
     props: JSX.IntrinsicAttributes &
       ClassAttributes<HTMLHeadingElement> &
-      HTMLAttributes<HTMLHeadingElement>,
+      HTMLAttributes<HTMLHeadingElement>
   ) => (
     <h5
       {...props}
-      className="text-base md:text-lg font-medium tracking-wide mt-4 mb-2"
+      className='text-base md:text-lg font-medium tracking-wide mt-4 mb-2'
     >
       {props.children}
     </h5>
@@ -51,9 +51,9 @@ const components = {
   p: (
     props: JSX.IntrinsicAttributes &
       ClassAttributes<HTMLParagraphElement> &
-      HTMLAttributes<HTMLParagraphElement>,
+      HTMLAttributes<HTMLParagraphElement>
   ) => (
-    <p {...props} className="my-4">
+    <p {...props} className='my-4'>
       {props.children}
     </p>
   ),
@@ -61,9 +61,9 @@ const components = {
   ul: (
     props: JSX.IntrinsicAttributes &
       ClassAttributes<HTMLUListElement> &
-      HTMLAttributes<HTMLUListElement>,
+      HTMLAttributes<HTMLUListElement>
   ) => (
-    <ul {...props} className="my-4 list-disc list-inside">
+    <ul {...props} className='my-4 list-disc list-inside'>
       {props.children}
     </ul>
   ),
@@ -71,9 +71,9 @@ const components = {
   ol: (
     props: JSX.IntrinsicAttributes &
       ClassAttributes<HTMLOListElement> &
-      OlHTMLAttributes<HTMLOListElement>,
+      OlHTMLAttributes<HTMLOListElement>
   ) => (
-    <ol {...props} className="my-4 list-decimal list-inside">
+    <ol {...props} className='my-4 list-decimal list-inside'>
       {props.children}
     </ol>
   ),
@@ -81,9 +81,9 @@ const components = {
   li: (
     props: JSX.IntrinsicAttributes &
       ClassAttributes<HTMLLIElement> &
-      LiHTMLAttributes<HTMLLIElement>,
+      LiHTMLAttributes<HTMLLIElement>
   ) => (
-    <li {...props} className="my-2">
+    <li {...props} className='my-2'>
       {props.children}
     </li>
   ),
@@ -91,12 +91,9 @@ const components = {
   a: (
     props: JSX.IntrinsicAttributes &
       ClassAttributes<HTMLAnchorElement> &
-      AnchorHTMLAttributes<HTMLAnchorElement>,
+      AnchorHTMLAttributes<HTMLAnchorElement>
   ) => (
-    <a
-      {...props}
-      className="bg-yellow-100/20 inline px-1 py-0.5 hover:bg-yellow-100/0"
-    >
+    <a {...props} className='text-blue-700 hover:underline'>
       {props.children}
     </a>
   ),
