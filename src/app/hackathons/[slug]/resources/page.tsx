@@ -24,7 +24,6 @@ const HackathonResources = async ({ params }: { params: { slug: string } }) => {
       <HackathonNav slug={hackathon.slug} page='resources' />
       <HackathonMain hackathon={hackathon} />
       <ViewContainer>
-        <HackathonContentTitle>Resources</HackathonContentTitle>
         <HackathonContentBody>
           <CustomMDX source={hackathon.resources} />
         </HackathonContentBody>

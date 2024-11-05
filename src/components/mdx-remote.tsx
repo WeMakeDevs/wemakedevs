@@ -16,7 +16,7 @@ const components = {
   ) => (
     <h3
       {...props}
-      className='text-2xl md:text-3xl font-medium tracking-wide mt-8 mb-4'
+      className='text-2xl md:text-3xl font-medium tracking-wide mt-8 mb-4 uppercase'
     >
       {props.children}
     </h3>
