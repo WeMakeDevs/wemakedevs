@@ -23,8 +23,8 @@ type HackathonStatusType = "upcoming" | "ongoing" | "ended";
 
 type PrizeType = {
   name: string;
-  description: string;
-  prize: string;
+  prize?: string;
+  description?: string;
 };
 
 type ScheduleElement = {
@@ -55,8 +55,9 @@ export interface HackathonData {
   sponsor?: string;
   judgingCriteria?: string;
   prizes: {
-    special: PrizeType[];
-    general: PrizeType[];
+    winning: PrizeType[];
+    other: PrizeType[];
+    giveaway?: PrizeType[];
   };
   registrationLink: string;
   submissionLink?: string;

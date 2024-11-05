@@ -7,48 +7,47 @@
   "description": "Join the biggest online coding festival of the year and showcase your skills.",
   "slug": "hackfrost-hackathon",
   "prizes": {
-    "general": [
+    "winning": [
       {
         "name": "Winner Team",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
         "prize": "Macbook worth ($1300)"
       },
       {
         "name": "1st runner up",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
         "prize": "IPad worth ($700)"
       },
       {
         "name": "2nd runner up",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
         "prize": "Mac Mini worth ($350)"
       }
     ],
-    "special": [
+    "other": [
       {
-        "name": "Sustainability award (for environmentally focused solutions)",
-        "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        "prize": "swag bag + $100 amazon gift card"
+        "name": "Sustainability Award"
       },
       {
-        "name": "Best UI/UX",
-        "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        "prize": "swag bag + $100 amazon gift card"
+        "name": "Best UI/UX Project"
       },
       {
-        "name": "Best Solo Project",
-        "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        "prize": "swag bag + $100 amazon gift card"
+        "name": "Best Solo Project"
       },
       {
-        "name": "Best Documentation",
-        "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        "prize": "swag bag + $100 amazon gift card"
+        "name": "Best Documentation"
       },
       {
-        "name": "Best AI/ML Project",
-        "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        "prize": "swag bag + $100 amazon gift card"
+        "name": "Best AI/ML Project"
+      }
+    ],
+    "giveaway": [
+      {
+        "name": "Star Kestra on GitHub",
+        "prize": "Exclusive Swag Bag",
+        "description": "Star Kestra on Github and post a validation tweet on X using #HackFrost2024 to get an exclusive swag bag."
+      },
+      {
+        "name": "Top 20 Teams",
+        "prize": "Exclusive Swag Bag",
+        "description": "Top 20 hackathon team based on judging will get exclusive swag bag."
       }
     ]
   },
