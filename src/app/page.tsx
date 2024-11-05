@@ -8,6 +8,7 @@ import Faq from "@/components/Faq";
 import Newsletter from "@/components/Newsletter";
 import Partners from "@/components/Partners";
 import Footer from "@/components/Footer";
+import { FAQS } from "@/constants";
 
 export default function Home() {
   return (
@@ -19,7 +20,7 @@ export default function Home() {
       <Numbers />
       <Hackathons />
       <Meetups />
-      <Faq />
+      <Faq FAQS={FAQS} />
       <Partners />
       <Footer />
     </div>

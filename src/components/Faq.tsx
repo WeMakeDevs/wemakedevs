@@ -1,3 +1,4 @@
+import { FaqType } from "@/types";
 import {
   Accordion,
   AccordionContent,
@@ -6,47 +7,8 @@ import {
 } from "./ui/accordion";
 import { ViewContainer } from "./ui/view-container";
 
-type FaqType = {
-  question: string;
-  answer: string;
-};
-
-const FAQS: FaqType[] = [
-  {
-    question: "How can I join the community?",
-    answer:
-      'Simply head over to the "Join" section on this page, where you’ll find links to our Discord and Telegram groups.',
-  },
-  {
-    question: "What kind of events do you host?",
-    answer:
-      "We regularly organize hackathons and meetups to bring developers together for learning and collaboration.",
-  },
-  {
-    question: "How can I partner with WeMakeDevs?",
-    answer:
-      "To explore partnership opportunities, send an email to contact@wemakedevs.org.",
-  },
-  {
-    question: "How do I stay updated with the latest events?",
-    answer:
-      "Sign up for our newsletter to receive the latest news and updates on upcoming hackathons and tech events",
-  },
-  {
-    question: "Who can participate in the events?",
-    answer:
-      "Our events are open to developers of all levels, from beginners to experts, and anyone passionate about technology.",
-  },
-  {
-    question: "Are the events free to join?",
-    answer:
-      "Yes, all of our hackathons are free to join for community members.",
-  },
-];
-
-const halfLength = Math.ceil(FAQS.length / 2);
-
-const Faq = () => {
+const Faq = ({ FAQS }: { FAQS: FaqType[] }) => {
+  const halfLength = Math.ceil(FAQS.length / 2);
   return (
     <section id='faq' className='my-14 md:my-24 scroll-m-[100px] realtive'>
       <ViewContainer>

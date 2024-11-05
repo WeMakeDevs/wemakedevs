@@ -152,3 +152,9 @@ export type PartnerData = {
   quote: string;
   author: string;
 }
+
+export type FaqType = {
+  question: string;
+  answer: string;
+};
+

@@ -9,6 +9,8 @@ import HackathonMain from "@/components/hackathon-content/HackathonMain";
 import { CustomMDX } from "@/components/mdx-remote";
 import { buttonVariants } from "@/components/ui/button";
 import { ViewContainer } from "@/components/ui/view-container";
+import { HACKATHON_FAQS } from "@/constants";
+import Faq from "@/components/Faq";
 import { fetchHackathonData } from "@/lib/hackathon";
 import { cn } from "@/lib/utils";
 import { Star } from "lucide-react";
@@ -135,6 +137,7 @@ const HackathonPage = async ({ params }: { params: { slug: string } }) => {
           </HackathonContentBody>
         </div>
       </ViewContainer>
+      <Faq FAQS={HACKATHON_FAQS} />
     </main>
   );
 };
