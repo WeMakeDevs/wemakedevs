@@ -9,61 +9,46 @@
   "prizes": {
     "general": [
       {
-        "name": "Grand winner",
+        "name": "Winner Team",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        "prize": "Macbook ($1300)"
+        "prize": "Macbook worth ($1300)"
       },
       {
         "name": "1st runner up",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        "prize": "Ipad ($700)"
+        "prize": "IPad worth ($700)"
       },
       {
         "name": "2nd runner up",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        "prize": "Macmini ($350)"
-      },
-      {
-        "name": "Best Open Source Practices Followed",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        "prize": "Sony Headphones ($200) + Swags"
-      },
-      {
-        "name": "Best UI/UX Design",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        "prize": "Monitor ($200) + Swags"
-      },
-      {
-        "name": "Sustainability Award",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        "prize": "Airpod ($200) + Swags"
-      },
-      {
-        "name": "Health Trackers Award",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        "prize": "Fit bands ($200) + Swags"
-      },
-      {
-        "name": "Top 20",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        "prize": "Exclusive Swag Bags ($250 in pool)"
+        "prize": "Mac Mini worth ($350)"
       }
     ],
     "special": [
       {
-        "name": "Best use of Kestra",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        "prize": "Smartwatch ($300)"
+        "name": "Sustainability award (for environmentally focused solutions)",
+        "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "prize": "swag bag + $100 amazon gift card"
       },
       {
-        "name": "All girls team",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        "prize": "Smart Phone ($300)"
+        "name": "Best UI/UX",
+        "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "prize": "swag bag + $100 amazon gift card"
       },
       {
-        "name": "Beginner's team",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        "prize": "Mouse ($300)"
+        "name": "Best Solo Project",
+        "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "prize": "swag bag + $100 amazon gift card"
+      },
+      {
+        "name": "Best Documentation",
+        "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "prize": "swag bag + $100 amazon gift card"
+      },
+      {
+        "name": "Best AI/ML Project",
+        "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "prize": "swag bag + $100 amazon gift card"
       }
     ]
   },
