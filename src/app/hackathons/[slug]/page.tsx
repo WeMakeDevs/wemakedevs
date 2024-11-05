@@ -87,6 +87,14 @@ const HackathonPage = async ({ params }: { params: { slug: string } }) => {
               ))}
             </div>
           </HackathonContentBody>
+          <HackathonContentBody>
+            {hackathon.sponsor && <CustomMDX source={hackathon.sponsor} />}
+          </HackathonContentBody>
+          <HackathonContentBody>
+            {hackathon.judgingCriteria && (
+              <CustomMDX source={hackathon.judgingCriteria} />
+            )}
+          </HackathonContentBody>
           <HackathonContentTitle id='need-help'>
             Need Help?
           </HackathonContentTitle>

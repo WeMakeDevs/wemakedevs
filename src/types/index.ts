@@ -52,6 +52,8 @@ export interface HackathonData {
   overview: string;
   resources: string;
   rules: string;
+  sponsor?: string;
+  judgingCriteria?: string;
   prizes: {
     special: PrizeType[];
     general: PrizeType[];

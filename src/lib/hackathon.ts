@@ -62,7 +62,7 @@ export async function fetchHackathonData(): Promise<HackathonData[]> {
         const images = getImagePaths(data.slug);
 
         // Read MDX files
-        const mdxFiles = ["overview", "resources", "rules"];
+        const mdxFiles = ["overview", "resources", "rules", "sponsor", "judgingCriteria"];
         for (const file of mdxFiles) {
           const filePath = path.join(hackathonPath, `${file}.mdx`);
           const content = await fs.readFile(filePath, "utf-8");
