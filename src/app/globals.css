@@ -118,4 +118,15 @@
   .banner-width {
     width: calc(100vw - 2rem);
   }
+
+  .iframe-container {
+    display: flex;
+    justify-content: center;
+  }
+
+  iframe {
+    aspect-ratio: 16 / 9;
+    width: 100% !important;
+    border-radius: 0.5rem;
+  }
 }
