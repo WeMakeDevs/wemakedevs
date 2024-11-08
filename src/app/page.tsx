@@ -9,10 +9,12 @@ import Newsletter from "@/components/Newsletter";
 import Partners from "@/components/Partners";
 import Footer from "@/components/Footer";
 import { FAQS } from "@/constants";
+import Navbar from "@/components/Navbar";
 
 export default function Home() {
   return (
     <div>
+      <Navbar />
       <Header />
       <About />
       <Testimonials />

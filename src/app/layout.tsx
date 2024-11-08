@@ -62,7 +62,6 @@ export default function RootLayout({
           fontMono.variable
         )}
       >
-        <Navbar />
         {children}
         {/* <Banner className='flex items-center text-base md:text-lg font-medium'>
           <span className=''>

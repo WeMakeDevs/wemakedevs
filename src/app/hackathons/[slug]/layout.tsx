@@ -1,4 +1,5 @@
 import HackathonFooter from "@/components/HackathonFooter";
+import HackathonNavbar from "@/components/HackathonNavbar";
 
 export default function RootLayout({
   children,
@@ -6,9 +7,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-        <div className="bg-white">
-            {children}
-              <HackathonFooter />
-        </div>
+    <div className='bg-white'>
+      <HackathonNavbar />
+      {children}
+      <HackathonFooter />
+    </div>
   );
 }
