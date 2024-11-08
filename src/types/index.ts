@@ -48,7 +48,7 @@ export interface HackathonData {
     thumbnail: StaticImageData;
     cover: StaticImageData;
   };
-  prize: number;
+  prize: string;
   type: string;
   startDate: string;
   endDate: string;

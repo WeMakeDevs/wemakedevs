@@ -47,7 +47,10 @@ const HackathonScheduleComponent = ({
             )}
             onClick={() => handleDateClick(index)}
           >
-            {new Date(schedule[index].date).toLocaleDateString()}
+            {new Date(schedule[index].date).toLocaleDateString("en-GB", {
+              day: "2-digit",
+              month: "short",
+            })}
           </button>
         ))}
       </div>
@@ -55,7 +58,9 @@ const HackathonScheduleComponent = ({
       <div className='space-y-8 max-w-3xl mx-auto mt-10'>
         {schedule[selectedDate].items.map((item, index) => (
           <div className='flex gap-8 items-center relative' key={index}>
-            {index == 0 ? (
+            {schedule[selectedDate].items.length === 1 ? (
+              <></>
+            ) : index == 0 ? (
               <div className='absolute h-[100%] w-1 top-1/2 left-[14px] bg-[#d8e6fa] z-0'></div>
             ) : index == schedule[selectedDate].items.length - 1 ? (
               <div className='absolute h-[50%] w-1 top-0 left-[14px] bg-[#d8e6fa] z-0'></div>
@@ -72,7 +77,7 @@ const HackathonScheduleComponent = ({
               <div className='flex gap-2 md:gap-5 items-center font-medium flex-wrap mt-2'>
                 <span className='flex gap-2 text-black/75 items-center'>
                   <Clock size={16} />
-                  {new Date(item.time).toLocaleString("en-US", timeOptions)}
+                  {new Date(item.time).toLocaleString("en-US", timeOptions)} IST
                 </span>
                 {item.link && (
                   <Link
@@ -84,7 +89,7 @@ const HackathonScheduleComponent = ({
                   </Link>
                 )}
               </div>
-              <p className='max-w-2xl text-base md:text-lg font-medium'>
+              <p className='max-w-2xl text-base md:text-lg font-medium leading-snug md:leading-snug mt-2 text-black/75'>
                 {item.description && item.description}
               </p>
             </div>

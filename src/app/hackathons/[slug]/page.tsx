@@ -68,9 +68,7 @@ const HackathonPage = async ({ params }: { params: { slug: string } }) => {
               ))}
               {hackathon.prizes.giveaway && (
                 <>
-                  <HackathonContentTitleH3>
-                    Giveaway / Contest
-                  </HackathonContentTitleH3>
+                  <HackathonContentTitleH3>Side Quest</HackathonContentTitleH3>
                   {hackathon.prizes.giveaway.map((prize, index) => (
                     <div className='space-y-4' key={index}>
                       <p className='text-lg md:text-xl font-semibold flex gap-2 items-center'>

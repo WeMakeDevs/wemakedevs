@@ -24,27 +24,31 @@ const HackathonMain = ({ hackathon }: { hackathon: HackathonData }) => {
               {hackathon.description}
             </p>
             <Link
-              href={`/hackathons/${hackathon.slug}/submit`}
+              href={hackathon.registrationLink}
+              target='_blank'
+              rel='noopener noreferrer'
               className={cn(
                 buttonVariants({ variant: "default" }),
                 "mt-4 md:mt-6"
               )}
             >
-              Register for Hackathon
+              Register
             </Link>
           </div>
-          <div className='bg-white/50 shadow-md rounded-xl p-4 md:p-6'>
-            <HackathonDate
-              startDate={hackathon.startDate}
-              endDate={hackathon.endDate}
-            />
-            <hr className='my-5 border-foreground/40' />
-            <p className='flex gap-4 items-end font-medium'>
-              Prizes worth:{" "}
-              <span className='text-2xl md:text-3xl font-title font-bold'>
-                {hackathon.prize}$+
-              </span>
-            </p>
+          <div className='flex justify-center items-center'>
+            <div className='bg-white/50 shadow-md rounded-xl p-4 md:p-6 h-fit w-full'>
+              <HackathonDate
+                startDate={hackathon.startDate}
+                endDate={hackathon.endDate}
+              />
+              <hr className='my-5 border-foreground/40' />
+              <p className='flex gap-4 items-end font-medium'>
+                Prizes worth:{" "}
+                <span className='text-2xl md:text-3xl font-title font-bold'>
+                  {hackathon.prize}$+
+                </span>
+              </p>
+            </div>
           </div>
         </div>
       </ViewContainer>

@@ -7,6 +7,7 @@ import {
   LiHTMLAttributes,
   AnchorHTMLAttributes,
 } from "react";
+import Link from "next/link";
 
 const components = {
   h1: (
@@ -93,7 +94,12 @@ const components = {
       ClassAttributes<HTMLAnchorElement> &
       AnchorHTMLAttributes<HTMLAnchorElement>
   ) => (
-    <a {...props} className='text-blue-700 hover:underline'>
+    <a
+      {...props}
+      className='text-blue-700 hover:underline'
+      target='_blank'
+      rel='noopener noreferrer'
+    >
       {props.children}
     </a>
   ),

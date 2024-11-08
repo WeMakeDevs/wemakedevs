@@ -26,7 +26,6 @@ const HackathonSchedule = async ({ params }: { params: { slug: string } }) => {
     <div className='pt-20'>
       <HackathonCoverImage src={hackathon.image.cover} alt={hackathon.title} />
       <HackathonNav slug={hackathon.slug} page='schedule' />
-      <HackathonMain hackathon={hackathon} />
       <ViewContainer className='my-14'>
         <HackathonScheduleComponent schedule={hackathon.schedule} />
       </ViewContainer>

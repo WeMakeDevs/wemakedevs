@@ -20,7 +20,7 @@ const Banner = ({ className, children, ...props }: GeneralComponent) => {
     <div
       className={cn(
         className,
-        "banner-width bottom-2 mb-2 bg-transparent left-2 sticky py-4 z-[1000] text-center font-medium font-title bg-gradient-to-br from-accent-3 to-primary text-white flex gap-4 px-4 rounded-xl"
+        "banner-width bottom-2 mb-2 left-2 sticky py-4 z-[1000] text-center font-medium font-title bg-gradient-to-br from-blue-200 to-blue-600 text-white flex gap-4 px-4 rounded-xl"
       )}
       style={{ position: "fixed" }}
       {...props}

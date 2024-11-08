@@ -10,6 +10,10 @@ import Partners from "@/components/Partners";
 import Footer from "@/components/Footer";
 import { FAQS } from "@/constants";
 import Navbar from "@/components/Navbar";
+import Banner from "@/components/Banner";
+import { buttonVariants } from "@/components/ui/button";
+import Link from "next/link";
+import { cn } from "@/lib/utils";
 
 export default function Home() {
   return (
@@ -25,6 +29,23 @@ export default function Home() {
       <Faq FAQS={FAQS} />
       <Partners />
       <Footer />
+
+      <Banner className='flex items-center text-base md:text-lg font-medium'>
+        <span className=''>
+          Registrations for HackFrost Winter Hackathon are open!
+        </span>
+        <Link
+          href='/hackathons/hackfrost-hackathon'
+          className={cn(
+            buttonVariants(),
+            "mt-4 md:mt-0 md:ml-8 px-3 py-2 bg-white hover:bg-primary text-primary hover:text-white"
+          )}
+          target='_blank'
+          rel='noopener noreferrer'
+        >
+          Know more
+        </Link>
+      </Banner>
     </div>
   );
 }

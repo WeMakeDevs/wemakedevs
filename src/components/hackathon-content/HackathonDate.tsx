@@ -2,7 +2,7 @@
 import { cn } from "@/lib/utils";
 import { HackathonDateInterface } from "@/types";
 import { useHackathonStatus } from "@/lib/hooks";
-import { CalendarIcon } from "@radix-ui/react-icons";
+import { CalendarIcon } from "lucide-react";
 
 const HackathonDate = ({
   startDate,
@@ -15,16 +15,16 @@ const HackathonDate = ({
   const options = {
     day: "numeric" as const,
     month: "short" as const,
-    hour: "2-digit" as const,
-    minute: "2-digit" as const,
+    // hour: "2-digit" as const,
+    // minute: "2-digit" as const,
     hour12: true, // Set to false if you prefer 24-hour format
   };
 
   return (
     <div className={cn(className, "font-medium")} {...props}>
-      <div className=''>
-        <CalendarIcon className='size-8 text-foreground/70' />
-        <p className='mt-4'>
+      <div className='flex gap-4 text-center'>
+        <CalendarIcon className='' size={30} />
+        <p className='text-lg md:text-2xl'>
           {new Date(startDate).toLocaleString("en-GB", options)} -{" "}
           {new Date(endDate).toLocaleString("en-GB", options)}
         </p>

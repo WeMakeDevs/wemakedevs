@@ -3,8 +3,6 @@ import {
   HackathonNav,
 } from "@/components/hackathon-content";
 import HackathonContentBody from "@/components/hackathon-content/HackathonContentBody";
-import HackathonContentTitle from "@/components/hackathon-content/HackathonContentTitle";
-import HackathonMain from "@/components/hackathon-content/HackathonMain";
 import { CustomMDX } from "@/components/mdx-remote";
 import { ViewContainer } from "@/components/ui/view-container";
 import { fetchHackathonData } from "@/lib/hackathon";
@@ -19,12 +17,10 @@ const HackathonRules = async ({ params }: { params: { slug: string } }) => {
   if (!hackathon) notFound();
 
   return (
-    <div className='pt-20'>
+    <div className='pt-20 pb-10'>
       <HackathonCoverImage src={hackathon.image.cover} alt={hackathon.title} />
       <HackathonNav slug={hackathon.slug} page='rules' />
-      <HackathonMain hackathon={hackathon} />
-      <ViewContainer className=''>
-        <HackathonContentTitle>Rules of the hackathon</HackathonContentTitle>
+      <ViewContainer className='my-10'>
         <HackathonContentBody>
           <CustomMDX source={hackathon.rules} />
         </HackathonContentBody>

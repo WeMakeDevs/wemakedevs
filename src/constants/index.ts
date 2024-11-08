@@ -48,7 +48,7 @@ export const HACKATHON_FAQS: FaqType[] = [
     {
         question: "How can I submit my project?",
         answer:
-            "You can submit the project at the last day of the hackathon using our website.",
+            "Join our discord server for all the updates and announcements regarding the hackathon.",
     },
     {
         question: "I am a beginner in tech, can I still participate?",
@@ -63,6 +63,6 @@ export const HACKATHON_FAQS: FaqType[] = [
     {
         question: "Where can I connect for other queries?",
         answer:
-            "Feel free to mail us on contact@wemakedevs.org or send us a message on our Discord!",
+            "For any hackathon related queries, please raise a ticket on our Discord server.",
     },
 ];

@@ -19,10 +19,9 @@ const HackathonResources = async ({ params }: { params: { slug: string } }) => {
   if (!hackathon) notFound();
 
   return (
-    <div className='pt-20'>
+    <div className='pt-20 pb-10'>
       <HackathonCoverImage src={hackathon.image.cover} alt={hackathon.title} />
       <HackathonNav slug={hackathon.slug} page='resources' />
-      <HackathonMain hackathon={hackathon} />
       <ViewContainer>
         <HackathonContentBody>
           <CustomMDX source={hackathon.resources} />

@@ -1,24 +1,24 @@
 {
   "title": "HackFrost Winter Hackathon",
-  "prize": 10000,
+  "prize": "10,000",
   "type": "offline",
   "startDate": "2024-11-29T04:30:00Z",
   "endDate": "2024-12-01T16:30:00Z",
-  "description": "Join the biggest online coding festival of the year and showcase your skills.",
+  "description": "Network, build projects and showcase your best ideas this winter",
   "slug": "hackfrost-hackathon",
   "prizes": {
     "winning": [
       {
         "name": "Winner Team",
-        "prize": "Macbook worth ($1300)"
+        "prize": "MacBook"
       },
       {
         "name": "1st runner up",
-        "prize": "IPad worth ($700)"
+        "prize": "iPad"
       },
       {
         "name": "2nd runner up",
-        "prize": "Mac Mini worth ($350)"
+        "prize": "Mac mini"
       }
     ],
     "other": [
@@ -32,7 +32,7 @@
         "name": "Best Solo Project"
       },
       {
-        "name": "Best Documentation"
+        "name": "Best Open Source Practices"
       },
       {
         "name": "Best AI/ML Project"
@@ -42,47 +42,37 @@
       {
         "name": "Star Kestra on GitHub",
         "prize": "Exclusive Swag Bag",
-        "description": "Star Kestra on Github and post a validation tweet on X using #HackFrost2024 to get an exclusive swag bag."
-      },
-      {
-        "name": "Top 20 Teams",
-        "prize": "Exclusive Swag Bag",
-        "description": "Top 20 hackathon team based on judging will get exclusive swag bag."
+        "description": "Top 20 people who star Kestra on Github and share their hackathon experience on socials using #HackFrost2024 will get an exclusive swag bag."
       }
     ]
   },
   "submissionLink": "https://github.com/codefest-2024/submissions",
-  "registrationLink": "https://github.com/codefest-2024/registrations",
+  "registrationLink": "https://forms.gle/b3uwjeo5ZMrmiDVy7",
   "schedule": [
     {
       "date": "2024-11-29T00:00:00+05:30",
       "items": [
         {
-          "title": "Registration Closes",
-          "time": "2024-11-29T08:00:00+05:30"
-        },
-        {
-          "title": "Hacking Begins",
+          "title": "Hacking begins",
           "time": "2024-11-29T10:00:00+05:30"
         },
         {
-          "title": "Welcome stream on WeMakeDevs channel and explanation of Hackathon",
-          "time": "2024-11-29T10:05:00+05:30"
+          "title": "Welcome live stream",
+          "time": "2024-11-29T10:10:00+05:30"
         },
         {
-          "title": "Contest announcement",
-          "time": "2024-11-29T12:00:00+05:30"
+          "title": "Getting started with Kestra for building workflows",
+          "description": "Learn how to install Kestra with Docker Compose and build your first workflow that automatically triggers.",
+          "time": "2024-11-29T17:00:00+05:30"
         },
         {
-          "title": "Webinar by Will",
-          "time": "2024-11-29T19:00:00+05:30"
+          "title": "How to integrate your code with Kestra",
+          "description": "Learn how to take your code and integrate it into Kestra by passing dynamic values to it, and syncing it automatically with Git.",
+          "time": "2024-11-29T21:30:00+05:30"
         },
         {
-          "title": "Fun activity like smashkarts",
-          "time": "2024-11-29T22:00:00+05:30"
-        },
-        {
-          "title": "Discord community call to motivate hackers and boost confidence",
+          "title": "Discord community call",
+          "description": "We’ll be answering questions",
           "time": "2024-11-30T00:00:00+05:30"
         }
       ]
@@ -91,27 +81,17 @@
       "date": "2024-11-30T00:00:00+05:30",
       "items": [
         {
-          "title": "WeMakeDevs channel stream",
-          "time": "2024-11-30T10:00:00+05:30"
-        },
-        {
-          "title": "Can ask for project progress",
-          "time": "2024-11-30T17:00:00+05:30"
-        },
-        {
-          "title": "Webinar by Will",
-          "time": "2024-11-30T19:00:00+05:30"
-        },
-        {
-          "title": "Mentorship session by Kunal",
+          "title": "Resume review by Kunal Kushwaha",
           "time": "2024-11-30T21:00:00+05:30"
         },
         {
-          "title": "Fun activity like scribble",
+          "title": "Fun activity",
+          "description": "Online games and quizzes",
           "time": "2024-11-30T22:00:00+05:30"
         },
         {
-          "title": "Discord community call to motivate hackers and boost confidence",
+          "title": "Discord community call",
+          "description": "We’ll be answering questions",
           "time": "2024-12-01T00:00:00+05:30"
         }
       ]
@@ -120,44 +100,16 @@
       "date": "2024-12-01T00:00:00+05:30",
       "items": [
         {
-          "title": "Project progress",
-          "time": "2024-12-01T10:00:00+05:30"
-        },
-        {
           "title": "Project submission starts",
           "time": "2024-12-01T12:00:00+05:30"
         },
         {
-          "title": "Reminder posts of time remaining",
-          "time": "2024-12-01T14:00:00+05:30"
-        },
-        {
-          "title": "Some raffle",
-          "time": "2024-12-01T17:00:00+05:30"
-        },
-        {
-          "title": "Webinar by Will",
-          "time": "2024-12-01T19:00:00+05:30"
-        },
-        {
-          "title": "Project submission closes in 2 hours",
-          "time": "2024-12-01T20:00:00+05:30"
-        },
-        {
-          "title": "Project submission closes in 1 hour",
-          "time": "2024-12-01T21:00:00+05:30"
-        },
-        {
-          "title": "Hackathon Ends (Project submission closes)",
+          "title": "Hackathon ends (project submission closes)",
           "time": "2024-12-01T22:00:00+05:30"
         },
         {
-          "title": "Hackathon end stream and next steps",
-          "time": "2024-12-01T22:05:00+05:30"
-        },
-        {
-          "title": "Thank you post and next steps",
-          "time": "2024-12-01T23:00:00+05:30"
+          "title": "Hackathon end stream",
+          "time": "2024-12-01T22:10:00+05:30"
         }
       ]
     },
@@ -165,12 +117,8 @@
       "date": "2024-12-02T00:00:00+05:30",
       "items": [
         {
-          "title": "Result Date Announcement",
+          "title": "Result announcement",
           "time": "2024-12-02T10:00:00+05:30"
-        },
-        {
-          "title": "Feedback form to be shared",
-          "time": "2024-12-02T12:00:00+05:30"
         }
       ]
     }
