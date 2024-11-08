@@ -27,14 +27,19 @@ type PrizeType = {
   description?: string;
 };
 
-type ScheduleElement = {
+type ScheduleItem = {
   title: string;
-  dateTime: string; // ISO 8601
+  time: string; // ISO 8601
   description?: string;
   link?: {
     name: string;
     url: string;
   };
+}
+
+export type ScheduleElement = {
+  date: string; // ISO 8601
+  items: ScheduleItem[];
 }
 
 export interface HackathonData {
