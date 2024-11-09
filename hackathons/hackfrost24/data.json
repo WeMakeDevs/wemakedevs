@@ -106,10 +106,6 @@
         {
           "title": "Hackathon ends (project submission closes)",
           "time": "2024-12-01T22:00:00+05:30"
-        },
-        {
-          "title": "Hackathon end stream",
-          "time": "2024-12-01T22:10:00+05:30"
         }
       ]
     },
@@ -117,7 +113,7 @@
       "date": "2024-12-02T00:00:00+05:30",
       "items": [
         {
-          "title": "Result announcement",
+          "title": "Hackathon end stream & result announcement",
           "time": "2024-12-02T10:00:00+05:30"
         }
       ]
