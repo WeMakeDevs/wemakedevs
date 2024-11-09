@@ -7,7 +7,7 @@ import hackForGoodCover from "./hack-for-good-cover.png";
 import hackForGoodThumbnail from "./hack-for-good-thumbnail.jpg";
 import codefest2024Cover from "./codefest-2024-cover.png";
 import codefest2024Thumbnail from "./codefest-2024-thumbnail.jpg";
-import hackfrostHackathonCover from './hackfrost-hackathon-cover.png'
+import hackfrost24Cover from './hackfrost24-cover.png'
 
 import hackathonImage from './wemakedevs_hackathon.png'
 import meetupImage from './wemakedevs_meetup.jpg'
@@ -19,7 +19,7 @@ export {
   hackForGoodThumbnail,
   codefest2024Cover,
   codefest2024Thumbnail,
-  hackfrostHackathonCover,
+  hackfrost24Cover,
   aboutImage,
   hackathonImage,
   meetupImage,

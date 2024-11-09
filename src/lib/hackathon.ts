@@ -9,7 +9,7 @@ import {
   codefest2024Cover,
   hackForGoodThumbnail,
   hackForGoodCover,
-  hackfrostHackathonCover
+  hackfrost24Cover
 } from "@/assets/images";
 // Add more imports for other hackathons as needed
 
@@ -22,7 +22,7 @@ const imageMap: Record<
     thumbnail: codefest2024Thumbnail,
   },
   "hack-for-good": { cover: hackForGoodCover, thumbnail: hackForGoodThumbnail },
-  "hackfrost-hackathon": { cover: hackfrostHackathonCover, thumbnail: hackForGoodThumbnail }
+  "hackfrost24": { cover: hackfrost24Cover, thumbnail: hackForGoodThumbnail }
   // Add more mappings for other hackathons as needed
 };
 
