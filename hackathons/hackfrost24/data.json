@@ -62,18 +62,18 @@
         },
         {
           "title": "Getting started with Kestra for building workflows",
-          "description": "Learn how to install Kestra with Docker Compose and build your first workflow that automatically triggers.",
-          "time": "2024-11-29T17:00:00+05:30"
+          "description": "Learn how to install Kestra and build your first workflow that automatically triggers",
+          "time": "2024-11-29T12:00:00+05:30"
         },
         {
           "title": "How to integrate your code with Kestra",
           "description": "Learn how to take your code and integrate it into Kestra by passing dynamic values to it, and syncing it automatically with Git.",
-          "time": "2024-11-29T21:30:00+05:30"
+          "time": "2024-11-29T16:00:00+05:30"
         },
         {
-          "title": "Discord community call",
-          "description": "We’ll be answering questions",
-          "time": "2024-11-30T00:00:00+05:30"
+          "title": "Will live on Discord",
+          "description": "We'll be answer questions",
+          "time": "2024-11-29T19:00:00+05:30"
         }
       ]
     },
@@ -92,7 +92,7 @@
         {
           "title": "Discord community call",
           "description": "We’ll be answering questions",
-          "time": "2024-12-01T00:00:00+05:30"
+          "time": "2024-11-30T20:00:00+05:30"
         }
       ]
     },
