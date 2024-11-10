@@ -18,18 +18,16 @@ const HackathonScheduleComponent = ({
     setSelectedDate(index);
   };
 
-  const formatTime = (timeString: string) => {
-    const date = new Date(timeString);
-    return `${date.getHours()}:${date
-      .getMinutes()
-      .toString()
-      .padStart(2, "0")} ${date.getHours() >= 12 ? "PM" : "AM"}`;
-  };
-
   const timeOptions: Intl.DateTimeFormatOptions = {
     hour: "numeric",
     minute: "2-digit",
     hour12: true,
+    timeZone: "Asia/Kolkata", // Explicitly set IST timezone
+  };
+
+  const formatToIST = (timeString: string) => {
+    const date = new Date(timeString);
+    return date.toLocaleString("en-US", timeOptions);
   };
 
   return (
@@ -77,7 +75,7 @@ const HackathonScheduleComponent = ({
               <div className='flex gap-2 md:gap-5 items-center font-medium flex-wrap mt-2'>
                 <span className='flex gap-2 text-black/75 items-center'>
                   <Clock size={16} />
-                  {new Date(item.time).toLocaleString("en-US", timeOptions)} IST
+                  {formatToIST(item.time)} IST
                 </span>
                 {item.link && (
                   <Link
