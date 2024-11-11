@@ -46,6 +46,9 @@ const HackathonPage = async ({ params }: { params: { slug: string } }) => {
           <HackathonContentBody className='grid grid-cols-1 lg:grid-cols-2 gap-10'>
             <div className='space-y-8'>
               <HackathonContentTitleH3>Winning Prizes</HackathonContentTitleH3>
+              <span className='px-2 py-1 bg-blue-600 text-white rounded-[4px] font-medium text-base md:text-xl'>
+              Separate gadget for every team member
+              </span>
               {hackathon.prizes.winning.map((prize, index) => (
                 <div className='space-y-4' key={index}>
                   <p className='text-lg md:text-xl font-semibold flex gap-2 items-center'>
@@ -101,7 +104,7 @@ const HackathonPage = async ({ params }: { params: { slug: string } }) => {
             <div className='space-y-8'>
               <HackathonContentTitleH3>Other Prizes</HackathonContentTitleH3>
               <span className='px-2 py-1 bg-blue-600 text-white rounded-[4px] font-medium text-base md:text-xl'>
-                $100 Amazon Gift Card + Swag Bag for each
+              Keychron Keyboard + Swag Bag for each
               </span>
               {hackathon.prizes.other.map((prize, index) => (
                 <div className='space-y-4' key={index}>

@@ -9,16 +9,16 @@
   "prizes": {
     "winning": [
       {
-        "name": "Winner Team",
-        "prize": "MacBook"
+        "name": "Best Use of Kestra",
+        "prize": " Apple MacBook"
       },
       {
-        "name": "1st runner up",
-        "prize": "iPad"
+        "name": "Best UI/UX Project",
+        "prize": "Apple iPad"
       },
       {
-        "name": "2nd runner up",
-        "prize": "Mac mini"
+        "name": "Best AI/ML Project",
+        "prize": "Apple Mac mini"
       }
     ],
     "other": [
@@ -26,16 +26,10 @@
         "name": "Sustainability Award"
       },
       {
-        "name": "Best UI/UX Project"
-      },
-      {
         "name": "Best Solo Project"
       },
       {
         "name": "Best Open Source Practices"
-      },
-      {
-        "name": "Best AI/ML Project"
       }
     ],
     "giveaway": [
@@ -63,12 +57,12 @@
         {
           "title": "Getting started with Kestra for building workflows",
           "description": "Learn how to install Kestra and build your first workflow that automatically triggers",
-          "time": "2024-11-29T12:00:00+05:30"
+          "time": "2024-11-29T17:00:00+05:30"
         },
         {
           "title": "How to integrate your code with Kestra",
           "description": "Learn how to take your code and integrate it into Kestra by passing dynamic values to it, and syncing it automatically with Git.",
-          "time": "2024-11-29T16:00:00+05:30"
+          "time": "2024-11-29T21:30:00+05:30"
         },
         {
           "title": "Kestra live office hour on Discord",
