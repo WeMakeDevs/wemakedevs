@@ -44,11 +44,14 @@ const HackathonPage = async ({ params }: { params: { slug: string } }) => {
           </HackathonContentBody>
           <HackathonContentTitle>Prizes</HackathonContentTitle>
           <HackathonContentBody className='grid grid-cols-1 lg:grid-cols-2 gap-10'>
-            <div className='space-y-8'>
+          <div className='space-y-8'>
               <HackathonContentTitleH3>Winning Prizes</HackathonContentTitleH3>
-              <span className='px-2 py-1 bg-blue-600 text-white rounded-[4px] font-medium text-base md:text-xl'>
-              Separate gadget for every team member
-              </span>
+              <div className='flex flex-wrap gap-2 items-center'>
+                <span className='px-2 py-1 bg-blue-600 text-white rounded-[4px] font-medium text-base md:text-xl inline-block'>
+                Separate gadget for every team member
+                </span>
+                <span className='px-2 py-1 bg-blue-600 text-white rounded-[4px] font-medium text-base md:text-xl'>Use of Kestra is mandatory for below tracks</span>
+              </div>
               {hackathon.prizes.winning.map((prize, index) => (
                 <div className='space-y-4' key={index}>
                   <p className='text-lg md:text-xl font-semibold flex gap-2 items-center'>
@@ -100,12 +103,13 @@ const HackathonPage = async ({ params }: { params: { slug: string } }) => {
                 </>
               )}
             </div>
-
             <div className='space-y-8'>
               <HackathonContentTitleH3>Other Prizes</HackathonContentTitleH3>
-              <span className='px-2 py-1 bg-blue-600 text-white rounded-[4px] font-medium text-base md:text-xl'>
-              Keychron Keyboard + Swag Bag for each
-              </span>
+              <div className='flex flex-wrap gap-2 items-center'>
+                <span className='px-2 py-1 bg-blue-600 text-white rounded-[4px] font-medium text-base md:text-xl'>
+                  Keychron Keyboard + Swag Bag for each
+                </span>
+              </div>
               {hackathon.prizes.other.map((prize, index) => (
                 <div className='space-y-4' key={index}>
                   <p className='text-lg md:text-xl font-semibold flex gap-2 items-center'>

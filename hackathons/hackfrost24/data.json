@@ -14,10 +14,14 @@
       },
       {
         "name": "Best UI/UX Project",
-        "prize": "Apple iPad"
+        "prize": "Monitor"
       },
       {
         "name": "Best AI/ML Project",
+        "prize": "Apple iPad"
+      },
+      {
+        "name": "Best Solo Project",
         "prize": "Apple Mac mini"
       }
     ],
@@ -26,10 +30,10 @@
         "name": "Sustainability Award"
       },
       {
-        "name": "Best Solo Project"
+        "name": "Best Open Source Practices"
       },
       {
-        "name": "Best Open Source Practices"
+        "name": "Best Open Innovation"
       }
     ],
     "giveaway": [
