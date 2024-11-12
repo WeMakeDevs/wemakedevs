@@ -60,14 +60,14 @@
           "time": "2024-11-29T17:00:00+05:30"
         },
         {
-          "title": "How to integrate your code with Kestra",
-          "description": "Learn how to take your code and integrate it into Kestra by passing dynamic values to it, and syncing it automatically with Git.",
-          "time": "2024-11-29T21:30:00+05:30"
-        },
-        {
           "title": "Kestra live office hour on Discord",
           "description": "We'll be answering questions",
           "time": "2024-11-29T19:00:00+05:30"
+        },
+        {
+          "title": "How to integrate your code with Kestra",
+          "description": "Learn how to take your code and integrate it into Kestra by passing dynamic values to it, and syncing it automatically with Git.",
+          "time": "2024-11-29T21:30:00+05:30"
         }
       ]
     },
