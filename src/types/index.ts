@@ -42,6 +42,17 @@ export type ScheduleElement = {
   items: ScheduleItem[];
 }
 
+interface ProjectInterface {
+  projectTitle: string;
+  description: string;
+  githubLink?: string;
+  demoLink?: string;
+}
+
+interface ShowcaseProjectInterface extends ProjectInterface {
+  category: string;
+}
+
 export interface HackathonData {
   title: string;
   image: {
@@ -67,6 +78,10 @@ export interface HackathonData {
   registrationLink: string;
   submissionLink?: string;
   schedule: ScheduleElement[];
+  projects?: {
+    showcase: ShowcaseProjectInterface[];
+    all?: ProjectInterface[];
+  }
 }
 
 export interface HackathonCardType extends GeneralComponent {

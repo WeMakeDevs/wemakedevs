@@ -132,5 +132,117 @@
         }
       ]
     }
-  ]
+  ],
+  "projects": {
+    "showcase": [
+      {
+        "projectTitle": "Some project title here",
+        "description": "Some project description here",
+        "githubLink": "https://github.com/",
+        "demoLink": "https://demo.com/",
+        "category": "Best use of Kestra"
+      },
+      {
+        "projectTitle": "Some project title here",
+        "description": "Some project description here",
+        "githubLink": "https://github.com/",
+        "demoLink": "https://demo.com/",
+        "category": "Best use of Kestra"
+      },
+      {
+        "projectTitle": "Some project title here",
+        "description": "Some project description here",
+        "githubLink": "https://github.com/",
+        "demoLink": "https://demo.com/",
+        "category": "Best use of Kestra"
+      },
+      {
+        "projectTitle": "Some project title here",
+        "description": "Some project description here",
+        "githubLink": "https://github.com/",
+        "demoLink": "https://demo.com/",
+        "category": "Best use of Kestra"
+      }
+    ],
+    "all": [
+      {
+        "projectTitle": "Some project title here",
+        "description": "Some project description here",
+        "githubLink": "https://github.com/",
+        "demoLink": "https://demo.com/"
+      },
+      {
+        "projectTitle": "Some project title here",
+        "description": "Some project description here",
+        "githubLink": "https://github.com/",
+        "demoLink": "https://demo.com/"
+      },
+      {
+        "projectTitle": "Some project title here",
+        "description": "Some project description here",
+        "githubLink": "https://github.com/",
+        "demoLink": "https://demo.com/"
+      },
+      {
+        "projectTitle": "Some project title here",
+        "description": "Some project description here",
+        "githubLink": "https://github.com/",
+        "demoLink": "https://demo.com/"
+      },
+      {
+        "projectTitle": "Some project title here",
+        "description": "Some project description here",
+        "githubLink": "https://github.com/",
+        "demoLink": "https://demo.com/"
+      },
+      {
+        "projectTitle": "Some project title here",
+        "description": "Some project description here",
+        "githubLink": "https://github.com/",
+        "demoLink": "https://demo.com/"
+      },
+      {
+        "projectTitle": "Some project title here",
+        "description": "Some project description here",
+        "githubLink": "https://github.com/",
+        "demoLink": "https://demo.com/"
+      },
+      {
+        "projectTitle": "Some project title here",
+        "description": "Some project description here",
+        "githubLink": "https://github.com/",
+        "demoLink": "https://demo.com/"
+      },
+      {
+        "projectTitle": "Some project title here",
+        "description": "Some project description here",
+        "githubLink": "https://github.com/",
+        "demoLink": "https://demo.com/"
+      },
+      {
+        "projectTitle": "Some project title here",
+        "description": "Some project description here",
+        "githubLink": "https://github.com/",
+        "demoLink": "https://demo.com/"
+      },
+      {
+        "projectTitle": "Some project title here",
+        "description": "Some project description here",
+        "githubLink": "https://github.com/",
+        "demoLink": "https://demo.com/"
+      },
+      {
+        "projectTitle": "Some project title here",
+        "description": "Some project description here",
+        "githubLink": "https://github.com/",
+        "demoLink": "https://demo.com/"
+      },
+      {
+        "projectTitle": "Some project title here",
+        "description": "Some project description here",
+        "githubLink": "https://github.com/",
+        "demoLink": "https://demo.com/"
+      }
+    ]
+  }
 }
