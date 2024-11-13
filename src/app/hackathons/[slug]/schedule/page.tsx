@@ -3,7 +3,6 @@ import {
   HackathonNav,
 } from "@/components/hackathon-content";
 import { HackathonScheduleComponent } from "@/components/hackathon-content";
-import HackathonMain from "@/components/hackathon-content/HackathonMain";
 import { ViewContainer } from "@/components/ui/view-container";
 import { fetchHackathonData } from "@/lib/hackathon";
 import { notFound } from "next/navigation";

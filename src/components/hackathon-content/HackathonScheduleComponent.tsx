@@ -80,7 +80,7 @@ const HackathonScheduleComponent = ({
                 {item.link && (
                   <Link
                     href={item.link.url}
-                    className='hover:underline no-underline text-blue-600 flex items-center gap-2'
+                    className='hover:underline no-underline text-blue-600 flex items-center gap-2 uppercase'
                   >
                     <Link2 size={16} />
                     {item.link.name}

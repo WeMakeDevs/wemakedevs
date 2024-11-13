@@ -61,16 +61,28 @@
         {
           "title": "Getting started with Kestra for building workflows",
           "description": "Learn how to install Kestra and build your first workflow that automatically triggers",
+          "link": {
+            "name": "Join live",
+            "url": "https://www.youtube.com/live/02eZLT1mZh0?feature=shared"
+          },
           "time": "2024-11-29T17:00:00+05:30"
         },
         {
           "title": "Kestra live office hour on Discord",
           "description": "We'll be answering questions",
+          "link": {
+            "name": "Office Hours",
+            "url": "https://discord.gg/9dtEHvkb?event=1306247180901683251"
+          },
           "time": "2024-11-29T19:00:00+05:30"
         },
         {
           "title": "How to integrate your code with Kestra",
           "description": "Learn how to take your code and integrate it into Kestra by passing dynamic values to it, and syncing it automatically with Git.",
+          "link": {
+            "name": "Join live",
+            "url": "https://www.youtube.com/live/6K3RCQQtkfc?feature=shared"
+          },
           "time": "2024-11-29T21:30:00+05:30"
         }
       ]
