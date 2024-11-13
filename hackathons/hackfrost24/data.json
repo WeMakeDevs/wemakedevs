@@ -96,17 +96,17 @@
       "items": [
         {
           "title": "Resume review by Kunal Kushwaha",
-          "time": "2024-11-30T21:00:00+05:30"
-        },
-        {
-          "title": "Fun activity",
-          "description": "Online games and quizzes",
-          "time": "2024-11-30T22:00:00+05:30"
+          "time": "2024-11-30T12:00:00+05:30"
         },
         {
           "title": "Discord community call",
           "description": "We’ll be answering questions",
           "time": "2024-11-30T20:00:00+05:30"
+        },
+        {
+          "title": "Fun activity",
+          "description": "Online games and quizzes",
+          "time": "2024-11-30T22:00:00+05:30"
         }
       ]
     },
