@@ -49,11 +49,16 @@ interface ProjectInterface {
   demoLink?: string;
 }
 
-interface ShowcaseProjectInterface extends ProjectInterface {
-  category: string;
+interface WinningProjectInterface extends ProjectInterface {
+  category: {
+    title: string;
+    bgColor?: string; // HEX
+    textColor?: string; // HEX
+  }
 }
 
 export interface HackathonProjectCardInterface extends GeneralComponent, ProjectInterface { }
+export interface HackathonWinningProjectCardInterface extends GeneralComponent, WinningProjectInterface { }
 
 export interface HackathonData {
   title: string;
@@ -81,7 +86,7 @@ export interface HackathonData {
   submissionLink?: string;
   schedule: ScheduleElement[];
   projects?: {
-    showcase: ShowcaseProjectInterface[];
+    showcase: WinningProjectInterface[];
     all?: ProjectInterface[];
   }
 }

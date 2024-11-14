@@ -136,32 +136,44 @@
   "projects": {
     "showcase": [
       {
-        "projectTitle": "Some project title here",
-        "description": "Some project description here",
-        "githubLink": "https://github.com/",
-        "demoLink": "https://demo.com/",
-        "category": "Best use of Kestra"
+        "projectTitle": "WorkflowGPT",
+        "description": "An AI-powered workflow automation tool built with Kestra that uses GPT-4 to automatically generate and optimize data pipelines. Reduces workflow creation time by 60% and includes smart error detection.",
+        "githubLink": "https://github.com/workflowgpt/automation",
+        "demoLink": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+        "category": {
+          "title": "Best use of Kestra",
+          "bgColor": "#FFD700",
+          "textColor": "#000000"
+        }
       },
       {
-        "projectTitle": "Some project title here",
-        "description": "Some project description here",
-        "githubLink": "https://github.com/",
-        "demoLink": "https://demo.com/",
-        "category": "Best use of Kestra"
+        "projectTitle": "DataSync Pro",
+        "description": "Real-time data synchronization between multiple databases using Kestra workflows",
+        "githubLink": "https://github.com/datasyncpro/sync-engine",
+        "demoLink": "https://www.youtube.com/watch?v=M7FIvfx5J10",
+        "category": {
+          "title": "Best use of Kestra"
+        }
       },
       {
-        "projectTitle": "Some project title here",
-        "description": "Some project description here",
-        "githubLink": "https://github.com/",
-        "demoLink": "https://demo.com/",
-        "category": "Best use of Kestra"
+        "projectTitle": "CloudWatch Analytics",
+        "description": "A comprehensive cloud monitoring solution that integrates with Kestra to provide automated scaling, anomaly detection, and cost optimization. Features include predictive analytics for resource usage, custom alert systems, and an intuitive dashboard that visualizes complex metrics in real-time. The system automatically adjusts cloud resources based on historical patterns and current demand.",
+        "githubLink": "https://github.com/cloudwatch/analytics",
+        "demoLink": "https://www.youtube.com/watch?v=9bZkp7q19f0",
+        "category": {
+          "title": "Best use of Kestra"
+        }
       },
       {
-        "projectTitle": "Some project title here",
-        "description": "Some project description here",
-        "githubLink": "https://github.com/",
-        "demoLink": "https://demo.com/",
-        "category": "Best use of Kestra"
+        "projectTitle": "ETL Master",
+        "description": "Automated ETL pipeline generator with built-in data quality checks and transformation templates. Uses Kestra's workflow engine to handle complex data dependencies and scheduling.",
+        "githubLink": "https://github.com/etlmaster/pipeline-gen",
+        "demoLink": "https://www.youtube.com/watch?v=JGwWNGJdvx8",
+        "category": {
+          "title": "Best use of Kestra",
+          "bgColor": "#FFD700",
+          "textColor": "#000000"
+        }
       }
     ],
     "all": [
