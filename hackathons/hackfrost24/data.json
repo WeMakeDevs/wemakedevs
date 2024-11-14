@@ -96,16 +96,28 @@
       "items": [
         {
           "title": "Resume review by Kunal Kushwaha",
+          "link": {
+            "name": "Get notified",
+            "url": "https://discord.gg/wemakedevs?event=1306605633277136956"
+          },
           "time": "2024-11-30T12:00:00+05:30"
         },
         {
           "title": "Discord community call",
           "description": "We’ll be answering questions",
+          "link": {
+            "name": "Get notified",
+            "url": "https://discord.gg/wemakedevs?event=1306606191153119312"
+          },
           "time": "2024-11-30T20:00:00+05:30"
         },
         {
           "title": "Fun activity",
           "description": "Online games and quizzes",
+          "link": {
+            "name": "Get notified",
+            "url": "https://discord.com/events/862638364016771082/1306606868466110606"
+          },
           "time": "2024-11-30T22:00:00+05:30"
         }
       ]
