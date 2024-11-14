@@ -166,82 +166,82 @@
     ],
     "all": [
       {
-        "projectTitle": "Some project title here",
-        "description": "Some project description here",
-        "githubLink": "https://github.com/",
-        "demoLink": "https://demo.com/"
+        "projectTitle": "EcoTracker",
+        "description": "A comprehensive sustainable living application that not only tracks your daily carbon footprint but also provides personalized recommendations for reducing environmental impact. Features include real-time electricity consumption monitoring, sustainable product alternatives, and community challenges that gamify eco-friendly living. Built with React Native and MongoDB, utilizing ML for personalized suggestions.",
+        "githubLink": "https://github.com/ecotracker/sustainability",
+        "demoLink": "https://ecotracker-demo.vercel.app"
       },
       {
-        "projectTitle": "Some project title here",
-        "description": "Some project description here",
-        "githubLink": "https://github.com/",
-        "demoLink": "https://demo.com/"
+        "projectTitle": "HealthBot AI",
+        "description": "Mental health support chatbot using GPT-3 for initial assessment and mood tracking.",
+        "githubLink": "https://github.com/healthbot/mental-health-ai",
+        "demoLink": "https://healthbot-ai.netlify.app"
       },
       {
-        "projectTitle": "Some project title here",
-        "description": "Some project description here",
-        "githubLink": "https://github.com/",
-        "demoLink": "https://demo.com/"
+        "projectTitle": "SmartFarm IoT",
+        "description": "Revolutionary agricultural monitoring system combining IoT sensors with machine learning for precise crop management. Includes soil moisture tracking, automated irrigation scheduling, pest detection through computer vision, and yield prediction models. Farmers can access real-time data through a mobile app and receive AI-powered recommendations for optimal farming practices.",
+        "githubLink": "https://github.com/smartfarm/iot-agriculture",
+        "demoLink": "https://smartfarm-iot.herokuapp.com"
       },
       {
-        "projectTitle": "Some project title here",
-        "description": "Some project description here",
-        "githubLink": "https://github.com/",
-        "demoLink": "https://demo.com/"
+        "projectTitle": "CodeCollab",
+        "description": "Real-time collaborative code editor supporting multiple programming languages with Git integration.",
+        "githubLink": "https://github.com/codecollab/real-time-editor",
+        "demoLink": "https://codecollab.dev"
       },
       {
-        "projectTitle": "Some project title here",
-        "description": "Some project description here",
-        "githubLink": "https://github.com/",
-        "demoLink": "https://demo.com/"
+        "projectTitle": "VirtualQueue",
+        "description": "Next-generation queue management platform designed specifically for healthcare facilities. Implements predictive wait times using historical data analysis, SMS notifications, and emergency priority sorting. The system has already been successfully tested in three local clinics, reducing average wait times by 45%.",
+        "githubLink": "https://github.com/virtualqueue/healthcare",
+        "demoLink": "https://virtual-queue.app"
       },
       {
-        "projectTitle": "Some project title here",
-        "description": "Some project description here",
-        "githubLink": "https://github.com/",
-        "demoLink": "https://demo.com/"
+        "projectTitle": "LearnLingo",
+        "description": "AI-powered language learning platform featuring speech recognition and accent analysis.",
+        "githubLink": "https://github.com/learnlingo/language-ai",
+        "demoLink": "https://learnlingo.edu"
       },
       {
-        "projectTitle": "Some project title here",
-        "description": "Some project description here",
-        "githubLink": "https://github.com/",
-        "demoLink": "https://demo.com/"
+        "projectTitle": "WasteWise",
+        "description": "Innovative waste management solution utilizing advanced computer vision algorithms to automatically categorize and sort waste materials. The system includes a smart bin prototype with multiple compartments, real-time contamination detection, and integration with municipal waste collection services. Built using TensorFlow and deployed on edge devices for efficient processing.",
+        "githubLink": "https://github.com/wastewise/smart-segregation",
+        "demoLink": "https://wastewise.tech"
       },
       {
-        "projectTitle": "Some project title here",
-        "description": "Some project description here",
-        "githubLink": "https://github.com/",
-        "demoLink": "https://demo.com/"
+        "projectTitle": "PetPal",
+        "description": "Complete pet healthcare management system with telemedicine features and automated vaccination reminders.",
+        "githubLink": "https://github.com/petpal/pet-care",
+        "demoLink": "https://petpal.care"
       },
       {
-        "projectTitle": "Some project title here",
-        "description": "Some project description here",
-        "githubLink": "https://github.com/",
-        "demoLink": "https://demo.com/"
+        "projectTitle": "StudyBuddy",
+        "description": "An innovative educational platform that matches students based on their learning styles, subject preferences, and availability. Includes features like virtual study rooms, shared note-taking, and AI-powered study material recommendations. The platform also tracks study patterns and suggests optimal study schedules based on individual performance data.",
+        "githubLink": "https://github.com/studybuddy/peer-learning",
+        "demoLink": "https://studybuddy.education"
       },
       {
-        "projectTitle": "Some project title here",
-        "description": "Some project description here",
-        "githubLink": "https://github.com/",
-        "demoLink": "https://demo.com/"
+        "projectTitle": "SafeStreets",
+        "description": "Real-time community safety platform with incident reporting and emergency alerts.",
+        "githubLink": "https://github.com/safestreets/community-safety",
+        "demoLink": "https://safestreets.city"
       },
       {
-        "projectTitle": "Some project title here",
-        "description": "Some project description here",
-        "githubLink": "https://github.com/",
-        "demoLink": "https://demo.com/"
+        "projectTitle": "FoodShare",
+        "description": "Comprehensive food waste reduction platform connecting restaurants with local food banks and shelters. Features include real-time inventory management, automated matching algorithms, and delivery route optimization. The platform also generates detailed impact reports and tax deduction documentation for participating businesses.",
+        "githubLink": "https://github.com/foodshare/waste-reduction",
+        "demoLink": "https://foodshare.org"
       },
       {
-        "projectTitle": "Some project title here",
-        "description": "Some project description here",
-        "githubLink": "https://github.com/",
-        "demoLink": "https://demo.com/"
+        "projectTitle": "LocalArtist",
+        "description": "Digital marketplace showcasing local artists with integrated payment processing and AR preview feature.",
+        "githubLink": "https://github.com/localartist/art-platform",
+        "demoLink": "https://localartist.gallery"
       },
       {
-        "projectTitle": "Some project title here",
-        "description": "Some project description here",
-        "githubLink": "https://github.com/",
-        "demoLink": "https://demo.com/"
+        "projectTitle": "WeatherAlert",
+        "description": "State-of-the-art weather prediction system combining data from local IoT sensors, satellite imagery, and traditional weather stations. Utilizes ensemble machine learning models to provide hyperlocal forecasts with 95% accuracy. The system can predict microclimate variations within a 100-meter radius and sends targeted alerts for specific weather events. Implementation includes edge computing for real-time processing and progressive web app for instant updates.",
+        "githubLink": "https://github.com/weatheralert/ml-prediction",
+        "demoLink": "https://weatheralert.io"
       }
     ]
   }

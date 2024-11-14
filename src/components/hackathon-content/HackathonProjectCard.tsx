@@ -15,16 +15,16 @@ const HackathonProjectCard = ({
   return (
     <div
       className={cn(
-        className,
-        "p-4 rounded border-2 border-accent-4 hover:bg-accent-4/10 transition-all hover:-translate-y-2"
+        "p-4 rounded border-2 border-accent-4 hover:bg-accent-4/10 transition-all hover:-translate-y-2",
+        className
       )}
       {...props}
     >
       <div className=''>
         <h3 className='text-lg'>{projectTitle}</h3>
       </div>
-      <p className='line-clamp-3'>{description}</p>
-      <div className='flex gap-2 mt-2'>
+      <p className='line-clamp-2 mt-3'>{description}</p>
+      <div className='flex gap-3 mt-4'>
         {githubLink && (
           <Link
             href={githubLink}
@@ -32,7 +32,7 @@ const HackathonProjectCard = ({
             rel='noopener noreferrer'
             className='hover:text-primary'
           >
-            <SiGithub size={18} />
+            <SiGithub size={20} />
             <span className='sr-only'>GitHub</span>
           </Link>
         )}
@@ -43,7 +43,7 @@ const HackathonProjectCard = ({
             rel='noopener noreferrer'
             className='hover:text-primary'
           >
-            <ExternalLink size={18} />
+            <ExternalLink size={20} />
             <span className='sr-only'>Demo</span>
           </Link>
         )}
