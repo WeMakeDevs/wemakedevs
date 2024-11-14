@@ -5,6 +5,7 @@ import HackathonContentTitle from "./HackathonContentTitle";
 import HackathonContentTitleH3 from "./HackathonContentTitleH3";
 import HackathonContentBody from "./HackathonContentBody";
 import HackathonScheduleComponent from "./HackathonScheduleComponent";
+import HackathonProjectCard from "./HackathonProjectCard";
 
 export {
   HackathonCoverImage,
@@ -13,5 +14,6 @@ export {
   HackathonContentTitle,
   HackathonContentBody,
   HackathonContentTitleH3,
-  HackathonScheduleComponent
+  HackathonScheduleComponent,
+  HackathonProjectCard
 };

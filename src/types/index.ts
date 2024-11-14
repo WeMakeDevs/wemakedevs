@@ -53,6 +53,8 @@ interface ShowcaseProjectInterface extends ProjectInterface {
   category: string;
 }
 
+export interface HackathonProjectCardInterface extends GeneralComponent, ProjectInterface { }
+
 export interface HackathonData {
   title: string;
   image: {
