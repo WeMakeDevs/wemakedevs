@@ -140,7 +140,7 @@
       "items": [
         {
           "title": "Hackathon end stream & result announcement",
-         "link": {
+          "link": {
             "name": "Get notified",
             "url": "https://www.youtube.com/live/pUejHO0K5uU?feature=shared"
           },
@@ -152,5 +152,6 @@
         }
       ]
     }
-  ]
+  ],
+  "googleCalendarLink": "https://calendar.google.com/calendar/u/0?cid=Y18zMDkwNGI0NzdhOTVmNzU5MjRjYjI1ZDdhMjk1NDY5NzlmNDk3OWRkMzliNDEwMTlhYzViMjJlNzZmYTE2MDNkQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20"
 }

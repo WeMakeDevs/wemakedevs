@@ -67,6 +67,7 @@ export interface HackathonData {
   registrationLink: string;
   submissionLink?: string;
   schedule: ScheduleElement[];
+  googleCalendarLink?: string;
 }
 
 export interface HackathonCardType extends GeneralComponent {
