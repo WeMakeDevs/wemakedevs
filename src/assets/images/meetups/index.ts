@@ -1,4 +1,3 @@
-import webdevWorkshop from './webdev-workshop.jpg'
-import aimlMeetup from './ai-ml-meetup.jpg'
+import openSourceConnectMeetup from './open-source-connect.png'
 
-export { webdevWorkshop, aimlMeetup }
+export { openSourceConnectMeetup }
