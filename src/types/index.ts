@@ -42,6 +42,24 @@ export type ScheduleElement = {
   items: ScheduleItem[];
 }
 
+interface ProjectInterface {
+  projectTitle: string;
+  description: string;
+  githubLink?: string;
+  demoLink?: string;
+}
+
+interface WinningProjectInterface extends ProjectInterface {
+  category: {
+    title: string;
+    bgColor?: string; // HEX
+    textColor?: string; // HEX
+  }
+}
+
+export interface HackathonProjectCardInterface extends GeneralComponent, ProjectInterface { }
+export interface HackathonWinningProjectCardInterface extends GeneralComponent, WinningProjectInterface { }
+
 export interface HackathonData {
   title: string;
   image: {
@@ -67,6 +85,10 @@ export interface HackathonData {
   registrationLink: string;
   submissionLink?: string;
   schedule: ScheduleElement[];
+  projects?: {
+    showcase: WinningProjectInterface[];
+    all?: ProjectInterface[];
+  }
   googleCalendarLink?: string;
 }
 
