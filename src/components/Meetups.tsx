@@ -34,10 +34,19 @@ const Hackathons = ({ className, ...props }: GeneralComponent) => {
             innovations.
           </p>
         </div>
-        <div className='my-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-6'>
-          {meetupEntries.map((meetup, index) => (
+        <div className='my-10'>
+          {/* {meetupEntries.map((meetup, index) => (
             <MeetupCard key={index} {...meetup} />
-          ))}
+          ))} */}
+          <iframe
+            src="https://lu.ma/embed/calendar/cal-G9rNvcoz3r4AGfv/events"
+            frameBorder={0}
+            allowFullScreen={false}
+            aria-hidden="false"
+            tabIndex={0}
+            className="max-w-xl h-[300px] mx-auto shadow-md bg-[#222325]"
+          >
+          </iframe>
         </div>
       </ViewContainer>
     </section>
