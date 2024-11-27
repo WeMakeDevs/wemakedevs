@@ -1,6 +1,6 @@
 import {
-  HackathonCoverImage,
-  HackathonNav,
+	HackathonCoverImage,
+	HackathonNav,
 } from "@/components/hackathon-content";
 import HackathonContentBody from "@/components/hackathon-content/HackathonContentBody";
 import { CustomMDX } from "@/components/mdx-remote";
@@ -9,24 +9,27 @@ import { fetchHackathonData } from "@/lib/hackathon";
 import { notFound } from "next/navigation";
 
 const HackathonRules = async ({ params }: { params: { slug: string } }) => {
-  const hackathons = await fetchHackathonData();
-  const hackathon = hackathons.find(
-    (hackathon) => hackathon.slug == params.slug
-  );
+	const hackathons = await fetchHackathonData();
+	const hackathon = hackathons.find(
+		hackathon => hackathon.slug === params.slug,
+	);
 
-  if (!hackathon) notFound();
+	if (!hackathon) notFound();
 
-  return (
-    <div className='pt-20 pb-10'>
-      <HackathonCoverImage src={hackathon.image.cover} alt={hackathon.title} />
-      <HackathonNav slug={hackathon.slug} page='rules' />
-      <ViewContainer className='my-10'>
-        <HackathonContentBody>
-          <CustomMDX source={hackathon.rules} />
-        </HackathonContentBody>
-      </ViewContainer>
-    </div>
-  );
+	return (
+		<div className="pt-20 pb-10">
+			<HackathonCoverImage
+				src={hackathon.image.cover}
+				alt={hackathon.title}
+			/>
+			<HackathonNav slug={hackathon.slug} page="rules" />
+			<ViewContainer className="my-10">
+				<HackathonContentBody>
+					<CustomMDX source={hackathon.rules} />
+				</HackathonContentBody>
+			</ViewContainer>
+		</div>
+	);
 };
 
 export default HackathonRules;

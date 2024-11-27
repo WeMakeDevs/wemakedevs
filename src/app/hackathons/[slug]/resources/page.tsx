@@ -1,6 +1,6 @@
 import {
-  HackathonCoverImage,
-  HackathonNav,
+	HackathonCoverImage,
+	HackathonNav,
 } from "@/components/hackathon-content";
 import HackathonContentBody from "@/components/hackathon-content/HackathonContentBody";
 import HackathonContentTitle from "@/components/hackathon-content/HackathonContentTitle";
@@ -11,24 +11,27 @@ import { fetchHackathonData } from "@/lib/hackathon";
 import { notFound } from "next/navigation";
 
 const HackathonResources = async ({ params }: { params: { slug: string } }) => {
-  const hackathons = await fetchHackathonData();
-  const hackathon = hackathons.find(
-    (hackathon) => hackathon.slug == params.slug
-  );
+	const hackathons = await fetchHackathonData();
+	const hackathon = hackathons.find(
+		hackathon => hackathon.slug === params.slug,
+	);
 
-  if (!hackathon) notFound();
+	if (!hackathon) notFound();
 
-  return (
-    <div className='pt-20 pb-10'>
-      <HackathonCoverImage src={hackathon.image.cover} alt={hackathon.title} />
-      <HackathonNav slug={hackathon.slug} page='resources' />
-      <ViewContainer>
-        <HackathonContentBody>
-          <CustomMDX source={hackathon.resources} />
-        </HackathonContentBody>
-      </ViewContainer>
-    </div>
-  );
+	return (
+		<div className="pt-20 pb-10">
+			<HackathonCoverImage
+				src={hackathon.image.cover}
+				alt={hackathon.title}
+			/>
+			<HackathonNav slug={hackathon.slug} page="resources" />
+			<ViewContainer>
+				<HackathonContentBody>
+					<CustomMDX source={hackathon.resources} />
+				</HackathonContentBody>
+			</ViewContainer>
+		</div>
+	);
 };
 
 export default HackathonResources;

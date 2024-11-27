@@ -1,46 +1,55 @@
 {
-  "name": "wemakedevs",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
-  "dependencies": {
-    "@hookform/resolvers": "^3.9.0",
-    "@icons-pack/react-simple-icons": "^10.0.0",
-    "@radix-ui/react-accordion": "^1.2.1",
-    "@radix-ui/react-icons": "^1.3.0",
-    "@radix-ui/react-label": "^2.1.0",
-    "@radix-ui/react-slot": "^1.1.0",
-    "class-variance-authority": "^0.7.0",
-    "clsx": "^2.1.1",
-    "embla-carousel-autoplay": "^8.3.0",
-    "embla-carousel-react": "^8.3.0",
-    "lucide-react": "^0.438.0",
-    "next": "^14.2.7",
-    "next-mdx-remote": "^5.0.0",
-    "next-themes": "^0.3.0",
-    "react": "^18",
-    "react-countup": "^6.5.3",
-    "react-dom": "^18",
-    "react-hook-form": "^7.53.1",
-    "sharp": "^0.33.5",
-    "sonner": "^1.5.0",
-    "tailwind-merge": "^2.5.2",
-    "tailwindcss-animate": "^1.0.7",
-    "zod": "^3.23.8"
-  },
-  "devDependencies": {
-    "typescript": "^5",
-    "@types/node": "^20",
-    "@types/react": "^18",
-    "@types/react-dom": "^18",
-    "postcss": "^8",
-    "tailwindcss": "^3.4.1",
-    "eslint": "^8",
-    "eslint-config-next": "14.2.5"
-  }
+	"name": "wemakedevs",
+	"version": "0.1.0",
+	"private": true,
+	"scripts": {
+		"dev": "next dev",
+		"build": "next build",
+		"start": "next start",
+		"lint": "biome check",
+		"lint:fix": "biome check --write",
+		"prepare": "husky"
+	},
+	"dependencies": {
+		"@hookform/resolvers": "^3.9.0",
+		"@icons-pack/react-simple-icons": "^10.0.0",
+		"@radix-ui/react-accordion": "^1.2.1",
+		"@radix-ui/react-icons": "^1.3.0",
+		"@radix-ui/react-label": "^2.1.0",
+		"@radix-ui/react-slot": "^1.1.0",
+		"class-variance-authority": "^0.7.0",
+		"clsx": "^2.1.1",
+		"embla-carousel-autoplay": "^8.3.0",
+		"embla-carousel-react": "^8.3.0",
+		"husky": "^9.1.7",
+		"lint-staged": "^15.2.10",
+		"lucide-react": "^0.438.0",
+		"next": "^14.2.7",
+		"next-mdx-remote": "^5.0.0",
+		"next-themes": "^0.3.0",
+		"react": "^18",
+		"react-countup": "^6.5.3",
+		"react-dom": "^18",
+		"react-hook-form": "^7.53.1",
+		"sharp": "^0.33.5",
+		"sonner": "^1.5.0",
+		"tailwind-merge": "^2.5.2",
+		"tailwindcss-animate": "^1.0.7",
+		"zod": "^3.23.8"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "1.9.4",
+		"@types/node": "^20",
+		"@types/react": "^18",
+		"@types/react-dom": "^18",
+		"postcss": "^8",
+		"tailwindcss": "^3.4.1",
+		"typescript": "^5"
+	},
+	"trustedDependencies": ["@biomejs/biome"],
+	"lint-staged": {
+		"*.{js,ts,cjs,mjs,d.cts,d.mts,jsx,tsx,json,jsonc,css,html,md,yml,yaml}": [
+			"biome check --write --no-errors-on-unmatched"
+		]
+	}
 }

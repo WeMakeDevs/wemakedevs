@@ -1,6 +1,6 @@
 import {
-  HackathonCoverImage,
-  HackathonNav,
+	HackathonCoverImage,
+	HackathonNav,
 } from "@/components/hackathon-content";
 import { HackathonScheduleComponent } from "@/components/hackathon-content";
 import { buttonVariants } from "@/components/ui/button";
@@ -11,35 +11,38 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 
 const HackathonSchedule = async ({ params }: { params: { slug: string } }) => {
-  const hackathons = await fetchHackathonData();
-  const hackathon = hackathons.find(
-    (hackathon) => hackathon.slug == params.slug
-  );
+	const hackathons = await fetchHackathonData();
+	const hackathon = hackathons.find(
+		hackathon => hackathon.slug === params.slug,
+	);
 
-  if (!hackathon) notFound();
+	if (!hackathon) notFound();
 
-  return (
-    <div className='pt-20'>
-      <HackathonCoverImage src={hackathon.image.cover} alt={hackathon.title} />
-      <HackathonNav slug={hackathon.slug} page='schedule' />
-      <ViewContainer className='my-14'>
-        <HackathonScheduleComponent schedule={hackathon.schedule} />
-        {hackathon.googleCalendarLink && (
-          <Link
-            href={hackathon.googleCalendarLink}
-            target='_blank'
-            rel='noopener noreferrer'
-            className={cn(
-              buttonVariants(),
-              "flex items-center gap-2 w-fit mx-auto mt-10"
-            )}
-          >
-            Add to calendar
-          </Link>
-        )}
-      </ViewContainer>
-    </div>
-  );
+	return (
+		<div className="pt-20">
+			<HackathonCoverImage
+				src={hackathon.image.cover}
+				alt={hackathon.title}
+			/>
+			<HackathonNav slug={hackathon.slug} page="schedule" />
+			<ViewContainer className="my-14">
+				<HackathonScheduleComponent schedule={hackathon.schedule} />
+				{hackathon.googleCalendarLink && (
+					<Link
+						href={hackathon.googleCalendarLink}
+						target="_blank"
+						rel="noopener noreferrer"
+						className={cn(
+							buttonVariants(),
+							"flex items-center gap-2 w-fit mx-auto mt-10",
+						)}
+					>
+						Add to calendar
+					</Link>
+				)}
+			</ViewContainer>
+		</div>
+	);
 };
 
 export default HackathonSchedule;

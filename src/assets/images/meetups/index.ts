@@ -1,3 +1,3 @@
-import openSourceConnectMeetup from './open-source-connect.png'
+import openSourceConnectMeetup from "./open-source-connect.png";
 
-export { openSourceConnectMeetup }
+export { openSourceConnectMeetup };
