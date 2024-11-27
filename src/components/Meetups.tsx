@@ -34,18 +34,10 @@ const Hackathons = ({ className, ...props }: GeneralComponent) => {
 						and talk about latest tech innovations.
 					</p>
 				</div>
-				<div className="my-10">
-					{/* {meetupEntries.map((meetup, index) => (
-            <MeetupCard key={index} {...meetup} />
-          ))} */}
-					<iframe
-						title="Meetups Page Luma"
-						src="https://lu.ma/embed/calendar/cal-G9rNvcoz3r4AGfv/events"
-						frameBorder={0}
-						allowFullScreen={false}
-						aria-hidden="false"
-						className="max-w-xl h-[300px] mx-auto shadow-md bg-[#222325]"
-					/>
+				<div className="my-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-6">
+					{meetupEntries.map(meetup => (
+						<MeetupCard key={meetup.title} {...meetup} />
+					))}
 				</div>
 			</ViewContainer>
 		</section>
