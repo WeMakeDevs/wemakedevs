@@ -26,7 +26,7 @@ const Faq = ({ FAQS }: { FAQS: FaqType[] }) => {
 						{FAQS.slice(0, halfLength).map(
 							({ question, answer }, index) => (
 								<AccordionItem
-									key={index}
+									key={question}
 									value={`item-${index + 1}`}
 									className="shadow-lg"
 								>
@@ -44,7 +44,7 @@ const Faq = ({ FAQS }: { FAQS: FaqType[] }) => {
 						{FAQS.slice(halfLength).map(
 							({ question, answer }, index) => (
 								<AccordionItem
-									key={index}
+									key={question}
 									className="shadow-lg"
 									value={`item-${halfLength + index + 1}`}
 								>

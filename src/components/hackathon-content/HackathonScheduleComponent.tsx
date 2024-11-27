@@ -34,9 +34,9 @@ const HackathonScheduleComponent = ({
 	return (
 		<div className="">
 			<div className="flex justify-center gap-4 mb-6 flex-wrap">
-				{schedule.map((_, index) => (
+				{schedule.map((item, index) => (
 					<button
-						key={index}
+						key={item.date}
 						className={cn(
 							buttonVariants(),
 							"focus:outline-none hover:text-white",
@@ -62,7 +62,7 @@ const HackathonScheduleComponent = ({
 				{schedule[selectedDate].items.map((item, index) => (
 					<div
 						className="flex gap-8 items-center relative"
-						key={index}
+						key={item.title}
 					>
 						{schedule[selectedDate].items.length === 1 ? (
 							<></>

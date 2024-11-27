@@ -44,10 +44,10 @@ const Numbers = ({ className, ...props }: GeneralComponent) => {
 					Numbers Say It All
 				</h2>
 				<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8 mt-12">
-					{numbers.map((item, index) => (
+					{numbers.map(item => (
 						<div
 							className="group bg-white shadow-lg hover:shadow-xl transition-shadow border border-foreground/10 rounded-xl p-5 pb-4 relative group overflow-clip"
-							key={index}
+							key={item.name}
 						>
 							<div
 								className={`duration-300 z-0 absolute bottom-0 left-0 w-full h-full transition-transform origin-top group-hover:origin-bottom scale-y-0 group-hover:scale-y-100 bg-${item.color}`}

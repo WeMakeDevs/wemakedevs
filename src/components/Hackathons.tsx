@@ -32,9 +32,9 @@ const Hackathons = async ({ className, ...props }: GeneralComponent) => {
 					</p>
 				</div>
 				<div className="my-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-6">
-					{hackathons.map((hackathon, index) => (
+					{hackathons.map(hackathon => (
 						<HackathonCard
-							key={index}
+							key={hackathon.slug}
 							href={`/hackathons/${hackathon.slug}`}
 						>
 							<HackathonCardImage

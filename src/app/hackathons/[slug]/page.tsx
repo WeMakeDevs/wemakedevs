@@ -61,8 +61,8 @@ const HackathonPage = async ({ params }: { params: { slug: string } }) => {
 									Use of Kestra is mandatory for below tracks
 								</span>
 							</div>
-							{hackathon.prizes.winning.map((prize, index) => (
-								<div className="space-y-4" key={index}>
+							{hackathon.prizes.winning.map(prize => (
+								<div className="space-y-4" key={prize.name}>
 									<p className="text-lg md:text-xl font-semibold flex gap-2 items-center">
 										<Star
 											size={20}
@@ -86,37 +86,35 @@ const HackathonPage = async ({ params }: { params: { slug: string } }) => {
 									<HackathonContentTitleH3>
 										Side Quest
 									</HackathonContentTitleH3>
-									{hackathon.prizes.giveaway.map(
-										(prize, index) => (
-											<div
-												className="space-y-4"
-												key={index}
-											>
-												<p className="text-lg md:text-xl font-semibold flex gap-2 items-center">
-													<Star
-														size={20}
-														strokeWidth={0}
-														fill="#ffd333"
-														className="shrink-0"
-													/>{" "}
-													<div className="flex flex-wrap gap-2 items-center">
-														{prize.name}{" "}
-														{prize.prize && "-"}
-														{prize.prize && (
-															<span className="px-2 py-1 bg-blue-600 text-white rounded-[4px]">
-																{prize.prize}
-															</span>
-														)}
-													</div>
+									{hackathon.prizes.giveaway.map(prize => (
+										<div
+											className="space-y-4"
+											key={prize.name}
+										>
+											<p className="text-lg md:text-xl font-semibold flex gap-2 items-center">
+												<Star
+													size={20}
+													strokeWidth={0}
+													fill="#ffd333"
+													className="shrink-0"
+												/>{" "}
+												<div className="flex flex-wrap gap-2 items-center">
+													{prize.name}{" "}
+													{prize.prize && "-"}
+													{prize.prize && (
+														<span className="px-2 py-1 bg-blue-600 text-white rounded-[4px]">
+															{prize.prize}
+														</span>
+													)}
+												</div>
+											</p>
+											{prize.description && (
+												<p className="text-base md:text-lg font-medium">
+													{prize.description}
 												</p>
-												{prize.description && (
-													<p className="text-base md:text-lg font-medium">
-														{prize.description}
-													</p>
-												)}
-											</div>
-										),
-									)}
+											)}
+										</div>
+									))}
 								</>
 							)}
 						</div>
@@ -129,8 +127,8 @@ const HackathonPage = async ({ params }: { params: { slug: string } }) => {
 									Keychron Keyboard + Swag Bag for each
 								</span>
 							</div>
-							{hackathon.prizes.other.map((prize, index) => (
-								<div className="space-y-4" key={index}>
+							{hackathon.prizes.other.map(prize => (
+								<div className="space-y-4" key={prize.name}>
 									<p className="text-lg md:text-xl font-semibold flex gap-2 items-center">
 										<Star
 											size={20}

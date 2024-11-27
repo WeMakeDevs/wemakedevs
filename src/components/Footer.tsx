@@ -161,15 +161,15 @@ const Footer = ({ className, ...props }: GeneralComponent) => {
 		>
 			<ViewContainer className="space-y-12">
 				<div className="flex md:justify-between gap-10 flex-wrap justify-start">
-					{footerLinks.map((section, index) => (
-						<div className="space-y-7" key={index}>
+					{footerLinks.map(section => (
+						<div className="space-y-7" key={section.title}>
 							<h3 className="font-semibold text-white border-b-2 w-fit border-accent-4">
 								{section.title}
 							</h3>
 							<ul className="space-y-4">
-								{section.links.map((link, index2) => (
+								{section.links.map(link => (
 									<li
-										key={index2}
+										key={link.name}
 										className="relative group w-fit"
 									>
 										<Link

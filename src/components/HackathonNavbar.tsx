@@ -83,8 +83,8 @@ const HackathonNavbar = () => {
 					</span>
 				</Link>
 				<ul className="flex lg:gap-2">
-					{navLinks.map((link, index) => (
-						<li key={index}>
+					{navLinks.map(link => (
+						<li key={link.name}>
 							<Link
 								href={link.url}
 								className={cn(
@@ -147,8 +147,8 @@ const HackathonNavbar = () => {
 						isOpen ? "flex" : "hidden",
 					)}
 				>
-					{navLinks.map((link, index) => (
-						<li key={index}>
+					{navLinks.map(link => (
+						<li key={link.name}>
 							<Link
 								href={link.url}
 								className={cn(
