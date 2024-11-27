@@ -39,7 +39,8 @@ const HackathonDate = ({
           )}
         ></div>
         {status == "upcoming" &&
-          `Starts in ${timeDifference.daysStartToNow} days and ${timeDifference.hoursStartToNow} hours`}
+          `Starts in ${timeDifference.daysStartToNow > 0 ? timeDifference.daysStartToNow + " days and" : ""
+          } ${timeDifference.hoursStartToNow} hours`}
 
         {status == "ongoing" &&
           `Ends in ${timeDifference.daysEndToNow} days and ${timeDifference.hoursEndToNow} hours`}
