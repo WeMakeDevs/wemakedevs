@@ -89,6 +89,7 @@ export interface HackathonData {
     showcase: WinningProjectInterface[];
     all?: ProjectInterface[];
   }
+  googleCalendarLink?: string;
 }
 
 export interface HackathonCardType extends GeneralComponent {

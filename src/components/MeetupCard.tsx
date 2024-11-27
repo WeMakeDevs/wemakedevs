@@ -21,6 +21,8 @@ const MeetupCard = ({
         className,
         "rounded group relative shadow-xl hover:shadow-none transition-shadow"
       )}
+      target='_blank'
+      rel='noreferrer noopener'
     >
       <div className='rounded border-4 border-accent-2 p-2 md:p-4 space-y-4 bg-card'>
         <Image
@@ -29,7 +31,7 @@ const MeetupCard = ({
           alt={title}
         />
         <h3 className={cn(className, "text-2xl md:text-3xl")}>{title}</h3>
-        <div className='flex items-center justify-between'>
+        <div className='flex flex-col items-start gap-2 justify-between'>
           <div className='flex gap-2 items-center'>
             <MapPin size={20} />
             <span className='font-medium'>{location}</span>
@@ -39,10 +41,11 @@ const MeetupCard = ({
             {new Date(date).toLocaleDateString("en-US", {
               month: "long",
               day: "numeric",
+              timeZone: "Asia/Kolkata",
             })}
           </p>
         </div>
-        <p className={cn(className, "leading-snug font-medium")}>
+        <p className={cn(className, "leading-snug font-semibold")}>
           {description}
         </p>
       </div>

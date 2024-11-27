@@ -4,25 +4,18 @@ import Link from "next/link";
 import { ViewContainer } from "./ui/view-container";
 import { MeetupCard, MeetupComingSoonCard, MeetupLastCard } from "./MeetupCard";
 
-import { aimlMeetup, webdevWorkshop } from "@/assets/images/meetups";
+import { openSourceConnectMeetup } from "@/assets/images/meetups";
 
 const meetupEntries: MeetupData[] = [
   {
-    title: "Web Development Workshop",
-    image: webdevWorkshop,
-    date: "2024-11-05",
-    description: "A hands-on workshop to build modern web applications.",
-    url: "https://example.com/workshop",
-    location: "Banglore, India",
-  },
-  {
-    title: "AI and Machine Learning Meetup",
-    image: aimlMeetup,
-    date: "2024-12-10",
-    description: "Join us for discussions on the latest in AI and ML.",
-    url: "https://example.com/ai-meetup",
-    location: "Delhi, India",
-  },
+    title: "Open Source Connect",
+    image: openSourceConnectMeetup,
+    date: "2024-12-13",
+    description: "Explore open source and tech with expert talks, networking, pizza, drinks, and swag!",
+    url: "https://lu.ma/v0dhix0t",
+    location: "The Circle-Huda City Center, Gurgaon",
+  }
+
 ];
 
 const Hackathons = ({ className, ...props }: GeneralComponent) => {
@@ -41,11 +34,19 @@ const Hackathons = ({ className, ...props }: GeneralComponent) => {
             innovations.
           </p>
         </div>
-        <div className='my-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-6'>
+        <div className='my-10'>
           {/* {meetupEntries.map((meetup, index) => (
             <MeetupCard key={index} {...meetup} />
           ))} */}
-          <MeetupComingSoonCard />
+          <iframe
+            src="https://lu.ma/embed/calendar/cal-G9rNvcoz3r4AGfv/events"
+            frameBorder={0}
+            allowFullScreen={false}
+            aria-hidden="false"
+            tabIndex={0}
+            className="max-w-xl h-[300px] mx-auto shadow-md bg-[#222325]"
+          >
+          </iframe>
         </div>
       </ViewContainer>
     </section>
