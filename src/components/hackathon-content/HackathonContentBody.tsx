@@ -1,17 +1,17 @@
 "use server";
 import { cn } from "@/lib/utils";
-import { GeneralComponent } from "@/types";
+import type { GeneralComponent } from "@/types";
 
 const HackathonContentBody = ({
-  className,
-  children,
-  ...props
+	className,
+	children,
+	...props
 }: GeneralComponent) => {
-  return (
-    <div className={cn(className, "my-5 font-medium")} {...props}>
-      {children}
-    </div>
-  );
+	return (
+		<div className={cn(className, "my-5 font-medium")} {...props}>
+			{children}
+		</div>
+	);
 };
 
 export default HackathonContentBody;

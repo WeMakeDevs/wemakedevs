@@ -1,56 +1,55 @@
 import { cn } from "@/lib/utils";
-import { GeneralComponent, MeetupData } from "@/types";
+import type { GeneralComponent, MeetupData } from "@/types";
 import Link from "next/link";
-import { ViewContainer } from "./ui/view-container";
 import { MeetupCard, MeetupComingSoonCard, MeetupLastCard } from "./MeetupCard";
+import { ViewContainer } from "./ui/view-container";
 
 import { openSourceConnectMeetup } from "@/assets/images/meetups";
 
 const meetupEntries: MeetupData[] = [
-  {
-    title: "Open Source Connect",
-    image: openSourceConnectMeetup,
-    date: "2024-12-13",
-    description: "Explore open source and tech with expert talks, networking, pizza, drinks, and swag!",
-    url: "https://lu.ma/v0dhix0t",
-    location: "The Circle-Huda City Center, Gurgaon",
-  }
-
+	{
+		title: "Open Source Connect",
+		image: openSourceConnectMeetup,
+		date: "2024-12-13",
+		description:
+			"Explore open source and tech with expert talks, networking, pizza, drinks, and swag!",
+		url: "https://lu.ma/v0dhix0t",
+		location: "The Circle-Huda City Center, Gurgaon",
+	},
 ];
 
 const Hackathons = ({ className, ...props }: GeneralComponent) => {
-  return (
-    <section
-      id='meetups'
-      className={cn(className, "mt-24 mb-16 scroll-m-[100px]")}
-      {...props}
-    >
-      <ViewContainer className=''>
-        <div className='flex justify-between flex-col items-center'>
-          <h2 className='text-4xl md:text-5xl'>Meetups</h2>
-          <p className='max-w-2xl font-medium leading-snug mt-2 md:mt-3 text-center text-base md:text-lg'>
-            Participate in our meetups where professionals, developers and
-            industry leaders come together to network and talk about latest tech
-            innovations.
-          </p>
-        </div>
-        <div className='my-10'>
-          {/* {meetupEntries.map((meetup, index) => (
+	return (
+		<section
+			id="meetups"
+			className={cn(className, "mt-24 mb-16 scroll-m-[100px]")}
+			{...props}
+		>
+			<ViewContainer className="">
+				<div className="flex justify-between flex-col items-center">
+					<h2 className="text-4xl md:text-5xl">Meetups</h2>
+					<p className="max-w-2xl font-medium leading-snug mt-2 md:mt-3 text-center text-base md:text-lg">
+						Participate in our meetups where professionals,
+						developers and industry leaders come together to network
+						and talk about latest tech innovations.
+					</p>
+				</div>
+				<div className="my-10">
+					{/* {meetupEntries.map((meetup, index) => (
             <MeetupCard key={index} {...meetup} />
           ))} */}
-          <iframe
-            src="https://lu.ma/embed/calendar/cal-G9rNvcoz3r4AGfv/events"
-            frameBorder={0}
-            allowFullScreen={false}
-            aria-hidden="false"
-            tabIndex={0}
-            className="max-w-xl h-[300px] mx-auto shadow-md bg-[#222325]"
-          >
-          </iframe>
-        </div>
-      </ViewContainer>
-    </section>
-  );
+					<iframe
+						title="Meetups Page Luma"
+						src="https://lu.ma/embed/calendar/cal-G9rNvcoz3r4AGfv/events"
+						frameBorder={0}
+						allowFullScreen={false}
+						aria-hidden="false"
+						className="max-w-xl h-[300px] mx-auto shadow-md bg-[#222325]"
+					/>
+				</div>
+			</ViewContainer>
+		</section>
+	);
 };
 
 export default Hackathons;

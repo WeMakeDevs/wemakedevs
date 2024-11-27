@@ -5,11 +5,4 @@ import avatar4 from "./avatar_4.jpg";
 import avatar5 from "./avatar_5.jpg";
 import avatar6 from "./avatar_6.jpg";
 
-export {
-  avatar1,
-  avatar2,
-  avatar3,
-  avatar4,
-  avatar5,
-  avatar6,
-};
+export { avatar1, avatar2, avatar3, avatar4, avatar5, avatar6 };
