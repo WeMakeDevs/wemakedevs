@@ -101,11 +101,13 @@ const footerLinks: FooterLinkSection[] = [
 		links: [
 			{
 				name: "Hackathons",
-				href: "/#hackathons",
+				href: "/hackathons",
+				opensInNewTab: true,
 			},
 			{
 				name: "Meetups",
-				href: "/#meetups",
+				href: "https://lu.ma/wemakedevs",
+				opensInNewTab: true,
 			},
 		],
 	},
