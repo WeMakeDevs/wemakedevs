@@ -33,47 +33,21 @@ const Newsletter = ({ className, ...props }: GeneralComponent) => {
 	const [isLoading, setIsLoading] = useState(false);
 
 	const onSubmit = async (value: z.infer<typeof formSchema>) => {
-		const authToken = process.env.HASHNODE_AUTH_TOKEN;
-
-		if (!authToken) {
-			toast.error("Ohh no! Some error occured!", {
-				description:
-					"Please send me an email at contact@wemakedevs.org and we'll fix it asap.",
-			});
-			return;
-		}
-
 		setIsLoading(true);
 
 		try {
-			const response = await fetch("https://gql.hashnode.com/graphql", {
+			const response = await fetch("/api/newsletter", {
 				method: "POST",
 				headers: {
 					"Content-Type": "application/json",
-					Authorization: authToken,
 				},
-				body: JSON.stringify({
-					query: `
-            mutation {
-              subscribeToNewsletter(input: {
-                publicationId: "61c2dc628614531beb60b0f5"
-                email: "${value.email}"
-              }) {
-              status
-              }
-            }
-          `,
-				}),
+				body: JSON.stringify(value.email),
 			});
-			if (response.status === 200)
-				toast.success("Subscribed to the newsletter!", {
-					description: "Please check your email for confirmation.",
-				});
-			else
-				toast.error("Ohh no! Some error occured!", {
-					description:
-						"Please send me an email at contact@wemakedevs.org and we'll fix it asap.",
-				});
+
+			const data = await response.json();
+			toast.success("Subscribed to the newsletter!", {
+				description: "Please check your email for confirmation.",
+			});
 		} catch (error) {
 			toast.error("Ohh no! Some error occured!", {
 				description:
