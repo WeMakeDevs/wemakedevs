@@ -118,16 +118,16 @@
 			"date": "2024-12-01T00:00:00+05:30",
 			"items": [
 				{
+					"title": "Project submission starts",
+					"time": "2024-12-01T10:00:00+05:30"
+				},
+				{
 					"title": "Resume review by Kunal Kushwaha",
 					"link": {
 						"name": "Get notified",
 						"url": "https://discord.com/events/862638364016771082/1306605633277136956"
 					},
 					"time": "2024-11-30T12:00:00+05:30"
-				},
-				{
-					"title": "Project submission starts",
-					"time": "2024-12-01T12:00:00+05:30"
 				},
 				{
 					"title": "Hackathon ends (project submission closes)",
