@@ -23,17 +23,30 @@ const HackathonMain = ({ hackathon }: { hackathon: HackathonData }) => {
 						<p className="text-base md:text-lg text-foreground/90 font-medium leading-snug mt-4 tracking-wide">
 							{hackathon.description}
 						</p>
-						<Link
-							href={hackathon.registrationLink}
-							target="_blank"
-							rel="noopener noreferrer"
-							className={cn(
-								buttonVariants({ variant: "default" }),
-								"mt-4 md:mt-6",
-							)}
-						>
-							Register
-						</Link>
+						<div className="flex items-center gap-4">
+							<Link
+								href="https://forms.gle/hwHt8HXi2KmbRLsU9"
+								target="_blank"
+								rel="noopener noreferrer"
+								className={cn(
+									buttonVariants({ variant: "default" }),
+									"mt-4 md:mt-6",
+								)}
+							>
+								Submit Project
+							</Link>
+							<Link
+								href={hackathon.registrationLink}
+								target="_blank"
+								rel="noopener noreferrer"
+								className={cn(
+									buttonVariants({ variant: "outline" }),
+									"mt-4 md:mt-6",
+								)}
+							>
+								Register
+							</Link>
+						</div>
 					</div>
 					<div className="flex justify-center items-center">
 						<div className="bg-white/50 shadow-md rounded-xl p-4 md:p-6 h-fit w-full">
