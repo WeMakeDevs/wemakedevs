@@ -46,7 +46,11 @@ const HackathonDate = ({
 					} ${timeDifference.hoursStartToNow} hours`}
 
 				{status === "ongoing" &&
-					`Ends in ${timeDifference.daysEndToNow} days and ${timeDifference.hoursEndToNow} hours`}
+					`Ends in ${
+						timeDifference.daysEndToNow > 0
+							? `${timeDifference.daysEndToNow} days and ${timeDifference.hoursEndToNow} hours`
+							: `${timeDifference.hoursEndToNow} hours`
+					}`}
 
 				{status === "ended" && "Hackathon has ended"}
 			</div>
