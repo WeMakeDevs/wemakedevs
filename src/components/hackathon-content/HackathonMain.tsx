@@ -27,24 +27,15 @@ const HackathonMain = ({ hackathon }: { hackathon: HackathonData }) => {
 							<Link
 								href="https://forms.gle/hwHt8HXi2KmbRLsU9"
 								target="_blank"
+								aria-disabled={true}
 								rel="noopener noreferrer"
 								className={cn(
 									buttonVariants({ variant: "default" }),
-									"mt-4 md:mt-6",
+									"mt-4 md:mt-6 opacity-50 cursor-not-allowed pointer-events-none",
 								)}
+								tabIndex={-1}
 							>
-								Submit Project
-							</Link>
-							<Link
-								href={hackathon.registrationLink}
-								target="_blank"
-								rel="noopener noreferrer"
-								className={cn(
-									buttonVariants({ variant: "outline" }),
-									"mt-4 md:mt-6",
-								)}
-							>
-								Register
+								Results will be out soon!
 							</Link>
 						</div>
 					</div>
