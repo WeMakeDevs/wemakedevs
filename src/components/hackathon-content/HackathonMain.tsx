@@ -25,17 +25,15 @@ const HackathonMain = ({ hackathon }: { hackathon: HackathonData }) => {
 						</p>
 						<div className="flex items-center gap-4">
 							<Link
-								href="https://forms.gle/hwHt8HXi2KmbRLsU9"
+								href="https://www.youtube.com/live/rT2Ug-q6TcI?si=4aaFe9RqnsCSaF2U"
 								target="_blank"
-								aria-disabled={true}
 								rel="noopener noreferrer"
 								className={cn(
 									buttonVariants({ variant: "default" }),
-									"mt-4 md:mt-6 opacity-50 cursor-not-allowed pointer-events-none",
+									"mt-4 md:mt-6 ",
 								)}
-								tabIndex={-1}
 							>
-								Results will be out soon!
+								Results live stream
 							</Link>
 						</div>
 					</div>
