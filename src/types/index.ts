@@ -42,7 +42,7 @@ export type ScheduleElement = {
 	items: ScheduleItem[];
 };
 
-interface OtherProjectInterface {
+export interface OtherProjectInterface {
 	projectTitle: string;
 	githubLink: string;
 	teamName: string;
