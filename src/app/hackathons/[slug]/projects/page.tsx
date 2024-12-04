@@ -31,11 +31,12 @@ const HackathonProjects = async ({ params }: { params: { slug: string } }) => {
 				<div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 mt-4 md:mt-8">
 					{hackathon.projects?.showcase.map(project => (
 						<HackathonWinningProjectCard
+							teamName={project.teamName}
+							isSolo={project.isSolo}
 							key={project.projectTitle}
 							projectTitle={project.projectTitle}
 							description={project.description}
 							githubLink={project.githubLink}
-							demoLink={project.demoLink}
 							category={project.category}
 						/>
 					))}
@@ -50,7 +51,8 @@ const HackathonProjects = async ({ params }: { params: { slug: string } }) => {
 							projectTitle={project.projectTitle}
 							description={project.description}
 							githubLink={project.githubLink}
-							demoLink={project.demoLink}
+							teamName={project.teamName}
+							isSolo={project.isSolo}
 						/>
 					))}
 				</div>

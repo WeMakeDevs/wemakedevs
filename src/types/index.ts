@@ -45,8 +45,9 @@ export type ScheduleElement = {
 interface ProjectInterface {
 	projectTitle: string;
 	description: string;
-	githubLink?: string;
-	demoLink?: string;
+	githubLink: string;
+	teamName: string;
+	isSolo: boolean;
 }
 
 interface WinningProjectInterface extends ProjectInterface {
@@ -54,12 +55,14 @@ interface WinningProjectInterface extends ProjectInterface {
 		title: string;
 		bgColor?: string; // HEX
 		textColor?: string; // HEX
+		borderColor?: string; // HEX
 	};
 }
 
 export interface HackathonProjectCardInterface
 	extends GeneralComponent,
 		ProjectInterface {}
+
 export interface HackathonWinningProjectCardInterface
 	extends GeneralComponent,
 		WinningProjectInterface {}

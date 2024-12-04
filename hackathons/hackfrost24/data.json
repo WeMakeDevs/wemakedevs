@@ -149,5 +149,101 @@
 			]
 		}
 	],
+	"projects": {
+		"showcase": [
+			{
+				"projectTitle": "Smart Data Injector",
+				"description": "ML-powered data transformation pipeline simplifying interoperability challenges",
+				"githubLink": "https://github.com/meltedhyperion/smart-data-injector",
+				"teamName": "MeltedHyperion",
+				"isSolo": false,
+				"category": {
+					"title": "Best use of Kestra",
+					"bgColor": "#E6F3FF",
+					"textColor": "#0969DA",
+					"borderColor": "#0969DA"
+				}
+			},
+			{
+				"projectTitle": "VaChart",
+				"description": "VaChart is a modern Android application that helps travelers find vacant seats in Indian Railway trains after the chart preparation.",
+				"githubLink": "https://github.com/CHAHATMB/VaChart/",
+				"teamName": "Chahat Baghele",
+				"isSolo": true,
+				"category": {
+					"title": "Best UI/UX",
+					"bgColor": "#FFF9C4",
+					"textColor": "#F57F17",
+					"borderColor": "#F9A825"
+				}
+			},
+			{
+				"projectTitle": "ML Model Drift Detection",
+				"description": "Automated ML model retraining using real-time data drift",
+				"githubLink": "https://github.com/anuj846k/HACKFROST-POLARDEV",
+				"teamName": "PolarDev",
+				"isSolo": false,
+				"category": {
+					"title": "Best AI/ML",
+					"bgColor": "#E6F7FF",
+					"textColor": "#1890FF",
+					"borderColor": "#1890FF"
+				}
+			},
+			{
+				"projectTitle": "Wellness Navigator",
+				"description": "Automated support tickets and personalized fitness routines",
+				"githubLink": "https://github.com/ai-naymul/wellness-navigator",
+				"teamName": "Fork Me",
+				"isSolo": false,
+				"category": {
+					"title": "Best solo",
+					"bgColor": "#F0FFF4",
+					"textColor": "#38A169",
+					"borderColor": "#38A169"
+				}
+			},
+			{
+				"projectTitle": "AidConnect",
+				"description": "AI-powered disaster relief social media data platform",
+				"githubLink": "https://github.com/Yash636261/AidConnect",
+				"teamName": "AINODES",
+				"isSolo": false,
+				"category": {
+					"title": "Best sustainability",
+					"bgColor": "#E8F5E9",
+					"textColor": "#2E7D32",
+					"borderColor": "#2E7D32"
+				}
+			},
+			{
+				"projectTitle": "Content Creation on Steroids",
+				"description": "AI platform automating content creation and distribution",
+				"githubLink": "https://github.com/inclinedadarsh/ccos",
+				"teamName": "the three musketeers",
+				"isSolo": false,
+				"category": {
+					"title": "Best OSS practices",
+					"bgColor": "#FFF3E0",
+					"textColor": "#FB8C00",
+					"borderColor": "#FB8C00"
+				}
+			},
+			{
+				"projectTitle": "Health Synth",
+				"description": "Unified healthcare platform with patient-doctor communication tools",
+				"githubLink": "https://github.com/rishavmehra/health-synth",
+				"teamName": "Rishav Mehra",
+				"isSolo": true,
+				"category": {
+					"title": "Best documentation",
+					"bgColor": "#F3E5F5",
+					"textColor": "#8E24AA",
+					"borderColor": "#8E24AA"
+				}
+			}
+		]
+	},
+
 	"googleCalendarLink": "https://calendar.google.com/calendar/u/0?cid=Y18zMDkwNGI0NzdhOTVmNzU5MjRjYjI1ZDdhMjk1NDY5NzlmNDk3OWRkMzliNDEwMTlhYzViMjJlNzZmYTE2MDNkQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20"
 }
