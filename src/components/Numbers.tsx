@@ -2,7 +2,7 @@
 import { cn } from "@/lib/utils";
 import type { GeneralComponent, numbersType } from "@/types";
 import { CircleDollarSign, Globe, Handshake, Users } from "lucide-react";
-import CountUp from "react-countup";
+import NumberCard from "./NumberCard";
 import { ViewContainer } from "./ui/view-container";
 
 const Numbers = ({ className, ...props }: GeneralComponent) => {
@@ -45,32 +45,7 @@ const Numbers = ({ className, ...props }: GeneralComponent) => {
 				</h2>
 				<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8 mt-12">
 					{numbers.map(item => (
-						<div
-							className="group bg-white shadow-lg hover:shadow-xl transition-shadow border border-foreground/10 rounded-xl p-5 pb-4 relative group overflow-clip"
-							key={item.name}
-						>
-							<div
-								className={`duration-300 z-0 absolute bottom-0 left-0 w-full h-full transition-transform origin-top group-hover:origin-bottom scale-y-0 group-hover:scale-y-100 bg-${item.color}`}
-							/>
-							<item.icon className="opacity-80 z-10" size={28} />
-							<div className="mt-6 md:mt-12 group-hover:-translate-y-4 transition-transform">
-								<h3 className="font-body font-medium relative z-10">
-									{item.name}
-								</h3>
-								<p className="relative text-4xl md:text-5xl lg:text-4xl xl:text-5xl font-title font-medium mt-3 z-10">
-									<CountUp
-										end={item.number}
-										start={0}
-										suffix="+"
-										enableScrollSpy
-									>
-										{({ countUpRef }) => (
-											<span ref={countUpRef} />
-										)}
-									</CountUp>
-								</p>
-							</div>
-						</div>
+						<NumberCard key={item.name} {...item} />
 					))}
 				</div>
 			</ViewContainer>

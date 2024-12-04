@@ -1,4 +1,5 @@
 import Faq from "@/components/Faq";
+import NumberCard from "@/components/NumberCard";
 import {
 	HackathonContentTitleH3,
 	HackathonCoverImage,
@@ -7,13 +8,13 @@ import {
 import HackathonContentBody from "@/components/hackathon-content/HackathonContentBody";
 import HackathonContentTitle from "@/components/hackathon-content/HackathonContentTitle";
 import HackathonMain from "@/components/hackathon-content/HackathonMain";
+import HackathonStats from "@/components/hackathon-content/HackathonStats";
 import { CustomMDX } from "@/components/mdx-remote";
-import { buttonVariants } from "@/components/ui/button";
 import { ViewContainer } from "@/components/ui/view-container";
 import { HACKATHON_FAQS } from "@/constants";
 import { fetchHackathonData } from "@/lib/hackathon";
-import { cn } from "@/lib/utils";
-import { ArrowUpRight, Star } from "lucide-react";
+import type { NumbersShowcaseType } from "@/types";
+import { ArrowUpRight, File, Globe, Sparkle, Star, Users } from "lucide-react";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
@@ -47,6 +48,10 @@ const HackathonPage = async ({ params }: { params: { slug: string } }) => {
 					<HackathonContentBody>
 						<CustomMDX source={hackathon.overview} />
 					</HackathonContentBody>
+					<HackathonContentTitle>
+						Hackfrost 2024 Stats
+					</HackathonContentTitle>
+					<HackathonStats />
 					<HackathonContentTitle>Prizes</HackathonContentTitle>
 					<HackathonContentBody className="grid grid-cols-1 lg:grid-cols-2 gap-10">
 						<div className="space-y-8">

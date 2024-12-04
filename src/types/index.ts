@@ -1,4 +1,5 @@
 import type { IconType } from "@icons-pack/react-simple-icons";
+import type { LucideIcon } from "lucide-react";
 import type { StaticImageData } from "next/image";
 
 export type navLinksType = {
@@ -196,3 +197,12 @@ export type FaqType = {
 	question: string;
 	answer: string;
 };
+
+export type NumbersShowcaseType = {
+	name: string;
+	number: number;
+	icon: IconType;
+	color: string;
+};
+
+export type NumbersShowcaseCardType = GeneralComponent & NumbersShowcaseType;
