@@ -42,12 +42,15 @@ export type ScheduleElement = {
 	items: ScheduleItem[];
 };
 
-interface ProjectInterface {
+interface OtherProjectInterface {
 	projectTitle: string;
-	description: string;
 	githubLink: string;
 	teamName: string;
 	isSolo: boolean;
+}
+
+interface ProjectInterface extends OtherProjectInterface {
+	description: string;
 }
 
 interface WinningProjectInterface extends ProjectInterface {
@@ -94,7 +97,8 @@ export interface HackathonData {
 	schedule: ScheduleElement[];
 	projects?: {
 		showcase: WinningProjectInterface[];
-		all?: ProjectInterface[];
+		top?: ProjectInterface[];
+		all?: OtherProjectInterface[];
 	};
 	googleCalendarLink?: string;
 }

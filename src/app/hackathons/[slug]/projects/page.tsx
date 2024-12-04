@@ -2,9 +2,9 @@ import {
 	HackathonContentTitle,
 	HackathonCoverImage,
 	HackathonNav,
+	HackathonProjectCard,
 	HackathonWinningProjectCard,
 } from "@/components/hackathon-content";
-import { HackathonProjectCard } from "@/components/hackathon-content/";
 import { ViewContainer } from "@/components/ui/view-container";
 import { fetchHackathonData } from "@/lib/hackathon";
 import { notFound } from "next/navigation";
@@ -42,10 +42,10 @@ const HackathonProjects = async ({ params }: { params: { slug: string } }) => {
 					))}
 				</div>
 				<HackathonContentTitle className="mt-8">
-					All projects
+					Top 15 Projects
 				</HackathonContentTitle>
 				<div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 mt-4 md:mt-8">
-					{hackathon.projects?.all?.map(project => (
+					{hackathon.projects?.top?.map(project => (
 						<HackathonProjectCard
 							key={project.projectTitle}
 							projectTitle={project.projectTitle}

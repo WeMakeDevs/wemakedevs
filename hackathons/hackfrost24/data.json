@@ -242,6 +242,113 @@
 					"borderColor": "#8E24AA"
 				}
 			}
+		],
+		"top": [
+			{
+				"isSolo": false,
+				"teamName": "CloseAI",
+				"description": "Automates t-shirt designs, virtual try-ons, and postings using Kestra and AI.",
+				"githubLink": "https://github.com/Sadhana-Panthi/StyleSync",
+				"projectTitle": "StyleSync"
+			},
+			{
+				"isSolo": false,
+				"teamName": "Defi Builders",
+				"description": "Uses AI and Kestra for intelligent DeFi portfolio management workflows.",
+				"githubLink": "https://github.com/kamalbuilds/ava-portfolio-manager-ai-agent",
+				"projectTitle": "Ava Portfolio Manager"
+			},
+			{
+				"isSolo": false,
+				"teamName": "DevTitans",
+				"description": "AI-powered product detection and inventory management using YOLOv11nano and Kestra.",
+				"githubLink": "https://github.com/mysticalseeker24/ProductScan",
+				"projectTitle": "ProductScan"
+			},
+			{
+				"isSolo": false,
+				"teamName": "Doom",
+				"description": "Event-driven platform for polls, issues, engagement reports, and community discussions.",
+				"githubLink": "https://github.com/swymbnsl/kestra-hackfrost-24",
+				"projectTitle": "Data-Driven Community Engagement Platform"
+			},
+			{
+				"isSolo": false,
+				"teamName": "Frosty Raiders",
+				"description": "Realtime RAG app for reviews with profanity check using Kestra.",
+				"githubLink": "https://github.com/shrutimantri/kestra-hackfrost",
+				"projectTitle": "Realtime RAG with Kestra"
+			},
+			{
+				"isSolo": false,
+				"teamName": "Glitchez",
+				"description": "Secure cloud file management, AI-powered document interaction via WhatsApp.",
+				"githubLink": "https://github.com/prattiikk/kestraHackathonSubmission.git",
+				"projectTitle": "Personal WhatsApp File Vault"
+			},
+			{
+				"isSolo": false,
+				"teamName": "Lazy Hackers",
+				"description": "From amazing pics to narrated videos in minutes. Share stories with AI magic.",
+				"githubLink": "https://github.com/cyrixninja/FramePlay",
+				"projectTitle": "FramePlay"
+			},
+			{
+				"isSolo": false,
+				"teamName": "ONI",
+				"description": "Social media trend analysis using MERN and Kestra for rapid data processing.",
+				"githubLink": "https://github.com/momo-shogun/Trends-Tracker",
+				"projectTitle": "Trends Tracker"
+			},
+			{
+				"isSolo": false,
+				"teamName": "Onyx",
+				"description": "Encourages plastic recycling by rewarding users with gift coupons or offers.",
+				"githubLink": "https://github.com/xonoxc/cyGree",
+				"projectTitle": "CyGree"
+			},
+			{
+				"isSolo": false,
+				"teamName": "SkillScope",
+				"description": "Analyzes job requirements, matches them to resumes, highlighting improvement areas.",
+				"githubLink": "https://github.com/bradenkirkpatrick/skillscope",
+				"projectTitle": "SkillScope"
+			},
+			{
+				"isSolo": true,
+				"teamName": "Harshit Rawat",
+				"description": "Tracks carbon footprint, answers environmental queries, connects sustainability-focused communities.",
+				"githubLink": "https://github.com/itsharshitrwt/GreenPulse-HackFrost",
+				"projectTitle": "GreenPulse"
+			},
+			{
+				"isSolo": true,
+				"teamName": "Ronak Paul",
+				"description": "APIFlux monitors, schedules, tracks API stats, offering dashboards for insights.",
+				"githubLink": "https://github.com/ronak-pal1/APIFlux",
+				"projectTitle": "APIFlux"
+			},
+			{
+				"isSolo": false,
+				"teamName": "Born-Devs",
+				"description": "AURA automates vulnerability assessments using OWASP ZAP and Nikto with dashboards.",
+				"githubLink": "https://github.com/SahilDahekar/aura",
+				"projectTitle": "AURA"
+			},
+			{
+				"isSolo": false,
+				"teamName": "Elevare",
+				"description": "Automates email summarization, responses, and management using AI for productivity.",
+				"githubLink": "https://github.com/Rohit-Khairmode/Elevare",
+				"projectTitle": "Elevare"
+			},
+			{
+				"isSolo": false,
+				"teamName": "Whole lotta fire",
+				"description": "MailZapp simplifies email marketing campaigns with AI and workflow automation.",
+				"githubLink": "https://github.com/PranavRao18/MailZapp",
+				"projectTitle": "MailZapp"
+			}
 		]
 	},
 
