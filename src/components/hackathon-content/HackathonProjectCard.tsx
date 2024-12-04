@@ -10,7 +10,6 @@ const HackathonProjectCard = ({
 	teamName,
 	isSolo,
 }: HackathonProjectCardInterface) => {
-	console.log(description);
 	return (
 		<Link
 			href={githubLink}

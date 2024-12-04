@@ -17,7 +17,7 @@ const HackathonWinningProjectCard = ({
 			target="_blank"
 			rel="noopener noreferrer"
 			className={cn(
-				"block p-4 rounded border-2 border-accent-4 hover:bg-accent-4/10 transition-all hover:-translate-y-2 h-full flex flex-col",
+				"p-4 rounded border-2 border-accent-4 hover:bg-accent-4/10 transition-all hover:-translate-y-2 h-full flex flex-col",
 				className,
 			)}
 		>
@@ -29,13 +29,14 @@ const HackathonWinningProjectCard = ({
 				{category && (
 					<span
 						className={cn(
-							"font-semibold rounded-full px-3 py-1 uppercase inline-block",
+							"font-semibold rounded-full px-3 py-1 text-sm border font-title inline-block",
 							!category.bgColor && "bg-accent-4",
 							!category.textColor && "text-white",
 						)}
 						style={{
 							backgroundColor: category.bgColor || undefined,
 							color: category.textColor || undefined,
+							borderColor: category.borderColor || undefined,
 						}}
 					>
 						{category.title}

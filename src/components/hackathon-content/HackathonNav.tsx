@@ -65,17 +65,17 @@ const HackathonNav = ({
 							Rules
 						</Link>
 					</li>
-					{/* <li>
-            <Link
-              href={`/hackathons/${slug}/projects`}
-              className={cn(
-                "px-6 py-4 font-medium hover:bg-foreground/10 inline-block w-full md:w-auto text-center",
-                page === "projects" && "shadow-secondaryNav"
-              )}
-            >
-              Projects
-            </Link>
-          </li> */}
+					<li>
+						<Link
+							href={`/hackathons/${slug}/projects`}
+							className={cn(
+								"px-6 py-4 font-medium hover:bg-foreground/10 inline-block w-full md:w-auto text-center",
+								page === "projects" && "shadow-secondaryNav",
+							)}
+						>
+							Projects
+						</Link>
+					</li>
 				</ul>
 				{/* <Link
           href={`/hackathons/${slug}/submit`}

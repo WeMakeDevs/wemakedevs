@@ -25,15 +25,13 @@ const HackathonMain = ({ hackathon }: { hackathon: HackathonData }) => {
 						</p>
 						<div className="flex items-center gap-4">
 							<Link
-								href="https://www.youtube.com/live/rT2Ug-q6TcI?si=4aaFe9RqnsCSaF2U"
-								target="_blank"
-								rel="noopener noreferrer"
+								href={`/hackathons/${hackathon.slug}/projects`}
 								className={cn(
 									buttonVariants({ variant: "default" }),
 									"mt-4 md:mt-6 ",
 								)}
 							>
-								Results live stream
+								Explore projects
 							</Link>
 						</div>
 					</div>
