@@ -42,11 +42,15 @@ export type ScheduleElement = {
 	items: ScheduleItem[];
 };
 
-interface ProjectInterface {
+export interface OtherProjectInterface {
 	projectTitle: string;
+	githubLink: string;
+	teamName: string;
+	isSolo: boolean;
+}
+
+interface ProjectInterface extends OtherProjectInterface {
 	description: string;
-	githubLink?: string;
-	demoLink?: string;
 }
 
 interface WinningProjectInterface extends ProjectInterface {
@@ -54,12 +58,14 @@ interface WinningProjectInterface extends ProjectInterface {
 		title: string;
 		bgColor?: string; // HEX
 		textColor?: string; // HEX
+		borderColor?: string; // HEX
 	};
 }
 
 export interface HackathonProjectCardInterface
 	extends GeneralComponent,
 		ProjectInterface {}
+
 export interface HackathonWinningProjectCardInterface
 	extends GeneralComponent,
 		WinningProjectInterface {}
@@ -91,7 +97,8 @@ export interface HackathonData {
 	schedule: ScheduleElement[];
 	projects?: {
 		showcase: WinningProjectInterface[];
-		all?: ProjectInterface[];
+		top?: ProjectInterface[];
+		all?: OtherProjectInterface[];
 	};
 	googleCalendarLink?: string;
 }
