@@ -17,7 +17,7 @@ const numbers: NumbersShowcaseType[] = [
 		color: "accent-2",
 	},
 	{
-		name: "Project Submissions",
+		name: "Project submissions",
 		number: 100,
 		color: "accent-3",
 		icon: Code,
