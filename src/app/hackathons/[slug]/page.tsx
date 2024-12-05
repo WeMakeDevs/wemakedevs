@@ -1,5 +1,5 @@
+import { hackfrostGlobalMap } from "@/assets/images";
 import Faq from "@/components/Faq";
-import NumberCard from "@/components/NumberCard";
 import {
 	HackathonContentTitleH3,
 	HackathonCoverImage,
@@ -8,13 +8,15 @@ import {
 import HackathonContentBody from "@/components/hackathon-content/HackathonContentBody";
 import HackathonContentTitle from "@/components/hackathon-content/HackathonContentTitle";
 import HackathonMain from "@/components/hackathon-content/HackathonMain";
+import HackathonSpecialTestimonial from "@/components/hackathon-content/HackathonSpecialTestimonial";
 import HackathonStats from "@/components/hackathon-content/HackathonStats";
+import HackathonTestimonials from "@/components/hackathon-content/HackathonTestimonials";
 import { CustomMDX } from "@/components/mdx-remote";
 import { ViewContainer } from "@/components/ui/view-container";
 import { HACKATHON_FAQS } from "@/constants";
 import { fetchHackathonData } from "@/lib/hackathon";
-import type { NumbersShowcaseType } from "@/types";
-import { ArrowUpRight, File, Globe, Sparkle, Star, Users } from "lucide-react";
+import { ArrowUpRight, Star } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
@@ -46,12 +48,31 @@ const HackathonPage = async ({ params }: { params: { slug: string } }) => {
 				{/* MDX File information renders from here */}
 				<div className="">
 					<HackathonContentBody>
-						<CustomMDX source={hackathon.overview} />
+						HackFrost was an online winter hackathon that brought
+						together industry professionals, tech enthusiasts, and
+						innovators from around the globe. Whether participants
+						were new to tech or experienced, HackFrost provided a
+						platform to build impactful projects, featuring
+						workshops, networking opportunities, and prizes worth
+						$10,000+. Attendees came together to learn, connect, and
+						have fun while advancing their skills and contributing
+						to the open-source community.
 					</HackathonContentBody>
 					<HackathonContentTitle>
-						Hackfrost 2024 Stats
+						HackFrost 2024 Stats
 					</HackathonContentTitle>
+					<HackathonContentTitleH3 className="mt-8">
+						HackFrost in numbers
+					</HackathonContentTitleH3>
 					<HackathonStats />
+					<HackathonSpecialTestimonial />
+					<HackathonContentTitleH3 className="mt-12">
+						Participants testimonials
+					</HackathonContentTitleH3>
+					<HackathonTestimonials />
+					<HackathonContentBody>
+						<CustomMDX source={hackathon.overview} />
+					</HackathonContentBody>
 					<HackathonContentTitle>Prizes</HackathonContentTitle>
 					<HackathonContentBody className="grid grid-cols-1 lg:grid-cols-2 gap-10">
 						<div className="space-y-8">

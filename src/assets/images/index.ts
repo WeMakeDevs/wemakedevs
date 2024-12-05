@@ -12,6 +12,10 @@ import hackfrost24Cover from "./hackfrost24-cover.png";
 import hackathonImage from "./wemakedevs_hackathon.png";
 import meetupImage from "./wemakedevs_meetup.jpg";
 
+import emmanuel from "./emmanuel.jpg";
+import hackfrostGlobalMap from "./global_map.png";
+import kestraLogo from "./kestra_logo.svg";
+
 export {
 	logo,
 	heroBg,
@@ -24,4 +28,7 @@ export {
 	hackathonImage,
 	meetupImage,
 	quotation,
+	hackfrostGlobalMap,
+	kestraLogo,
+	emmanuel,
 };
