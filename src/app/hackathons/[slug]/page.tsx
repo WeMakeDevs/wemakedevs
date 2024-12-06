@@ -50,11 +50,10 @@ const HackathonPage = async ({ params }: { params: { slug: string } }) => {
 					<HackathonContentBody>
 						HackFrost was an online winter hackathon that brought
 						together industry professionals, tech enthusiasts, and
-						innovators from around the globe. Whether participants
-						were new to tech or experienced, HackFrost provided a
+						innovators from around the globe. HackFrost provided a
 						platform to build impactful projects, featuring
 						workshops, networking opportunities, and prizes worth
-						$10,000+. Attendees came together to learn, connect, and
+						$10,000+ to tech enthusiast coming from different experience level. Attendees came together to learn, connect, and
 						have fun while advancing their skills and contributing
 						to the open-source community.
 					</HackathonContentBody>
