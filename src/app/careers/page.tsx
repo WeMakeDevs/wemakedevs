@@ -1,9 +1,10 @@
 import Footer from "@/components/Footer";
+import JobCard from "@/components/JobCard";
 import Navbar from "@/components/Navbar";
 import { ViewContainer } from "@/components/ui/view-container";
-import type { JobCard } from "@/types";
+import type { JobCardType } from "@/types";
 
-const jobs: JobCard[] = [
+const jobs: JobCardType[] = [
 	{
 		title: "Social Media Manager",
 		description:
@@ -48,12 +49,12 @@ const jobs: JobCard[] = [
 		applyLink: "https://example.com/apply/graphic-designer",
 	},
 ];
-
+// TODO: Use trigger component "
 const Careers = () => {
 	return (
 		<div>
 			<Navbar />
-			<ViewContainer className="pt-20 lg:pt-28">
+			<ViewContainer className="py-20 lg:pt-28">
 				<h1 className="font-title text-2xl sm:text-3xl lg:text-5xl font-bold leading-tight mt-8">
 					Careers at <span className="text-primary">WeMakeDevs</span>
 				</h1>
@@ -65,6 +66,11 @@ const Careers = () => {
 					exercitationem voluptatibus ipsum illo nihil. Quisquam,
 					nulla assumenda.
 				</p>
+				<div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-10">
+					{jobs.map(job => (
+						<JobCard job={job} key={job.title} />
+					))}
+				</div>
 			</ViewContainer>
 			<Footer />
 		</div>

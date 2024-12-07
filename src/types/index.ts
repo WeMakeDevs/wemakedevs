@@ -207,7 +207,7 @@ export type NumbersShowcaseType = {
 
 export type NumbersShowcaseCardType = GeneralComponent & NumbersShowcaseType;
 
-export type JobCard = {
+export type JobCardType = {
 	title: string;
 	description: string;
 	location: string;
