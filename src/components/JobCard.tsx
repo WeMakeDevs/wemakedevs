@@ -1,5 +1,15 @@
+import {
+	Dialog,
+	DialogContent,
+	DialogDescription,
+	DialogFooter,
+	DialogHeader,
+	DialogTitle,
+	DialogTrigger,
+} from "@/components/ui/dialog";
 import type { JobCardType } from "@/types";
 import { Banknote, Briefcase, MapPin } from "lucide-react";
+import Link from "next/link";
 import { Button } from "./ui/button";
 
 const JobCard = ({ job }: { job: JobCardType }) => {
@@ -23,12 +33,102 @@ const JobCard = ({ job }: { job: JobCardType }) => {
 					<p>{job.type}</p>
 				</div>
 			</div>
-			<Button
-				variant="outline"
-				className="mt-6 px-6 py-2 hover:bg-primary hover:text-background"
-			>
-				Know more
-			</Button>
+			<Dialog>
+				<DialogTrigger asChild>
+					<Button
+						variant="outline"
+						className="mt-6 px-6 py-2 hover:bg-primary hover:text-background"
+					>
+						Know more
+					</Button>
+				</DialogTrigger>
+				<DialogContent className="sm:max-w-[800px] rounded-lg">
+					<DialogHeader>
+						<DialogTitle className="text-2xl font-bold">
+							{job.title}
+						</DialogTitle>
+						<DialogDescription className="text-lg font-medium text-gray-700 leading-snug">
+							{job.description}
+						</DialogDescription>
+					</DialogHeader>
+
+					<div className="space-y-6 py-4">
+						{/* Job Details */}
+						<div className="flex flex-col gap-3 font-medium">
+							<div className="flex items-center gap-2">
+								<MapPin className="text-primary" size={20} />
+								<p>{job.location}</p>
+							</div>
+							<div className="flex items-center gap-2">
+								<Banknote className="text-primary" size={20} />
+								<p>{job.salary}</p>
+							</div>
+							<div className="flex items-center gap-2">
+								<Briefcase className="text-primary" size={20} />
+								<p>{job.type}</p>
+							</div>
+						</div>
+
+						{/* Prerequisites */}
+						<div>
+							<h4 className="text-lg font-semibold mb-2">
+								Prerequisites
+							</h4>
+							<ul className="list-disc list-inside space-y-1">
+								{job?.prerequisites?.map((prereq, index) => (
+									<li key={prereq}>{prereq}</li>
+								))}
+							</ul>
+						</div>
+
+						{/* Benefits */}
+						<div>
+							<h4 className="text-lg font-semibold mb-2">
+								Benefits
+							</h4>
+							<ul className="list-disc list-inside space-y-1">
+								{job?.benefits?.map((benefit, index) => (
+									<li key={benefit}>{benefit}</li>
+								))}
+							</ul>
+						</div>
+
+						{/* Dates */}
+						<div className="space-y-1">
+							<p>
+								<span className="font-semibold">
+									Posted Date:
+								</span>{" "}
+								{new Date(
+									job.postedDate ?? new Date(),
+								).toLocaleDateString()}
+							</p>
+							<p>
+								<span className="font-semibold">
+									Application Deadline:
+								</span>{" "}
+								{new Date(
+									job.applicationDeadline ?? new Date(),
+								).toLocaleDateString()}
+							</p>
+						</div>
+
+						{/* Application Instructions */}
+						<p>
+							To apply, please email contact@wemakedevs.org along
+							with your proof of work and CV
+						</p>
+					</div>
+
+					<DialogFooter>
+						<Button asChild className="w-full sm:w-auto">
+							<Link href="mailto:contact@wemakedevs.org">
+								Apply Now
+							</Link>
+						</Button>
+					</DialogFooter>
+				</DialogContent>
+			</Dialog>
 		</div>
 	);
 };
