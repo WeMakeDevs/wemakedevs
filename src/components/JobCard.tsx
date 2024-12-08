@@ -42,7 +42,7 @@ const JobCard = ({ job }: { job: JobCardType }) => {
 						Know more
 					</Button>
 				</DialogTrigger>
-				<DialogContent className="sm:max-w-[800px] rounded-lg">
+				<DialogContent className="sm:max-w-[800px] rounded-lg overflow-y-scroll max-h-[90vh]">
 					<DialogHeader>
 						<DialogTitle className="text-2xl font-bold">
 							{job.title}
