@@ -56,6 +56,12 @@ const Navbar = ({ className }: { className?: string }) => {
 			type: "link",
 		},
 		{
+			name: "Careers",
+			url: "/careers",
+			type: "link",
+			openInNewTab: true,
+		},
+		{
 			name: "Blog",
 			url: "https://blog.wemakedevs.org/",
 			type: "link",
