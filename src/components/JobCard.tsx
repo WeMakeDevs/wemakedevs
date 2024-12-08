@@ -121,7 +121,7 @@ const JobCard = ({ job }: { job: JobCardType }) => {
 					</div>
 
 					<DialogFooter>
-						<Button asChild className="w-full sm:w-auto">
+						<Button asChild className="w-full sm:w-auto px-6 py-2">
 							<Link href="mailto:contact@wemakedevs.org">
 								Apply Now
 							</Link>

@@ -53,8 +53,8 @@ const jobs: JobCardType[] = [
 const Careers = () => {
 	return (
 		<div>
-			<Navbar />
-			<ViewContainer className="py-20 lg:pt-28">
+			<Navbar className="z-10" />
+			<ViewContainer className="py-20 lg:pt-28 z-[1000]">
 				<h1 className="font-title text-2xl sm:text-3xl lg:text-5xl font-bold leading-tight mt-8">
 					Careers at <span className="text-primary">WeMakeDevs</span>
 				</h1>

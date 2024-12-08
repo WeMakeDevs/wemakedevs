@@ -10,7 +10,7 @@ import { useEffect, useState } from "react";
 import { Button, buttonVariants } from "./ui/button";
 import { NavContainer } from "./ui/nav-container";
 
-const Navbar = () => {
+const Navbar = ({ className }: { className?: string }) => {
 	const [isScrolled, setIsScrolled] = useState(false);
 	const [isOpen, setIsOpen] = useState(false);
 
@@ -69,7 +69,10 @@ const Navbar = () => {
 	];
 
 	return (
-		<nav id="nav" className="fixed mx-auto w-full z-[100] md:py-4">
+		<nav
+			id="nav"
+			className={cn("fixed mx-auto w-full z-[100] md:py-4", className)}
+		>
 			<NavContainer
 				className={cn(
 					"items-center justify-between rounded transition-all py-3",
