@@ -114,10 +114,12 @@ const Newsletter = ({ className, ...props }: GeneralComponent) => {
 						</form>
 					</Form>
 				</div>
-				<div className="flex flex-col md:flex-row gap-10">
+				<div className="flex flex-col md:flex-row gap-4 md:gap-10">
 					<Link
 						href="https://discord.gg/wemakedevs"
-						className="flex justify-between gap-10 items-center rounded-[10px] group bg-[#7289da] px-4 md:px-6 py-2 md:py-4 grow"
+						target="_blank"
+						rel="noopener noreferrer"
+						className="flex justify-between gap-10 items-center rounded-[10px] group bg-[#7289da] px-4 md:px-6 py-4 grow"
 					>
 						<div className="flex gap-4 items-center group-hover:translate-x-6 transition-transform">
 							<SiDiscord className="text-white" />
@@ -131,8 +133,10 @@ const Newsletter = ({ className, ...props }: GeneralComponent) => {
 						/>
 					</Link>
 					<Link
-						href="https://discord.gg/wemakedevs"
-						className="flex justify-between gap-10 items-center rounded-[10px] group bg-[#0088cc] px-4 md:px-6 py-2 md:py-4 grow"
+						href="https://t.me/WeMakeDevs"
+						target="_blank"
+						rel="noopener noreferrer"
+						className="flex justify-between gap-10 items-center rounded-[10px] group bg-[#0088cc] px-4 md:px-6 py-4 grow"
 					>
 						<div className="flex gap-4 items-center group-hover:translate-x-6 transition-transform">
 							<SiTelegram className="text-white" />
