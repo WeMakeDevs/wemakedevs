@@ -54,25 +54,28 @@ const Careers = () => {
 	return (
 		<div>
 			<Navbar className="z-10" />
-			<ViewContainer className="py-20 lg:pt-28 z-[1000]">
-				<h1 className="font-title text-2xl sm:text-3xl lg:text-5xl font-bold leading-tight mt-8">
-					Careers at <span className="text-primary">WeMakeDevs</span>
-				</h1>
-				<p className="mt-7 text-sm sm:text-base max-w-3xl font-medium sm:leading-snug">
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-					Eaque odio cupiditate eveniet deleniti. Sit debitis quae
-					provident deserunt nisi optio ab, eius hic pariatur commodi
-					laboriosam aut cupiditate illum sed doloremque, consequuntur
-					exercitationem voluptatibus ipsum illo nihil. Quisquam,
-					nulla assumenda.
-				</p>
-				<div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-10">
-					{jobs.map(job => (
-						<JobCard job={job} key={job.title} />
-					))}
-				</div>
-			</ViewContainer>
-			<Footer />
+			<div className="pt-20 lg:pt-28 z-[1000] flex flex-col min-h-screen">
+				<ViewContainer className="grow mb-20">
+					<h1 className="font-title text-2xl sm:text-3xl lg:text-5xl font-bold leading-tight mt-8">
+						Careers at{" "}
+						<span className="text-primary">WeMakeDevs</span>
+					</h1>
+					<p className="mt-7 text-sm sm:text-base max-w-3xl font-medium sm:leading-snug">
+						Lorem ipsum dolor sit amet, consectetur adipisicing
+						elit. Eaque odio cupiditate eveniet deleniti. Sit
+						debitis quae provident deserunt nisi optio ab, eius hic
+						pariatur commodi laboriosam aut cupiditate illum sed
+						doloremque, consequuntur exercitationem voluptatibus
+						ipsum illo nihil. Quisquam, nulla assumenda.
+					</p>
+					<div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-10">
+						{jobs.map(job => (
+							<JobCard job={job} key={job.title} />
+						))}
+					</div>
+				</ViewContainer>
+				<Footer />
+			</div>
 		</div>
 	);
 };
