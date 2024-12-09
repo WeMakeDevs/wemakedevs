@@ -1,8 +1,11 @@
 import Footer from "@/components/Footer";
 import JobCard from "@/components/JobCard";
 import Navbar from "@/components/Navbar";
+import { buttonVariants } from "@/components/ui/button";
 import { ViewContainer } from "@/components/ui/view-container";
+import { cn } from "@/lib/utils";
 import type { JobCardType } from "@/types";
+import Link from "next/link";
 
 const jobs: JobCardType[] = [
 	{
@@ -55,16 +58,23 @@ const Careers = () => {
 			<div className="pt-20 lg:pt-28 z-[1000] flex flex-col min-h-screen">
 				<ViewContainer className="grow mb-20">
 					<h1 className="font-title text-2xl sm:text-3xl lg:text-5xl font-bold leading-tight mt-8">
-						Careers at{" "}
+						Opportunities at{" "}
 						<span className="text-primary">WeMakeDevs</span>
 					</h1>
 					<p className="mt-7 text-sm sm:text-base max-w-3xl font-medium sm:leading-snug">
-						Lorem ipsum dolor sit amet, consectetur adipisicing
-						elit. Eaque odio cupiditate eveniet deleniti. Sit
-						debitis quae provident deserunt nisi optio ab, eius hic
-						pariatur commodi laboriosam aut cupiditate illum sed
-						doloremque, consequuntur exercitationem voluptatibus
-						ipsum illo nihil. Quisquam, nulla assumenda.
+						If you someone who is interested to work for the below
+						roles and get mentorship from industry leaders, apply
+						now by emailing us at{" "}
+						<Link
+							href="mailto:contact@wemakedevs.org"
+							className={cn(
+								buttonVariants({ variant: "link" }),
+								"p-0",
+							)}
+						>
+							contact@wemakedevs.org
+						</Link>{" "}
+						with your updated CV and proof of work attached to it.
 					</p>
 					<div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-10">
 						{jobs.map(job => (
