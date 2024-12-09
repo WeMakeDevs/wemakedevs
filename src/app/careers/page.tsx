@@ -10,14 +10,13 @@ const jobs: JobCardType[] = [
 		description:
 			"Manage and grow our online presence by crafting engaging content and building relationships with our audience.",
 		location: "Remote",
-		salary: "₹40,000 - ₹60,000 per month",
+		salary: "₹10,000 - ₹15,000 per month (based on performance)",
 		prerequisites: [
 			"Proven experience in social media management",
-			"Strong understanding of analytics tools",
 			"Excellent communication and copywriting skills",
 			"Creativity in content creation",
 		],
-		type: "Full-time",
+		type: "Freelance",
 		postedDate: "2024-12-08",
 		applicationDeadline: "2024-12-31",
 		benefits: [
@@ -31,15 +30,14 @@ const jobs: JobCardType[] = [
 		title: "Graphic Designer",
 		description:
 			"Create visually compelling designs that align with our brand identity and resonate with our audience.",
-		location: "Mumbai, India",
-		salary: "₹30,000 - ₹50,000 per month",
+		location: "Remote",
+		salary: "₹10,000 - ₹15,000 per month (based on performance)",
 		prerequisites: [
-			"Proficiency in Adobe Creative Suite (Photoshop, Illustrator, InDesign)",
-			"Strong portfolio showcasing design skills",
+			"Proficiency in design tools like Photoshop, Canva, Figma and other tools",
 			"Ability to meet deadlines in a fast-paced environment",
 			"Good communication and teamwork skills",
 		],
-		type: "Contract",
+		type: "Freelance",
 		postedDate: "2024-12-08",
 		applicationDeadline: "2024-12-20",
 		benefits: [

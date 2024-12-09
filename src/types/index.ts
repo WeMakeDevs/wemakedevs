@@ -213,7 +213,7 @@ export type JobCardType = {
 	location: string;
 	salary?: string;
 	prerequisites: string[];
-	type: "Full-time" | "Part-time" | "Contract" | "Internship";
+	type: "Full-time" | "Part-time" | "Contract" | "Internship" | "Freelance";
 	postedDate: string;
 	applicationDeadline?: string;
 	benefits?: string[];

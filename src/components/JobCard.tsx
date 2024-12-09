@@ -94,7 +94,7 @@ const JobCard = ({ job }: { job: JobCardType }) => {
 						</div>
 
 						{/* Dates */}
-						<div className="space-y-1">
+						{/* <div className="space-y-1">
 							<p>
 								<span className="font-semibold">
 									Posted Date:
@@ -111,12 +111,12 @@ const JobCard = ({ job }: { job: JobCardType }) => {
 									job.applicationDeadline ?? new Date(),
 								).toLocaleDateString()}
 							</p>
-						</div>
+						</div> */}
 
 						{/* Application Instructions */}
 						<p>
 							To apply, please email contact@wemakedevs.org along
-							with your proof of work and CV
+							with your proof of work and CV.
 						</p>
 					</div>
 
