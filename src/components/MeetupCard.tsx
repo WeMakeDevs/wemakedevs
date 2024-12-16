@@ -4,6 +4,7 @@ import type { MeetupCardInterface } from "@/types";
 import { ArrowUpRight, CalendarIcon, MapPin } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import HackathonStatus from "./HackathonStatus";
 
 const MeetupCard = ({
 	title,
@@ -24,7 +25,7 @@ const MeetupCard = ({
 			target="_blank"
 			rel="noreferrer noopener"
 		>
-			<div className="rounded border-4 border-accent-2 p-2 md:p-4 space-y-4 bg-card">
+			<div className="rounded border-4 border-accent-2 p-2 md:p-4 space-y-3 bg-card">
 				<Image
 					className={cn(
 						className,
@@ -36,24 +37,27 @@ const MeetupCard = ({
 				<h3 className={cn(className, "text-2xl md:text-3xl")}>
 					{title}
 				</h3>
-				<div className="flex flex-col items-start gap-2 justify-between">
+				<div className="flex flex-col items-start gap-4 justify-between">
+					<div className="flex justify-between w-full">
+						<HackathonStatus endDate={date} startDate={date} />
+						<p
+							className={cn(
+								className,
+								"flex gap-2 items-center font-medium",
+							)}
+						>
+							<CalendarIcon size={20} />
+							{new Date(date).toLocaleDateString("en-US", {
+								month: "long",
+								day: "numeric",
+								timeZone: "Asia/Kolkata",
+							})}
+						</p>
+					</div>
 					<div className="flex gap-2 items-center">
 						<MapPin size={20} />
 						<span className="font-medium">{location}</span>
 					</div>
-					<p
-						className={cn(
-							className,
-							"flex gap-2 items-center font-medium",
-						)}
-					>
-						<CalendarIcon size={20} />
-						{new Date(date).toLocaleDateString("en-US", {
-							month: "long",
-							day: "numeric",
-							timeZone: "Asia/Kolkata",
-						})}
-					</p>
 				</div>
 				<p className={cn(className, "leading-snug font-semibold")}>
 					{description}
