@@ -24,10 +24,10 @@ const JobCard = ({ job }: { job: JobCardType }) => {
 					<MapPin size={18} />
 					<p>{job.location}</p>
 				</div>
-				<div className="flex items-center gap-2">
+				{/* <div className="flex items-center gap-2">
 					<Banknote size={18} />
 					<p>{job.salary}</p>
-				</div>
+				</div> */}
 				<div className="flex items-center gap-2">
 					<Briefcase size={18} />
 					<p>{job.type}</p>
@@ -59,10 +59,10 @@ const JobCard = ({ job }: { job: JobCardType }) => {
 								<MapPin className="text-primary" size={20} />
 								<p>{job.location}</p>
 							</div>
-							<div className="flex items-center gap-2">
+							{/* <div className="flex items-center gap-2">
 								<Banknote className="text-primary" size={20} />
 								<p>{job.salary}</p>
-							</div>
+							</div> */}
 							<div className="flex items-center gap-2">
 								<Briefcase className="text-primary" size={20} />
 								<p>{job.type}</p>
