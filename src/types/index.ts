@@ -206,3 +206,16 @@ export type NumbersShowcaseType = {
 };
 
 export type NumbersShowcaseCardType = GeneralComponent & NumbersShowcaseType;
+
+export type JobCardType = {
+	title: string;
+	description: string;
+	location: string;
+	salary?: string;
+	prerequisites: string[];
+	type: "Full-time" | "Part-time" | "Contract" | "Internship" | "Freelance";
+	postedDate: string;
+	applicationDeadline?: string;
+	benefits?: string[];
+	applyLink: string;
+};
