@@ -7,19 +7,10 @@ import {
 } from "@/components/hackathon-content";
 import HackathonOtherProjectCard from "@/components/hackathon-content/HackathonOtherProjectCard";
 import { ViewContainer } from "@/components/ui/view-container";
-import { fetchHackathonData } from "@/lib/hackathon";
-import { notFound } from "next/navigation";
 import { DATA as hackathonData } from "../data";
 import { hackfrost24Cover } from "../images";
 
 const HackathonProjects = async () => {
-	const hackathons = await fetchHackathonData();
-	const hackathon = hackathons.find(
-		hackathon => hackathon.slug === "hackfrost24",
-	);
-
-	if (!hackathon || !hackathon.projects) notFound();
-
 	return (
 		<div className="pt-20 pb-10">
 			<HackathonCoverImage

@@ -5,21 +5,12 @@ import {
 import { HackathonScheduleComponent } from "@/components/hackathon-content";
 import { buttonVariants } from "@/components/ui/button";
 import { ViewContainer } from "@/components/ui/view-container";
-import { fetchHackathonData } from "@/lib/hackathon";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
-import { notFound } from "next/navigation";
 import { DATA as hackathonData } from "../data";
 import { hackfrost24Cover } from "../images";
 
 const HackathonSchedule = async () => {
-	const hackathons = await fetchHackathonData();
-	const hackathon = hackathons.find(
-		hackathon => hackathon.slug === "hackfrost24",
-	);
-
-	if (!hackathon) notFound();
-
 	return (
 		<div className="pt-20">
 			<HackathonCoverImage

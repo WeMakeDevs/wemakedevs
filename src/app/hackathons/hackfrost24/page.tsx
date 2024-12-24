@@ -1,4 +1,3 @@
-import { hackfrostGlobalMap } from "@/assets/images";
 import Faq from "@/components/Faq";
 import {
 	HackathonContentTitleH3,
@@ -11,23 +10,15 @@ import HackathonMain from "@/components/hackathon-content/HackathonMain";
 import HackathonSpecialTestimonial from "@/components/hackathon-content/HackathonSpecialTestimonial";
 import HackathonStats from "@/components/hackathon-content/HackathonStats";
 import HackathonTestimonials from "@/components/hackathon-content/HackathonTestimonials";
-import { CustomMDX } from "@/components/mdx-remote";
 import { ViewContainer } from "@/components/ui/view-container";
 import { HACKATHON_FAQS } from "@/constants";
 import { fetchHackathonData } from "@/lib/hackathon";
+import type { HackathonData } from "@/types";
 import { ArrowUpRight, Star } from "lucide-react";
-import Image from "next/image";
 import Link from "next/link";
-import { notFound } from "next/navigation";
 import { DATA as hackathonData } from "./data";
 import { hackfrost24Cover } from "./images";
-import {
-	JudgingCriteria,
-	Overview,
-	Resources,
-	Rules,
-	Sponsor,
-} from "./markdown";
+import { JudgingCriteria, Overview, Sponsor } from "./markdown";
 
 export async function generateStaticParams() {
 	const hackathons = await fetchHackathonData();
@@ -38,13 +29,6 @@ export async function generateStaticParams() {
 }
 
 const HackathonPage = async () => {
-	const hackathons = await fetchHackathonData();
-	const hackathon = hackathons.find(
-		hackathon => hackathon.slug === "hackfrost24",
-	);
-
-	if (!hackathon) notFound();
-
 	return (
 		<main className="pt-20">
 			<HackathonCoverImage
@@ -52,7 +36,7 @@ const HackathonPage = async () => {
 				alt={hackathonData.title}
 			/>
 			<HackathonNav slug={hackathonData.slug} page="overview" />
-			<HackathonMain hackathon={hackathon} />
+			<HackathonMain hackathon={hackathonData as HackathonData} />
 			<ViewContainer className="">
 				<div className="">
 					<HackathonContentBody>
@@ -79,7 +63,6 @@ const HackathonPage = async () => {
 					</HackathonContentTitleH3>
 					<HackathonTestimonials />
 					<HackathonContentBody>
-						{/* <CustomMDX source={hackathon.overview} /> */}
 						<Overview />
 					</HackathonContentBody>
 					<HackathonContentTitle>Prizes</HackathonContentTitle>
@@ -176,12 +159,6 @@ const HackathonPage = async () => {
 										/>{" "}
 										<div className="flex flex-wrap gap-2 items-center">
 											{prize.name}
-											{/* {prize.name && "-"} */}
-											{/* {prize.name && (
-												<span className="px-2 py-1 bg-blue-600 text-white rounded-[4px]">
-													{prize.name}
-												</span>
-											)} */}
 										</div>
 									</p>
 								</div>
@@ -189,15 +166,9 @@ const HackathonPage = async () => {
 						</div>
 					</HackathonContentBody>
 					<HackathonContentBody>
-						{/* {hackathon.sponsor && (
-							<CustomMDX source={hackathon.sponsor} />
-						)} */}
 						<Sponsor />
 					</HackathonContentBody>
 					<HackathonContentBody>
-						{/* {hackathon.judgingCriteria && (
-							<CustomMDX source={hackathon.judgingCriteria} />
-						)} */}
 						<JudgingCriteria />
 					</HackathonContentBody>
 				</div>
