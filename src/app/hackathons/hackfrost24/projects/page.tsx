@@ -10,10 +10,10 @@ import { ViewContainer } from "@/components/ui/view-container";
 import { fetchHackathonData } from "@/lib/hackathon";
 import { notFound } from "next/navigation";
 
-const HackathonProjects = async ({ params }: { params: { slug: string } }) => {
+const HackathonProjects = async () => {
 	const hackathons = await fetchHackathonData();
 	const hackathon = hackathons.find(
-		hackathon => hackathon.slug === params.slug,
+		hackathon => hackathon.slug === "hackfrost24",
 	);
 
 	if (!hackathon || !hackathon.projects) notFound();

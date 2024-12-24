@@ -3,17 +3,15 @@ import {
 	HackathonNav,
 } from "@/components/hackathon-content";
 import HackathonContentBody from "@/components/hackathon-content/HackathonContentBody";
-import HackathonContentTitle from "@/components/hackathon-content/HackathonContentTitle";
-import HackathonMain from "@/components/hackathon-content/HackathonMain";
 import { CustomMDX } from "@/components/mdx-remote";
 import { ViewContainer } from "@/components/ui/view-container";
 import { fetchHackathonData } from "@/lib/hackathon";
 import { notFound } from "next/navigation";
 
-const HackathonResources = async ({ params }: { params: { slug: string } }) => {
+const HackathonRules = async () => {
 	const hackathons = await fetchHackathonData();
 	const hackathon = hackathons.find(
-		hackathon => hackathon.slug === params.slug,
+		hackathon => hackathon.slug === "hackfrost24",
 	);
 
 	if (!hackathon) notFound();
@@ -24,14 +22,14 @@ const HackathonResources = async ({ params }: { params: { slug: string } }) => {
 				src={hackathon.image.cover}
 				alt={hackathon.title}
 			/>
-			<HackathonNav slug={hackathon.slug} page="resources" />
-			<ViewContainer>
+			<HackathonNav slug={hackathon.slug} page="rules" />
+			<ViewContainer className="my-10">
 				<HackathonContentBody>
-					<CustomMDX source={hackathon.resources} />
+					<CustomMDX source={hackathon.rules} />
 				</HackathonContentBody>
 			</ViewContainer>
 		</div>
 	);
 };
 
-export default HackathonResources;
+export default HackathonRules;

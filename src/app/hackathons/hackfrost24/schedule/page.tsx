@@ -10,10 +10,10 @@ import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
-const HackathonSchedule = async ({ params }: { params: { slug: string } }) => {
+const HackathonSchedule = async () => {
 	const hackathons = await fetchHackathonData();
 	const hackathon = hackathons.find(
-		hackathon => hackathon.slug === params.slug,
+		hackathon => hackathon.slug === "hackfrost24",
 	);
 
 	if (!hackathon) notFound();

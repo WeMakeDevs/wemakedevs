@@ -28,10 +28,10 @@ export async function generateStaticParams() {
 	}));
 }
 
-const HackathonPage = async ({ params }: { params: { slug: string } }) => {
+const HackathonPage = async () => {
 	const hackathons = await fetchHackathonData();
 	const hackathon = hackathons.find(
-		hackathon => hackathon.slug === params.slug,
+		hackathon => hackathon.slug === "hackfrost24",
 	);
 
 	if (!hackathon) notFound();
@@ -53,9 +53,10 @@ const HackathonPage = async ({ params }: { params: { slug: string } }) => {
 						innovators from around the globe. HackFrost provided a
 						platform to build impactful projects, featuring
 						workshops, networking opportunities, and prizes worth
-						$10,000+ to tech enthusiast coming from different experience level. Attendees came together to learn, connect, and
-						have fun while advancing their skills and contributing
-						to the open-source community.
+						$10,000+ to tech enthusiast coming from different
+						experience level. Attendees came together to learn,
+						connect, and have fun while advancing their skills and
+						contributing to the open-source community.
 					</HackathonContentBody>
 					<HackathonContentTitle>
 						HackFrost 2024 Stats
