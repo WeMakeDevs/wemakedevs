@@ -20,6 +20,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { DATA as hackathonData } from "./data";
+import { hackfrost24Cover } from "./images";
 import {
 	JudgingCriteria,
 	Overview,
@@ -47,7 +48,7 @@ const HackathonPage = async () => {
 	return (
 		<main className="pt-20">
 			<HackathonCoverImage
-				src={hackathon.image.cover}
+				src={hackfrost24Cover}
 				alt={hackathonData.title}
 			/>
 			<HackathonNav slug={hackathonData.slug} page="overview" />

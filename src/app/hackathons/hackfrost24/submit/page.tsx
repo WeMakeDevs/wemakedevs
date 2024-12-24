@@ -10,6 +10,7 @@ import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { DATA as hackathonData } from "../data";
+import { hackfrost24Cover } from "../images";
 
 const HackathonSubmit = async () => {
 	const hackathons = await fetchHackathonData();
@@ -22,7 +23,7 @@ const HackathonSubmit = async () => {
 	return (
 		<div className="mb-10 pt-20">
 			<HackathonCoverImage
-				src={hackathon.image.cover}
+				src={hackfrost24Cover}
 				alt={hackathonData.title}
 			/>
 			<HackathonNav slug={hackathonData.slug} page="submit" />

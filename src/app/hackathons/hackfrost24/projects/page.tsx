@@ -10,6 +10,7 @@ import { ViewContainer } from "@/components/ui/view-container";
 import { fetchHackathonData } from "@/lib/hackathon";
 import { notFound } from "next/navigation";
 import { DATA as hackathonData } from "../data";
+import { hackfrost24Cover } from "../images";
 
 const HackathonProjects = async () => {
 	const hackathons = await fetchHackathonData();
@@ -22,7 +23,7 @@ const HackathonProjects = async () => {
 	return (
 		<div className="pt-20 pb-10">
 			<HackathonCoverImage
-				src={hackathon.image.cover}
+				src={hackfrost24Cover}
 				alt={hackathonData.title}
 			/>
 			<HackathonNav slug={hackathonData.slug} page="projects" />
