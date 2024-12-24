@@ -9,6 +9,7 @@ import { CustomMDX } from "@/components/mdx-remote";
 import { ViewContainer } from "@/components/ui/view-container";
 import { fetchHackathonData } from "@/lib/hackathon";
 import { notFound } from "next/navigation";
+import { Resources } from "../markdown";
 
 const HackathonResources = async () => {
 	const hackathons = await fetchHackathonData();
@@ -27,7 +28,8 @@ const HackathonResources = async () => {
 			<HackathonNav slug={hackathon.slug} page="resources" />
 			<ViewContainer>
 				<HackathonContentBody>
-					<CustomMDX source={hackathon.resources} />
+					{/* <CustomMDX source={hackathon.resources} /> */}
+					<Resources />
 				</HackathonContentBody>
 			</ViewContainer>
 		</div>

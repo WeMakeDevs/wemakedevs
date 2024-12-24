@@ -19,6 +19,13 @@ import { ArrowUpRight, Star } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import {
+	JudgingCriteria,
+	Overview,
+	Resources,
+	Rules,
+	Sponsor,
+} from "./markdown";
 
 export async function generateStaticParams() {
 	const hackathons = await fetchHackathonData();
@@ -45,7 +52,6 @@ const HackathonPage = async () => {
 			<HackathonNav slug={hackathon.slug} page="overview" />
 			<HackathonMain hackathon={hackathon} />
 			<ViewContainer className="">
-				{/* MDX File information renders from here */}
 				<div className="">
 					<HackathonContentBody>
 						HackFrost was an online winter hackathon that brought
@@ -71,7 +77,8 @@ const HackathonPage = async () => {
 					</HackathonContentTitleH3>
 					<HackathonTestimonials />
 					<HackathonContentBody>
-						<CustomMDX source={hackathon.overview} />
+						{/* <CustomMDX source={hackathon.overview} /> */}
+						<Overview />
 					</HackathonContentBody>
 					<HackathonContentTitle>Prizes</HackathonContentTitle>
 					<HackathonContentBody className="grid grid-cols-1 lg:grid-cols-2 gap-10">
@@ -179,14 +186,16 @@ const HackathonPage = async () => {
 						</div>
 					</HackathonContentBody>
 					<HackathonContentBody>
-						{hackathon.sponsor && (
+						{/* {hackathon.sponsor && (
 							<CustomMDX source={hackathon.sponsor} />
-						)}
+						)} */}
+						<Sponsor />
 					</HackathonContentBody>
 					<HackathonContentBody>
-						{hackathon.judgingCriteria && (
+						{/* {hackathon.judgingCriteria && (
 							<CustomMDX source={hackathon.judgingCriteria} />
-						)}
+						)} */}
+						<JudgingCriteria />
 					</HackathonContentBody>
 				</div>
 			</ViewContainer>
