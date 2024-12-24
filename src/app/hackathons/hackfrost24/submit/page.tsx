@@ -9,6 +9,7 @@ import { fetchHackathonData } from "@/lib/hackathon";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { DATA as hackathonData } from "../data";
 
 const HackathonSubmit = async () => {
 	const hackathons = await fetchHackathonData();
@@ -22,9 +23,9 @@ const HackathonSubmit = async () => {
 		<div className="mb-10 pt-20">
 			<HackathonCoverImage
 				src={hackathon.image.cover}
-				alt={hackathon.title}
+				alt={hackathonData.title}
 			/>
-			<HackathonNav slug={hackathon.slug} page="submit" />
+			<HackathonNav slug={hackathonData.slug} page="submit" />
 			<ViewContainer>
 				<HackathonContentTitle>
 					Registration and Submission
@@ -38,7 +39,7 @@ const HackathonSubmit = async () => {
 						participate.
 					</p>
 					<Link
-						href={hackathon.registrationLink}
+						href={hackathonData.registrationLink}
 						target="_blank"
 						rel="noopener noreferrer"
 						className={cn(buttonVariants(), "mt-4 w-fit block")}
@@ -53,23 +54,23 @@ const HackathonSubmit = async () => {
 					<p className="text-foreground/80 mb-2">
 						Please read the{" "}
 						<a
-							href={`/hackathons/${hackathon.slug}/rules`}
+							href={`/hackathons/${hackathonData.slug}/rules`}
 							className="bg-yellow-100/20 inline px-1 py-0.5 hover:bg-yellow-100/0"
 						>
 							submission rules
 						</a>{" "}
 						and{" "}
 						<a
-							href={`/hackathons/${hackathon.slug}/#requirements`}
+							href={`/hackathons/${hackathonData.slug}/#requirements`}
 							className="bg-yellow-100/20 inline px-1 py-0.5 hover:bg-yellow-100/0"
 						>
 							submission requirements
 						</a>{" "}
 						before submitting.
 					</p>
-					{hackathon.submissionLink ? (
+					{hackathonData.submissionLink ? (
 						<Link
-							href={hackathon.submissionLink}
+							href={hackathonData.submissionLink}
 							target="_blank"
 							rel="noopener noreferrer"
 							className={cn(buttonVariants(), "mt-4 w-fit block")}

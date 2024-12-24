@@ -7,6 +7,7 @@ import { CustomMDX } from "@/components/mdx-remote";
 import { ViewContainer } from "@/components/ui/view-container";
 import { fetchHackathonData } from "@/lib/hackathon";
 import { notFound } from "next/navigation";
+import { DATA as hackathonData } from "../data";
 import { Rules } from "../markdown";
 
 const HackathonRules = async () => {
@@ -21,9 +22,9 @@ const HackathonRules = async () => {
 		<div className="pt-20 pb-10">
 			<HackathonCoverImage
 				src={hackathon.image.cover}
-				alt={hackathon.title}
+				alt={hackathonData.title}
 			/>
-			<HackathonNav slug={hackathon.slug} page="rules" />
+			<HackathonNav slug={hackathonData.slug} page="rules" />
 			<ViewContainer className="my-10">
 				<HackathonContentBody>
 					{/* <CustomMDX source={hackathon.rules} /> */}

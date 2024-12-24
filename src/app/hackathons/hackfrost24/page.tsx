@@ -19,6 +19,7 @@ import { ArrowUpRight, Star } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { DATA as hackathonData } from "./data";
 import {
 	JudgingCriteria,
 	Overview,
@@ -47,9 +48,9 @@ const HackathonPage = async () => {
 		<main className="pt-20">
 			<HackathonCoverImage
 				src={hackathon.image.cover}
-				alt={hackathon.title}
+				alt={hackathonData.title}
 			/>
-			<HackathonNav slug={hackathon.slug} page="overview" />
+			<HackathonNav slug={hackathonData.slug} page="overview" />
 			<HackathonMain hackathon={hackathon} />
 			<ViewContainer className="">
 				<div className="">
@@ -94,7 +95,7 @@ const HackathonPage = async () => {
 									Use of Kestra is mandatory for below tracks
 								</span>
 							</div>
-							{hackathon.prizes.winning.map(prize => (
+							{hackathonData.prizes.winning.map(prize => (
 								<div className="space-y-4" key={prize.name}>
 									<p className="text-lg md:text-xl font-semibold flex gap-2 items-center">
 										<Star
@@ -114,7 +115,7 @@ const HackathonPage = async () => {
 									</p>
 								</div>
 							))}
-							{hackathon.prizes.giveaway && (
+							{hackathonData.prizes.giveaway && (
 								<>
 									<HackathonContentTitleH3>
 										Side Quest
@@ -163,7 +164,7 @@ const HackathonPage = async () => {
 									Keychron Keyboard + Swag Bag for each
 								</span>
 							</div>
-							{hackathon.prizes.other.map(prize => (
+							{hackathonData.prizes.other.map(prize => (
 								<div className="space-y-4" key={prize.name}>
 									<p className="text-lg md:text-xl font-semibold flex gap-2 items-center">
 										<Star
@@ -173,12 +174,13 @@ const HackathonPage = async () => {
 											className="shrink-0"
 										/>{" "}
 										<div className="flex flex-wrap gap-2 items-center">
-											{prize.name} {prize.prize && "-"}
-											{prize.prize && (
+											{prize.name}
+											{/* {prize.name && "-"} */}
+											{/* {prize.name && (
 												<span className="px-2 py-1 bg-blue-600 text-white rounded-[4px]">
-													{prize.prize}
+													{prize.name}
 												</span>
-											)}
+											)} */}
 										</div>
 									</p>
 								</div>

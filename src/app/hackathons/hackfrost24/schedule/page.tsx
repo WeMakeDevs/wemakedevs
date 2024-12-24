@@ -9,6 +9,7 @@ import { fetchHackathonData } from "@/lib/hackathon";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { DATA as hackathonData } from "../data";
 
 const HackathonSchedule = async () => {
 	const hackathons = await fetchHackathonData();
@@ -22,14 +23,14 @@ const HackathonSchedule = async () => {
 		<div className="pt-20">
 			<HackathonCoverImage
 				src={hackathon.image.cover}
-				alt={hackathon.title}
+				alt={hackathonData.title}
 			/>
-			<HackathonNav slug={hackathon.slug} page="schedule" />
+			<HackathonNav slug={hackathonData.slug} page="schedule" />
 			<ViewContainer className="my-14">
-				<HackathonScheduleComponent schedule={hackathon.schedule} />
-				{hackathon.googleCalendarLink && (
+				<HackathonScheduleComponent schedule={hackathonData.schedule} />
+				{hackathonData.googleCalendarLink && (
 					<Link
-						href={hackathon.googleCalendarLink}
+						href={hackathonData.googleCalendarLink}
 						target="_blank"
 						rel="noopener noreferrer"
 						className={cn(

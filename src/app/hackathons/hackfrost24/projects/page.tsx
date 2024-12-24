@@ -9,6 +9,7 @@ import HackathonOtherProjectCard from "@/components/hackathon-content/HackathonO
 import { ViewContainer } from "@/components/ui/view-container";
 import { fetchHackathonData } from "@/lib/hackathon";
 import { notFound } from "next/navigation";
+import { DATA as hackathonData } from "../data";
 
 const HackathonProjects = async () => {
 	const hackathons = await fetchHackathonData();
@@ -22,15 +23,15 @@ const HackathonProjects = async () => {
 		<div className="pt-20 pb-10">
 			<HackathonCoverImage
 				src={hackathon.image.cover}
-				alt={hackathon.title}
+				alt={hackathonData.title}
 			/>
-			<HackathonNav slug={hackathon.slug} page="projects" />
+			<HackathonNav slug={hackathonData.slug} page="projects" />
 			<ViewContainer>
 				<HackathonContentTitle className="mt-4">
 					Winning projects
 				</HackathonContentTitle>
 				<div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 mt-4 md:mt-8">
-					{hackathon.projects?.showcase.map(project => (
+					{hackathonData.projects?.showcase.map(project => (
 						<HackathonWinningProjectCard
 							teamName={project.teamName}
 							isSolo={project.isSolo}
@@ -46,7 +47,7 @@ const HackathonProjects = async () => {
 					Top 15 Projects
 				</HackathonContentTitle>
 				<div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 mt-4 md:mt-8">
-					{hackathon.projects?.top?.map(project => (
+					{hackathonData.projects?.top?.map(project => (
 						<HackathonProjectCard
 							key={project.projectTitle}
 							projectTitle={project.projectTitle}
@@ -61,7 +62,7 @@ const HackathonProjects = async () => {
 					All Projects
 				</HackathonContentTitle>
 				<div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4 md:mt-8">
-					{hackathon.projects?.all?.map(project => (
+					{hackathonData.projects?.all?.map(project => (
 						<HackathonOtherProjectCard
 							key={project.projectTitle}
 							projectTitle={project.projectTitle}
