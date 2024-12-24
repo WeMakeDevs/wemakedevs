@@ -81,7 +81,7 @@ const HackathonPage = async () => {
 							</div>
 							{hackathonData.prizes.winning.map(prize => (
 								<div className="space-y-4" key={prize.name}>
-									<p className="text-lg md:text-xl font-semibold flex gap-2 items-center">
+									<div className="text-lg md:text-xl font-semibold flex gap-2 items-center">
 										<Star
 											size={20}
 											strokeWidth={0}
@@ -96,7 +96,7 @@ const HackathonPage = async () => {
 												</span>
 											)}
 										</div>
-									</p>
+									</div>
 								</div>
 							))}
 							{hackathonData.prizes.giveaway && (
@@ -105,7 +105,7 @@ const HackathonPage = async () => {
 										Side Quest
 									</HackathonContentTitleH3>
 									<div className="space-y-4">
-										<p className="text-lg md:text-xl font-semibold flex gap-2 items-center">
+										<div className="text-lg md:text-xl font-semibold flex gap-2 items-center">
 											<Star
 												size={20}
 												strokeWidth={0}
@@ -127,7 +127,7 @@ const HackathonPage = async () => {
 													Exclusive Swag Bag
 												</span>
 											</div>
-										</p>
+										</div>
 										<p className="text-base md:text-lg font-medium">
 											Top 20 people who star Kestra on
 											Github and share their hackathon
@@ -150,7 +150,7 @@ const HackathonPage = async () => {
 							</div>
 							{hackathonData.prizes.other.map(prize => (
 								<div className="space-y-4" key={prize.name}>
-									<p className="text-lg md:text-xl font-semibold flex gap-2 items-center">
+									<div className="text-lg md:text-xl font-semibold flex gap-2 items-center">
 										<Star
 											size={20}
 											strokeWidth={0}
@@ -160,7 +160,7 @@ const HackathonPage = async () => {
 										<div className="flex flex-wrap gap-2 items-center">
 											{prize.name}
 										</div>
-									</p>
+									</div>
 								</div>
 							))}
 						</div>
