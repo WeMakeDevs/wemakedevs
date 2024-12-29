@@ -12,16 +12,16 @@ import HackathonStats from "@/components/hackathon-content/HackathonStats";
 import HackathonTestimonials from "@/components/hackathon-content/HackathonTestimonials";
 import { ViewContainer } from "@/components/ui/view-container";
 import { HACKATHON_FAQS } from "@/constants";
-import { fetchHackathonData } from "@/lib/hackathon";
+import { getAllHackathonsData } from "@/lib/hackathon";
 import type { HackathonData } from "@/types";
 import { ArrowUpRight, Star } from "lucide-react";
 import Link from "next/link";
-import { DATA as hackathonData } from "./data";
-import { hackfrost24Cover } from "./images";
+import hackathonData from "./data";
+import { images } from "./images";
 import { JudgingCriteria, Overview, Sponsor } from "./markdown";
 
-export async function generateStaticParams() {
-	const hackathons = await fetchHackathonData();
+export function generateStaticParams() {
+	const hackathons = getAllHackathonsData();
 
 	return hackathons.map(hackathon => ({
 		slug: hackathon.slug,
@@ -31,12 +31,10 @@ export async function generateStaticParams() {
 const HackathonPage = async () => {
 	return (
 		<main className="pt-20">
-			<HackathonCoverImage
-				src={hackfrost24Cover}
-				alt={hackathonData.title}
-			/>
+			<HackathonCoverImage src={images.cover} alt={hackathonData.title} />
 			<HackathonNav slug={hackathonData.slug} page="overview" />
-			<HackathonMain hackathon={hackathonData as HackathonData} />
+			{/* biome-ignore lint/suspicious/noExplicitAny: <explanation> */}
+			<HackathonMain hackathon={hackathonData as any} />
 			<ViewContainer className="">
 				<div className="">
 					<HackathonContentBody>

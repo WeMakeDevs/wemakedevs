@@ -1,4 +1,6 @@
-export const DATA = {
+import { images } from "./images";
+
+const DATA = {
 	title: "HackFrost Winter Hackathon",
 	prize: "10,000",
 	type: "offline",
@@ -7,6 +9,7 @@ export const DATA = {
 	description:
 		"Network, build projects and showcase your best ideas this winter",
 	slug: "hackfrost24",
+	images,
 	prizes: {
 		winning: [
 			{
@@ -1121,3 +1124,5 @@ export const DATA = {
 	googleCalendarLink:
 		"https://calendar.google.com/calendar/u/0?cid=Y18zMDkwNGI0NzdhOTVmNzU5MjRjYjI1ZDdhMjk1NDY5NzlmNDk3OWRkMzliNDEwMTlhYzViMjJlNzZmYTE2MDNkQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20",
 };
+
+export default DATA;

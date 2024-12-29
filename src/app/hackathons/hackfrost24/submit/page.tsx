@@ -7,16 +7,13 @@ import { buttonVariants } from "@/components/ui/button";
 import { ViewContainer } from "@/components/ui/view-container";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
-import { DATA as hackathonData } from "../data";
-import { hackfrost24Cover } from "../images";
+import hackathonData from "../data";
+import { images } from "../images";
 
 const HackathonSubmit = async () => {
 	return (
 		<div className="mb-10 pt-20">
-			<HackathonCoverImage
-				src={hackfrost24Cover}
-				alt={hackathonData.title}
-			/>
+			<HackathonCoverImage src={images.cover} alt={hackathonData.title} />
 			<HackathonNav slug={hackathonData.slug} page="submit" />
 			<ViewContainer>
 				<HackathonContentTitle>

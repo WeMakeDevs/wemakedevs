@@ -1,4 +1,4 @@
-import hackfrost24Cover from "./hackfrost24-cover.png";
-import hackfrost24Thumbnail from "./hackfrost24-thumbnail.jpg";
+import cover from "./hackfrost24-cover.png";
+import thumbnail from "./hackfrost24-thumbnail.jpg";
 
-export { hackfrost24Cover, hackfrost24Thumbnail };
+export const images = { cover, thumbnail } as const;

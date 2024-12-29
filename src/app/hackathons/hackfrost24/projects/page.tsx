@@ -7,16 +7,13 @@ import {
 } from "@/components/hackathon-content";
 import HackathonOtherProjectCard from "@/components/hackathon-content/HackathonOtherProjectCard";
 import { ViewContainer } from "@/components/ui/view-container";
-import { DATA as hackathonData } from "../data";
-import { hackfrost24Cover } from "../images";
+import hackathonData from "../data";
+import { images } from "../images";
 
 const HackathonProjects = async () => {
 	return (
 		<div className="pt-20 pb-10">
-			<HackathonCoverImage
-				src={hackfrost24Cover}
-				alt={hackathonData.title}
-			/>
+			<HackathonCoverImage src={images.cover} alt={hackathonData.title} />
 			<HackathonNav slug={hackathonData.slug} page="projects" />
 			<ViewContainer>
 				<HackathonContentTitle className="mt-4">
