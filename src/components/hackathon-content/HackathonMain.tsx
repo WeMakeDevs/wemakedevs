@@ -1,10 +1,12 @@
 import { cn } from "@/lib/utils";
 import type { HackathonData } from "@/types";
+import { CalendarIcon } from "lucide-react";
 import Link from "next/link";
 import HackathonStatus from "../HackathonStatus";
 import { buttonVariants } from "../ui/button";
 import { ViewContainer } from "../ui/view-container";
 import HackathonDate from "./HackathonDate";
+import { DateAtom } from "./atoms";
 
 const HackathonMain = ({ hackathon }: { hackathon: HackathonData }) => {
 	return (
@@ -37,6 +39,13 @@ const HackathonMain = ({ hackathon }: { hackathon: HackathonData }) => {
 					</div>
 					<div className="flex justify-center items-center">
 						<div className="bg-white/50 shadow-md rounded-xl p-4 md:p-6 h-fit w-full">
+							<div className="flex gap-4 text-center font-medium">
+								<CalendarIcon className="" size={30} />
+								<p className="text-lg md:text-2xl">
+									<DateAtom date={hackathon.startDate} /> -{" "}
+									<DateAtom date={hackathon.endDate} />
+								</p>
+							</div>
 							<HackathonDate
 								startDate={hackathon.startDate}
 								endDate={hackathon.endDate}

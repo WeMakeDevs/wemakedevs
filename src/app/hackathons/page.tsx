@@ -9,23 +9,23 @@ import {
 import HackathonStatus from "@/components/HackathonStatus";
 import Navbar from "@/components/Navbar";
 import { ViewContainer } from "@/components/ui/view-container";
-import { fetchHackathonData } from "@/lib/hackathon";
+import { getAllHackathonsData } from "@/lib/hackathon";
 
-const Hackathons = async () => {
-	const hackathons = await fetchHackathonData();
+const Hackathons = () => {
+	const hackathons = getAllHackathonsData();
 
 	return (
 		<>
 			<Navbar />
 			<main className="py-20">
 				<ViewContainer className="my-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-					{hackathons.map((hackathon, index) => (
+					{hackathons.map(hackathon => (
 						<HackathonCard
 							key={hackathon.slug}
 							href={`/hackathons/${hackathon.slug}`}
 						>
 							<HackathonCardImage
-								src={hackathon.image.thumbnail}
+								src={hackathon.images.thumbnail}
 								alt={hackathon.title}
 							/>
 							<HackathonCardTitle>

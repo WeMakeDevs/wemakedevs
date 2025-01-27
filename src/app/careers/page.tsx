@@ -62,8 +62,8 @@ const Careers = () => {
 						<span className="text-primary">WeMakeDevs</span>
 					</h1>
 					<p className="mt-7 text-sm sm:text-base max-w-3xl font-medium sm:leading-snug">
-						If you're looking for a paid opportunity with mentorship from industry leaders, apply
-						now by emailing us at{" "}
+						If you're looking for a paid opportunity with mentorship
+						from industry leaders, apply now by emailing us at{" "}
 						<Link
 							href="mailto:contact@wemakedevs.org"
 							className={cn(

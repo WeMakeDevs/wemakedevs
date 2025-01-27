@@ -1,4 +1,3 @@
-import { hackfrostGlobalMap } from "@/assets/images";
 import Faq from "@/components/Faq";
 import {
 	HackathonContentTitleH3,
@@ -11,41 +10,22 @@ import HackathonMain from "@/components/hackathon-content/HackathonMain";
 import HackathonSpecialTestimonial from "@/components/hackathon-content/HackathonSpecialTestimonial";
 import HackathonStats from "@/components/hackathon-content/HackathonStats";
 import HackathonTestimonials from "@/components/hackathon-content/HackathonTestimonials";
-import { CustomMDX } from "@/components/mdx-remote";
 import { ViewContainer } from "@/components/ui/view-container";
 import { HACKATHON_FAQS } from "@/constants";
-import { fetchHackathonData } from "@/lib/hackathon";
 import { ArrowUpRight, Star } from "lucide-react";
-import Image from "next/image";
 import Link from "next/link";
-import { notFound } from "next/navigation";
+import hackathonData from "./data";
+import { images } from "./images";
+import { JudgingCriteria, Overview, Sponsor } from "./markdown";
 
-export async function generateStaticParams() {
-	const hackathons = await fetchHackathonData();
-
-	return hackathons.map(hackathon => ({
-		slug: hackathon.slug,
-	}));
-}
-
-const HackathonPage = async ({ params }: { params: { slug: string } }) => {
-	const hackathons = await fetchHackathonData();
-	const hackathon = hackathons.find(
-		hackathon => hackathon.slug === params.slug,
-	);
-
-	if (!hackathon) notFound();
-
+const HackathonPage = async () => {
 	return (
 		<main className="pt-20">
-			<HackathonCoverImage
-				src={hackathon.image.cover}
-				alt={hackathon.title}
-			/>
-			<HackathonNav slug={hackathon.slug} page="overview" />
-			<HackathonMain hackathon={hackathon} />
+			<HackathonCoverImage src={images.cover} alt={hackathonData.title} />
+			<HackathonNav slug={hackathonData.slug} page="overview" />
+			{/* biome-ignore lint/suspicious/noExplicitAny: <explanation> */}
+			<HackathonMain hackathon={hackathonData as any} />
 			<ViewContainer className="">
-				{/* MDX File information renders from here */}
 				<div className="">
 					<HackathonContentBody>
 						HackFrost was an online winter hackathon that brought
@@ -53,9 +33,10 @@ const HackathonPage = async ({ params }: { params: { slug: string } }) => {
 						innovators from around the globe. HackFrost provided a
 						platform to build impactful projects, featuring
 						workshops, networking opportunities, and prizes worth
-						$10,000+ to tech enthusiast coming from different experience level. Attendees came together to learn, connect, and
-						have fun while advancing their skills and contributing
-						to the open-source community.
+						$10,000+ to tech enthusiast coming from different
+						experience level. Attendees came together to learn,
+						connect, and have fun while advancing their skills and
+						contributing to the open-source community.
 					</HackathonContentBody>
 					<HackathonContentTitle>
 						HackFrost 2024 Stats
@@ -70,7 +51,7 @@ const HackathonPage = async ({ params }: { params: { slug: string } }) => {
 					</HackathonContentTitleH3>
 					<HackathonTestimonials />
 					<HackathonContentBody>
-						<CustomMDX source={hackathon.overview} />
+						<Overview />
 					</HackathonContentBody>
 					<HackathonContentTitle>Prizes</HackathonContentTitle>
 					<HackathonContentBody className="grid grid-cols-1 lg:grid-cols-2 gap-10">
@@ -86,9 +67,9 @@ const HackathonPage = async ({ params }: { params: { slug: string } }) => {
 									Use of Kestra is mandatory for below tracks
 								</span>
 							</div>
-							{hackathon.prizes.winning.map(prize => (
+							{hackathonData.prizes.winning.map(prize => (
 								<div className="space-y-4" key={prize.name}>
-									<p className="text-lg md:text-xl font-semibold flex gap-2 items-center">
+									<div className="text-lg md:text-xl font-semibold flex gap-2 items-center">
 										<Star
 											size={20}
 											strokeWidth={0}
@@ -103,16 +84,16 @@ const HackathonPage = async ({ params }: { params: { slug: string } }) => {
 												</span>
 											)}
 										</div>
-									</p>
+									</div>
 								</div>
 							))}
-							{hackathon.prizes.giveaway && (
+							{hackathonData.prizes.giveaway && (
 								<>
 									<HackathonContentTitleH3>
 										Side Quest
 									</HackathonContentTitleH3>
 									<div className="space-y-4">
-										<p className="text-lg md:text-xl font-semibold flex gap-2 items-center">
+										<div className="text-lg md:text-xl font-semibold flex gap-2 items-center">
 											<Star
 												size={20}
 												strokeWidth={0}
@@ -134,7 +115,7 @@ const HackathonPage = async ({ params }: { params: { slug: string } }) => {
 													Exclusive Swag Bag
 												</span>
 											</div>
-										</p>
+										</div>
 										<p className="text-base md:text-lg font-medium">
 											Top 20 people who star Kestra on
 											Github and share their hackathon
@@ -155,9 +136,9 @@ const HackathonPage = async ({ params }: { params: { slug: string } }) => {
 									Keychron Keyboard + Swag Bag for each
 								</span>
 							</div>
-							{hackathon.prizes.other.map(prize => (
+							{hackathonData.prizes.other.map(prize => (
 								<div className="space-y-4" key={prize.name}>
-									<p className="text-lg md:text-xl font-semibold flex gap-2 items-center">
+									<div className="text-lg md:text-xl font-semibold flex gap-2 items-center">
 										<Star
 											size={20}
 											strokeWidth={0}
@@ -165,27 +146,18 @@ const HackathonPage = async ({ params }: { params: { slug: string } }) => {
 											className="shrink-0"
 										/>{" "}
 										<div className="flex flex-wrap gap-2 items-center">
-											{prize.name} {prize.prize && "-"}
-											{prize.prize && (
-												<span className="px-2 py-1 bg-blue-600 text-white rounded-[4px]">
-													{prize.prize}
-												</span>
-											)}
+											{prize.name}
 										</div>
-									</p>
+									</div>
 								</div>
 							))}
 						</div>
 					</HackathonContentBody>
 					<HackathonContentBody>
-						{hackathon.sponsor && (
-							<CustomMDX source={hackathon.sponsor} />
-						)}
+						<Sponsor />
 					</HackathonContentBody>
 					<HackathonContentBody>
-						{hackathon.judgingCriteria && (
-							<CustomMDX source={hackathon.judgingCriteria} />
-						)}
+						<JudgingCriteria />
 					</HackathonContentBody>
 				</div>
 			</ViewContainer>

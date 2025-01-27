@@ -7,14 +7,15 @@ import {
 	HackathonComingSoonCard,
 	HackathonLastCard,
 } from "@/components/HackathonCard";
-import { fetchHackathonData } from "@/lib/hackathon";
+import { getAllHackathonsData } from "@/lib/hackathon";
 import { cn } from "@/lib/utils";
 import type { GeneralComponent } from "@/types";
 import HackathonStatus from "./HackathonStatus";
 import { ViewContainer } from "./ui/view-container";
 
-const Hackathons = async ({ className, ...props }: GeneralComponent) => {
-	const hackathons = await fetchHackathonData();
+const Hackathons = ({ className, ...props }: GeneralComponent) => {
+	const hackathons = getAllHackathonsData();
+	// import thumbnail from `${hackathons.thumbnailPath}`;
 
 	return (
 		<section
@@ -38,7 +39,7 @@ const Hackathons = async ({ className, ...props }: GeneralComponent) => {
 							href={`/hackathons/${hackathon.slug}`}
 						>
 							<HackathonCardImage
-								src={hackathon.image.thumbnail}
+								src={hackathon.images.thumbnail}
 								alt={hackathon.title}
 							/>
 							<HackathonCardTitle>

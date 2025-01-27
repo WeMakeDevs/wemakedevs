@@ -5,26 +5,16 @@ import {
 import { HackathonContentTitle } from "@/components/hackathon-content";
 import { buttonVariants } from "@/components/ui/button";
 import { ViewContainer } from "@/components/ui/view-container";
-import { fetchHackathonData } from "@/lib/hackathon";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
-import { notFound } from "next/navigation";
+import hackathonData from "../data";
+import { images } from "../images";
 
-const HackathonSubmit = async ({ params }: { params: { slug: string } }) => {
-	const hackathons = await fetchHackathonData();
-	const hackathon = hackathons.find(
-		hackathon => hackathon.slug === params.slug,
-	);
-
-	if (!hackathon) notFound();
-
+const HackathonSubmit = async () => {
 	return (
 		<div className="mb-10 pt-20">
-			<HackathonCoverImage
-				src={hackathon.image.cover}
-				alt={hackathon.title}
-			/>
-			<HackathonNav slug={hackathon.slug} page="submit" />
+			<HackathonCoverImage src={images.cover} alt={hackathonData.title} />
+			<HackathonNav slug={hackathonData.slug} page="submit" />
 			<ViewContainer>
 				<HackathonContentTitle>
 					Registration and Submission
@@ -38,7 +28,7 @@ const HackathonSubmit = async ({ params }: { params: { slug: string } }) => {
 						participate.
 					</p>
 					<Link
-						href={hackathon.registrationLink}
+						href={hackathonData.registrationLink}
 						target="_blank"
 						rel="noopener noreferrer"
 						className={cn(buttonVariants(), "mt-4 w-fit block")}
@@ -53,23 +43,23 @@ const HackathonSubmit = async ({ params }: { params: { slug: string } }) => {
 					<p className="text-foreground/80 mb-2">
 						Please read the{" "}
 						<a
-							href={`/hackathons/${hackathon.slug}/rules`}
+							href={`/hackathons/${hackathonData.slug}/rules`}
 							className="bg-yellow-100/20 inline px-1 py-0.5 hover:bg-yellow-100/0"
 						>
 							submission rules
 						</a>{" "}
 						and{" "}
 						<a
-							href={`/hackathons/${hackathon.slug}/#requirements`}
+							href={`/hackathons/${hackathonData.slug}/#requirements`}
 							className="bg-yellow-100/20 inline px-1 py-0.5 hover:bg-yellow-100/0"
 						>
 							submission requirements
 						</a>{" "}
 						before submitting.
 					</p>
-					{hackathon.submissionLink ? (
+					{hackathonData.submissionLink ? (
 						<Link
-							href={hackathon.submissionLink}
+							href={hackathonData.submissionLink}
 							target="_blank"
 							rel="noopener noreferrer"
 							className={cn(buttonVariants(), "mt-4 w-fit block")}

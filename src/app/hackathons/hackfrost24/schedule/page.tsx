@@ -5,31 +5,21 @@ import {
 import { HackathonScheduleComponent } from "@/components/hackathon-content";
 import { buttonVariants } from "@/components/ui/button";
 import { ViewContainer } from "@/components/ui/view-container";
-import { fetchHackathonData } from "@/lib/hackathon";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
-import { notFound } from "next/navigation";
+import hackathonData from "../data";
+import { images } from "../images";
 
-const HackathonSchedule = async ({ params }: { params: { slug: string } }) => {
-	const hackathons = await fetchHackathonData();
-	const hackathon = hackathons.find(
-		hackathon => hackathon.slug === params.slug,
-	);
-
-	if (!hackathon) notFound();
-
+const HackathonSchedule = async () => {
 	return (
 		<div className="pt-20">
-			<HackathonCoverImage
-				src={hackathon.image.cover}
-				alt={hackathon.title}
-			/>
-			<HackathonNav slug={hackathon.slug} page="schedule" />
+			<HackathonCoverImage src={images.cover} alt={hackathonData.title} />
+			<HackathonNav slug={hackathonData.slug} page="schedule" />
 			<ViewContainer className="my-14">
-				<HackathonScheduleComponent schedule={hackathon.schedule} />
-				{hackathon.googleCalendarLink && (
+				<HackathonScheduleComponent schedule={hackathonData.schedule} />
+				{hackathonData.googleCalendarLink && (
 					<Link
-						href={hackathon.googleCalendarLink}
+						href={hackathonData.googleCalendarLink}
 						target="_blank"
 						rel="noopener noreferrer"
 						className={cn(

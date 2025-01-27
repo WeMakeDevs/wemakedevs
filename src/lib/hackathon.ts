@@ -1,101 +1,24 @@
-import fs from "node:fs/promises";
+import fs from "node:fs";
 import path from "node:path";
-import type { HackathonData } from "@/types";
-import type { StaticImageData } from "next/image";
 
-// Import all images
-import {
-	codefest2024Cover,
-	codefest2024Thumbnail,
-	hackForGoodCover,
-	hackForGoodThumbnail,
-	hackfrost24Cover,
-} from "@/assets/images";
-// Add more imports for other hackathons as needed
+export function getAllHackathonsData() {
+	const hackathonsDir = path.join(process.cwd(), "src/app/hackathons");
 
-const imageMap: Record<
-	string,
-	{ cover: StaticImageData; thumbnail: StaticImageData }
-> = {
-	"codefest-2024": {
-		cover: codefest2024Cover,
-		thumbnail: codefest2024Thumbnail,
-	},
-	"hack-for-good": {
-		cover: hackForGoodCover,
-		thumbnail: hackForGoodThumbnail,
-	},
-	hackfrost24: { cover: hackfrost24Cover, thumbnail: hackForGoodThumbnail },
-	// Add more mappings for other hackathons as needed
-};
+	// Get all directories inside hackathons folder
+	const hackathonFolders = fs.readdirSync(hackathonsDir).filter(folder => {
+		return (
+			fs.statSync(path.join(hackathonsDir, folder)).isDirectory() &&
+			folder !== "page.tsx"
+		); // Exclude the page.tsx file
+	});
 
-function getImagePaths(slug: string): {
-	thumbnail: StaticImageData;
-	cover: StaticImageData;
-} {
-	const images = imageMap[slug];
-	if (!images) {
-		console.warn(`Warning: Images not found for hackathon: ${slug}`);
-		// Return a default image or placeholder if needed
+	const hackathonsData = hackathonFolders.map(folder => {
+		const dataPath = require(`@/app/hackathons/${folder}/data.ts`);
+
 		return {
-			thumbnail: codefest2024Thumbnail, // Use a default thumbnail
-			cover: codefest2024Cover, // Use a default cover
+			...dataPath.default, // Assuming you're exporting as default
 		};
-	}
-	return images;
-}
+	});
 
-export async function fetchHackathonData(): Promise<HackathonData[]> {
-	const hackathonsDir = path.join(process.cwd(), "hackathons");
-	const hackathons: HackathonData[] = [];
-
-	try {
-		const dirs = await fs.readdir(hackathonsDir);
-
-		for (const dir of dirs) {
-			const hackathonPath = path.join(hackathonsDir, dir);
-			const stat = await fs.stat(hackathonPath);
-
-			if (stat.isDirectory()) {
-				const dataPath = path.join(hackathonPath, "data.json");
-				const dataContent = await fs.readFile(dataPath, "utf-8");
-				// biome-ignore lint: idk, ai wrote this code
-				const data: Omit<HackathonData, "image"> & Record<string, any> =
-					JSON.parse(dataContent);
-
-				// Set image paths
-				const images = getImagePaths(data.slug);
-
-				// Read MDX files
-				const mdxFiles = [
-					"overview",
-					"resources",
-					"rules",
-					"sponsor",
-					"judgingCriteria",
-				];
-				for (const file of mdxFiles) {
-					const filePath = path.join(hackathonPath, `${file}.mdx`);
-					const content = await fs.readFile(filePath, "utf-8");
-					data[file] = content;
-				}
-
-				hackathons.push({
-					...data,
-					image: images,
-				});
-			}
-		}
-
-		hackathons.sort((a, b) => {
-			const dateA = new Date(a.startDate);
-			const dateB = new Date(b.startDate);
-			return dateB.getTime() - dateA.getTime();
-		});
-
-		return hackathons;
-	} catch (error) {
-		console.error("Error fetching hackathon data:", error);
-		return [];
-	}
+	return hackathonsData;
 }

@@ -3,8 +3,10 @@ import { useEffect, useState } from "react";
 interface TimeDifference {
 	daysStartToNow: number;
 	hoursStartToNow: number;
+	minutesStartToNow: number;
 	daysEndToNow: number;
 	hoursEndToNow: number;
+	minutesEndToNow: number;
 }
 
 interface HackathonStatus {
@@ -21,8 +23,10 @@ const useHackathonStatus = (
 		timeDifference: {
 			daysStartToNow: 0,
 			hoursStartToNow: 0,
+			minutesStartToNow: 0,
 			daysEndToNow: 0,
 			hoursEndToNow: 0,
+			minutesEndToNow: 0,
 		},
 	});
 
@@ -34,13 +38,16 @@ const useHackathonStatus = (
 
 			const calculateDifference = (
 				date: Date,
-			): { days: number; hours: number } => {
+			): { days: number; hours: number; minutes: number } => {
 				const diff = date.getTime() - now.getTime();
 				const days = Math.floor(Math.abs(diff) / (1000 * 60 * 60 * 24));
 				const hours = Math.floor(
 					(Math.abs(diff) % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60),
 				);
-				return { days, hours };
+				const minutes = Math.floor(
+					(Math.abs(diff) % (1000 * 60 * 60)) / (1000 * 60),
+				);
+				return { days, hours, minutes };
 			};
 
 			let currentStatus: "upcoming" | "ongoing" | "ended";
@@ -60,8 +67,10 @@ const useHackathonStatus = (
 				timeDifference: {
 					daysStartToNow: startDiff.days,
 					hoursStartToNow: startDiff.hours,
+					minutesStartToNow: startDiff.minutes,
 					daysEndToNow: endDiff.days,
 					hoursEndToNow: endDiff.hours,
+					minutesEndToNow: endDiff.minutes,
 				},
 			});
 		};
