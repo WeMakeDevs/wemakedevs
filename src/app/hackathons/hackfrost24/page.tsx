@@ -12,21 +12,11 @@ import HackathonStats from "@/components/hackathon-content/HackathonStats";
 import HackathonTestimonials from "@/components/hackathon-content/HackathonTestimonials";
 import { ViewContainer } from "@/components/ui/view-container";
 import { HACKATHON_FAQS } from "@/constants";
-import { getAllHackathonsData } from "@/lib/hackathon";
-import type { HackathonData } from "@/types";
 import { ArrowUpRight, Star } from "lucide-react";
 import Link from "next/link";
 import hackathonData from "./data";
 import { images } from "./images";
 import { JudgingCriteria, Overview, Sponsor } from "./markdown";
-
-export function generateStaticParams() {
-	const hackathons = getAllHackathonsData();
-
-	return hackathons.map(hackathon => ({
-		slug: hackathon.slug,
-	}));
-}
 
 const HackathonPage = async () => {
 	return (
