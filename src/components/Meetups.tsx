@@ -4,11 +4,23 @@ import Link from "next/link";
 import { MeetupCard, MeetupComingSoonCard, MeetupLastCard } from "./MeetupCard";
 import { ViewContainer } from "./ui/view-container";
 
-import { openSourceConnectMeetup } from "@/assets/images/meetups";
+import {
+	openSourceConnectBangaloreMeetup,
+	openSourceConnectMeetup,
+} from "@/assets/images/meetups";
 
 const meetupEntries: MeetupData[] = [
 	{
-		title: "Open Source Connect",
+		title: "Open Source Connect (Bangalore)",
+		image: openSourceConnectBangaloreMeetup,
+		date: "2025-03-06",
+		description:
+			"Meet fellow professionals, hear insightful talks from industry experts, and enjoy good conversations over pizza and drinks. Plus, there’s swag!",
+		url: "https://lu.ma/mww6iphz",
+		location: "JFrog India, Bengaluru",
+	},
+	{
+		title: "Open Source Connect (Delhi)",
 		image: openSourceConnectMeetup,
 		date: "2024-12-13",
 		description:

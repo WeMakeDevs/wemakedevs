@@ -51,6 +51,7 @@ const MeetupCard = ({
 								month: "long",
 								day: "numeric",
 								timeZone: "Asia/Kolkata",
+								year: "numeric",
 							})}
 						</p>
 					</div>
@@ -59,7 +60,12 @@ const MeetupCard = ({
 						<span className="font-medium">{location}</span>
 					</div>
 				</div>
-				<p className={cn(className, "leading-snug font-semibold")}>
+				<p
+					className={cn(
+						className,
+						"leading-snug font-semibold line-clamp-2",
+					)}
+				>
 					{description}
 				</p>
 			</div>

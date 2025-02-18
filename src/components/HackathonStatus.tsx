@@ -15,7 +15,7 @@ const HackathonStatus = ({
 			className={cn(
 				className,
 				"rounded-full px-3 py-1.5 bg-primary font-semibold text-sm tracking-wide",
-				status === "upcoming" && "bg-accent-1",
+				status === "upcoming" && "bg-accent-4",
 				status === "ongoing" && "bg-accent-2",
 				status === "ended" && "bg-foreground/10",
 			)}
