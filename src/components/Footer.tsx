@@ -224,7 +224,7 @@ const Footer = ({ className, ...props }: GeneralComponent) => {
 					</ul>
 				</div>
 				<p className="text-center text-white font-medium font-title">
-					© 2024 WeMakeDevs. All rights reserved.
+					© 2025 WeMakeDevs. All rights reserved.
 				</p>
 			</ViewContainer>
 		</footer>
