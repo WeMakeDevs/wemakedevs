@@ -11,7 +11,6 @@
 		"prepare": "husky"
 	},
 	"dependencies": {
-		"@hookform/resolvers": "^3.9.1",
 		"@icons-pack/react-simple-icons": "^10.2.0",
 		"@mdx-js/loader": "^3.1.0",
 		"@mdx-js/react": "^3.1.0",
@@ -34,13 +33,10 @@
 		"react": "19.0.0",
 		"react-countup": "^6.5.3",
 		"react-dom": "19.0.0",
-		"react-hook-form": "^7.54.2",
 		"sharp": "^0.33.5",
 		"sonner": "^1.7.1",
 		"tailwind-merge": "^2.6.0",
-		"tailwindcss-animate": "^1.0.7",
-		"wemakedevs": ".",
-		"zod": "^3.24.1"
+		"tailwindcss-animate": "^1.0.7"
 	},
 	"devDependencies": {
 		"@biomejs/biome": "1.9.4",

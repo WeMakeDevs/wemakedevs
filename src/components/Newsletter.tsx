@@ -2,62 +2,12 @@
 
 import { cn } from "@/lib/utils";
 import type { GeneralComponent } from "@/types";
-import { useState } from "react";
-import { Button } from "./ui/button";
-import { Input } from "./ui/input";
-import { ViewContainer } from "./ui/view-container";
-
-import { zodResolver } from "@hookform/resolvers/zod";
 import { SiDiscord, SiTelegram } from "@icons-pack/react-simple-icons";
 import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
-import { useForm } from "react-hook-form";
-import { toast } from "sonner";
-import { z } from "zod";
-import { Form, FormControl, FormField, FormItem, FormMessage } from "./ui/form";
-
-const formSchema = z.object({
-	email: z.string().email({
-		message: "Please enter a valid email!",
-	}),
-});
+import { ViewContainer } from "./ui/view-container";
 
 const Newsletter = ({ className, ...props }: GeneralComponent) => {
-	const form = useForm<z.infer<typeof formSchema>>({
-		resolver: zodResolver(formSchema),
-		defaultValues: {
-			email: "",
-		},
-	});
-
-	const [isLoading, setIsLoading] = useState(false);
-
-	const onSubmit = async (value: z.infer<typeof formSchema>) => {
-		setIsLoading(true);
-
-		try {
-			const response = await fetch("/api/newsletter", {
-				method: "POST",
-				headers: {
-					"Content-Type": "application/json",
-				},
-				body: JSON.stringify(value.email),
-			});
-
-			const data = await response.json();
-			toast.success("Subscribed to the newsletter!", {
-				description: "Please check your email for confirmation.",
-			});
-		} catch (error) {
-			toast.error("Ohh no! Some error occured!", {
-				description:
-					"Please send me an email at contact@wemakedevs.org and we'll fix it asap.",
-			});
-		} finally {
-			setIsLoading(false);
-		}
-	};
-
 	return (
 		<section
 			id="join"
@@ -68,51 +18,37 @@ const Newsletter = ({ className, ...props }: GeneralComponent) => {
 			{...props}
 		>
 			<ViewContainer className="space-y-10">
-				<h2 className="text-4xl md:text-5xl text-white text-center">
+				<h2 className="text-4xl md:text-5xl text-white text-center border-b sm:border-b-0 border-white/20 pb-4">
 					Join Our Community
 				</h2>
-				<div className="flex justify-between p-10 md:p-12 lg:p-16 shadow-xl bg-gray-50 rounded-[8px] flex-col md:flex-row gap-8 lg:gap-10">
-					<div className="grow">
-						<h2 className="text-2xl md:text-[28px] font-semibold">
+				<div className="flex justify-between sm:p-6 md:p-8 lg:p-12 shadow-xl sm:bg-gray-50 rounded-[8px] flex-col gap-8">
+					<div className="text-center">
+						<h2 className="text-2xl md:text-[28px] font-semibold text-white sm:text-black">
 							Join the Newsletter
 						</h2>
-						<p className="font-medium text-gray-500 text-lg md:text-[20px] mt-2 md:mt-3">
+						<p className="font-medium text-white/80 sm:text-gray-500 text-lg md:text-[20px] mt-2">
 							Get the latest insights and updates straight to your
 							inbox.
 						</p>
 					</div>
-					<Form {...form}>
-						<form
-							className="grow"
-							onSubmit={form.handleSubmit(onSubmit)}
-						>
-							<div className="flex gap-2 flex-col md:flex-row">
-								<FormField
-									control={form.control}
-									name="email"
-									render={({ field }) => (
-										<FormItem className="grow">
-											<FormControl>
-												<Input
-													placeholder="Enter your email"
-													{...field}
-													className="h-13"
-												/>
-											</FormControl>
-											<FormMessage />
-										</FormItem>
-									)}
-								/>
-								<Button type="submit" disabled={isLoading}>
-									Subscribe
-								</Button>
-							</div>
-							<p className="text-sm md:text-base text-gray-500 font-medium mt-2">
-								Your privacy is important. We never share your
-								email.
-							</p>
-						</form>
-					</Form>
+					<div className="w-full">
+						<iframe
+							title="Newsletter"
+							width="100vw"
+							height={400}
+							className="h-[420px] min-[400px]:h-[400px] min-[570px]:h-[350px]"
+							src="https://sibforms.com/serve/MUIFALA912jqnTHNySRo2quOS4yyrcNCA21Nm5FtmEalyN0vbNZ4BPwgcZHijdIW1cNO6aJzyYCtVaAFwzwvs5YrkKusMEKWbZg275CVt843ybVsLUU5Bxh6lJWzF6S6qlLr-VB8Vp7TZHuzqfB9OEzbdWW_Ct3BTmuqL_91uuKUmVSF8layuPrzJwamrfTiuZ-E9CDbXu9T7Zqx"
+							frameBorder="0"
+							scrolling="auto"
+							allowFullScreen
+							style={{
+								display: "block",
+								marginLeft: "auto",
+								marginRight: "auto",
+								maxWidth: "100%",
+							}}
+						/>
+					</div>
 				</div>
 				<div className="flex flex-col md:flex-row gap-4 md:gap-10">
 					<Link
