@@ -27,13 +27,13 @@ const HackathonMain = ({ hackathon }: { hackathon: HackathonData }) => {
 						</p>
 						<div className="flex items-center gap-4">
 							<Link
-								href={`/hackathons/${hackathon.slug}/projects`}
+								href={hackathon.hackathonCta.href}
 								className={cn(
 									buttonVariants({ variant: "default" }),
 									"mt-4 md:mt-6 ",
 								)}
 							>
-								Explore projects
+								{hackathon.hackathonCta.label}
 							</Link>
 						</div>
 					</div>

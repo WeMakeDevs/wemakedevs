@@ -37,6 +37,10 @@ const DATA = {
 			page: "projects",
 		},
 	],
+	hackathonCta: {
+		href: "/hackathons/hackfrost24/projects",
+		label: "Explore projects",
+	},
 	prizes: {
 		winning: [
 			{
@@ -130,7 +134,7 @@ const DATA = {
 			items: [
 				{
 					title: "Discord community call",
-					description: "We’ll be answering questions",
+					description: "We'll be answering questions",
 					link: {
 						name: "Get notified",
 						url: "https://discord.com/events/862638364016771082/1306606191153119312",

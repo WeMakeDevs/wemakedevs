@@ -102,6 +102,10 @@ export interface HackathonData {
 		all?: OtherProjectInterface[];
 	};
 	googleCalendarLink?: string;
+	hackathonCta: {
+		href: string;
+		label: string;
+	};
 }
 
 export interface HackathonCardType extends GeneralComponent {

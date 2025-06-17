@@ -22,6 +22,10 @@ const DATA = {
 		href: "/hackathons/hackweeks/submit",
 		label: "Submit Project",
 	},
+	hackathonCta: {
+		href: "/hackathons/hackweeks/submit",
+		label: "Register for Hackathon",
+	},
 	images,
 	prizes: {
 		winning: [
