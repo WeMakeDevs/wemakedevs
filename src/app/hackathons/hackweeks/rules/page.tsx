@@ -16,6 +16,7 @@ const HackathonRules = async () => {
 				slug={hackathonData.slug}
 				page="rules"
 				links={hackathonData.navLinks}
+				submitButton={hackathonData.submitButton}
 			/>
 			<ViewContainer className="my-10">
 				<HackathonContentBody>

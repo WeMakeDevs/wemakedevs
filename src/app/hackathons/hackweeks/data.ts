@@ -18,6 +18,10 @@ const DATA = {
 		},
 		{ href: "/hackathons/hackweeks/rules", label: "Rules", page: "rules" },
 	],
+	submitButton: {
+		href: "/hackathons/hackweeks/submit",
+		label: "Submit Project",
+	},
 	images,
 	prizes: {
 		winning: [
@@ -112,7 +116,7 @@ const DATA = {
 			items: [
 				{
 					title: "Discord community call",
-					description: "We’ll be answering questions",
+					description: "We'll be answering questions",
 					link: {
 						name: "Get notified",
 						url: "https://discord.com/events/862638364016771082/1306606191153119312",

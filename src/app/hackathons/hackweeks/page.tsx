@@ -23,6 +23,7 @@ const HackathonPage = async () => {
 				slug={hackathonData.slug}
 				page="overview"
 				links={hackathonData.navLinks}
+				submitButton={hackathonData.submitButton}
 			/>
 			{/* biome-ignore lint/suspicious/noExplicitAny: <explanation> */}
 			<HackathonMain hackathon={hackathonData as any} />

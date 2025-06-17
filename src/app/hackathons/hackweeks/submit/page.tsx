@@ -18,6 +18,7 @@ const HackathonSubmit = async () => {
 				slug={hackathonData.slug}
 				page="submit"
 				links={hackathonData.navLinks}
+				submitButton={hackathonData.submitButton}
 			/>
 			<ViewContainer>
 				<HackathonContentTitle>
