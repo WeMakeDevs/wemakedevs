@@ -12,7 +12,11 @@ const HackathonResources = async () => {
 	return (
 		<div className="pt-20 pb-10">
 			<HackathonCoverImage src={images.cover} alt={hackathonData.title} />
-			<HackathonNav slug={hackathonData.slug} page="resources" />
+			<HackathonNav
+				slug={hackathonData.slug}
+				page="resources"
+				links={hackathonData.navLinks}
+			/>
 			<ViewContainer>
 				<HackathonContentBody>
 					<Resources />

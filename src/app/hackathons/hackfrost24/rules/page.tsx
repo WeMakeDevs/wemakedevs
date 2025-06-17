@@ -12,7 +12,11 @@ const HackathonRules = async () => {
 	return (
 		<div className="pt-20 pb-10">
 			<HackathonCoverImage src={images.cover} alt={hackathonData.title} />
-			<HackathonNav slug={hackathonData.slug} page="rules" />
+			<HackathonNav
+				slug={hackathonData.slug}
+				page="rules"
+				links={hackathonData.navLinks}
+			/>
 			<ViewContainer className="my-10">
 				<HackathonContentBody>
 					<Rules />

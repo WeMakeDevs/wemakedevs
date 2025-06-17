@@ -10,6 +10,33 @@ const DATA = {
 		"Network, build projects and showcase your best ideas this winter",
 	slug: "hackfrost24",
 	images,
+	navLinks: [
+		{
+			href: "/hackathons/hackfrost24",
+			label: "Overview",
+			page: "overview",
+		},
+		{
+			href: "/hackathons/hackfrost24/schedule",
+			label: "Schedule",
+			page: "schedule",
+		},
+		{
+			href: "/hackathons/hackfrost24/resources",
+			label: "Resources",
+			page: "resources",
+		},
+		{
+			href: "/hackathons/hackfrost24/rules",
+			label: "Rules",
+			page: "rules",
+		},
+		{
+			href: "/hackathons/hackfrost24/projects",
+			label: "Projects",
+			page: "projects",
+		},
+	],
 	prizes: {
 		winning: [
 			{

@@ -14,7 +14,11 @@ const HackathonSubmit = async () => {
 	return (
 		<div className="mb-10 pt-20">
 			<HackathonCoverImage src={images.cover} alt={hackathonData.title} />
-			<HackathonNav slug={hackathonData.slug} page="submit" />
+			<HackathonNav
+				slug={hackathonData.slug}
+				page="submit"
+				links={hackathonData.navLinks}
+			/>
 			<ViewContainer>
 				<HackathonContentTitle>
 					Registration and Submission

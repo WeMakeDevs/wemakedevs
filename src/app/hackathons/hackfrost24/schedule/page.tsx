@@ -14,7 +14,11 @@ const HackathonSchedule = async () => {
 	return (
 		<div className="pt-20">
 			<HackathonCoverImage src={images.cover} alt={hackathonData.title} />
-			<HackathonNav slug={hackathonData.slug} page="schedule" />
+			<HackathonNav
+				slug={hackathonData.slug}
+				page="schedule"
+				links={hackathonData.navLinks}
+			/>
 			<ViewContainer className="my-14">
 				<HackathonScheduleComponent schedule={hackathonData.schedule} />
 				{hackathonData.googleCalendarLink && (

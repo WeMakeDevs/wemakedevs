@@ -22,7 +22,11 @@ const HackathonPage = async () => {
 	return (
 		<main className="pt-20">
 			<HackathonCoverImage src={images.cover} alt={hackathonData.title} />
-			<HackathonNav slug={hackathonData.slug} page="overview" />
+			<HackathonNav
+				slug={hackathonData.slug}
+				page="overview"
+				links={hackathonData.navLinks}
+			/>
 			{/* biome-ignore lint/suspicious/noExplicitAny: <explanation> */}
 			<HackathonMain hackathon={hackathonData as any} />
 			<ViewContainer className="">

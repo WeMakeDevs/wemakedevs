@@ -4,12 +4,19 @@ import Link from "next/link";
 import { buttonVariants } from "../ui/button";
 import { ViewContainer } from "../ui/view-container";
 
+interface NavLink {
+	href: string;
+	label: string;
+	page: string;
+}
+
 const HackathonNav = ({
 	page,
 	slug,
 	className,
+	links,
 	...props
-}: HackathonNavInterface) => {
+}: HackathonNavInterface & { links: NavLink[] }) => {
 	return (
 		<nav
 			aria-label="secondary nav"
@@ -21,61 +28,19 @@ const HackathonNav = ({
 		>
 			<ViewContainer className="flex justify-between flex-col md:flex-row">
 				<ul className="flex flex-col md:flex-row list-none">
-					<li>
-						<Link
-							href={`/hackathons/${slug}`}
-							className={cn(
-								"px-6 py-4 font-medium hover:bg-foreground/10 inline-block w-full md:w-auto text-center",
-								page === "overview" && "shadow-secondaryNav",
-							)}
-						>
-							Overview
-						</Link>
-					</li>
-					<li>
-						<Link
-							href={`/hackathons/${slug}/schedule`}
-							className={cn(
-								"px-6 py-4 font-medium hover:bg-foreground/10 inline-block w-full md:w-auto text-center",
-								page === "schedule" && "shadow-secondaryNav",
-							)}
-						>
-							Schedule
-						</Link>
-					</li>
-					<li>
-						<Link
-							href={`/hackathons/${slug}/resources`}
-							className={cn(
-								"px-6 py-4 font-medium hover:bg-foreground/10 inline-block w-full md:w-auto text-center",
-								page === "resources" && "shadow-secondaryNav",
-							)}
-						>
-							Resources
-						</Link>
-					</li>
-					<li>
-						<Link
-							href={`/hackathons/${slug}/rules`}
-							className={cn(
-								"px-6 py-4 font-medium hover:bg-foreground/10 inline-block w-full md:w-auto text-center",
-								page === "rules" && "shadow-secondaryNav",
-							)}
-						>
-							Rules
-						</Link>
-					</li>
-					<li>
-						<Link
-							href={`/hackathons/${slug}/projects`}
-							className={cn(
-								"px-6 py-4 font-medium hover:bg-foreground/10 inline-block w-full md:w-auto text-center",
-								page === "projects" && "shadow-secondaryNav",
-							)}
-						>
-							Projects
-						</Link>
-					</li>
+					{links.map(link => (
+						<li key={link.page}>
+							<Link
+								href={link.href}
+								className={cn(
+									"px-6 py-4 font-medium hover:bg-foreground/10 inline-block w-full md:w-auto text-center",
+									page === link.page && "shadow-secondaryNav",
+								)}
+							>
+								{link.label}
+							</Link>
+						</li>
+					))}
 				</ul>
 				{/* <Link
           href={`/hackathons/${slug}/submit`}

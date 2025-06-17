@@ -9,6 +9,15 @@ const DATA = {
 	description:
 		"Network, build projects and showcase your best ideas this winter",
 	slug: "hackweeks",
+	navLinks: [
+		{ href: "/hackathons/hackweeks", label: "Overview", page: "overview" },
+		{
+			href: "/hackathons/hackweeks/resources",
+			label: "Resources",
+			page: "resources",
+		},
+		{ href: "/hackathons/hackweeks/rules", label: "Rules", page: "rules" },
+	],
 	images,
 	prizes: {
 		winning: [
