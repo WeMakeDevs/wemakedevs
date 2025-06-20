@@ -22,60 +22,22 @@ const HackathonSubmit = async () => {
 			/>
 			<ViewContainer>
 				<HackathonContentTitle>
-					Registration and Submission
+					✅ How to submit your project:
 				</HackathonContentTitle>
-				<div className="mb-4">
-					<h3 className="text-lg md:text-xl font-bold mb-2">
-						Registration
-					</h3>
-					<p className="text-foreground/80">
-						Please ensure you register before the deadline to
-						participate.
+				<div>
+					<p className="font-medium my-6">
+						Once your flow is ready, share it on social media with
+						your GitHub repository link. Don't forget to tag
+						WeMakeDevs and Kestra using #KestraHackWeek.
 					</p>
 					<Link
-						href={hackathonData.registrationLink}
+						href="https://forms.gle/Rouo5hxDm6ZQfcUPA"
 						target="_blank"
 						rel="noopener noreferrer"
 						className={cn(buttonVariants(), "mt-4 w-fit block")}
 					>
-						Register Now
+						Submit Project
 					</Link>
-				</div>
-				<div>
-					<h3 className="text-lg md:text-xl font-bold mb-2 mt-12">
-						Submission
-					</h3>
-					<p className="text-foreground/80 mb-2">
-						Please read the{" "}
-						<a
-							href={`/hackathons/${hackathonData.slug}/rules`}
-							className="bg-yellow-100/20 inline px-1 py-0.5 hover:bg-yellow-100/0"
-						>
-							submission rules
-						</a>{" "}
-						and{" "}
-						<a
-							href={`/hackathons/${hackathonData.slug}/#requirements`}
-							className="bg-yellow-100/20 inline px-1 py-0.5 hover:bg-yellow-100/0"
-						>
-							submission requirements
-						</a>{" "}
-						before submitting.
-					</p>
-					{hackathonData.submissionLink ? (
-						<Link
-							href={hackathonData.submissionLink}
-							target="_blank"
-							rel="noopener noreferrer"
-							className={cn(buttonVariants(), "mt-4 w-fit block")}
-						>
-							Submit Now
-						</Link>
-					) : (
-						<p className="text-foreground/80">
-							Submissions will open soon. Stay tuned for updates!
-						</p>
-					)}
 				</div>
 			</ViewContainer>
 		</div>
