@@ -51,12 +51,14 @@ const HackathonMain = ({ hackathon }: { hackathon: HackathonData }) => {
 								endDate={hackathon.endDate}
 							/>
 							<hr className="my-5 border-foreground/40" />
-							<p className="flex gap-4 items-end font-medium">
-								Prizes worth:{" "}
-								<span className="text-2xl md:text-3xl font-title font-bold">
-									{hackathon.prize}$+
-								</span>
-							</p>
+							{hackathon.prize && (
+								<p className="flex gap-4 items-end font-medium">
+									Prizes worth:{" "}
+									<span className="text-2xl md:text-3xl font-title font-bold">
+										{hackathon.prize}$+
+									</span>
+								</p>
+							)}
 						</div>
 					</div>
 				</div>

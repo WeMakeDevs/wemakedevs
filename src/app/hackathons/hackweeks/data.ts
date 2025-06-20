@@ -1,13 +1,13 @@
 import { images } from "./images";
 
 const DATA = {
-	title: "Hack Weeks",
-	prize: "10,000",
+	title: "Kestra Hack Weeks",
+	// prize: "10,000",
 	type: "offline",
-	startDate: "2024-11-29T04:30:00Z",
-	endDate: "2024-12-01T18:30:00Z",
+	startDate: "2025-06-16T04:30:00Z",
+	endDate: "2025-06-22T16:30:00Z",
 	description:
-		"Network, build projects and showcase your best ideas this winter",
+		"Get hands-on experience working with popular open source projects created by top tech companies.",
 	slug: "hackweeks",
 	navLinks: [
 		{ href: "/hackathons/hackweeks", label: "Overview", page: "overview" },
