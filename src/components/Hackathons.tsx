@@ -37,6 +37,7 @@ const Hackathons = ({ className, ...props }: GeneralComponent) => {
 						<HackathonCard
 							key={hackathon.slug}
 							href={`/hackathons/${hackathon.slug}`}
+							className="h-fit"
 						>
 							<HackathonCardImage
 								src={hackathon.images.thumbnail}
