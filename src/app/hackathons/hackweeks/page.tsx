@@ -19,7 +19,7 @@ const HackathonPage = async () => {
 				slug={hackathonData.slug}
 				page="overview"
 				links={hackathonData.navLinks}
-				submitButton={hackathonData.submitButton}
+				navCta={hackathonData.hackathonCtas.nav}
 			/>
 			{/* biome-ignore lint/suspicious/noExplicitAny: <explanation> */}
 			<HackathonMain hackathon={hackathonData as any} />
@@ -70,7 +70,7 @@ const HackathonPage = async () => {
 					<HackathonContentBody className="space-y-4 text-lg">
 						<p>
 							✅ Once your flow is ready, share it on social media
-							with your GitHub repository link. Don’t forget to
+							with your GitHub repository link. Don't forget to
 							tag WeMakeDevs and Kestra using #KestraHackWeek.
 						</p>
 					</HackathonContentBody>

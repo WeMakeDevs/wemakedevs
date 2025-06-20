@@ -102,9 +102,15 @@ export interface HackathonData {
 		all?: OtherProjectInterface[];
 	};
 	googleCalendarLink?: string;
-	hackathonCta: {
-		href: string;
-		label: string;
+	hackathonCtas: {
+		nav?: {
+			href: string;
+			label: string;
+		};
+		main: {
+			href: string;
+			label: string;
+		};
 	};
 }
 

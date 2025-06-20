@@ -10,7 +10,7 @@ interface NavLink {
 	page: string;
 }
 
-interface SubmitButton {
+interface NavCta {
 	href: string;
 	label: string;
 }
@@ -20,11 +20,11 @@ const HackathonNav = ({
 	slug,
 	className,
 	links,
-	submitButton,
+	navCta,
 	...props
 }: HackathonNavInterface & {
 	links: NavLink[];
-	submitButton?: SubmitButton;
+	navCta?: NavCta;
 }) => {
 	return (
 		<nav
@@ -51,15 +51,15 @@ const HackathonNav = ({
 						</li>
 					))}
 				</ul>
-				{submitButton && (
+				{navCta && (
 					<Link
-						href={submitButton.href}
+						href={navCta.href}
 						className={cn(
 							buttonVariants(),
 							"inline-block md:ml-auto text-center",
 						)}
 					>
-						{submitButton.label}
+						{navCta.label}
 					</Link>
 				)}
 			</ViewContainer>

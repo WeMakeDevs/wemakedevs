@@ -37,9 +37,15 @@ const DATA = {
 			page: "projects",
 		},
 	],
-	hackathonCta: {
-		href: "/hackathons/hackfrost24/projects",
-		label: "Explore projects",
+	hackathonCtas: {
+		nav: {
+			href: "/hackathons/hackfrost24/projects",
+			label: "Explore projects",
+		},
+		main: {
+			href: "/hackathons/hackfrost24/projects",
+			label: "Explore projects",
+		},
 	},
 	prizes: {
 		winning: [

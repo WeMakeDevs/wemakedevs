@@ -27,13 +27,13 @@ const HackathonMain = ({ hackathon }: { hackathon: HackathonData }) => {
 						</p>
 						<div className="flex items-center gap-4">
 							<Link
-								href={hackathon.hackathonCta.href}
+								href={hackathon.hackathonCtas.main.href}
 								className={cn(
 									buttonVariants({ variant: "default" }),
 									"mt-4 md:mt-6 ",
 								)}
 							>
-								{hackathon.hackathonCta.label}
+								{hackathon.hackathonCtas.main.label}
 							</Link>
 						</div>
 					</div>

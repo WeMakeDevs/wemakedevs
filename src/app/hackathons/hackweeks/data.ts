@@ -18,13 +18,15 @@ const DATA = {
 		},
 		{ href: "/hackathons/hackweeks/rules", label: "Rules", page: "rules" },
 	],
-	submitButton: {
-		href: "/hackathons/hackweeks/submit",
-		label: "Submit Project",
-	},
-	hackathonCta: {
-		href: "/hackathons/hackweeks/submit",
-		label: "Register for Hackathon",
+	hackathonCtas: {
+		nav: {
+			href: "/hackathons/hackweeks/submit",
+			label: "Submit Project",
+		},
+		main: {
+			href: "https://forms.gle/Rouo5hxDm6ZQfcUPA",
+			label: "Register for Hackathon",
+		},
 	},
 	images,
 	prizes: {
