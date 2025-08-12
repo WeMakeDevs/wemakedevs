@@ -9,11 +9,9 @@ import {
 import HackathonStatus from "@/components/HackathonStatus";
 import Navbar from "@/components/Navbar";
 import { ViewContainer } from "@/components/ui/view-container";
-import { getAllHackathonsData } from "@/lib/hackathon";
+import { hackathons } from "@/constants/hackathons";
 
 const Hackathons = () => {
-	const hackathons = getAllHackathonsData();
-
 	return (
 		<>
 			<Navbar />
@@ -25,7 +23,7 @@ const Hackathons = () => {
 							href={`/hackathons/${hackathon.slug}`}
 						>
 							<HackathonCardImage
-								src={hackathon.images.thumbnail}
+								src={hackathon.thumbnail}
 								alt={hackathon.title}
 							/>
 							<HackathonCardTitle>

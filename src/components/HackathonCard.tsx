@@ -17,7 +17,7 @@ const HackathonCard = ({ className, children, href }: HackathonCardType) => {
 			href={href}
 			className={cn(
 				className,
-				"rounded group relative shadow-xl hover:shadow-none transition-shadow",
+				"rounded group relative shadow-xl hover:shadow-none transition-shadow h-fit",
 			)}
 			target="_blank"
 			rel="noopener noreferrer"

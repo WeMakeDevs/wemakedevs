@@ -7,16 +7,13 @@ import {
 	HackathonComingSoonCard,
 	HackathonLastCard,
 } from "@/components/HackathonCard";
-import { getAllHackathonsData } from "@/lib/hackathon";
+import { hackathons } from "@/constants/hackathons";
 import { cn } from "@/lib/utils";
 import type { GeneralComponent } from "@/types";
 import HackathonStatus from "./HackathonStatus";
 import { ViewContainer } from "./ui/view-container";
 
 const Hackathons = ({ className, ...props }: GeneralComponent) => {
-	const hackathons = getAllHackathonsData();
-	// import thumbnail from `${hackathons.thumbnailPath}`;
-
 	return (
 		<section
 			className={cn(className, "mt-24 mb-16 scroll-m-[100px]")}
@@ -37,10 +34,9 @@ const Hackathons = ({ className, ...props }: GeneralComponent) => {
 						<HackathonCard
 							key={hackathon.slug}
 							href={`/hackathons/${hackathon.slug}`}
-							className="h-fit"
 						>
 							<HackathonCardImage
-								src={hackathon.images.thumbnail}
+								src={hackathon.thumbnail}
 								alt={hackathon.title}
 							/>
 							<HackathonCardTitle>
