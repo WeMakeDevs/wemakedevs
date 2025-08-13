@@ -1,4 +1,5 @@
 import {
+	HackathonContentTitle,
 	HackathonCoverImage,
 	HackathonNav,
 } from "@/components/hackathon-content";
@@ -14,6 +15,18 @@ const HackathonResources = async () => {
 			<HackathonCoverImage src={images.cover} alt={DATA.title} />
 			<HackathonNav slug={DATA.slug} page="resources" links={navLinks} />
 			<ViewContainer>
+				<HackathonContentBody>
+					<div className="aspect-video w-full max-w-[800px]">
+						<iframe
+							src="https://www.youtube.com/embed/5_0JTeR3Yt8?si=DWSUyvaK5077BusY"
+							title="YouTube video player"
+							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+							referrerPolicy="strict-origin-when-cross-origin"
+							allowFullScreen
+						/>
+					</div>
+				</HackathonContentBody>
+				<HackathonContentTitle>Resources</HackathonContentTitle>
 				<HackathonContentBody>
 					<div className="space-y-6">
 						<section>

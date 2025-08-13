@@ -3,7 +3,7 @@ import { images } from "./images";
 
 const DATA = {
 	title: "AgentHack 2025",
-	prize: "MacBook and more!",
+	prize: "$5,000+",
 	startDate: "2025-08-20T04:30:00Z",
 	endDate: "2025-08-24T16:30:00Z",
 	description: "Build AI that works for you!",
@@ -116,7 +116,7 @@ const schedule = [
 				title: "AgentHack 2025 Live Stream: Build AI that works for you!",
 				link: {
 					name: "Watch Live",
-					url: "#",
+					url: "https://www.youtube.com/live/5_0JTeR3Yt8?si=DWSUyvaK5077BusY",
 				},
 				time: "2025-08-18T20:30:00+05:30",
 			},

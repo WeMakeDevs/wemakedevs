@@ -69,14 +69,9 @@ const HackathonHeader = ({
 								endDate={endDate}
 							/>
 							<hr className="my-5 border-foreground/40" />
-							{prize && (
-								<p className="flex gap-4 items-end font-medium">
-									Prizes:{" "}
-									<span className="text-2xl md:text-3xl font-title font-bold">
-										{prize}
-									</span>
-								</p>
-							)}
+							<p className="flex gap-4 items-end font-medium">
+								Win Apple MacBook Pro, iPhone 16, and iPad Air!
+							</p>
 						</div>
 					</div>
 				</div>
