@@ -17,12 +17,12 @@ const HackathonCard = ({ className, children, href }: HackathonCardType) => {
 			href={href}
 			className={cn(
 				className,
-				"rounded group relative shadow-xl hover:shadow-none transition-shadow h-fit",
+				"rounded group relative shadow-xl hover:shadow-none transition-shadow h-full flex flex-col",
 			)}
 			target="_blank"
 			rel="noopener noreferrer"
 		>
-			<div className="rounded border-4 border-accent-4 p-2 md:p-4 space-y-4 bg-card">
+			<div className="rounded border-4 border-accent-4 p-2 md:p-4 space-y-4 bg-card flex-1 flex flex-col">
 				{children}
 			</div>
 			<div className="absolute bottom-0 left-0 rounded-b group-hover:translate-y-[90%] -z-10 transition-transform w-full bg-accent-4 border-b-4 border-t-4 border-accent-4 font-bold tracking-wider uppercase flex justify-center items-center">
@@ -50,7 +50,10 @@ const HackathonCardDescription = ({
 	...props
 }: GeneralComponent) => {
 	return (
-		<p className={cn(className, "leading-snug font-medium")} {...props}>
+		<p
+			className={cn(className, "leading-snug font-medium flex-1")}
+			{...props}
+		>
 			{children}
 		</p>
 	);

@@ -15,14 +15,14 @@ const hackathons: HackathonType[] = [
 	{
 		slug: agenthackData.slug,
 		title: agenthackData.title,
-		description: agenthackData.description,
+		description: agenthackData.descriptionCard,
 		thumbnail: agenthackData.images.thumbnail,
 		startDate: agenthackData.startDate,
 		endDate: agenthackData.endDate,
 	},
 	{
 		slug: hackfrost24Data.slug,
-		title: hackfrost24Data.title,
+		title: hackfrost24Data.titleCard,
 		description: hackfrost24Data.description,
 		thumbnail: hackfrost24Data.images.thumbnail,
 		startDate: hackfrost24Data.startDate,

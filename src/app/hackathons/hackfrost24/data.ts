@@ -2,6 +2,7 @@ import { images } from "./images";
 
 const DATA = {
 	title: "HackFrost Winter Hackathon",
+	titleCard: "HackFrost Hackathon",
 	prize: "10,000",
 	type: "offline",
 	startDate: "2024-11-29T04:30:00Z",

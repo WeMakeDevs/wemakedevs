@@ -33,24 +33,24 @@ const HackathonPage = () => {
 					together developers, automation builders, and AI enthusiasts
 					from around the world. Focused on building smart,
 					controllable agents, the hackathon offers a hands-on
-					platform to explore Portia’s agent framework and tool
-					integrations.
+					platform to explore Portia's agent framework and tool
+					integrations. Participants of all experience levels will
+					come together to build useful, safe, and customizable AI
+					agents. Alongside hacking, the event features live sessions,
+					expert mentoring, fun challenges, and prizes including
+					MacBook Airs and exclusive swag.
 				</HackathonContentBody>
 				<HackathonContentBody>
-					Participants of all experience levels will come together to
-					build useful, safe, and customizable AI agents. Alongside
-					hacking, the event features live sessions, expert mentoring,
-					fun challenges, and prizes including MacBook Airs and
-					exclusive swag.
-				</HackathonContentBody>
-				<HackathonContentBody>
-					AgentHack 2025 is more than just a hackathon, it’s a space
+					AgentHack 2025 is more than just a hackathon, it's a space
 					to learn, collaborate, and shape the future of open-source
 					AI.
 				</HackathonContentBody>
 				<HackathonContentTitle>Prizes</HackathonContentTitle>
-				<HackathonContentBody>
+				<HackathonContentBody className="grid grid-cols-1 lg:grid-cols-2 gap-10">
 					<div className="space-y-8">
+						<HackathonContentTitleH3>
+							Winning Prizes
+						</HackathonContentTitleH3>
 						{DATA.prizes.winning.map(prize => (
 							<div className="space-y-4" key={prize.name}>
 								<div className="text-lg md:text-xl font-semibold flex gap-2 items-center">
@@ -71,6 +71,49 @@ const HackathonPage = () => {
 								</div>
 							</div>
 						))}
+						{DATA.prizes.giveaway && (
+							<>
+								<HackathonContentTitleH3>
+									Side Quest
+								</HackathonContentTitleH3>
+								<div className="space-y-4">
+									<div className="text-lg md:text-xl font-semibold flex gap-2 items-center">
+										<Star
+											size={20}
+											strokeWidth={0}
+											fill="#ffd333"
+											className="shrink-0"
+										/>{" "}
+										<div className="flex flex-wrap gap-4 items-center">
+											<Link
+												href="https://github.com/portiaAI/portia-sdk-python"
+												className="underline hover:no-underline group flex items-center gap-1"
+												target="_blank"
+												rel="noopener noreferrer"
+											>
+												Star Portia on GitHub{" "}
+												<ArrowUpRight className="group-hover:-translate-y-1 group-hover:translate-x-1 transition-transform" />
+											</Link>{" "}
+											-
+											<span className="px-2 py-1 bg-blue-600 text-white rounded-[4px]">
+												Exclusive Swags
+											</span>
+										</div>
+									</div>
+									<p className="text-base md:text-lg font-medium">
+										Top 5 teams who star Portia on GitHub
+										and share their hackathon experience on
+										socials using #AgentHack2025 will get
+										exclusive swag bags.
+									</p>
+								</div>
+							</>
+						)}
+					</div>
+					<div className="space-y-8">
+						<HackathonContentTitleH3>
+							Other Prizes
+						</HackathonContentTitleH3>
 						{DATA.prizes.other.map(prize => (
 							<div className="space-y-4" key={prize.name}>
 								<div className="text-lg md:text-xl font-semibold flex gap-2 items-center">
@@ -112,7 +155,7 @@ const HackathonPage = () => {
 				</HackathonContentBody>
 				<HackathonContentBody>
 					Portia tackles the core challenges of building practical AI
-					agents through a powerful suite of features including a
+					agents through a powerful suite of features including a{" "}
 					<span className="font-bold">
 						Controllable Agent Framework
 					</span>{" "}
@@ -162,9 +205,9 @@ const HackathonPage = () => {
 							<span className="font-semibold">
 								Implementation of the Idea:
 							</span>{" "}
-							Reviews how well the idea was executed
-							technically—does the agent function as intended, and
-							does it make good use of Portia's features?
+							Reviews how well the idea was executed technically,
+							does the agent function as intended, and does it
+							make good use of Portia's features?
 						</li>
 						<li>
 							<span className="font-semibold">

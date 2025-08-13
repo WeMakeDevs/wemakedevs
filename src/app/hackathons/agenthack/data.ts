@@ -3,10 +3,12 @@ import { images } from "./images";
 
 const DATA = {
 	title: "AgentHack 2025",
-	prize: "Apple MacBooks",
+	prize: "MacBook and more!",
 	startDate: "2025-08-20T04:30:00Z",
 	endDate: "2025-08-24T16:30:00Z",
-	description: "Build AI that works for you",
+	description: "Build AI that works for you!",
+	descriptionCard:
+		"Create powerful, tool-connected agents that work for you!",
 	slug: "agenthack",
 	images,
 	cta: {
@@ -16,17 +18,40 @@ const DATA = {
 	prizes: {
 		winning: [
 			{
-				name: "Top 3",
-				prize: "MacBook Air",
+				name: "Winning team",
+				prize: "Apple MacBook Pro",
+			},
+			{
+				name: "1st runner up team",
+				prize: "Apple iPhone 16",
+			},
+			{
+				name: "2nd runner up team",
+				prize: "Apple iPad Air",
 			},
 		],
 		other: [
 			{
-				name: "Top 10",
-				prize: "Swag",
+				name: "Top 10 teams",
+				prize: "Exclusive swags",
 			},
 		],
-		giveaway: null,
+		giveaway: [
+			{
+				name: "Top 5 teams",
+				prize: "Exclusive swags for starring Portia SDK on GitHub and sharing experience on Twitter with #AgentHack2025",
+				details: {
+					requirements: [
+						"Star Portia SDK on GitHub",
+						"Share your experience on Twitter with #AgentHack2025",
+					],
+					links: {
+						github: "https://github.com/portiaAI/portia-sdk-python",
+						twitter: "https://twitter.com",
+					},
+				},
+			},
+		],
 	},
 	submissionLink: "https://github.com/codefest-2024/submissions",
 	registrationLink: "https://forms.gle/b3uwjeo5ZMrmiDVy7",

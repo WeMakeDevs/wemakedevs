@@ -29,7 +29,7 @@ const Hackathons = ({ className, ...props }: GeneralComponent) => {
 						build fascinating projects.
 					</p>
 				</div>
-				<div className="my-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-6">
+				<div className="my-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-6 auto-rows-fr">
 					{hackathons.map(hackathon => (
 						<HackathonCard
 							key={hackathon.slug}
