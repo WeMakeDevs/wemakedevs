@@ -55,8 +55,7 @@ const DATA = {
 	},
 	submissionLink: "https://github.com/codefest-2024/submissions",
 	registrationLink: "https://forms.gle/b3uwjeo5ZMrmiDVy7",
-	googleCalendarLink:
-		"https://calendar.google.com/calendar/u/0?cid=Y18zMDkwNGI0NzdhOTVmNzU5MjRjYjI1ZDdhMjk1NDY5NzlmNDk3OWRkMzliNDEwMTlhYzViMjJlNzZmYTE2MDNkQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20",
+	googleCalendarLink: "#",
 };
 
 const navLinks = [
@@ -74,6 +73,11 @@ const navLinks = [
 		href: `/hackathons/${DATA.slug}/resources`,
 		label: "Resources",
 		page: "resources",
+	},
+	{
+		href: `/hackathons/${DATA.slug}/schedule`,
+		label: "Schedule",
+		page: "schedule",
 	},
 ];
 
@@ -104,4 +108,87 @@ const faqs: FaqType[] = [
 	},
 ];
 
-export { DATA, navLinks, faqs };
+const schedule = [
+	{
+		date: "2025-08-18T00:00:00+05:30",
+		items: [
+			{
+				title: "AgentHack 2025 Live Stream: Build AI that works for you!",
+				link: {
+					name: "Watch Live",
+					url: "#",
+				},
+				time: "2025-08-18T20:30:00+05:30",
+			},
+		],
+	},
+	{
+		date: "2025-08-20T00:00:00+05:30",
+		items: [
+			{
+				title: "Hacking begins",
+				time: "2025-08-20T10:00:00+05:30",
+			},
+			{
+				title: "Live office hour on Discord",
+				link: {
+					name: "Join Discord",
+					url: "https://discord.gg/wemakedevs",
+				},
+				time: "2025-08-20T19:00:00+05:30",
+			},
+		],
+	},
+	{
+		date: "2025-08-21T00:00:00+05:30",
+		items: [
+			{
+				title: "Resume review by Kunal Kushwaha",
+				time: "2025-08-21T19:00:00+05:30",
+			},
+		],
+	},
+	{
+		date: "2025-08-22T00:00:00+05:30",
+		items: [
+			{
+				title: "Discord community call",
+				time: "2025-08-22T19:00:00+05:30",
+			},
+		],
+	},
+	{
+		date: "2025-08-23T00:00:00+05:30",
+		items: [
+			{
+				title: "Fun activity",
+				time: "2025-08-23T19:00:00+05:30",
+			},
+		],
+	},
+
+	{
+		date: "2025-08-24T00:00:00+05:30",
+		items: [
+			{
+				title: "Project submission starts",
+				time: "2025-08-24T10:00:00+05:30",
+			},
+			{
+				title: "Hackathon ends (project submission closes)",
+				time: "2025-08-24T22:00:00+05:30",
+			},
+		],
+	},
+	{
+		date: "2025-08-25T00:00:00+05:30",
+		items: [
+			{
+				title: "Hackathon end stream & result announcement",
+				time: "2025-08-25T19:00:00+05:30",
+			},
+		],
+	},
+];
+
+export { DATA, navLinks, faqs, schedule };
