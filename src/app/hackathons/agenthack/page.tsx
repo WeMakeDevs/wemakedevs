@@ -28,30 +28,29 @@ const HackathonPage = () => {
 			/>
 			<ViewContainer>
 				<HackathonContentBody>
-					HackFrost was an online winter hackathon that brought
-					together industry professionals, tech enthusiasts, and
-					innovators from around the globe. HackFrost provided a
-					platform to build impactful projects, featuring workshops,
-					networking opportunities, and prizes worth $10,000+ to tech
-					enthusiast coming from different experience level. Attendees
-					came together to learn, connect, and have fun while
-					advancing their skills and contributing to the open-source
-					community.
+					<span className="font-bold">AgentHack 2025</span> is a
+					global online hackathon powered by Portia AI, bringing
+					together developers, automation builders, and AI enthusiasts
+					from around the world. Focused on building smart,
+					controllable agents, the hackathon offers a hands-on
+					platform to explore Portia’s agent framework and tool
+					integrations.
+				</HackathonContentBody>
+				<HackathonContentBody>
+					Participants of all experience levels will come together to
+					build useful, safe, and customizable AI agents. Alongside
+					hacking, the event features live sessions, expert mentoring,
+					fun challenges, and prizes including MacBook Airs and
+					exclusive swag.
+				</HackathonContentBody>
+				<HackathonContentBody>
+					AgentHack 2025 is more than just a hackathon, it’s a space
+					to learn, collaborate, and shape the future of open-source
+					AI.
 				</HackathonContentBody>
 				<HackathonContentTitle>Prizes</HackathonContentTitle>
-				<HackathonContentBody className="grid grid-cols-1 lg:grid-cols-2 gap-10">
+				<HackathonContentBody>
 					<div className="space-y-8">
-						<HackathonContentTitleH3>
-							Winning Prizes
-						</HackathonContentTitleH3>
-						<div className="flex flex-wrap gap-2 items-center">
-							<span className="px-2 py-1 bg-blue-600 text-white rounded-[4px] font-medium text-base md:text-xl inline-block">
-								Separate gadget for every team member
-							</span>
-							<span className="px-2 py-1 bg-blue-600 text-white rounded-[4px] font-medium text-base md:text-xl">
-								Use of Kestra is mandatory for below tracks
-							</span>
-						</div>
 						{DATA.prizes.winning.map(prize => (
 							<div className="space-y-4" key={prize.name}>
 								<div className="text-lg md:text-xl font-semibold flex gap-2 items-center">
@@ -62,7 +61,7 @@ const HackathonPage = () => {
 										className="shrink-0"
 									/>{" "}
 									<div className="flex flex-wrap gap-2 items-center">
-										{prize.name} {prize.prize && "-"}
+										{prize.name} {prize.prize && "will get"}
 										{prize.prize && (
 											<span className="px-2 py-1 bg-blue-600 text-white rounded-[4px]">
 												{prize.prize}
@@ -72,54 +71,6 @@ const HackathonPage = () => {
 								</div>
 							</div>
 						))}
-						{DATA.prizes.giveaway && (
-							<>
-								<HackathonContentTitleH3>
-									Side Quest
-								</HackathonContentTitleH3>
-								<div className="space-y-4">
-									<div className="text-lg md:text-xl font-semibold flex gap-2 items-center">
-										<Star
-											size={20}
-											strokeWidth={0}
-											fill="#ffd333"
-											className="shrink-0"
-										/>{" "}
-										<div className="flex flex-wrap gap-4 items-center">
-											<Link
-												href="https://github.com/kestra-io/kestra"
-												className="underline hover:no-underline group flex items-center gap-1"
-												target="_blank"
-												rel="noopener noreferrer"
-											>
-												Star Kestra on GitHub{" "}
-												<ArrowUpRight className="group-hover:-translate-y-1 group-hover:translate-x-1 transition-transform" />
-											</Link>{" "}
-											-
-											<span className="px-2 py-1 bg-blue-600 text-white rounded-[4px]">
-												Exclusive Swag Bag
-											</span>
-										</div>
-									</div>
-									<p className="text-base md:text-lg font-medium">
-										Top 20 people who star Kestra on Github
-										and share their hackathon experience on
-										socials using #HackFrost2024 will get an
-										exclusive swag bag.
-									</p>
-								</div>
-							</>
-						)}
-					</div>
-					<div className="space-y-8">
-						<HackathonContentTitleH3>
-							Other Prizes
-						</HackathonContentTitleH3>
-						<div className="flex flex-wrap gap-2 items-center">
-							<span className="px-2 py-1 bg-blue-600 text-white rounded-[4px] font-medium text-base md:text-xl">
-								Keychron Keyboard + Swag Bag for each
-							</span>
-						</div>
 						{DATA.prizes.other.map(prize => (
 							<div className="space-y-4" key={prize.name}>
 								<div className="text-lg md:text-xl font-semibold flex gap-2 items-center">
@@ -130,7 +81,12 @@ const HackathonPage = () => {
 										className="shrink-0"
 									/>{" "}
 									<div className="flex flex-wrap gap-2 items-center">
-										{prize.name}
+										{prize.name} {prize.prize && "will get"}
+										{prize.prize && (
+											<span className="px-2 py-1 bg-blue-600 text-white rounded-[4px]">
+												{prize.prize}
+											</span>
+										)}
 									</div>
 								</div>
 							</div>
@@ -140,59 +96,83 @@ const HackathonPage = () => {
 				<HackathonContentTitle>Sponsor</HackathonContentTitle>
 				<HackathonContentBody>
 					<Link
-						href="https://kestra.io/"
-						target="_blank"
-						rel="noopener noreferrer"
-						className="underline hover:no-underline text-blue-600"
+						href="https://www.portialabs.ai/"
+						className="font-bold underline hover:no-underline text-blue-600"
 					>
-						Kestra
+						Portia
 					</Link>{" "}
-					is a Unified Orchestration Platform for scheduling and
-					orchestration that simplifies complicated data pipelines and
-					processes. Kestra gives developers the freedom to
-					concentrate on creativity and execution rather than the
-					complexities of infrastructure administration by providing a
-					complete platform. It offers a user-friendly visual
-					interface for process design, which both technical and
-					non-technical people may efficiently utilize.
+					is a cutting-edge platform for building{" "}
+					<span className="font-bold">controllable AI agents</span>{" "}
+					that can plan, ask for user input, and perform complex
+					actions across thousands of tools. Designed with safety,
+					flexibility, and developer experience in mind, Portia
+					enables teams to integrate LLM-powered agents into
+					real-world workflows without compromising on oversight or
+					control.
 				</HackathonContentBody>
 				<HackathonContentBody>
-					Kestra adeptly addresses common infrastructure orchestration
-					challenges with a suite of features including a Visual
-					Workflow Designer that provides a visual topology for
-					developers and editable configurations for team members, a
-					Scalable Architecture designed for large-scale and high-load
-					environments through horizontal scalability, Comprehensive
-					Monitoring Tools that offer detailed insights for quick
-					issue resolution and system reliability, Simplified
-					Management by consolidating various tasks into a single
-					platform, and Realtime Triggers that automate workflows
-					based on specific events, enhancing response times and
-					procedural efficiency.
+					Portia tackles the core challenges of building practical AI
+					agents through a powerful suite of features including a
+					<span className="font-bold">
+						Controllable Agent Framework
+					</span>{" "}
+					that enables structured planning and human-in-the-loop
+					intervention,{" "}
+					<span className="font-bold">Tool Connectivity</span> with
+					over 1000+ APIs (like Gmail, GitHub, Slack, and Notion), and{" "}
+					<span className="font-bold">Secure Execution</span> through
+					open-source runtimes and configurable policies. Its{" "}
+					<span className="font-bold">Developer-Centric SDK</span>{" "}
+					allows full customization while ensuring agents behave
+					safely and predictably.
+				</HackathonContentBody>
+				<HackathonContentBody>
+					By simplifying how AI agents are created and managed, Portia
+					empowers developers to bring intelligent automation to their
+					workflows safely and reliably.
 				</HackathonContentBody>
 				<HackathonContentTitle>Judging Criteria</HackathonContentTitle>
 				<HackathonContentBody>
-					<ul className="list-disc list-inside">
+					<ul className="list-disc list-inside space-y-3">
 						<li>
-							Potential Impact: Assesses the extent to which the
-							solution can address a significant need.
+							<span className="font-semibold">
+								Potential Impact:
+							</span>{" "}
+							Evaluates how effectively the agent or solution
+							addresses a meaningful problem or unlocks a valuable
+							use case.
 						</li>
 						<li>
-							Creativity & Originality**: Considers the uniqueness
-							and innovation behind the idea.
+							<span className="font-semibold">
+								Creativity & Originality:
+							</span>{" "}
+							Assesses the uniqueness of the agent idea, the
+							novelty in how tools are connected, or how Portia is
+							used in unexpected ways.
 						</li>
 						<li>
-							Learning: Measures the learning and growth
-							demonstrated by the team during the project
-							development.
+							<span className="font-semibold">
+								Learning & Growth:
+							</span>{" "}
+							Recognizes the learning curve tackled during the
+							hackathon, especially for first-time builders or
+							teams experimenting with AI/automation.
 						</li>
 						<li>
-							Implementation of the Idea: Examines how well the
-							concept was executed by the developer or team.
+							<span className="font-semibold">
+								Implementation of the Idea:
+							</span>{" "}
+							Reviews how well the idea was executed
+							technically—does the agent function as intended, and
+							does it make good use of Portia's features?
 						</li>
 						<li>
-							Aesthetics: Reviews the UI/UX of the project for
-							intuitiveness and user-friendliness.
+							<span className="font-semibold">
+								Aesthetics & UX:
+							</span>{" "}
+							Considers how intuitive and user-friendly the final
+							experience is, especially if the project has a
+							frontend or user interaction layer.
 						</li>
 					</ul>
 				</HackathonContentBody>
