@@ -114,6 +114,8 @@ const HackathonPage = () => {
 					<Link
 						href="https://www.portialabs.ai/"
 						className="font-bold underline hover:no-underline text-blue-600"
+						target="_blank"
+						rel="noopener noreferrer"
 					>
 						Portia
 					</Link>{" "}

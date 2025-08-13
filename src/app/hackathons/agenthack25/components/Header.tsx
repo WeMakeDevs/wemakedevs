@@ -50,6 +50,8 @@ const HackathonHeader = ({
 									buttonVariants({ variant: "default" }),
 									"mt-4 md:mt-6 ",
 								)}
+								target="_blank"
+								rel="noopener noreferrer"
 							>
 								{cta.label}
 							</Link>
