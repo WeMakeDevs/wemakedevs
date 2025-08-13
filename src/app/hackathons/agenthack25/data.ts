@@ -9,7 +9,7 @@ const DATA = {
 	description: "Build AI that works for you!",
 	descriptionCard:
 		"Create powerful, tool-connected agents that work for you!",
-	slug: "agenthack",
+	slug: "agenthack25",
 	images,
 	cta: {
 		label: "Register for AgentHack",

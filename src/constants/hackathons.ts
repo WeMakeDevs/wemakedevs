@@ -1,4 +1,4 @@
-import { DATA as agenthackData } from "@/app/hackathons/agenthack/data";
+import { DATA as agenthackData } from "@/app/hackathons/agenthack25/data";
 import hackfrost24Data from "@/app/hackathons/hackfrost24/data";
 import type { StaticImageData } from "next/image";
 

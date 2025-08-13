@@ -30,13 +30,13 @@ export default function Home() {
 			<Partners />
 			<Footer />
 
-			{/* <Banner className="flex items-center text-base md:text-lg font-medium">
+			<Banner className="flex items-center text-base md:text-lg font-medium">
 				<div className="flex flex-col md:flex-row items-center justify-center">
-					<span className="">
-						Registrations for Delhi-NCR Meetup are open!
+					<span className="text-white">
+						Registrations for AgentHack 2025 are open!
 					</span>
 					<Link
-						href="https://lu.ma/v0dhix0t"
+						href="/hackathons/agenthack25"
 						className={cn(
 							buttonVariants(),
 							"mt-4 md:mt-0 md:ml-8 px-3 py-2 bg-white hover:bg-white/80 text-[#1a2047] w-full md:w-fit",
@@ -47,7 +47,7 @@ export default function Home() {
 						Register now!
 					</Link>
 				</div>
-			</Banner> */}
+			</Banner>
 		</div>
 	);
 }
