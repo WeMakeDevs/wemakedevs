@@ -53,9 +53,6 @@ const DATA = {
 			},
 		],
 	},
-	submissionLink: "https://github.com/codefest-2024/submissions",
-	registrationLink: "https://forms.gle/b3uwjeo5ZMrmiDVy7",
-	googleCalendarLink: "#",
 };
 
 const navLinks = [
