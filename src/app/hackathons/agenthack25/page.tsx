@@ -71,69 +71,42 @@ const HackathonPage = () => {
 								</div>
 							</div>
 						))}
-						{DATA.prizes.giveaway && (
-							<>
-								<HackathonContentTitleH3>
-									Side Quest
-								</HackathonContentTitleH3>
-								<div className="space-y-4">
-									<div className="text-lg md:text-xl font-semibold flex gap-2 items-center">
-										<Star
-											size={20}
-											strokeWidth={0}
-											fill="#ffd333"
-											className="shrink-0"
-										/>{" "}
-										<div className="flex flex-wrap gap-4 items-center">
-											<Link
-												href="https://github.com/portiaAI/portia-sdk-python"
-												className="underline hover:no-underline group flex items-center gap-1"
-												target="_blank"
-												rel="noopener noreferrer"
-											>
-												Star Portia on GitHub{" "}
-												<ArrowUpRight className="group-hover:-translate-y-1 group-hover:translate-x-1 transition-transform" />
-											</Link>{" "}
-											-
-											<span className="px-2 py-1 bg-blue-600 text-white rounded-[4px]">
-												Exclusive Swags
-											</span>
-										</div>
-									</div>
-									<p className="text-base md:text-lg font-medium">
-										Top 5 teams who star Portia on GitHub
-										and share their hackathon experience on
-										socials using #AgentHack2025 will get
-										exclusive swag bags.
-									</p>
-								</div>
-							</>
-						)}
 					</div>
 					<div className="space-y-8">
 						<HackathonContentTitleH3>
-							Other Prizes
+							Side Quest
 						</HackathonContentTitleH3>
-						{DATA.prizes.other.map(prize => (
-							<div className="space-y-4" key={prize.name}>
-								<div className="text-lg md:text-xl font-semibold flex gap-2 items-center">
-									<Star
-										size={20}
-										strokeWidth={0}
-										fill="#ffd333"
-										className="shrink-0"
-									/>{" "}
-									<div className="flex flex-wrap gap-2 items-center">
-										{prize.name} {prize.prize && "will get"}
-										{prize.prize && (
-											<span className="px-2 py-1 bg-blue-600 text-white rounded-[4px]">
-												{prize.prize}
-											</span>
-										)}
-									</div>
+						<div className="space-y-4">
+							<div className="text-lg md:text-xl font-semibold flex gap-2 items-center">
+								<Star
+									size={20}
+									strokeWidth={0}
+									fill="#ffd333"
+									className="shrink-0"
+								/>{" "}
+								<div className="flex flex-wrap gap-4 items-center">
+									<Link
+										href="https://github.com/portiaAI/portia-sdk-python"
+										className="underline hover:no-underline group flex items-center gap-1"
+										target="_blank"
+										rel="noopener noreferrer"
+									>
+										Star Portia on GitHub{" "}
+										<ArrowUpRight className="group-hover:-translate-y-1 group-hover:translate-x-1 transition-transform" />
+									</Link>{" "}
+									-
+									<span className="px-2 py-1 bg-blue-600 text-white rounded-[4px]">
+										Exclusive Swags
+									</span>
 								</div>
 							</div>
-						))}
+							<p className="text-base md:text-lg font-medium">
+								Top 10 people who star Portia on GitHub and
+								share their hackathon experience on socials
+								using #AgentHack2025 will get exclusive swag
+								bags.
+							</p>
+						</div>
 					</div>
 				</HackathonContentBody>
 				<HackathonContentTitle>Sponsor</HackathonContentTitle>

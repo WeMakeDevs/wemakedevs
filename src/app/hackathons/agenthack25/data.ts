@@ -18,27 +18,21 @@ const DATA = {
 	prizes: {
 		winning: [
 			{
-				name: "Winning team",
+				name: "Winner",
 				prize: "Apple MacBook Pro",
 			},
 			{
-				name: "1st runner up team",
+				name: "First runner-up",
 				prize: "Apple iPhone 16",
 			},
 			{
-				name: "2nd runner up team",
+				name: "Second runner-up",
 				prize: "Apple iPad Air",
-			},
-		],
-		other: [
-			{
-				name: "Top 10 teams",
-				prize: "Exclusive swags",
 			},
 		],
 		giveaway: [
 			{
-				name: "Top 5 teams",
+				name: "Top 10 people",
 				prize: "Exclusive swags for starring Portia SDK on GitHub and sharing experience on Twitter with #AgentHack2025",
 				details: {
 					requirements: [
