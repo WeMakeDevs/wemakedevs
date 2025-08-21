@@ -120,22 +120,18 @@ const schedule = [
 				title: "Hacking begins",
 				time: "2025-08-20T10:00:00+05:30",
 			},
-			{
-				title: "Live office hour on Discord",
-				link: {
-					name: "Join Discord",
-					url: "https://discord.gg/wemakedevs",
-				},
-				time: "2025-08-20T19:00:00+05:30",
-			},
 		],
 	},
 	{
 		date: "2025-08-21T00:00:00+05:30",
 		items: [
 			{
-				title: "Resume review by Kunal Kushwaha",
-				time: "2025-08-21T19:00:00+05:30",
+				title: "Resume review",
+				link: {
+					name: "Join Discord Event",
+					url: "https://discord.gg/wemakedevs?event=1407822203319484506",
+				},
+				time: "2025-08-21T17:00:00+05:30",
 			},
 		],
 	},
@@ -143,8 +139,12 @@ const schedule = [
 		date: "2025-08-22T00:00:00+05:30",
 		items: [
 			{
-				title: "Discord community call",
-				time: "2025-08-22T19:00:00+05:30",
+				title: "Discord office hours",
+				link: {
+					name: "Join Discord Event",
+					url: "https://discord.gg/wemakedevs?event=1407476532498399313",
+				},
+				time: "2025-08-22T21:00:00+05:30",
 			},
 		],
 	},
@@ -152,8 +152,8 @@ const schedule = [
 		date: "2025-08-23T00:00:00+05:30",
 		items: [
 			{
-				title: "Fun activity",
-				time: "2025-08-23T19:00:00+05:30",
+				title: "Build a simple agent live on YouTube",
+				time: "2025-08-23T16:00:00+05:30",
 			},
 		],
 	},
@@ -162,11 +162,7 @@ const schedule = [
 		date: "2025-08-24T00:00:00+05:30",
 		items: [
 			{
-				title: "Project submission starts",
-				time: "2025-08-24T10:00:00+05:30",
-			},
-			{
-				title: "Hackathon ends (project submission closes)",
+				title: "Hackathon ends",
 				time: "2025-08-24T22:00:00+05:30",
 			},
 		],
