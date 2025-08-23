@@ -152,7 +152,7 @@ const schedule = [
 		date: "2025-08-23T00:00:00+05:30",
 		items: [
 			{
-				title: "Build a simple agent live on YouTube",
+				title: "Resume review - Part 2",
 				time: "2025-08-23T16:00:00+05:30",
 			},
 		],
