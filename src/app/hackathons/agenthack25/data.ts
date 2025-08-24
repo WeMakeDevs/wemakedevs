@@ -12,8 +12,9 @@ const DATA = {
 	slug: "agenthack25",
 	images,
 	cta: {
-		label: "Register for AgentHack",
-		href: "https://forms.gle/kjRyZZQAcVoxZgu79",
+		label: "Submit Project",
+		href: "https://forms.gle/45n755Wz5PmU8Zga6",
+		openInNewTab: true,
 	},
 	prizes: {
 		winning: [

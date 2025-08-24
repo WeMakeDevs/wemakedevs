@@ -11,7 +11,16 @@ const HackathonRules = async () => {
 	return (
 		<div className="pt-20 pb-10">
 			<HackathonCoverImage src={images.cover} alt={DATA.title} />
-			<HackathonNav slug={DATA.slug} page="rules" links={navLinks} />
+			<HackathonNav
+				slug={DATA.slug}
+				page="rules"
+				links={navLinks}
+				navCta={{
+					label: DATA.cta.label,
+					href: DATA.cta.href,
+					openInNewTab: DATA.cta.openInNewTab,
+				}}
+			/>
 			<ViewContainer className="my-10">
 				<HackathonContentBody>
 					<ol className="list-decimal list-outside space-y-4 pl-6">

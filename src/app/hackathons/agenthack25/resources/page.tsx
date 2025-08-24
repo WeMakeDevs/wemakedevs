@@ -13,7 +13,16 @@ const HackathonResources = async () => {
 	return (
 		<div className="pt-20 pb-10">
 			<HackathonCoverImage src={images.cover} alt={DATA.title} />
-			<HackathonNav slug={DATA.slug} page="resources" links={navLinks} />
+			<HackathonNav
+				slug={DATA.slug}
+				page="resources"
+				links={navLinks}
+				navCta={{
+					label: DATA.cta.label,
+					href: DATA.cta.href,
+					openInNewTab: DATA.cta.openInNewTab,
+				}}
+			/>
 			<ViewContainer>
 				<HackathonContentBody>
 					<div className="aspect-video w-full max-w-[800px]">

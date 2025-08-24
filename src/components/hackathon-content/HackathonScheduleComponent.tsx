@@ -84,7 +84,7 @@ const HackathonScheduleComponent = ({
 							<div className="flex gap-2 md:gap-5 items-center font-medium flex-wrap mt-2">
 								<span className="flex gap-2 text-black/75 items-center">
 									<Clock size={16} />
-									{formatToIST(item.time)} IST
+									{item.time && formatToIST(item.time)} IST
 								</span>
 								{item.link && (
 									<Link

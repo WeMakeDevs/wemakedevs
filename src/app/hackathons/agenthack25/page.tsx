@@ -17,7 +17,16 @@ const HackathonPage = () => {
 	return (
 		<main className="pt-20">
 			<HackathonCoverImage src={images.cover} alt={DATA.title} />
-			<HackathonNav slug={DATA.slug} page="overview" links={navLinks} />
+			<HackathonNav
+				slug={DATA.slug}
+				page="overview"
+				links={navLinks}
+				navCta={{
+					label: DATA.cta.label,
+					href: DATA.cta.href,
+					openInNewTab: DATA.cta.openInNewTab,
+				}}
+			/>
 			<HackathonHeader
 				title={DATA.title}
 				description={DATA.description}

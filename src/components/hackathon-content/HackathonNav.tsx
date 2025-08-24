@@ -13,6 +13,7 @@ interface NavLink {
 interface NavCta {
 	href: string;
 	label: string;
+	openInNewTab?: boolean;
 }
 
 const HackathonNav = ({
@@ -55,9 +56,10 @@ const HackathonNav = ({
 					<Link
 						href={navCta.href}
 						className={cn(
-							buttonVariants(),
-							"inline-block md:ml-auto text-center",
+							"md:ml-auto px-6 py-4 font-semibold inline-block bg-blue-500 text-white hover:bg-blue-600",
 						)}
+						target={navCta.openInNewTab ? "_blank" : "_self"}
+						rel={navCta.openInNewTab ? "noopener noreferrer" : ""}
 					>
 						{navCta.label}
 					</Link>
