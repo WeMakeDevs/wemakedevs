@@ -5,7 +5,7 @@ const DATA = {
 	title: "AgentHack 2025",
 	prize: "$5,000+",
 	startDate: "2025-08-20T04:30:00Z",
-	endDate: "2025-08-24T16:30:00Z",
+	endDate: "2025-08-25T16:30:00Z",
 	description: "Build AI that works for you!",
 	descriptionCard:
 		"Create powerful, tool-connected agents that work for you!",
@@ -162,8 +162,7 @@ const schedule = [
 		date: "2025-08-24T00:00:00+05:30",
 		items: [
 			{
-				title: "Hackathon ends",
-				time: "2025-08-24T22:00:00+05:30",
+				title: "Keep on working. This hackathon is not over yet!",
 			},
 		],
 	},
@@ -171,8 +170,11 @@ const schedule = [
 		date: "2025-08-25T00:00:00+05:30",
 		items: [
 			{
-				title: "Hackathon end stream & result announcement",
+				title: "Hackathon ends",
 				time: "2025-08-25T19:00:00+05:30",
+			},
+			{
+				title: "Results will be announced soon",
 			},
 		],
 	},

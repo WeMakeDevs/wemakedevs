@@ -30,12 +30,13 @@ type PrizeType = {
 
 type ScheduleItem = {
 	title: string;
-	time: string; // ISO 8601
+	time?: string; // ISO 8601 - optional for text items
 	description?: string;
 	link?: {
 		name: string;
 		url: string;
 	};
+	// Note: If link is present, it's an event; if not, it's text
 };
 
 export type ScheduleElement = {

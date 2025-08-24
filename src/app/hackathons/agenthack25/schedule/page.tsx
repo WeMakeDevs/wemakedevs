@@ -1,9 +1,9 @@
 import {
 	HackathonCoverImage,
 	HackathonNav,
-	HackathonScheduleComponent,
 } from "@/components/hackathon-content";
 import { ViewContainer } from "@/components/ui/view-container";
+import HackathonScheduleComponent from "../components/HackathonScheduleComponent";
 import { DATA, navLinks, schedule } from "../data";
 import { images } from "../images";
 
