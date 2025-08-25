@@ -16,6 +16,10 @@ import emmanuel from "./emmanuel.jpg";
 import hackfrostGlobalMap from "./global_map.png";
 import kestraLogo from "./kestra_logo.svg";
 
+import cerebrasLogo from "./cerebras-logo.png";
+import scholarshipsLogo from "./logo-scholarships.svg";
+import scholarshipsBg from "./scholarships-bg.jpg";
+
 export {
 	logo,
 	heroBg,
@@ -31,4 +35,7 @@ export {
 	hackfrostGlobalMap,
 	kestraLogo,
 	emmanuel,
+	scholarshipsBg,
+	scholarshipsLogo,
+	cerebrasLogo,
 };

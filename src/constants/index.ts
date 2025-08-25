@@ -53,3 +53,26 @@ export const HACKATHON_FAQS: FaqType[] = [
 		answer: "For any hackathon related queries, please raise a ticket on our Discord server.",
 	},
 ];
+
+export const SCHOLARSHIP_FAQS: FaqType[] = [
+	{
+		question: "What does the scholarship cover?",
+		answer: "Your round-trip flight, hotel stay, transportation in Amsterdam, event tickets, and visa assistance. Everything up to $2,000.",
+	},
+	{
+		question: "Is this a reimbursement?",
+		answer: "Yes. We reimburse your expenses up to $2,000 including flight, hotel, tickets, etc. Just share the receipts and travel docs post-event.",
+	},
+	{
+		question: "I need help with a visa.",
+		answer: "No problem! We’ll guide you with supporting documents, invitation letters, and more.",
+	},
+	{
+		question: "Who can apply?",
+		answer: "Anyone! Beginners, students, career switchers. If you’re passionate about cloud-native, you’re eligible.",
+	},
+	{
+		question: "How do I stay updated?",
+		answer: "Subscribe to our newsletter below so you never miss a new scholarship drop.",
+	},
+];
