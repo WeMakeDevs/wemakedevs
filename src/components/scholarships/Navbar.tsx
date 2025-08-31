@@ -36,34 +36,33 @@ const ScholarshipsNavbar = ({ className }: { className?: string }) => {
 
 	const navLinks: navLinksType = [
 		{
-			name: "Join",
-			url: "/#join",
+			name: "What's covered",
+			url: "#whats-covered",
 			type: "link",
 		},
 		{
-			name: "Hackathons",
-			url: "/#hackathons",
+			name: "Sponsors",
+			url: "#sponsors",
 			type: "link",
 		},
 		{
-			name: "Meetups",
-			url: "/#meetups",
+			name: "Previous winners",
+			url: "#previous-winners",
 			type: "link",
 		},
 		{
 			name: "FAQs",
-			url: "/#faq",
+			url: "#faq",
 			type: "link",
 		},
 		{
-			name: "Careers",
-			url: "/careers",
+			name: "Stay updated",
+			url: "#join",
 			type: "link",
-			openInNewTab: true,
 		},
 		{
-			name: "Partner with us",
-			url: "/#partners",
+			name: "Apply",
+			url: "#apply",
 			type: "button",
 		},
 	];

@@ -28,24 +28,30 @@ const Header = ({ className, ...props }: GeneralComponent) => {
 					alt="WeMakeDevs Scholarships"
 					className="w-40 md:w-60"
 				/>
-				<h1 className="font-title text-4xl sm:text-5xl lg:text-7xl font-bold leading-tight text-white md:max-w-4xl">
-					Fully sponsored trip to KubeCon Amsterdam!
+				<h1 className="font-title text-4xl sm:text-5xl lg:text-7xl font-bold leading-tight text-white">
+					Win a fully sponsored trip to KubeCon Amsterdam!
 				</h1>
 				<div className="space-y-4">
-					<p className="text-lg font-medium max-w-3xl">
-						WeMakeDevs is sponsoring need-based and
-						diversity-focused scholarships to attend KubeCon Europe
-						2025 in Amsterdam, one of the world's biggest
-						open-source cloud-native events.
-					</p>
-					<p className="text-lg font-medium max-w-3xl">
-						Whether you're a student, early-career engineer, or just
-						starting out in cloud-native, this is your chance to
-						make it to the global stage.
+					<p className="text-lg font-medium text-balance">
+						Our scholarship program is here to open doors for
+						individuals who may not otherwise get the chance to
+						attend major industry events. Whether based on diversity
+						or financial need, we want to support passionate
+						builders and contributors in joining the global tech
+						community.
+						<br />
+						Recipients will receive complimentary passes to leading
+						conferences. Awards are granted based on a combination
+						of need and potential impact, with applications
+						carefully reviewed by a diverse panel of community
+						members.
 					</p>
 				</div>
+				<p className="border border-white/80 px-4 py-2 rounded-full inline-block">
+					23-26 March
+				</p>
 				<Link
-					href="#"
+					href="#apply"
 					className={cn(
 						buttonVariants(),
 						"bg-white hover:bg-white/80 text-[#1a2047] flex items-center gap-2 w-fit transition-colors",

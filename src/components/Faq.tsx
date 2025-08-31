@@ -41,7 +41,14 @@ const Faq = ({ FAQS, className }: { FAQS: FaqType[]; className?: string }) => {
 										{question}
 									</AccordionTrigger>
 									<AccordionContent>
-										{answer}
+										{
+											<div
+												// biome-ignore lint/security/noDangerouslySetInnerHtml: <explanation>
+												dangerouslySetInnerHTML={{
+													__html: answer,
+												}}
+											/>
+										}
 									</AccordionContent>
 								</AccordionItem>
 							),
@@ -59,7 +66,14 @@ const Faq = ({ FAQS, className }: { FAQS: FaqType[]; className?: string }) => {
 										{question}
 									</AccordionTrigger>
 									<AccordionContent>
-										{answer}
+										{
+											<div
+												// biome-ignore lint/security/noDangerouslySetInnerHtml: <explanation>
+												dangerouslySetInnerHTML={{
+													__html: answer,
+												}}
+											/>
+										}
 									</AccordionContent>
 								</AccordionItem>
 							),

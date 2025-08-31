@@ -78,6 +78,11 @@ const footerLinks: FooterLinkSection[] = [
 				name: "Join",
 				href: "/#join",
 			},
+			{
+				name: "Careers",
+				href: "/careers",
+				opensInNewTab: true,
+			},
 		],
 	},
 	{

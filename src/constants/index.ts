@@ -56,23 +56,27 @@ export const HACKATHON_FAQS: FaqType[] = [
 
 export const SCHOLARSHIP_FAQS: FaqType[] = [
 	{
+		question: "What are the rules?",
+		answer: "To be eligible, you must sign up to Cerebras using <a href='https://cloud.cerebras.ai/?referral_code=kunal' target='_blank' rel='noopener noreferrer' class='text-blue-700 underline hover:no-underline'>this link</a> and then <a href='https://forms.gle/vYj6fZbzBQtxjkZc6' target='_blank' rel='noopener noreferrer' class='text-blue-700 underline hover:no-underline'>apply here</a>.",
+	},
+	{
 		question: "What does the scholarship cover?",
-		answer: "Your round-trip flight, hotel stay, transportation in Amsterdam, event tickets, and visa assistance. Everything up to $2,000.",
+		answer: "The scholarship covers the conference pass, flights, hotel, taxi, and visa fees, up to a total of $2,000.",
 	},
 	{
-		question: "Is this a reimbursement?",
-		answer: "Yes. We reimburse your expenses up to $2,000 including flight, hotel, tickets, etc. Just share the receipts and travel docs post-event.",
-	},
-	{
-		question: "I need help with a visa.",
-		answer: "No problem! We’ll guide you with supporting documents, invitation letters, and more.",
+		question: "How does reimbursement work?",
+		answer: "You must attend the event. Afterward, submit your receipts and we will reimburse eligible expenses up to $2,000.",
 	},
 	{
 		question: "Who can apply?",
-		answer: "Anyone! Beginners, students, career switchers. If you’re passionate about cloud-native, you’re eligible.",
+		answer: "Anyone can apply. We especially encourage applicants who cannot afford to travel or those from underrepresented groups in tech.",
 	},
 	{
 		question: "How do I stay updated?",
-		answer: "Subscribe to our newsletter below so you never miss a new scholarship drop.",
+		answer: "Join our Discord and Telegram communities, and follow us on social media for all updates.",
+	},
+	{
+		question: "Do you provide visa support?",
+		answer: "Yes, we provide support and can issue invitation letters if required.",
 	},
 ];

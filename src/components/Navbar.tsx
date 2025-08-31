@@ -56,12 +56,6 @@ const Navbar = ({ className }: { className?: string }) => {
 			type: "link",
 		},
 		{
-			name: "Careers",
-			url: "/careers",
-			type: "link",
-			openInNewTab: true,
-		},
-		{
 			name: "Partner with us",
 			url: "/#partners",
 			type: "button",
