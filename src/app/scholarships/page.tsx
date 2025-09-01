@@ -6,6 +6,7 @@ import Carousel from "@/components/scholarships/Carousel";
 import Dates from "@/components/scholarships/Dates";
 import ScholarshipsHeader from "@/components/scholarships/Header";
 import ScholarshipsNavbar from "@/components/scholarships/Navbar";
+import PreviousWinners from "@/components/scholarships/PreviousWinners";
 import Sponsor from "@/components/scholarships/Sponsor";
 import WhyApply from "@/components/scholarships/WhyApply";
 import { SCHOLARSHIP_FAQS } from "@/constants";
@@ -20,6 +21,7 @@ const Scholarships = () => {
 			<Sponsor />
 			<Apply />
 			{/* <Dates /> */}
+			<PreviousWinners />
 			<Faq
 				FAQS={SCHOLARSHIP_FAQS}
 				className="my-0 md:my-0 py-10 bg-white"
