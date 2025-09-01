@@ -60,20 +60,22 @@ const WhyApply = ({ className, ...props }: GeneralComponent) => {
 
 	return (
 		<section
-			className={cn(className, "py-16 scroll-m-[100px] bg-white")}
+			className={cn(className, "py-20 scroll-m-[100px] bg-white")}
 			{...props}
 			id="whats-covered"
 		>
 			<ViewContainer className="relative">
-				<h2 className="text-center text-4xl md:text-5xl mx-auto">
-					What it covers
-				</h2>
-				<p className="text-center text-lg text-black/80 font-medium max-w-2xl mx-auto mt-4 leading-snug">
-					From connecting with leaders in DevOps, CNCF, and open
-					source, to gaining hands-on insights that can shape your
-					career, here’s what you’ll get:
-				</p>
-				<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-7 mt-12">
+				<div className="text-center space-y-6 mb-16">
+					<h2 className="text-4xl md:text-5xl font-bold font-title">
+						What it covers
+					</h2>
+					<p className="text-lg text-black/70 font-medium max-w-3xl mx-auto leading-relaxed">
+						From connecting with leaders in DevOps, CNCF, and open
+						source, to gaining hands-on insights that can shape your
+						career, here's what you'll get:
+					</p>
+				</div>
+				<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
 					{whyApplyItems.map(item => (
 						<ScholarshipCard key={item.name} {...item} />
 					))}

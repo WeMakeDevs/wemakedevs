@@ -13,7 +13,7 @@ const Header = ({ className, ...props }: GeneralComponent) => {
 			{...props}
 			className={cn(
 				className,
-				"pb-10 lg:pb-14 pt-20 lg:pt-36 relative min-h-screen bg-transparent",
+				"pb-16 lg:pb-24 pt-20 lg:pt-36 relative min-h-[80vh] lg:min-h-[70vh] xl:min-h-[60vh] bg-transparent",
 			)}
 		>
 			<Image
@@ -21,13 +21,13 @@ const Header = ({ className, ...props }: GeneralComponent) => {
 				alt="Kubecon Amsterdam"
 				className="w-full h-full object-cover absolute top-0 left-0 z-[-100] user-select-none"
 			/>
-			<div className="absolute top-0 left-0 w-full h-full bg-black/50 -z-10" />
+			<div className="absolute top-0 left-0 w-full h-full bg-black/70 -z-10" />
 			<ViewContainer className="z-10 text-white space-y-8">
-				<Image
+				{/* <Image
 					src={scholarshipsLogo}
 					alt="WeMakeDevs Scholarships"
 					className="w-40 md:w-60"
-				/>
+				/> */}
 				<h1 className="font-title text-4xl sm:text-5xl lg:text-7xl font-bold leading-tight text-white">
 					Win a fully sponsored trip to KubeCon Amsterdam!
 				</h1>
@@ -48,7 +48,7 @@ const Header = ({ className, ...props }: GeneralComponent) => {
 					</p>
 				</div>
 				<p className="border border-white/80 px-4 py-2 rounded-full inline-block">
-					23-26 March
+					23 - 26 March, 2026
 				</p>
 				<Link
 					href="#apply"

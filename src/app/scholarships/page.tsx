@@ -19,7 +19,7 @@ const Scholarships = () => {
 			<Carousel />
 			<Sponsor />
 			<Apply />
-			<Dates />
+			{/* <Dates /> */}
 			<Faq
 				FAQS={SCHOLARSHIP_FAQS}
 				className="my-0 md:my-0 py-10 bg-white"

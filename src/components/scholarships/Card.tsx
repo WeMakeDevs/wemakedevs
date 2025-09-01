@@ -23,21 +23,31 @@ const ScholarshipCard = ({
 	return (
 		<div
 			className={cn(
-				"group p-6 rounded-[10px] bg-white shadow-xl relative overflow-hidden flex flex-col gap-4 justify-between border-accent-4 border-2",
+				"group p-8 rounded-2xl bg-white shadow-lg hover:shadow-xl border border-gray-100 hover:border-primary/20 transition-all duration-300 hover:-translate-y-1 relative overflow-hidden",
 				className,
 			)}
 			{...props}
 		>
-			<Icon
-				className="absolute -bottom-4 -right-10 opacity-40 size-40 -rotate-12 text-accent-4 group-hover:rotate-0 transition-transform"
-				strokeWidth={1.5}
-			/>
-			<h3 className="text-lg md:text-2xl font-semibold leading-snug">
-				{name}
-			</h3>
-			<p className="leading-snug text-black/80 font-medium text-lg">
-				{description}
-			</p>
+			{/* Background icon with subtle styling */}
+			<div className="absolute top-4 right-4 opacity-5 group-hover:opacity-10 transition-opacity duration-300">
+				<Icon className="size-24 text-primary" strokeWidth={1} />
+			</div>
+
+			{/* Content */}
+			<div className="relative z-10 space-y-4">
+				{/* Icon header */}
+				<div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center group-hover:bg-primary/20 transition-colors duration-300">
+					<Icon className="size-6 text-primary" strokeWidth={2} />
+				</div>
+
+				{/* Title */}
+				<h3 className="text-xl font-bold text-gray-900 leading-tight">
+					{name}
+				</h3>
+
+				{/* Description */}
+				<p className="text-gray-600 leading-relaxed">{description}</p>
+			</div>
 		</div>
 	);
 };

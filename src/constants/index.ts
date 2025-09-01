@@ -73,7 +73,7 @@ export const SCHOLARSHIP_FAQS: FaqType[] = [
 	},
 	{
 		question: "How do I stay updated?",
-		answer: "Join our Discord and Telegram communities, and follow us on social media for all updates.",
+		answer: "Join our <a href='https://discord.gg/wemakedevs' target='_blank' rel='noopener noreferrer' class='text-blue-700 underline hover:no-underline'>Discord</a> and <a href='https://t.me/WeMakeDevs' target='_blank' rel='noopener noreferrer' class='text-blue-700 underline hover:no-underline'>Telegram</a> communities, and follow us on social media for all updates.",
 	},
 	{
 		question: "Do you provide visa support?",

@@ -46,6 +46,11 @@ const ScholarshipsNavbar = ({ className }: { className?: string }) => {
 			type: "link",
 		},
 		{
+			name: "Apply",
+			url: "#apply",
+			type: "link",
+		},
+		{
 			name: "Previous winners",
 			url: "#previous-winners",
 			type: "link",
@@ -59,11 +64,6 @@ const ScholarshipsNavbar = ({ className }: { className?: string }) => {
 			name: "Stay updated",
 			url: "#join",
 			type: "link",
-		},
-		{
-			name: "Apply",
-			url: "#apply",
-			type: "button",
 		},
 	];
 
@@ -87,7 +87,7 @@ const ScholarshipsNavbar = ({ className }: { className?: string }) => {
 							isScrolled ? "text-primary" : "text-white",
 						)}
 					>
-						WeMakeDevs
+						Scholarships
 					</span>
 				</Link>
 				<ul className="flex lg:gap-2">
