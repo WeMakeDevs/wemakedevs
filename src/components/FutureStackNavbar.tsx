@@ -35,17 +35,17 @@ const FutureStackNavbar = () => {
 
 	const navLinks = [
 		{
-			name: "Prizers",
+			name: "About",
+			url: "#about",
+			type: "link",
+		},
+		{
+			name: "Prizes",
 			url: "#prizes",
 			type: "link",
 		},
 		{
-			name: "Head Started",
-			url: "#start",
-			type: "link",
-		},
-		{
-			name: "Early Registration",
+			name: "Register",
 			url: "#register",
 			type: "link",
 		},

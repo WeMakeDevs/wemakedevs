@@ -16,19 +16,17 @@ const FutureStackAIPage = () => {
 					<div className="text-center space-y-8">
 						<div className="space-y-6">
 							<h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-								FutureStack AI Hackathon
+								FutureStack GenAI Hackathon
 							</h1>
-							<p className="text-xl md:text-2xl text-gray-700 max-w-3xl mx-auto">
-								The ultimate AI hackathon is coming soon. Get
-								ready to build the future with cutting-edge AI
-								technology.
+							<p className="text-xl md:text-2xl text-gray-700 max-w-3xl mx-auto font-semibold">
+								Our biggest hackathon yet
 							</p>
 						</div>
 
 						{/* Sponsors Section */}
-						<div className="pt-12">
-							<h2 className="text-2xl md:text-3xl font-semibold text-gray-800 mb-8">
-								Proudly Sponsored By
+						<div className="pt-12 space-y-8">
+							<h2 className="text-2xl md:text-3xl font-semibold text-gray-800">
+								In collaboration with
 							</h2>
 							<div className="flex justify-center items-center divide-x divide-gray-300">
 								<div className="flex items-center justify-center px-8 md:px-12">
@@ -64,120 +62,143 @@ const FutureStackAIPage = () => {
 				</ViewContainer>
 			</section>
 
+			{/* About Section */}
+			<section id="about" className="py-16 bg-white">
+				<ViewContainer>
+					<div className="text-center space-y-8">
+						<h2 className="text-4xl md:text-5xl font-bold text-gray-900">
+							About the Hackathon
+						</h2>
+						<p className="text-lg md:text-xl text-gray-700 max-w-4xl mx-auto leading-relaxed">
+							Happening online this month with prizes and
+							opportunities you don't want to miss. Along the way,
+							you'll learn, get access to all the resources you
+							need, and kickstart your GenAI journey no matter
+							your background.
+						</p>
+					</div>
+				</ViewContainer>
+			</section>
+
 			{/* Prizes Section */}
-			<section id="prizes" className="py-16 bg-white">
+			<section id="prizes" className="py-16 bg-gray-50">
 				<ViewContainer>
 					<div className="text-center space-y-12">
 						<h2 className="text-4xl md:text-5xl font-bold text-gray-900">
-							Amazing Prizes Await
+							Each winner gets:
 						</h2>
 
 						<div className="grid grid-cols-1 md:grid-cols-3 gap-8">
 							<div className="bg-gradient-to-br from-green-50 to-emerald-100 p-6 rounded-xl border border-green-200">
 								<div className="text-4xl mb-4">💰</div>
-								<h3 className="text-xl font-semibold text-gray-900 mb-2">
-									Huge Cash Prizes
-								</h3>
-								<p className="text-gray-700">
-									Substantial cash rewards awaiting the most
-									innovative and impactful winning teams
+								<p className="text-xl text-gray-800 font-medium">
+									A major cash prize
 								</p>
 							</div>
 
 							<div className="bg-gradient-to-br from-blue-50 to-cyan-100 p-6 rounded-xl border border-blue-200">
-								<div className="text-4xl mb-4">💼</div>
-								<h3 className="text-xl font-semibold text-gray-900 mb-2">
-									Interview at Cerebras
-								</h3>
-								<p className="text-gray-700">
-									Fast-track interview opportunity with
-									Cerebras Systems engineering and AI teams
+								<div className="text-4xl mb-4">👀</div>
+								<p className="text-xl text-gray-800 font-medium">
+									An interview at Cerebras
 								</p>
 							</div>
 
 							<div className="bg-gradient-to-br from-purple-50 to-pink-100 p-6 rounded-xl border border-purple-200">
 								<div className="text-4xl mb-4">☕</div>
-								<h3 className="text-xl font-semibold text-gray-900 mb-2">
-									Coffee Chat with Meta Engineers
-								</h3>
-								<p className="text-gray-700">
-									Exclusive networking session with Meta's top
-									engineering and product development experts
+								<p className="text-xl text-gray-800 font-medium">
+									Coffee chat with Meta engineers
 								</p>
 							</div>
 						</div>
 
-						<div className="bg-gradient-to-r from-indigo-50 to-purple-50 p-6 rounded-xl border border-indigo-200">
-							<p className="text-lg font-semibold text-indigo-800">
-								🎉 More exciting prizes to be announced soon!
+						<div className="bg-gradient-to-r from-indigo-50 to-purple-50 p-6 rounded-xl border border-indigo-200 max-w-4xl mx-auto">
+							<p className="text-xl text-indigo-800 font-medium">
+								… and more to be announced.
 							</p>
 						</div>
 					</div>
 				</ViewContainer>
 			</section>
 
-			{/* Get Head Start Section */}
-			<section id="start" className="py-16 bg-gray-50">
+			{/* Registration Section */}
+			<section id="register" className="py-16 bg-white">
 				<ViewContainer>
 					<div className="text-center space-y-8">
-						<h2 className="text-3xl md:text-4xl font-bold text-gray-900">
-							Get a Head Start
+						<h2 className="text-4xl md:text-5xl font-bold font-title">
+							Early registrations are now live
 						</h2>
-						<div className="bg-white p-8 rounded-xl shadow-lg max-w-2xl mx-auto">
-							<p className="text-lg text-gray-700 mb-6">
-								Sign up to Cerebras and get{" "}
-								<span className="font-bold text-blue-600">
-									1.2 million free tokens daily
-								</span>{" "}
-								no credit card required!
+
+						<div className="bg-primary/5 border border-primary/20 rounded-xl p-8 max-w-2xl mx-auto">
+							<p className="text-primary font-medium mb-6 text-lg">
+								Early registrations have started. Register now
+								to secure your spot!
 							</p>
+
 							<Link
-								href="https://cloud.cerebras.ai/?referral_code=wemakedevs"
+								href="https://forms.gle/dzo4pdF7LBoRgYLw6"
 								target="_blank"
 								rel="noopener noreferrer"
 								className={cn(
 									buttonVariants({ size: "lg" }),
-									"bg-primary hover:bg-blue-800 text-white font-bold shadow-lg hover:shadow-xl transform hover:-translate-y-0.5",
+									"bg-primary hover:bg-blue-800 font-extrabold shadow-lg hover:shadow-xl transform hover:-translate-y-0.5",
 								)}
 							>
-								Start Building with Cerebras
+								Register Now
 							</Link>
 						</div>
 					</div>
 				</ViewContainer>
 			</section>
 
-			{/* Early Registration Section */}
-			<section id="register" className="py-16 bg-white">
-				<ViewContainer>
-					<div className="text-center space-y-8">
-						<h2 className="text-4xl md:text-5xl font-bold text-gray-900">
-							Early Registration
-						</h2>
-						<p className="text-xl text-gray-600 max-w-2xl mx-auto">
-							Be the first to know when registration opens and
-							secure your spot in this exciting AI hackathon.
+			{/* Get Head Start Section */}
+			<section id="start" className="bg-[#fde6d4] py-16">
+				<ViewContainer className="bg-white p-10 rounded-2xl shadow-2xl space-y-6">
+					<Image
+						src={cerebrasLogo}
+						alt="Cerebras Logo"
+						className="w-24"
+					/>
+					<h2 className="text-4xl font-bold font-title">
+						Get a head start with Cerebras
+					</h2>
+					<div className="space-y-2 font-medium">
+						<p className="text-balance">
+							Sign up with Cerebras and receive 1.2 million free
+							tokens daily, no credit card required.
 						</p>
-
-						<div className="bg-white rounded-xl p-8 max-w-4xl mx-auto shadow-lg border border-gray-200">
-							<iframe
-								title="Early Registration Form"
-								width="540"
-								height="305"
-								src="https://718dd6be.sibforms.com/serve/MUIFAPOiGf5adOe6Vrxp0VeEdvc70ZbjN-nqlnaZXVAeZ_ZcQXKTvd4S8Ru2lhuIUd9ElFEUgkswyJa1c_kNVf_VztG6w0L5xzTRBfnGiilVApupHhZmbKgtSoaa1rOpGA58nD5mOc1OeYQNncQD3_BOq72NNR6SuISZDNlxFBHUhhvRVHRYCUHyl_GV82058IGlHIo3w7kPRikg"
-								frameBorder="0"
-								scrolling="auto"
-								allowFullScreen
-								className="w-full h-[480px] min-[400px]:h-[460px] min-[570px]:h-[420px] max-w-full"
-								style={{
-									display: "block",
-									marginLeft: "auto",
-									marginRight: "auto",
-									maxWidth: "100%",
-								}}
-							/>
-						</div>
+						<p className="">
+							Cerebras offers a free cloud platform where anyone,
+							from researchers to indie builders, can run and
+							experiment with powerful AI models instantly.
+						</p>
+						<p className="">
+							When you sign up through us, you get 1.2 million
+							free tokens every day to kickstart your GenAI
+							journey.
+						</p>
 					</div>
+					<Link
+						href="https://cloud.cerebras.ai/?referral_code=wemakedevs"
+						target="_blank"
+						rel="noopener noreferrer"
+						className="flex gap-2 items-center w-fit bg-[#f15927] text-white px-4 py-3 font-semibold hover:bg-[#f15927]/80 transition-all duration-300 rounded-[8px]"
+					>
+						Sign up on Cerebras{" "}
+						<svg
+							className="w-5 h-5"
+							fill="none"
+							stroke="currentColor"
+							viewBox="0 0 24 24"
+							aria-hidden="true"
+						>
+							<path
+								strokeLinecap="round"
+								strokeLinejoin="round"
+								strokeWidth={2}
+								d="M7 17L17 7M17 7H7M17 7V17"
+							/>
+						</svg>
+					</Link>
 				</ViewContainer>
 			</section>
 
@@ -209,7 +230,7 @@ const FutureStackAIPage = () => {
 
 						<div className="flex justify-center gap-4 flex-col md:flex-row">
 							<Link
-								href="https://twitter.com/intent/tweet?text=Excited%20for%20FutureStack%20AI%20hackathon%20coming%20soon!%20Amazing%20prizes%20and%20opportunities%20await.%20Thanks%20to%20%40WeMakeDevs%20%40CerebrasSystems%20%40Meta%20%40Docker%20for%20making%20this%20possible!%20%23FutureStackAI%20%23AIHackathon%20🚀🤖"
+								href="https://twitter.com/intent/tweet?text=Excited%20for%20FutureStack%20GenAI%20hackathon!%20Amazing%20prizes%20and%20opportunities%20await.%20Thanks%20to%20%40WeMakeDevs%20%40CerebrasSystems%20%40Meta%20%40Docker%20for%20making%20this%20possible!%20🚀🤖"
 								target="_blank"
 								rel="noopener noreferrer"
 								className={cn(
