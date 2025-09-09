@@ -10,7 +10,7 @@ type ScholarshipType = {
 
 const scholarships: ScholarshipType[] = [
 	{
-		title: "KubeCon Amsterdam Scholarship",
+		title: "KubeCon + CNC Europe 2026",
 		description:
 			"Win a fully sponsored trip to KubeCon Amsterdam! Get your flight, hotel, conference ticket, local transportation, visa assistance, and up to $2000 reimbursement covered.",
 		image: scholarshipsThumbnail,
