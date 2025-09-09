@@ -51,7 +51,7 @@ const Header = ({ className, ...props }: GeneralComponent) => {
 							of community members.
 						</p>
 					</div>
-					<p className="border border-gray-300 px-4 py-2 rounded-full inline-block text-gray-700">
+					<p className="border border-gray-300 px-4 py-2 rounded-full inline-block text-gray-700 text-sm">
 						23 - 26 March, 2026
 					</p>
 					<Link
