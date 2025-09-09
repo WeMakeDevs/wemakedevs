@@ -1,3 +1,4 @@
+import { cn } from "@/lib/utils";
 import type { FaqType } from "@/types";
 import {
 	Accordion,
@@ -7,10 +8,16 @@ import {
 } from "./ui/accordion";
 import { ViewContainer } from "./ui/view-container";
 
-const Faq = ({ FAQS }: { FAQS: FaqType[] }) => {
+const Faq = ({ FAQS, className }: { FAQS: FaqType[]; className?: string }) => {
 	const halfLength = Math.ceil(FAQS.length / 2);
 	return (
-		<section id="faq" className="my-14 md:my-24 scroll-m-[100px] realtive">
+		<section
+			id="faq"
+			className={cn(
+				"my-14 md:my-24 scroll-m-[100px] realtive",
+				className,
+			)}
+		>
 			<ViewContainer>
 				<div className="flex justify-between flex-col items-center">
 					<h2 className="text-4xl md:text-5xl">
@@ -34,7 +41,14 @@ const Faq = ({ FAQS }: { FAQS: FaqType[] }) => {
 										{question}
 									</AccordionTrigger>
 									<AccordionContent>
-										{answer}
+										{
+											<div
+												// biome-ignore lint/security/noDangerouslySetInnerHtml: <explanation>
+												dangerouslySetInnerHTML={{
+													__html: answer,
+												}}
+											/>
+										}
 									</AccordionContent>
 								</AccordionItem>
 							),
@@ -52,7 +66,14 @@ const Faq = ({ FAQS }: { FAQS: FaqType[] }) => {
 										{question}
 									</AccordionTrigger>
 									<AccordionContent>
-										{answer}
+										{
+											<div
+												// biome-ignore lint/security/noDangerouslySetInnerHtml: <explanation>
+												dangerouslySetInnerHTML={{
+													__html: answer,
+												}}
+											/>
+										}
 									</AccordionContent>
 								</AccordionItem>
 							),

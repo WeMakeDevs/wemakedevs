@@ -7,10 +7,10 @@ import { Cross2Icon, HamburgerMenuIcon } from "@radix-ui/react-icons";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { Button, buttonVariants } from "./ui/button";
-import { NavContainer } from "./ui/nav-container";
+import { Button, buttonVariants } from "../ui/button";
+import { NavContainer } from "../ui/nav-container";
 
-const Navbar = ({ className }: { className?: string }) => {
+const ScholarshipsNavbar = ({ className }: { className?: string }) => {
 	const [isScrolled, setIsScrolled] = useState(false);
 	const [isOpen, setIsOpen] = useState(false);
 
@@ -36,57 +36,53 @@ const Navbar = ({ className }: { className?: string }) => {
 
 	const navLinks: navLinksType = [
 		{
-			name: "Join",
-			url: "/#join",
+			name: "What's covered",
+			url: "#whats-covered",
 			type: "link",
 		},
 		{
-			name: "Scholarships",
-			url: "/#scholarships",
+			name: "Sponsors",
+			url: "#sponsors",
 			type: "link",
 		},
 		{
-			name: "Hackathons",
-			url: "/#hackathons",
+			name: "Apply",
+			url: "#apply",
 			type: "link",
 		},
 		{
-			name: "Meetups",
-			url: "/#meetups",
+			name: "Previous winners",
+			url: "#previous-winners",
 			type: "link",
 		},
 		{
 			name: "FAQs",
-			url: "/#faq",
+			url: "#faq",
 			type: "link",
 		},
 		{
-			name: "Partner with us",
-			url: "/#partners",
-			type: "button",
+			name: "Stay updated",
+			url: "#join",
+			type: "link",
 		},
 	];
 
 	return (
 		<nav
 			id="nav"
-			className={cn("fixed mx-auto w-full z-[100] md:py-4", className)}
+			className={cn("fixed mx-auto w-full z-[100] lg:py-4", className)}
 		>
 			<NavContainer
 				className={cn(
-					"items-center justify-between rounded transition-all py-3",
-					isScrolled && "bg-white shadow-lg",
+					"items-center justify-between rounded transition-all py-3 bg-white",
+					isScrolled && "shadow-lg",
 					"hidden lg:flex",
 				)}
 			>
 				<Link href="/" className="flex items-center gap-4">
 					<Image src={logo} alt="WeMakeDevs Logo" className="w-12" />
-					<span
-						className={cn(
-							"font-title text-lg md:text-xl text-primary font-semibold",
-						)}
-					>
-						WeMakeDevs
+					<span className="font-title text-lg md:text-xl font-semibold text-primary">
+						Scholarships
 					</span>
 				</Link>
 				<ul className="flex lg:gap-2">
@@ -176,4 +172,4 @@ const Navbar = ({ className }: { className?: string }) => {
 	);
 };
 
-export default Navbar;
+export default ScholarshipsNavbar;

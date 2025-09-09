@@ -230,3 +230,23 @@ export type JobCardType = {
 	benefits?: string[];
 	applyLink: string;
 };
+
+export interface ScholarshipData {
+	title: string;
+	description: string;
+	image: StaticImageData;
+	url: string;
+}
+
+export interface ScholarshipCardInterface extends ScholarshipData {
+	className?: string;
+}
+
+export interface ScholarshipCardType extends GeneralComponent {
+	href: string;
+}
+
+export interface ScholarshipCardImageType extends GeneralComponent {
+	src: StaticImageData;
+	alt: string;
+}

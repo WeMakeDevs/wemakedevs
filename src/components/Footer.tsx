@@ -78,6 +78,11 @@ const footerLinks: FooterLinkSection[] = [
 				name: "Join",
 				href: "/#join",
 			},
+			{
+				name: "Careers",
+				href: "/careers",
+				opensInNewTab: true,
+			},
 		],
 	},
 	{
@@ -98,6 +103,11 @@ const footerLinks: FooterLinkSection[] = [
 	{
 		title: "Events",
 		links: [
+			{
+				name: "Scholarships",
+				href: "/scholarships",
+				opensInNewTab: true,
+			},
 			{
 				name: "Hackathons",
 				href: "/hackathons",
