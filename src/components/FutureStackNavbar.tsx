@@ -72,7 +72,7 @@ const FutureStackNavbar = () => {
 							"font-title text-lg md:text-xl text-primary font-semibold",
 						)}
 					>
-						FutureStack AI
+						WeMakeDevs
 					</span>
 				</Link>
 				<ul className="flex lg:gap-2">
