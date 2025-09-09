@@ -45,7 +45,7 @@ const Sponsor = () => {
 					</p>
 				</div>
 				<Link
-					href="https://cloud.cerebras.ai/?referral_code=kunal"
+					href="https://cloud.cerebras.ai/?referral_code=wemakedevs"
 					target="_blank"
 					rel="noopener noreferrer"
 					className="flex gap-2 items-center w-fit bg-[#f15927] text-white px-4 py-3 font-semibold hover:bg-[#f15927]/80 transition-all duration-300 rounded-[8px]"
