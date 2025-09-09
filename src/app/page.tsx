@@ -9,6 +9,7 @@ import Navbar from "@/components/Navbar";
 import Newsletter from "@/components/Newsletter";
 import Numbers from "@/components/Numbers";
 import Partners from "@/components/Partners";
+import Scholarships from "@/components/Scholarships";
 import Testimonials from "@/components/Testimonials";
 import { buttonVariants } from "@/components/ui/button";
 import { FAQS } from "@/constants";
@@ -24,6 +25,7 @@ export default function Home() {
 			<Testimonials />
 			<Newsletter />
 			<Numbers />
+			<Scholarships />
 			<Hackathons />
 			<Meetups />
 			<Faq FAQS={FAQS} />
