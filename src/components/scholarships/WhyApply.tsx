@@ -60,7 +60,7 @@ const WhyApply = ({ className, ...props }: GeneralComponent) => {
 
 	return (
 		<section
-			className={cn(className, "py-20 scroll-m-[100px] bg-white")}
+			className={cn(className, "py-20 scroll-m-[100px] bg-gray-50")}
 			{...props}
 			id="whats-covered"
 		>

@@ -74,19 +74,14 @@ const ScholarshipsNavbar = ({ className }: { className?: string }) => {
 		>
 			<NavContainer
 				className={cn(
-					"items-center justify-between rounded transition-all py-3",
-					isScrolled && "bg-white shadow-lg",
+					"items-center justify-between rounded transition-all py-3 bg-white",
+					isScrolled && "shadow-lg",
 					"hidden lg:flex",
 				)}
 			>
 				<Link href="/" className="flex items-center gap-4">
 					<Image src={logo} alt="WeMakeDevs Logo" className="w-12" />
-					<span
-						className={cn(
-							"font-title text-lg md:text-xl font-semibold",
-							isScrolled ? "text-primary" : "text-white",
-						)}
-					>
+					<span className="font-title text-lg md:text-xl font-semibold text-primary">
 						Scholarships
 					</span>
 				</Link>
@@ -103,7 +98,6 @@ const ScholarshipsNavbar = ({ className }: { className?: string }) => {
 												: "ghost",
 									}),
 									"px-4 py-2 text-foreground",
-									!isScrolled && "text-white",
 									link.type === "button" && "text-white",
 								)}
 								target={link.openInNewTab ? "_blank" : "_self"}

@@ -17,7 +17,7 @@ const Scholarships = () => {
 			<ScholarshipsNavbar />
 			<ScholarshipsHeader />
 			<WhyApply />
-			<Carousel />
+			{/* <Carousel /> */}
 			<Sponsor />
 			<Apply />
 			{/* <Dates /> */}
