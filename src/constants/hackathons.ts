@@ -16,8 +16,9 @@ type HackathonType = {
 const hackathons: HackathonType[] = [
 	{
 		slug: "futurestack-ai",
-		title: "FutureStack GenAI Hackathon",
-		description: "",
+		title: "FutureStack GenAI",
+		description:
+			"Biggest hackathon yet in collaboration with Cerebras, Meta & Docker!",
 		thumbnail: futurestackaiThumbnail,
 		startDate: "2026-09-10",
 		endDate: "2026-09-10",
