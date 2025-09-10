@@ -35,8 +35,8 @@ export default function Home() {
 			<Banner className="flex items-center text-base md:text-lg font-medium">
 				<div className="flex flex-col md:flex-row items-center justify-center">
 					<span className="text-white">
-						Applications for KubeCon + CNC Europe 2026 Scholarships
-						are open!
+						Applications for KubeCon Amsterdam travel fund
+						scholarships are open!
 					</span>
 					<Link
 						href="/scholarships"
