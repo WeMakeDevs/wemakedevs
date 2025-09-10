@@ -22,11 +22,11 @@ const FutureStackAIPage = () => {
 								FutureStack GenAI Hackathon
 							</h1>
 							<p className="text-lg md:text-xl text-gray-700 max-w-4xl mx-auto leading-relaxed">
-								Happening online this month with prizes and
-								opportunities you don't want to miss. Along the
-								way, you'll learn, get access to all the
-								resources you need, and kickstart your GenAI
-								journey no matter your background.
+								Happening online with prizes and opportunities
+								you don't want to miss. Along the way, you'll
+								learn, get access to all the resources you need,
+								and kickstart your GenAI journey no matter your
+								background.
 							</p>
 						</div>
 

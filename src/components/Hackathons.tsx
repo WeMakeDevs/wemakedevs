@@ -50,6 +50,7 @@ const Hackathons = ({ className, ...props }: GeneralComponent) => {
 								<HackathonCardDates
 									startDate={hackathon.startDate}
 									endDate={hackathon.endDate}
+									showDate={hackathon.showDate}
 								/>
 							</div>
 							<HackathonCardDescription>

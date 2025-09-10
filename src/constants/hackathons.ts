@@ -1,4 +1,5 @@
 import { DATA as agenthackData } from "@/app/hackathons/agenthack25/data";
+import { thumbnail as futurestackaiThumbnail } from "@/app/hackathons/futurestack-ai/images";
 import hackfrost24Data from "@/app/hackathons/hackfrost24/data";
 import type { StaticImageData } from "next/image";
 
@@ -9,9 +10,19 @@ type HackathonType = {
 	thumbnail: StaticImageData;
 	startDate: string;
 	endDate: string;
+	showDate?: boolean;
 };
 
 const hackathons: HackathonType[] = [
+	{
+		slug: "futurestack-ai",
+		title: "FutureStack GenAI Hackathon",
+		description: "",
+		thumbnail: futurestackaiThumbnail,
+		startDate: "2026-09-10",
+		endDate: "2026-09-10",
+		showDate: false,
+	},
 	{
 		slug: agenthackData.slug,
 		title: agenthackData.title,
