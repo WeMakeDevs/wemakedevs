@@ -117,6 +117,7 @@ export interface HackathonData {
 
 export interface HackathonCardType extends GeneralComponent {
 	href: string;
+	showDate?: boolean;
 }
 
 export interface HackathonCardImageType extends GeneralComponent {
@@ -132,6 +133,7 @@ export interface HackathonStatusComponentInterface extends GeneralComponent {
 export interface HackathonCardDatesType extends GeneralComponent {
 	startDate: string;
 	endDate: string;
+	showDate?: boolean;
 }
 
 export interface HackathonDateInterface extends GeneralComponent {

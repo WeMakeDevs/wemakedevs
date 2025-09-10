@@ -79,8 +79,10 @@ const HackathonCardDates = ({
 	startDate,
 	endDate,
 	className,
+	showDate = true,
 	...props
 }: HackathonCardDatesType) => {
+	if (!showDate) return null;
 	return (
 		<p
 			className={cn(className, "flex gap-2 items-center font-medium")}

@@ -37,6 +37,7 @@ const Hackathons = () => {
 								<HackathonCardDates
 									startDate={hackathon.startDate}
 									endDate={hackathon.endDate}
+									showDate={hackathon.showDate}
 								/>
 							</div>
 							<HackathonCardDescription>
