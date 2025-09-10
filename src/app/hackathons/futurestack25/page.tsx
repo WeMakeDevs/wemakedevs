@@ -239,7 +239,7 @@ const FutureStackAIPage = () => {
 							</Link>
 
 							<Link
-								href="https://www.linkedin.com/sharing/share-offsite/?url=https://wemakedevs.org/hackathons/futurestack-ai"
+								href="https://www.linkedin.com/sharing/share-offsite/?url=https://wemakedevs.org/hackathons/futurestack25"
 								target="_blank"
 								rel="noopener noreferrer"
 								className={cn(
