@@ -9,7 +9,10 @@ import { cerebrasLogo, dockerLogo, metaLogo } from "./images";
 
 const FutureStackAIPage = () => {
 	return (
-		<main className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+		<main
+			className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100"
+			id="about"
+		>
 			{/* Hero Section */}
 			<section className="pt-32 pb-16">
 				<ViewContainer>
@@ -18,13 +21,17 @@ const FutureStackAIPage = () => {
 							<h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
 								FutureStack GenAI Hackathon
 							</h1>
-							<p className="text-xl md:text-2xl text-gray-700 max-w-3xl mx-auto font-semibold">
-								Our biggest hackathon yet
+							<p className="text-lg md:text-xl text-gray-700 max-w-4xl mx-auto leading-relaxed">
+								Happening online this month with prizes and
+								opportunities you don't want to miss. Along the
+								way, you'll learn, get access to all the
+								resources you need, and kickstart your GenAI
+								journey no matter your background.
 							</p>
 						</div>
 
 						{/* Sponsors Section */}
-						<div className="pt-12 space-y-8">
+						<div className="space-y-8">
 							<h2 className="text-2xl md:text-3xl font-semibold text-gray-800">
 								In collaboration with
 							</h2>
@@ -62,30 +69,12 @@ const FutureStackAIPage = () => {
 				</ViewContainer>
 			</section>
 
-			{/* About Section */}
-			<section id="about" className="py-16 bg-white">
-				<ViewContainer>
-					<div className="text-center space-y-8">
-						<h2 className="text-4xl md:text-5xl font-bold text-gray-900">
-							About the Hackathon
-						</h2>
-						<p className="text-lg md:text-xl text-gray-700 max-w-4xl mx-auto leading-relaxed">
-							Happening online this month with prizes and
-							opportunities you don't want to miss. Along the way,
-							you'll learn, get access to all the resources you
-							need, and kickstart your GenAI journey no matter
-							your background.
-						</p>
-					</div>
-				</ViewContainer>
-			</section>
-
 			{/* Prizes Section */}
-			<section id="prizes" className="py-16 bg-gray-50">
+			<section id="prizes" className="py-16 bg-white scroll-m-[100px]">
 				<ViewContainer>
 					<div className="text-center space-y-12">
 						<h2 className="text-4xl md:text-5xl font-bold text-gray-900">
-							Each winner gets:
+							Amazing Prizes
 						</h2>
 
 						<div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -121,7 +110,7 @@ const FutureStackAIPage = () => {
 			</section>
 
 			{/* Registration Section */}
-			<section id="register" className="py-16 bg-white">
+			<section id="register" className="py-16 bg-white scroll-m-[100px]">
 				<ViewContainer>
 					<div className="text-center space-y-8">
 						<h2 className="text-4xl md:text-5xl font-bold font-title">
@@ -151,7 +140,7 @@ const FutureStackAIPage = () => {
 			</section>
 
 			{/* Get Head Start Section */}
-			<section id="start" className="bg-[#fde6d4] py-16">
+			<section id="start" className="bg-[#fde6d4] py-16 scroll-m-[100px]">
 				<ViewContainer className="bg-white p-10 rounded-2xl shadow-2xl space-y-6">
 					<Image
 						src={cerebrasLogo}
@@ -203,7 +192,7 @@ const FutureStackAIPage = () => {
 			</section>
 
 			{/* Share on Socials Section */}
-			<section id="share" className="py-16 bg-gray-50">
+			<section id="share" className="py-16 bg-gray-50 scroll-m-[100px]">
 				<ViewContainer>
 					<div className="text-center space-y-8">
 						<h2 className="text-3xl md:text-4xl font-bold text-gray-900">
