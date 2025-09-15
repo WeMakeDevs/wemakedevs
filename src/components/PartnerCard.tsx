@@ -7,7 +7,7 @@ const PartnerCard = ({ className, children, ...props }: GeneralComponent) => {
 		<div
 			className={cn(
 				className,
-				"rounded shadow-xl bg-white p-5 h-[380px] xl:h-[320px] max-w-[340px] md:max-w-none mx-auto",
+				"rounded shadow-xl bg-white p-5 h-[420px] xl:h-[380px] max-w-[340px] md:max-w-none mx-auto",
 			)}
 			{...props}
 		>

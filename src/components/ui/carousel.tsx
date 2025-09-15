@@ -210,10 +210,10 @@ const CarouselPrevious = React.forwardRef<
 	return (
 		<Button
 			ref={ref}
-			variant={variant}
+			variant="outline"
 			size={size}
 			className={cn(
-				"absolute bottom-0 h-8 w-8 rounded-full bg-primary border-none hover:bg-blue-900",
+				"absolute bottom-0 h-8 w-8 rounded-full border-muted-foreground/30 hover:bg-muted",
 				orientation === "horizontal"
 					? "left-1/2 -translate-x-[130%]"
 					: "-top-12 left-1/2 -translate-x-1/2 rotate-90",
@@ -224,9 +224,8 @@ const CarouselPrevious = React.forwardRef<
 			{...props}
 		>
 			<ArrowLeftIcon
-				className="h-4 w-4"
-				strokeWidth={3}
-				stroke="#ffffff"
+				className="h-4 w-4 text-muted-foreground"
+				strokeWidth={2}
 			/>
 			<span className="sr-only">Previous slide</span>
 		</Button>
@@ -243,10 +242,10 @@ const CarouselNext = React.forwardRef<
 	return (
 		<Button
 			ref={ref}
-			variant={variant}
+			variant="outline"
 			size={size}
 			className={cn(
-				"absolute bottom-0 h-8 w-8 rounded-full bg-primary border-none hover:bg-blue-900",
+				"absolute bottom-0 h-8 w-8 rounded-full border-muted-foreground/30 hover:bg-muted",
 				orientation === "horizontal"
 					? "right-1/2 translate-x-[130%]"
 					: "-bottom-12 left-1/2 -translate-x-1/2 rotate-90",
@@ -257,9 +256,8 @@ const CarouselNext = React.forwardRef<
 			{...props}
 		>
 			<ArrowRightIcon
-				className="h-4 w-4"
-				strokeWidth={3}
-				stroke="#ffffff"
+				className="h-4 w-4 text-muted-foreground"
+				strokeWidth={2}
 			/>
 			<span className="sr-only">Next slide</span>
 		</Button>

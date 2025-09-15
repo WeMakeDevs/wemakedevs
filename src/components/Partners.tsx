@@ -1,4 +1,8 @@
 import {
+	hackThisFallLogo,
+	postmanLogo,
+} from "@/assets/images/communityPartners";
+import {
 	kestraAuthor,
 	kestraLogo,
 	kodecloudAuthor,
@@ -12,7 +16,8 @@ import {
 } from "@/assets/images/partners";
 import { cn } from "@/lib/utils";
 import type { PartnerData } from "@/types";
-import { Sparkle } from "lucide-react";
+import { Mail } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 import {
 	PartnerCard,
@@ -22,6 +27,13 @@ import {
 	PartnerCardQuote,
 } from "./PartnerCard";
 import { buttonVariants } from "./ui/button";
+import {
+	Carousel,
+	CarouselContent,
+	CarouselItem,
+	CarouselNext,
+	CarouselPrevious,
+} from "./ui/carousel";
 import { ViewContainer } from "./ui/view-container";
 
 const partnersData: PartnerData[] = [
@@ -62,134 +74,119 @@ const partnersData: PartnerData[] = [
 	},
 ];
 
+const communityPartners = [
+	{
+		name: "Postman",
+		logo: postmanLogo,
+	},
+	{
+		name: "HackThisFall",
+		logo: hackThisFallLogo,
+	},
+];
+
 const Partners = () => {
 	return (
 		<section id="partners" className="my-28 scroll-m-[100px]">
 			<ViewContainer>
-				<div className="mb-8 space-y-6">
-					<h2 className="text-4xl md:text-5xl text-center">
-						Partner With Us
-					</h2>
-					<p className="text-center text-lg leading-snug font-medium text-foreground/90">
-						Collaborate with us to support innovation in global
-						hackathons and tech events.
-					</p>
-				</div>
-				<div className="space-y-6">
-					<div className="grid grid-cols-1 md:grid-cols-7 gap-6">
-						<PartnerCard className="relative md:col-span-2">
-							<PartnerCardLogo
-								className="mb-6"
-								img={partnersData[1].logo}
-								title={partnersData[1].name}
-							/>
-							<PartnerCardQuote>
-								{partnersData[1].quote}
-							</PartnerCardQuote>
-							<div className="flex mt-auto absolute bottom-5 left-5 items-center gap-4">
-								<PartnerCardAuthorImage
-									img={partnersData[1].image}
-									title={partnersData[1].author}
-									className="w-10"
-								/>
-								<PartnerCardAuthorName>
-									{partnersData[1].author}{" "}
-								</PartnerCardAuthorName>
-							</div>
-						</PartnerCard>
-						<PartnerCard className="relative md:col-span-3">
-							<PartnerCardLogo
-								className="mb-6"
-								img={partnersData[4].logo}
-								title={partnersData[4].name}
-							/>
-							<PartnerCardQuote>
-								{partnersData[4].quote}
-							</PartnerCardQuote>
-							<div className="flex mt-auto absolute bottom-5 left-5 items-center gap-4">
-								<PartnerCardAuthorImage
-									img={partnersData[4].image}
-									title={partnersData[4].author}
-									className="w-10"
-								/>
-								<PartnerCardAuthorName>
-									{partnersData[4].author}{" "}
-								</PartnerCardAuthorName>
-							</div>
-						</PartnerCard>
-						<PartnerCard className="relative md:col-span-2">
-							<PartnerCardLogo
-								className="mb-6"
-								img={partnersData[3].logo}
-								title={partnersData[3].name}
-							/>
-							<PartnerCardQuote>
-								{partnersData[3].quote}
-							</PartnerCardQuote>
-							<div className="flex mt-auto absolute bottom-5 left-5 items-center gap-5">
-								<PartnerCardAuthorImage
-									img={partnersData[3].image}
-									title={partnersData[3].author}
-									className="w-10"
-								/>
-								<PartnerCardAuthorName>
-									{partnersData[3].author}{" "}
-								</PartnerCardAuthorName>
-							</div>
-						</PartnerCard>
+				{/* Partner Testimonials Carousel */}
+				<div className="mb-16 space-y-8">
+					<div className="mb-8 space-y-6">
+						<h2 className="text-4xl md:text-5xl text-center">
+							Partner With Us
+						</h2>
+						<p className="text-center text-lg leading-snug font-medium text-foreground/90">
+							Collaborate with us to support innovation in global
+							hackathons and tech events.
+						</p>
 					</div>
-					<div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-						<PartnerCard className="relative ">
-							<PartnerCardLogo
-								className="mb-6"
-								img={partnersData[2].logo}
-								title={partnersData[2].name}
-							/>
-							<PartnerCardQuote>
-								{partnersData[2].quote}
-							</PartnerCardQuote>
-							<div className="flex mt-auto absolute bottom-5 left-5 items-center gap-4">
-								<PartnerCardAuthorImage
-									img={partnersData[2].image}
-									title={partnersData[2].author}
-									className="w-10"
-								/>
-								<PartnerCardAuthorName>
-									{partnersData[2].author}{" "}
-								</PartnerCardAuthorName>
-							</div>
-						</PartnerCard>
-						<PartnerCard className="relative ">
-							<PartnerCardLogo
-								className="mb-6"
-								img={partnersData[0].logo}
-								title={partnersData[0].name}
-							/>
-							<PartnerCardQuote>
-								{partnersData[0].quote}
-							</PartnerCardQuote>
-							<div className="flex mt-auto absolute bottom-5 left-5 items-center gap-4">
-								<PartnerCardAuthorImage
-									img={partnersData[0].image}
-									title={partnersData[0].author}
-									className="w-10 rounded-full"
-								/>
-								<PartnerCardAuthorName>
-									{partnersData[0].author}{" "}
-								</PartnerCardAuthorName>
-							</div>
-						</PartnerCard>
+
+					<div className="relative">
+						<Carousel
+							opts={{
+								align: "start",
+								loop: true,
+							}}
+							className="w-full"
+						>
+							<CarouselContent className="-ml-2 md:-ml-4">
+								{partnersData.map(partner => (
+									<CarouselItem
+										key={partner.name}
+										className="pl-2 md:pl-4 basis-full md:basis-1/2 lg:basis-1/3"
+									>
+										<PartnerCard className="relative h-full">
+											<PartnerCardLogo
+												className="mb-6"
+												img={partner.logo}
+												title={partner.name}
+											/>
+											<PartnerCardQuote>
+												{partner.quote}
+											</PartnerCardQuote>
+											<div className="flex mt-auto absolute bottom-5 left-5 items-center gap-4">
+												<PartnerCardAuthorImage
+													img={partner.image}
+													title={partner.author}
+													className="w-10 rounded-full"
+												/>
+												<PartnerCardAuthorName>
+													{partner.author}
+												</PartnerCardAuthorName>
+											</div>
+										</PartnerCard>
+									</CarouselItem>
+								))}
+							</CarouselContent>
+							<CarouselPrevious />
+							<CarouselNext />
+						</Carousel>
 					</div>
 				</div>
-				<Link
-					className={cn(
-						buttonVariants({}),
-						"text-white mx-auto w-fit mt-8 flex items-center gap-4 text-lg",
-					)}
-					href="mailto:contact@wemakedevs.org"
-				>
-					Partner with us <Sparkle size={20} />
-				</Link>
+
+				{/* Community Partners Section */}
+				<div className="space-y-8">
+					<div className="text-center space-y-4">
+						<h3 className="text-3xl md:text-4xl font-semibold">
+							Community Partners
+						</h3>
+						<p className="text-lg leading-snug font-medium text-foreground/80 max-w-3xl mx-auto">
+							Expand your impact, tap into thousands of active
+							builders while we spotlight your community
+						</p>
+					</div>
+
+					{/* Community Partner Logos */}
+					<div className="flex justify-center items-center gap-8 md:gap-12 flex-wrap">
+						{communityPartners.map(partner => (
+							<div
+								key={partner.name}
+								className="flex items-center justify-center p-4"
+							>
+								<Image
+									src={partner.logo}
+									alt={partner.name}
+									width={120}
+									height={60}
+									className="object-contain"
+								/>
+							</div>
+						))}
+					</div>
+
+					{/* Get in Touch Button */}
+					<div className="flex justify-center pt-4">
+						<Link
+							className={cn(
+								buttonVariants({}),
+								"text-white w-fit flex items-center gap-4 text-lg px-8 py-3",
+							)}
+							href="mailto:contact@wemakedevs.org"
+						>
+							Get in touch <Mail size={20} />
+						</Link>
+					</div>
+				</div>
 			</ViewContainer>
 		</section>
 	);
