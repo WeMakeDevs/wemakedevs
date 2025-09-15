@@ -11,6 +11,7 @@ import { ArrowUpRight, Star } from "lucide-react";
 import Link from "next/link";
 import HackathonHeader from "./components/Header";
 import AgentHackStats from "./components/Stats";
+import AgentHackTestimonials from "./components/Testimonials";
 import { DATA, faqs, navLinks } from "./data";
 import { images } from "./images";
 
@@ -57,6 +58,10 @@ const HackathonPage = () => {
 						AgentHack in numbers
 					</HackathonContentTitleH3>
 					<AgentHackStats />
+					<HackathonContentTitleH3 className="mt-12">
+						Participants testimonials
+					</HackathonContentTitleH3>
+					<AgentHackTestimonials />
 					<HackathonContentTitle>
 						What Participants Gained
 					</HackathonContentTitle>
