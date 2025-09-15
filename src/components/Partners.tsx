@@ -1,6 +1,6 @@
 import {
-	bootdevAuthor,
-	bootdevLogo,
+	kestraAuthor,
+	kestraLogo,
 	kodecloudAuthor,
 	kodecloudLogo,
 	kubesphereAuthor,
@@ -26,11 +26,11 @@ import { ViewContainer } from "./ui/view-container";
 
 const partnersData: PartnerData[] = [
 	{
-		image: bootdevAuthor,
-		logo: bootdevLogo,
-		author: "Lane",
-		name: "Boot Dev",
-		quote: "Fantastic, looking forward to more. I think you're doing great, I'd love to continue swinging by the channel whenever you feel it's appropriate. Boot.dev has a YouTube channel now, so I'd love to have you on there as well.",
+		image: kestraAuthor,
+		logo: kestraLogo,
+		author: "Emmanuel Darras",
+		name: "Kestra",
+		quote: "🌟 Huge thanks to Kunal Kushwaha and the amazing team at WeMakeDevs for organizing the very first Hackathon around Kestra! With over 2,000 participants worldwide, it was an incredible success and a true honor to see brilliant developers using Kestra to create innovative projects. 🙌",
 	},
 	{
 		image: kodecloudAuthor,
@@ -172,7 +172,7 @@ const Partners = () => {
 								<PartnerCardAuthorImage
 									img={partnersData[0].image}
 									title={partnersData[0].author}
-									className="w-10"
+									className="w-10 rounded-full"
 								/>
 								<PartnerCardAuthorName>
 									{partnersData[0].author}{" "}
