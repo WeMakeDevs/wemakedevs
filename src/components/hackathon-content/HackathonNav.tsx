@@ -14,6 +14,7 @@ interface NavCta {
 	href: string;
 	label: string;
 	openInNewTab?: boolean;
+	disabled?: boolean;
 }
 
 const HackathonNav = ({
@@ -52,18 +53,29 @@ const HackathonNav = ({
 						</li>
 					))}
 				</ul>
-				{navCta && (
-					<Link
-						href={navCta.href}
-						className={cn(
-							"md:ml-auto px-6 py-4 font-semibold inline-block bg-blue-500 text-white hover:bg-blue-600",
-						)}
-						target={navCta.openInNewTab ? "_blank" : "_self"}
-						rel={navCta.openInNewTab ? "noopener noreferrer" : ""}
-					>
-						{navCta.label}
-					</Link>
-				)}
+				{navCta &&
+					(navCta.disabled ? (
+						<div
+							className={cn(
+								"md:ml-auto px-6 py-4 font-semibold inline-block bg-gray-400 text-white cursor-not-allowed opacity-60",
+							)}
+						>
+							{navCta.label}
+						</div>
+					) : (
+						<Link
+							href={navCta.href}
+							className={cn(
+								"md:ml-auto px-6 py-4 font-semibold inline-block bg-blue-500 text-white hover:bg-blue-600",
+							)}
+							target={navCta.openInNewTab ? "_blank" : "_self"}
+							rel={
+								navCta.openInNewTab ? "noopener noreferrer" : ""
+							}
+						>
+							{navCta.label}
+						</Link>
+					))}
 			</ViewContainer>
 		</nav>
 	);

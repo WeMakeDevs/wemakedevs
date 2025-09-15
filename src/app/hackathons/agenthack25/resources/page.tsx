@@ -21,6 +21,7 @@ const HackathonResources = async () => {
 					label: DATA.cta.label,
 					href: DATA.cta.href,
 					openInNewTab: DATA.cta.openInNewTab,
+					disabled: DATA.cta.disabled,
 				}}
 			/>
 			<ViewContainer>
