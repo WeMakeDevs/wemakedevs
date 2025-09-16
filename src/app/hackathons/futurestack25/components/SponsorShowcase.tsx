@@ -140,25 +140,25 @@ const SponsorShowcase = () => {
 								Exclusive swag packs from our amazing sponsors
 							</p>
 							<div className="flex justify-center items-center gap-4 mb-6">
-								<div className="bg-white/20 p-3 rounded-xl">
+								<div className="bg-white/20 px-3 rounded-xl">
 									<Image
 										src={images.cerebrasLogo}
 										alt="Cerebras"
-										className="w-8 h-8 object-contain filter brightness-0 invert"
+										className="w-14 h-14 object-contain filter brightness-0 invert"
 									/>
 								</div>
-								<div className="bg-white/20 p-3 rounded-xl">
+								<div className="bg-white/20 px-3 rounded-xl">
 									<Image
 										src={images.metaLogo}
 										alt="Meta"
-										className="w-8 h-8 object-contain filter brightness-0 invert"
+										className="w-14 h-14 object-contain filter brightness-0 invert"
 									/>
 								</div>
-								<div className="bg-white/20 p-3 rounded-xl">
+								<div className="bg-white/20 px-3 rounded-xl">
 									<Image
 										src={images.dockerLogo}
 										alt="Docker"
-										className="w-8 h-8 object-contain filter brightness-0 invert"
+										className="w-14 h-14 object-contain filter brightness-0 invert"
 									/>
 								</div>
 							</div>
