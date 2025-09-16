@@ -1,5 +1,5 @@
 import { DATA as agenthackData } from "@/app/hackathons/agenthack25/data";
-import { thumbnail as futurestackaiThumbnail } from "@/app/hackathons/futurestack25/images";
+import { images as futurestackaiImages } from "@/app/hackathons/futurestack25/images";
 import hackfrost24Data from "@/app/hackathons/hackfrost24/data";
 import type { StaticImageData } from "next/image";
 
@@ -19,7 +19,7 @@ const hackathons: HackathonType[] = [
 		title: "FutureStack GenAI",
 		description:
 			"Biggest hackathon yet in collaboration with Cerebras, Meta & Docker!",
-		thumbnail: futurestackaiThumbnail,
+		thumbnail: futurestackaiImages.thumbnail,
 		startDate: "2026-09-10",
 		endDate: "2026-09-10",
 		showDate: false,
