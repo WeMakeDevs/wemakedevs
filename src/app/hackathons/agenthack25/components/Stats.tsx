@@ -12,19 +12,19 @@ const numbers: NumbersShowcaseType[] = [
 	},
 	{
 		name: "Participations",
-		number: 3000,
+		number: 4000,
 		icon: Users,
 		color: "accent-2",
 	},
 	{
 		name: "Project submissions",
-		number: 100,
+		number: 150,
 		color: "accent-3",
 		icon: Code,
 	},
 	{
 		name: "Countries",
-		number: 25,
+		number: 30,
 		icon: Globe,
 		color: "accent-4",
 	},
