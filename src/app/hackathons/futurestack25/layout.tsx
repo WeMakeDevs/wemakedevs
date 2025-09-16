@@ -1,5 +1,5 @@
-import FutureStackNavbar from "@/components/FutureStackNavbar";
 import HackathonFooter from "@/components/HackathonFooter";
+import HackathonNavbar from "@/components/HackathonNavbar";
 
 export default function RootLayout({
 	children,
@@ -8,7 +8,7 @@ export default function RootLayout({
 }>) {
 	return (
 		<div className="bg-white">
-			<FutureStackNavbar />
+			<HackathonNavbar />
 			{children}
 			<HackathonFooter />
 		</div>
