@@ -100,9 +100,9 @@ const schedule = [
 				time: "2025-09-29T08:00:00+05:30",
 			},
 			{
-				title: "Creating Research Assistants with Exa and Cerebras",
+				title: "Building Voice Agents with LiveKit and Cerebras",
 				description:
-					"Build your own AI-powered research assistant that can intelligently search the web, analyze information, and provide comprehensive answers with proper citations. You'll create a 'Perplexity-style' tool that rivals commercial AI search platforms.",
+					"Learn how to build a sophisticated real-time voice sales agent that can hold natural conversations with potential customers. The session will cover both single-agent and multi-agent systems, where specialized AI assistants can handle sales, technical support, and pricing inquiries.",
 				time: "2025-09-29T20:30:00+05:30",
 			},
 		],
@@ -122,8 +122,10 @@ const schedule = [
 		date: "2025-10-01T00:00:00+05:30",
 		items: [
 			{
-				title: "Building the World's Fastest AI Apps with Cerebras",
-				time: "2025-10-01T20:30:00+05:30",
+				title: "Creating Research Assistants with Exa and Cerebras",
+				description:
+					"Build your own AI-powered research assistant that can intelligently search the web, analyze information, and provide comprehensive answers with proper citations. You'll create a 'Perplexity-style' tool that rivals commercial AI search platforms.",
+				time: "2025-10-01T21:30:00+05:30",
 			},
 		],
 	},
