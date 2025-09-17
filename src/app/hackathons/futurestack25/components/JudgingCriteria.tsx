@@ -1,4 +1,11 @@
-import { Code, Lightbulb, Palette, Target, TrendingUp } from "lucide-react";
+import {
+	Code,
+	Lightbulb,
+	Palette,
+	Presentation,
+	Target,
+	TrendingUp,
+} from "lucide-react";
 
 const JudgingCriteria = () => {
 	const criteria = [
@@ -6,7 +13,7 @@ const JudgingCriteria = () => {
 			icon: Target,
 			title: "Potential Impact",
 			description:
-				"Evaluates how effectively the agent or solution addresses a meaningful problem or unlocks a valuable use case.",
+				"Evaluates how effectively the project addresses a meaningful problem or unlocks a valuable real-world use case.",
 			iconBg: "bg-red-500",
 			cardBg: "bg-red-50",
 		},
@@ -14,33 +21,41 @@ const JudgingCriteria = () => {
 			icon: Lightbulb,
 			title: "Creativity & Originality",
 			description:
-				"Assesses the uniqueness of the agent idea, the novelty in how tools are connected, or how Portia is used in unexpected ways.",
+				"Assesses the uniqueness of the idea, novelty in approach, and how creatively sponsor technologies are applied.",
 			iconBg: "bg-yellow-500",
 			cardBg: "bg-yellow-50",
+		},
+		{
+			icon: Code,
+			title: "Technical Implementation",
+			description:
+				"Reviews how well the project was executed technically, whether it functions as intended, and the quality of integration with required sponsor technologies (Cerebras, Meta, Docker).",
+			iconBg: "bg-blue-500",
+			cardBg: "bg-blue-50",
 		},
 		{
 			icon: TrendingUp,
 			title: "Learning & Growth",
 			description:
-				"Recognizes the learning curve tackled during the hackathon, especially for first-time builders or teams experimenting with AI/automation.",
+				"Recognizes the progress made during the hackathon, especially for first-time builders or teams pushing themselves with new tools or concepts.",
 			iconBg: "bg-green-500",
 			cardBg: "bg-green-50",
 		},
 		{
-			icon: Code,
-			title: "Implementation of the Idea",
-			description:
-				"Reviews how well the idea was executed technically, does the agent function as intended, and does it make good use of sponsor technologies?",
-			iconBg: "bg-blue-500",
-			cardBg: "bg-blue-50",
-		},
-		{
 			icon: Palette,
-			title: "Aesthetics & UX",
+			title: "Aesthetics & User Experience",
 			description:
-				"Considers how intuitive and user-friendly the final experience is, especially if the project has a frontend or user interaction layer.",
+				"Considers how intuitive, user-friendly, and polished the final project is, particularly if it has a frontend or user interaction layer.",
 			iconBg: "bg-purple-500",
 			cardBg: "bg-purple-50",
+		},
+		{
+			icon: Presentation,
+			title: "Presentation & Communication",
+			description:
+				"Evaluates the clarity of the README, the quality of the demo video, and how effectively the team communicates their idea and results.",
+			iconBg: "bg-indigo-500",
+			cardBg: "bg-indigo-50",
 		},
 	];
 
