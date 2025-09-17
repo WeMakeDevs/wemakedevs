@@ -1,4 +1,5 @@
 import {
+	draperHouseLogo,
 	hackThisFallLogo,
 	postmanLogo,
 } from "@/assets/images/communityPartners";
@@ -71,17 +72,6 @@ const partnersData: PartnerData[] = [
 		author: "Yun Li",
 		name: "Kubesphere",
 		quote: "It's been a great feeling to collaborate with Kunal and his community, and he has made the entire process a pleasure. Kunal has made great contributions to letting more people know the benefits of our services and increase our user base. We got over 11K stars and 5K signups.",
-	},
-];
-
-const communityPartners = [
-	{
-		name: "Postman",
-		logo: postmanLogo,
-	},
-	{
-		name: "HackThisFall",
-		logo: hackThisFallLogo,
 	},
 ];
 
@@ -158,20 +148,42 @@ const Partners = () => {
 
 					{/* Community Partner Logos */}
 					<div className="flex justify-center items-center gap-8 md:gap-12 flex-wrap">
-						{communityPartners.map(partner => (
-							<div
-								key={partner.name}
-								className="flex items-center justify-center p-4"
-							>
-								<Image
-									src={partner.logo}
-									alt={partner.name}
-									width={120}
-									height={60}
-									className="object-contain"
-								/>
-							</div>
-						))}
+						<Link
+							href="https://www.postman.com/"
+							target="_blank"
+							rel="noopener noreferrer"
+							className="flex items-center justify-center p-4"
+						>
+							<Image
+								src={postmanLogo}
+								alt="Postman"
+								className="object-contain w-24"
+							/>
+						</Link>
+						<Link
+							href="https://hackthisfall.tech/"
+							target="_blank"
+							rel="noopener noreferrer"
+							className="flex items-center justify-center p-4"
+						>
+							<Image
+								src={hackThisFallLogo}
+								alt="HackThisFall"
+								className="object-contain w-36"
+							/>
+						</Link>
+						<Link
+							href="https://draperstartuphouse.com/"
+							target="_blank"
+							rel="noopener noreferrer"
+							className="flex items-center justify-center p-4"
+						>
+							<Image
+								src={draperHouseLogo}
+								alt="Draper House India"
+								className="object-contain w-40"
+							/>
+						</Link>
 					</div>
 
 					{/* Get in Touch Button */}
