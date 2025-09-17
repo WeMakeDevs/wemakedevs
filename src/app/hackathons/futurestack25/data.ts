@@ -70,6 +70,10 @@ const navLinks = [
 
 const faqs: FaqType[] = [
 	{
+		question: "I am a beginner in tech, can I still participate?",
+		answer: "Yes, At WeMakeDevs we believe in the “learn by doing” approach!",
+	},
+	{
 		question: "Eligibility criteria to participate in this hackathon?",
 		answer: "Check out the <a href='https://www.wemakedevs.org/hackathons/futurestack25/rules' target='_blank' rel='noopener noreferrer' class='text-blue-700 underline hover:no-underline'>rules section</a>.",
 	},
