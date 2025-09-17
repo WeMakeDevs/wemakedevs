@@ -112,9 +112,9 @@ const schedule = [
 				time: "2025-09-29T08:00:00+05:30",
 			},
 			{
-				title: "Building Voice Agents with LiveKit and Cerebras",
+				title: "Creating Research Assistants with Exa and Cerebras",
 				description:
-					"Learn how to build a sophisticated real-time voice sales agent that can hold natural conversations with potential customers. The session will cover both single-agent and multi-agent systems, where specialized AI assistants can handle sales, technical support, and pricing inquiries.",
+					"Build your own AI-powered research assistant that can intelligently search the web, analyze information, and provide comprehensive answers with proper citations. You'll create a 'Perplexity-style' tool that rivals commercial AI search platforms.",
 				time: "2025-09-29T20:30:00+05:30",
 			},
 		],
@@ -143,9 +143,9 @@ const schedule = [
 		date: "2025-10-02T00:00:00+05:30",
 		items: [
 			{
-				title: "Resume review session",
+				title: "Resume review",
 				description:
-					"Join Resume Review Session on Cerebras Discord to get personalized feedback from mentors to polish your resume and highlight your skills to stand out!",
+					"Get personalized feedback on your resume from industry experts. Learn how to highlight your skills and stand out to recruiters.",
 				time: "2025-10-02T20:30:00+05:30",
 			},
 		],
@@ -154,9 +154,9 @@ const schedule = [
 		date: "2025-10-03T00:00:00+05:30",
 		items: [
 			{
-				title: "Project Feedback Session",
+				title: "Early project showcase and feedback session",
 				description:
-					"Present your early-stage projects, get constructive feedback, and refine your ideas with mentor and peer insights in this interactive Discord session.",
+					"Share your early-stage project with mentors and peers. Get constructive feedback to refine your idea before final submission.",
 				time: "2025-10-03T20:30:00+05:30",
 			},
 		],
