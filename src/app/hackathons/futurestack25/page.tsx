@@ -31,17 +31,21 @@ const HackathonPage = () => {
 					openInNewTab: DATA.cta.openInNewTab,
 				}}
 			/>
-			<HackathonHeader
-				title={DATA.title}
-				description={DATA.description}
-				startDate={DATA.startDate}
-				endDate={DATA.endDate}
-				prize={DATA.prize}
-				cta={DATA.cta}
-			/>
-			<IntroSection />
-			<SponsorShowcase />
-			<div className="bg-white py-16">
+			<div id="about" className="scroll-mt-16">
+				<HackathonHeader
+					title={DATA.title}
+					description={DATA.description}
+					startDate={DATA.startDate}
+					endDate={DATA.endDate}
+					prize={DATA.prize}
+					cta={DATA.cta}
+				/>
+				<IntroSection />
+			</div>
+			<div id="prizes" className="scroll-mt-16">
+				<SponsorShowcase />
+			</div>
+			<div id="sponsors" className="bg-white py-16 scroll-mt-10">
 				<div className="max-w-6xl mx-auto px-4">
 					<div className="text-center mb-12">
 						<h2 className="text-4xl font-bold text-gray-800 mb-4">
@@ -54,10 +58,14 @@ const HackathonPage = () => {
 					<SponsorsGrid />
 				</div>
 			</div>
-			<JudgingCriteria />
-			<ViewContainer>
-				<Faq FAQS={faqs} />
-			</ViewContainer>
+			<div id="judging" className="scroll-mt-10">
+				<JudgingCriteria />
+			</div>
+			<div id="faq" className="scroll-mt-20">
+				<ViewContainer>
+					<Faq FAQS={faqs} />
+				</ViewContainer>
+			</div>
 		</main>
 	);
 };

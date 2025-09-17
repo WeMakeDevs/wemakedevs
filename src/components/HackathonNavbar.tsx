@@ -10,7 +10,11 @@ import { useEffect, useState } from "react";
 import { Button, buttonVariants } from "./ui/button";
 import { NavContainer } from "./ui/nav-container";
 
-const HackathonNavbar = () => {
+interface HackathonNavbarProps {
+	customNavLinks?: navLinksType;
+}
+
+const HackathonNavbar = ({ customNavLinks }: HackathonNavbarProps = {}) => {
 	const [isScrolled, setIsScrolled] = useState(false);
 	const [isOpen, setIsOpen] = useState(false);
 
@@ -34,7 +38,7 @@ const HackathonNavbar = () => {
 		};
 	}, []);
 
-	const navLinks: navLinksType = [
+	const defaultNavLinks: navLinksType = [
 		{
 			name: "Join",
 			url: "/#join",
@@ -56,6 +60,8 @@ const HackathonNavbar = () => {
 			type: "button",
 		},
 	];
+
+	const navLinks = customNavLinks || defaultNavLinks;
 
 	return (
 		<nav id="nav" className="fixed mx-auto w-full z-[100] md:py-4">
