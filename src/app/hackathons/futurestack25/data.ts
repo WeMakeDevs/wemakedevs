@@ -71,35 +71,23 @@ const navLinks = [
 const faqs: FaqType[] = [
 	{
 		question: "Eligibility criteria to participate in this hackathon?",
-		answer: "You should be above 16 years of age and should abide by the rule of WeMakeDevs hackathons. Teams can have anywhere from 1 to 4 people in them.",
-	},
-	{
-		question: "Can I use existing or previously made projects?",
-		answer: "No, you have to start making the project only after the hackathon starts.",
+		answer: "Check out the <a href='https://www.wemakedevs.org/hackathons/futurestack25/rules' target='_blank' rel='noopener noreferrer' class='text-blue-700 underline hover:no-underline'>rules section</a>.",
 	},
 	{
 		question: "How can I submit my project?",
-		answer: "Join the FutureStack hackathon channel on Cerebras Discord for all the updates and submission instructions.",
-	},
-	{
-		question: "Do I need to use all sponsor technologies?",
-		answer: "No, you can choose to focus on one or more sponsor technologies (Cerebras, Meta Llama, Docker) based on your project idea. However, using at least one is required to be eligible for prizes.",
-	},
-	{
-		question: "I am a beginner in tech, can I still participate?",
-		answer: 'Yes, At WeMakeDevs we believe in the "learn by doing" approach! We\'ll have workshops and resources to help you get started.',
-	},
-	{
-		question: "Are we allowed to take help of AI tools like ChatGPT?",
-		answer: "If you use ChatGPT or other AI tools, make sure to declare this when submitting your project. Failing to do so will result in your disqualification.",
+		answer: "You'll receive an email with detailed submission instructions before the deadline. Make sure to also join the FutureStack hackathon channel on the <a href='https://cerebras.ai/discord' target='_blank' rel='noopener noreferrer' class='text-blue-700 underline hover:no-underline'>Cerebras Discord server</a> for updates and support. For setup guides and documentation, head over to the <a href='https://www.wemakedevs.org/hackathons/futurestack25/resources' target='_blank' rel='noopener noreferrer' class='text-blue-700 underline hover:no-underline'>Resources</a> section.",
 	},
 	{
 		question: "How do I get access to Cerebras Cloud?",
-		answer: "Sign up using our referral link: https://cloud.cerebras.ai/?referral_code=wemakedevs to get started with free credits.",
+		answer: "Sign up using <a href='https://cloud.cerebras.ai/?referral_code=wemakedevs' target='_blank' rel='noopener noreferrer' class='text-blue-700 underline hover:no-underline'>this link</a> to get started with free credits.",
+	},
+	{
+		question: "Do I need to use all sponsor technologies?",
+		answer: "You can choose to focus on one or more sponsor technologies (Cerebras, Meta Llama, Docker) based on your project idea. However, using at least one is required to be eligible for prizes, and incorporating multiple sponsors is recommended to increase your chances of winning.",
 	},
 	{
 		question: "Where can I connect for other queries?",
-		answer: "For any hackathon related queries, join the FutureStack hackathon channel on Cerebras Discord server.",
+		answer: "For any hackathon related queries, join the FutureStack hackathon channel on <a href='https://cerebras.ai/discord' target='_blank' rel='noopener noreferrer' class='text-blue-700 underline hover:no-underline'>Cerebras Discord server</a>.",
 	},
 ];
 
