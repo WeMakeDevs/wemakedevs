@@ -12,10 +12,10 @@ const DATA = {
 	slug: "agenthack25",
 	images,
 	cta: {
-		label: "Projects coming soon!",
-		href: "#",
+		label: "View Projects",
+		href: "/hackathons/agenthack25/projects",
 		openInNewTab: false,
-		disabled: true,
+		disabled: false,
 	},
 	prizes: {
 		winning: [
@@ -71,6 +71,11 @@ const navLinks = [
 		href: `/hackathons/${DATA.slug}/schedule`,
 		label: "Schedule",
 		page: "schedule",
+	},
+	{
+		href: `/hackathons/${DATA.slug}/projects`,
+		label: "Projects",
+		page: "projects",
 	},
 ];
 
