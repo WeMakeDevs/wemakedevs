@@ -57,12 +57,12 @@ const SponsorsGrid = () => {
 				</p>
 				<div className="mt-6 text-center">
 					<Link
-						href="https://meta.ai"
+						href="https://www.llama.com/"
 						className="inline-block px-4 py-2 rounded-[4px] bg-blue-600 text-white hover:bg-blue-700"
 						target="_blank"
 						rel="noopener noreferrer"
 					>
-						Check it out
+						Learn more
 					</Link>
 				</div>
 			</div>
@@ -94,13 +94,13 @@ const SponsorsGrid = () => {
 				</p>
 				<div className="mt-6 text-center">
 					<Link
-						href="https://docker.com"
+						href="https://www.docker.com/products/mcp-catalog-and-toolkit/"
 						className="inline-block px-4 py-2 rounded-[4px] text-white hover:no-underline"
 						style={{ backgroundColor: "#2061f2" }}
 						target="_blank"
 						rel="noopener noreferrer"
 					>
-						Check it out
+						Learn more
 					</Link>
 				</div>
 			</div>
