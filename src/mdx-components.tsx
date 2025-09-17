@@ -41,14 +41,14 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
 
 		// Unordered List Component
 		ul: ({ children, ...props }) => (
-			<ul {...props} className="my-4 list-disc list-inside">
+			<ul {...props} className="my-4 list-disc list-outside pl-6">
 				{children}
 			</ul>
 		),
 
 		// Ordered List Component
 		ol: ({ children, ...props }) => (
-			<ol {...props} className="my-4 list-decimal list-inside">
+			<ol {...props} className="my-4 list-decimal list-outside pl-6">
 				{children}
 			</ol>
 		),
