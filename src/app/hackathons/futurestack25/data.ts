@@ -105,95 +105,68 @@ const faqs: FaqType[] = [
 
 const schedule = [
 	{
-		date: "2024-09-29T00:00:00+05:30",
+		date: "2025-09-29T00:00:00+05:30",
 		items: [
 			{
-				title: "Hacking begins",
-				time: "2024-09-29T10:00:00+05:30",
+				title: "Hacking starts",
+				time: "2025-09-29T08:00:00+05:30",
 			},
 			{
 				title: "Building Voice Agents with LiveKit and Cerebras",
 				description:
 					"Learn how to build a sophisticated real-time voice sales agent that can hold natural conversations with potential customers. The session will cover both single-agent and multi-agent systems, where specialized AI assistants can handle sales, technical support, and pricing inquiries.",
-				link: {
-					name: "Stay tuned!",
-					url: "#",
-				},
-				time: "2024-09-29T20:30:00+05:30",
+				time: "2025-09-29T20:30:00+05:30",
 			},
 		],
 	},
 	{
-		date: "2024-09-30T00:00:00+05:30",
+		date: "2025-09-30T00:00:00+05:30",
 		items: [
 			{
 				title: "Docker DevDuck Multi-Agent Workshop",
 				description:
-					"Join us for a multi-agent workshop that will guide you through building and deploying a multi-agent system using Docker, Google Agent Development Kit (ADK), and Cerebras AI. This workshop will contain theoretical concepts and practical exercises that will give you hands-on experience with everything you need to know to create your hackathon project! You'll learn how to build and deploy a multi-agent system using Agentic Compose, orchestrate multiple AI agents, and integrate Cerebras AI with local models.",
-				link: {
-					name: "Stay tuned!",
-					url: "#",
-				},
-				time: "2024-09-30T20:30:00+05:30",
+					"Join us for a multi-agent workshop that will guide you through building and deploying a multi-agent system using Docker, Google Agent Development Kit (ADK), and Cerebras AI. This workshop will contain theoretical concepts and practical exercises that will give you hands-on experience with everything you need to know to create your hackathon project! You'll learn how to build and deploy a multi-agent system using Agentic Compose, orchestrate multiple AI agents, and integrate Cerebras AI with local models. Facilitator: Ajeet Raina, Developer Advocate, Docker",
+				time: "2025-09-30T20:30:00+05:30",
 			},
 		],
 	},
 	{
-		date: "2024-10-01T00:00:00+05:30",
+		date: "2025-10-01T00:00:00+05:30",
 		items: [
 			{
 				title: "Building the World's Fastest AI Apps with Cerebras",
-				link: {
-					name: "Stay tuned!",
-					url: "#",
-				},
-				time: "2024-10-01T20:30:00+05:30",
+				time: "2025-10-01T20:30:00+05:30",
 			},
 		],
 	},
 	{
-		date: "2024-10-02T00:00:00+05:30",
+		date: "2025-10-02T00:00:00+05:30",
 		items: [
 			{
 				title: "Resume review session",
-				link: {
-					name: "Join Discord Server",
-					url: "https://discord.gg/wemakedevs",
-				},
-				time: "2024-10-02T17:00:00+05:30",
+				description:
+					"Join Resume Review Session on Cerebras Discord to get personalized feedback from mentors to polish your resume and highlight your skills to stand out!",
+				time: "2025-10-02T20:30:00+05:30",
 			},
 		],
 	},
 	{
-		date: "2024-10-03T00:00:00+05:30",
+		date: "2025-10-03T00:00:00+05:30",
 		items: [
 			{
-				title: "Early project showcase and feedback session",
-				link: {
-					name: "Join Discord Server",
-					url: "https://discord.gg/wemakedevs",
-				},
-				time: "2024-10-03T21:00:00+05:30",
+				title: "Project Feedback Session",
+				description:
+					"Present your early-stage projects, get constructive feedback, and refine your ideas with mentor and peer insights in this interactive Discord session.",
+				time: "2025-10-03T20:30:00+05:30",
 			},
 		],
 	},
 	{
-		date: "2024-10-04T00:00:00+05:30",
-		items: [
-			{
-				title: "Keep on working. This hackathon is not over yet!",
-			},
-		],
-	},
-	{
-		date: "2024-10-05T00:00:00+05:30",
+		date: "2025-10-05T00:00:00+05:30",
 		items: [
 			{
 				title: "Hackathon ends",
-				time: "2024-10-05T19:00:00+05:30",
-			},
-			{
-				title: "Results will be announced during the week of October 6th",
+				time: "2025-10-05T20:00:00+05:30",
 			},
 		],
 	},
