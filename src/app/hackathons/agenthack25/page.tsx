@@ -10,6 +10,7 @@ import { ViewContainer } from "@/components/ui/view-container";
 import { ArrowUpRight, Star } from "lucide-react";
 import Link from "next/link";
 import HackathonHeader from "./components/Header";
+import AgentHackSpecialTestimonial from "./components/SpecialTestimonial";
 import AgentHackStats from "./components/Stats";
 import AgentHackTestimonials from "./components/Testimonials";
 import { DATA, faqs, navLinks } from "./data";
@@ -58,6 +59,7 @@ const HackathonPage = () => {
 						AgentHack in numbers
 					</HackathonContentTitleH3>
 					<AgentHackStats />
+					<AgentHackSpecialTestimonial />
 					<HackathonContentTitleH3 className="mt-12">
 						Participants testimonials
 					</HackathonContentTitleH3>
