@@ -107,7 +107,7 @@ const schedule = [
 				title: "Building Voice Agents with LiveKit and Cerebras",
 				description:
 					"Learn how to build a sophisticated real-time voice sales agent that can hold natural conversations with potential customers. The session will cover both single-agent and multi-agent systems, where specialized AI assistants can handle sales, technical support, and pricing inquiries.",
-				time: "2025-09-29T20:30:00+05:30",
+				time: "2025-09-29T21:30:00+05:30",
 			},
 		],
 	},
