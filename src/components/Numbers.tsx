@@ -15,7 +15,7 @@ const Numbers = ({ className, ...props }: GeneralComponent) => {
 		},
 		{
 			name: "Prices in $ worth",
-			number: 50000,
+			number: 100000,
 			icon: CircleDollarSign,
 			color: "accent-2",
 		},
