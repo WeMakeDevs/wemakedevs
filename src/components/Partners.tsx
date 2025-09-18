@@ -1,6 +1,7 @@
 import {
 	draperHouseLogo,
 	hackThisFallLogo,
+	kubesimplifyLogo,
 	postmanLogo,
 } from "@/assets/images/communityPartners";
 import {
@@ -157,7 +158,7 @@ const Partners = () => {
 							<Image
 								src={postmanLogo}
 								alt="Postman"
-								className="object-contain w-24"
+								className="object-contain w-20"
 							/>
 						</Link>
 						<Link
@@ -169,7 +170,7 @@ const Partners = () => {
 							<Image
 								src={hackThisFallLogo}
 								alt="HackThisFall"
-								className="object-contain w-36"
+								className="object-contain w-32"
 							/>
 						</Link>
 						<Link
@@ -181,7 +182,19 @@ const Partners = () => {
 							<Image
 								src={draperHouseLogo}
 								alt="Draper House India"
-								className="object-contain w-40"
+								className="object-contain w-36"
+							/>
+						</Link>
+						<Link
+							href="https://kubesimplify.com/"
+							target="_blank"
+							rel="noopener noreferrer"
+							className="flex items-center justify-center p-4"
+						>
+							<Image
+								src={kubesimplifyLogo}
+								alt="Kubesimplify"
+								className="object-contain w-48"
 							/>
 						</Link>
 					</div>
