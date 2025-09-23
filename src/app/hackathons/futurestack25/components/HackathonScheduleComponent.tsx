@@ -3,10 +3,15 @@
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import type { ScheduleElement } from "@/types";
-import { Clock, Link2 } from "lucide-react";
+import { Clock, Link2, Linkedin, Youtube } from "lucide-react";
 import Link from "next/link";
 import type React from "react";
 import { useEffect, useState } from "react";
+import type {
+	FuturestackScheduleElement,
+	FuturestackScheduleItem,
+	FuturestackScheduleLink,
+} from "../types";
 
 interface GroupedSchedule {
 	date: string;
@@ -22,10 +27,23 @@ interface GroupedSchedule {
 	}>;
 }
 
+// Local structural type that is compatible with both global ScheduleElement and FuturestackScheduleElement
+type CompatibleSchedule = Array<
+	Pick<ScheduleElement, "date" | "items"> & {
+		items: Array<
+			ScheduleElement["items"][number] &
+				FuturestackScheduleElement["items"][number]
+		>;
+	}
+>;
+
 const HackathonScheduleComponent = ({
 	schedule,
 }: {
-	schedule: ScheduleElement[];
+	schedule:
+		| CompatibleSchedule
+		| ScheduleElement[]
+		| FuturestackScheduleElement[];
 }) => {
 	const [selectedDate, setSelectedDate] = useState(0);
 	const [groupedSchedule, setGroupedSchedule] = useState<GroupedSchedule[]>(
@@ -39,7 +57,7 @@ const HackathonScheduleComponent = ({
 		const dateMap = new Map<string, GroupedSchedule>();
 
 		// Process all events and group by local date
-		for (const day of schedule) {
+		for (const day of schedule as CompatibleSchedule) {
 			for (const item of day.items) {
 				if (item.time) {
 					const eventDate = new Date(item.time);
@@ -216,17 +234,67 @@ const HackathonScheduleComponent = ({
 													{formatLocalTime(item.time)}
 												</span>
 											)}
-											{item.link && (
-												<Link
-													href={item.link.url}
-													className="hover:underline no-underline text-blue-600 flex items-center gap-2 uppercase"
-													target="_blank"
-													rel="noopener noreferrer"
-												>
-													<Link2 size={16} />
-													{item.link.name}
-												</Link>
-											)}
+											{/* Multiple platform links (FutureStack-specific) */}
+											{("links" in item &&
+												Array.isArray(
+													(
+														item as FuturestackScheduleItem
+													).links,
+												) && (
+													<div className="flex items-center gap-3">
+														{(
+															(
+																item as FuturestackScheduleItem
+															)
+																.links as FuturestackScheduleLink[]
+														).map((l, idx) => (
+															<Link
+																key={`${l.platform}-${idx}`}
+																href={l.url}
+																className="text-blue-600 hover:text-blue-700"
+																target="_blank"
+																rel="noopener noreferrer"
+																title={
+																	l.platform
+																}
+															>
+																{l.platform ===
+																"youtube" ? (
+																	<Youtube
+																		size={
+																			18
+																		}
+																	/>
+																) : l.platform ===
+																	"linkedin" ? (
+																	<Linkedin
+																		size={
+																			18
+																		}
+																	/>
+																) : (
+																	<Link2
+																		size={
+																			16
+																		}
+																	/>
+																)}
+															</Link>
+														))}
+													</div>
+												)) ||
+												// Backward-compatible single link
+												(item.link && (
+													<Link
+														href={item.link.url}
+														className="hover:underline no-underline text-blue-600 flex items-center gap-2 uppercase"
+														target="_blank"
+														rel="noopener noreferrer"
+													>
+														<Link2 size={16} />
+														{item.link.name}
+													</Link>
+												))}
 										</div>
 
 										{item.description && (

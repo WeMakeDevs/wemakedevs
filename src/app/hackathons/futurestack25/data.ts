@@ -108,6 +108,16 @@ const schedule = [
 				description:
 					"Learn how to build a sophisticated real-time voice sales agent that can hold natural conversations with potential customers. The session will cover both single-agent and multi-agent systems, where specialized AI assistants can handle sales, technical support, and pricing inquiries.",
 				time: "2025-09-29T21:30:00+05:30",
+				links: [
+					{
+						platform: "youtube",
+						url: "https://www.youtube.com/live/jlF3mfie-y0?si=I46eDyigfLxxehZK",
+					},
+					{
+						platform: "linkedin",
+						url: "https://www.linkedin.com/events/buildingvoiceagentswithlivekita7376200720397762560/theater/",
+					},
+				],
 			},
 		],
 	},
@@ -119,6 +129,16 @@ const schedule = [
 				description:
 					"Join us for a multi-agent workshop that will guide you through building and deploying a multi-agent system using Docker, Google Agent Development Kit (ADK), and Cerebras AI. This workshop will contain theoretical concepts and practical exercises that will give you hands-on experience with everything you need to know to create your hackathon project! You'll learn how to build and deploy a multi-agent system using Agentic Compose, orchestrate multiple AI agents, and integrate Cerebras AI with local models. Facilitator: Ajeet Raina, Developer Advocate, Docker",
 				time: "2025-09-30T20:30:00+05:30",
+				links: [
+					{
+						platform: "youtube",
+						url: "https://www.youtube.com/live/Tk8sjwpffFY?si=kzulhmyqS_NGMu7s",
+					},
+					{
+						platform: "linkedin",
+						url: "https://www.linkedin.com/events/dockerdevduckmulti-agentworksho7376201071230332928/theater/",
+					},
+				],
 			},
 		],
 	},
@@ -130,6 +150,16 @@ const schedule = [
 				description:
 					"Build your own AI-powered research assistant that can intelligently search the web, analyze information, and provide comprehensive answers with proper citations. You'll create a 'Perplexity-style' tool that rivals commercial AI search platforms.",
 				time: "2025-10-01T21:30:00+05:30",
+				links: [
+					{
+						platform: "youtube",
+						url: "https://www.youtube.com/live/8D73Reafu90?si=ifmxZdQ2qdDyxaou",
+					},
+					{
+						platform: "linkedin",
+						url: "https://www.linkedin.com/events/creatingresearchassistantswithe7376201413288185856/theater/",
+					},
+				],
 			},
 		],
 	},
