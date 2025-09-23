@@ -1,8 +1,10 @@
 import {
+	c4gtLogo,
 	draperHouseLogo,
 	hackThisFallLogo,
 	kubesimplifyLogo,
 	postmanLogo,
+	teamLogo,
 } from "@/assets/images/communityPartners";
 import {
 	kestraAuthor,
@@ -148,7 +150,7 @@ const Partners = () => {
 					</div>
 
 					{/* Community Partner Logos */}
-					<div className="flex justify-center items-center gap-8 md:gap-12 flex-wrap">
+					<div className="flex flex-wrap justify-center gap-6 md:gap-x-20 md:gap-y-10 items-center justify-items-center">
 						<Link
 							href="https://www.postman.com/"
 							target="_blank"
@@ -158,7 +160,7 @@ const Partners = () => {
 							<Image
 								src={postmanLogo}
 								alt="Postman"
-								className="object-contain w-20"
+								className="object-contain w-[74px] md:w-[90px] lg:w-[100px]"
 							/>
 						</Link>
 						<Link
@@ -170,7 +172,7 @@ const Partners = () => {
 							<Image
 								src={hackThisFallLogo}
 								alt="HackThisFall"
-								className="object-contain w-32"
+								className="object-contain w-24 md:w-28 lg:w-32"
 							/>
 						</Link>
 						<Link
@@ -182,7 +184,7 @@ const Partners = () => {
 							<Image
 								src={draperHouseLogo}
 								alt="Draper House India"
-								className="object-contain w-36"
+								className="object-contain w-[100px] md:w-[132px] lg:w-[156px]"
 							/>
 						</Link>
 						<Link
@@ -194,7 +196,31 @@ const Partners = () => {
 							<Image
 								src={kubesimplifyLogo}
 								alt="Kubesimplify"
-								className="object-contain w-48"
+								className="object-contain w-[140px] md:w-[156px] lg:w-52"
+							/>
+						</Link>
+						<Link
+							href="https://www.mumbaitech.team/"
+							target="_blank"
+							rel="noopener noreferrer"
+							className="flex items-center justify-center p-4"
+						>
+							<Image
+								src={teamLogo}
+								alt="Team"
+								className="object-contain w-[100px] md:w-[116px] lg:w-[132px]"
+							/>
+						</Link>
+						<Link
+							href="https://samagragovernance.in/"
+							target="_blank"
+							rel="noopener noreferrer"
+							className="flex items-center justify-center p-4"
+						>
+							<Image
+								src={c4gtLogo}
+								alt="C4GT"
+								className="object-contain w-24 md:w-28 lg:w-32"
 							/>
 						</Link>
 					</div>
