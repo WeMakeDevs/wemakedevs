@@ -3,8 +3,8 @@ import {
 	draperHouseLogo,
 	hackThisFallLogo,
 	kubesimplifyLogo,
-	postmanLogo,
 	teamLogo,
+	theApiCommunityLogo,
 } from "@/assets/images/communityPartners";
 import {
 	kestraAuthor,
@@ -158,9 +158,9 @@ const Partners = () => {
 							className="flex items-center justify-center p-4"
 						>
 							<Image
-								src={postmanLogo}
-								alt="Postman"
-								className="object-contain w-[74px] md:w-[90px] lg:w-[100px]"
+								src={theApiCommunityLogo}
+								alt="The API Community"
+								className="object-contain w-[90px] md:w-[110px] lg:w-[130px]"
 							/>
 						</Link>
 						<Link
