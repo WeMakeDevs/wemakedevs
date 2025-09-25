@@ -15,8 +15,8 @@ const TestimonialCard = ({
 	return (
 		<div
 			className={cn(
-				className,
 				"flex flex-col gap-10 p-4 md:p-6 rounded rounded-tr-[50px] sm:max-w-[400px] md:max-w-[500px] mx-auto h-full",
+				className,
 			)}
 			{...props}
 		>

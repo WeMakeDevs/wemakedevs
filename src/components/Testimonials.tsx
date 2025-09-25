@@ -1,10 +1,15 @@
 import {
-	avatar1,
-	avatar2,
-	avatar3,
-	avatar4,
-	avatar5,
-	avatar6,
+	abhinavAvatar,
+	adityaAvatar,
+	anujAvatar,
+	areAvatar,
+	jayAvatar,
+	parvezAvatar,
+	prathameshAvatar,
+	saiAvatar,
+	sameekshaAvatar,
+	sarahAvatar,
+	shivayAvatar,
 } from "@/assets/images/testimonials";
 import { cn } from "@/lib/utils";
 import type { GeneralComponent } from "@/types";
@@ -21,46 +26,81 @@ import { ViewContainer } from "./ui/view-container";
 
 const testimonials: TestimonialInterface[] = [
 	{
-		profileImage: avatar4,
-		name: "Rahul Kumar",
+		profileImage: sarahAvatar,
+		name: "Sarah Chieng",
 		platform: "twitter",
 		testimonialText:
-			"The way this guy is teaching me Java is just Mind Blowing and Brilliant. I've never thought that these topics would be that much easier. Kudos to @kunalstwt #DSAwithKunal",
+			"Thanks to WeMakeDevs for the 7-day hackathon! Great collaboration with Cerebras, Meta, and Docker. Good space for builders to work together and learn.",
 	},
 	{
-		profileImage: avatar2,
-		name: "Ekjot Singh",
+		profileImage: shivayAvatar,
+		name: "Shivay Lamba",
 		platform: "twitter",
 		testimonialText:
-			"Thanks @kunalstwt for helping me understand the benefits of Binary Search and how it's a lot effective than linear search. Understood the theory now and will be solving questions with @WeMakeDevs and build up the concept. #DSAwithKunal",
+			"WeMakeDevs launched scholarships covering flights, hotels, and travel for Kubecon Amsterdam. Nice initiative to help developers attend events and connect with others.",
 	},
 	{
-		profileImage: avatar5,
-		name: "Sajjan Yadav",
-		platform: "twitter",
+		profileImage: saiAvatar,
+		name: "Sai Vardhan Penmetsa",
+		platform: "linkedin",
 		testimonialText:
-			"Done with amazing playlist of Object Oriented Programming by @kunalstwt bhaiya. Every concept was explained very well and got to know so many new things. Thanks kunal bhaiya for such an amazing playlist. #DSAwithKunal",
+			"✨ Five days of pure hustle, late-night debugging, and incredible learning! Building project during AgentHack 2025 with Portia AI and guidance from the WeMakeDevs community was intense yet rewarding 🚀",
 	},
 	{
-		profileImage: avatar1,
-		name: "Anurag Pathak",
+		profileImage: sameekshaAvatar,
+		name: "Sameeksha",
 		platform: "twitter",
 		testimonialText:
-			"Completed @kunalstwt's DevOps bootcamp networking video. Really awesome explanation, got a clear overview of whole networking process. Application layer is perfectly understood. #DevOpswithkunal  #networking",
+			"Looking forward to the FutureStack GenAI hackathon. WeMakeDevs organized this with Cerebras, Meta, and Docker. Good prizes and learning opportunities for developers.",
 	},
 	{
-		profileImage: avatar3,
-		name: "Prasanna",
+		profileImage: parvezAvatar,
+		name: "Parvez Shaikh",
 		platform: "twitter",
 		testimonialText:
-			"Finally, completed 4 hour long video on computer networking. Amazing content @kunalstwt. Thanks for creating such an educational content for us 🙌🙌 #DevOpswithkunal",
+			"Good opportunity of Kubecon Amsterdam scholarship through WeMakeDevs for students and builders. Looking forward to KubeCon Amsterdam 2026 and the chance to learn and connect.",
 	},
 	{
-		profileImage: avatar6,
-		name: "Siva Nithin",
+		profileImage: adityaAvatar,
+		name: "Aditya Oberai",
 		platform: "twitter",
 		testimonialText:
-			"What an explanation 🔥 on recursion! This dsa course is just absolutely amazing. Thank you Kunal Kushwaha for this amazing course. #DSAwithKunal #dsa",
+			"WeMakeDevs organized a GenAI hackathon with Cerebras, Meta, and Docker. Good platform for developers to build and collaborate on projects.",
+	},
+	{
+		profileImage: jayAvatar,
+		name: "Jay Bamroliya",
+		platform: "twitter",
+		testimonialText:
+			"AI hackathon by WeMakeDevs with Docker, Meta, and Cerebras. Good opportunity for builders to explore and work together virtually.",
+	},
+	{
+		profileImage: anujAvatar,
+		name: "Anuj Upadhyay",
+		platform: "twitter",
+		testimonialText:
+			"Won AgentHack2025 with Team Dark Mode. Thanks to WeMakeDevs, Portia AI, and Kunal for organizing the hackathon.",
+	},
+	{
+		profileImage: prathameshAvatar,
+		name: "Prathamesh Kirad",
+		platform: "linkedin",
+		testimonialText:
+			"A huge and heartfelt thank you to this incredible team. Your dedication, creativity, and support made every moment of this hackathon unforgettable. 🙌",
+	},
+	{
+		profileImage: abhinavAvatar,
+		name: "Abhinav Dubey",
+		platform: "twitter",
+		testimonialText:
+			"If you're into AI and building, check out this WeMakeDevs hackathon. Good chance to work on AI integration with containers and learn from others.",
+	},
+	{
+		profileImage: areAvatar,
+		name: "Are Kavyasri",
+		platform: "linkedin",
+		testimonialText:
+			"I had the amazing opportunity to be part of this incredible hackathon hosted by WeMakeDevs and sponsored by Kestra. It was a thrilling experience collaborating, innovating, and learning alongside talented individuals.",
 	},
 ];
 
@@ -95,6 +135,7 @@ const Testimonials = ({ className, ...props }: GeneralComponent) => {
 										index % 4 === 1 && "bg-accent-2",
 										index % 4 === 2 && "bg-accent-3",
 										index % 4 === 3 && "bg-accent-4",
+										"h-[390px]",
 									)}
 								/>
 							</CarouselItem>
