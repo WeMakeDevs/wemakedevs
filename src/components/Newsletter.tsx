@@ -2,7 +2,11 @@
 
 import { cn } from "@/lib/utils";
 import type { GeneralComponent } from "@/types";
-import { SiDiscord, SiTelegram } from "@icons-pack/react-simple-icons";
+import {
+	SiDiscord,
+	SiTelegram,
+	SiWhatsapp,
+} from "@icons-pack/react-simple-icons";
 import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 import { ViewContainer } from "./ui/view-container";
@@ -78,6 +82,23 @@ const Newsletter = ({ className, ...props }: GeneralComponent) => {
 							<SiTelegram className="text-white" />
 							<span className="text-base md:text-lg font-semibold text-white">
 								Telegram Channel
+							</span>
+						</div>
+						<ArrowUpRight
+							stroke="#fff"
+							className="group-hover:-translate-x-6 transition-transform"
+						/>
+					</Link>
+					<Link
+						href="https://chat.whatsapp.com/DFaMNYlChQ6KruISAHGKFl"
+						target="_blank"
+						rel="noopener noreferrer"
+						className="flex justify-between gap-10 items-center rounded-[10px] group bg-[#25D366] px-4 md:px-6 py-4 grow"
+					>
+						<div className="flex w-full gap-4 items-center group-hover:translate-x-6 transition-transform">
+							<SiWhatsapp className="text-white" />
+							<span className="text-base md:text-lg font-semibold text-white">
+								WhatsApp Group
 							</span>
 						</div>
 						<ArrowUpRight

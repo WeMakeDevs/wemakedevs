@@ -3,7 +3,7 @@ import type { FaqType } from "@/types";
 export const FAQS: FaqType[] = [
 	{
 		question: "How can I join the community?",
-		answer: 'Simply head over to the "Join" section on this page, where you’ll find links to our Discord and Telegram groups.',
+		answer: 'Simply head over to the "Join" section on this page, where you\'ll find links to our Discord, Telegram, and WhatsApp groups.',
 	},
 	{
 		question: "What kind of events do you host?",
@@ -38,7 +38,7 @@ export const HACKATHON_FAQS: FaqType[] = [
 	},
 	{
 		question: "How can I submit my project?",
-		answer: "Join our discord server for all the updates and announcements regarding the hackathon.",
+		answer: "Join our Discord server for all the updates and announcements regarding the hackathon.",
 	},
 	{
 		question: "I am a beginner in tech, can I still participate?",
@@ -73,7 +73,7 @@ export const SCHOLARSHIP_FAQS: FaqType[] = [
 	},
 	{
 		question: "How do I stay updated?",
-		answer: "Join our <a href='https://discord.gg/wemakedevs' target='_blank' rel='noopener noreferrer' class='text-blue-700 underline hover:no-underline'>Discord</a> and <a href='https://t.me/WeMakeDevs' target='_blank' rel='noopener noreferrer' class='text-blue-700 underline hover:no-underline'>Telegram</a> communities, and follow us on social media for all updates.",
+		answer: "Join our <a href='https://discord.gg/wemakedevs' target='_blank' rel='noopener noreferrer' class='text-blue-700 underline hover:no-underline'>Discord</a>, <a href='https://t.me/WeMakeDevs' target='_blank' rel='noopener noreferrer' class='text-blue-700 underline hover:no-underline'>Telegram</a>, and <a href='https://chat.whatsapp.com/DFaMNYlChQ6KruISAHGKFl' target='_blank' rel='noopener noreferrer' class='text-blue-700 underline hover:no-underline'>WhatsApp</a> communities, and follow us on social media for all updates.",
 	},
 	{
 		question: "Do you provide visa support?",

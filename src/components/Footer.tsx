@@ -12,6 +12,7 @@ import {
 	SiInstagram,
 	SiLinkedin,
 	SiTelegram,
+	SiWhatsapp,
 	SiX,
 	SiYoutube,
 } from "@icons-pack/react-simple-icons";
@@ -60,6 +61,11 @@ const footerSocialLinks: FooterSocialLink[] = [
 		href: "https://discord.gg/weMakeDevs",
 		icon: SiDiscord,
 	},
+	{
+		name: "WhatsApp",
+		href: "https://chat.whatsapp.com/DFaMNYlChQ6KruISAHGKFl",
+		icon: SiWhatsapp,
+	},
 ];
 
 const footerLinks: FooterLinkSection[] = [
@@ -96,6 +102,11 @@ const footerLinks: FooterLinkSection[] = [
 			{
 				name: "Telegram",
 				href: "https://t.me/WeMakeDevs",
+				opensInNewTab: true,
+			},
+			{
+				name: "WhatsApp",
+				href: "https://chat.whatsapp.com/DFaMNYlChQ6KruISAHGKFl",
 				opensInNewTab: true,
 			},
 		],
