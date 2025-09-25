@@ -41,7 +41,7 @@ const Newsletter = ({ className, ...props }: GeneralComponent) => {
 							width="100vw"
 							height={400}
 							className="h-[420px] min-[400px]:h-[400px] min-[570px]:h-[350px]"
-							src="https://sibforms.com/serve/MUIFALA912jqnTHNySRo2quOS4yyrcNCA21Nm5FtmEalyN0vbNZ4BPwgcZHijdIW1cNO6aJzyYCtVaAFwzwvs5YrkKusMEKWbZg275CVt843ybVsLUU5Bxh6lJWzF6S6qlLr-VB8Vp7TZHuzqfB9OEzbdWW_Ct3BTmuqL_91uuKUmVSF8layuPrzJwamrfTiuZ-E9CDbXu9T7Zqx"
+							src="https://718dd6be.sibforms.com/serve/MUIFAHs4MMjluOXeCc1E_bta0y1EKhIspO9y6ZcCsIjbpfMgzVK3AXjmnDB_ibbKtgY2Q6jNf5rRunjE2rn69Y3Hjw8VXpSYQzrmSPFe-1C5xK0-ITdc_-GZVt4-k3kXAIP8srxnezzB4vNiKJC_R4V-68fyTrUhgKE0XzxMCHSJ-AR3iha0IxwVn9F4J7wHLALwf3r7RR4rPLN-"
 							frameBorder="0"
 							scrolling="auto"
 							allowFullScreen
@@ -54,7 +54,7 @@ const Newsletter = ({ className, ...props }: GeneralComponent) => {
 						/>
 					</div>
 				</div>
-				<div className="flex flex-col md:flex-row gap-4 md:gap-10">
+				<div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-10">
 					<Link
 						href="https://discord.gg/wemakedevs"
 						target="_blank"
