@@ -2,6 +2,7 @@ import cerebrasLogo from "./cerebras-logo.png";
 import cover from "./cover.png";
 import dockerLogo from "./docker-logo.svg";
 import metaLogo from "./meta-logo.svg";
+import openrouterLogo from "./openrouter-logo.svg";
 import thumbnail from "./thumbnail.png";
 
 export const images = {
@@ -10,4 +11,5 @@ export const images = {
 	cerebrasLogo,
 	thumbnail,
 	cover,
+	openrouterLogo,
 } as const;

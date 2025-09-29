@@ -104,6 +104,49 @@ const SponsorsGrid = () => {
 					</Link>
 				</div>
 			</div>
+
+			{/* OpenRouter */}
+			<div className="bg-gray-50 rounded-2xl p-6 border border-gray-200 md:col-start-2">
+				<div className="text-center mb-6">
+					<Image
+						src={images.openrouterLogo}
+						alt="OpenRouter Logo"
+						className="w-40 h-20 object-contain mx-auto mb-4"
+					/>
+					<h3 className="text-2xl font-bold mb-2 text-gray-700">
+						OpenRouter
+					</h3>
+				</div>
+				<p className="text-gray-700 leading-relaxed">
+					OpenRouter is providing a coupon for up to 500 hackers to
+					receive additional free tokens during the hackathon. Use the
+					code{" "}
+					<span className="font-semibold">
+						OPENROUTER-CEREBRAS-HACKATHON
+					</span>{" "}
+					to claim $5 in OpenRouter credits. To redeem, sign up for an
+					OpenRouter account and visit{" "}
+					<Link
+						href="https://openrouter.ai/redeem"
+						className="whitespace-nowrap font-semibold hover:underline text-blue-700"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						openrouter.ai/redeem
+					</Link>{" "}
+					to apply the code. Valid through October 4.
+				</p>
+				<div className="mt-6 text-center">
+					<Link
+						href="http://openrouter.ai/"
+						className="inline-block px-4 py-2 rounded-[4px] bg-gray-700 text-white hover:bg-gray-800"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						Sign up!
+					</Link>
+				</div>
+			</div>
 		</div>
 	);
 };
