@@ -2,7 +2,10 @@ import {
 	c4gtLogo,
 	draperHouseLogo,
 	hackThisFallLogo,
+	idcLogo,
+	indehubLogo,
 	kubesimplifyLogo,
+	punedaoLogo,
 	teamLogo,
 	theApiCommunityLogo,
 } from "@/assets/images/communityPartners";
@@ -221,6 +224,42 @@ const Partners = () => {
 								src={c4gtLogo}
 								alt="C4GT"
 								className="object-contain w-24 md:w-28 lg:w-32"
+							/>
+						</Link>
+						<Link
+							href="https://www.indiandataclub.com/"
+							target="_blank"
+							rel="noopener noreferrer"
+							className="flex items-center justify-center p-4"
+						>
+							<Image
+								src={idcLogo}
+								alt="Indian Data Club"
+								className="object-contain w-24 md:w-28 lg:w-32"
+							/>
+						</Link>
+						<Link
+							href="https://indehub.org/"
+							target="_blank"
+							rel="noopener noreferrer"
+							className="flex items-center justify-center p-4"
+						>
+							<Image
+								src={indehubLogo}
+								alt="Indehub"
+								className="object-contain w-16 md:w-20 lg:w-24"
+							/>
+						</Link>
+						<Link
+							href="https://www.punedao.xyz/"
+							target="_blank"
+							rel="noopener noreferrer"
+							className="flex items-center justify-center p-4"
+						>
+							<Image
+								src={punedaoLogo}
+								alt="Pune Dao"
+								className="object-contain w-16 md:w-20 lg:w-24"
 							/>
 						</Link>
 					</div>
