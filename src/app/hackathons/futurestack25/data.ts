@@ -167,6 +167,18 @@ const schedule = [
 		date: "2025-10-02T00:00:00+05:30",
 		items: [
 			{
+				title: "Mentorship Session | Docker",
+				description:
+					"Guidance on building and deploying with Docker + Cerebras.",
+				time: "2025-10-02T18:00:00+05:30",
+				links: [
+					{
+						platform: "discord",
+						url: "https://discord.gg/Ygz6TxAz?event=1423196671193649234",
+					},
+				],
+			},
+			{
 				title: "Resume review",
 				description:
 					"Get personalized feedback on your resume from industry experts. Learn how to highlight your skills and stand out to recruiters.",
@@ -177,6 +189,18 @@ const schedule = [
 	{
 		date: "2025-10-03T00:00:00+05:30",
 		items: [
+			{
+				title: "Mentorship Session | Meta",
+				description:
+					"Insights into building AI systems at scale and feedback on your projects.",
+				time: "2025-10-03T16:00:00+05:30",
+				links: [
+					{
+						platform: "discord",
+						url: "https://discord.gg/Ygz6TxAz?event=1423197505339916421",
+					},
+				],
+			},
 			{
 				title: "Early project showcase and feedback session",
 				description:

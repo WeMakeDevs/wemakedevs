@@ -3,6 +3,7 @@
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import type { ScheduleElement } from "@/types";
+import { SiDiscord } from "@icons-pack/react-simple-icons";
 import { Clock, Link2, Linkedin, Youtube } from "lucide-react";
 import Link from "next/link";
 import type React from "react";
@@ -268,6 +269,13 @@ const HackathonScheduleComponent = ({
 																) : l.platform ===
 																	"linkedin" ? (
 																	<Linkedin
+																		size={
+																			18
+																		}
+																	/>
+																) : l.platform ===
+																	"discord" ? (
+																	<SiDiscord
 																		size={
 																			18
 																		}
