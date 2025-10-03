@@ -35,7 +35,7 @@ export default function RootLayout({
 			type: "link",
 		},
 		{
-			name: "Register",
+			name: DATA.cta.label,
 			url: DATA.cta.href,
 			type: "button",
 			openInNewTab: DATA.cta.openInNewTab,
