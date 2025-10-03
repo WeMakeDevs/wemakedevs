@@ -35,11 +35,10 @@ export default function Home() {
 			<Banner className="flex items-center text-base md:text-lg font-medium">
 				<div className="flex flex-col md:flex-row items-center justify-center">
 					<span className="text-white">
-						Biggest hackathon yet in collaboration with Cerebras,
-						Meta & Docker!
+						Submit your project for the FutureStack GenAI hackathon!
 					</span>
 					<Link
-						href="/hackathons/futurestack25"
+						href="https://forms.gle/5HD26ZxXcKzUakXa7"
 						className={cn(
 							buttonVariants(),
 							"mt-4 md:mt-0 md:ml-8 px-3 py-2 bg-white hover:bg-white/80 text-[#1a2047] w-full md:w-fit",
@@ -47,7 +46,7 @@ export default function Home() {
 						target="_blank"
 						rel="noopener noreferrer"
 					>
-						Register now!
+						Submit Project!
 					</Link>
 				</div>
 			</Banner>
