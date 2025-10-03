@@ -179,7 +179,7 @@ const schedule = [
 				],
 			},
 			{
-				title: "Resume review",
+				title: "Resume review 1",
 				description:
 					"Get personalized feedback on your resume from industry experts. Learn how to highlight your skills and stand out to recruiters.",
 				time: "2025-10-02T20:30:00+05:30",
@@ -202,10 +202,16 @@ const schedule = [
 				],
 			},
 			{
-				title: "Early project showcase and feedback session",
+				title: "Resume review 2",
 				description:
-					"Share your early-stage project with mentors and peers. Get constructive feedback to refine your idea before final submission.",
-				time: "2025-10-03T20:30:00+05:30",
+					"Get personalized feedback on your resume from industry experts. Learn how to highlight your skills and stand out to recruiters.",
+				time: "2025-10-03T20:00:00+05:30",
+				links: [
+					{
+						platform: "discord",
+						url: "https://discord.gg/Ygz6TxAz?event=1423569182532046850",
+					},
+				],
 			},
 		],
 	},
