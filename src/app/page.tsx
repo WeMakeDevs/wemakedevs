@@ -32,7 +32,7 @@ export default function Home() {
 			<Partners />
 			<Footer />
 
-			<Banner className="flex items-center text-base md:text-lg font-medium">
+			{/* <Banner className="flex items-center text-base md:text-lg font-medium">
 				<div className="flex flex-col md:flex-row items-center justify-center">
 					<span className="text-white">
 						Submit your project for the FutureStack GenAI hackathon!
@@ -49,7 +49,7 @@ export default function Home() {
 						Submit Project!
 					</Link>
 				</div>
-			</Banner>
+			</Banner> */}
 		</div>
 	);
 }
