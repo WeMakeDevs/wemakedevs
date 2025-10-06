@@ -1,14 +1,10 @@
+import Banner from "@/components/Banner";
 import Faq from "@/components/Faq";
 import {
-	HackathonContentBody,
-	HackathonContentTitle,
-	HackathonContentTitleH3,
 	HackathonCoverImage,
 	HackathonNav,
 } from "@/components/hackathon-content";
 import { ViewContainer } from "@/components/ui/view-container";
-import Image from "next/image";
-import Link from "next/link";
 import HackathonHeader from "./components/Header";
 import IntroSection from "./components/IntroSection";
 import JudgingCriteria from "./components/JudgingCriteria";
@@ -26,9 +22,10 @@ const HackathonPage = () => {
 				page="overview"
 				links={navLinks}
 				navCta={{
-					label: DATA.cta.label,
+					label: "Results will be announced soon!",
 					href: DATA.cta.href,
 					openInNewTab: DATA.cta.openInNewTab,
+					disabled: true,
 				}}
 			/>
 			<div id="about" className="scroll-mt-16">
@@ -66,6 +63,14 @@ const HackathonPage = () => {
 					<Faq FAQS={faqs} />
 				</ViewContainer>
 			</div>
+			<Banner className="flex items-center text-base md:text-lg font-medium">
+				<div className="flex flex-col md:flex-row items-center justify-center">
+					<span className="text-white">
+						Hackathon has ended and the results will be announced
+						soon!
+					</span>
+				</div>
+			</Banner>
 		</main>
 	);
 };

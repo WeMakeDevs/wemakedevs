@@ -16,9 +16,10 @@ const HackathonResources = async () => {
 				page="resources"
 				links={navLinks}
 				navCta={{
-					label: DATA.cta.label,
+					label: "Results will be announced soon!",
 					href: DATA.cta.href,
 					openInNewTab: DATA.cta.openInNewTab,
+					disabled: true,
 				}}
 			/>
 			<ViewContainer>

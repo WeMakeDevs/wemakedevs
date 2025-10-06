@@ -5,7 +5,7 @@ const DATA = {
 	title: "FutureStack GenAI hackathon",
 	prize: "$15,000+",
 	startDate: "2025-09-29T04:30:00Z",
-	endDate: "2025-10-05T16:30:00Z",
+	endDate: "2025-10-05T18:30:00Z",
 	description: "Our biggest hackathon yet",
 	descriptionCard: "Build the future with AI and cloud-native tech!",
 	slug: "futurestack25",
@@ -220,7 +220,7 @@ const schedule = [
 		items: [
 			{
 				title: "Hackathon ends",
-				time: "2025-10-05T20:00:00+05:30",
+				time: "2025-10-06T00:00:00+05:30",
 			},
 		],
 	},

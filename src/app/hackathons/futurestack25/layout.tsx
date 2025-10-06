@@ -34,12 +34,6 @@ export default function RootLayout({
 			url: `/hackathons/${DATA.slug}#faq`,
 			type: "link",
 		},
-		{
-			name: DATA.cta.label,
-			url: DATA.cta.href,
-			type: "button",
-			openInNewTab: DATA.cta.openInNewTab,
-		},
 	];
 
 	return (
