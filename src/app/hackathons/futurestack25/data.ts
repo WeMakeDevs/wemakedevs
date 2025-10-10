@@ -11,8 +11,8 @@ const DATA = {
 	slug: "futurestack25",
 	images,
 	cta: {
-		label: "Submit Project",
-		href: "https://forms.gle/5HD26ZxXcKzUakXa7",
+		label: "Submit Feedback",
+		href: "https://forms.gle/FKkci7FprkUy4v3z5",
 		openInNewTab: true,
 	},
 	prizes: {

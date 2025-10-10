@@ -16,10 +16,9 @@ const HackathonRules = async () => {
 				page="rules"
 				links={navLinks}
 				navCta={{
-					label: "Results will be announced soon!",
+					label: DATA.cta.label,
 					href: DATA.cta.href,
 					openInNewTab: DATA.cta.openInNewTab,
-					disabled: true,
 				}}
 			/>
 			<ViewContainer className="my-10">

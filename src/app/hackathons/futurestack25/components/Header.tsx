@@ -48,12 +48,12 @@ const HackathonHeader = ({
 								href={cta.href}
 								className={cn(
 									buttonVariants({ variant: "default" }),
-									"mt-4 md:mt-6 opacity-60 cursor-not-allowed",
+									"mt-4 md:mt-6",
 								)}
 								target="_blank"
 								rel="noopener noreferrer"
 							>
-								Results will be announced soon!
+								{cta.label}
 							</Link>
 						</div>
 					</div>
