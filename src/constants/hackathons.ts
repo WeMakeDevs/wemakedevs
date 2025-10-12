@@ -2,6 +2,8 @@ import { DATA as agenthackData } from "@/app/hackathons/agenthack25/data";
 import { DATA as futurestackaiData } from "@/app/hackathons/futurestack25/data";
 import { images as futurestackaiImages } from "@/app/hackathons/futurestack25/images";
 import hackfrost24Data from "@/app/hackathons/hackfrost24/data";
+import { DATA as openSourceFestData } from "@/app/hackathons/open-source-fest/data";
+import { images as openSourceFestImages } from "@/app/hackathons/open-source-fest/images";
 import type { StaticImageData } from "next/image";
 
 type HackathonType = {
@@ -15,6 +17,15 @@ type HackathonType = {
 };
 
 const hackathons: HackathonType[] = [
+	{
+		slug: "open-source-fest",
+		title: "Open Source Fest",
+		description:
+			"A month-long challenge where you'll contribute to real-world open source projects",
+		thumbnail: openSourceFestImages.thumbnail,
+		startDate: openSourceFestData.startDate,
+		endDate: openSourceFestData.endDate,
+	},
 	{
 		slug: "futurestack25",
 		title: "FutureStack 2025",
