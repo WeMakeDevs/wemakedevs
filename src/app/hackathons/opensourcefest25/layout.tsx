@@ -36,7 +36,7 @@ export default function RootLayout({
 		},
 		{
 			name: DATA.cta.label,
-			url: DATA.cta.href,
+			url: `/hackathons/${DATA.slug}#register`,
 			type: "button",
 		},
 	];

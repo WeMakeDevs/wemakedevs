@@ -3,45 +3,33 @@ import { images } from "./images";
 
 const DATA = {
 	title: "WeMakeDevs Open Source Fest",
-	prize: "MacBook, iPhone 17, iPad & More!",
-	startDate: "2025-10-13T00:00:00Z",
+	prize: "MacBook, iPad & Interview at Kestra!",
+	startDate: "2025-10-14T04:30:00Z",
 	endDate: "2025-11-03T23:59:59Z",
 	description:
 		"A month-long challenge where you'll contribute to real-world open source projects",
 	descriptionCard:
 		"Learn how open source truly works with mentorship and clear guidelines!",
-	slug: "open-source-fest",
+	slug: "opensourcefest25",
 	images,
 	cta: {
 		label: "Register Now",
-		href: "https://kestra.io/slack",
+		href: "https://forms.gle/z6mpzvh9mVjrazqa7",
 		openInNewTab: true,
 	},
 	prizes: {
 		winning: [
 			{
 				name: "Grand Prize",
-				prize: "MacBook + Paid internship at WeMakeDevs",
+				prize: "MacBook",
 			},
 			{
 				name: "Second Place",
-				prize: "iPhone 17 + Paid internship at WeMakeDevs",
+				prize: "iPad",
 			},
 			{
-				name: "Third Place",
-				prize: "iPad + Paid internship at WeMakeDevs",
-			},
-		],
-		giveaway: [
-			{
-				name: "All Winners",
-				prize: "Paid internship opportunity at WeMakeDevs",
-				details: {
-					requirements: [
-						"Complete meaningful contributions to Kestra",
-						"Submit a blog post about your journey",
-					],
-				},
+				name: "Top Contributors",
+				prize: "Interview at Kestra",
 			},
 		],
 	},
@@ -81,11 +69,11 @@ const faqs: FaqType[] = [
 	},
 	{
 		question: "How do I get started with contributing to Kestra?",
-		answer: "Join the <a href='https://kestra.io/slack' target='_blank' rel='noopener noreferrer' class='text-blue-700 underline hover:no-underline'>Kestra Slack community</a> and check out the <a href='https://www.wemakedevs.org/hackathons/open-source-fest/resources' target='_blank' rel='noopener noreferrer' class='text-blue-700 underline hover:no-underline'>Resources</a> section for getting started guides and documentation.",
+		answer: "Join the <a href='https://kestra.io/slack' target='_blank' rel='noopener noreferrer' class='text-blue-700 underline hover:no-underline'>Kestra Slack community</a> and check out the <a href='https://www.wemakedevs.org/hackathons/opensourcefest25/resources' target='_blank' rel='noopener noreferrer' class='text-blue-700 underline hover:no-underline'>Resources</a> section for getting started guides and documentation. Also read the <a href='https://kestra.io/docs/getting-started/contributing' target='_blank' rel='noopener noreferrer' class='text-blue-700 underline hover:no-underline'>Kestra Contributing Guide</a>.",
 	},
 	{
 		question: "What kind of contributions count for this event?",
-		answer: "Any meaningful contribution to Kestra counts - bug fixes, feature additions, documentation improvements, or helping other contributors. The key is that it should be assigned to you through an issue first.",
+		answer: "Any meaningful contribution to Kestra counts — please pick from the <a href='https://github.com/kestra-io/kestra/issues' target='_blank' rel='noopener noreferrer' class='text-blue-700 underline hover:no-underline'>Kestra issue tracker</a> and get it assigned first. Examples include adding plugins, fixing frontend, backend changes, bug fixes, feature additions, documentation improvements, or helping other contributors.",
 	},
 	{
 		question: "Do I need to write a blog post?",

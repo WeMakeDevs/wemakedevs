@@ -1,13 +1,12 @@
-import Banner from "@/components/Banner";
 import Faq from "@/components/Faq";
 import {
 	HackathonCoverImage,
 	HackathonNav,
 } from "@/components/hackathon-content";
-import { ViewContainer } from "@/components/ui/view-container";
 import HackathonHeader from "./components/Header";
 import IntroSection from "./components/IntroSection";
 import PrizesSection from "./components/PrizesSection";
+import Register from "./components/Register";
 import Timeline from "./components/Timeline";
 import TipsSection from "./components/TipsSection";
 import { DATA, faqs, navLinks } from "./data";
@@ -47,10 +46,11 @@ const HackathonPage = () => {
 			<div id="tips" className="scroll-mt-16">
 				<TipsSection />
 			</div>
+			<div id="register" className="scroll-mt-16">
+				<Register />
+			</div>
 			<div id="faq" className="scroll-mt-20">
-				<ViewContainer>
-					<Faq FAQS={faqs} />
-				</ViewContainer>
+				<Faq FAQS={faqs} />
 			</div>
 		</main>
 	);
