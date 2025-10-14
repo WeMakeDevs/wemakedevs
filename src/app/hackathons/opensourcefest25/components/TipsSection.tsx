@@ -49,7 +49,7 @@ const TipsSection = () => {
 			details: [
 				"Check if the issue is already assigned",
 				"Comment explaining how you plan to solve it",
-				"Tag MartinRst to request assignment",
+				"Tag MartinRst and wrussell1999 to request assignment",
 				"Wait until it's assigned before starting work",
 			],
 			color: "from-purple-500 to-purple-600",

@@ -16,8 +16,10 @@ const IntroSection = () => {
 					</h2>
 					<p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
 						It's not just about sending random pull requests; it's
-						about learning, contributing, and being part of
-						something bigger.
+						about <span className="font-bold">learning</span>,{" "}
+						<span className="font-bold">contributing</span>, and
+						being part of{" "}
+						<span className="font-bold">something bigger!</span>
 					</p>
 				</div>
 
@@ -25,13 +27,13 @@ const IntroSection = () => {
 					<div className="space-y-6">
 						<p className="text-lg md:text-xl text-gray-700 leading-relaxed">
 							Most people get Hacktoberfest wrong. It's not just
-							about sending random pull requests; it's about
+							about sending random pull requests but about
 							learning, contributing, and being part of something
 							bigger. We believe open source should reward
 							contributors for their time and effort while helping
 							them grow as developers. That's why we're launching
 							the{" "}
-							<span className="font-bold text-gray-800">
+							<span className="font-bold">
 								WeMakeDevs Open Source Fest
 							</span>
 							, powered by Kestra, a month-long challenge where
@@ -109,8 +111,8 @@ const IntroSection = () => {
 								</div>
 							</div>
 							<p className="text-gray-700">
-								Win incredible prizes and get paid internship
-								opportunities at WeMakeDevs through your
+								Win incredible prizes and get interview
+								opportunities at Kestra through your
 								contributions.
 							</p>
 						</div>

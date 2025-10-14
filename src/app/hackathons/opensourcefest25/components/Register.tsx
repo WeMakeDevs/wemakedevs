@@ -29,13 +29,6 @@ const Register = () => {
 			color: "from-blue-600 to-blue-800",
 			hoverColor: "hover:from-blue-700 hover:to-blue-900",
 		},
-		{
-			name: "Facebook",
-			icon: Facebook,
-			href: `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}`,
-			color: "from-blue-500 to-indigo-600",
-			hoverColor: "hover:from-blue-600 hover:to-indigo-700",
-		},
 	];
 
 	return (

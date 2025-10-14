@@ -51,11 +51,11 @@ const navLinks = [
 		label: "Resources",
 		page: "resources",
 	},
-	{
-		href: `/hackathons/${DATA.slug}/schedule`,
-		label: "Schedule",
-		page: "schedule",
-	},
+	// {
+	// 	href: `/hackathons/${DATA.slug}/schedule`,
+	// 	label: "Schedule",
+	// 	page: "schedule",
+	// },
 ];
 
 const faqs: FaqType[] = [
@@ -73,7 +73,7 @@ const faqs: FaqType[] = [
 	},
 	{
 		question: "What kind of contributions count for this event?",
-		answer: "Any meaningful contribution to Kestra counts — please pick from the <a href='https://github.com/kestra-io/kestra/issues' target='_blank' rel='noopener noreferrer' class='text-blue-700 underline hover:no-underline'>Kestra issue tracker</a> and get it assigned first. Examples include adding plugins, fixing frontend, backend changes, bug fixes, feature additions, documentation improvements, or helping other contributors.",
+		answer: "Any meaningful contribution to Kestra counts, please pick from the <a href='https://github.com/kestra-io/kestra/issues' target='_blank' rel='noopener noreferrer' class='text-blue-700 underline hover:no-underline'>Kestra issue tracker</a> and get it assigned first. Examples include adding plugins, fixing frontend, backend changes, bug fixes, feature additions, documentation improvements, or helping other contributors.",
 	},
 	{
 		question: "Do I need to write a blog post?",

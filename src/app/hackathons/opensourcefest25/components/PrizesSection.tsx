@@ -59,8 +59,9 @@ const PrizesSection = () => {
 						</span>
 						<Sparkles className="w-5 h-5 text-yellow-500" />
 					</div>
-					<h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-gray-900 via-blue-900 to-purple-900 bg-clip-text text-transparent">
-						Incredible Rewards
+					<h2 className="text-5xl font-bold mb-6">
+						Incredible{" "}
+						<span className="text-blue-600">Rewards</span>
 					</h2>
 					<p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
 						Compete for these{" "}
