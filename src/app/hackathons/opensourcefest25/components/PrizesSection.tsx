@@ -1,46 +1,8 @@
-import { ArrowUp, Briefcase, Gift, Sparkles, Star } from "lucide-react";
+import { Sparkles } from "lucide-react";
+import Image from "next/image";
+import { images } from "../images";
 
 const PrizesSection = () => {
-	const topPrize = {
-		id: 1,
-		title: "MacBook",
-		position: "1st Place",
-		icon: Gift,
-		color: "from-yellow-400 to-orange-500",
-		bgColor: "bg-yellow-50",
-		borderColor: "border-yellow-400",
-		textColor: "text-yellow-600",
-		description: "The ultimate development machine",
-		value: "Grand Prize",
-	};
-
-	const secondRowPrizes = [
-		{
-			id: 2,
-			title: "iPad",
-			position: "2nd Place",
-			icon: Star,
-			color: "from-purple-400 to-pink-500",
-			bgColor: "bg-purple-50",
-			borderColor: "border-purple-400",
-			textColor: "text-purple-600",
-			description: "Perfect for creative work",
-			value: "Runner-up",
-		},
-		{
-			id: 3,
-			title: "Interview at Kestra",
-			position: "Top Contributors",
-			icon: Briefcase,
-			color: "from-green-400 to-emerald-500",
-			bgColor: "bg-green-50",
-			borderColor: "border-green-400",
-			textColor: "text-green-600",
-			description: "Exclusive interview opportunity with Kestra",
-			value: "Career Opportunity",
-		},
-	];
-
 	return (
 		<div className="bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 py-20 relative overflow-hidden">
 			{/* Background decorations */}
@@ -49,7 +11,7 @@ const PrizesSection = () => {
 				<div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-tr from-yellow-200/20 to-pink-200/20 rounded-full blur-3xl" />
 			</div>
 
-			<div className="max-w-7xl mx-auto px-4 relative z-10">
+			<div className="max-w-6xl mx-auto px-4 relative z-10">
 				{/* Header */}
 				<div className="text-center mb-16">
 					<div className="inline-flex items-center gap-2 bg-white/80 backdrop-blur-sm rounded-full px-6 py-3 mb-6 shadow-lg border border-white/20">
@@ -70,135 +32,125 @@ const PrizesSection = () => {
 					</p>
 				</div>
 
-				{/* Prizes Display - Pyramid Layout */}
-				<div className="space-y-8 mb-16">
-					{/* First Row - Top Prize (Centered) */}
+				{/* Prizes Display */}
+				<div className="space-y-8">
+					{/* Top Prize Card */}
 					<div className="flex justify-center">
-						<div className="group relative w-full max-w-md">
-							{/* Prize Card */}
-							<div
-								className={`relative bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-xl border-2 ${topPrize.borderColor} hover:shadow-2xl transition-all duration-500 group-hover:scale-105 group-hover:-translate-y-2`}
-							>
+						<div className="group relative w-full max-w-2xl">
+							<div className="relative bg-white/90 backdrop-blur-sm rounded-3xl p-8 shadow-2xl border-2 border-green-400 hover:shadow-3xl transition-all duration-500 group-hover:scale-105 group-hover:-translate-y-2 overflow-visible md:h-48">
 								{/* Animated background gradient */}
-								<div
-									className={`absolute inset-0 bg-gradient-to-br ${topPrize.color} opacity-0 group-hover:opacity-10 rounded-2xl transition-opacity duration-500`}
-								/>
+								<div className="absolute inset-0 bg-gradient-to-br from-green-400 to-emerald-500 opacity-0 group-hover:opacity-10 rounded-3xl transition-opacity duration-500" />
 
-								{/* Position indicator */}
-								<div
-									className={`absolute -top-3 -right-3 w-12 h-12 ${topPrize.bgColor} rounded-full flex items-center justify-center shadow-lg border-2 ${topPrize.borderColor}`}
-								>
-									<ArrowUp className="w-6 h-6 text-yellow-600" />
-								</div>
-
-								<div className="relative z-10">
-									{/* Icon */}
-									<div
-										className={`w-20 h-20 ${topPrize.bgColor} rounded-xl flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300`}
-									>
-										<Gift
-											className={`w-10 h-10 ${topPrize.textColor}`}
-										/>
+								<div className="relative z-10 flex flex-col lg:flex-row items-center justify-between h-full gap-6">
+									{/* Text content */}
+									<div className="flex-1 text-center lg:text-left lg:pr-8">
+										<h3 className="text-xl lg:text-[28px] font-bold text-gray-900 mb-4 font-body">
+											Best Contributors
+										</h3>
+										<span className="inline-block px-5 py-2 bg-green-100 text-green-800 md:text-lg font-bold rounded-full border-2 border-green-200 font-title uppercase tracking-wider">
+											Interview at Kestra
+										</span>
 									</div>
 
-									{/* Content */}
-									<div className="space-y-3 text-center">
-										<div>
-											<h3 className="text-2xl font-bold text-gray-900 mb-2">
-												{topPrize.title}
-											</h3>
-											<p className="text-sm text-gray-600 leading-relaxed">
-												{topPrize.description}
-											</p>
-										</div>
-
-										<div className="flex items-center justify-center gap-4">
-											<span
-												className={`px-4 py-2 rounded-full text-sm font-semibold ${topPrize.bgColor} ${topPrize.textColor} border ${topPrize.borderColor}`}
-											>
-												{topPrize.position}
-											</span>
-											<span className="text-sm font-medium text-gray-500">
-												{topPrize.value}
-											</span>
-										</div>
+									{/* Image */}
+									<div className="relative order-first lg:order-last">
+										<Image
+											src={images.briefcaseImage.src}
+											alt="Interview at Kestra"
+											width={200}
+											height={200}
+											className="object-contain transform rotate-12 group-hover:rotate-6 transition-transform duration-300 w-32 h-32 sm:w-40 sm:h-40 lg:w-48 lg:h-48"
+											style={{
+												transform:
+													"translateX(0px) translateY(0px) rotate(12deg) scale(1.1)",
+											}}
+										/>
 									</div>
 								</div>
 
 								{/* Hover effect overlay */}
-								<div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+								<div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
 							</div>
 						</div>
 					</div>
 
-					{/* Second Row - Two Prizes Side by Side */}
-					<div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-						{secondRowPrizes.map(prize => {
-							const IconComponent = prize.icon;
+					{/* Bottom Row - Two Prizes Side by Side */}
+					<div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+						{/* Grand Prize - MacBook */}
+						<div className="group relative">
+							<div className="relative bg-white/90 backdrop-blur-sm rounded-3xl p-8 shadow-2xl border-2 border-yellow-400 hover:shadow-3xl transition-all duration-500 group-hover:scale-105 group-hover:-translate-y-2 overflow-visible md:h-48">
+								{/* Animated background gradient */}
+								<div className="absolute inset-0 bg-gradient-to-br from-yellow-400 to-orange-500 opacity-0 group-hover:opacity-10 rounded-3xl transition-opacity duration-500" />
 
-							return (
-								<div key={prize.id} className="group relative">
-									{/* Prize Card */}
-									<div
-										className={`relative bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-xl border-2 ${prize.borderColor} hover:shadow-2xl transition-all duration-500 group-hover:scale-105 group-hover:-translate-y-2`}
-									>
-										{/* Animated background gradient */}
-										<div
-											className={`absolute inset-0 bg-gradient-to-br ${prize.color} opacity-0 group-hover:opacity-10 rounded-2xl transition-opacity duration-500`}
+								<div className="relative z-10 flex flex-col lg:flex-row items-center justify-between h-full gap-6">
+									{/* Text content */}
+									<div className="flex-1 text-center lg:text-left lg:pr-8">
+										<h3 className="text-xl lg:text-[28px] font-bold text-gray-900 mb-3 font-body">
+											Grand Prize
+										</h3>
+										<span className="inline-block px-5 py-2 bg-yellow-100 text-yellow-800 md:text-lg font-bold rounded-full border-2 border-yellow-200 font-title uppercase tracking-wider">
+											Apple MacBook
+										</span>
+									</div>
+
+									{/* Image */}
+									<div className="relative order-first lg:order-last">
+										<Image
+											src={images.macbookImage.src}
+											alt="Apple MacBook"
+											width={200}
+											height={200}
+											className="object-contain transform rotate-12 group-hover:rotate-6 transition-transform duration-300 w-32 h-32 sm:w-40 sm:h-40 lg:w-48 lg:h-48"
+											style={{
+												transform:
+													"translateX(0px) translateY(0px) rotate(12deg) scale(1.3)",
+											}}
 										/>
-
-										{/* Position indicator */}
-										<div
-											className={`absolute -top-2 -right-2 w-10 h-10 ${prize.bgColor} rounded-full flex items-center justify-center shadow-lg border-2 ${prize.borderColor}`}
-										>
-											{prize.id === 2 && (
-												<Star className="w-5 h-5 text-purple-600" />
-											)}
-											{prize.id === 3 && (
-												<Briefcase className="w-5 h-5 text-green-600" />
-											)}
-										</div>
-
-										<div className="relative z-10">
-											{/* Icon */}
-											<div
-												className={`w-16 h-16 ${prize.bgColor} rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}
-											>
-												<IconComponent
-													className={`w-8 h-8 ${prize.textColor}`}
-												/>
-											</div>
-
-											{/* Content */}
-											<div className="space-y-3">
-												<div>
-													<h3 className="text-xl font-bold text-gray-900 mb-2">
-														{prize.title}
-													</h3>
-													<p className="text-sm text-gray-600 leading-relaxed">
-														{prize.description}
-													</p>
-												</div>
-
-												<div className="flex items-center justify-between">
-													<span
-														className={`px-3 py-1.5 rounded-full text-xs font-semibold ${prize.bgColor} ${prize.textColor} border ${prize.borderColor}`}
-													>
-														{prize.position}
-													</span>
-													<span className="text-xs font-medium text-gray-500">
-														{prize.value}
-													</span>
-												</div>
-											</div>
-										</div>
-
-										{/* Hover effect overlay */}
-										<div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
 									</div>
 								</div>
-							);
-						})}
+
+								{/* Hover effect overlay */}
+								<div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+							</div>
+						</div>
+
+						{/* Community Prize - iPad */}
+						<div className="group relative">
+							<div className="relative bg-white/90 backdrop-blur-sm rounded-3xl p-8 shadow-2xl border-2 border-purple-400 hover:shadow-3xl transition-all duration-500 group-hover:scale-105 group-hover:-translate-y-2 overflow-visible md:h-48">
+								{/* Animated background gradient */}
+								<div className="absolute inset-0 bg-gradient-to-br from-purple-400 to-pink-500 opacity-0 group-hover:opacity-10 rounded-3xl transition-opacity duration-500" />
+
+								<div className="relative z-10 flex flex-col lg:flex-row items-center justify-between h-full gap-6">
+									{/* Text content */}
+									<div className="flex-1 text-center lg:text-left lg:pr-8">
+										<h3 className="text-xl lg:text-[28px] font-bold text-gray-900 mb-3 font-body">
+											Community Prize
+										</h3>
+										<span className="inline-block px-5 py-2 bg-purple-100 text-purple-800 md:text-lg font-bold rounded-full border-2 border-purple-200 font-title uppercase tracking-wider">
+											Apple iPad
+										</span>
+									</div>
+
+									{/* Image */}
+									<div className="relative order-first lg:order-last">
+										<Image
+											src={images.ipadImage.src}
+											alt="Apple iPad"
+											width={200}
+											height={200}
+											className="object-contain transform rotate-12 group-hover:rotate-6 transition-transform duration-300 w-32 h-32 sm:w-40 sm:h-40 lg:w-48 lg:h-48"
+											style={{
+												transform:
+													"translateX(0px) translateY(0px) rotate(12deg) scale(1.3)",
+											}}
+										/>
+									</div>
+								</div>
+
+								{/* Hover effect overlay */}
+								<div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
