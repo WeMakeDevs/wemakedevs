@@ -7,6 +7,7 @@ import HackathonHeader from "./components/Header";
 import IntroSection from "./components/IntroSection";
 import PrizesSection from "./components/PrizesSection";
 import Register from "./components/Register";
+import SideQuest from "./components/SideQuest";
 import Timeline from "./components/Timeline";
 import TipsSection from "./components/TipsSection";
 import { DATA, faqs, navLinks } from "./data";
@@ -39,6 +40,11 @@ const HackathonPage = () => {
 			</div>
 			<div id="prizes" className="scroll-mt-16">
 				<PrizesSection />
+			</div>
+			<div className="scroll-mt-16 bg-gray-50 py-16">
+				<div className="max-w-6xl mx-auto px-4">
+					<SideQuest />
+				</div>
 			</div>
 			<div id="timeline" className="scroll-mt-16">
 				<Timeline />
