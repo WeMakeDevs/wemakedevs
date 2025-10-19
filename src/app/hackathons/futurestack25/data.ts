@@ -11,9 +11,10 @@ const DATA = {
 	slug: "futurestack25",
 	images,
 	cta: {
-		label: "Submit Feedback",
-		href: "https://forms.gle/FKkci7FprkUy4v3z5",
-		openInNewTab: true,
+		label: "View Projects",
+		href: "/hackathons/futurestack25/projects",
+		openInNewTab: false,
+		disabled: false,
 	},
 	prizes: {
 		winning: [
@@ -22,7 +23,7 @@ const DATA = {
 				prize: "$5,000 cash prize + Interview opportunity with Cerebras",
 			},
 			{
-				name: "Best Use of Meta Llama Models",
+				name: "Best Use of Llama",
 				prize: "$5,000 cash prize + Private coffee chat with Meta engineers",
 			},
 			{

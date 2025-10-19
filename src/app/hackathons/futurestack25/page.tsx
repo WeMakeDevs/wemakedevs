@@ -62,14 +62,6 @@ const HackathonPage = () => {
 					<Faq FAQS={faqs} />
 				</ViewContainer>
 			</div>
-			<Banner className="flex items-center text-base md:text-lg font-medium">
-				<div className="flex flex-col md:flex-row items-center justify-center">
-					<span className="text-white">
-						Hackathon has ended and the results will be announced
-						soon!
-					</span>
-				</div>
-			</Banner>
 		</main>
 	);
 };
