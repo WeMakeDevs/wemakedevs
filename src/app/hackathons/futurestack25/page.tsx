@@ -1,6 +1,8 @@
-import Banner from "@/components/Banner";
 import Faq from "@/components/Faq";
 import {
+	HackathonContentBody,
+	HackathonContentTitle,
+	HackathonContentTitleH3,
 	HackathonCoverImage,
 	HackathonNav,
 } from "@/components/hackathon-content";
@@ -10,6 +12,8 @@ import IntroSection from "./components/IntroSection";
 import JudgingCriteria from "./components/JudgingCriteria";
 import SponsorShowcase from "./components/SponsorShowcase";
 import SponsorsGrid from "./components/SponsorsGrid";
+import FutureStackStats from "./components/Stats";
+import FutureStackTestimonials from "./components/Testimonials";
 import { DATA, faqs, navLinks } from "./data";
 import { images } from "./images";
 
@@ -36,6 +40,35 @@ const HackathonPage = () => {
 					prize={DATA.prize}
 					cta={DATA.cta}
 				/>
+				<ViewContainer className="">
+					<HackathonContentBody>
+						The FutureStack GenAI hackathon was our biggest
+						hackathon yet, bringing together builders from around
+						the world to learn, create, and push the limits of what
+						was possible with AI and cloud-native tech. With
+						incredible prizes, exclusive learning opportunities, and
+						direct connections to leading engineers, FutureStack was
+						more than just a competition, it was a chance to launch
+						projects, land interviews, and get noticed by some of
+						the biggest names in tech. Participants came to explore
+						new tools, sharpen their skills, or take their ideas to
+						the next level, the hackathon gave them the stage to
+						make it happen. Developers worldwide joined in building
+						the future with cutting-edge AI and cloud technologies
+						from Cerebras, Meta, and Docker.
+					</HackathonContentBody>
+					<HackathonContentTitle>
+						FutureStack 2025 Stats
+					</HackathonContentTitle>
+					<HackathonContentTitleH3 className="mt-8">
+						FutureStack in numbers
+					</HackathonContentTitleH3>
+					<FutureStackStats />
+					<HackathonContentTitleH3 className="mt-12">
+						Participants testimonials
+					</HackathonContentTitleH3>
+					<FutureStackTestimonials />
+				</ViewContainer>
 				<IntroSection />
 			</div>
 			<div id="prizes" className="scroll-mt-16">
