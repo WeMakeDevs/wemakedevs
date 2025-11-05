@@ -35,11 +35,11 @@ export default function Home() {
 			<Banner className="flex items-center text-base md:text-lg font-medium">
 				<div className="flex flex-col md:flex-row items-center justify-center">
 					<span className="text-white">
-						Contribute to Open Source Fest and win Apple MacBook,
-						iPad and Interview at Kestra!
+						MultilingualHack 2025 is live! Build using Lingo
+						Compiler and win prizes!
 					</span>
 					<Link
-						href="/hackathons/opensourcefest25"
+						href="/hackathons/lingohack25"
 						className={cn(
 							buttonVariants(),
 							"mt-4 md:mt-0 md:ml-8 px-3 py-2 bg-white hover:bg-white/80 text-[#1a2047] w-full md:w-fit",
