@@ -3,7 +3,7 @@ import { images } from "./images";
 
 const DATA = {
 	title: "WeMakeDevs Open Source Fest",
-	prize: "MacBook, iPad & Interview at Kestra!",
+	prize: "Interview at Kestra!",
 	startDate: "2025-10-14T04:30:00Z",
 	endDate: "2025-11-03T23:59:59Z",
 	description:
@@ -19,14 +19,6 @@ const DATA = {
 	},
 	prizes: {
 		winning: [
-			{
-				name: "Grand Prize",
-				prize: "MacBook",
-			},
-			{
-				name: "Second Place",
-				prize: "iPad",
-			},
 			{
 				name: "Top Contributors",
 				prize: "Interview at Kestra",

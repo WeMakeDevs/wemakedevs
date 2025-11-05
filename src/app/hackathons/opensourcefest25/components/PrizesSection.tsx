@@ -17,19 +17,13 @@ const PrizesSection = () => {
 					<div className="inline-flex items-center gap-2 bg-white/80 backdrop-blur-sm rounded-full px-6 py-3 mb-6 shadow-lg border border-white/20">
 						<Sparkles className="w-5 h-5 text-yellow-500" />
 						<span className="text-sm font-semibold text-gray-700">
-							Amazing Prizes Await
+							Interview at Kestra
 						</span>
 						<Sparkles className="w-5 h-5 text-yellow-500" />
 					</div>
 					<h2 className="text-5xl font-bold mb-6">
-						Incredible{" "}
-						<span className="text-blue-600">Rewards</span>
+						Incredible <span className="text-blue-600">Reward</span>
 					</h2>
-					<p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-						Compete for these{" "}
-						<span className="font-bold">amazing prizes</span> while
-						contributing to open source and building your skills!
-					</p>
 				</div>
 
 				{/* Prizes Display */}
@@ -63,85 +57,6 @@ const PrizesSection = () => {
 											style={{
 												transform:
 													"translateX(0px) translateY(0px) rotate(12deg) scale(1.1)",
-											}}
-										/>
-									</div>
-								</div>
-
-								{/* Hover effect overlay */}
-								<div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
-							</div>
-						</div>
-					</div>
-
-					{/* Bottom Row - Two Prizes Side by Side */}
-					<div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-						{/* Grand Prize - MacBook */}
-						<div className="group relative">
-							<div className="relative bg-white/90 backdrop-blur-sm rounded-3xl p-8 shadow-2xl border-2 border-yellow-400 hover:shadow-3xl transition-all duration-500 group-hover:scale-105 group-hover:-translate-y-2 overflow-visible md:h-48">
-								{/* Animated background gradient */}
-								<div className="absolute inset-0 bg-gradient-to-br from-yellow-400 to-orange-500 opacity-0 group-hover:opacity-10 rounded-3xl transition-opacity duration-500" />
-
-								<div className="relative z-10 flex flex-col lg:flex-row items-center justify-between h-full gap-6">
-									{/* Text content */}
-									<div className="flex-1 text-center lg:text-left lg:pr-8">
-										<h3 className="text-xl lg:text-[28px] font-bold text-gray-900 mb-3 font-body">
-											Grand Prize
-										</h3>
-										<span className="inline-block px-5 py-2 bg-yellow-100 text-yellow-800 md:text-lg font-bold rounded-full border-2 border-yellow-200 font-title uppercase tracking-wider">
-											Apple MacBook
-										</span>
-									</div>
-
-									{/* Image */}
-									<div className="relative order-first lg:order-last">
-										<Image
-											src={images.macbookImage.src}
-											alt="Apple MacBook"
-											width={200}
-											height={200}
-											className="object-contain transform rotate-12 group-hover:rotate-6 transition-transform duration-300 w-32 h-32 sm:w-40 sm:h-40 lg:w-48 lg:h-48"
-											style={{
-												transform:
-													"translateX(0px) translateY(0px) rotate(12deg) scale(1.3)",
-											}}
-										/>
-									</div>
-								</div>
-
-								{/* Hover effect overlay */}
-								<div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
-							</div>
-						</div>
-
-						{/* Community Prize - iPad */}
-						<div className="group relative">
-							<div className="relative bg-white/90 backdrop-blur-sm rounded-3xl p-8 shadow-2xl border-2 border-purple-400 hover:shadow-3xl transition-all duration-500 group-hover:scale-105 group-hover:-translate-y-2 overflow-visible md:h-48">
-								{/* Animated background gradient */}
-								<div className="absolute inset-0 bg-gradient-to-br from-purple-400 to-pink-500 opacity-0 group-hover:opacity-10 rounded-3xl transition-opacity duration-500" />
-
-								<div className="relative z-10 flex flex-col lg:flex-row items-center justify-between h-full gap-6">
-									{/* Text content */}
-									<div className="flex-1 text-center lg:text-left lg:pr-8">
-										<h3 className="text-xl lg:text-[28px] font-bold text-gray-900 mb-3 font-body">
-											Community Prize
-										</h3>
-										<span className="inline-block px-5 py-2 bg-purple-100 text-purple-800 md:text-lg font-bold rounded-full border-2 border-purple-200 font-title uppercase tracking-wider">
-											Apple iPad
-										</span>
-									</div>
-
-									{/* Image */}
-									<div className="relative order-first lg:order-last">
-										<Image
-											src={images.ipadImage.src}
-											alt="Apple iPad"
-											width={200}
-											height={200}
-											className="object-contain transform rotate-12 group-hover:rotate-6 transition-transform duration-300 w-32 h-32 sm:w-40 sm:h-40 lg:w-48 lg:h-48"
-											style={{
-												transform:
-													"translateX(0px) translateY(0px) rotate(12deg) scale(1.3)",
 											}}
 										/>
 									</div>

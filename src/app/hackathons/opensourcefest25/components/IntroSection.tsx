@@ -105,14 +105,12 @@ const IntroSection = () => {
 										Amazing Rewards
 									</h3>
 									<p className="text-gray-600">
-										Apple MacBook, Apple iPad & Interview at
-										Kestra!
+										Interview at Kestra!
 									</p>
 								</div>
 							</div>
 							<p className="text-gray-700">
-								Win incredible prizes and get interview
-								opportunities at Kestra through your
+								Get an interview at Kestra through your
 								contributions.
 							</p>
 						</div>

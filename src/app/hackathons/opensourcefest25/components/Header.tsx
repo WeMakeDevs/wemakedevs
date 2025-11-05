@@ -72,7 +72,7 @@ const HackathonHeader = ({
 							/>
 							<hr className="my-5 border-foreground/40" />
 							<p className="flex gap-4 items-end font-medium">
-								Apple MacBook, Apple iPad & Interview at Kestra!
+								Interview at Kestra!
 							</p>
 						</div>
 					</div>
