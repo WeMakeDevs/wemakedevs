@@ -18,15 +18,9 @@ const AboutSection = () => {
 				<div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 					<div className="space-y-6">
 						<p className="text-lg md:text-xl text-gray-700 leading-relaxed">
-							<span className="font-bold text-gray-800">
-								The Multilingual Hackathon
-							</span>{" "}
-							is an open-ended challenge where you can build
-							anything you want as long as you use Lingo Compiler
-							to make your project multilingual. How do you
-							translate your website for a global audience? Until
-							now, it's been messy, juggling files, tools, and
-							endless manual work.
+							How do you translate your website for a global
+							audience? Until now, it's been messy, juggling
+							files, tools, and endless manual work.
 						</p>
 						<p className="text-lg md:text-xl text-gray-700 leading-relaxed">
 							But with AI, that's changing. This hackathon is your
@@ -97,13 +91,13 @@ const AboutSection = () => {
 										Win Prizes
 									</h3>
 									<p className="text-gray-600">
-										₹50,000+ in rewards
+										₹100,000+ in rewards
 									</p>
 								</div>
 							</div>
 							<p className="text-gray-700">
 								Compete for cash prizes, Lingo credits, and
-								exclusive swag. Top 3 winners take home ₹50,000
+								exclusive swag. Top 3 winners take home ₹100,000
 								plus rewards.
 							</p>
 						</div>

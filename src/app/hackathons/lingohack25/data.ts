@@ -4,7 +4,7 @@ import { images } from "./images";
 const DATA = {
 	title: "The Multilingual Hackathon",
 	prize: "₹50,000+",
-	startDate: "2025-11-13T00:00:00+05:30",
+	startDate: "2025-11-13T08:00:00+05:30",
 	endDate: "2025-11-16T23:59:59+05:30",
 	description: "Build anything. Translate everything. Powered by Lingo.",
 	descriptionCard: "Build anything. Translate everything. Powered by Lingo.",
