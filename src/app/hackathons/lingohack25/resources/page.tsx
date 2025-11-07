@@ -78,12 +78,12 @@ const HackathonResources = async () => {
 						</li>
 						<li>
 							<Link
-								href="https://lingo.dev/en/compiler"
+								href="https://lingo.dev/en/cli"
 								className="text-blue-600 underline hover:no-underline"
 								target="_blank"
 								rel="noopener noreferrer"
 							>
-								Lingo Compiler Documentation
+								Lingo CLI Documentation
 							</Link>
 						</li>
 					</ul>

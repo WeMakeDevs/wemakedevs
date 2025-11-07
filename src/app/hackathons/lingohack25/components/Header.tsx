@@ -86,7 +86,8 @@ const HackathonHeader = ({
 							/>
 							<hr className="my-5 border-foreground/40" />
 							<p className="flex gap-4 items-end font-medium">
-								Prizes: ₹50,000 + Lingo credits + exclusive swag
+								Prizes: ₹100,000 + Lingo credits + exclusive
+								swag
 							</p>
 						</div>
 					</div>

@@ -26,10 +26,10 @@ const HackathonRules = async () => {
 				<HackathonContentBody>
 					<ol className="list-decimal list-outside space-y-4 pl-6">
 						<li>
-							Using Lingo Compiler is mandatory to be eligible for
-							prizes such as cash rewards, Lingo credits, and
-							exclusive swag. Projects that do not use Lingo
-							Compiler will not qualify for these prizes.
+							The more Lingo products you use, the more points you
+							get. Using Lingo CLI is recommended to maximize your
+							chances of winning prizes such as cash rewards,
+							Lingo credits, and exclusive swag.
 						</li>
 						<li>
 							You must build a new project during the hackathon.

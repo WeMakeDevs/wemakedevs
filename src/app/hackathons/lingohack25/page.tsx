@@ -108,7 +108,7 @@ const HackathonPage = () => {
 								</span>{" "}
 								Reviews how well the idea was executed
 								technically and the quality of integration with
-								Lingo Compiler.
+								Lingo CLI.
 							</li>
 							<li>
 								<span className="font-semibold">

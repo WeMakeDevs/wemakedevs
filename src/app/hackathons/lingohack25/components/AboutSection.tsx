@@ -54,8 +54,8 @@ const AboutSection = () => {
 							</div>
 							<p className="text-gray-700">
 								Create any project you want—web apps, mobile
-								apps, APIs, or tools. The only requirement is
-								using Lingo Compiler to make it multilingual.
+								apps, APIs, or tools. The more Lingo products
+								you use, the more points you get.
 							</p>
 						</div>
 
@@ -74,7 +74,7 @@ const AboutSection = () => {
 								</div>
 							</div>
 							<p className="text-gray-700">
-								Use Lingo Compiler to seamlessly add multiple
+								Use Lingo CLI to seamlessly add multiple
 								languages to your project. Show how AI-powered
 								localization makes going multilingual simple and
 								developer-friendly.
