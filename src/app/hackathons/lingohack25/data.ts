@@ -108,17 +108,14 @@ const schedule = [
 		date: "2025-11-14T00:00:00+05:30",
 		items: [
 			{
-				title: "GitHub review session",
+				title: "Resume review session",
 				time: "2025-11-14T20:00:00+05:30",
-			},
-		],
-	},
-	{
-		date: "2025-11-15T00:00:00+05:30",
-		items: [
-			{
-				title: "Office hours",
-				time: "2025-11-15T20:00:00+05:30",
+				description:
+					"Get personalized feedback on your resume from industry experts. Learn how to highlight your skills and stand out to recruiters.",
+				link: {
+					name: "Discord",
+					url: "https://discord.gg/lingodotdev?event=1436217312741953617",
+				},
 			},
 		],
 	},
