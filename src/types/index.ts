@@ -204,6 +204,7 @@ export type PartnerData = {
 	name: string;
 	quote: string;
 	author: string;
+	logoClassName?: string;
 };
 
 export type FaqType = {

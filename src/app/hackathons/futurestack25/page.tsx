@@ -10,6 +10,7 @@ import { ViewContainer } from "@/components/ui/view-container";
 import HackathonHeader from "./components/Header";
 import IntroSection from "./components/IntroSection";
 import JudgingCriteria from "./components/JudgingCriteria";
+import FutureStackSpecialTestimonial from "./components/SpecialTestimonial";
 import SponsorShowcase from "./components/SponsorShowcase";
 import SponsorsGrid from "./components/SponsorsGrid";
 import FutureStackStats from "./components/Stats";
@@ -64,6 +65,7 @@ const HackathonPage = () => {
 						FutureStack in numbers
 					</HackathonContentTitleH3>
 					<FutureStackStats />
+					<FutureStackSpecialTestimonial />
 					<HackathonContentTitleH3 className="mt-12">
 						Participants testimonials
 					</HackathonContentTitleH3>

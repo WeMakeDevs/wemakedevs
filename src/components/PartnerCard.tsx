@@ -66,7 +66,7 @@ const PartnerCardLogo = ({
 	img,
 	title,
 }: PartnerCardLogoInterface) => {
-	return <Image src={img} alt={title} className={cn(className, "w-36")} />;
+	return <Image src={img} alt={title} className={cn("w-36", className)} />;
 };
 
 export {

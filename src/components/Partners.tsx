@@ -1,3 +1,4 @@
+import { images as futurestackImages } from "@/app/hackathons/futurestack25/images";
 import {
 	c4gtLogo,
 	draperHouseLogo,
@@ -44,6 +45,22 @@ import {
 import { ViewContainer } from "./ui/view-container";
 
 const partnersData: PartnerData[] = [
+	{
+		image: futurestackImages.yashKhare,
+		logo: futurestackImages.metaLogo,
+		author: "Yash Khare",
+		name: "Meta",
+		quote: "The WeMakeDevs hackathon provided a fantastic platform for developers and students to showcase their skills. It was an amazing experience to be invited for a QA session covering hackathon strategies and AI career advice. Great opportunity to share knowledge.",
+		logoClassName: "w-28",
+	},
+	{
+		image: futurestackImages.sarahChieng,
+		logo: futurestackImages.cerebrasLogo,
+		author: "Sarah Chieng",
+		name: "Cerebras Systems",
+		quote: "Working with WeMakeDevs was such a great experience! The energy was unreal, over 5,500 participants and 7,000+ API signups in one hackathon. We loved seeing creative projects and how quickly developers picked up Cerebras tech to build real AI use cases. Huge shoutout to the WeMakeDevs team.",
+		logoClassName: "w-24",
+	},
 	{
 		image: kestraAuthor,
 		logo: kestraLogo,
@@ -113,7 +130,10 @@ const Partners = () => {
 									>
 										<PartnerCard className="relative h-full">
 											<PartnerCardLogo
-												className="mb-6"
+												className={cn(
+													"mb-6",
+													partner.logoClassName,
+												)}
 												img={partner.logo}
 												title={partner.name}
 											/>
