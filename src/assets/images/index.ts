@@ -20,6 +20,10 @@ import cerebrasLogo from "./cerebras-logo.png";
 import scholarshipsLogo from "./logo-scholarships.svg";
 import scholarshipsBg from "./scholarships-bg.jpg";
 
+import cloudNativeHackathonThumbnail from "./cloud-native-hackathon.jpeg";
+import kestraHackWeekThumbnail from "./kestra-hackweek.png";
+import wemakedevsStreamHackathonThumbnail from "./wemakedevs-stream-hackathon.jpeg";
+
 export {
 	logo,
 	heroBg,
@@ -38,4 +42,7 @@ export {
 	scholarshipsBg,
 	scholarshipsLogo,
 	cerebrasLogo,
+	kestraHackWeekThumbnail,
+	cloudNativeHackathonThumbnail,
+	wemakedevsStreamHackathonThumbnail,
 };

@@ -67,7 +67,10 @@ const HackathonCardImage = ({
 }: HackathonCardImageType) => {
 	return (
 		<Image
-			className={cn(className, "aspect-[10/7] object-cover rounded")}
+			className={cn(
+				className,
+				"aspect-[10/7] object-cover w-full rounded",
+			)}
 			{...props}
 			src={src}
 			alt={alt}

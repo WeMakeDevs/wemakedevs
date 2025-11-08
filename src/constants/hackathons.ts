@@ -6,6 +6,11 @@ import { DATA as lingohackData } from "@/app/hackathons/lingohack25/data";
 import { images as lingohackImages } from "@/app/hackathons/lingohack25/images";
 import { DATA as openSourceFestData } from "@/app/hackathons/opensourcefest25/data";
 import { images as openSourceFestImages } from "@/app/hackathons/opensourcefest25/images";
+import {
+	cloudNativeHackathonThumbnail,
+	kestraHackWeekThumbnail,
+	wemakedevsStreamHackathonThumbnail,
+} from "@/assets/images";
 import type { StaticImageData } from "next/image";
 
 type HackathonType = {
@@ -54,12 +59,40 @@ const hackathons: HackathonType[] = [
 		endDate: agenthackData.endDate,
 	},
 	{
+		slug: "https://luma.com/cc52l7pn",
+		title: "Kestra HackWeek",
+		description:
+			"Get hands-on experience working with popular open source projects created by top tech companies.",
+		thumbnail: kestraHackWeekThumbnail,
+		startDate: "2025-06-17T00:00:00Z",
+		endDate: "2025-06-22T23:59:59Z",
+	},
+
+	{
 		slug: hackfrost24Data.slug,
 		title: hackfrost24Data.titleCard,
 		description: hackfrost24Data.description,
 		thumbnail: hackfrost24Data.images.thumbnail,
 		startDate: hackfrost24Data.startDate,
 		endDate: hackfrost24Data.endDate,
+	},
+	{
+		slug: "https://wemakedevs-stream.devpost.com/",
+		title: "Stream Hackathon",
+		description:
+			"Meet new people, learn new skills, and push yourself to create something truly innovative!",
+		thumbnail: wemakedevsStreamHackathonThumbnail,
+		startDate: "2022-12-16T00:00:00Z",
+		endDate: "2022-12-18T23:59:59Z",
+	},
+	{
+		slug: "https://cloudnativehack21.devpost.com/",
+		title: "Cloud Native Hack",
+		description:
+			"Build a cloud-native application using Kubernetes and Cloud Native technologies",
+		thumbnail: cloudNativeHackathonThumbnail,
+		startDate: "2021-12-10T00:00:00Z",
+		endDate: "2021-12-12T23:59:59Z",
 	},
 ];
 
