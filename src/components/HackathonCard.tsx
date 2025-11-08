@@ -11,10 +11,17 @@ import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
-const HackathonCard = ({ className, children, href }: HackathonCardType) => {
+const HackathonCard = ({
+	className,
+	children,
+	href,
+	hrefType = "internal",
+}: HackathonCardType) => {
+	const link = hrefType === "internal" ? `/hackathons/${href}` : href;
+
 	return (
 		<Link
-			href={href}
+			href={link}
 			className={cn(
 				className,
 				"rounded group relative shadow-xl hover:shadow-none transition-shadow h-full flex flex-col",

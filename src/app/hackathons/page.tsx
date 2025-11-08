@@ -20,7 +20,8 @@ const Hackathons = () => {
 					{hackathons.map(hackathon => (
 						<HackathonCard
 							key={hackathon.slug}
-							href={`/hackathons/${hackathon.slug}`}
+							href={hackathon.slug}
+							hrefType={hackathon.hrefType}
 						>
 							<HackathonCardImage
 								src={hackathon.thumbnail}

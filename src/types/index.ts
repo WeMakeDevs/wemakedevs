@@ -117,6 +117,7 @@ export interface HackathonData {
 
 export interface HackathonCardType extends GeneralComponent {
 	href: string;
+	hrefType?: "internal" | "external";
 	showDate?: boolean;
 }
 

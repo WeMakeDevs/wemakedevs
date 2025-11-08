@@ -21,6 +21,7 @@ type HackathonType = {
 	startDate: string;
 	endDate: string;
 	showDate?: boolean;
+	hrefType?: "internal" | "external";
 };
 
 const hackathons: HackathonType[] = [
@@ -66,6 +67,7 @@ const hackathons: HackathonType[] = [
 		thumbnail: kestraHackWeekThumbnail,
 		startDate: "2025-06-17T00:00:00Z",
 		endDate: "2025-06-22T23:59:59Z",
+		hrefType: "external",
 	},
 
 	{
@@ -84,6 +86,7 @@ const hackathons: HackathonType[] = [
 		thumbnail: wemakedevsStreamHackathonThumbnail,
 		startDate: "2022-12-16T00:00:00Z",
 		endDate: "2022-12-18T23:59:59Z",
+		hrefType: "external",
 	},
 	{
 		slug: "https://cloudnativehack21.devpost.com/",
@@ -93,6 +96,7 @@ const hackathons: HackathonType[] = [
 		thumbnail: cloudNativeHackathonThumbnail,
 		startDate: "2021-12-10T00:00:00Z",
 		endDate: "2021-12-12T23:59:59Z",
+		hrefType: "external",
 	},
 ];
 
