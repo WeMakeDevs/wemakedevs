@@ -25,9 +25,9 @@ export default function Home() {
 			<Testimonials />
 			<Newsletter />
 			<Numbers />
-			<Scholarships />
 			<Hackathons />
 			<Meetups />
+			<Scholarships />
 			<Faq FAQS={FAQS} />
 			<Partners />
 			<Footer />
