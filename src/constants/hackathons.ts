@@ -4,6 +4,8 @@ import { images as futurestackaiImages } from "@/app/hackathons/futurestack25/im
 import hackfrost24Data from "@/app/hackathons/hackfrost24/data";
 import { DATA as lingohackData } from "@/app/hackathons/lingohack25/data";
 import { images as lingohackImages } from "@/app/hackathons/lingohack25/images";
+import { DATA as motiahackData } from "@/app/hackathons/motiahack25/data";
+import { images as motiahackImages } from "@/app/hackathons/motiahack25/images";
 import { DATA as openSourceFestData } from "@/app/hackathons/opensourcefest25/data";
 import { images as openSourceFestImages } from "@/app/hackathons/opensourcefest25/images";
 import {
@@ -25,6 +27,15 @@ type HackathonType = {
 };
 
 const hackathons: HackathonType[] = [
+	// {
+	// 	slug: motiahackData.slug,
+	// 	title: motiahackData.title,
+	// 	description: motiahackData.descriptionCard,
+	// 	thumbnail: motiahackImages.thumbnail,
+	// 	startDate: motiahackData.startDate,
+	// 	endDate: motiahackData.endDate,
+	// 	showDate: motiahackData.showDate, // Set to true when dates are confirmed
+	// },
 	{
 		slug: lingohackData.slug,
 		title: "MultilingualHack 2025",
