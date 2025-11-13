@@ -1,18 +1,14 @@
 import { cn } from "@/lib/utils";
 import type {
 	GeneralComponent,
-	ScholarshipCardImageType,
-	ScholarshipCardInterface,
-	ScholarshipCardType,
+	InitiativeCardImageType,
+	InitiativeCardInterface,
+	InitiativeCardType,
 } from "@/types";
 import Image from "next/image";
 import Link from "next/link";
 
-const ScholarshipCard = ({
-	className,
-	children,
-	href,
-}: ScholarshipCardType) => {
+const InitiativeCard = ({ className, children, href }: InitiativeCardType) => {
 	return (
 		<Link
 			href={href}
@@ -33,7 +29,7 @@ const ScholarshipCard = ({
 	);
 };
 
-const ScholarshipCardTitle = ({
+const InitiativeCardTitle = ({
 	className,
 	children,
 	...props
@@ -45,7 +41,7 @@ const ScholarshipCardTitle = ({
 	);
 };
 
-const ScholarshipCardDescription = ({
+const InitiativeCardDescription = ({
 	className,
 	children,
 	...props
@@ -60,12 +56,12 @@ const ScholarshipCardDescription = ({
 	);
 };
 
-const ScholarshipCardImage = ({
+const InitiativeCardImage = ({
 	className,
 	src,
 	alt,
 	...props
-}: ScholarshipCardImageType) => {
+}: InitiativeCardImageType) => {
 	return (
 		<Image
 			className={cn(className, "aspect-[10/7] object-cover rounded")}
@@ -148,9 +144,9 @@ const ScholarshipLastCard = () => {
 	);
 };
 export {
-	ScholarshipCard,
-	ScholarshipCardTitle,
-	ScholarshipCardDescription,
-	ScholarshipCardImage,
+	InitiativeCard,
+	InitiativeCardTitle,
+	InitiativeCardDescription,
+	InitiativeCardImage,
 	ScholarshipLastCard,
 };

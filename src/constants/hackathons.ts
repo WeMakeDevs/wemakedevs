@@ -45,15 +45,6 @@ const hackathons: HackathonType[] = [
 		endDate: lingohackData.endDate,
 	},
 	{
-		slug: "opensourcefest25",
-		title: "Open Source Fest",
-		description:
-			"A month-long challenge where you'll contribute to real-world open source projects",
-		thumbnail: openSourceFestImages.thumbnail,
-		startDate: openSourceFestData.startDate,
-		endDate: openSourceFestData.endDate,
-	},
-	{
 		slug: "futurestack25",
 		title: "FutureStack 2025",
 		description:

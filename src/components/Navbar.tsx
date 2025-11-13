@@ -51,8 +51,8 @@ const Navbar = ({ className }: { className?: string }) => {
 			type: "link",
 		},
 		{
-			name: "Scholarships",
-			url: "/#scholarships",
+			name: "Initiatives",
+			url: "/#initiatives",
 			type: "link",
 		},
 		{

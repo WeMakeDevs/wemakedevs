@@ -115,8 +115,8 @@ const footerLinks: FooterLinkSection[] = [
 		title: "Events",
 		links: [
 			{
-				name: "Scholarships",
-				href: "/scholarships",
+				name: "Initiatives",
+				href: "/#initiatives",
 				opensInNewTab: true,
 			},
 			{

@@ -1,14 +1,22 @@
+import { images as openSourceFestImages } from "@/app/hackathons/opensourcefest25/images";
 import { scholarshipsThumbnail } from "@/assets/images/scholarships";
 import type { StaticImageData } from "next/image";
 
-type ScholarshipType = {
+type InitiativeType = {
 	title: string;
 	description: string;
 	image: StaticImageData;
 	url: string;
 };
 
-const scholarships: ScholarshipType[] = [
+const initiatives: InitiativeType[] = [
+	{
+		title: "Open Source Fest",
+		description:
+			"A month-long challenge where you'll contribute to real-world open source projects! Work with experienced maintainers, learn industry best practices, and get interview opportunities.",
+		image: openSourceFestImages.thumbnail,
+		url: "/hackathons/opensourcefest25",
+	},
 	{
 		title: "KubeCon + CNC Europe 2026",
 		description:
@@ -18,4 +26,4 @@ const scholarships: ScholarshipType[] = [
 	},
 ];
 
-export { scholarships };
+export { initiatives };
