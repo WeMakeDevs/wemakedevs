@@ -88,6 +88,31 @@ const HackathonResources = async () => {
 						</li>
 					</ul>
 				</HackathonContentBody>
+				<HackathonContentTitle>Demo Videos</HackathonContentTitle>
+				<HackathonContentBody>
+					<ul className="space-y-3 list-disc list-inside">
+						<li>
+							<Link
+								href="https://drive.google.com/file/d/1sfZlV1PVc6Q-AGl2Cpr0oS8Dx2TEf4Fw/view?usp=sharing"
+								className="text-blue-600 underline hover:no-underline"
+								target="_blank"
+								rel="noopener noreferrer"
+							>
+								Lingo CLI
+							</Link>
+						</li>
+						<li>
+							<Link
+								href="https://drive.google.com/file/d/1e9JDZa05TL6Z9S_dOMCZsm9x23ZPzpvt/view?usp=sharing"
+								className="text-blue-600 underline hover:no-underline"
+								target="_blank"
+								rel="noopener noreferrer"
+							>
+								Lingo MCP
+							</Link>
+						</li>
+					</ul>
+				</HackathonContentBody>
 			</ViewContainer>
 		</div>
 	);
