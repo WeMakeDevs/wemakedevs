@@ -114,6 +114,10 @@ const schedule = [
 			{
 				title: "Live stream - Getting Started with Lingo",
 				time: "2025-11-14T19:00:00+05:30",
+				link: {
+					name: "Linkedin",
+					url: "https://www.linkedin.com/events/gettingstartedwithlingo7394739523311755264/theater/",
+				},
 			},
 			{
 				title: "Resume review session",
