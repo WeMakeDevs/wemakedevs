@@ -21,7 +21,7 @@ import scholarshipsLogo from "./logo-scholarships.svg";
 import scholarshipsBg from "./scholarships-bg.jpg";
 
 import cloudNativeHackathonThumbnail from "./cloud-native-hackathon.jpeg";
-import kestraHackWeekThumbnail from "./kestra-hackweek.png";
+import kestraHackWeekThumbnail from "./kestra-hackweek.jpg";
 import wemakedevsStreamHackathonThumbnail from "./wemakedevs-stream-hackathon.jpeg";
 
 export {
