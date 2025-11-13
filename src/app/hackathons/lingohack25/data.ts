@@ -99,14 +99,22 @@ const schedule = [
 				time: "2025-11-13T08:00:00+05:30",
 			},
 			{
-				title: "Live stream - Getting Started with Lingo",
+				title: "Discord office hours",
 				time: "2025-11-13T20:00:00+05:30",
+				link: {
+					name: "Discord",
+					url: "https://discord.gg/lingodotdev?event=1438503934808555705",
+				},
 			},
 		],
 	},
 	{
 		date: "2025-11-14T00:00:00+05:30",
 		items: [
+			{
+				title: "Live stream - Getting Started with Lingo",
+				time: "2025-11-14T19:00:00+05:30",
+			},
 			{
 				title: "Resume review session",
 				time: "2025-11-14T20:00:00+05:30",
