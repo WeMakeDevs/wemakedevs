@@ -68,12 +68,11 @@ const HackathonPage = () => {
 						</div>
 						<div className="p-6 text-lg text-slate-200 border-t border-green-500/15 font-mono leading-relaxed">
 							<span className="text-green-400">&gt;</span> Motia
-							is the single backend runtime where API endpoints,
-							background jobs, scheduled tasks, and AI agents
-							written in any language are all unified in
-							workflows, with full observability, scalability and
-							resiliency. Build, automate, and evolve all on one
-							platform with one command line to quickly deploy to
+							is a unified backend runtime where APIs, background
+							jobs, durable workflows, and AI agents, written in
+							any language live together with built-in
+							observability, state management, streaming, and
+							logging. One runtime. One primitive. One command to
 							production.
 						</div>
 					</div>
@@ -96,12 +95,12 @@ const HackathonPage = () => {
 								</span>
 								<div>
 									<span className="font-semibold text-slate-100">
-										Potential Impact:
+										Real-World Impact:
 									</span>{" "}
-									Evaluates how effectively the project solves
-									a real-world backend or workflow problem,
-									from automating processes to scaling
-									production systems with ease.
+									How effectively does your project solve real
+									backend challenges? From automating
+									workflows to building scalable production
+									systems, show us the problem you're solving.
 								</div>
 							</li>
 							<li className="flex gap-3">
@@ -110,12 +109,12 @@ const HackathonPage = () => {
 								</span>
 								<div>
 									<span className="font-semibold text-slate-100">
-										Creativity & Originality:
+										Creativity & Innovation:
 									</span>{" "}
-									Assesses the uniqueness of the idea and how
-									creatively Motia's unified backend runtime
-									is used to combine APIs, background jobs,
-									tasks, or AI agents in new ways.
+									How uniquely do you leverage Motia's unified
+									runtime? Combine APIs, workflows, background
+									jobs, or AI agents in novel ways using Steps
+									as your core primitive.
 								</div>
 							</li>
 							<li className="flex gap-3">
@@ -124,13 +123,13 @@ const HackathonPage = () => {
 								</span>
 								<div>
 									<span className="font-semibold text-slate-100">
-										Learning & Growth:
+										Learning Journey:
 									</span>{" "}
-									Recognizes the learning journey and
-									problem-solving mindset demonstrated,
-									especially for participants exploring
-									backend automation or multi-language
-									workflows for the first time.
+									Demonstrate your problem-solving approach
+									and growth mindset, especially valuable if
+									you're exploring unified backends, durable
+									workflows, or multi-language systems for the
+									first time.
 								</div>
 							</li>
 							<li className="flex gap-3">
@@ -139,13 +138,13 @@ const HackathonPage = () => {
 								</span>
 								<div>
 									<span className="font-semibold text-slate-100">
-										Technical Implementation:
+										Technical Excellence:
 									</span>{" "}
-									Reviews how well the project was executed
-									technically, including code quality, use of
-									Motia CLI, efficiency of workflows,
-									scalability, and integration depth across
-									services.
+									Quality of implementation matters. We
+									evaluate code quality, workflow efficiency,
+									use of Motia's observability and state
+									features, scalability, and integration
+									depth.
 								</div>
 							</li>
 							<li className="flex gap-3">
@@ -154,13 +153,12 @@ const HackathonPage = () => {
 								</span>
 								<div>
 									<span className="font-semibold text-slate-100">
-										User Experience & Design:
+										Developer Experience:
 									</span>{" "}
-									Considers how intuitive and polished the
-									end-to-end experience is, whether it's a
-									developer-friendly backend dashboard, API
-									interface, or any visual element supporting
-									the workflow.
+									How intuitive is your project? Whether it's
+									API design, workflow visualization,
+									dashboards, or developer tools—polish and
+									usability count.
 								</div>
 							</li>
 						</ul>

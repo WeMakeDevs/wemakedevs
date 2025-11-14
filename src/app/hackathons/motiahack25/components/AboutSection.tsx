@@ -19,25 +19,24 @@ const AboutSection = () => {
 				<div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 					<div className="space-y-6">
 						<p className="text-lg md:text-xl text-slate-200 leading-relaxed font-mono">
-							<span className="text-green-400">&gt;</span> Gone
-							are the days of juggling countless services,
-							frameworks, and queues just to make your backend
-							work. With Motia, APIs, background jobs, scheduled
-							tasks, and AI agents all live in one powerful
-							runtime, unified, observable, and production-ready
-							from day one.
+							<span className="text-green-400">&gt;</span> Modern
+							backends shouldn't require juggling frameworks,
+							queues, and services. Motia unifies everything. API
+							endpoints, background jobs, durable workflows, AI
+							agents, streaming, and observability into one
+							runtime with a single core primitive.
 						</p>
 						<p className="text-lg md:text-xl text-slate-200 leading-relaxed font-mono">
 							<span className="text-green-400">&gt;</span> Join
-							Backend Reloaded Hackathon to build the next
-							generation of backends, showcase your creativity,
-							and win exciting prizes, cash rewards, and exclusive
-							Motia swag.
+							Backend Reloaded Hackathon to build next-generation
+							backends that are simpler, faster, and
+							production-ready from the start. Win cash prizes,
+							exclusive swag, and mentorship opportunities.
 						</p>
 						<p className="text-lg md:text-xl text-slate-200 leading-relaxed font-mono">
 							<span className="text-green-400">&gt;</span> It's
-							time to rethink how backends are built; faster,
-							simpler, and smarter.
+							time to build backends the way they should be:
+							unified, observable, and effortless.
 						</p>
 					</div>
 
@@ -49,17 +48,19 @@ const AboutSection = () => {
 								</div>
 								<div>
 									<h3 className="text-xl font-bold text-slate-100 font-mono">
-										&gt; Unified Runtime
+										&gt; Single Core Primitive
 									</h3>
 									<p className="text-slate-300 font-mono text-sm">
-										One platform for everything
+										Everything unified
 									</p>
 								</div>
 							</div>
 							<p className="text-slate-200 font-mono">
-								Build APIs, background jobs, scheduled tasks,
-								and AI agents all in one powerful runtime. No
-								more juggling multiple services and frameworks.
+								Write APIs, background jobs, workflows, and AI
+								agents using one primitive - Steps. Add
+								observability, state management, and streaming
+								without extra configuration. Reduces juggling
+								between different tools and framework.
 							</p>
 						</div>
 
@@ -73,15 +74,15 @@ const AboutSection = () => {
 										&gt; Production Ready
 									</h3>
 									<p className="text-slate-300 font-mono text-sm">
-										From day one
+										Deploy with confidence
 									</p>
 								</div>
 							</div>
 							<p className="text-slate-200 font-mono">
-								With full observability, scalability, and
-								resiliency built-in, your backend is
-								production-ready from the start. Deploy with one
-								command.
+								Built-in observability, distributed state,
+								durable execution, and real-time streaming.
+								Scale from prototype to production with one
+								command. Resilient by default.
 							</p>
 						</div>
 
@@ -92,17 +93,18 @@ const AboutSection = () => {
 								</div>
 								<div>
 									<h3 className="text-xl font-bold text-slate-100 font-mono">
-										&gt; Win Prizes
+										&gt; Win Big
 									</h3>
 									<p className="text-slate-300 font-mono text-sm">
-										$3,000+ in rewards
+										$3,000+ in prizes
 									</p>
 								</div>
 							</div>
 							<p className="text-slate-200 font-mono">
-								Compete for cash prizes, Motia swag, and Google
-								Summer of Code mentorship. Top 3 winners take
-								home $3,000+ plus rewards.
+								Compete for cash rewards, exclusive Motia swag,
+								Google Summer of Code mentorship, and job
+								interview opportunities. Top 3 winners share
+								$3,000+.
 							</p>
 						</div>
 					</div>

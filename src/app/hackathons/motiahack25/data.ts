@@ -11,7 +11,7 @@ const DATA = {
 	showDate: false, // Set to true when dates are confirmed
 	// Short description for header (1-2 sentences, no em dashes)
 	description:
-		"Build the next generation of backends with Motia's unified runtime. Join Backend Reloaded Hackathon to showcase your creativity and win exciting prizes.",
+		"Build production-grade backends with a single primitive. APIs, background jobs, workflows, Queues, Workflows, and AI agents - unified in one system with built-in State management and Observability.",
 	// Description for card on home page
 	descriptionCard:
 		"Build the next generation of backends with Motia's unified runtime.",
