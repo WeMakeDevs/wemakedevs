@@ -27,15 +27,15 @@ type HackathonType = {
 };
 
 const hackathons: HackathonType[] = [
-	// {
-	// 	slug: motiahackData.slug,
-	// 	title: motiahackData.title,
-	// 	description: motiahackData.descriptionCard,
-	// 	thumbnail: motiahackImages.thumbnail,
-	// 	startDate: motiahackData.startDate,
-	// 	endDate: motiahackData.endDate,
-	// 	showDate: motiahackData.showDate, // Set to true when dates are confirmed
-	// },
+	{
+		slug: motiahackData.slug,
+		title: motiahackData.title,
+		description: motiahackData.descriptionCard,
+		thumbnail: motiahackImages.thumbnail,
+		startDate: motiahackData.startDate,
+		endDate: motiahackData.endDate,
+		showDate: motiahackData.showDate, // Set to true when dates are confirmed
+	},
 	{
 		slug: lingohackData.slug,
 		title: "MultilingualHack 2025",

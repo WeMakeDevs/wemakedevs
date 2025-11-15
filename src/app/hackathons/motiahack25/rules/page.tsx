@@ -9,7 +9,12 @@ const HackathonRules = async () => {
 	return (
 		<div className="pt-20 pb-16 bg-gradient-to-b from-[#050705] via-[#0b1114] to-[#112130] text-slate-100 min-h-screen">
 			<HackathonCoverImage src={images.cover} alt={DATA.title} />
-			<SecondaryNavbar slug={DATA.slug} page="rules" links={navLinks} />
+			<SecondaryNavbar
+				slug={DATA.slug}
+				page="rules"
+				links={navLinks}
+				navCta={DATA.cta}
+			/>
 			<ViewContainer className="my-10">
 				<HackathonContentBody className="bg-[#0f171d]/80 rounded-2xl border border-green-500/15 p-6 text-slate-200 font-mono shadow-[0_15px_35px_rgba(6,12,9,0.45)]">
 					<ol className="list-decimal list-outside space-y-4 pl-6">

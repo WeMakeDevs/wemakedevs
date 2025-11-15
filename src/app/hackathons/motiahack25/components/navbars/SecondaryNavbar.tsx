@@ -95,7 +95,7 @@ const SecondaryNavbar = ({
 						) : (
 							<Link
 								href={navCta.href}
-								className="px-6 py-3 font-mono text-sm text-green-900 bg-green-300 rounded-md shadow-[0_0_15px_rgba(82,255,168,0.4)] hover:bg-green-200 transition-colors"
+								className="px-6 py-3 font-mono text-sm text-green-100 bg-green-500/15 border border-green-500/40 rounded-md shadow-[0_0_15px_rgba(0,255,65,0.2)] hover:bg-green-500/25 transition-colors"
 								target={
 									navCta.openInNewTab ? "_blank" : "_self"
 								}
@@ -105,6 +105,9 @@ const SecondaryNavbar = ({
 										: undefined
 								}
 							>
+								<span className="text-green-400 mr-2">
+									&gt;
+								</span>
 								{navCta.label}
 							</Link>
 						)}
@@ -152,7 +155,7 @@ const SecondaryNavbar = ({
 								<Link
 									href={navCta.href}
 									onClick={closeMobileMenu}
-									className="w-full px-6 py-3 font-mono text-center text-green-900 bg-green-300 rounded-md shadow-[0_0_15px_rgba(82,255,168,0.4)] hover:bg-green-200 inline-block transition-colors"
+									className="w-full px-6 py-3 font-mono text-center text-green-100 bg-green-500/15 border border-green-500/40 rounded-md shadow-[0_0_15px_rgba(0,255,65,0.2)] hover:bg-green-500/25 inline-block transition-colors"
 									target={
 										navCta.openInNewTab ? "_blank" : "_self"
 									}
@@ -162,6 +165,9 @@ const SecondaryNavbar = ({
 											: undefined
 									}
 								>
+									<span className="text-green-400 mr-2">
+										&gt;
+									</span>
 									{navCta.label}
 								</Link>
 							)}

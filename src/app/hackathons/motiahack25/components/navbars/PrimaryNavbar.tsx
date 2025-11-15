@@ -36,7 +36,12 @@ const PrimaryNavbar = ({ customNavLinks }: HackathonNavbarProps = {}) => {
 		{ name: "Join", url: "/#join", type: "link" },
 		{ name: "Hackathons", url: "/#hackathons", type: "link" },
 		{ name: "Meetups", url: "/#meetups", type: "link" },
-		{ name: "Partner with us", url: "/#partners", type: "button" },
+		{
+			name: "Partner with us",
+			url: "/#partners",
+			type: "button",
+			openInNewTab: true,
+		},
 	];
 
 	const navLinks = customNavLinks || defaultNavLinks;
@@ -69,7 +74,7 @@ const PrimaryNavbar = ({ customNavLinks }: HackathonNavbarProps = {}) => {
 								className={cn(
 									linkClasses,
 									link.type === "button"
-										? "bg-green-500/15 border border-green-500/40 rounded-md shadow-[0_0_15px_rgba(0,255,65,0.2)] hover:bg-green-500/25"
+										? "bg-green-500/15 border border-green-500/40 rounded-md shadow-[0_0_15px_rgba(0,255,65,0.2)] hover:bg-green-500/25 lg:ml-4"
 										: "rounded-md hover:bg-green-500/10",
 								)}
 								target={link.openInNewTab ? "_blank" : "_self"}
@@ -139,6 +144,12 @@ const PrimaryNavbar = ({ customNavLinks }: HackathonNavbarProps = {}) => {
 										? "bg-green-500/20"
 										: "bg-transparent hover:bg-green-500/10",
 								)}
+								target={link.openInNewTab ? "_blank" : "_self"}
+								rel={
+									link.openInNewTab
+										? "noreferrer noopener"
+										: undefined
+								}
 							>
 								<span className="text-green-400 mr-2">
 									&gt;

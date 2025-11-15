@@ -20,6 +20,7 @@ const HackathonResources = async () => {
 				slug={DATA.slug}
 				page="resources"
 				links={navLinks}
+				navCta={DATA.cta}
 			/>
 			<ViewContainer className="mt-10 space-y-10">
 				<HackathonContentTitle className="text-slate-100 font-mono [&>h2]:text-slate-100">

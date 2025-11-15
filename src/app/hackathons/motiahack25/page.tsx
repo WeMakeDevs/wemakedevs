@@ -23,6 +23,7 @@ const HackathonPage = () => {
 				slug={DATA.slug}
 				page="overview"
 				links={navLinks}
+				navCta={DATA.cta}
 			/>
 			<div id="about" className="scroll-mt-16">
 				<HackathonHeader
