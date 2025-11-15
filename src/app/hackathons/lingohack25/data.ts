@@ -11,8 +11,8 @@ const DATA = {
 	slug: "lingohack25",
 	images,
 	cta: {
-		label: "Register Now",
-		href: "https://forms.gle/znDG8FR5FJRdWHcz7",
+		label: "Submit Project",
+		href: "https://docs.google.com/forms/d/e/1FAIpQLScuPuQzk-eC6Nhj5mlvpJY7cOfIqn12KHSMoAwkbbmuN7MV8Q/viewform?usp=sharing&ouid=117464156289493072564",
 		openInNewTab: true,
 		disabled: false,
 	},
