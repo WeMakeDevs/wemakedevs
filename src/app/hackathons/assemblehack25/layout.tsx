@@ -1,0 +1,52 @@
+import HackathonFooter from "@/components/HackathonFooter";
+import type { navLinksType } from "@/types";
+import PrimaryNavbar from "./components/navbars/PrimaryNavbar";
+import { DATA } from "./data";
+
+export default function RootLayout({
+	children,
+}: Readonly<{
+	children: React.ReactNode;
+}>) {
+	const hackathonNavLinks: navLinksType = [
+		{
+			name: "About",
+			url: `/hackathons/${DATA.slug}/#about`,
+			type: "link",
+		},
+		{
+			name: "Prizes",
+			url: `/hackathons/${DATA.slug}#prizes`,
+			type: "link",
+		},
+		{
+			name: "Sponsors",
+			url: `/hackathons/${DATA.slug}#sponsors`,
+			type: "link",
+		},
+		{
+			name: "Judging",
+			url: `/hackathons/${DATA.slug}#judging`,
+			type: "link",
+		},
+		{
+			name: "FAQ",
+			url: `/hackathons/${DATA.slug}#faq`,
+			type: "link",
+		},
+		{
+			name: DATA.cta.label,
+			url: DATA.cta.href,
+			type: "button",
+			openInNewTab: true,
+		},
+	];
+
+	return (
+		<div className="bg-white min-h-screen">
+			<PrimaryNavbar customNavLinks={hackathonNavLinks} />
+			{children}
+			<HackathonFooter />
+		</div>
+	);
+}
