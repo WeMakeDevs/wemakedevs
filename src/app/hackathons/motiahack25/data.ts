@@ -67,6 +67,11 @@ const navLinks = [
 		label: "Resources",
 		page: "resources",
 	},
+	{
+		href: `/hackathons/${DATA.slug}/schedule`,
+		label: "Schedule",
+		page: "schedule",
+	},
 ];
 
 const faqs: FaqType[] = [
@@ -96,4 +101,57 @@ const faqs: FaqType[] = [
 	},
 ];
 
-export { DATA, navLinks, faqs };
+const schedule = [
+	{
+		date: "2025-12-15T00:00:00+05:30",
+		items: [
+			{
+				title: "Hackathon starts",
+				time: "2025-12-15T08:00:00+05:30",
+			},
+			{
+				title: "One-shot full-stack apps with Motia and Cursor in minutes",
+				time: "2025-12-15T21:30:00+05:30",
+				description: "Live stream - How to build with Motia",
+			},
+		],
+	},
+	{
+		date: "2025-12-17T00:00:00+05:30",
+		items: [
+			{
+				title: "Office hours",
+				time: "2025-12-17T20:00:00+05:30",
+			},
+		],
+	},
+	{
+		date: "2025-12-19T00:00:00+05:30",
+		items: [
+			{
+				title: "Office hours",
+				time: "2025-12-19T20:00:00+05:30",
+			},
+		],
+	},
+	{
+		date: "2025-12-21T00:00:00+05:30",
+		items: [
+			{
+				title: "Hackathon ends",
+				time: "2025-12-21T20:00:00+05:30",
+			},
+		],
+	},
+	{
+		date: "2025-12-22T00:00:00+05:30",
+		items: [
+			{
+				title: "Winners announced",
+				description: "Week of 22nd",
+			},
+		],
+	},
+];
+
+export { DATA, navLinks, faqs, schedule };
