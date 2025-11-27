@@ -1,4 +1,6 @@
 import { DATA as agenthackData } from "@/app/hackathons/agenthack25/data";
+import { DATA as assemblehackData } from "@/app/hackathons/assemblehack25/data";
+import { images as assemblehackImages } from "@/app/hackathons/assemblehack25/images";
 import { DATA as futurestackaiData } from "@/app/hackathons/futurestack25/data";
 import { images as futurestackaiImages } from "@/app/hackathons/futurestack25/images";
 import hackfrost24Data from "@/app/hackathons/hackfrost24/data";
@@ -28,13 +30,22 @@ type HackathonType = {
 
 const hackathons: HackathonType[] = [
 	{
+		slug: assemblehackData.slug,
+		title: assemblehackData.title,
+		description: assemblehackData.descriptionCard,
+		thumbnail: assemblehackImages.thumbnail,
+		startDate: assemblehackData.startDate,
+		endDate: assemblehackData.endDate,
+		showDate: assemblehackData.showDate,
+	},
+	{
 		slug: motiahackData.slug,
 		title: motiahackData.title,
 		description: motiahackData.descriptionCard,
 		thumbnail: motiahackImages.thumbnail,
 		startDate: motiahackData.startDate,
 		endDate: motiahackData.endDate,
-		showDate: motiahackData.showDate, // Set to true when dates are confirmed
+		showDate: motiahackData.showDate,
 	},
 	{
 		slug: lingohackData.slug,

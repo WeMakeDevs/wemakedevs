@@ -3,6 +3,7 @@ import HackathonDate from "@/components/hackathon-content/HackathonDate";
 import { DateAtom } from "@/components/hackathon-content/atoms";
 import { ViewContainer } from "@/components/ui/view-container";
 import { CalendarIcon, Sparkles } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 import { images } from "../images";
 
@@ -133,13 +134,28 @@ const HackathonHeader = ({
 									</>
 								)}
 								<hr className="my-5 border-gray-200" />
-								<div className="flex flex-col gap-1 text-gray-800">
+								<div className="flex flex-col gap-2 text-gray-800">
 									<span className="text-sm uppercase tracking-wide text-cyan-500 font-bold">
 										Total Prizes
 									</span>
 									<span className="text-2xl font-black text-gray-900">
 										{prize}
 									</span>
+									<div className="flex items-center gap-2 mt-2 text-sm text-gray-600">
+										<span>+ Interviews</span>
+										<span>•</span>
+										<span>Exclusive Swag</span>
+									</div>
+									<div className="flex items-center gap-2 mt-2">
+										<Image
+											src={images.gsocLogo}
+											alt="Google Summer of Code"
+											className="h-6 w-auto"
+										/>
+										<span className="text-sm font-medium text-gray-700">
+											GSoC Mentorship
+										</span>
+									</div>
 								</div>
 							</div>
 						</div>

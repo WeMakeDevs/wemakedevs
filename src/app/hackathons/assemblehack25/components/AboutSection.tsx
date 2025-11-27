@@ -16,13 +16,12 @@ const AboutSection = () => {
 				</div>
 
 				<div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-					{/* Left side - Description with Iron Man above */}
 					<div className="space-y-6 relative">
-						<div className="hidden lg:block absolute -top-4 left-36 opacity-20 hover:opacity-40 transition-opacity duration-500">
+						<div className="hidden lg:block absolute -translate-y-28 left-36 opacity-30 hover:opacity-40 transition-opacity duration-500">
 							<Image
-								src={images.ironmanFlying}
-								alt="Iron Man Flying"
-								className="w-52 h-auto drop-shadow-2xl"
+								src={images.avengersImage}
+								alt="Avengers Assemble"
+								className="w-full h-auto drop-shadow-2xl"
 							/>
 						</div>
 

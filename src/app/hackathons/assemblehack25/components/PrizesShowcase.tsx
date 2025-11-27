@@ -1,3 +1,4 @@
+import { Gift } from "lucide-react";
 import Image from "next/image";
 import { images } from "../images";
 
@@ -22,8 +23,8 @@ const PrizesShowcase = () => {
 			extras: "cash + swag + job interviews + career mentorship",
 			description:
 				"Best use of Oumi with open-source LLMs (LLaMA, Gemma, Mistral, Qwen, etc.).",
-			image: images.thorHammer,
-			imageAlt: "Thor's Hammer",
+			image: images.ironmanHelmet,
+			imageAlt: "Iron Man Helmet",
 			rank: 2,
 			gradient: "from-gray-300 via-slate-400 to-gray-500",
 			borderColor: "border-slate-300",
@@ -73,7 +74,7 @@ const PrizesShowcase = () => {
 								2
 							</div>
 
-							{/* Image - Bigger Thor Hammer */}
+							{/* Image - Iron Man Helmet */}
 							<div className="flex justify-center mb-4">
 								<Image
 									src={prizes[1].image}
@@ -189,16 +190,25 @@ const PrizesShowcase = () => {
 					</div>
 				</div>
 
-				{/* Assemble Message */}
+				{/* Social Media Raffle */}
 				<div className="mt-16 text-center">
-					<div className="inline-block bg-gradient-to-r from-cyan-500 to-blue-600 rounded-2xl p-1">
+					<div className="inline-block bg-gradient-to-r from-pink-500 to-purple-600 rounded-2xl p-1">
 						<div className="bg-white rounded-xl px-8 py-6">
-							<p className="text-xl font-black text-gray-900 uppercase tracking-wide mb-2">
-								Assemble Your Power
-							</p>
-							<p className="text-gray-600">
-								Combine multiple sponsor technologies to
-								maximize your chances of winning
+							<div className="flex items-center justify-center gap-3 mb-3">
+								<Gift className="w-6 h-6 text-purple-600" />
+								<p className="text-xl font-black text-gray-900 uppercase tracking-wide">
+									Social Media Raffle
+								</p>
+								<Gift className="w-6 h-6 text-pink-600" />
+							</div>
+							<p className="text-gray-600 max-w-2xl mx-auto">
+								Post about your hackathon project on social
+								media and tag our sponsors.{" "}
+								<span className="font-bold text-purple-600">
+									10 raffle winners
+								</span>{" "}
+								will receive exclusive swag packs from our
+								sponsors.
 							</p>
 						</div>
 					</div>

@@ -7,9 +7,11 @@ import oumiLogo from "./oumi-logo.svg";
 import thumbnail from "./thumbnail.webp";
 import vercelLogo from "./vercel-logo.svg";
 
+import avengersImage from "./avengers.webp";
 // Other assets
 import captainAmericaShield from "./captain-america-shield.png";
 import infinityGauntlet from "./gauntlet.png";
+import gsocLogo from "./gsoc.webp";
 import ironmanFlying from "./ironman-flying.png";
 import ironmanHelmet from "./ironman-helmet.png";
 import ironmanMask from "./ironman-mask.png";
@@ -36,6 +38,7 @@ export const images = {
 	kestraLogo,
 	cover,
 	thumbnail,
+	gsocLogo,
 	// Hero assets
 	captainAmericaShield,
 	infinityGauntlet,
@@ -43,6 +46,7 @@ export const images = {
 	ironmanHelmet,
 	ironmanMask,
 	thorHammer,
+	avengersImage,
 	// Backgrounds
 	dottedCircle,
 	dottedGrid,

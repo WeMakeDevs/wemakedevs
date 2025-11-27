@@ -51,7 +51,7 @@ const SponsorsShowcase = () => {
 					<h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-4 uppercase tracking-tight">
 						The{" "}
 						<span className="bg-gradient-to-r from-cyan-600 to-blue-600 bg-clip-text text-transparent">
-							Infinity Stones
+							Sponsor Stones
 						</span>
 					</h2>
 					<p className="text-xl text-gray-600 max-w-3xl mx-auto">

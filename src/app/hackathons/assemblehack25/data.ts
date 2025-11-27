@@ -4,10 +4,9 @@ import { images } from "./images";
 const DATA = {
 	title: "AI Agents Assemble",
 	prize: "$20,000+ in cash prizes",
-	// TODO: Update dates when available - format: "YYYY-MM-DDTHH:mm:ss+05:30" (IST)
-	startDate: "2025-12-20T08:00:00+05:30", // Placeholder - update when dates are confirmed
-	endDate: "2025-12-27T20:00:00+05:30", // Placeholder - update when dates are confirmed
-	showDate: false, // Set to true when dates are confirmed
+	startDate: "2025-12-08T08:00:00+05:30", // December 8th 8am IST 2025
+	endDate: "2025-12-14T20:00:00+05:30", // December 14th 8pm IST 2025
+	showDate: true,
 	// Short description for header (1-2 sentences, no em dashes)
 	description:
 		"A global showdown where builders unite to create the next generation of intelligent agents. Assemble your skills, assemble your tools, assemble your team.",
@@ -113,11 +112,11 @@ const faqs: FaqType[] = [
 	},
 	{
 		question: "How do I ask questions or clear doubts?",
-		answer: "Join the WeMakeDevs Discord where mentors and community members will be available throughout the event.",
+		answer: 'Join the <a href="https://discord.gg/wemakedevs" target="_blank" rel="noopener noreferrer" class="font-bold text-indigo-600 hover:text-indigo-700 underline underline-offset-2">WeMakeDevs Discord</a> where mentors and community members will be available throughout the event.',
 	},
 	{
 		question: "How do I submit my project?",
-		answer: "You'll receive an email with detailed submission instructions before the deadline. Make sure to also join Discord to stay updated.",
+		answer: 'You\'ll receive an email with detailed submission instructions before the deadline. Make sure to also join <a href="https://discord.gg/wemakedevs" target="_blank" rel="noopener noreferrer" class="font-bold text-indigo-600 hover:text-indigo-700 underline underline-offset-2">Discord</a> to stay updated.',
 	},
 	{
 		question: "How do I win and what are the eligibility criteria?",
@@ -125,7 +124,7 @@ const faqs: FaqType[] = [
 	},
 	{
 		question: "Can I participate solo or in a team?",
-		answer: "You can join solo or form a team of up to 4 people. If you need teammates, you can find others in the Discord community.",
+		answer: 'You can join solo or form a team of up to 4 people. If you need teammates, you can find others in the <a href="https://discord.gg/wemakedevs" target="_blank" rel="noopener noreferrer" class="font-bold text-indigo-600 hover:text-indigo-700 underline underline-offset-2">Discord community</a>.',
 	},
 ];
 
