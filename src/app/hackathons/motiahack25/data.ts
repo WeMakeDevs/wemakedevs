@@ -4,9 +4,9 @@ import { images } from "./images";
 const DATA = {
 	title: "Backend Reloaded",
 	prize: "$3,000+ + swag + Google Summer of Code mentorship",
-	startDate: "2025-12-20T08:00:00+05:30",
-	endDate: "2025-12-25T20:00:00+05:30",
-	showDate: false,
+	startDate: "2025-12-15T08:00:00+05:30",
+	endDate: "2025-12-21T20:00:00+05:30",
+	showDate: true,
 	description:
 		"Build production-grade backends with a single primitive. APIs, background jobs, workflows, queues, and AI agents - unified in one system with built-in State management and Observability.",
 	descriptionCard:

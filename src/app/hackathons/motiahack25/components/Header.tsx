@@ -1,8 +1,8 @@
-import HackathonStatus from "@/components/HackathonStatus";
-import HackathonDate from "@/components/hackathon-content/HackathonDate";
-import { DateAtom } from "@/components/hackathon-content/atoms";
+"use client";
+
 import { buttonVariants } from "@/components/ui/button";
 import { ViewContainer } from "@/components/ui/view-container";
+import { useHackathonStatus } from "@/lib/hooks";
 import { cn } from "@/lib/utils";
 import { CalendarIcon } from "lucide-react";
 import Link from "next/link";
@@ -31,8 +31,24 @@ const HackathonHeader = ({
 	showDate = true,
 	cta,
 }: HackathonHeaderProps) => {
+	const { status, timeDifference } = useHackathonStatus(startDate, endDate);
+
 	const gridPattern =
 		"data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%2300ff41' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E";
+
+	const formatDate = (dateString: string) => {
+		const date = new Date(dateString);
+		return date.toLocaleDateString("en-US", {
+			month: "short",
+			day: "numeric",
+		});
+	};
+
+	const getTimeDisplay = (days: number, hours: number, minutes: number) => {
+		if (days > 0) return `${days} days`;
+		if (hours > 0) return `${hours} hours`;
+		return `${minutes} minutes`;
+	};
 
 	return (
 		<div className="relative bg-gradient-to-br from-[#050807] via-[#0c1317] to-[#101c24] py-24 border-b border-white/5">
@@ -44,11 +60,20 @@ const HackathonHeader = ({
 				<div className="grid grid-cols-1 lg:grid-cols-3 gap-4 p-8 bg-[#0e161a]/80 rounded-xl border border-white/5">
 					<div className="col-span-1 lg:col-span-2">
 						{showDate ? (
-							<HackathonStatus
-								className="w-fit"
-								startDate={startDate}
-								endDate={endDate}
-							/>
+							<p
+								className={cn(
+									"rounded-full px-3 py-1.5 font-mono font-semibold text-sm tracking-wide w-fit border shadow-[0_0_10px_rgba(0,255,65,0.3)]",
+									status === "upcoming" &&
+										"bg-green-500/20 text-green-400 border-green-500/50",
+									status === "ongoing" &&
+										"bg-green-500/20 text-green-400 border-green-500/50",
+									status === "ended" &&
+										"bg-slate-500/20 text-slate-400 border-slate-500/50",
+								)}
+							>
+								<span className="text-green-400">&gt;</span>{" "}
+								{status.toUpperCase()}
+							</p>
 						) : (
 							<p className="rounded-full px-3 py-1.5 bg-green-500/20 text-green-400 font-mono font-semibold text-sm tracking-wide w-fit border border-green-500/50 shadow-[0_0_10px_rgba(0,255,65,0.3)]">
 								&gt; COMING SOON
@@ -93,20 +118,43 @@ const HackathonHeader = ({
 						<div className="bg-[#0c1418]/90 backdrop-blur-sm shadow-[0_15px_35px_rgba(0,0,0,0.45)] rounded-xl p-4 md:p-6 h-fit w-full border border-white/10">
 							{showDate ? (
 								<>
-									<div className="flex gap-4 text-center font-medium">
+									<div className="flex gap-4 text-center font-medium items-center">
 										<CalendarIcon
 											className="text-green-300"
 											size={30}
 										/>
 										<p className="text-lg md:text-2xl text-slate-200 font-mono">
-											<DateAtom date={startDate} /> -{" "}
-											<DateAtom date={endDate} />
+											{formatDate(startDate)} -{" "}
+											{formatDate(endDate)}
 										</p>
 									</div>
-									<HackathonDate
-										startDate={startDate}
-										endDate={endDate}
-									/>
+									<div className="font-mono font-medium border border-green-500/40 rounded-full text-sm md:text-base px-3 py-2 flex justify-center items-center w-fit gap-1 md:gap-2 mt-4 bg-green-500/10 mx-auto text-slate-100 shadow-[0_0_12px_rgba(0,0,0,0.4)]">
+										<div
+											className={cn(
+												"w-4 h-4 rounded-full shadow-[0_0_8px_rgba(0,255,65,0.5)]",
+												status === "upcoming" &&
+													"bg-green-400 animate-pulse",
+												status === "ongoing" &&
+													"bg-green-400",
+												status === "ended" &&
+													"bg-slate-400",
+											)}
+										/>
+										{status === "upcoming" &&
+											`Starts in ${getTimeDisplay(
+												timeDifference.daysStartToNow,
+												timeDifference.hoursStartToNow,
+												timeDifference.minutesStartToNow,
+											)}`}
+										{status === "ongoing" &&
+											`Ends in ${getTimeDisplay(
+												timeDifference.daysEndToNow,
+												timeDifference.hoursEndToNow,
+												timeDifference.minutesEndToNow,
+											)}`}
+										{status === "ended" &&
+											"Hackathon has ended"}
+									</div>
 								</>
 							) : (
 								<>
