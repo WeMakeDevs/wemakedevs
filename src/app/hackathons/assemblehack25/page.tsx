@@ -1,8 +1,4 @@
-import {
-	HackathonContentBody,
-	HackathonCoverImage,
-} from "@/components/hackathon-content";
-import { ViewContainer } from "@/components/ui/view-container";
+import { HackathonCoverImage } from "@/components/hackathon-content";
 import AboutSection from "./components/AboutSection";
 import FaqSection from "./components/FaqSection";
 import HackathonHeader from "./components/Header";
@@ -11,13 +7,12 @@ import PrizesShowcase from "./components/PrizesShowcase";
 import SponsorsShowcase from "./components/SponsorsShowcase";
 import SecondaryNavbar from "./components/navbars/SecondaryNavbar";
 import { DATA, faqs, navLinks } from "./data";
-// import { images } from "./images";
+import { images } from "./images";
 
 const HackathonPage = () => {
 	return (
 		<main className="pt-20 bg-white">
-			{/* Cover image - commented out until image is added */}
-			{/* <HackathonCoverImage src={images.cover} alt={DATA.title} /> */}
+			<HackathonCoverImage src={images.cover} alt={DATA.title} />
 			<SecondaryNavbar
 				slug={DATA.slug}
 				page="overview"
