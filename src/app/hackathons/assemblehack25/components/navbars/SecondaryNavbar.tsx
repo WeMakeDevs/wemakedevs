@@ -57,7 +57,7 @@ const SecondaryNavbar = ({
 									linkBase,
 									"text-gray-700 hover:text-blue-600 hover:bg-blue-50",
 									page === link.page &&
-										"bg-blue-100 text-blue-700 border-b-2 border-blue-500 shadow-[0_6px_20px_rgba(59,130,246,0.1)]",
+										"bg-blue-100 text-blue-700 border-b-2 border-blue-500",
 								)}
 							>
 								{link.label}
@@ -92,7 +92,7 @@ const SecondaryNavbar = ({
 						) : (
 							<Link
 								href={navCta.href}
-								className="px-6 py-3 font-mono text-sm text-white bg-blue-500 border border-blue-600 rounded-full shadow-[0_0_15px_rgba(59,130,246,0.2)] hover:bg-blue-600 transition-colors"
+								className="px-6 py-3 font-mono text-sm text-white bg-blue-500 border-2 border-blue-600 rounded-full hover:bg-blue-600 transition-all"
 								target={
 									navCta.openInNewTab ? "_blank" : "_self"
 								}
@@ -146,7 +146,7 @@ const SecondaryNavbar = ({
 								<Link
 									href={navCta.href}
 									onClick={closeMobileMenu}
-									className="w-full px-6 py-3 font-mono text-center text-white bg-blue-500 border border-blue-600 rounded-full shadow-[0_0_15px_rgba(59,130,246,0.2)] hover:bg-blue-600 inline-block transition-colors"
+									className="w-full px-6 py-3 font-mono text-center text-white bg-blue-500 border-2 border-blue-600 rounded-full hover:bg-blue-600 inline-block transition-all"
 									target={
 										navCta.openInNewTab ? "_blank" : "_self"
 									}

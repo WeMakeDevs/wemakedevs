@@ -1,87 +1,95 @@
-import { ArrowUpRight, Gem } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { DATA } from "../data";
+import { images } from "../images";
 
 const SponsorsShowcase = () => {
 	const sponsors = DATA.sponsors;
+
+	// Map sponsors to their corresponding symbols
+	const sponsorSymbols = [
+		images.ironmanSymbol, // Cline
+		images.captainAmericaSymbol, // Kestra
+		images.spiderManSymbol, // Vercel
+		images.hulkSymbol, // Oumi
+		images.deadpoolSymbol, // CodeRabbit
+	];
+
 	const stoneColors = [
 		{
-			bg: "from-blue-500 to-cyan-500",
-			border: "border-blue-400/50",
-			name: "Power",
+			border: "border-blue-200",
 		},
 		{
-			bg: "from-purple-500 to-violet-600",
-			border: "border-purple-400/50",
-			name: "Space",
+			border: "border-purple-200",
 		},
 		{
-			bg: "from-cyan-500 to-blue-400",
-			border: "border-cyan-400/50",
-			name: "Reality",
+			border: "border-cyan-200",
 		},
 		{
-			bg: "from-red-500 to-pink-500",
-			border: "border-red-400/50",
-			name: "Soul",
+			border: "border-red-200",
 		},
 		{
-			bg: "from-green-500 to-emerald-500",
-			border: "border-green-400/50",
-			name: "Time",
+			border: "border-green-200",
 		},
 	];
 
 	return (
-		<div className="bg-gradient-to-b from-white via-blue-50 to-white py-16 border-y border-blue-200">
-			<div className="max-w-7xl mx-auto px-4">
+		<div className="relative bg-gradient-to-b from-white via-cyan-50/30 to-white py-16 border-y border-gray-200 overflow-hidden">
+			{/* Subtle dotted circle background */}
+			<div
+				className="absolute inset-0 opacity-[0.04]"
+				style={{
+					backgroundImage: `url(${images.dottedCircle.src})`,
+					backgroundSize: "cover",
+					backgroundPosition: "center",
+				}}
+			/>
+
+			<div className="max-w-7xl mx-auto px-4 relative z-10">
 				<div className="text-center mb-12">
-					<div className="flex justify-center mb-6">
-						<div className="bg-gradient-to-br from-blue-500 to-purple-500 p-4 rounded-2xl shadow-lg border border-blue-300">
-							<Gem className="w-8 h-8 text-white" />
-						</div>
-					</div>
-					<h2 className="text-4xl font-bold text-gray-900 mb-4 font-mono">
-						The Infinity Stones
+					<h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-4 uppercase tracking-tight">
+						The{" "}
+						<span className="bg-gradient-to-r from-cyan-600 to-blue-600 bg-clip-text text-transparent">
+							Infinity Stones
+						</span>
 					</h2>
-					<p className="text-xl text-gray-600 max-w-3xl mx-auto font-mono">
+					<p className="text-xl text-gray-600 max-w-3xl mx-auto">
 						Five powerful technologies assemble to power your AI
 						agents
 					</p>
 				</div>
 
-				{/* 3 + 2 Layout: First row with 3, second row with 2 center-aligned */}
+				{/* 3 + 2 Layout */}
 				<div className="relative">
 					{/* First row: 3 sponsors */}
 					<div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
 						{sponsors.slice(0, 3).map((sponsor, index) => {
 							const stoneColor = stoneColors[index];
+							const symbol = sponsorSymbols[index];
 							return (
 								<div
 									key={sponsor.name}
-									className="relative rounded-2xl shadow-lg overflow-hidden bg-white group transition-all duration-300 border border-blue-200 hover:border-blue-300"
+									className={`relative rounded-2xl overflow-hidden bg-white border-2 ${stoneColor.border} shadow-lg hover:shadow-xl transition-all hover:-translate-y-1`}
 								>
-									<div
-										className={`absolute -top-10 -right-10 w-32 h-32 bg-gradient-to-br ${stoneColor.bg} rounded-full blur-2xl opacity-10 group-hover:opacity-15 transition-opacity`}
-									/>
-
 									<div className="p-6 relative z-10">
 										<div className="flex items-center justify-between mb-4">
-											<div
-												className={`bg-gradient-to-br ${stoneColor.bg} p-3 rounded-full border-2 ${stoneColor.border} shadow-md`}
-											>
-												<Gem className="w-5 h-5 text-white" />
+											<div className="w-12 h-12 rounded-full overflow-hidden bg-gray-50 flex items-center justify-center">
+												<Image
+													src={symbol}
+													alt="Hero Symbol"
+													className="w-10 h-10 object-contain"
+												/>
 											</div>
 											<Link
 												href={sponsor.url}
 												target="_blank"
 												rel="noopener noreferrer"
-												className="px-3 py-1.5 rounded-lg border border-blue-500 flex gap-1 items-center bg-blue-500 hover:bg-blue-600 text-white transition-colors shadow-sm font-mono text-xs"
+												className="px-3 py-1.5 rounded-full border border-gray-300 flex gap-1 items-center bg-gray-100 hover:bg-gray-200 text-gray-700 transition-colors text-xs font-bold"
 											>
 												<ArrowUpRight
 													size={12}
-													className="text-white"
+													className="text-gray-500"
 												/>
 											</Link>
 										</div>
@@ -94,11 +102,11 @@ const SponsorsShowcase = () => {
 											/>
 										</div>
 
-										<h3 className="text-lg font-bold text-center text-gray-900 font-mono mb-2">
+										<h3 className="text-lg font-bold text-center text-gray-900 mb-2">
 											{sponsor.name}
 										</h3>
 
-										<p className="text-gray-700 leading-relaxed font-mono text-xs border-t border-blue-200 pt-3">
+										<p className="text-gray-600 leading-relaxed text-sm border-t border-gray-100 pt-3">
 											{sponsor.description}
 										</p>
 									</div>
@@ -112,31 +120,30 @@ const SponsorsShowcase = () => {
 						<div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-2xl">
 							{sponsors.slice(3).map((sponsor, index) => {
 								const stoneColor = stoneColors[index + 3];
+								const symbol = sponsorSymbols[index + 3];
 								return (
 									<div
 										key={sponsor.name}
-										className="relative rounded-2xl shadow-lg overflow-hidden bg-white group transition-all duration-300 border border-blue-200 hover:border-blue-300"
+										className={`relative rounded-2xl overflow-hidden bg-white border-2 ${stoneColor.border} shadow-lg hover:shadow-xl transition-all hover:-translate-y-1`}
 									>
-										<div
-											className={`absolute -top-10 -right-10 w-32 h-32 bg-gradient-to-br ${stoneColor.bg} rounded-full blur-2xl opacity-10 group-hover:opacity-15 transition-opacity`}
-										/>
-
 										<div className="p-6 relative z-10">
 											<div className="flex items-center justify-between mb-4">
-												<div
-													className={`bg-gradient-to-br ${stoneColor.bg} p-3 rounded-full border-2 ${stoneColor.border} shadow-md`}
-												>
-													<Gem className="w-5 h-5 text-white" />
+												<div className="w-12 h-12 rounded-full overflow-hidden bg-gray-50 flex items-center justify-center">
+													<Image
+														src={symbol}
+														alt="Hero Symbol"
+														className="w-10 h-10 object-contain"
+													/>
 												</div>
 												<Link
 													href={sponsor.url}
 													target="_blank"
 													rel="noopener noreferrer"
-													className="px-3 py-1.5 rounded-lg border border-blue-500 flex gap-1 items-center bg-blue-500 hover:bg-blue-600 text-white transition-colors shadow-sm font-mono text-xs"
+													className="px-3 py-1.5 rounded-full border border-gray-300 flex gap-1 items-center bg-gray-100 hover:bg-gray-200 text-gray-700 transition-colors text-xs font-bold"
 												>
 													<ArrowUpRight
 														size={12}
-														className="text-white"
+														className="text-gray-500"
 													/>
 												</Link>
 											</div>
@@ -149,11 +156,11 @@ const SponsorsShowcase = () => {
 												/>
 											</div>
 
-											<h3 className="text-lg font-bold text-center text-gray-900 font-mono mb-2">
+											<h3 className="text-lg font-bold text-center text-gray-900 mb-2">
 												{sponsor.name}
 											</h3>
 
-											<p className="text-gray-700 leading-relaxed font-mono text-xs border-t border-blue-200 pt-3">
+											<p className="text-gray-600 leading-relaxed text-sm border-t border-gray-100 pt-3">
 												{sponsor.description}
 											</p>
 										</div>
@@ -166,15 +173,21 @@ const SponsorsShowcase = () => {
 
 				{/* Assemble Message */}
 				<div className="text-center mt-12">
-					<div className="bg-gradient-to-r from-blue-50 via-purple-50 to-cyan-50 rounded-2xl p-8 border border-blue-200">
-						<h3 className="text-2xl font-bold text-blue-700 font-mono mb-4">
-							ASSEMBLE THE STONES
-						</h3>
-						<p className="text-gray-700 font-mono text-lg max-w-3xl mx-auto">
-							Combine these powerful technologies to create
-							unprecedented AI agent systems. Each stone brings
-							unique capabilities - together they're unstoppable.
-						</p>
+					<div className="inline-block bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl p-1">
+						<div className="bg-white rounded-xl px-8 py-6">
+							<h3 className="text-2xl font-black text-gray-900 uppercase mb-3">
+								Assemble The Stones
+							</h3>
+							<p className="text-gray-700 text-lg max-w-3xl mx-auto">
+								Combine these powerful technologies to create
+								unprecedented AI agent systems. Each stone
+								brings unique capabilities -{" "}
+								<span className="font-bold text-cyan-600">
+									together they're unstoppable
+								</span>
+								.
+							</p>
+						</div>
 					</div>
 				</div>
 			</div>

@@ -55,7 +55,7 @@ const PrimaryNavbar = ({ customNavLinks }: HackathonNavbarProps = {}) => {
 	);
 
 	const linkClasses =
-		"px-4 py-2 text-sm font-semibold tracking-wide text-gray-700 font-mono uppercase transition-colors hover:text-blue-600";
+		"px-4 py-2 text-sm font-semibold tracking-wide font-mono uppercase transition-colors";
 
 	return (
 		<nav id="nav" className="fixed mx-auto w-full z-[100] md:py-4">
@@ -74,8 +74,8 @@ const PrimaryNavbar = ({ customNavLinks }: HackathonNavbarProps = {}) => {
 								className={cn(
 									linkClasses,
 									link.type === "button"
-										? "bg-blue-500 text-white border border-blue-600 rounded-full shadow-[0_0_15px_rgba(59,130,246,0.2)] hover:bg-blue-600 lg:ml-4"
-										: "rounded-md hover:bg-blue-50",
+										? "bg-blue-500 text-white border border-blue-600 rounded-full hover:bg-blue-600 hover:text-white lg:ml-4"
+										: "text-gray-700 rounded-md hover:bg-blue-50 hover:text-blue-600",
 								)}
 								target={link.openInNewTab ? "_blank" : "_self"}
 								rel={
