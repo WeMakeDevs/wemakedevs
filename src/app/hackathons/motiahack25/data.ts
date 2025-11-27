@@ -4,15 +4,11 @@ import { images } from "./images";
 const DATA = {
 	title: "Backend Reloaded",
 	prize: "$3,000+ + swag + Google Summer of Code mentorship",
-	// TODO: Update dates when available - format: "YYYY-MM-DDTHH:mm:ss+05:30" (IST)
-	// Example: "2025-12-20T08:00:00+05:30"
-	startDate: "2025-12-20T08:00:00+05:30", // Placeholder - update when dates are confirmed
-	endDate: "2025-12-25T20:00:00+05:30", // Placeholder - update when dates are confirmed
-	showDate: false, // Set to true when dates are confirmed
-	// Short description for header (1-2 sentences, no em dashes)
+	startDate: "2025-12-20T08:00:00+05:30",
+	endDate: "2025-12-25T20:00:00+05:30",
+	showDate: false,
 	description:
 		"Build production-grade backends with a single primitive. APIs, background jobs, workflows, queues, and AI agents - unified in one system with built-in State management and Observability.",
-	// Description for card on home page
 	descriptionCard:
 		"Build the next generation of backends with Motia's unified runtime.",
 	slug: "motiahack25",

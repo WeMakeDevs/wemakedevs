@@ -43,7 +43,6 @@ const HackathonHeader = ({
 			<ViewContainer className="bg-[#0b1214]/80 backdrop-blur border border-white/10 rounded-2xl p-3 shadow-[0_25px_60px_rgba(3,8,10,0.55)]">
 				<div className="grid grid-cols-1 lg:grid-cols-3 gap-4 p-8 bg-[#0e161a]/80 rounded-xl border border-white/5">
 					<div className="col-span-1 lg:col-span-2">
-						{/* TODO: When dates are confirmed, set showDate to true and this will show the status */}
 						{showDate ? (
 							<HackathonStatus
 								className="w-fit"
@@ -94,7 +93,6 @@ const HackathonHeader = ({
 						<div className="bg-[#0c1418]/90 backdrop-blur-sm shadow-[0_15px_35px_rgba(0,0,0,0.45)] rounded-xl p-4 md:p-6 h-fit w-full border border-white/10">
 							{showDate ? (
 								<>
-									{/* TODO: When dates are confirmed, this will show the actual dates */}
 									<div className="flex gap-4 text-center font-medium">
 										<CalendarIcon
 											className="text-green-300"

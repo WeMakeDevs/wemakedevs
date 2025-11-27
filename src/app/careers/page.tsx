@@ -50,7 +50,6 @@ const jobs: JobCardType[] = [
 		applyLink: "https://example.com/apply/graphic-designer",
 	},
 ];
-// TODO: Use trigger component "
 const Careers = () => {
 	return (
 		<div>
