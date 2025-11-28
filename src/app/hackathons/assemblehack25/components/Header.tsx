@@ -1,11 +1,10 @@
-import HackathonStatus from "@/components/HackathonStatus";
 import HackathonDate from "@/components/hackathon-content/HackathonDate";
 import { DateAtom } from "@/components/hackathon-content/atoms";
 import { ViewContainer } from "@/components/ui/view-container";
-import { CalendarIcon, Sparkles } from "lucide-react";
-import Image from "next/image";
+import { CalendarIcon, Globe, Sparkles } from "lucide-react";
 import Link from "next/link";
 import { images } from "../images";
+import HackathonStatus from "./HackathonStatus";
 
 type HackathonHeaderProps = {
 	title: string;
@@ -51,18 +50,26 @@ const HackathonHeader = ({
 				<div className="bg-white border-2 border-gray-200 rounded-3xl p-4 shadow-xl">
 					<div className="grid grid-cols-1 lg:grid-cols-3 gap-6 p-6 md:p-8 bg-gradient-to-br from-white to-cyan-50/30 rounded-2xl">
 						<div className="col-span-1 lg:col-span-2">
-							{showDate ? (
-								<HackathonStatus
-									className="w-fit"
-									startDate={startDate}
-									endDate={endDate}
-								/>
-							) : (
-								<div className="inline-flex items-center gap-2 rounded-full px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold text-sm tracking-wide shadow-lg">
-									<span className="animate-pulse">🦸</span>
-									ASSEMBLING HEROES
+							<div className="flex items-center gap-4">
+								{showDate ? (
+									<HackathonStatus
+										className="w-fit"
+										startDate={startDate}
+										endDate={endDate}
+									/>
+								) : (
+									<div className="inline-flex items-center gap-2 rounded-full px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold text-sm tracking-wide shadow-lg">
+										<span className="animate-pulse">
+											🦸
+										</span>
+										ASSEMBLING HEROES
+									</div>
+								)}
+								<div className="inline-flex items-center gap-2 rounded-full px-4 py-2 bg-cyan-500 text-white font-bold text-sm uppercase tracking-wider shadow-lg">
+									<Globe className="w-4 h-4" />
+									Online
 								</div>
-							)}
+							</div>
 							<h1 className="text-4xl md:text-6xl font-black mt-6 text-gray-900 uppercase tracking-tight">
 								<span className="bg-gradient-to-r from-cyan-600 via-blue-600 to-blue-800 bg-clip-text text-transparent">
 									{title}

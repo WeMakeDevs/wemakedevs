@@ -107,6 +107,10 @@ const faqs: FaqType[] = [
 		answer: "Yes. Beginners are absolutely welcome. You don't need prior experience with agents, just curiosity and willingness to learn.",
 	},
 	{
+		question: "Where is the hackathon taking place?",
+		answer: "This is a fully online hackathon. You can participate from anywhere in the world.",
+	},
+	{
 		question: "How can I learn about the sponsor tools?",
 		answer: "Visit the Resources section for guides and tutorials. We'll also host webinars during the hackathon to help you get started.",
 	},
