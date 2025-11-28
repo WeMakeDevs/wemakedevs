@@ -202,8 +202,8 @@ const PrizesShowcase = () => {
 								<Gift className="w-6 h-6 text-pink-600" />
 							</div>
 							<p className="text-gray-600 max-w-2xl mx-auto">
-								Post about your hackathon project on social
-								media and tag our sponsors.{" "}
+								Post about taking part in the hackathon on
+								social media and tag WeMakeDevs.{" "}
 								<span className="font-bold text-purple-600">
 									10 raffle winners
 								</span>{" "}

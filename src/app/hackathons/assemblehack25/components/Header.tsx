@@ -142,18 +142,20 @@ const HackathonHeader = ({
 										{prize}
 									</span>
 									<div className="flex items-center gap-2 mt-2 text-sm text-gray-600">
-										<span>+ Interviews</span>
-										<span>•</span>
+										<span>+</span>
+										<span>Interviews</span>
+										<span>+</span>
 										<span>Exclusive Swag</span>
+										<span>+</span>
 									</div>
-									<div className="flex items-center gap-2 mt-2">
+									<div className="flex items-center gap-2 flex-wrap">
 										<Image
 											src={images.gsocLogo}
 											alt="Google Summer of Code"
 											className="h-6 w-auto"
 										/>
 										<span className="text-sm font-medium text-gray-700">
-											GSoC Mentorship
+											Mentorship
 										</span>
 									</div>
 								</div>
