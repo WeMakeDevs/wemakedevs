@@ -190,26 +190,52 @@ const PrizesShowcase = () => {
 					</div>
 				</div>
 
-				{/* Social Media Raffle */}
-				<div className="mt-16 text-center">
-					<div className="inline-block bg-gradient-to-r from-pink-500 to-purple-600 rounded-2xl p-1">
-						<div className="bg-white rounded-xl px-8 py-6">
-							<div className="flex items-center justify-center gap-3 mb-3">
-								<Gift className="w-6 h-6 text-purple-600" />
-								<p className="text-xl font-black text-gray-900 uppercase tracking-wide">
-									Social Media Raffle
+				{/* GSoC Mentorship & Social Media Raffle */}
+				<div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+					{/* GSoC Mentorship */}
+					<div className="text-center">
+						<div className="bg-gradient-to-r from-blue-500 to-cyan-600 rounded-2xl p-1 h-full">
+							<div className="bg-white rounded-xl px-6 py-6 h-full flex flex-col">
+								<div className="flex items-center justify-center mb-4">
+									<Image
+										src={images.gsocLogo}
+										alt="Google Summer of Code"
+										className="h-10 w-auto object-contain"
+									/>
+								</div>
+								<p className="text-gray-600 flex-grow">
+									<span className="font-bold text-blue-600">
+										All participants
+									</span>{" "}
+									will receive mentorship and guidance to help
+									them prepare for and apply to Google Summer
+									of Code.
 								</p>
-								<Gift className="w-6 h-6 text-pink-600" />
 							</div>
-							<p className="text-gray-600 max-w-2xl mx-auto">
-								Post about taking part in the hackathon on
-								social media and tag WeMakeDevs.{" "}
-								<span className="font-bold text-purple-600">
-									10 raffle winners
-								</span>{" "}
-								will receive exclusive swag packs from our
-								sponsors.
-							</p>
+						</div>
+					</div>
+
+					{/* Social Media Raffle */}
+					<div className="text-center">
+						<div className="bg-gradient-to-r from-pink-500 to-purple-600 rounded-2xl p-1 h-full">
+							<div className="bg-white rounded-xl px-6 py-6 h-full flex flex-col">
+								<div className="flex items-center justify-center gap-3 mb-3">
+									<Gift className="w-6 h-6 text-purple-600" />
+									<p className="text-xl font-black text-gray-900 uppercase tracking-wide">
+										Social Media Raffle
+									</p>
+									<Gift className="w-6 h-6 text-pink-600" />
+								</div>
+								<p className="text-gray-600 flex-grow">
+									Post about taking part in the hackathon on
+									social media and tag WeMakeDevs.{" "}
+									<span className="font-bold text-purple-600">
+										10 raffle winners
+									</span>{" "}
+									will receive exclusive swag packs from our
+									sponsors.
+								</p>
+							</div>
 						</div>
 					</div>
 				</div>
