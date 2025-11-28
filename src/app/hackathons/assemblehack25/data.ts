@@ -80,6 +80,13 @@ const DATA = {
 			logo: images.coderabbitLogo,
 			url: "https://coderabbit.ai",
 		},
+		{
+			name: "Together AI",
+			description:
+				"An AI-native cloud platform providing cutting-edge open-source models, high-performance inference, fine-tuning, and GPU clusters. Power your agents with industry-leading price-performance at scale.",
+			logo: images.togetheraiLogo,
+			url: "https://www.together.ai",
+		},
 	],
 };
 

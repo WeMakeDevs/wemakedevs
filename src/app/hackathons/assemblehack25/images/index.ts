@@ -5,6 +5,7 @@ import cover from "./cover.webp";
 import kestraLogo from "./kestra-logo.svg";
 import oumiLogo from "./oumi-logo.svg";
 import thumbnail from "./thumbnail.webp";
+import togetheraiLogo from "./togetherai-logo.svg";
 import vercelLogo from "./vercel-logo.svg";
 
 import avengersImage from "./avengers.webp";
@@ -22,6 +23,7 @@ import captainAmericaSymbol from "./captain-america-symbol.png";
 import deadpoolSymbol from "./deadpool-symbol.png";
 import hulkSymbol from "./hulk-symbol.png";
 import ironmanSymbol from "./ironman-symbol.png";
+import shieldSymbol from "./shield-symbol.webp";
 import spiderManSymbol from "./spiderman-symbol.png";
 
 // Dotted bgs
@@ -39,6 +41,7 @@ export const images = {
 	cover,
 	thumbnail,
 	gsocLogo,
+	togetheraiLogo,
 	// Hero assets
 	captainAmericaShield,
 	infinityGauntlet,
@@ -57,4 +60,5 @@ export const images = {
 	ironmanSymbol,
 	spiderManSymbol,
 	hulkSymbol,
+	shieldSymbol,
 } as const;

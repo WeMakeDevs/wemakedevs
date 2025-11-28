@@ -14,6 +14,7 @@ const SponsorsShowcase = () => {
 		images.spiderManSymbol, // Vercel
 		images.hulkSymbol, // Oumi
 		images.deadpoolSymbol, // CodeRabbit
+		images.shieldSymbol, // Together AI (reusing symbol)
 	];
 
 	const stoneColors = [
@@ -31,6 +32,9 @@ const SponsorsShowcase = () => {
 		},
 		{
 			border: "border-green-200",
+		},
+		{
+			border: "border-orange-200",
 		},
 	];
 
@@ -55,12 +59,12 @@ const SponsorsShowcase = () => {
 						</span>
 					</h2>
 					<p className="text-xl text-gray-600 max-w-3xl mx-auto">
-						Five powerful technologies assemble to power your AI
+						Six powerful technologies assemble to power your AI
 						agents
 					</p>
 				</div>
 
-				{/* 3 + 2 Layout */}
+				{/* 3 + 3 Layout */}
 				<div className="relative">
 					{/* First row: 3 sponsors */}
 					<div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
@@ -115,59 +119,57 @@ const SponsorsShowcase = () => {
 						})}
 					</div>
 
-					{/* Second row: 2 sponsors center-aligned */}
-					<div className="flex justify-center">
-						<div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-2xl">
-							{sponsors.slice(3).map((sponsor, index) => {
-								const stoneColor = stoneColors[index + 3];
-								const symbol = sponsorSymbols[index + 3];
-								return (
-									<div
-										key={sponsor.name}
-										className={`relative rounded-2xl overflow-hidden bg-white border-2 ${stoneColor.border} shadow-lg hover:shadow-xl transition-all hover:-translate-y-1`}
-									>
-										<div className="p-6 relative z-10">
-											<div className="flex items-center justify-between mb-4">
-												<div className="w-12 h-12 rounded-full overflow-hidden bg-gray-50 flex items-center justify-center">
-													<Image
-														src={symbol}
-														alt="Hero Symbol"
-														className="w-10 h-10 object-contain"
-													/>
-												</div>
-												<Link
-													href={sponsor.url}
-													target="_blank"
-													rel="noopener noreferrer"
-													className="px-3 py-1.5 rounded-full border border-gray-300 flex gap-1 items-center bg-gray-100 hover:bg-gray-200 text-gray-700 transition-colors text-xs font-bold"
-												>
-													<ArrowUpRight
-														size={12}
-														className="text-gray-500"
-													/>
-												</Link>
-											</div>
-
-											<div className="mb-4 flex justify-center">
+					{/* Second row: 3 sponsors */}
+					<div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+						{sponsors.slice(3).map((sponsor, index) => {
+							const stoneColor = stoneColors[index + 3];
+							const symbol = sponsorSymbols[index + 3];
+							return (
+								<div
+									key={sponsor.name}
+									className={`relative rounded-2xl overflow-hidden bg-white border-2 ${stoneColor.border} shadow-lg hover:shadow-xl transition-all hover:-translate-y-1`}
+								>
+									<div className="p-6 relative z-10">
+										<div className="flex items-center justify-between mb-4">
+											<div className="w-12 h-12 rounded-full overflow-hidden bg-gray-50 flex items-center justify-center">
 												<Image
-													src={sponsor.logo}
-													alt={`${sponsor.name} Logo`}
-													className="max-h-12 w-auto object-contain"
+													src={symbol}
+													alt="Hero Symbol"
+													className="w-10 h-10 object-contain"
 												/>
 											</div>
-
-											<h3 className="text-lg font-bold text-center text-gray-900 mb-2">
-												{sponsor.name}
-											</h3>
-
-											<p className="text-gray-600 leading-relaxed text-sm border-t border-gray-100 pt-3">
-												{sponsor.description}
-											</p>
+											<Link
+												href={sponsor.url}
+												target="_blank"
+												rel="noopener noreferrer"
+												className="px-3 py-1.5 rounded-full border border-gray-300 flex gap-1 items-center bg-gray-100 hover:bg-gray-200 text-gray-700 transition-colors text-xs font-bold"
+											>
+												<ArrowUpRight
+													size={12}
+													className="text-gray-500"
+												/>
+											</Link>
 										</div>
+
+										<div className="mb-4 flex justify-center">
+											<Image
+												src={sponsor.logo}
+												alt={`${sponsor.name} Logo`}
+												className="max-h-12 w-auto object-contain"
+											/>
+										</div>
+
+										<h3 className="text-lg font-bold text-center text-gray-900 mb-2">
+											{sponsor.name}
+										</h3>
+
+										<p className="text-gray-600 leading-relaxed text-sm border-t border-gray-100 pt-3">
+											{sponsor.description}
+										</p>
 									</div>
-								);
-							})}
-						</div>
+								</div>
+							);
+						})}
 					</div>
 				</div>
 
