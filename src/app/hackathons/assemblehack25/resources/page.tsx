@@ -40,7 +40,7 @@ const HackathonResources = async () => {
 										target="_blank"
 										rel="noopener noreferrer"
 									>
-										https://docs.cline.bot/introduction/welcome
+										Cline Documentation
 									</Link>
 								</li>
 								<li>
@@ -50,7 +50,7 @@ const HackathonResources = async () => {
 										target="_blank"
 										rel="noopener noreferrer"
 									>
-										https://cline.bot/learn#ai-coding-university
+										AI Coding University
 									</Link>
 								</li>
 							</ul>
@@ -68,7 +68,7 @@ const HackathonResources = async () => {
 										target="_blank"
 										rel="noopener noreferrer"
 									>
-										https://kestra.io/blogs/introducing-ai-agents
+										Introduction to AI Agents
 									</Link>
 								</li>
 								<li>
@@ -78,7 +78,7 @@ const HackathonResources = async () => {
 										target="_blank"
 										rel="noopener noreferrer"
 									>
-										https://kestra.io/blueprints?page=1&size=24&tags=ai
+										Kestra AI Blueprints
 									</Link>
 								</li>
 								<li>
@@ -88,7 +88,7 @@ const HackathonResources = async () => {
 										target="_blank"
 										rel="noopener noreferrer"
 									>
-										https://kestra.io/blueprints/ai-check-weather-gemini
+										Kestra Email Notification Blueprint
 									</Link>
 								</li>
 								<li>
@@ -98,7 +98,7 @@ const HackathonResources = async () => {
 										target="_blank"
 										rel="noopener noreferrer"
 									>
-										https://kestra.io/docs
+										Kestra Documentation
 									</Link>
 								</li>
 								<li>
@@ -108,7 +108,7 @@ const HackathonResources = async () => {
 										target="_blank"
 										rel="noopener noreferrer"
 									>
-										https://kestra.io/tutorial-videos
+										Kestra Tutorial Videos
 									</Link>
 								</li>
 							</ul>
@@ -126,7 +126,7 @@ const HackathonResources = async () => {
 										target="_blank"
 										rel="noopener noreferrer"
 									>
-										https://vercel.com/docs
+										Vercel Documentation
 									</Link>
 								</li>
 							</ul>
@@ -142,7 +142,7 @@ const HackathonResources = async () => {
 										target="_blank"
 										rel="noopener noreferrer"
 									>
-										https://www.oumi.ai/docs/en/latest/index.html
+										Oumi Documentation
 									</Link>
 								</li>
 							</ul>
@@ -160,7 +160,7 @@ const HackathonResources = async () => {
 										target="_blank"
 										rel="noopener noreferrer"
 									>
-										https://docs.coderabbit.ai/overview/introduction
+										CodeRabbit Documentation
 									</Link>
 								</li>
 							</ul>
