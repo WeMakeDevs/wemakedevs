@@ -50,7 +50,7 @@ const DATA = {
 			description:
 				"An autonomous coding environment that helps you build, iterate, and experiment with AI agents directly from your editor. Perfect for rapid prototyping and local agent development.",
 			logo: images.clineLogo,
-			url: "https://cline.sh",
+			url: "https://cline.bot",
 		},
 		{
 			name: "Kestra",
