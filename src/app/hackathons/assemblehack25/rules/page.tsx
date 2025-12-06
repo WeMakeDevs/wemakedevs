@@ -1,10 +1,8 @@
-import {
-	HackathonCoverImage,
-	HackathonNav,
-} from "@/components/hackathon-content";
+import { HackathonCoverImage } from "@/components/hackathon-content";
 import HackathonContentBody from "@/components/hackathon-content/HackathonContentBody";
 import { ViewContainer } from "@/components/ui/view-container";
 import Link from "next/link";
+import SecondaryNavbar from "../components/navbars/SecondaryNavbar";
 import { DATA, navLinks } from "../data";
 import { images } from "../images";
 
@@ -12,16 +10,11 @@ const HackathonRules = async () => {
 	return (
 		<div className="pt-20 pb-10">
 			<HackathonCoverImage src={images.cover} alt={DATA.title} />
-			<HackathonNav
+			<SecondaryNavbar
 				slug={DATA.slug}
 				page="rules"
 				links={navLinks}
-				navCta={{
-					label: DATA.cta.label,
-					href: DATA.cta.href,
-					openInNewTab: DATA.cta.openInNewTab,
-					disabled: DATA.cta.disabled,
-				}}
+				navCta={DATA.cta}
 			/>
 			<ViewContainer className="my-10">
 				<HackathonContentBody>
