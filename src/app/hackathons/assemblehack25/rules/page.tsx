@@ -4,6 +4,7 @@ import {
 } from "@/components/hackathon-content";
 import HackathonContentBody from "@/components/hackathon-content/HackathonContentBody";
 import { ViewContainer } from "@/components/ui/view-container";
+import Link from "next/link";
 import { DATA, navLinks } from "../data";
 import { images } from "../images";
 
@@ -88,87 +89,129 @@ const HackathonRules = async () => {
 								<p className="mb-4">
 									To qualify for cash prizes or interview
 									opportunities, projects must follow the
-									requirements for each prize category:
+									requirements for each prize category. Each
+									award is tied to specific sponsor tools, and
+									your submission must meet those requirements
+									to be eligible.
 								</p>
 								<ul className="space-y-3 list-disc list-outside pl-6 mb-4">
 									<li>
 										<strong>
-											The Infinity Build Award – $10,000
+											The Infinity Build Award – $5,000
 										</strong>
 										<br />
-										Use <strong>all three tools</strong>:
-										Cline, Vercel, and Kestra to build a
-										full-stack AI agent system.
+										Your project must use Cline CLI and
+										Kestra&apos;s AI Agent together. Cline
+										must be used to build capabilities on
+										top of the CLI that improve the software
+										development experience, and Kestra must
+										be used to summarise data from other
+										systems, with bonus credit if your agent
+										can make decisions based on the
+										summarised data.
 									</li>
 									<li>
 										<strong>
-											The Visionary Intelligence Award –
-											$3,000
+											The Stormbreaker Deployment Award –
+											$4,000
 										</strong>
 										<br />
-										Best use of <strong>Oumi</strong> with{" "}
-										<strong>open-source LLMs</strong>{" "}
-										(LLaMA, Gemma, Mistral, Qwen, etc.).
+										Your project must be deployed on Vercel,
+										and the deployment must be live. Any
+										standard Vercel deployment qualifies.
+									</li>
+									<li>
+										<strong>
+											The Iron Intelligence Award – $3,000
+										</strong>
+										<br />
+										Your project must use the Oumi
+										open-source library and must include
+										Oumi&apos;s Reinforcement Learning
+										fine-tuning features as part of your
+										submission. Data Synthesis and
+										LLM-as-a-Judge are optional but
+										encouraged.
 									</li>
 									<li>
 										<strong>
 											The Captain Code Award – $2,000
 										</strong>
 										<br />
-										Use <strong>CodeRabbit</strong> to
-										demonstrate exceptional open-source good
-										practices.
+										Your repository must demonstrate the use
+										of CodeRabbit for PR reviews, code
+										quality improvements, documentation, and
+										open-source best practices. CodeRabbit
+										activity should be clearly visible.
+									</li>
+									<li>
+										<strong>
+											The Vision UI Award – $1,000
+										</strong>
+										<br />
+										This award is based solely on user
+										interface quality. No sponsor technology
+										is required for eligibility.
 									</li>
 								</ul>
 								<p>
 									Projects that do not use the required
-									sponsor technologies are not eligible for
+									sponsor technologies for their respective
+									categories are not eligible for those
 									sponsor-specific prizes.
 									<br />
-									Refer to the Resources section for guides
-									and documentation.
+									Refer to the{" "}
+									<Link
+										href={`/${DATA.slug}/resources`}
+										className="text-blue-600 underline hover:no-underline"
+									>
+										Resources section
+									</Link>{" "}
+									for guides and documentation.
 								</p>
 							</div>
 						</section>
 
 						<section>
-							<h2 className="text-2xl font-bold mb-4">
+							<h2 className="text-2xl font-bold mb-2">
 								What to Use for Each Sponsor
 							</h2>
+							<p className="text-gray-600 mb-4">
+								Make sure to check out the{" "}
+								<Link
+									href={`/${DATA.slug}/resources`}
+									className="text-blue-600 underline hover:no-underline"
+								>
+									resources section
+								</Link>{" "}
+								to learn more about these tools.
+							</p>
 							<div className="space-y-4">
-								<div>
-									<h3 className="text-xl font-semibold mb-2">
-										<strong>Kestra</strong>
-									</h3>
-									<p>
-										Use Kestra&apos;s built-in AI Agent to
-										summarise data from other systems.
-										<br />
-										Bonus points for enabling the agent to
-										make decisions based on the summarised
-										data.
-									</p>
-								</div>
 								<div>
 									<h3 className="text-xl font-semibold mb-2">
 										<strong>Cline</strong>
 									</h3>
 									<p>
-										Use the <strong>Cline CLI</strong>{" "}
-										during development as part of your
-										agent-building workflow.
+										Participants must use the Cline CLI, the
+										command-line interface for autonomous AI
+										coding agents. You should build new
+										capabilities on top of the CLI that
+										improve the software development
+										experience, and your project should
+										demonstrate complete, working automation
+										tools built through the CLI.
 									</p>
 								</div>
 								<div>
 									<h3 className="text-xl font-semibold mb-2">
-										<strong>Vercel</strong>
+										<strong>Kestra</strong>
 									</h3>
 									<p>
-										You may use anything you like, but your
-										project must be{" "}
-										<strong>deployed on Vercel</strong> to
-										qualify for UI-related or
-										deployment-focused scoring.
+										Your project must use Kestra&apos;s
+										built-in AI Agent to summarise data from
+										other systems, with bonus consideration
+										if the agent can also make decisions
+										based on the summarised data.
 									</p>
 								</div>
 								<div>
@@ -176,13 +219,48 @@ const HackathonRules = async () => {
 										<strong>Oumi</strong>
 									</h3>
 									<p>
-										Build agents using{" "}
-										<strong>open-source LLMs</strong> such
-										as LLaMA, Gemma, Mistral, or Qwen.
-										<br />
-										Judges will evaluate how effectively
-										Oumi is used to power reasoning, tools,
-										memory, or autonomy.
+										Your submission must use the{" "}
+										<Link
+											href="https://github.com/oumi-ai/oumi"
+											target="_blank"
+											rel="noopener noreferrer"
+											className="text-blue-600 underline hover:no-underline"
+										>
+											Oumi
+										</Link>{" "}
+										open-source library, specifically
+										Oumi&apos;s{" "}
+										<Link
+											href="https://github.com/oumi-ai/oumi/blob/main/notebooks/Oumi%20-%20OpenEnv%20GRPO%20with%20trl.ipynb"
+											target="_blank"
+											rel="noopener noreferrer"
+											className="text-blue-600 underline hover:no-underline"
+										>
+											Reinforcement Learning
+										</Link>{" "}
+										fine-tuning features (
+										<Link
+											href="https://github.com/oumi-ai/oumi/blob/main/notebooks/Oumi%20-%20Train%20a%20Letter%20Counting%20Model%20using%20GRPO.ipynb"
+											target="_blank"
+											rel="noopener noreferrer"
+											className="text-blue-600 underline hover:no-underline"
+										>
+											more info
+										</Link>
+										). You may also choose to use Data
+										Synthesis, LLM-as-a-Judge, or any
+										examples provided in the Oumi notebooks,
+										as these are optional but encouraged.
+									</p>
+								</div>
+								<div>
+									<h3 className="text-xl font-semibold mb-2">
+										<strong>Vercel</strong>
+									</h3>
+									<p>
+										Your project must be deployed on Vercel.
+										Any standard Vercel deployment
+										qualifies.
 									</p>
 								</div>
 								<div>
@@ -190,11 +268,13 @@ const HackathonRules = async () => {
 										<strong>CodeRabbit</strong>
 									</h3>
 									<p>
-										Demonstrate exceptional open-source
-										engineering through:
-										<br />
-										clean PRs, documentation, modularity,
-										GitHub hygiene, and OSS workflows.
+										Your repository should demonstrate the
+										use of CodeRabbit for PR reviews, code
+										quality suggestions, documentation
+										improvements, and overall open-source
+										best practices. CodeRabbit activity
+										should be clearly visible in your
+										workflow.
 									</p>
 								</div>
 							</div>
