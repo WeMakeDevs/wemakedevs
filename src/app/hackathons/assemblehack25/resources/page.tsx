@@ -35,22 +35,62 @@ const HackathonResources = async () => {
 							<ul className="space-y-2 list-disc list-inside">
 								<li>
 									<Link
-										href="https://docs.cline.bot/introduction/welcome"
+										href="https://docs.cline.bot/cline-cli/installation"
 										className="text-blue-600 underline hover:no-underline"
 										target="_blank"
 										rel="noopener noreferrer"
 									>
-										Cline Documentation
+										Installation Guide
 									</Link>
 								</li>
 								<li>
 									<Link
-										href="https://cline.bot/learn#ai-coding-university"
+										href="https://docs.cline.bot/cline-cli/cli-reference"
 										className="text-blue-600 underline hover:no-underline"
 										target="_blank"
 										rel="noopener noreferrer"
 									>
-										AI Coding University
+										CLI Reference
+									</Link>
+								</li>
+								<li>
+									<Link
+										href="https://docs.cline.bot/cline-cli/three-core-flows"
+										className="text-blue-600 underline hover:no-underline"
+										target="_blank"
+										rel="noopener noreferrer"
+									>
+										Three Core Flows
+									</Link>
+								</li>
+								<li>
+									<Link
+										href="https://docs.cline.bot/cline-cli/samples/github-integration"
+										className="text-blue-600 underline hover:no-underline"
+										target="_blank"
+										rel="noopener noreferrer"
+									>
+										GitHub Integration Sample
+									</Link>
+								</li>
+								<li>
+									<Link
+										href="https://docs.cline.bot/"
+										className="text-blue-600 underline hover:no-underline"
+										target="_blank"
+										rel="noopener noreferrer"
+									>
+										Main Documentation
+									</Link>
+								</li>
+								<li>
+									<Link
+										href="https://discord.gg/cline"
+										className="text-blue-600 underline hover:no-underline"
+										target="_blank"
+										rel="noopener noreferrer"
+									>
+										Community Discord
 									</Link>
 								</li>
 							</ul>
@@ -137,12 +177,52 @@ const HackathonResources = async () => {
 							<ul className="space-y-2 list-disc list-inside">
 								<li>
 									<Link
-										href="https://www.oumi.ai/docs/en/latest/index.html"
+										href="https://oumi.ai/docs/en/latest/index.html"
 										className="text-blue-600 underline hover:no-underline"
 										target="_blank"
 										rel="noopener noreferrer"
 									>
 										Oumi Documentation
+									</Link>
+								</li>
+								<li>
+									<Link
+										href="https://github.com/oumi-ai/oumi"
+										className="text-blue-600 underline hover:no-underline"
+										target="_blank"
+										rel="noopener noreferrer"
+									>
+										Oumi GitHub
+									</Link>
+								</li>
+								<li>
+									<Link
+										href="https://github.com/oumi-ai/oumi/blob/main/notebooks/Oumi%20-%20Train%20a%20Letter%20Counting%20Model%20using%20GRPO.ipynb"
+										className="text-blue-600 underline hover:no-underline"
+										target="_blank"
+										rel="noopener noreferrer"
+									>
+										Train a Letter Counting Model using GRPO
+									</Link>
+								</li>
+								<li>
+									<Link
+										href="https://github.com/oumi-ai/oumi/blob/main/notebooks/Oumi%20-%20OpenEnv%20GRPO%20with%20trl.ipynb"
+										className="text-blue-600 underline hover:no-underline"
+										target="_blank"
+										rel="noopener noreferrer"
+									>
+										OpenEnv GRPO with trl
+									</Link>
+								</li>
+								<li>
+									<Link
+										href="https://github.com/oumi-ai/oumi/tree/main/notebooks"
+										className="text-blue-600 underline hover:no-underline"
+										target="_blank"
+										rel="noopener noreferrer"
+									>
+										Other Oumi Notebooks
 									</Link>
 								</li>
 							</ul>
