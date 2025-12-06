@@ -17,6 +17,8 @@ import ironmanFlying from "./ironman-flying.png";
 import ironmanHelmet from "./ironman-helmet.png";
 import ironmanMask from "./ironman-mask.png";
 import thorHammer from "./thor-hammer.png";
+import thorStormBreaker from "./thor-stormbreaker.webp";
+import vision from "./vision.png";
 
 // Symbols
 import captainAmericaSymbol from "./captain-america-symbol.png";
@@ -50,6 +52,8 @@ export const images = {
 	ironmanMask,
 	thorHammer,
 	avengersImage,
+	thorStormBreaker,
+	vision,
 	// Backgrounds
 	dottedCircle,
 	dottedGrid,
