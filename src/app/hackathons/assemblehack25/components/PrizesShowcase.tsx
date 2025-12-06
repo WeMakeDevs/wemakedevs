@@ -8,7 +8,7 @@ const PrizesShowcase = () => {
 			name: "Infinity Build Award",
 			prize: "$5,000",
 			description:
-				"Awarded to the best project that uses Cline CLI and Kestra's AI Agent together to build a complete, high-impact agent system.",
+				"Awarded to the best project that uses Cline CLI to build powerful autonomous coding workflows and meaningful capabilities on top of the CLI.",
 			image: images.infinityGauntlet,
 			imageAlt: "Infinity Gauntlet",
 			rank: 1,
@@ -17,16 +17,16 @@ const PrizesShowcase = () => {
 			bgColor: "bg-gradient-to-br from-yellow-50 to-amber-50",
 		},
 		{
-			name: "Stormbreaker Deployment Award",
+			name: "Wakanda Data Award",
 			prize: "$4,000",
 			description:
-				"Awarded to the project with the strongest Vercel deployment, showing a smooth, fast, and production-ready experience.",
-			image: images.thorStormBreaker,
-			imageAlt: "Thor Stormbreaker",
+				"Awarded to the best project using Kestra's built-in AI Agent to summarise data from other systems. Bonus credit for enabling the agent to make decisions based on the summarised data.",
+			image: images.blackPanther,
+			imageAlt: "Black Panther",
 			rank: 2,
-			gradient: "from-blue-400 via-cyan-500 to-blue-600",
-			borderColor: "border-blue-400",
-			bgColor: "bg-gradient-to-br from-blue-50 to-cyan-50",
+			gradient: "from-purple-600 via-indigo-700 to-purple-900",
+			borderColor: "border-purple-600",
+			bgColor: "bg-gradient-to-br from-purple-50 to-indigo-50",
 		},
 		{
 			name: "Iron Intelligence Award",
@@ -41,28 +41,28 @@ const PrizesShowcase = () => {
 			bgColor: "bg-gradient-to-br from-slate-50 to-gray-50",
 		},
 		{
-			name: "Captain Code Award",
+			name: "Stormbreaker Deployment Award",
 			prize: "$2,000",
+			description:
+				"Awarded to the strongest Vercel deployment, showing a smooth, fast, and production-ready experience.",
+			image: images.thorStormBreaker,
+			imageAlt: "Thor Stormbreaker",
+			rank: 4,
+			gradient: "from-blue-400 via-cyan-500 to-blue-600",
+			borderColor: "border-blue-400",
+			bgColor: "bg-gradient-to-br from-blue-50 to-cyan-50",
+		},
+		{
+			name: "Captain Code Award",
+			prize: "$1,000",
 			description:
 				"Awarded to the team that demonstrates the best open-source engineering using CodeRabbit through clean PRs, documentation, and solid OSS workflows.",
 			image: images.captainAmericaShield,
 			imageAlt: "Captain America Shield",
-			rank: 4,
+			rank: 5,
 			gradient: "from-amber-600 via-orange-700 to-amber-800",
 			borderColor: "border-amber-600",
 			bgColor: "bg-gradient-to-br from-orange-50 to-amber-50",
-		},
-		{
-			name: "Vision UI Award",
-			prize: "$1,000",
-			description:
-				"Awarded to the project with the cleanest, most intuitive, and most user-friendly UI.",
-			image: images.vision,
-			imageAlt: "Vision",
-			rank: 5,
-			gradient: "from-purple-400 via-pink-500 to-purple-600",
-			borderColor: "border-purple-400",
-			bgColor: "bg-gradient-to-br from-purple-50 to-pink-50",
 		},
 	];
 
@@ -110,7 +110,7 @@ const PrizesShowcase = () => {
 								</h3>
 
 								<div className="text-center mb-3">
-									<div className="text-3xl font-black text-blue-600">
+									<div className="text-3xl font-black text-purple-600">
 										{prizes[1].prize}
 									</div>
 								</div>
@@ -222,7 +222,7 @@ const PrizesShowcase = () => {
 									<Image
 										src={prizes[3].image}
 										alt={prizes[3].imageAlt}
-										className="h-24 w-auto object-contain drop-shadow-xl"
+										className="h-32 w-auto object-contain drop-shadow-xl"
 									/>
 								</div>
 
@@ -231,7 +231,7 @@ const PrizesShowcase = () => {
 								</h3>
 
 								<div className="text-center mb-2">
-									<div className="text-2xl font-black text-amber-700">
+									<div className="text-2xl font-black text-blue-600">
 										{prizes[3].prize}
 									</div>
 								</div>
@@ -268,7 +268,7 @@ const PrizesShowcase = () => {
 								</h3>
 
 								<div className="text-center mb-2">
-									<div className="text-2xl font-black text-purple-600">
+									<div className="text-2xl font-black text-amber-700">
 										{prizes[4].prize}
 									</div>
 								</div>

@@ -100,25 +100,23 @@ const HackathonRules = async () => {
 											The Infinity Build Award – $5,000
 										</strong>
 										<br />
-										Your project must use Cline CLI and
-										Kestra&apos;s AI Agent together. Cline
+										Your project must use Cline CLI. Cline
 										must be used to build capabilities on
 										top of the CLI that improve the software
-										development experience, and Kestra must
-										be used to summarise data from other
-										systems, with bonus credit if your agent
-										can make decisions based on the
-										summarised data.
+										development experience, and your project
+										should demonstrate complete, working
+										automation tools built through the CLI.
 									</li>
 									<li>
 										<strong>
-											The Stormbreaker Deployment Award –
-											$4,000
+											The Wakanda Data Award – $4,000
 										</strong>
 										<br />
-										Your project must be deployed on Vercel,
-										and the deployment must be live. Any
-										standard Vercel deployment qualifies.
+										Your project must use Kestra&apos;s
+										built-in AI Agent to summarise data from
+										other systems, with bonus credit if your
+										agent can make decisions based on the
+										summarised data.
 									</li>
 									<li>
 										<strong>
@@ -135,7 +133,17 @@ const HackathonRules = async () => {
 									</li>
 									<li>
 										<strong>
-											The Captain Code Award – $2,000
+											The Stormbreaker Deployment Award –
+											$2,000
+										</strong>
+										<br />
+										Your project must be deployed on Vercel,
+										and the deployment must be live. Any
+										standard Vercel deployment qualifies.
+									</li>
+									<li>
+										<strong>
+											The Captain Code Award – $1,000
 										</strong>
 										<br />
 										Your repository must demonstrate the use
@@ -143,15 +151,6 @@ const HackathonRules = async () => {
 										quality improvements, documentation, and
 										open-source best practices. CodeRabbit
 										activity should be clearly visible.
-									</li>
-									<li>
-										<strong>
-											The Vision UI Award – $1,000
-										</strong>
-										<br />
-										This award is based solely on user
-										interface quality. No sponsor technology
-										is required for eligibility.
 									</li>
 								</ul>
 								<p>
@@ -162,7 +161,7 @@ const HackathonRules = async () => {
 									<br />
 									Refer to the{" "}
 									<Link
-										href={`/${DATA.slug}/resources`}
+										href="/hackathons/assemblehack25/resources"
 										className="text-blue-600 underline hover:no-underline"
 									>
 										Resources section
@@ -179,7 +178,7 @@ const HackathonRules = async () => {
 							<p className="text-gray-600 mb-4">
 								Make sure to check out the{" "}
 								<Link
-									href={`/${DATA.slug}/resources`}
+									href="/hackathons/assemblehack25/resources"
 									className="text-blue-600 underline hover:no-underline"
 								>
 									resources section

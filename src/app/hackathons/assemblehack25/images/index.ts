@@ -9,6 +9,7 @@ import togetheraiLogo from "./togetherai-logo.svg";
 import vercelLogo from "./vercel-logo.svg";
 
 import avengersImage from "./avengers.webp";
+import blackPanther from "./black-panther.webp";
 // Other assets
 import captainAmericaShield from "./captain-america-shield.png";
 import infinityGauntlet from "./gauntlet.png";
@@ -18,7 +19,6 @@ import ironmanHelmet from "./ironman-helmet.png";
 import ironmanMask from "./ironman-mask.png";
 import thorHammer from "./thor-hammer.png";
 import thorStormBreaker from "./thor-stormbreaker.webp";
-import vision from "./vision.png";
 
 // Symbols
 import captainAmericaSymbol from "./captain-america-symbol.png";
@@ -53,7 +53,7 @@ export const images = {
 	thorHammer,
 	avengersImage,
 	thorStormBreaker,
-	vision,
+	blackPanther,
 	// Backgrounds
 	dottedCircle,
 	dottedGrid,
