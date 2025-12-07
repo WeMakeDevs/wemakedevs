@@ -32,7 +32,7 @@ const PrizesShowcase = () => {
 			name: "Iron Intelligence Award",
 			prize: "$3,000",
 			description:
-				"Awarded to the most effective and creative use of Oumi, with required Reinforcement Learning fine-tuning included in the submission.",
+				"Awarded for the most effective and creative use of Oumi to train/evaluate new LLMs/VLMs and/or most impactful contributions to the open source Oumi repository that would benefit the community.",
 			image: images.ironmanHelmet,
 			imageAlt: "Iron Man Helmet",
 			rank: 3,
@@ -101,7 +101,7 @@ const PrizesShowcase = () => {
 									<Image
 										src={prizes[1].image}
 										alt={prizes[1].imageAlt}
-										className="h-28 w-auto object-contain drop-shadow-xl"
+										className="h-40 w-auto object-contain drop-shadow-xl"
 									/>
 								</div>
 

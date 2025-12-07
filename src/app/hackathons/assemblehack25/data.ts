@@ -69,7 +69,7 @@ const DATA = {
 		{
 			name: "Oumi",
 			description:
-				"An open-source agent framework that brings memory, reasoning, and tool-use to life. Build intelligent agents powered by your favorite open-source models.",
+				"The most comprehensive repository for end-to-end research and development with LLMs and VLMs; pretraining, post training (SFT and RL with FFT or LoRA), evaluations, data synthesis and more. Build custom AI models and agents to improve quality and reduce latency/costs for your applications or research.",
 			logo: images.oumiLogo,
 			url: "https://oumi.ai",
 		},
