@@ -102,9 +102,8 @@ const AboutSection = () => {
 							</div>
 							<p className="text-slate-200 font-mono">
 								Compete for cash rewards, exclusive Motia swag,
-								Google Summer of Code mentorship, and job
-								interview opportunities. Top 3 winners share
-								$3,000+.
+								and Google Summer of Code mentorship. Top 3
+								winners share $3,000+.
 							</p>
 						</div>
 					</div>

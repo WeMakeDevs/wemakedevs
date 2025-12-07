@@ -90,9 +90,6 @@ const PrizesShowcase = () => {
 									<span className="bg-green-500/20 backdrop-blur-sm px-4 py-2 rounded-[6px] font-medium border border-green-400/50 text-green-100 font-mono shadow-[0_0_10px_rgba(0,255,65,0.2)]">
 										Google Summer of Code mentorship
 									</span>
-									<span className="bg-green-500/20 backdrop-blur-sm px-4 py-2 rounded-[6px] font-medium border border-green-400/50 text-green-100 font-mono shadow-[0_0_10px_rgba(0,255,65,0.2)]">
-										Job interviews at Motia for top projects
-									</span>
 								</div>
 							</div>
 						</div>
