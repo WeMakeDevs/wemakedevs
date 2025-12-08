@@ -30,8 +30,9 @@ const AboutSection = () => {
 							<span className="text-green-400">&gt;</span> Join
 							Backend Reloaded Hackathon to build next-generation
 							backends that are simpler, faster, and
-							production-ready from the start. Win cash prizes,
-							exclusive swag, and mentorship opportunities.
+							production-ready from the start. Win cash or gift
+							card prizes, exclusive swag, and mentorship
+							opportunities.
 						</p>
 						<p className="text-lg md:text-xl text-slate-200 leading-relaxed font-mono">
 							<span className="text-green-400">&gt;</span> It's
@@ -101,9 +102,9 @@ const AboutSection = () => {
 								</div>
 							</div>
 							<p className="text-slate-200 font-mono">
-								Compete for cash rewards, exclusive Motia swag,
-								and Google Summer of Code mentorship. Top 3
-								winners share $3,000+.
+								Compete for cash or gift card rewards, exclusive
+								Motia swag, and Google Summer of Code
+								mentorship. Top 3 winners share $3,000+.
 							</p>
 						</div>
 					</div>

@@ -77,7 +77,7 @@ const navLinks = [
 const faqs: FaqType[] = [
 	{
 		question: "Eligibility criteria to participate in this hackathon?",
-		answer: "You should be above 16 years of age and should abide by the rule of WeMakeDevs hackathons. Teams can have anywhere from 1 to 4 people in them.",
+		answer: "You should be 18 years of age or older (or have reached the age of majority in your country) and should abide by the rules of WeMakeDevs hackathons. Teams can have anywhere from 1 to 4 people in them.",
 	},
 	{
 		question: "Can I use existing or previously made projects?",
