@@ -106,6 +106,11 @@ const navLinks = [
 		label: "Resources",
 		page: "resources",
 	},
+	{
+		href: `/hackathons/${DATA.slug}/schedule`,
+		label: "Schedule",
+		page: "schedule",
+	},
 ];
 
 const faqs: FaqType[] = [
@@ -147,4 +152,110 @@ const faqs: FaqType[] = [
 	},
 ];
 
-export { DATA, navLinks, faqs };
+const schedule = [
+	{
+		date: "2025-12-08T00:00:00+05:30",
+		items: [
+			{
+				title: "Hacking starts",
+				time: "2025-12-08T08:00:00+05:30",
+			},
+			{
+				title: "Build Your Own AI Code Review Bot with Cline CLI",
+				time: "2025-12-08T21:30:00+05:30",
+				links: [
+					{
+						platform: "youtube",
+						url: "https://www.youtube.com/live/uFXUniSm7HM?si=b7wVpRDsDYg3nekQ",
+					},
+				],
+			},
+		],
+	},
+	{
+		date: "2025-12-09T00:00:00+05:30",
+		items: [
+			{
+				title: "Build Agentic Workflows with Kestra",
+				time: "2025-12-09T21:30:00+05:30",
+				links: [
+					{
+						platform: "youtube",
+						url: "https://www.youtube.com/live/cO_xW_6BYiI?si=q53DyJnKAumAWZM_",
+					},
+				],
+			},
+		],
+	},
+	{
+		date: "2025-12-10T00:00:00+05:30",
+		items: [
+			{
+				title: "The Anatomy of an LLM Agent: Tools, Memory and Long-Horizon Execution",
+				time: "2025-12-10T21:30:00+05:30",
+				links: [
+					{
+						platform: "youtube",
+						url: "https://www.youtube.com/live/cJApk_sMC1w?si=nBHI4DCqQAC1xDpw",
+					},
+				],
+			},
+		],
+	},
+	{
+		date: "2025-12-11T00:00:00+05:30",
+		items: [
+			{
+				title: "Build custom AI in hour not months with Oumi",
+				time: "2025-12-11T21:30:00+05:30",
+				links: [
+					{
+						platform: "youtube",
+						url: "https://www.youtube.com/live/6wPikqRZ7bQ?si=HAGcvVNRaR1Jx0DD",
+					},
+				],
+			},
+		],
+	},
+	{
+		date: "2025-12-12T00:00:00+05:30",
+		items: [
+			{
+				title: "Getting started with CodeRabbit",
+				time: "2025-12-12T21:30:00+05:30",
+				links: [
+					{
+						platform: "youtube",
+						url: "https://www.youtube.com/live/oSspi49RaX0?si=goydboZ4xFpmQFW0",
+					},
+				],
+			},
+		],
+	},
+	{
+		date: "2025-12-13T00:00:00+05:30",
+		items: [
+			{
+				title: "Google Summer of Code mentorship",
+				time: "2025-12-13T15:30:00+05:30",
+				links: [
+					{
+						platform: "youtube",
+						url: "https://www.youtube.com/live/4vLlCgxNzTE?si=IFekPymmxk6bD8yi",
+					},
+				],
+			},
+		],
+	},
+	{
+		date: "2025-12-15T00:00:00+05:30",
+		items: [
+			{
+				title: "Hacking ends",
+				time: "2025-12-15T20:00:00+05:30",
+			},
+		],
+	},
+];
+
+export { DATA, navLinks, faqs, schedule };
