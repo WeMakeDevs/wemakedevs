@@ -66,7 +66,7 @@ const partnersData: PartnerData[] = [
 		logo: kestraLogo,
 		author: "Emmanuel Darras",
 		name: "Kestra",
-		quote: "🌟 Huge thanks to Kunal Kushwaha and the amazing team at WeMakeDevs for organizing the very first Hackathon around Kestra! With over 2,000 participants worldwide, it was an incredible success and a true honor to see brilliant developers using Kestra to create innovative projects. 🙌",
+		quote: "Kestra officially hit 25,000 GitHub stars today… and we are celebrating in a big way! 🎉 The energy this week has been unbelievable. A massive new wave of developers discovered Kestra and jumped in to build agentic and event driven orchestration. The momentum is skyrocketing. 🚀",
 	},
 	{
 		image: kodecloudAuthor,
