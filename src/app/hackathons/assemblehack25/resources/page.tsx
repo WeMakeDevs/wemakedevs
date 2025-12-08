@@ -146,6 +146,16 @@ const HackathonResources = async () => {
 										Kestra Tutorial Videos
 									</Link>
 								</li>
+								<li>
+									<Link
+										href="https://github.com/wrussell1999/kestra-examples/tree/main/ai-workflows"
+										className="text-blue-600 underline hover:no-underline"
+										target="_blank"
+										rel="noopener noreferrer"
+									>
+										Kestra AI Workflows
+									</Link>
+								</li>
 							</ul>
 						</div>
 
