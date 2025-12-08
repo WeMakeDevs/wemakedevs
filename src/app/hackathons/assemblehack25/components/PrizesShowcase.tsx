@@ -75,8 +75,10 @@ const PrizesShowcase = () => {
 							Prizes
 						</span>
 					</h2>
-					<p className="text-lg text-gray-600 max-w-2xl mx-auto">
-						Every winner will receive swag + job interviews
+					<p className="text-lg text-gray-600 max-w-2xl mx-auto text-balance">
+						Every winner will receive swag + job interviews.
+						Everyone who submits a project will receive a
+						certificate.
 					</p>
 				</div>
 

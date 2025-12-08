@@ -137,6 +137,14 @@ const faqs: FaqType[] = [
 		question: "Can I participate solo or in a team?",
 		answer: 'You can join solo or form a team of up to 4 people. If you need teammates, you can find others in the <a href="https://discord.gg/wemakedevs" target="_blank" rel="noopener noreferrer" class="font-bold text-indigo-600 hover:text-indigo-700 underline underline-offset-2">Discord community</a>.',
 	},
+	{
+		question: "What is the problem statement or theme of the hackathon?",
+		answer: "The theme is open ended, you can build whatever you want. If you want to win prizes, make sure to utilize the sponsor tools and check out the rules section.",
+	},
+	{
+		question: "Will we get certificates?",
+		answer: "Yes, everyone who submits a project will receive a certificate.",
+	},
 ];
 
 export { DATA, navLinks, faqs };
