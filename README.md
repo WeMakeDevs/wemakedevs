@@ -54,4 +54,4 @@ This guide shows a step-by-step process on adding a new hackathon.
 - `<slug>-thumbnail.jpg`: Thumbnail image of the hackathon. It should be of 1280 x 853 px dimension.
 - `<slug>-cover.png`: Banner image of the hackathon. It should be of 1200 x 160 px dimension.
 
-That's it! You have successfully added a new hackathon. 🎉
+That's it! You have successfully added a new hackathon.
