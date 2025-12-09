@@ -87,9 +87,10 @@ const AboutSection = () => {
 								<span className="font-bold">
 									Cline, Kestra, Vercel, Oumi, and CodeRabbit
 								</span>{" "}
-								to build powerful AI agent systems. Each tool is
-								like an Infinity Stone - powerful alone,
-								unstoppable together.
+								to build powerful AI agent systems. Use multiple
+								sponsor tools in your project to increase your
+								chances of winning by submitting to multiple
+								tracks!
 							</p>
 						</div>
 
