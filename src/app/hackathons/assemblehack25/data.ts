@@ -115,6 +115,10 @@ const navLinks = [
 
 const faqs: FaqType[] = [
 	{
+		question: "Can I use multiple sponsor tools and apply to multiple categories?",
+		answer: "Yes. That is also encouraged to increasse your chances of winning. You can use any or all the sponsor tools and apply for all the prize tracks.",
+	},
+	{
 		question: "I'm a beginner. Can I take part?",
 		answer: "Yes. Beginners are absolutely welcome. You don't need prior experience with agents, just curiosity and willingness to learn.",
 	},
