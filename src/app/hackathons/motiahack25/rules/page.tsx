@@ -67,6 +67,15 @@ const HackathonRules = async () => {
 							concerning, notify an organizer immediately.
 						</li>
 						<li>
+							Due to legal restrictions, residents or
+							organizations from the following locations are
+							ineligible to participate or receive prizes in the
+							Hackathon: Russia, Crimea, Cuba, Iran, North Korea,
+							Syria, or any other country or area prohibited by
+							the United States or United States Treasury's Office
+							of Foreign Assets Control.
+						</li>
+						<li>
 							Failure to follow these rules or the Code of Conduct
 							may result in disqualification.
 						</li>
