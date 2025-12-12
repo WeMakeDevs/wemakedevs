@@ -115,7 +115,8 @@ const navLinks = [
 
 const faqs: FaqType[] = [
 	{
-		question: "Can I use multiple sponsor tools and apply to multiple categories?",
+		question:
+			"Can I use multiple sponsor tools and apply to multiple categories?",
 		answer: "Yes. That is also encouraged to increasse your chances of winning. You can use any or all the sponsor tools and apply for all the prize tracks.",
 	},
 	{
@@ -252,11 +253,19 @@ const schedule = [
 		],
 	},
 	{
-		date: "2025-12-15T00:00:00+05:30",
+		date: "2025-12-14T00:00:00+05:30",
 		items: [
 			{
 				title: "Hacking ends",
-				time: "2025-12-15T20:00:00+05:30",
+				time: "2025-12-14T20:00:00+05:30",
+			},
+		],
+	},
+	{
+		date: "2025-12-15T00:00:00+05:30",
+		items: [
+			{
+				title: "Winners will be announced within a week",
 			},
 		],
 	},
