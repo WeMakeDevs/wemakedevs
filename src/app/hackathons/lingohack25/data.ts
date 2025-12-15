@@ -61,6 +61,11 @@ const navLinks = [
 		label: "Schedule",
 		page: "schedule",
 	},
+	{
+		href: `/hackathons/${DATA.slug}/projects`,
+		label: "Projects",
+		page: "projects",
+	},
 ];
 
 const faqs: FaqType[] = [
