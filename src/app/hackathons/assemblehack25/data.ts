@@ -220,6 +220,16 @@ const schedule = [
 					},
 				],
 			},
+			{
+				title: "Deploying Your First App on Vercel",
+				time: "2025-12-11T22:30:00+05:30",
+				links: [
+					{
+						platform: "youtube",
+						url: "https://www.youtube.com/live/Oiv4ntCc0gM",
+					},
+				],
+			},
 		],
 	},
 	{
