@@ -85,7 +85,7 @@ const faqs: FaqType[] = [
 	},
 	{
 		question: "How can I submit my project?",
-		answer: "Join our <a href='https://discord.gg/wemakedevs' target='_blank' rel='noopener noreferrer' class='text-green-400 underline hover:no-underline'>Discord</a> server for all the updates and announcements regarding the hackathon.",
+		answer: "Join our <a href='https://discord.com/invite/motia' target='_blank' rel='noopener noreferrer' class='text-green-400 underline hover:no-underline'>Discord</a> server for all the updates and announcements regarding the hackathon.",
 	},
 	{
 		question: "I am a beginner in tech, can I still participate?",
@@ -97,7 +97,7 @@ const faqs: FaqType[] = [
 	},
 	{
 		question: "Where can I connect for other queries?",
-		answer: "For any hackathon related queries, please raise a ticket on our <a href='https://discord.gg/wemakedevs' target='_blank' rel='noopener noreferrer' class='text-green-400 underline hover:no-underline'>Discord</a> server.",
+		answer: "For any hackathon related queries, please raise a ticket on our <a href='https://discord.com/invite/motia' target='_blank' rel='noopener noreferrer' class='text-green-400 underline hover:no-underline'>Discord</a> server.",
 	},
 ];
 

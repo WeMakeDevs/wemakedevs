@@ -31,12 +31,12 @@ const HackathonResources = async () => {
 						<li>
 							Join our Discord for updates and support:{" "}
 							<Link
-								href="https://discord.gg/wemakedevs"
+								href="https://discord.com/invite/motia"
 								className={accentLink}
 								target="_blank"
 								rel="noopener noreferrer"
 							>
-								https://discord.gg/wemakedevs
+								https://discord.com/invite/motia
 							</Link>
 						</li>
 						<li>
