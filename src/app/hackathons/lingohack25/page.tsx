@@ -2,6 +2,7 @@ import Faq from "@/components/Faq";
 import {
 	HackathonContentBody,
 	HackathonContentTitle,
+	HackathonContentTitleH3,
 	HackathonCoverImage,
 	HackathonNav,
 } from "@/components/hackathon-content";
@@ -14,6 +15,9 @@ import Link from "next/link";
 import AboutSection from "./components/AboutSection";
 import HackathonHeader from "./components/Header";
 import PrizesShowcase from "./components/PrizesShowcase";
+import LingohackSpecialTestimonial from "./components/SpecialTestimonial";
+import LingohackStats from "./components/Stats";
+import LingohackTestimonials from "./components/Testimonials";
 import { DATA, faqs, navLinks } from "./data";
 import { images } from "./images";
 
@@ -41,6 +45,32 @@ const HackathonPage = () => {
 					prize={DATA.prize}
 					cta={DATA.cta}
 				/>
+				<ViewContainer className="mt-10">
+					<HackathonContentTitle>
+						About The Multilingual Hackathon
+					</HackathonContentTitle>
+					<HackathonContentBody>
+						The Multilingual Hackathon was a global online event
+						that brought together developers, researchers, and
+						creators from around the world. It provided a hands-on
+						platform to build innovative multilingual AI projects
+						while learning from workshops, connecting with peers,
+						and participating in community-driven collaboration.
+						Participants worked across different experience levels,
+						explored cutting-edge language technologies, and
+						contributed to the growing open-source ecosystem through
+						impactful projects.
+					</HackathonContentBody>
+					<HackathonContentTitle className="mt-10">
+						Multilingual Hackathon 2025 Stats
+					</HackathonContentTitle>
+					<LingohackStats />
+					<LingohackSpecialTestimonial />
+					<HackathonContentTitleH3 className="mt-4">
+						Participants testimonials
+					</HackathonContentTitleH3>
+				</ViewContainer>
+				<LingohackTestimonials />
 				<AboutSection />
 			</div>
 			<div id="prizes" className="scroll-mt-16">
