@@ -113,6 +113,12 @@ const schedule = [
 				title: "One-shot full-stack apps with Motia and Cursor in minutes",
 				time: "2025-12-15T21:30:00+05:30",
 				description: "Live stream - How to build with Motia",
+				links: [
+					{
+						platform: "youtube",
+						url: "https://www.youtube.com/live/9HfvdxVxpmY",
+					},
+				],
 			},
 		],
 	},
