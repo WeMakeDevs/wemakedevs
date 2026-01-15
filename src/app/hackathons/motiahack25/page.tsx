@@ -1,6 +1,7 @@
 import {
 	HackathonContentBody,
 	HackathonContentTitle,
+	HackathonContentTitleH3,
 	HackathonCoverImage,
 } from "@/components/hackathon-content";
 import { ViewContainer } from "@/components/ui/view-container";
@@ -11,6 +12,8 @@ import AboutSection from "./components/AboutSection";
 import FaqSection from "./components/FaqSection";
 import HackathonHeader from "./components/Header";
 import PrizesShowcase from "./components/PrizesShowcase";
+import MotiaSpecialTestimonial from "./components/SpecialTestimonial";
+import MotiaTestimonials from "./components/Testimonials";
 import SecondaryNavbar from "./components/navbars/SecondaryNavbar";
 import { DATA, faqs, navLinks } from "./data";
 import { images } from "./images";
@@ -36,6 +39,16 @@ const HackathonPage = () => {
 					cta={DATA.cta}
 				/>
 				<AboutSection />
+				<ViewContainer className="mt-10">
+					<MotiaSpecialTestimonial />
+					<HackathonContentTitleH3 className="mt-4 text-slate-100 font-mono">
+						<span className="text-green-400">&gt;</span>{" "}
+						<span className="text-slate-100">
+							Participants testimonials
+						</span>
+					</HackathonContentTitleH3>
+				</ViewContainer>
+				<MotiaTestimonials />
 			</div>
 			<div id="prizes" className="scroll-mt-16">
 				<PrizesShowcase />
