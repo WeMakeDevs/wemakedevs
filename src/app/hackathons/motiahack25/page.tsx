@@ -38,9 +38,11 @@ const HackathonPage = () => {
 					showDate={DATA.showDate}
 					cta={DATA.cta}
 				/>
-				<AboutSection />
 				<ViewContainer className="mt-10">
 					<MotiaSpecialTestimonial />
+				</ViewContainer>
+				<AboutSection />
+				<ViewContainer className="mt-10">
 					<HackathonContentTitleH3 className="mt-4 text-slate-100 font-mono">
 						<span className="text-green-400">&gt;</span>{" "}
 						<span className="text-slate-100">
