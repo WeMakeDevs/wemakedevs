@@ -32,7 +32,7 @@ export default function Home() {
 			<Partners />
 			<Footer />
 
-			<Banner className="flex items-center text-base md:text-lg font-medium">
+			{/* <Banner className="flex items-center text-base md:text-lg font-medium">
 				<div className="flex flex-col md:flex-row items-center justify-center">
 					<span className="text-white">
 						Backend Reloaded Hackathon is live! $3000+ in cash
@@ -50,7 +50,7 @@ export default function Home() {
 						Register Now!
 					</Link>
 				</div>
-			</Banner>
+			</Banner> */}
 		</div>
 	);
 }
