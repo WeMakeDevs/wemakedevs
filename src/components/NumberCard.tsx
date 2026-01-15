@@ -8,6 +8,7 @@ const NumberCard = ({
 	number,
 	icon: Icon,
 	color,
+	prefix,
 	className,
 	...props
 }: NumbersShowcaseCardType) => {
@@ -27,6 +28,7 @@ const NumberCard = ({
 			<div className="mt-6 md:mt-12 group-hover:-translate-y-4 transition-transform">
 				<h3 className="font-body font-medium relative z-10">{name}</h3>
 				<p className="relative text-4xl md:text-5xl lg:text-4xl xl:text-5xl font-title font-medium mt-3 z-10">
+					{prefix && <span>{prefix}</span>}
 					<CountUp end={number} start={0} suffix="+" enableScrollSpy>
 						{({ countUpRef }) => <span ref={countUpRef} />}
 					</CountUp>

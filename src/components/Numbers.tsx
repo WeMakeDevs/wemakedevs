@@ -9,15 +9,16 @@ const Numbers = ({ className, ...props }: GeneralComponent) => {
 	const numbers: numbersType = [
 		{
 			name: "Community of",
-			number: 200000,
+			number: 100000,
 			icon: Users,
 			color: "accent-1",
 		},
 		{
 			name: "Prizes in $ worth",
-			number: 100000,
+			number: 200000,
 			icon: CircleDollarSign,
 			color: "accent-2",
+			prefix: "$",
 		},
 		{
 			name: "Partners",
