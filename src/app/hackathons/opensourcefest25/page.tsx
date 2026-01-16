@@ -3,6 +3,7 @@ import {
 	HackathonCoverImage,
 	HackathonNav,
 } from "@/components/hackathon-content";
+import ContributorStories from "./components/ContributorStories";
 import HackathonHeader from "./components/Header";
 import IntroSection from "./components/IntroSection";
 import PrizesSection from "./components/PrizesSection";
@@ -52,6 +53,9 @@ const HackathonPage = () => {
 			</div>
 			<div id="tips" className="scroll-mt-16">
 				<TipsSection />
+			</div>
+			<div id="contributor-stories" className="scroll-mt-16">
+				<ContributorStories />
 			</div>
 			<div id="register" className="scroll-mt-16">
 				<Register />
