@@ -13,10 +13,10 @@ const DATA = {
 	slug: "opensourcefest25",
 	images,
 	cta: {
-		label: "Register Now",
-		href: "#",
+		label: "Contributor Stories",
+		href: "#contributor-stories",
 		openInNewTab: false,
-		disabled: true,
+		disabled: false,
 	},
 	prizes: {
 		winning: [
