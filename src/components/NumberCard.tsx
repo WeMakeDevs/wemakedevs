@@ -38,7 +38,5 @@ const NumberCard = ({
 		</div>
 	);
 };
-<｜tool▁call▁begin｜>
-read_lints
 
 export default NumberCard;
