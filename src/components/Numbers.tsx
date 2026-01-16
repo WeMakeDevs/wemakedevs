@@ -14,11 +14,12 @@ const Numbers = ({ className, ...props }: GeneralComponent) => {
 			color: "accent-1",
 		},
 		{
-			name: "Prizes in $ worth",
-			number: 200000,
+			name: "Prizes",
+			number: 200,
 			icon: CircleDollarSign,
 			color: "accent-2",
 			prefix: "$",
+			suffix: "k+",
 		},
 		{
 			name: "Partners",

@@ -14,9 +14,10 @@ const DATA = {
 	slug: "motiahack25",
 	images,
 	cta: {
-		label: "Register Now",
-		href: "https://forms.gle/yB1LZFJhuuSKupdu6",
-		openInNewTab: true,
+		label: "Projects",
+		href: "#",
+		openInNewTab: false,
+		disabled: true,
 	},
 	prizes: {
 		winning: [

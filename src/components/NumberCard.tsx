@@ -9,6 +9,7 @@ const NumberCard = ({
 	icon: Icon,
 	color,
 	prefix,
+	suffix,
 	className,
 	...props
 }: NumbersShowcaseCardType) => {
@@ -29,7 +30,7 @@ const NumberCard = ({
 				<h3 className="font-body font-medium relative z-10">{name}</h3>
 				<p className="relative text-4xl md:text-5xl lg:text-4xl xl:text-5xl font-title font-medium mt-3 z-10 break-words overflow-wrap-anywhere">
 					{prefix && <span>{prefix}</span>}
-					<CountUp end={number} start={0} suffix="+" enableScrollSpy>
+					<CountUp end={number} start={0} suffix={suffix || "+"} enableScrollSpy>
 						{({ countUpRef }) => <span ref={countUpRef} />}
 					</CountUp>
 				</p>
@@ -37,5 +38,7 @@ const NumberCard = ({
 		</div>
 	);
 };
+<｜tool▁call▁begin｜>
+read_lints
 
 export default NumberCard;

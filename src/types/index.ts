@@ -15,6 +15,7 @@ export type numbersType = {
 	icon: IconType;
 	color: string;
 	prefix?: string;
+	suffix?: string;
 }[];
 
 export interface GeneralComponent extends React.HTMLAttributes<HTMLDivElement> {
@@ -220,6 +221,7 @@ export type NumbersShowcaseType = {
 	icon: IconType;
 	color: string;
 	prefix?: string;
+	suffix?: string;
 };
 
 export type NumbersShowcaseCardType = GeneralComponent & NumbersShowcaseType;

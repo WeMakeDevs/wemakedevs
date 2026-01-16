@@ -13,6 +13,7 @@ import FaqSection from "./components/FaqSection";
 import HackathonHeader from "./components/Header";
 import PrizesShowcase from "./components/PrizesShowcase";
 import MotiaSpecialTestimonial from "./components/SpecialTestimonial";
+import MotiaStats from "./components/Stats";
 import MotiaTestimonials from "./components/Testimonials";
 import SecondaryNavbar from "./components/navbars/SecondaryNavbar";
 import { DATA, faqs, navLinks } from "./data";
@@ -39,10 +40,14 @@ const HackathonPage = () => {
 					cta={DATA.cta}
 				/>
 				<ViewContainer className="mt-10">
+					<HackathonContentTitle className="text-slate-100 font-mono [&>h2]:text-slate-100">
+						<span className="text-green-400">&gt;</span>{" "}
+						<span className="text-slate-100">
+							Backend Reloaded 2025 Stats
+						</span>
+					</HackathonContentTitle>
+					<MotiaStats />
 					<MotiaSpecialTestimonial />
-				</ViewContainer>
-				<AboutSection />
-				<ViewContainer className="mt-10">
 					<HackathonContentTitleH3 className="mt-4 text-slate-100 font-mono">
 						<span className="text-green-400">&gt;</span>{" "}
 						<span className="text-slate-100">
@@ -51,6 +56,7 @@ const HackathonPage = () => {
 					</HackathonContentTitleH3>
 				</ViewContainer>
 				<MotiaTestimonials />
+				<AboutSection />
 			</div>
 			<div id="prizes" className="scroll-mt-16">
 				<PrizesShowcase />
