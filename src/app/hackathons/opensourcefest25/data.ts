@@ -44,11 +44,6 @@ const navLinks = [
 		label: "Resources",
 		page: "resources",
 	},
-	{
-		href: `/hackathons/${DATA.slug}/contributors`,
-		label: "Contributor Stories",
-		page: "contributors",
-	},
 	// {
 	// 	href: `/hackathons/${DATA.slug}/schedule`,
 	// 	label: "Schedule",
