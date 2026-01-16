@@ -17,7 +17,7 @@ const ContributorCard = ({ contributor, className }: ContributorCardProps) => {
 	return (
 		<div
 			className={cn(
-				"flex flex-col gap-6 p-6 md:p-8 rounded-xl sm:max-w-[400px] md:max-w-[500px] mx-auto h-full bg-white shadow-lg border border-gray-200 hover:shadow-xl transition-shadow",
+				"flex flex-col gap-6 p-6 md:p-8 rounded-xl h-full bg-white shadow-lg border border-gray-200 hover:shadow-xl transition-shadow",
 				className,
 			)}
 		>

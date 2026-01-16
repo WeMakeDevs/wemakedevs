@@ -14,7 +14,7 @@ const DATA = {
 	images,
 	cta: {
 		label: "Contributor Stories",
-		href: "#contributor-stories",
+		href: "/hackathons/opensourcefest25/contributors",
 		openInNewTab: false,
 		disabled: false,
 	},
@@ -43,6 +43,11 @@ const navLinks = [
 		href: `/hackathons/${DATA.slug}/resources`,
 		label: "Resources",
 		page: "resources",
+	},
+	{
+		href: `/hackathons/${DATA.slug}/contributors`,
+		label: "Contributor Stories",
+		page: "contributors",
 	},
 	// {
 	// 	href: `/hackathons/${DATA.slug}/schedule`,
