@@ -39,7 +39,7 @@ const HackathonWinningProjectCardWithVideo = ({
 	return (
 		<div
 			className={cn(
-				"p-4 rounded border-2 border-accent-4 hover:bg-accent-4/10 transition-colors h-full flex flex-col",
+				"p-4 rounded border-2 border-green-500/20 hover:bg-green-500/10 transition-colors h-full flex flex-col bg-[#0a0f11]/80",
 				className,
 			)}
 		>
@@ -57,12 +57,12 @@ const HackathonWinningProjectCardWithVideo = ({
 			</div>
 
 			<div className="flex flex-col flex-grow">
-				<h3 className="text-lg mb-2 font-semibold">
+				<h3 className="text-lg mb-2 font-semibold text-slate-100">
 					{projectTitle} - {isSolo ? teamName : `Team ${teamName}`}
 				</h3>
 
 				<div className="flex flex-col justify-between flex-grow">
-					<p className="line-clamp-2 mb-4">{description}</p>
+					<p className="line-clamp-2 mb-4 text-slate-200">{description}</p>
 
 					{/* Prize Badge */}
 					<div className="flex items-center justify-between mt-auto">

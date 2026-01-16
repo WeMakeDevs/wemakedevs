@@ -15,9 +15,9 @@ const DATA = {
 	images,
 	cta: {
 		label: "Projects",
-		href: "#",
+		href: "/hackathons/motiahack25/projects",
 		openInNewTab: false,
-		disabled: true,
+		disabled: false,
 	},
 	prizes: {
 		winning: [

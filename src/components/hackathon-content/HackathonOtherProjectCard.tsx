@@ -15,7 +15,7 @@ const HackathonOtherProjectCard = ({
 			target="_blank"
 			rel="noopener noreferrer"
 			className={cn(
-				"flex items-center gap-3 group no-underline hover:underline font-medium px-4 py-2 rounded-lg border-2 border-accent-4 hover:bg-accent-4/10 transition-all",
+				"flex items-center gap-3 group no-underline hover:underline font-medium px-4 py-2 rounded-lg border-2 border-green-500/20 hover:bg-green-500/10 transition-all text-slate-100 bg-[#0a0f11]/80",
 			)}
 		>
 			<span className="grow">
