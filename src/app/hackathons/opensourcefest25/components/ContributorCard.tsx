@@ -11,9 +11,6 @@ interface ContributorCardProps {
 }
 
 const ContributorCard = ({ contributor, className }: ContributorCardProps) => {
-	// Generate initials for avatar
-	const initials = `${contributor.firstName[0]}${contributor.lastName[0]}`.toUpperCase();
-
 	return (
 		<div
 			className={cn(
@@ -30,18 +27,9 @@ const ContributorCard = ({ contributor, className }: ContributorCardProps) => {
 				{contributor.quote}
 			</p>
 			<div className="flex justify-between items-center pt-4 border-t border-gray-200">
-				<div className="flex gap-4 items-center">
-					{/* Avatar with initials */}
-					<div className="w-12 h-12 rounded-full bg-gradient-to-br from-indigo-500 to-blue-600 flex items-center justify-center text-white font-semibold text-lg">
-						{initials}
-					</div>
-					<div className="flex flex-col">
-						<span className="font-title font-semibold text-base md:text-lg text-gray-900">
-							{contributor.fullName}
-						</span>
-						<span className="text-sm text-gray-500">Contributor</span>
-					</div>
-				</div>
+				<span className="font-title font-semibold text-base md:text-lg text-gray-900">
+					{contributor.fullName}
+				</span>
 				<Link
 					href={contributor.blogLink}
 					target="_blank"

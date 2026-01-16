@@ -30,7 +30,8 @@ const ContributorStoriesPage = async () => {
 					Contributor Stories
 				</HackathonContentTitle>
 				<p className="text-lg text-gray-600 max-w-2xl mt-2 mb-8">
-					Hear from developers who made meaningful contributions to Kestra during the Open Source Fest
+					Hear from developers who made meaningful contributions to Kestra during the{" "}
+					<span className="whitespace-nowrap">Open Source Fest</span>
 				</p>
 				<div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 mt-4 md:mt-8">
 					{contributors.map((contributor, index) => (
