@@ -14,8 +14,9 @@ const DATA = {
 	images,
 	cta: {
 		label: "Register Now",
-		href: "https://forms.gle/z6mpzvh9mVjrazqa7",
-		openInNewTab: true,
+		href: "#",
+		openInNewTab: false,
+		disabled: true,
 	},
 	prizes: {
 		winning: [

@@ -16,6 +16,7 @@ type HackathonHeaderProps = {
 	cta: {
 		label: string;
 		href: string;
+		disabled?: boolean;
 	};
 };
 
@@ -43,19 +44,21 @@ const HackathonHeader = ({
 						<p className="text-base md:text-lg text-foreground/90 font-medium leading-snug mt-4 tracking-wide">
 							{description}
 						</p>
-						<div className="flex items-center gap-4">
-							<Link
-								href={cta.href}
-								className={cn(
-									buttonVariants({ variant: "default" }),
-									"mt-4 md:mt-6",
-								)}
-								target="_blank"
-								rel="noopener noreferrer"
-							>
-								{cta.label}
-							</Link>
-						</div>
+						{!cta.disabled && (
+							<div className="flex items-center gap-4">
+								<Link
+									href={cta.href}
+									className={cn(
+										buttonVariants({ variant: "default" }),
+										"mt-4 md:mt-6",
+									)}
+									target="_blank"
+									rel="noopener noreferrer"
+								>
+									{cta.label}
+								</Link>
+							</div>
+						)}
 					</div>
 					<div className="flex justify-center items-center">
 						<div className="bg-white/50 shadow-md rounded-xl p-4 md:p-6 h-fit w-full">

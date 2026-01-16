@@ -25,6 +25,7 @@ const HackathonPage = () => {
 					label: DATA.cta.label,
 					href: DATA.cta.href,
 					openInNewTab: DATA.cta.openInNewTab,
+					disabled: DATA.cta.disabled,
 				}}
 			/>
 			<div id="about" className="scroll-mt-16">

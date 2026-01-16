@@ -62,29 +62,22 @@ const Register = () => {
 
 						{/* Action Buttons */}
 						<div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 mb-6 md:mb-8">
-							{/* Register Button */}
-							<Link
-								href="https://forms.gle/z6mpzvh9mVjrazqa7"
-								target="_blank"
-								rel="noopener noreferrer"
-								className="group relative bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl md:rounded-2xl p-5 md:p-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105"
-							>
+							{/* Register Button - Disabled */}
+							<div className="group relative bg-gray-400 text-white rounded-xl md:rounded-2xl p-5 md:p-6 shadow-xl cursor-not-allowed opacity-60">
 								<div className="flex items-center justify-between gap-3">
 									<div className="flex-1 min-w-0">
 										<h3 className="text-lg md:text-xl font-bold mb-1 md:mb-2 text-white">
 											Register Now
 										</h3>
 										<p className="text-white/90 text-xs md:text-sm">
-											Secure your spot in the fest
+											Registration closed
 										</p>
 									</div>
-									<div className="bg-white/20 rounded-full p-2 md:p-3 group-hover:bg-white/30 transition-colors flex-shrink-0">
+									<div className="bg-white/20 rounded-full p-2 md:p-3 flex-shrink-0">
 										<ArrowRight className="w-5 h-5 md:w-6 md:h-6" />
 									</div>
 								</div>
-								{/* Shine effect */}
-								<div className="absolute inset-0 rounded-xl md:rounded-2xl bg-gradient-to-r from-transparent via-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 -skew-x-12 translate-x-[-200%] group-hover:translate-x-[200%]" />
-							</Link>
+							</div>
 
 							{/* Slack Community Button */}
 							<Link
