@@ -117,6 +117,30 @@ const topProjects = [
 		githubLink: "https://github.com/dhyaneesh/motia-hack/tree/bra",
 		youtubeEmbed: "https://www.youtube.com/embed/bvR50GmWMm4",
 	},
+	{
+		teamName: "Spandan Mukherjee",
+		projectTitle: "MDWR",
+		description:
+			"MDWR combines workflow orchestration with operational decision memory to create workflows that: Remember every decision and why it was made, Explain decisions automatically (compile-time enforced), Learn from past decisions and outcomes, Replay with different policies or memory-informed insights.",
+		githubLink: "https://github.com/RSN601KRI/Motia-Atlas",
+		youtubeEmbed: "https://www.youtube.com/embed/atJtl5c3HJg",
+	},
+	{
+		teamName: "Aryan Kumar",
+		projectTitle: "OmniReel",
+		description:
+			"OmniReel is an AI-powered video generation platform that transforms any topic into professional short-form videos in minutes. It automates the entire pipeline: script writing, voice synthesis, visual generation, caption syncing, music selection, and FFmpeg composition with a python step, in one click. The problem: Creators spend 6+ hours making a 60-second reel using multiple expensive tools. OmniReel does it all automatically. Bonus: The Gemini Logo Remover removes watermarks from AI images. Complete standalone product on the same architecture. Built solo in 5 days. Production-ready with auth, payments, subscriptions, and automatic refunds.",
+		githubLink: "https://github.com/aryan877/omnireel",
+		youtubeEmbed: "https://airy-concrete-c02.notion.site/YOUTUBE-DEMO-FOR-OMNIREEL-2d0d0ba6020f8055889cfb99ab50b1c9?pvs=73",
+	},
+	{
+		teamName: "Sridhar Sing",
+		projectTitle: "VerbaLens",
+		description:
+			"VerbaLens is an AI-powered communication coaching platform that helps users master their speaking skills. Users can record voice responses on various topics and receive instant AI feedback on clarity, confidence, and filler word usage. Built with a Motia backend (Node.js/TypeScript) and Next.js frontend, it leverages Google Gemini AI for intelligent speech analysis and PostgreSQL for data persistence.",
+		githubLink: "https://github.com/sydshelf75/VerbaLens_backend",
+		youtubeEmbed: "https://www.youtube.com/embed/jElt8hacFz0",
+	},
 ];
 
 const otherProjects = [
