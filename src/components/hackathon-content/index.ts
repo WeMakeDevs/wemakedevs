@@ -4,6 +4,7 @@ import HackathonContentTitleH3 from "./HackathonContentTitleH3";
 import HackathonCoverImage from "./HackathonCoverImage";
 import HackathonDate from "./HackathonDate";
 import HackathonNav from "./HackathonNav";
+import HackathonOtherProjectCard from "./HackathonOtherProjectCard";
 import HackathonProjectCard from "./HackathonProjectCard";
 import HackathonProjectCardWithVideo from "./HackathonProjectCardWithVideo";
 import HackathonScheduleComponent from "./HackathonScheduleComponent";
@@ -20,6 +21,7 @@ export {
 	HackathonScheduleComponent,
 	HackathonProjectCard,
 	HackathonProjectCardWithVideo,
+	HackathonOtherProjectCard,
 	HackathonWinningProjectCard,
 	HackathonWinningProjectCardWithVideo,
 };
