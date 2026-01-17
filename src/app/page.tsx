@@ -32,14 +32,14 @@ export default function Home() {
 			<Partners />
 			<Footer />
 
-			{/* <Banner className="flex items-center text-base md:text-lg font-medium">
+			<Banner className="flex items-center text-base md:text-lg font-medium">
 				<div className="flex flex-col md:flex-row items-center justify-center">
 					<span className="text-white">
-						Backend Reloaded Hackathon is live! $3000+ in cash
-						prizes and Google Summer of Code mentorship!{" "}
+						The UI Strikes Back Hackathon is live! $6,000+ in cash
+						prizes and exclusive swag!{" "}
 					</span>
 					<Link
-						href="/hackathons/motiahack25"
+						href="https://forms.gle/PG5jppKYjwky4BFUA"
 						className={cn(
 							buttonVariants(),
 							"mt-4 md:mt-0 md:ml-8 px-3 py-2 bg-white hover:bg-white/80 text-[#1a2047] w-full md:w-fit",
@@ -50,7 +50,7 @@ export default function Home() {
 						Register Now!
 					</Link>
 				</div>
-			</Banner> */}
+			</Banner>
 		</div>
 	);
 }
