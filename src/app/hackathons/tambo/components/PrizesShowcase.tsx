@@ -121,7 +121,7 @@ const PrizesShowcase = () => {
 							). Top 10 posts will win swag bundles.
 						</p>
 
-						<div className="flex items-center gap-3 bg-slate-800/50 rounded-xl px-5 py-3 w-fit border border-amber-500/20">
+						<div className="flex items-center gap-3 bg-slate-800/50 rounded-xl px-5 py-3 w-fit border border-amber-500/20 mx-auto">
 							<Gift className="w-5 h-5 text-amber-400" />
 							<span className="font-bold text-amber-400 text-lg">
 								Top 10 Posts Win Swag Boxes
