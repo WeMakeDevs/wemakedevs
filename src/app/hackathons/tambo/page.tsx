@@ -43,10 +43,10 @@ const HackathonPage = () => {
 
 				{/* About Content */}
 				<ViewContainer className="mt-16 pb-20">
-					<h2 className="text-3xl md:text-4xl font-bold text-amber-400 uppercase tracking-wide mb-6">
+					<h2 className="text-3xl md:text-4xl font-bold text-amber-400 uppercase tracking-wide mb-6 text-center">
 						About The UI Strikes Back
 					</h2>
-					<p className="text-lg md:text-xl text-slate-300 leading-relaxed max-w-4xl">
+					<p className="text-lg md:text-xl text-slate-300 leading-relaxed max-w-4xl mx-auto text-center">
 						A long time ago in a galaxy far, far away... developers
 						struggled with static UIs that couldn't adapt to their
 						users. But a new hope has emerged! The UI Strikes Back
@@ -170,6 +170,17 @@ const HackathonPage = () => {
 								Considers how intuitive and user-friendly the
 								final experience is, especially if the project
 								has a frontend.
+							</p>
+						</div>
+						<div className="bg-slate-900/40 backdrop-blur-sm rounded-xl p-6 border border-slate-700/50">
+							<h3 className="text-xl font-bold text-amber-400 mb-3">
+								Best Use Case of Tambo
+							</h3>
+							<p className="text-slate-300">
+								Evaluates how effectively the project leverages
+								Tambo's Generative UI capabilities to solve
+								real-world problems and demonstrate innovative
+								applications of the SDK.
 							</p>
 						</div>
 					</div>

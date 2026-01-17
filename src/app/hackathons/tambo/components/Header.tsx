@@ -33,8 +33,6 @@ const HackathonHeader = ({
 			{/* Animated background glow */}
 			<div className="absolute inset-0 overflow-hidden pointer-events-none">
 				<div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-amber-500/5 rounded-full blur-3xl" />
-				<div className="absolute top-0 left-1/4 w-px h-full bg-gradient-to-b from-transparent via-amber-500/20 to-transparent" />
-				<div className="absolute top-0 right-1/3 w-px h-full bg-gradient-to-b from-transparent via-amber-500/10 to-transparent" />
 			</div>
 
 			<ViewContainer className="relative z-10">

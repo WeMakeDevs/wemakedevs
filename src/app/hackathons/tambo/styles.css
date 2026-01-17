@@ -1,28 +1,23 @@
 /* Tambo Hackathon Custom Styles */
 
-/* Ensure navbar text is visible on dark background */
-.tambo-hackathon nav,
+/* Ensure navbar text is visible on dark background - default state */
 .tambo-hackathon nav a,
-.tambo-hackathon nav button,
 .tambo-hackathon nav span,
 .tambo-hackathon header,
 .tambo-hackathon header a {
 	color: #f1f5f9 !important;
 }
 
-/* When navbar is scrolled and has white background, make text black */
-.tambo-hackathon nav[style*="background-color: white"],
-.tambo-hackathon nav.bg-white,
-.tambo-hackathon nav[class*="bg-white"] {
+/* When navbar container has white background (scrolled), override to black text */
+.tambo-hackathon nav > div.bg-white,
+.tambo-hackathon nav > div[class*="bg-white"] {
 	color: #0f172a !important;
 }
 
-.tambo-hackathon nav[style*="background-color: white"] a,
-.tambo-hackathon nav.bg-white a,
-.tambo-hackathon nav[class*="bg-white"] a,
-.tambo-hackathon nav[style*="background-color: white"] span,
-.tambo-hackathon nav.bg-white span,
-.tambo-hackathon nav[class*="bg-white"] span {
+.tambo-hackathon nav > div.bg-white a:not([class*="text-white"]),
+.tambo-hackathon nav > div[class*="bg-white"] a:not([class*="text-white"]),
+.tambo-hackathon nav > div.bg-white span:not([class*="text-white"]),
+.tambo-hackathon nav > div[class*="bg-white"] span:not([class*="text-white"]) {
 	color: #0f172a !important;
 }
 
@@ -32,9 +27,8 @@
 }
 
 /* Keep hover color amber even when scrolled */
-.tambo-hackathon nav[style*="background-color: white"] a:hover,
-.tambo-hackathon nav.bg-white a:hover,
-.tambo-hackathon nav[class*="bg-white"] a:hover {
+.tambo-hackathon nav > div.bg-white a:not([class*="text-white"]):hover,
+.tambo-hackathon nav > div[class*="bg-white"] a:not([class*="text-white"]):hover {
 	color: #f59e0b !important;
 }
 
