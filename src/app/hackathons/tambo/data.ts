@@ -14,7 +14,7 @@ const DATA = {
 	images,
 	cta: {
 		label: "Register Now",
-		href: "https://discord.gg/wemakedevs",
+		href: "https://forms.gle/PG5jppKYjwky4BFUA",
 		openInNewTab: true,
 		disabled: false,
 	},
@@ -76,7 +76,7 @@ const faqs: FaqType[] = [
 	},
 	{
 		question: "How can I submit my project?",
-		answer: "Join our discord server for all the updates and announcements regarding the hackathon.",
+		answer: "Join the <a href='https://discord.gg/dJNvPEHth6' target='_blank' rel='noopener noreferrer' class='text-amber-400 underline hover:text-amber-300'>Tambo Discord</a> for all the updates and announcements regarding the hackathon.",
 	},
 	{
 		question: "I am a beginner in tech, can I still participate?",
@@ -88,7 +88,7 @@ const faqs: FaqType[] = [
 	},
 	{
 		question: "Where can I connect for other queries?",
-		answer: "For any hackathon related queries, please raise a ticket on our Discord server or join the <a href='https://discord.gg/dJNvPEHth6' target='_blank' rel='noopener noreferrer' class='text-amber-400 underline hover:text-amber-300'>Tambo Discord</a> for technical support.",
+		answer: "For any hackathon related queries, join the <a href='https://discord.gg/dJNvPEHth6' target='_blank' rel='noopener noreferrer' class='text-amber-400 underline hover:text-amber-300'>Tambo Discord</a> for support.",
 	},
 ];
 
@@ -101,24 +101,26 @@ const schedule = [
 				time: "2026-02-02T08:00:00+05:30",
 			},
 			{
-				title: "Discord office hours",
-				time: "2026-02-02T20:00:00+05:30",
+				title: "Live stream - Building Your First Generative UI Application",
+				time: "2026-02-02T21:30:00+05:30",
 				link: {
-					name: "Discord",
-					url: "https://discord.gg/wemakedevs",
+					name: "YouTube",
+					url: "https://youtube.com/@wemakedevs",
 				},
 			},
 		],
 	},
 	{
-		date: "2026-02-03T00:00:00+05:30",
+		date: "2026-02-05T00:00:00+05:30",
 		items: [
 			{
-				title: "Live stream - Building Your First Generative UI Application",
-				time: "2026-02-03T21:30:00+05:30",
+				title: "Tambo Thursday - Weekly Office Hours",
+				description:
+					"Join the Tambo team for weekly office hours. We're building an open-source React SDK for generative UI, where AI can render and interact with your React components through natural language.",
+				time: "2026-02-05T23:30:00+05:30",
 				link: {
-					name: "YouTube",
-					url: "https://youtube.com/@wemakedevs",
+					name: "Luma",
+					url: "https://luma.com/1fljcus7",
 				},
 			},
 		],

@@ -2,13 +2,11 @@ import Faq from "@/components/Faq";
 import {
 	HackathonContentBody,
 	HackathonContentTitle,
-	HackathonContentTitleH3,
 	HackathonCoverImage,
 	HackathonNav,
 } from "@/components/hackathon-content";
 import { ViewContainer } from "@/components/ui/view-container";
 import { ArrowUpRight } from "lucide-react";
-import Image from "next/image";
 import Link from "next/link";
 import AboutSection from "./components/AboutSection";
 import HackathonHeader from "./components/Header";
@@ -18,7 +16,7 @@ import { images } from "./images";
 
 const HackathonPage = () => {
 	return (
-		<main className="pt-20 bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950">
+		<main className="pt-20">
 			<HackathonCoverImage src={images.cover} alt={DATA.title} />
 			<HackathonNav
 				slug={DATA.slug}
@@ -31,7 +29,9 @@ const HackathonPage = () => {
 					disabled: DATA.cta.disabled,
 				}}
 			/>
-			<div id="about" className="scroll-mt-16 [&_h2]:text-amber-400">
+
+			{/* Hero Section */}
+			<div id="about" className="scroll-mt-16">
 				<HackathonHeader
 					title={DATA.title}
 					description={DATA.description}
@@ -40,11 +40,13 @@ const HackathonPage = () => {
 					prize={DATA.prize}
 					cta={DATA.cta}
 				/>
-				<ViewContainer className="mt-10">
-					<HackathonContentTitle className="text-amber-400">
+
+				{/* About Content */}
+				<ViewContainer className="mt-16">
+					<h2 className="text-3xl md:text-4xl font-bold text-amber-400 uppercase tracking-wide mb-6">
 						About The UI Strikes Back
-					</HackathonContentTitle>
-					<HackathonContentBody className="text-slate-300">
+					</h2>
+					<p className="text-lg md:text-xl text-slate-300 leading-relaxed max-w-4xl">
 						A long time ago in a galaxy far, far away... developers
 						struggled with static UIs that couldn't adapt to their
 						users. But a new hope has emerged! The UI Strikes Back
@@ -57,105 +59,125 @@ const HackathonPage = () => {
 						Padawan just beginning your journey, this hackathon is
 						your chance to join the Rebel Alliance of innovative
 						developers building the future of user interfaces.
-					</HackathonContentBody>
-					<AboutSection />
+					</p>
 				</ViewContainer>
+
+				{/* Features Section */}
+				<AboutSection />
 			</div>
+
+			{/* Prizes Section */}
 			<div id="prizes" className="scroll-mt-16">
 				<PrizesShowcase />
 			</div>
-			<div
-				id="sponsor"
-				className="bg-gradient-to-br from-slate-900 to-slate-800 py-16 scroll-mt-10 [&_h2]:text-amber-400"
-			>
+
+			{/* Sponsor Section */}
+			<div id="sponsor" className="py-20 scroll-mt-10">
 				<ViewContainer>
-					<HackathonContentTitle className="text-amber-400">
+					<h2 className="text-3xl md:text-4xl font-bold text-amber-400 uppercase tracking-wide mb-8">
 						Sponsor
-					</HackathonContentTitle>
-					<div className="bg-slate-800/50 rounded-[8px] border border-amber-500/30 overflow-hidden shadow-lg shadow-amber-500/10 mt-6">
-						<div className="flex items-center justify-between p-6 bg-gradient-to-r from-slate-800 to-slate-700 flex-col md:flex-row gap-4">
-							<div className="flex items-center gap-3">
-								<div className="bg-amber-500/20 p-3 rounded-lg border border-amber-500/30">
-									<span className="text-2xl font-bold text-amber-400">
+					</h2>
+					<div className="bg-slate-900/60 backdrop-blur-sm rounded-2xl border border-amber-500/20 overflow-hidden">
+						<div className="flex items-center justify-between p-8 border-b border-amber-500/10 flex-col md:flex-row gap-6">
+							<div className="flex items-center gap-4">
+								<div className="bg-gradient-to-br from-amber-500 to-yellow-600 px-6 py-3 rounded-xl">
+									<span className="text-2xl font-bold text-slate-900">
 										Tambo
 									</span>
 								</div>
+								<span className="text-slate-400 text-lg">
+									Generative UI SDK for React
+								</span>
 							</div>
 							<Link
 								href="https://github.com/tambo-ai/tambo"
-								className="px-4 py-2 rounded-[4px] border-amber-500/50 border flex gap-2 items-center bg-slate-900 hover:bg-amber-500/20 transition-colors duration-300 shadow-sm text-amber-400"
+								target="_blank"
+								rel="noopener noreferrer"
+								className="px-6 py-3 rounded-xl border border-amber-500/50 flex gap-2 items-center bg-slate-800/50 hover:bg-amber-500/20 transition-colors duration-300 text-amber-400 font-medium"
 							>
-								Check out Tambo <ArrowUpRight size={16} />
+								Check out Tambo <ArrowUpRight size={18} />
 							</Link>
 						</div>
-						<div className="p-6 text-lg text-slate-300 border-t border-amber-500/20">
-							Tambo is a Generative UI SDK for React. Register
-							your components, and the AI decides which ones to
-							render based on natural language conversations.
-							Users shouldn't have to learn your app - Generative
-							UI shows the right components based on what someone
-							is trying to do. Whether you're building a startup
-							or scaling an enterprise application, Tambo makes
-							creating adaptive, AI-powered interfaces simple and
-							developer-friendly. Join the Rebel Alliance and
-							build UIs that truly respond to user intent!
+						<div className="p-8">
+							<p className="text-lg text-slate-300 leading-relaxed">
+								Tambo is a Generative UI SDK for React. Register
+								your components, and the AI decides which ones
+								to render based on natural language
+								conversations. Users shouldn't have to learn
+								your app - Generative UI shows the right
+								components based on what someone is trying to
+								do. Whether you're building a startup or scaling
+								an enterprise application, Tambo makes creating
+								adaptive, AI-powered interfaces simple and
+								developer-friendly. Join the Rebel Alliance and
+								build UIs that truly respond to user intent!
+							</p>
 						</div>
 					</div>
 				</ViewContainer>
 			</div>
-			<div
-				id="judging"
-				className="scroll-mt-10 bg-gradient-to-b from-slate-900 to-slate-950 py-16 [&_h2]:text-amber-400"
-			>
+
+			{/* Judging Section */}
+			<div id="judging" className="scroll-mt-10 py-20">
 				<ViewContainer>
-					<HackathonContentTitle className="text-amber-400">
+					<h2 className="text-3xl md:text-4xl font-bold text-amber-400 uppercase tracking-wide mb-8">
 						Judging Criteria
-					</HackathonContentTitle>
-					<HackathonContentBody className="text-slate-300">
-						<ul className="list-disc list-inside space-y-3">
-							<li>
-								<span className="font-semibold text-amber-400">
-									Potential Impact:
-								</span>{" "}
+					</h2>
+					<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+						<div className="bg-slate-900/40 backdrop-blur-sm rounded-xl p-6 border border-slate-700/50">
+							<h3 className="text-xl font-bold text-amber-400 mb-3">
+								Potential Impact
+							</h3>
+							<p className="text-slate-300">
 								Evaluates how effectively the project addresses
 								a meaningful problem or unlocks a valuable use
 								case.
-							</li>
-							<li>
-								<span className="font-semibold text-amber-400">
-									Creativity & Originality:
-								</span>{" "}
+							</p>
+						</div>
+						<div className="bg-slate-900/40 backdrop-blur-sm rounded-xl p-6 border border-slate-700/50">
+							<h3 className="text-xl font-bold text-amber-400 mb-3">
+								Creativity & Originality
+							</h3>
+							<p className="text-slate-300">
 								Assesses the uniqueness of the idea and how
 								Tambo is used in creative ways.
-							</li>
-							<li>
-								<span className="font-semibold text-amber-400">
-									Learning & Growth:
-								</span>{" "}
+							</p>
+						</div>
+						<div className="bg-slate-900/40 backdrop-blur-sm rounded-xl p-6 border border-slate-700/50">
+							<h3 className="text-xl font-bold text-amber-400 mb-3">
+								Learning & Growth
+							</h3>
+							<p className="text-slate-300">
 								Recognizes the learning curve tackled during the
 								hackathon, especially for first-time builders.
-							</li>
-							<li>
-								<span className="font-semibold text-amber-400">
-									Technical Implementation:
-								</span>{" "}
+							</p>
+						</div>
+						<div className="bg-slate-900/40 backdrop-blur-sm rounded-xl p-6 border border-slate-700/50">
+							<h3 className="text-xl font-bold text-amber-400 mb-3">
+								Technical Implementation
+							</h3>
+							<p className="text-slate-300">
 								Reviews how well the idea was executed
 								technically and the quality of integration with
 								Tambo SDK.
-							</li>
-							<li>
-								<span className="font-semibold text-amber-400">
-									Aesthetics & UX:
-								</span>{" "}
+							</p>
+						</div>
+						<div className="bg-slate-900/40 backdrop-blur-sm rounded-xl p-6 border border-slate-700/50">
+							<h3 className="text-xl font-bold text-amber-400 mb-3">
+								Aesthetics & UX
+							</h3>
+							<p className="text-slate-300">
 								Considers how intuitive and user-friendly the
 								final experience is, especially if the project
 								has a frontend.
-							</li>
-						</ul>
-					</HackathonContentBody>
+							</p>
+						</div>
+					</div>
 				</ViewContainer>
 			</div>
-			<div id="faq" className="scroll-mt-20 bg-slate-950 py-16">
+
+			{/* FAQ Section */}
+			<div id="faq" className="scroll-mt-20 py-20">
 				<ViewContainer>
 					<div className="[&_h2]:text-amber-400 [&_h2]:font-bold">
 						<Faq FAQS={faqs} />

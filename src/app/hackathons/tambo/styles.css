@@ -1,0 +1,37 @@
+/* Tambo Hackathon Custom Styles */
+
+/* Ensure navbar text is visible on dark background */
+.tambo-hackathon nav,
+.tambo-hackathon nav a,
+.tambo-hackathon nav button,
+.tambo-hackathon nav span,
+.tambo-hackathon header,
+.tambo-hackathon header a {
+	color: #f1f5f9 !important;
+}
+
+.tambo-hackathon nav a:hover,
+.tambo-hackathon header a:hover {
+	color: #fbbf24 !important;
+}
+
+/* Fix for sticky/fixed navbar background */
+.tambo-hackathon nav[aria-label="secondary nav"] {
+	background-color: rgba(15, 23, 42, 0.9) !important;
+	backdrop-filter: blur(8px);
+	border-color: rgba(245, 158, 11, 0.2) !important;
+}
+
+/* Ensure all section headings are visible */
+.tambo-hackathon h2 {
+	color: #fbbf24;
+}
+
+/* Fix link colors in content */
+.tambo-hackathon .text-slate-300 a {
+	color: #fbbf24;
+}
+
+.tambo-hackathon .text-slate-300 a:hover {
+	color: #fcd34d;
+}

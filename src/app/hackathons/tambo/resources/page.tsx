@@ -31,18 +31,7 @@ const HackathonResources = async () => {
 				<HackathonContentBody className="text-slate-300">
 					<ul className="space-y-2 list-disc list-inside">
 						<li>
-							Join WeMakeDevs Discord for updates and support:{" "}
-							<Link
-								href="https://discord.gg/wemakedevs"
-								className="text-amber-400 underline hover:no-underline hover:text-amber-300"
-								target="_blank"
-								rel="noopener noreferrer"
-							>
-								https://discord.gg/wemakedevs
-							</Link>
-						</li>
-						<li>
-							Join Tambo Discord for technical support:{" "}
+							Join Tambo Discord for support:{" "}
 							<Link
 								href="https://discord.gg/dJNvPEHth6"
 								className="text-amber-400 underline hover:no-underline hover:text-amber-300"

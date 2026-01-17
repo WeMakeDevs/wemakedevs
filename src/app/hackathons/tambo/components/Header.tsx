@@ -29,38 +29,38 @@ const HackathonHeader = ({
 	cta,
 }: HackathonHeaderProps) => {
 	return (
-		<div className="relative bg-gradient-to-br from-slate-950 via-slate-900 to-amber-950/30 py-24 overflow-hidden">
-			{/* Star Wars inspired background elements */}
-			<div className="absolute inset-0 overflow-hidden">
-				{/* Stars effect */}
-				<div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-amber-500/5 via-transparent to-transparent" />
-				{/* Animated glow lines */}
+		<div className="relative py-20 md:py-28 overflow-hidden">
+			{/* Animated background glow */}
+			<div className="absolute inset-0 overflow-hidden pointer-events-none">
+				<div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-amber-500/5 rounded-full blur-3xl" />
 				<div className="absolute top-0 left-1/4 w-px h-full bg-gradient-to-b from-transparent via-amber-500/20 to-transparent" />
 				<div className="absolute top-0 right-1/3 w-px h-full bg-gradient-to-b from-transparent via-amber-500/10 to-transparent" />
 			</div>
 
-			<ViewContainer className="relative z-10 bg-slate-900/40 backdrop-blur-sm shadow-lg shadow-amber-500/10 rounded-xl p-3 border border-amber-500/20">
-				<div className="grid grid-cols-1 lg:grid-cols-3 gap-4 p-10 bg-slate-900/60 shadow-md rounded-[8px] border border-amber-500/10">
+			<ViewContainer className="relative z-10">
+				<div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12">
+					{/* Main content */}
 					<div className="col-span-1 lg:col-span-2">
 						<HackathonStatus
-							className="w-fit"
+							className="w-fit mb-6"
 							startDate={startDate}
 							endDate={endDate}
 						/>
-						<h1 className="text-4xl md:text-6xl font-bold mt-6 bg-gradient-to-r from-amber-400 via-yellow-300 to-amber-500 bg-clip-text text-transparent">
+						<h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-amber-400 via-yellow-300 to-amber-500 bg-clip-text text-transparent leading-tight">
 							{title}
 						</h1>
-						<p className="text-base md:text-lg text-slate-300 font-medium leading-snug mt-4 tracking-wide">
+						<p className="text-lg md:text-xl text-slate-300 font-medium leading-relaxed mt-6 max-w-2xl">
 							{description}
 						</p>
-						<div className="flex items-center gap-4">
+						<div className="flex items-center gap-4 mt-8">
 							{cta.disabled ? (
 								<div
 									className={cn(
 										buttonVariants({
 											variant: "default",
+											size: "lg",
 										}),
-										"mt-4 md:mt-6 cursor-not-allowed opacity-60 bg-amber-500 text-slate-900",
+										"cursor-not-allowed opacity-60 bg-amber-500 text-slate-900 px-8 py-6 text-lg",
 									)}
 								>
 									{cta.label}
@@ -69,23 +69,28 @@ const HackathonHeader = ({
 								<Link
 									href={cta.href}
 									className={cn(
-										buttonVariants({ variant: "default" }),
-										"mt-4 md:mt-6 bg-gradient-to-r from-amber-500 to-yellow-500 hover:from-amber-400 hover:to-yellow-400 text-slate-900 font-semibold shadow-lg shadow-amber-500/30",
+										buttonVariants({
+											variant: "default",
+											size: "lg",
+										}),
+										"bg-gradient-to-r from-amber-500 to-yellow-500 hover:from-amber-400 hover:to-yellow-400 text-slate-900 font-bold shadow-lg shadow-amber-500/30 px-8 py-6 text-lg",
 									)}
 									target="_blank"
 									rel="noopener noreferrer"
 								>
-									<Sparkles className="w-4 h-4 mr-2" />
+									<Sparkles className="w-5 h-5 mr-2" />
 									{cta.label}
 								</Link>
 							)}
 						</div>
 					</div>
-					<div className="flex justify-center items-center">
-						<div className="bg-slate-800/80 shadow-lg shadow-amber-500/10 rounded-xl p-4 md:p-6 h-fit w-full border border-amber-500/20">
-							<div className="flex gap-4 text-center font-medium text-amber-400">
-								<CalendarIcon className="" size={30} />
-								<p className="text-lg md:text-2xl">
+
+					{/* Info card */}
+					<div className="flex justify-center items-start lg:items-center">
+						<div className="bg-slate-900/70 backdrop-blur-sm shadow-2xl rounded-2xl p-6 md:p-8 w-full max-w-sm border border-amber-500/20">
+							<div className="flex items-center gap-4 text-amber-400 mb-4">
+								<CalendarIcon size={28} />
+								<p className="text-xl md:text-2xl font-bold">
 									<DateAtom date={startDate} /> -{" "}
 									<DateAtom date={endDate} />
 								</p>
@@ -94,11 +99,18 @@ const HackathonHeader = ({
 								startDate={startDate}
 								endDate={endDate}
 							/>
-							<hr className="my-5 border-amber-500/30" />
-							<p className="flex gap-4 items-end font-medium text-slate-300">
-								<span className="text-amber-400">Prizes:</span>{" "}
-								$6,000 + exclusive swag
-							</p>
+							<hr className="my-6 border-amber-500/20" />
+							<div>
+								<span className="text-amber-400 font-semibold text-lg">
+									Prizes
+								</span>
+								<p className="text-2xl md:text-3xl font-bold text-slate-100 mt-1">
+									$6,000+
+								</p>
+								<p className="text-slate-400 mt-1">
+									+ exclusive swag
+								</p>
+							</div>
 						</div>
 					</div>
 				</div>
