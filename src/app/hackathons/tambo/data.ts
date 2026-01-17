@@ -5,7 +5,7 @@ const DATA = {
 	title: "The UI Strikes Back",
 	prize: "$6,000+",
 	startDate: "2026-02-02T08:00:00+05:30",
-	endDate: "2026-02-09T23:59:59+05:30",
+	endDate: "2026-02-08T23:59:59+05:30",
 	description:
 		"Build generative UI applications with the power of Tambo. May the components be with you.",
 	descriptionCard:
@@ -126,15 +126,15 @@ const schedule = [
 		],
 	},
 	{
-		date: "2026-02-09T00:00:00+05:30",
+		date: "2026-02-08T00:00:00+05:30",
 		items: [
 			{
 				title: "Hacking ends - Return of the Projects",
-				time: "2026-02-09T20:00:00+05:30",
+				time: "2026-02-08T20:00:00+05:30",
 			},
 			{
 				title: "Submissions due",
-				time: "2026-02-09T23:59:59+05:30",
+				time: "2026-02-08T23:59:59+05:30",
 			},
 		],
 	},
