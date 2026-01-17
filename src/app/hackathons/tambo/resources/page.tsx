@@ -31,15 +31,16 @@ const HackathonResources = async () => {
 				<HackathonContentBody className="text-slate-300">
 					<ul className="space-y-2 list-disc list-inside">
 						<li>
-							Join Tambo Discord for support:{" "}
+							Join{" "}
 							<Link
 								href="https://discord.gg/dJNvPEHth6"
 								className="text-amber-400 underline hover:no-underline hover:text-amber-300"
 								target="_blank"
 								rel="noopener noreferrer"
 							>
-								https://discord.gg/dJNvPEHth6
-							</Link>
+								Tambo Discord
+							</Link>{" "}
+							for support
 						</li>
 						<li>
 							For any other query email us at{" "}

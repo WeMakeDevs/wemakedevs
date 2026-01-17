@@ -111,13 +111,13 @@ const schedule = [
 		],
 	},
 	{
-		date: "2026-02-05T00:00:00+05:30",
+		date: "2026-01-22T00:00:00+05:30",
 		items: [
 			{
 				title: "Tambo Thursday - Weekly Office Hours",
 				description:
 					"Join the Tambo team for weekly office hours. We're building an open-source React SDK for generative UI, where AI can render and interact with your React components through natural language.",
-				time: "2026-02-05T23:30:00+05:30",
+				time: "2026-01-22T23:30:00+05:30",
 				link: {
 					name: "Luma",
 					url: "https://luma.com/1fljcus7",

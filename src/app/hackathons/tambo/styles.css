@@ -10,9 +10,32 @@
 	color: #f1f5f9 !important;
 }
 
+/* When navbar is scrolled and has white background, make text black */
+.tambo-hackathon nav[style*="background-color: white"],
+.tambo-hackathon nav.bg-white,
+.tambo-hackathon nav[class*="bg-white"] {
+	color: #0f172a !important;
+}
+
+.tambo-hackathon nav[style*="background-color: white"] a,
+.tambo-hackathon nav.bg-white a,
+.tambo-hackathon nav[class*="bg-white"] a,
+.tambo-hackathon nav[style*="background-color: white"] span,
+.tambo-hackathon nav.bg-white span,
+.tambo-hackathon nav[class*="bg-white"] span {
+	color: #0f172a !important;
+}
+
 .tambo-hackathon nav a:hover,
 .tambo-hackathon header a:hover {
 	color: #fbbf24 !important;
+}
+
+/* Keep hover color amber even when scrolled */
+.tambo-hackathon nav[style*="background-color: white"] a:hover,
+.tambo-hackathon nav.bg-white a:hover,
+.tambo-hackathon nav[class*="bg-white"] a:hover {
+	color: #f59e0b !important;
 }
 
 /* Fix for sticky/fixed navbar background */

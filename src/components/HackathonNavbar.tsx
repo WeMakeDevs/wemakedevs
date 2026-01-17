@@ -69,6 +69,7 @@ const HackathonNavbar = ({ customNavLinks }: HackathonNavbarProps = {}) => {
 				className={cn(
 					"items-center justify-between rounded transition-all py-3",
 					isScrolled && "bg-white shadow-lg",
+					isScrolled && "text-slate-900",
 					"hidden lg:flex",
 				)}
 			>
@@ -76,7 +77,8 @@ const HackathonNavbar = ({ customNavLinks }: HackathonNavbarProps = {}) => {
 					<Image src={logo} alt="WeMakeDevs Logo" className="w-12" />
 					<span
 						className={cn(
-							"font-title text-lg md:text-xl text-primary font-semibold",
+							"font-title text-lg md:text-xl font-semibold",
+							isScrolled ? "text-slate-900" : "text-primary",
 						)}
 					>
 						WeMakeDevs
@@ -94,8 +96,13 @@ const HackathonNavbar = ({ customNavLinks }: HackathonNavbarProps = {}) => {
 												? "default"
 												: "ghost",
 									}),
-									"px-4 py-2 text-foreground",
-									link.type === "button" && "text-white",
+									"px-4 py-2",
+									isScrolled
+										? link.type === "button"
+											? "text-white"
+											: "text-slate-900"
+										: "text-foreground",
+									link.type === "button" && !isScrolled && "text-white",
 								)}
 								target={link.openInNewTab ? "_blank" : "_self"}
 								rel={

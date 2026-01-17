@@ -31,7 +31,7 @@ const HackathonPage = () => {
 			/>
 
 			{/* Hero Section */}
-			<div id="about" className="scroll-mt-16">
+			<div id="about" className="scroll-mt-16 bg-slate-950">
 				<HackathonHeader
 					title={DATA.title}
 					description={DATA.description}
@@ -42,7 +42,7 @@ const HackathonPage = () => {
 				/>
 
 				{/* About Content */}
-				<ViewContainer className="mt-16">
+				<ViewContainer className="mt-16 pb-20">
 					<h2 className="text-3xl md:text-4xl font-bold text-amber-400 uppercase tracking-wide mb-6">
 						About The UI Strikes Back
 					</h2>
@@ -67,12 +67,12 @@ const HackathonPage = () => {
 			</div>
 
 			{/* Prizes Section */}
-			<div id="prizes" className="scroll-mt-16">
+			<div id="prizes" className="scroll-mt-16 bg-slate-900/30">
 				<PrizesShowcase />
 			</div>
 
 			{/* Sponsor Section */}
-			<div id="sponsor" className="py-20 scroll-mt-10">
+			<div id="sponsor" className="py-20 scroll-mt-10 bg-slate-950">
 				<ViewContainer>
 					<h2 className="text-3xl md:text-4xl font-bold text-amber-400 uppercase tracking-wide mb-8">
 						Sponsor
@@ -118,7 +118,7 @@ const HackathonPage = () => {
 			</div>
 
 			{/* Judging Section */}
-			<div id="judging" className="scroll-mt-10 py-20">
+			<div id="judging" className="scroll-mt-10 py-20 bg-slate-900/30">
 				<ViewContainer>
 					<h2 className="text-3xl md:text-4xl font-bold text-amber-400 uppercase tracking-wide mb-8">
 						Judging Criteria
@@ -177,7 +177,7 @@ const HackathonPage = () => {
 			</div>
 
 			{/* FAQ Section */}
-			<div id="faq" className="scroll-mt-20 py-20">
+			<div id="faq" className="scroll-mt-20 py-20 bg-slate-950">
 				<ViewContainer>
 					<div className="[&_h2]:text-amber-400 [&_h2]:font-bold">
 						<Faq FAQS={faqs} />

@@ -21,7 +21,7 @@ const HackathonDate = ({
 		<div
 			className={cn(
 				className,
-				"font-medium border border-foreground/40 rounded-full text-sm md:text-base px-3 py-2 flex justify-center items-center w-fit gap-1 md:gap-2 mt-4 bg-white",
+				"font-medium border border-foreground/40 rounded-full text-sm md:text-base px-3 py-2 flex justify-center items-center w-fit gap-1 md:gap-2 mt-4 bg-white text-orange-700",
 			)}
 			{...props}
 		>
