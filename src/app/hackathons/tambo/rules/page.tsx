@@ -1,0 +1,89 @@
+import {
+	HackathonCoverImage,
+	HackathonNav,
+} from "@/components/hackathon-content";
+import HackathonContentBody from "@/components/hackathon-content/HackathonContentBody";
+import { ViewContainer } from "@/components/ui/view-container";
+import { DATA, navLinks } from "../data";
+import { images } from "../images";
+
+const HackathonRules = async () => {
+	return (
+		<div className="pt-20 pb-10 bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 min-h-screen">
+			<HackathonCoverImage src={images.cover} alt={DATA.title} />
+			<HackathonNav
+				slug={DATA.slug}
+				page="rules"
+				links={navLinks}
+				navCta={{
+					label: DATA.cta.label,
+					href: DATA.cta.href,
+					openInNewTab: DATA.cta.openInNewTab,
+					disabled: DATA.cta.disabled,
+				}}
+			/>
+			<ViewContainer className="my-10">
+				<h2 className="text-3xl font-bold text-amber-400 mb-6">
+					The Jedi Code of Conduct
+				</h2>
+				<HackathonContentBody className="text-slate-300">
+					<ol className="list-decimal list-outside space-y-4 pl-6">
+						<li>
+							The more Tambo features you use, the stronger your
+							Force becomes. Using Tambo's React SDK with
+							generative components, interactable components, MCP
+							integrations, and local tools is recommended to
+							maximize your chances of winning prizes such as cash
+							rewards, Tambo credits, and exclusive swag.
+						</li>
+						<li>
+							You must build a new project during the hackathon.
+							Simply modifying an existing website or app is not
+							allowed - fresh starts only, young Padawan.
+						</li>
+						<li>
+							All design elements, code, and assets for your
+							project must be created during the event. You may
+							use third-party tools, frameworks, open-source
+							libraries, public APIs, and publicly available
+							assets (e.g., Creative Commons images, fonts, or
+							music).
+						</li>
+						<li>
+							Teams can plan and discuss ideas in advance, but
+							coding and design work should start only after the
+							hackathon begins. Written notes, sketches, and
+							diagrams are allowed before kickoff.
+						</li>
+						<li>
+							Projects must involve building software (hardware
+							components are optional).
+						</li>
+						<li>Teams may consist of 1–4 members.</li>
+						<li>
+							Any intellectual property developed during the
+							hackathon belongs to the team that created it. Teams
+							are encouraged to agree internally on IP ownership,
+							though this is not mandatory.
+						</li>
+						<li>
+							Please treat all participants with respect. Act
+							kindly and professionally - this is the way.
+							Harassment, discrimination, or exclusionary behavior
+							of any kind will not be tolerated. If you see
+							something concerning, notify an organizer
+							immediately.
+						</li>
+						<li>
+							Failure to follow these rules or the Code of Conduct
+							may result in disqualification and banishment to the
+							outer rim.
+						</li>
+					</ol>
+				</HackathonContentBody>
+			</ViewContainer>
+		</div>
+	);
+};
+
+export default HackathonRules;
