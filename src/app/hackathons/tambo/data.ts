@@ -22,13 +22,13 @@ const DATA = {
 		winning: [
 			{
 				name: "Top 3 Winners",
-				prize: "$6,000 + Tambo credits + exclusive swag",
+				prize: "$6,000 + exclusive swag",
 			},
 		],
 		giveaway: [
 			{
 				name: "Community Rewards",
-				prize: "Top 10 posts win Tambo credits + swag bundles",
+				prize: "Top 10 posts win swag bundles",
 				details: {
 					requirements: [
 						"Star the repo and post about participation tagging Tambo",
@@ -88,7 +88,7 @@ const faqs: FaqType[] = [
 	},
 	{
 		question: "Where can I connect for other queries?",
-		answer: "For any hackathon related queries, please raise a ticket on our Discord server.",
+		answer: "For any hackathon related queries, please raise a ticket on our Discord server or join the <a href='https://discord.gg/dJNvPEHth6' target='_blank' rel='noopener noreferrer' class='text-amber-400 underline hover:text-amber-300'>Tambo Discord</a> for technical support.",
 	},
 ];
 
@@ -114,8 +114,8 @@ const schedule = [
 		date: "2026-02-03T00:00:00+05:30",
 		items: [
 			{
-				title: "Live stream - Getting Started with Tambo",
-				time: "2026-02-03T19:00:00+05:30",
+				title: "Live stream - Building Your First Generative UI Application",
+				time: "2026-02-03T21:30:00+05:30",
 				link: {
 					name: "YouTube",
 					url: "https://youtube.com/@wemakedevs",

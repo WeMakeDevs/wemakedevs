@@ -42,7 +42,7 @@ export default function RootLayout({
 	];
 
 	return (
-		<div className="bg-slate-950">
+		<div className="bg-slate-950 text-slate-100 [&_nav]:text-slate-100 [&_nav_a]:text-slate-100 [&_nav_button]:text-slate-100">
 			<HackathonNavbar customNavLinks={hackathonNavLinks} />
 			{children}
 			<HackathonFooter />

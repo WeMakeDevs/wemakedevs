@@ -31,7 +31,7 @@ const HackathonPage = () => {
 					disabled: DATA.cta.disabled,
 				}}
 			/>
-			<div id="about" className="scroll-mt-16">
+			<div id="about" className="scroll-mt-16 [&_h2]:text-amber-400">
 				<HackathonHeader
 					title={DATA.title}
 					description={DATA.description}
@@ -66,7 +66,7 @@ const HackathonPage = () => {
 			</div>
 			<div
 				id="sponsor"
-				className="bg-gradient-to-br from-slate-900 to-slate-800 py-16 scroll-mt-10"
+				className="bg-gradient-to-br from-slate-900 to-slate-800 py-16 scroll-mt-10 [&_h2]:text-amber-400"
 			>
 				<ViewContainer>
 					<HackathonContentTitle className="text-amber-400">
@@ -105,7 +105,7 @@ const HackathonPage = () => {
 			</div>
 			<div
 				id="judging"
-				className="scroll-mt-10 bg-gradient-to-b from-slate-900 to-slate-950 py-16"
+				className="scroll-mt-10 bg-gradient-to-b from-slate-900 to-slate-950 py-16 [&_h2]:text-amber-400"
 			>
 				<ViewContainer>
 					<HackathonContentTitle className="text-amber-400">
@@ -157,7 +157,9 @@ const HackathonPage = () => {
 			</div>
 			<div id="faq" className="scroll-mt-20 bg-slate-950 py-16">
 				<ViewContainer>
-					<Faq FAQS={faqs} />
+					<div className="[&_h2]:text-amber-400 [&_h2]:font-bold">
+						<Faq FAQS={faqs} />
+					</div>
 				</ViewContainer>
 			</div>
 		</main>

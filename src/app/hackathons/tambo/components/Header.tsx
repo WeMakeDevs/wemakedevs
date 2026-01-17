@@ -97,7 +97,7 @@ const HackathonHeader = ({
 							<hr className="my-5 border-amber-500/30" />
 							<p className="flex gap-4 items-end font-medium text-slate-300">
 								<span className="text-amber-400">Prizes:</span>{" "}
-								$6,000 + Tambo credits + exclusive swag
+								$6,000 + exclusive swag
 							</p>
 						</div>
 					</div>

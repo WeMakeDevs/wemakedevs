@@ -80,9 +80,6 @@ const PrizesShowcase = () => {
 							</div>
 							<div className="flex flex-wrap gap-2 mt-6">
 								<span className="bg-slate-900/30 backdrop-blur-sm px-4 py-2 rounded-[6px] font-medium border border-white/30">
-									+ Tambo credits
-								</span>
-								<span className="bg-slate-900/30 backdrop-blur-sm px-4 py-2 rounded-[6px] font-medium border border-white/30">
 									+ exclusive swag
 								</span>
 							</div>
@@ -120,8 +117,7 @@ const PrizesShowcase = () => {
 								>
 									Tambo
 								</a>
-								). Top 10 posts will win Tambo credits and swag
-								bundles.
+								). Top 10 posts will win swag bundles.
 							</p>
 							<div className="flex items-center gap-2 bg-slate-900/60 rounded-lg px-4 py-2 w-fit border border-amber-500/30">
 								<Gift className="w-4 h-4 text-amber-400" />
