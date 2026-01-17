@@ -99,13 +99,13 @@ const PrizesShowcase = () => {
 							</h3>
 						</div>
 
-						<p className="text-lg text-slate-300 leading-relaxed mb-6 max-w-3xl break-words">
+						<p className="text-lg text-slate-300 leading-relaxed mb-6 max-w-3xl">
 							Join the Rebel Alliance! Star the{" "}
 							<Link
 								href="https://github.com/tambo-ai/tambo"
 								target="_blank"
 								rel="noopener noreferrer"
-								className="text-amber-400 hover:text-amber-300 font-semibold underline decoration-2 underline-offset-2 transition-colors whitespace-nowrap"
+								className="text-amber-400 hover:text-amber-300 font-semibold underline decoration-2 underline-offset-2 transition-colors"
 							>
 								Tambo repository
 							</Link>{" "}
@@ -114,7 +114,7 @@ const PrizesShowcase = () => {
 								href="https://tambo.co"
 								target="_blank"
 								rel="noopener noreferrer"
-								className="text-amber-400 hover:text-amber-300 font-semibold underline decoration-2 underline-offset-2 transition-colors whitespace-nowrap"
+								className="text-amber-400 hover:text-amber-300 font-semibold underline decoration-2 underline-offset-2 transition-colors"
 							>
 								Tambo
 							</Link>
