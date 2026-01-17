@@ -17,6 +17,7 @@ type HackathonHeaderProps = {
 		label: string;
 		href: string;
 		disabled?: boolean;
+		openInNewTab?: boolean;
 	};
 };
 
@@ -73,8 +74,8 @@ const HackathonHeader = ({
 										}),
 										"bg-gradient-to-r from-amber-500 to-yellow-500 hover:from-amber-400 hover:to-yellow-400 text-slate-900 font-bold shadow-lg shadow-amber-500/30 px-8 py-6 text-lg",
 									)}
-									target="_blank"
-									rel="noopener noreferrer"
+									target={cta.openInNewTab ? "_blank" : "_self"}
+									rel={cta.openInNewTab ? "noopener noreferrer" : undefined}
 								>
 									<Sparkles className="w-5 h-5 mr-2" />
 									{cta.label}
