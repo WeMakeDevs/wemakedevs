@@ -42,8 +42,8 @@ const HackathonPage = () => {
 				/>
 
 				{/* About Content */}
-				<ViewContainer className="mt-16 pb-20">
-					<h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-amber-400 via-yellow-300 to-amber-500 bg-clip-text text-transparent uppercase tracking-wide mb-6 text-center leading-tight">
+				<ViewContainer className="mt-16 pb-20 bg-slate-900/30 rounded-2xl py-12 px-8">
+					<h2 className="text-3xl md:text-4xl font-bold text-amber-400 uppercase tracking-wide mb-6 text-center">
 						About The UI Strikes Back
 					</h2>
 					<p className="text-lg md:text-xl text-slate-300 leading-relaxed max-w-4xl mx-auto text-center">
