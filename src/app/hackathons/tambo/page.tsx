@@ -190,7 +190,7 @@ const HackathonPage = () => {
 			{/* FAQ Section */}
 			<div id="faq" className="scroll-mt-20 py-20 bg-slate-950">
 				<ViewContainer>
-					<div className="[&_h2]:text-amber-400 [&_h2]:font-bold">
+					<div className="[&_h2]:text-amber-400 [&_h2]:font-bold [&_div[class*='pb-4']]:text-orange-700 [&_div[class*='pb-4']_a]:text-orange-700">
 						<Faq FAQS={faqs} />
 					</div>
 				</ViewContainer>

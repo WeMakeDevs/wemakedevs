@@ -52,3 +52,17 @@
 .tambo-hackathon .text-slate-300 a:hover {
 	color: #fcd34d;
 }
+
+/* FAQ answer text color - dark orange on white background */
+.tambo-hackathon #faq [class*="bg-white"] [class*="pb-4"],
+.tambo-hackathon #faq [class*="bg-white"] [class*="pb-4"] * {
+	color: #b45309 !important;
+}
+
+.tambo-hackathon #faq [class*="bg-white"] [class*="pb-4"] a {
+	color: #b45309 !important;
+}
+
+.tambo-hackathon #faq [class*="bg-white"] [class*="pb-4"] a:hover {
+	color: #92400e !important;
+}

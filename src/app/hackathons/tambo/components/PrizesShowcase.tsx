@@ -99,7 +99,7 @@ const PrizesShowcase = () => {
 							</h3>
 						</div>
 
-						<p className="text-lg text-slate-300 leading-relaxed mb-6 max-w-3xl">
+						<p className="text-lg text-slate-300 leading-relaxed mb-6 max-w-4xl">
 							Join the Rebel Alliance! Star the{" "}
 							<Link
 								href="https://github.com/tambo-ai/tambo"
@@ -109,8 +109,7 @@ const PrizesShowcase = () => {
 							>
 								Tambo repository
 							</Link>{" "}
-							on GitHub and{" "}
-							<span className="whitespace-nowrap">share your participation on social media</span> (don't forget to tag{" "}
+							on GitHub and share your participation on social media (don't forget to tag{" "}
 							<Link
 								href="https://tambo.co"
 								target="_blank"
