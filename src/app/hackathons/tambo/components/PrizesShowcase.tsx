@@ -44,7 +44,7 @@ const PrizesShowcase = () => {
 								<div className="bg-slate-900 rounded-2xl p-6 border border-amber-400/30 shadow-xl">
 									<div className="flex items-center justify-between mb-4">
 										<span className="text-amber-400 font-bold text-lg">
-											Grand Master
+											Grand Champion
 										</span>
 										<Trophy className="w-6 h-6 text-amber-400" />
 									</div>
@@ -99,7 +99,7 @@ const PrizesShowcase = () => {
 							</h3>
 						</div>
 
-						<p className="text-lg text-slate-300 leading-relaxed mb-6 max-w-4xl">
+						<p className="text-lg text-slate-300 leading-relaxed mb-6 max-w-4xl mx-auto text-center">
 							Join the Rebel Alliance! Star the{" "}
 							<Link
 								href="https://github.com/tambo-ai/tambo"
