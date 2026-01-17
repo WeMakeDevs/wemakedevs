@@ -10,6 +10,8 @@ import { DATA as motiahackData } from "@/app/hackathons/motiahack25/data";
 import { images as motiahackImages } from "@/app/hackathons/motiahack25/images";
 import { DATA as openSourceFestData } from "@/app/hackathons/opensourcefest25/data";
 import { images as openSourceFestImages } from "@/app/hackathons/opensourcefest25/images";
+import { DATA as tamboData } from "@/app/hackathons/tambo/data";
+import { images as tamboImages } from "@/app/hackathons/tambo/images";
 import {
 	cloudNativeHackathonThumbnail,
 	kestraHackWeekThumbnail,
@@ -29,6 +31,14 @@ type HackathonType = {
 };
 
 const hackathons: HackathonType[] = [
+	{
+		slug: tamboData.slug,
+		title: tamboData.title,
+		description: tamboData.descriptionCard,
+		thumbnail: tamboImages.thumbnail,
+		startDate: tamboData.startDate,
+		endDate: tamboData.endDate,
+	},
 	{
 		slug: assemblehackData.slug,
 		title: assemblehackData.title,
