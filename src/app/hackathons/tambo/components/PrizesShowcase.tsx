@@ -1,4 +1,4 @@
-import { Gift, Star, Trophy } from "lucide-react";
+import { Briefcase, Gift, Star, Trophy } from "lucide-react";
 import Link from "next/link";
 
 const PrizesShowcase = () => {
@@ -80,52 +80,90 @@ const PrizesShowcase = () => {
 								</div>
 							</div>
 
-							<div className="mt-8">
+							<div className="mt-8 flex flex-wrap gap-3 justify-center">
 								<span className="inline-block bg-slate-900/40 backdrop-blur-sm px-5 py-2.5 rounded-full font-semibold text-white border border-white/20">
 									+ exclusive swag for all winners
+								</span>
+								<span className="inline-block bg-slate-900/40 backdrop-blur-sm px-5 py-2.5 rounded-full font-semibold text-white border border-white/20">
+									+ job/intern interviews at Tambo
 								</span>
 							</div>
 						</div>
 					</div>
 
-					{/* Community Rewards */}
-					<div className="bg-slate-900/50 backdrop-blur-sm rounded-3xl border border-amber-500/20 p-8 md:p-10">
-						<div className="flex items-center gap-4 mb-6">
-							<div className="bg-gradient-to-br from-amber-500 to-yellow-600 p-4 rounded-xl shadow-lg">
-								<Star className="w-8 h-8 text-slate-900" />
+					{/* Community Rewards - Two boxes side by side */}
+					<div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+						{/* Rebel Alliance Rewards */}
+						<div className="bg-slate-900/50 backdrop-blur-sm rounded-3xl border border-amber-500/20 p-8 md:p-10">
+							<div className="flex items-center gap-4 mb-6">
+								<div className="bg-gradient-to-br from-amber-500 to-yellow-600 p-4 rounded-xl shadow-lg">
+									<Star className="w-8 h-8 text-slate-900" />
+								</div>
+								<h3 className="text-2xl md:text-3xl font-bold text-amber-400">
+									Rebel Alliance Rewards
+								</h3>
 							</div>
-							<h3 className="text-2xl md:text-3xl font-bold text-amber-400">
-								Rebel Alliance Rewards
-							</h3>
+
+							<p className="text-lg text-slate-300 leading-relaxed mb-6 text-center">
+								Join the Rebel Alliance! Star the{" "}
+								<Link
+									href="https://github.com/tambo-ai/tambo"
+									target="_blank"
+									rel="noopener noreferrer"
+									className="text-amber-400 hover:text-amber-300 font-semibold underline decoration-2 underline-offset-2 transition-colors"
+								>
+									Tambo repository
+								</Link>{" "}
+								on GitHub and share your participation on social media (don't forget to tag{" "}
+								<Link
+									href="https://tambo.co"
+									target="_blank"
+									rel="noopener noreferrer"
+									className="text-amber-400 hover:text-amber-300 font-semibold underline decoration-2 underline-offset-2 transition-colors"
+								>
+									Tambo
+								</Link>
+								). Top 10 posts will win swag bundles.
+							</p>
+
+							<div className="flex items-center gap-3 bg-slate-800/50 rounded-xl px-5 py-3 w-fit border border-amber-500/20 mx-auto">
+								<Gift className="w-5 h-5 text-amber-400" />
+								<span className="font-bold text-amber-400 text-lg">
+									Top 10 Posts Win Swag Boxes
+								</span>
+							</div>
 						</div>
 
-						<p className="text-lg text-slate-300 leading-relaxed mb-6 max-w-4xl mx-auto text-center">
-							Join the Rebel Alliance! Star the{" "}
-							<Link
-								href="https://github.com/tambo-ai/tambo"
-								target="_blank"
-								rel="noopener noreferrer"
-								className="text-amber-400 hover:text-amber-300 font-semibold underline decoration-2 underline-offset-2 transition-colors"
-							>
-								Tambo repository
-							</Link>{" "}
-							on GitHub and share your participation on social media (don't forget to tag{" "}
-							<Link
-								href="https://tambo.co"
-								target="_blank"
-								rel="noopener noreferrer"
-								className="text-amber-400 hover:text-amber-300 font-semibold underline decoration-2 underline-offset-2 transition-colors"
-							>
-								Tambo
-							</Link>
-							). Top 10 posts will win swag bundles.
-						</p>
+						{/* Interview Opportunity */}
+						<div className="bg-slate-900/50 backdrop-blur-sm rounded-3xl border border-amber-500/20 p-8 md:p-10">
+							<div className="flex items-center gap-4 mb-6">
+								<div className="bg-gradient-to-br from-amber-500 to-yellow-600 p-4 rounded-xl shadow-lg">
+									<Briefcase className="w-8 h-8 text-slate-900" />
+								</div>
+								<h3 className="text-2xl md:text-3xl font-bold text-amber-400">
+									Career Opportunities
+								</h3>
+							</div>
 
-						<div className="flex items-center gap-3 bg-slate-800/50 rounded-xl px-5 py-3 w-fit border border-amber-500/20 mx-auto">
-							<Gift className="w-5 h-5 text-amber-400" />
-							<span className="font-bold text-amber-400 text-lg">
-								Top 10 Posts Win Swag Boxes
-							</span>
+							<p className="text-lg text-slate-300 leading-relaxed mb-6 text-center">
+								All winners will get the opportunity to interview for job and intern positions at{" "}
+								<Link
+									href="https://tambo.co"
+									target="_blank"
+									rel="noopener noreferrer"
+									className="text-amber-400 hover:text-amber-300 font-semibold underline decoration-2 underline-offset-2 transition-colors"
+								>
+									Tambo
+								</Link>
+								. Showcase your skills and join the team building the future of Generative UI!
+							</p>
+
+							<div className="flex items-center gap-3 bg-slate-800/50 rounded-xl px-5 py-3 w-fit border border-amber-500/20 mx-auto">
+								<Briefcase className="w-5 h-5 text-amber-400" />
+								<span className="font-bold text-amber-400 text-lg">
+									Job & Intern Interviews at Tambo
+								</span>
+							</div>
 						</div>
 					</div>
 				</div>

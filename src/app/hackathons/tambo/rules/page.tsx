@@ -34,7 +34,7 @@ const HackathonRules = async () => {
 							generative components, interactable components, MCP
 							integrations, and local tools is recommended to
 							maximize your chances of winning prizes such as cash
-							rewards and exclusive swag.
+							rewards, exclusive swag, and job/intern interviews at Tambo.
 						</li>
 						<li>
 							You must build a new project during the hackathon.

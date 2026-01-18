@@ -101,8 +101,8 @@ const AboutSection = () => {
 										$6,000+ in rewards
 									</p>
 									<p className="text-slate-300 leading-relaxed">
-										Compete for galactic prizes and
-										exclusive swag. Top 3 Jedi Masters take
+										Compete for galactic prizes,
+										exclusive swag, and job/intern interviews at Tambo. Top 3 Jedi Masters take
 										home $6,000 plus rewards.
 									</p>
 								</div>

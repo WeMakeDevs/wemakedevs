@@ -22,7 +22,7 @@ const DATA = {
 		winning: [
 			{
 				name: "Top 3 Winners",
-				prize: "$6,000 + exclusive swag",
+				prize: "$6,000 + exclusive swag + job/intern interviews at Tambo",
 			},
 		],
 		giveaway: [

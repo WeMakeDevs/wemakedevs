@@ -36,7 +36,7 @@ export default function Home() {
 				<div className="flex flex-col md:flex-row items-center justify-center">
 					<span className="text-white">
 						The UI Strikes Back Hackathon is live! $6,000+ in cash
-						prizes and exclusive swag!{" "}
+						prizes, exclusive swag, and job/intern interviews at Tambo!{" "}
 					</span>
 					<Link
 						href="https://forms.gle/PG5jppKYjwky4BFUA"

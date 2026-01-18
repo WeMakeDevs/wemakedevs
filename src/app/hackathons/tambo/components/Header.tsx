@@ -109,6 +109,9 @@ const HackathonHeader = ({
 								<p className="text-slate-400 mt-1">
 									+ exclusive swag
 								</p>
+								<p className="text-slate-400 mt-1">
+									+ job/intern interviews at Tambo
+								</p>
 							</div>
 						</div>
 					</div>
