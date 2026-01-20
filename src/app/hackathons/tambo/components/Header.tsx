@@ -45,6 +45,11 @@ const HackathonHeader = ({
 							startDate={startDate}
 							endDate={endDate}
 						/>
+						<div className="flex items-center gap-3 mb-4">
+							<span className="inline-block bg-amber-500/20 text-amber-400 px-4 py-1.5 rounded-full text-sm md:text-base font-semibold border border-amber-500/30">
+								Online Hackathon
+							</span>
+						</div>
 						<h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-amber-400 via-yellow-300 to-amber-500 bg-clip-text text-transparent leading-tight">
 							{title}
 						</h1>

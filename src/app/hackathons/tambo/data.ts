@@ -7,7 +7,7 @@ const DATA = {
 	startDate: "2026-02-02T08:00:00+05:30",
 	endDate: "2026-02-08T23:59:59+05:30",
 	description:
-		"Build generative UI applications with the power of Tambo. May the components be with you.",
+		"Join our online hackathon and build generative UI applications with the power of Tambo. May the components be with you.",
 	descriptionCard:
 		"Build generative UI applications with the power of Tambo. May the components be with you.",
 	slug: "tambo",
