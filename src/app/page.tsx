@@ -20,9 +20,9 @@ export default function Home() {
 		<div>
 			<Navbar />
 			<Header />
+			<Numbers />
 			<Testimonials />
 			<Newsletter />
-			<Numbers />
 			<Hackathons />
 			<Meetups />
 			<Initiatives />
