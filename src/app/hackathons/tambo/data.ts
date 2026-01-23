@@ -65,7 +65,7 @@ const navLinks = [
 	},
 	{
 		href: `/hackathons/${DATA.slug}/starter-template`,
-		label: "Starter Template",
+		label: "Side Quests",
 		page: "starter-template",
 	},
 ];
