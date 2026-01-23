@@ -9,7 +9,7 @@ const DATA = {
 	description:
 		"Rev your engines and join our online hackathon! Run, orchestrate, and scale MCP-based agents with Archestra. It's not about how fast you code, it's about control, security, and architecture.",
 	descriptionCard:
-		"Build powerful MCP servers and agents with Archestra. It's not about how fast you code, it's about the architecture.",
+		"Run powerful MCP-based agents with Archestra. Architecture wins races.",
 	slug: "2fast2mcp",
 	images,
 	cta: {
