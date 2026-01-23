@@ -14,7 +14,7 @@ const DATA = {
 	images,
 	cta: {
 		label: "Register Now",
-		href: "https://forms.gle/PLACEHOLDER", // TODO: Update with actual form link
+		href: "https://forms.gle/GtDSjNvxJ7iTD6LD9",
 		openInNewTab: true,
 		disabled: false,
 	},
