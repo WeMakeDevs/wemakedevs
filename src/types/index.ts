@@ -151,7 +151,8 @@ export type PageType =
 	| "resources"
 	| "rules"
 	| "projects"
-	| "contributors";
+	| "contributors"
+	| "starter-template";
 
 export interface HackathonNavInterface extends GeneralComponent {
 	slug: string;
