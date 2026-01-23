@@ -1,4 +1,4 @@
-import { Gift, Star, Trophy } from "lucide-react";
+import { Briefcase, Gift, Star, Trophy } from "lucide-react";
 import Link from "next/link";
 
 const PrizesShowcase = () => {
@@ -99,50 +99,88 @@ const PrizesShowcase = () => {
 								<span className="inline-block bg-slate-900/40 backdrop-blur-sm px-5 py-2.5 rounded-full font-semibold text-white border border-white/20">
 									+ exclusive swag for all winners
 								</span>
+								<span className="inline-block bg-slate-900/40 backdrop-blur-sm px-5 py-2.5 rounded-full font-semibold text-white border border-white/20">
+									+ job interview at Archestra.ai with the CEO
+								</span>
 							</div>
 						</div>
 					</div>
 
-					{/* Community Rewards */}
-					<div className="bg-slate-900/50 backdrop-blur-sm rounded-3xl border border-orange-500/20 p-8 md:p-10">
-						<div className="flex items-center gap-4 mb-6">
-							<div className="bg-gradient-to-br from-orange-500 to-red-600 p-4 rounded-xl shadow-lg">
-								<Star className="w-8 h-8 text-white" />
+					{/* Community Rewards - Two boxes side by side */}
+					<div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+						{/* Pit Crew Rewards */}
+						<div className="bg-slate-900/50 backdrop-blur-sm rounded-3xl border border-orange-500/20 p-8 md:p-10">
+							<div className="flex items-center gap-4 mb-6">
+								<div className="bg-gradient-to-br from-orange-500 to-red-600 p-4 rounded-xl shadow-lg">
+									<Star className="w-8 h-8 text-white" />
+								</div>
+								<h3 className="text-2xl md:text-3xl font-bold text-orange-400">
+									Pit Crew Rewards
+								</h3>
 							</div>
-							<h3 className="text-2xl md:text-3xl font-bold text-orange-400">
-								Pit Crew Rewards
-							</h3>
+
+							<p className="text-lg text-slate-300 leading-relaxed mb-6 text-center">
+								Show your support for the crew! Star the{" "}
+								<Link
+									href="https://github.com/archestra-ai/archestra"
+									target="_blank"
+									rel="noopener noreferrer"
+									className="text-orange-400 hover:text-orange-300 font-semibold underline decoration-2 underline-offset-2 transition-colors"
+								>
+									Archestra repository
+								</Link>{" "}
+								on GitHub and share your participation on social
+								media (don't forget to tag{" "}
+								<Link
+									href="https://archestra.ai"
+									target="_blank"
+									rel="noopener noreferrer"
+									className="text-orange-400 hover:text-orange-300 font-semibold underline decoration-2 underline-offset-2 transition-colors"
+								>
+									Archestra
+								</Link>
+								). Top 10 posts will win swag bundles - because
+								family takes care of family.
+							</p>
+
+							<div className="flex items-center gap-3 bg-slate-800/50 rounded-xl px-5 py-3 w-fit border border-orange-500/20 mx-auto">
+								<Gift className="w-5 h-5 text-orange-400" />
+								<span className="font-bold text-orange-400 text-lg">
+									Top 10 Posts Win Swag Boxes
+								</span>
+							</div>
 						</div>
 
-						<p className="text-lg text-slate-300 leading-relaxed mb-6 text-center">
-							Show your support for the crew! Star the{" "}
-							<Link
-								href="https://github.com/archestra-ai/archestra"
-								target="_blank"
-								rel="noopener noreferrer"
-								className="text-orange-400 hover:text-orange-300 font-semibold underline decoration-2 underline-offset-2 transition-colors"
-							>
-								Archestra repository
-							</Link>{" "}
-							on GitHub and share your participation on social
-							media (don't forget to tag{" "}
-							<Link
-								href="https://archestra.ai"
-								target="_blank"
-								rel="noopener noreferrer"
-								className="text-orange-400 hover:text-orange-300 font-semibold underline decoration-2 underline-offset-2 transition-colors"
-							>
-								Archestra
-							</Link>
-							). Top 10 posts will win swag bundles - because
-							family takes care of family.
-						</p>
+						{/* Interview Opportunity */}
+						<div className="bg-slate-900/50 backdrop-blur-sm rounded-3xl border border-orange-500/20 p-8 md:p-10">
+							<div className="flex items-center gap-4 mb-6">
+								<div className="bg-gradient-to-br from-orange-500 to-red-600 p-4 rounded-xl shadow-lg">
+									<Briefcase className="w-8 h-8 text-white" />
+								</div>
+								<h3 className="text-2xl md:text-3xl font-bold text-orange-400">
+									Career Opportunities
+								</h3>
+							</div>
 
-						<div className="flex items-center gap-3 bg-slate-800/50 rounded-xl px-5 py-3 w-fit border border-orange-500/20 mx-auto">
-							<Gift className="w-5 h-5 text-orange-400" />
-							<span className="font-bold text-orange-400 text-lg">
-								Top 10 Posts Win Swag Boxes
-							</span>
+							<p className="text-lg text-slate-300 leading-relaxed mb-6 text-center">
+								All winners will get the opportunity to interview for a job position at{" "}
+								<Link
+									href="https://archestra.ai"
+									target="_blank"
+									rel="noopener noreferrer"
+									className="text-orange-400 hover:text-orange-300 font-semibold underline decoration-2 underline-offset-2 transition-colors"
+								>
+									Archestra.ai
+								</Link>
+								{" "}with the CEO. Showcase your skills and join the team building the future of MCP-based agent orchestration!
+							</p>
+
+							<div className="flex items-center gap-3 bg-slate-800/50 rounded-xl px-5 py-3 w-fit border border-orange-500/20 mx-auto">
+								<Briefcase className="w-5 h-5 text-orange-400" />
+								<span className="font-bold text-orange-400 text-lg">
+									Job Interview at Archestra.ai with the CEO
+								</span>
+							</div>
 						</div>
 					</div>
 				</div>

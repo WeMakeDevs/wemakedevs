@@ -114,6 +114,9 @@ const HackathonHeader = ({
 								<p className="text-slate-400 mt-1">
 									+ exclusive swag
 								</p>
+								<p className="text-slate-400 mt-1">
+									+ job interview at Archestra.ai with the CEO
+								</p>
 							</div>
 						</div>
 					</div>

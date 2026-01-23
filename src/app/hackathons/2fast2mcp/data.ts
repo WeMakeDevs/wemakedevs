@@ -22,7 +22,7 @@ const DATA = {
 		winning: [
 			{
 				name: "Top 3 Winners",
-				prize: "$10,000 + exclusive swag",
+				prize: "$10,000 + exclusive swag + job interview at Archestra.ai with the CEO",
 			},
 		],
 		giveaway: [
