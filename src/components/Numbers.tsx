@@ -37,12 +37,12 @@ const Numbers = ({ className, ...props }: GeneralComponent) => {
 
 	return (
 		<section
-			className={cn(className, "my-16 scroll-m-[100px]")}
+			className={cn(className, "mt-8 mb-16 scroll-m-[100px]")}
 			{...props}
 			id="numbers"
 		>
 		<ViewContainer className="relative">
-			<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8 mt-12">
+			<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8">
 					{numbers.map(item => (
 						<NumberCard key={item.name} {...item} />
 					))}
