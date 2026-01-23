@@ -1,4 +1,3 @@
-import About from "@/components/About";
 import Banner from "@/components/Banner";
 import Faq from "@/components/Faq";
 import Footer from "@/components/Footer";
@@ -21,7 +20,6 @@ export default function Home() {
 		<div>
 			<Navbar />
 			<Header />
-			<About />
 			<Testimonials />
 			<Newsletter />
 			<Numbers />

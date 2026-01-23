@@ -45,7 +45,9 @@ const Header = ({ className, ...props }: GeneralComponent) => {
 				<p className="max-w-3xl w-full text-lg lg:text-xl mx-auto mt-10 font-medium">
 					WeMakeDevs is an inclusive global community for anyone
 					passionate about technology. We foster collaboration and
-					innovation through global events.
+					innovation through global hackathons and events,
+					partnering with leading and emerging companies, as well
+					as open source projects.
 				</p>
 				<div className="mx-auto flex flex-wrap gap-5 md:gap-10 justify-center mt-12">
 					<Link
