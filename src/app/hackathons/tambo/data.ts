@@ -63,6 +63,11 @@ const navLinks = [
 		label: "Schedule",
 		page: "schedule",
 	},
+	{
+		href: `/hackathons/${DATA.slug}/starter-template`,
+		label: "Starter Template",
+		page: "starter-template",
+	},
 ];
 
 const faqs: FaqType[] = [
@@ -93,6 +98,15 @@ const faqs: FaqType[] = [
 ];
 
 const schedule = [
+	{
+		date: "2026-01-31T00:00:00+05:30",
+		items: [
+			{
+				title: "Pre event",
+				time: "2026-01-31T23:59:59+05:30",
+			},
+		],
+	},
 	{
 		date: "2026-02-02T00:00:00+05:30",
 		items: [
