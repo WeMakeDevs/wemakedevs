@@ -111,11 +111,8 @@ const Testimonials = ({ className, ...props }: GeneralComponent) => {
 			{...props}
 			id="testimonials"
 		>
-			<ViewContainer className="">
-				<h2 className="text-4xl md:text-5xl text-center mx-auto">
-					Testimonials
-				</h2>
-				<Carousel
+		<ViewContainer className="">
+			<Carousel
 					className="mt-10 overflow-clip md:overflow-visible"
 					opts={{
 						align: "center",
