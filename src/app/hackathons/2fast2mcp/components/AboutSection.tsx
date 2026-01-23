@@ -10,8 +10,7 @@ const AboutSection = () => {
 						Floor It to Victory
 					</h2>
 					<p className="text-xl text-slate-400 max-w-3xl mx-auto">
-						Build powerful MCP servers and agents that go from 0 to
-						deployed in record time
+						Run powerful MCP-based agents that go from 0 to deployed in record time.
 					</p>
 				</div>
 
@@ -20,24 +19,19 @@ const AboutSection = () => {
 					{/* Left column - Text content */}
 					<div className="space-y-8">
 						<p className="text-lg md:text-xl text-slate-300 leading-relaxed">
-							In a world where AI agents are becoming the new
-							standard, developers need tools that can keep up
-							with the pace. Enter Archestra - your pit crew for
-							building, deploying, and orchestrating MCP servers
-							at scale.
+							In a world where AI agents are becoming the new standard, teams need platforms that can keep up with the pace. Enter Archestra, your pit crew for running, orchestrating, and scaling MCP-based agents at speed.
 						</p>
 						<p className="text-lg md:text-xl text-slate-300 leading-relaxed">
-							The Model Context Protocol (MCP) is revolutionizing
-							how AI agents interact with external tools and data.
-							With Archestra, you can build MCP servers that give
-							your agents the horsepower they need to tackle any
-							challenge.
+							The Model Context Protocol (MCP) is changing how AI agents interact with tools, data, and systems. Archestra brings those agents out of individual machines and into a centralized, governed, production-ready environment, with built-in security, observability, and cost control.
 						</p>
 						<p className="text-lg md:text-xl text-slate-300 leading-relaxed">
-							Whether you're a seasoned DevOps engineer, an SRE
-							looking to automate, or a tinkerer who loves
-							building intelligent agents - this hackathon is your
-							track to prove what you can build.
+							Whether you're a seasoned DevOps engineer, an SRE automating platforms, or a tinkerer experimenting with intelligent agents, this hackathon is your track to prove what you can ship, operate, and scale, not just demo.
+						</p>
+						<p className="text-lg md:text-xl text-slate-300 leading-relaxed">
+							This isn't about how much you can build.
+						</p>
+						<p className="text-lg md:text-xl text-slate-300 leading-relaxed">
+							It's about how cleanly you can run AI at full throttle.
 						</p>
 					</div>
 

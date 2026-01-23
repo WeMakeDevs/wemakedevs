@@ -7,7 +7,7 @@ const DATA = {
 	startDate: "2026-02-09T08:00:00+05:30",
 	endDate: "2026-02-15T23:59:59+05:30",
 	description:
-		"Rev your engines and join our online hackathon! Build powerful MCP servers and agents with Archestra. It's not about how fast you code, it's about the architecture.",
+		"Rev your engines and join our online hackathon! Run, orchestrate, and scale MCP-based agents with Archestra. It's not about how fast you code, it's about control, security, and architecture.",
 	descriptionCard:
 		"Build powerful MCP servers and agents with Archestra. It's not about how fast you code, it's about the architecture.",
 	slug: "2fast2mcp",

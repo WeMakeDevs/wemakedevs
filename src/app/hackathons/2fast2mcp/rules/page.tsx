@@ -4,6 +4,7 @@ import {
 } from "@/components/hackathon-content";
 import HackathonContentBody from "@/components/hackathon-content/HackathonContentBody";
 import { ViewContainer } from "@/components/ui/view-container";
+import Link from "next/link";
 import { DATA, navLinks } from "../data";
 import { images } from "../images";
 
@@ -29,12 +30,14 @@ const HackathonRules = async () => {
 				<HackathonContentBody className="text-slate-300">
 					<ol className="list-decimal list-outside space-y-4 pl-6">
 						<li>
-							The more Archestra features you use, the faster
-							you'll cross the finish line. Using Archestra's MCP
-							server capabilities, agent orchestration, and
-							deployment tools is recommended to maximize your
-							chances of winning prizes including cash rewards and
-							exclusive swag.
+							The more Archestra features you use, the faster you'll cross the finish line. Using Archestra's MCP-based agent orchestration, centralized runtime, security guardrails, observability, and deployment capabilities is recommended to maximize your chances of winning prizes, including cash rewards and exclusive swag. Check out the{" "}
+							<Link
+								href={`/hackathons/${DATA.slug}/resources`}
+								className="text-orange-400 hover:text-orange-300 underline"
+							>
+								resources section
+							</Link>
+							.
 						</li>
 						<li>
 							You must build a new project during the hackathon.

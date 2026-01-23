@@ -44,20 +44,26 @@ const HackathonPage = () => {
 					<h2 className="text-3xl md:text-4xl font-bold text-orange-400 uppercase tracking-wide mb-6 text-center">
 						About 2 Fast 2 MCP
 					</h2>
-					<p className="text-lg md:text-xl text-slate-300 leading-relaxed max-w-4xl mx-auto text-center">
-						In a world where AI agents need to go fast, there's only
-						one platform that can keep up. 2 Fast 2 MCP is an online
-						hackathon that brings together tinkerers, agent
-						builders, DevOps engineers, and SREs from around the
-						globe. Harness the power of Archestra to build MCP
-						(Model Context Protocol) servers and intelligent agent
-						orchestration systems. Whether you're a veteran of the
-						DevOps scene or just getting your license to build,
-						this hackathon is your track to prove what you're made
-						of. Remember: it doesn't matter if you win by an inch or
-						a mile - winning's winning. But in this race, we reward
-						the fastest AND the most innovative!
-					</p>
+					<div className="text-lg md:text-xl text-slate-300 leading-relaxed max-w-4xl mx-auto text-center space-y-4">
+						<p>
+							In a world where AI agents need to go fast, there's only one platform that can keep up.
+						</p>
+						<p>
+							2 Fast 2 MCP is an online hackathon bringing together tinkerers, agent builders, DevOps engineers, and SREs from around the globe.
+						</p>
+						<p>
+							Harness the power of Archestra to run, orchestrate, secure, and observe MCP-based agents at scale.
+						</p>
+						<p>
+							Whether you're a DevOps veteran or just getting your license to ship AI systems, this hackathon is your track to prove what you're made of.
+						</p>
+						<p>
+							Remember: it doesn't matter if you win by an inch or a mile, winning's winning.
+						</p>
+						<p>
+							But in this race, we reward the fastest setups and the cleanest architectures.
+						</p>
+					</div>
 				</ViewContainer>
 
 				{/* Features Section */}
@@ -97,22 +103,17 @@ const HackathonPage = () => {
 							</Link>
 						</div>
 						<div className="p-8">
-							<p className="text-lg text-slate-300 leading-relaxed">
-								Archestra is your pit crew for building,
-								deploying, and managing MCP servers at scale.
-								The Model Context Protocol enables AI agents to
-								securely connect to external tools, data
-								sources, and services. With Archestra, you get a
-								complete platform for creating powerful MCP
-								integrations - from simple tool servers to
-								complex multi-agent orchestration systems.
-								Whether you're building internal automation,
-								customer-facing AI features, or experimental
-								agent architectures, Archestra gives you the
-								horsepower to go from idea to production at
-								breakneck speed. Join the crew and build the
-								future of AI agent infrastructure!
-							</p>
+							<div className="text-lg text-slate-300 leading-relaxed space-y-4">
+								<p>
+									Archestra is a centralized, MCP-native AI platform that lets teams run, orchestrate, secure, and observe AI agents across an organization. It acts as the control plane for AI agents that use the Model Context Protocol, bringing them out of individual machines and into a shared, governed, production-ready environment. Archestra provides a unified runtime with built-in security guardrails, cost controls, observability, and a ChatGPT-style interface, so AI agents can be safely deployed, shared, and used at scale.
+								</p>
+								<p>
+									<strong>How to use it?</strong> For hackathon participants and innovators, Archestra provides an out-of-the-box infrastructure to rapidly prototype AI solutions – you get a chat UI, hundreds of connectors, multi-LLM support, and safety mechanisms all in one package. Instead of spending time worrying about servers, security, or integration plumbing, you can focus on building the fun part of your project (the agent's logic and impact), while Archestra handles the heavy lifting of running it reliably.
+								</p>
+								<p>
+									This allows tinkerers, agent builders, DevOps, and SREs alike to collaborate and iterate faster, unlocking AI's potential without the chaos. By using Archestra, teams can confidently say they have a centralized, secure AI platform in place, not just a cool demo, but something that could scale and slot right into a company's ecosystem the next day.
+								</p>
+							</div>
 						</div>
 					</div>
 				</ViewContainer>
@@ -180,10 +181,7 @@ const HackathonPage = () => {
 								Best Use of Archestra
 							</h3>
 							<p className="text-slate-300">
-								Evaluates how effectively the project leverages
-								Archestra's MCP capabilities to build powerful
-								agent integrations and demonstrate innovative
-								applications of the platform.
+								Evaluates how effectively the project leverages Archestra's MCP capabilities to run, orchestrate, and integrate powerful agents, while demonstrating innovative applications of the platform.
 							</p>
 						</div>
 					</div>
