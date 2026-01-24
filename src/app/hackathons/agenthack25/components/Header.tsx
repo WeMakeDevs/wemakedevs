@@ -48,10 +48,7 @@ const HackathonHeader = ({
 							{cta.disabled ? (
 								<div
 									className={cn(
-										buttonVariants({
-											variant: "default",
-										}),
-										"mt-4 md:mt-6 cursor-not-allowed opacity-60",
+										"mt-4 md:mt-6 cursor-not-allowed opacity-60 px-6 py-3 rounded-lg font-mono tracking-wide border border-white/15 bg-white/5 text-slate-400",
 									)}
 								>
 									{cta.label}
@@ -59,13 +56,17 @@ const HackathonHeader = ({
 							) : (
 								<Link
 									href={cta.href}
-									className={cn(
-										buttonVariants({ variant: "default" }),
-										"mt-4 md:mt-6 ",
-									)}
-									target="_blank"
-									rel="noopener noreferrer"
+									className="mt-4 md:mt-6 inline-flex items-center gap-2 px-6 py-3 rounded-lg border border-blue-400/30 bg-blue-500/20 text-white font-mono tracking-wide shadow-[0_12px_25px_rgba(0,0,0,0.35)] hover:bg-blue-500/30 hover:border-blue-300 transition-all"
+									target={
+										cta.openInNewTab ? "_blank" : "_self"
+									}
+									rel={
+										cta.openInNewTab
+											? "noopener noreferrer"
+											: undefined
+									}
 								>
+									<span className="text-blue-200">&gt;</span>
 									{cta.label}
 								</Link>
 							)}
