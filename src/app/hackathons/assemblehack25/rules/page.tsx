@@ -14,7 +14,6 @@ const HackathonRules = async () => {
 				slug={DATA.slug}
 				page="rules"
 				links={navLinks}
-				navCta={DATA.cta}
 			/>
 			<ViewContainer className="my-10">
 				<HackathonContentBody>

@@ -1,10 +1,13 @@
+import { HackathonContentTitle } from "@/components/hackathon-content";
 import { HackathonCoverImage } from "@/components/hackathon-content";
+import { ViewContainer } from "@/components/ui/view-container";
 import AboutSection from "./components/AboutSection";
 import FaqSection from "./components/FaqSection";
 import HackathonHeader from "./components/Header";
 import JudgingCriteria from "./components/JudgingCriteria";
 import PrizesShowcase from "./components/PrizesShowcase";
 import SponsorsShowcase from "./components/SponsorsShowcase";
+import AssembleHackStats from "./components/Stats";
 import SecondaryNavbar from "./components/navbars/SecondaryNavbar";
 import { DATA, faqs, navLinks } from "./data";
 import { images } from "./images";
@@ -17,7 +20,6 @@ const HackathonPage = () => {
 				slug={DATA.slug}
 				page="overview"
 				links={navLinks}
-				navCta={DATA.cta}
 			/>
 			<div id="about" className="scroll-mt-16">
 				<HackathonHeader
@@ -27,7 +29,14 @@ const HackathonPage = () => {
 					endDate={DATA.endDate}
 					prize={DATA.prize}
 					showDate={DATA.showDate}
+					cta={DATA.cta}
 				/>
+				<ViewContainer className="mt-10">
+					<HackathonContentTitle>
+						AI Agents Assemble 2025 Stats
+					</HackathonContentTitle>
+					<AssembleHackStats />
+				</ViewContainer>
 				<AboutSection />
 			</div>
 			<div id="prizes" className="scroll-mt-16">

@@ -24,6 +24,12 @@ const HackathonPage = () => {
 				slug={DATA.slug}
 				page="overview"
 				links={navLinks}
+				navCta={{
+					label: DATA.cta.label,
+					href: DATA.cta.href,
+					openInNewTab: DATA.cta.openInNewTab,
+					disabled: DATA.cta.disabled,
+				}}
 			/>
 			<HackathonHeader
 				title={DATA.title}
@@ -41,7 +47,7 @@ const HackathonPage = () => {
 						innovators from around the globe. AgentHack provided a
 						platform to build impactful AI agent projects, featuring
 						workshops, networking opportunities, and prizes worth
-						$20,000+ to tech enthusiast coming from different
+						$6,000+ to tech enthusiast coming from different
 						experience level. Attendees came together to learn,
 						connect, and have fun while advancing their skills and
 						contributing to the open-source AI community.
@@ -91,7 +97,7 @@ const HackathonPage = () => {
 							</li>
 							<li>
 								<span className="font-semibold">
-									Prizes Worth Over $20,000:
+									Prizes Worth Over $6,000:
 								</span>{" "}
 								Competed for substantial rewards that recognized
 								their hard work and innovation, adding value to

@@ -19,7 +19,6 @@ const AssemblehackProjects = async () => {
 				slug={hackathonData.slug}
 				page="projects"
 				links={navLinks}
-				navCta={hackathonData.cta}
 			/>
 			<ViewContainer>
 				<HackathonContentTitle className="mt-4">
