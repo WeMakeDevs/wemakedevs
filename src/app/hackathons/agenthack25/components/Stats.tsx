@@ -12,7 +12,7 @@ const numbers: NumbersShowcaseType[] = [
 		prefix: "$",
 	},
 	{
-		name: "Participations",
+		name: "Participants",
 		number: 6000,
 		icon: Users,
 		color: "accent-2",

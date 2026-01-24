@@ -24,12 +24,6 @@ const HackathonPage = () => {
 				slug={DATA.slug}
 				page="overview"
 				links={navLinks}
-				navCta={{
-					label: DATA.cta.label,
-					href: DATA.cta.href,
-					openInNewTab: DATA.cta.openInNewTab,
-					disabled: DATA.cta.disabled,
-				}}
 			/>
 			<HackathonHeader
 				title={DATA.title}
