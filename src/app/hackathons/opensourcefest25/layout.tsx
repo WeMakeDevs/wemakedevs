@@ -37,7 +37,7 @@ export default function RootLayout({
 		{
 			name: "Partner with us",
 			url: "https://www.wemakedevs.org/#partners",
-			type: "link",
+			type: "button",
 		},
 	];
 

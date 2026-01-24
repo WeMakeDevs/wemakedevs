@@ -32,11 +32,6 @@ export default function RootLayout({
 		{
 			name: "Partner with us",
 			url: "https://www.wemakedevs.org/#partners",
-			type: "link",
-		},
-		{
-			name: DATA.hackathonCtas.nav.label,
-			url: DATA.hackathonCtas.nav.href,
 			type: "button",
 		},
 	];
