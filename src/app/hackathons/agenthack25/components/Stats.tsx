@@ -6,25 +6,26 @@ import { Code, Globe, Trophy, Users } from "lucide-react";
 const numbers: NumbersShowcaseType[] = [
 	{
 		name: "Prizes in $ worth",
-		number: 6000,
+		number: 20000,
 		icon: Trophy,
 		color: "accent-1",
+		prefix: "$",
 	},
 	{
 		name: "Participations",
-		number: 4000,
+		number: 6000,
 		icon: Users,
 		color: "accent-2",
 	},
 	{
 		name: "Project submissions",
-		number: 150,
+		number: 500,
 		color: "accent-3",
 		icon: Code,
 	},
 	{
 		name: "Countries",
-		number: 30,
+		number: 20,
 		icon: Globe,
 		color: "accent-4",
 	},
