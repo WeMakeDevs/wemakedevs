@@ -16,6 +16,7 @@ type HackathonHeaderProps = {
 	cta: {
 		label: string;
 		href: string;
+		openInNewTab?: boolean;
 		disabled?: boolean;
 	};
 };
