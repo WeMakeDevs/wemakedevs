@@ -17,12 +17,6 @@ const HackathonResources = async () => {
 				slug={DATA.slug}
 				page="resources"
 				links={navLinks}
-				navCta={{
-					label: DATA.cta.label,
-					href: DATA.cta.href,
-					openInNewTab: DATA.cta.openInNewTab,
-					disabled: DATA.cta.disabled,
-				}}
 			/>
 			<ViewContainer>
 				<HackathonContentBody>
