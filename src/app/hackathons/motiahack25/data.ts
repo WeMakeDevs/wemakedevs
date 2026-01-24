@@ -14,8 +14,8 @@ const DATA = {
 	slug: "motiahack25",
 	images,
 	cta: {
-		label: "Partner with us",
-		href: "https://www.wemakedevs.org/#partners",
+		label: "Projects",
+		href: "/hackathons/motiahack25/projects",
 		openInNewTab: false,
 		disabled: false,
 	},

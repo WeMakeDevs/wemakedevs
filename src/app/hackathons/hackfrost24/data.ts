@@ -40,12 +40,12 @@ const DATA = {
 	],
 	hackathonCtas: {
 		nav: {
-			href: "https://www.wemakedevs.org/#partners",
-			label: "Partner with us",
+			href: "/hackathons/hackfrost24/projects",
+			label: "Explore projects",
 		},
 		main: {
-			href: "https://www.wemakedevs.org/#partners",
-			label: "Partner with us",
+			href: "/hackathons/hackfrost24/projects",
+			label: "Explore projects",
 		},
 	},
 	prizes: {

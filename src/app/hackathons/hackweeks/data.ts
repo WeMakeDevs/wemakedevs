@@ -20,12 +20,12 @@ const DATA = {
 	],
 	hackathonCtas: {
 		nav: {
-			href: "https://www.wemakedevs.org/#partners",
-			label: "Partner with us",
+			href: "/hackathons/hackweeks/submit",
+			label: "Submit Project",
 		},
 		main: {
-			href: "https://www.wemakedevs.org/#partners",
-			label: "Partner with us",
+			href: "https://forms.gle/Rouo5hxDm6ZQfcUPA",
+			label: "Register for Hackathon",
 		},
 	},
 	images,

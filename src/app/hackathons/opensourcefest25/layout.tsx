@@ -34,6 +34,11 @@ export default function RootLayout({
 			url: `/hackathons/${DATA.slug}#faq`,
 			type: "link",
 		},
+		{
+			name: "Partner with us",
+			url: "https://www.wemakedevs.org/#partners",
+			type: "link",
+		},
 	];
 
 	return (

@@ -16,8 +16,8 @@ const DATA = {
 	slug: "assemblehack25",
 	images,
 	cta: {
-		label: "Partner with us",
-		href: "https://www.wemakedevs.org/#partners",
+		label: "Projects",
+		href: "/hackathons/assemblehack25/projects",
 		openInNewTab: false,
 		disabled: false,
 	},
@@ -110,6 +110,11 @@ const navLinks = [
 		href: `/hackathons/${DATA.slug}/schedule`,
 		label: "Schedule",
 		page: "schedule",
+	},
+	{
+		href: `/hackathons/${DATA.slug}/projects`,
+		label: "Projects",
+		page: "projects",
 	},
 ];
 

@@ -11,8 +11,8 @@ const DATA = {
 	slug: "futurestack25",
 	images,
 	cta: {
-		label: "Partner with us",
-		href: "https://www.wemakedevs.org/#partners",
+		label: "View Projects",
+		href: "/hackathons/futurestack25/projects",
 		openInNewTab: false,
 		disabled: false,
 	},

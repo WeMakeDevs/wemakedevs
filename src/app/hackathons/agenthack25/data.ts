@@ -12,8 +12,8 @@ const DATA = {
 	slug: "agenthack25",
 	images,
 	cta: {
-		label: "Partner with us",
-		href: "https://www.wemakedevs.org/#partners",
+		label: "View Projects",
+		href: "/hackathons/agenthack25/projects",
 		openInNewTab: false,
 		disabled: false,
 	},
