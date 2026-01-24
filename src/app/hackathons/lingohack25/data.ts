@@ -11,8 +11,8 @@ const DATA = {
 	slug: "lingohack25",
 	images,
 	cta: {
-		label: "Projects",
-		href: "/hackathons/lingohack25/projects",
+		label: "Partner with us",
+		href: "https://www.wemakedevs.org/#partners",
 		openInNewTab: false,
 		disabled: false,
 	},

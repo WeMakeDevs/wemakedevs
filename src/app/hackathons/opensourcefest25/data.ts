@@ -13,8 +13,8 @@ const DATA = {
 	slug: "opensourcefest25",
 	images,
 	cta: {
-		label: "Contributor Stories",
-		href: "/hackathons/opensourcefest25/contributors",
+		label: "Partner with us",
+		href: "https://www.wemakedevs.org/#partners",
 		openInNewTab: false,
 		disabled: false,
 	},

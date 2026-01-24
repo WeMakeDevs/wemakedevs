@@ -16,8 +16,8 @@ const DATA = {
 	slug: "assemblehack25",
 	images,
 	cta: {
-		label: "Projects",
-		href: "/hackathons/assemblehack25/projects",
+		label: "Partner with us",
+		href: "https://www.wemakedevs.org/#partners",
 		openInNewTab: false,
 		disabled: false,
 	},
