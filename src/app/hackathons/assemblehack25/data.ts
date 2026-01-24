@@ -16,9 +16,9 @@ const DATA = {
 	slug: "assemblehack25",
 	images,
 	cta: {
-		label: "Register Now",
-		href: "https://forms.gle/oq2TySW9DGyKmftT9",
-		openInNewTab: true,
+		label: "Projects",
+		href: "/hackathons/assemblehack25/projects",
+		openInNewTab: false,
 		disabled: false,
 	},
 	prizes: {
@@ -110,6 +110,11 @@ const navLinks = [
 		href: `/hackathons/${DATA.slug}/schedule`,
 		label: "Schedule",
 		page: "schedule",
+	},
+	{
+		href: `/hackathons/${DATA.slug}/projects`,
+		label: "Projects",
+		page: "projects",
 	},
 ];
 

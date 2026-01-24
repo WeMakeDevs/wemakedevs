@@ -13,7 +13,7 @@ type HackathonHeaderProps = {
 	endDate: string;
 	prize: string;
 	showDate?: boolean;
-	cta: {
+	cta?: {
 		label: string;
 		href: string;
 		openInNewTab?: boolean;
@@ -78,31 +78,33 @@ const HackathonHeader = ({
 							<p className="text-base md:text-lg text-gray-600 font-medium leading-relaxed mt-4">
 								{description}
 							</p>
-							<div className="flex items-center gap-4">
-								{cta.disabled ? (
-									<div className="mt-4 md:mt-6 cursor-not-allowed opacity-60 px-8 py-4 rounded-full font-bold tracking-wide border-2 border-gray-300 bg-gray-100 text-gray-400">
-										{cta.label}
-									</div>
-								) : (
-									<Link
-										href={cta.href}
-										className="mt-4 md:mt-6 inline-flex items-center gap-2 px-8 py-4 rounded-full border-2 border-cyan-500 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold tracking-wide shadow-lg hover:shadow-xl hover:from-cyan-600 hover:to-blue-700 transition-all"
-										target={
-											cta.openInNewTab
-												? "_blank"
-												: "_self"
-										}
-										rel={
-											cta.openInNewTab
-												? "noopener noreferrer"
-												: undefined
-										}
-									>
-										<Sparkles className="w-5 h-5" />
-										{cta.label}
-									</Link>
-								)}
-							</div>
+							{cta && (
+								<div className="flex items-center gap-4">
+									{cta.disabled ? (
+										<div className="mt-4 md:mt-6 cursor-not-allowed opacity-60 px-8 py-4 rounded-full font-bold tracking-wide border-2 border-gray-300 bg-gray-100 text-gray-400">
+											{cta.label}
+										</div>
+									) : (
+										<Link
+											href={cta.href}
+											className="mt-4 md:mt-6 inline-flex items-center gap-2 px-8 py-4 rounded-full border-2 border-cyan-500 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold tracking-wide shadow-lg hover:shadow-xl hover:from-cyan-600 hover:to-blue-700 transition-all"
+											target={
+												cta.openInNewTab
+													? "_blank"
+													: "_self"
+											}
+											rel={
+												cta.openInNewTab
+													? "noopener noreferrer"
+													: undefined
+											}
+										>
+											<Sparkles className="w-5 h-5" />
+											{cta.label}
+										</Link>
+									)}
+								</div>
+							)}
 						</div>
 						<div className="flex justify-center items-center">
 							<div className="bg-white rounded-2xl p-5 md:p-6 h-fit w-full border-2 border-gray-200 shadow-lg">
