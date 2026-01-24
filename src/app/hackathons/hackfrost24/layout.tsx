@@ -25,8 +25,8 @@ export default function RootLayout({
 			type: "link",
 		},
 		{
-			name: "FAQ",
-			url: `/hackathons/${DATA.slug}#faq`,
+			name: "Hackathons",
+			url: "https://www.wemakedevs.org/hackathons",
 			type: "link",
 		},
 		{
