@@ -52,7 +52,7 @@ const topProjects = [
 		projectTitle: "AI Reliability Judge",
 		description:
 			"AI Reliability Judge is a web app that stress‑tests any AI agent GitHub repo, scores how trustworthy it is, and auto‑opens AI‑generated fix PRs. Users paste a public repo, run realistic end‑to‑end tasks against the agent, and get a 0–100 reliability score plus a breakdown of where it fails (timeouts, crashes, unsafe responses, brittle flows). When issues are detected, the app prepares a focused GitHub pull request with proposed code/config changes so teams can harden their agents before they break in production.",
-		githubLink: "",
+		githubLink: "https://github.com/priyanshap/ai-reliability-judge",
 		youtubeEmbed: "https://www.youtube.com/embed/iCoz4mFXh_A",
 	},
 	{
@@ -60,7 +60,7 @@ const topProjects = [
 		projectTitle: "AI Disaster Response Orchestrator",
 		description:
 			"AI Disaster Response Orchestrator is an intelligent system designed to assist emergency response teams during disasters by transforming scattered, real-time data into actionable decisions. During disasters, critical information comes from many sources like social media, alerts, and sensor data. This data is scattered, slow to analyze, and overwhelming for responders. The platform ingests disaster-related information from multiple sources, summarizes the situation using AI agents, and automatically prioritizes response actions such as rescue operations, medical deployment, and logistics coordination. Key Features: AI-driven disaster data summarization, Automated decision-making for emergency response, Real-time crisis dashboard with live updates, Reinforcement learning to improve response strategies over time. Tech Stack: Kestra AI Agent for data summarization and decision workflows, Cline CLI for automation and response script generation, Oumi for reinforcement learning fine-tuning, Next.js frontend deployed on Vercel, CodeRabbit for automated PR reviews and code quality.",
-		githubLink: "",
+		githubLink: "https://github.com/SauravMukherjee44/AI-Disaster-Response-Orchestrator",
 		youtubeEmbed: "https://www.youtube.com/embed/CCWMAjFZs2M",
 	},
 	{
@@ -68,7 +68,7 @@ const topProjects = [
 		projectTitle: "ResumeMatchAI",
 		description:
 			"ResumeMatchAI - An AI multi-agent system that rewrites resumes for specific roles, scores ATS compatibility, generates cover letters, explains weaknesses, and recommends projects — helping users apply smarter, not blindly.",
-		githubLink: "",
+		githubLink: "https://github.com/aryanhash/ResumeMatch",
 		youtubeEmbed: "https://www.youtube.com/embed/udZpn9X54ZM",
 	},
 	{
@@ -76,7 +76,7 @@ const topProjects = [
 		projectTitle: "AI-Driven CI/CD Failure Analysis",
 		description:
 			"This project is an AI-driven CI/CD failure analysis and remediation system designed to reduce the time engineers spend debugging broken pipelines. When a GitHub Actions workflow fails, the failure logs are securely sent to a locally running Kestra instance via webhooks. Kestra orchestrates the event flow, captures and structures the CI/CD metadata, and forwards the logs to Oumi, a FastAPI-based AI service. Oumi uses a language model (SmolLM2-135M-Instruct) fine-tuned on real CI/CD failure logs from a Kaggle dataset to analyze the errors, identify likely root causes, and generate actionable fix suggestions. The analysis is surfaced through a dashboard and can be used to assist developers in correcting code, raising pull requests, and triggering automated reviews via CodeRabbit. By combining workflow orchestration, AI-powered log understanding, and automated review tooling, the system helps teams debug CI/CD failures faster, maintain developer flow, and improve overall pipeline reliability.",
-		githubLink: "",
+		githubLink: "https://github.com/Saha-7/DevOps-Guardian-Agent",
 		youtubeEmbed: "https://www.youtube.com/embed/q4nwHdKrGRs",
 	},
 	{
@@ -84,7 +84,7 @@ const topProjects = [
 		projectTitle: "InfraPilot",
 		description:
 			"InfraPilot predicts the drifts in kubernetes yaml files or terraform hcl files.",
-		githubLink: "",
+		githubLink: "https://github.com/RamyaVedi/InfraPilot-Hackathon",
 		youtubeEmbed: "https://www.youtube.com/embed/qvdRrBLMmzc",
 	},
 	{
@@ -92,7 +92,7 @@ const topProjects = [
 		projectTitle: "AI DevOps Commander",
 		description:
 			"AI DevOps Commander is a prototype built to explore how AI can help automate post-deployment decision-making in DevOps. After a deployment, engineers often have to manually inspect logs and metrics under pressure to decide whether to roll back or continue. This project models that workflow using Kestra orchestration and an AI agent that summarizes deployment signals such as error rates and memory usage (simulated for the demo). Based on the summary, the system makes a clear CONTINUE or ROLLBACK decision and records the outcome. A small reinforcement learning loop using Oumi shows how decisions can improve over time, while Cline demonstrates how automated fixes could be scaffolded after failures. A clean Next.js dashboard deployed on Vercel shows the deployment status, AI reasoning, and actions taken. The project is intentionally scoped as a clear, explainable prototype rather than a production system, focusing on realism, clarity, and real DevOps workflows.",
-		githubLink: "",
+		githubLink: "https://github.com/rishi-jat/ai-devops-commander",
 		youtubeEmbed: "https://www.youtube.com/embed/dwzV_YzquRo",
 	},
 	{
@@ -100,7 +100,7 @@ const topProjects = [
 		projectTitle: "AutoAudit",
 		description:
 			"AutoAudit lets users scan the codebase (or specific files) using Oumi and Vercel AI Gateway Models to identify issues and bugs and with a single click, detected problems can be converted into GitHub issues. AutoAudit also allows automation of github issue assignment like Kestra AI agent intelligently assigns issues to the most suitable contributor based on AI-driven analysis of comments and context. AutoAudit also reviews pull requests by analyzing code diffs, descriptions, and file changes, generating a merge-readiness score and a clear recommendation on whether the PR should be merged using AI analysis.",
-		githubLink: "",
+		githubLink: "https://github.com/Pavan-personal/AutoAudit",
 		youtubeEmbed: "https://www.youtube.com/embed/g33oaVsgBh4",
 	},
 	{
@@ -116,7 +116,7 @@ const topProjects = [
 		projectTitle: "Vero - Test Infrastructure Copilot",
 		description:
 			"Vero turns any GitHub repo into production-ready test infrastructure in 5-7 minutes. Paste a repo → Vero generates: pytest test suites, fixtures & conftest.py, pytest.ini config, GitHub Actions CI workflows, requirements-test.txt, Opens a single PR with everything. No manual setup. Tests that actually run. The Problem: AI test generation hallucinates 70-90% of the time. Tests reference non-existent functions, break on first run, and require manual cleanup. Vero delivers complete, working test infrastructure that passes 83%+ on first run. How Vero Works (4 Agents): ARCHITECT → Tree-sitter blueprint.json (real functions only), BUILDER → Gemini + File Search → test_*.py + fixtures, VALIDATOR → pytest execution, POLISHER → CI workflows + GitHub PR. Kestra orchestrates. Mem0 learns from failures. Production-grade. Sponsor Integration: Kestra AI Agent summarizes test metrics and decides: re-run, open issue, or mark stable. Vercel: Production Next.js dashboard with SSE live logs + metrics. CodeRabbit: All PRs (generated + internal) reviewed by CodeRabbit.",
-		githubLink: "",
+		githubLink: "https://github.com/Vero-ai-org/vero",
 		youtubeEmbed: "https://www.youtube.com/embed/QCRD_b_xQSE",
 	},
 	{
@@ -124,7 +124,7 @@ const topProjects = [
 		projectTitle: "Sento AI",
 		description:
 			"Sento AI is your automated social media marketing department, built for businesses that lack the time and budget for a dedicated team. The Problem: Creating consistent, high-quality content for Instagram and Facebook is a full-time job that most small business owners can't afford. Our Solution: Sento AI transforms a single text prompt into a complete social media campaign. Our AI agents handle everything: Generate & Post - Creates stunning images and engaging video reels with audio, writes captions, and posts them directly to Instagram and Facebook. Engage Automatically - Intelligently analyzes comments and posts contextual replies, keeping your audience/customers engaged 24/7. Unique Impact: Built this end-to-end automation pipeline by orchestrating powerful AI models like Google's Gemini, Nano Banana, and Veo using Kestra. Sento AI doesn't just generate content it manages your entire social media presence. This empowers entrepreneurs to focus on growing their business, not on mastering content creation. Other platforms may just generate video/image but Sento AI does everything, you just prompt and sit.",
-		githubLink: "",
+		githubLink: "https://github.com/khushal1512/sento-ai",
 		youtubeEmbed: "https://www.youtube.com/embed/AY4DDuCtpeM",
 	},
 	{
@@ -132,7 +132,7 @@ const topProjects = [
 		projectTitle: "PatchyAI",
 		description:
 			"PatchyAI is an autonomous GitHub App designed to continuously improve repository security by detecting and fixing known vulnerabilities in dependencies and codebases. Patchy uses Kestra to orchestrate, Cline CLI to fix the vulnerabilities, and Vercel for the web hosting. Patchy can do the following: Scan repositories for known vulnerabilities using trusted vulnerability databases, Summarize findings in a clear, developer-friendly format, Automatically create fix branches and open pull requests with recommended patches, React to follow-up comments to refine or scope fixes. Built for modern DevSecOps workflows, PatchyAI integrates seamlessly into GitHub repositories to reduce security debt while keeping developers in control.",
-		githubLink: "",
+		githubLink: "https://github.com/xkaper001/patchyai",
 		youtubeEmbed: "https://www.youtube.com/embed/std1Ihd9eC8",
 	},
 ];

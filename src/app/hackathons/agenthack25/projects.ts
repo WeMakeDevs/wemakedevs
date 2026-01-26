@@ -64,7 +64,7 @@ const topProjects = [
 		projectTitle: "Tortilla",
 		description:
 			"AI fact-checking agents fight misinformation with scalable verification endpoints.",
-		githubLink: "https://github.com/Gauravpadam/Tortilla/",
+		githubLink: "https://github.com/Gauravpadam/Tortilla",
 		youtubeEmbed: "https://www.youtube.com/embed/SIMqFiz12JU",
 	},
 	{
