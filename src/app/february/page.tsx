@@ -473,6 +473,82 @@ export default function FebruaryPage() {
 				</ViewContainer>
 			</section>
 
+			{/* Sponsors Section */}
+			<section className="py-12 md:py-20 relative z-10">
+				<ViewContainer>
+					<div className="text-center mb-12">
+						<h2 className="text-3xl md:text-5xl font-bold text-white mb-4">
+							Our Sponsors
+						</h2>
+						<p className="text-lg md:text-xl text-gray-300">
+							Powering Hack All February with amazing prizes and opportunities
+						</p>
+					</div>
+
+					<div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 items-center justify-items-center">
+						{/* Week 1 - Tambo */}
+						<Link
+							href="https://tambo.co"
+							target="_blank"
+							rel="noopener noreferrer"
+							className="bg-white hover:bg-gray-100 border border-gray-200 hover:border-red-500/50 rounded-xl p-6 w-full flex flex-col items-center justify-center transition-all duration-300 group"
+						>
+							<span className="text-xs text-gray-500 mb-2">Week 1</span>
+							<Image
+								src={images.week1Logo}
+								alt="Tambo"
+								className="h-10 md:h-12 w-auto object-contain group-hover:scale-105 transition-transform"
+							/>
+						</Link>
+
+						{/* Week 2 - Archestra */}
+						<Link
+							href="https://archestra.ai"
+							target="_blank"
+							rel="noopener noreferrer"
+							className="bg-white hover:bg-gray-100 border border-gray-200 hover:border-red-500/50 rounded-xl p-6 w-full flex flex-col items-center justify-center transition-all duration-300 group"
+						>
+							<span className="text-xs text-gray-500 mb-2">Week 2</span>
+							<Image
+								src={images.week2Logo}
+								alt="Archestra"
+								className="h-10 md:h-12 w-auto object-contain group-hover:scale-105 transition-transform"
+							/>
+						</Link>
+
+						{/* Week 3 */}
+						<Link
+							href="https://openwork.co"
+							target="_blank"
+							rel="noopener noreferrer"
+							className="bg-white hover:bg-gray-100 border border-gray-200 hover:border-red-500/50 rounded-xl p-6 w-full flex flex-col items-center justify-center transition-all duration-300 group"
+						>
+							<span className="text-xs text-gray-500 mb-2">Week 3</span>
+							<Image
+								src={images.week3Logo}
+								alt="Week 3 Sponsor"
+								className="h-10 md:h-12 w-auto object-contain group-hover:scale-105 transition-transform"
+							/>
+						</Link>
+
+						{/* Week 4 - Stream */}
+						<Link
+							href="https://getstream.io"
+							target="_blank"
+							rel="noopener noreferrer"
+							className="bg-white hover:bg-gray-100 border border-gray-200 hover:border-red-500/50 rounded-xl p-6 w-full flex flex-col items-center justify-center transition-all duration-300 group"
+						>
+							<span className="text-xs text-gray-500 mb-2">Week 4</span>
+							<Image
+								src={images.week4Logo}
+								alt="Stream"
+								className="h-10 md:h-12 w-auto object-contain group-hover:scale-105 transition-transform"
+							/>
+						</Link>
+					</div>
+				</ViewContainer>
+			</section>
+
 			{/* Hackathon Cards Section */}
 			<section id="hackathons" className="py-12 md:py-20 relative z-10">
 				<ViewContainer>
