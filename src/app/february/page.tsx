@@ -534,7 +534,7 @@ export default function FebruaryPage() {
 
 						{/* Week 4 - Vision Agents */}
 						<Link
-							href="https://visionagents.ai"
+							href="https://github.com/GetStream/Vision-Agents"
 							target="_blank"
 							rel="noopener noreferrer"
 							className="bg-white hover:bg-gray-100 border border-gray-200 hover:border-red-500/50 rounded-xl p-6 w-full flex flex-col items-center justify-center transition-all duration-300 group"

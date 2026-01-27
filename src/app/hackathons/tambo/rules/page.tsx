@@ -37,17 +37,18 @@ const HackathonRules = async () => {
 							rewards, exclusive swag, and job/intern interviews at Tambo.
 						</li>
 						<li>
-							You must build a new project during the hackathon.
-							Simply modifying an existing website or app is not
-							allowed - fresh starts only, young Padawan.
+							You can use already made templates, starter kits, and
+							boilerplates to kickstart your project - no need to
+							start from absolute zero, young Padawan. However,
+							simply submitting an existing website or app with
+							minimal modifications is not allowed.
 						</li>
 						<li>
-							All design elements, code, and assets for your
-							project must be created during the event. You may
-							use third-party tools, frameworks, open-source
-							libraries, public APIs, and publicly available
-							assets (e.g., Creative Commons images, fonts, or
-							music).
+							You may use templates, third-party tools, frameworks,
+							open-source libraries, public APIs, and publicly
+							available assets (e.g., Creative Commons images, fonts,
+							or music). Your original work built on top of these
+							resources will be judged.
 						</li>
 						<li>
 							Teams can plan and discuss ideas in advance, but
