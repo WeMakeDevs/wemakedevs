@@ -78,6 +78,11 @@ const HackathonRules = async () => {
 							collaborative participation.
 						</li>
 						<li>
+							While interviews don't guarantee a job, they provide
+							a genuine chance to showcase your skills and access
+							potential roles.
+						</li>
+						<li>
 							Any intellectual property developed during the
 							hackathon belongs to the team that created it. Teams
 							are encouraged to agree internally on IP ownership,
