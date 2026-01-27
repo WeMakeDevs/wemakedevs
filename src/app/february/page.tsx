@@ -516,9 +516,9 @@ export default function FebruaryPage() {
 							/>
 						</Link>
 
-						{/* Week 3 */}
+						{/* Week 3 - Openwork */}
 						<Link
-							href="https://openwork.co"
+							href="https://openwork.me"
 							target="_blank"
 							rel="noopener noreferrer"
 							className="bg-white hover:bg-gray-100 border border-gray-200 hover:border-red-500/50 rounded-xl p-6 w-full flex flex-col items-center justify-center transition-all duration-300 group"
@@ -526,14 +526,14 @@ export default function FebruaryPage() {
 							<span className="text-xs text-gray-500 mb-2">Week 3</span>
 							<Image
 								src={images.week3Logo}
-								alt="Week 3 Sponsor"
+								alt="Openwork"
 								className="h-10 md:h-12 w-auto object-contain group-hover:scale-105 transition-transform"
 							/>
 						</Link>
 
-						{/* Week 4 - Stream */}
+						{/* Week 4 - Vision Agents */}
 						<Link
-							href="https://getstream.io"
+							href="https://visionagents.ai"
 							target="_blank"
 							rel="noopener noreferrer"
 							className="bg-white hover:bg-gray-100 border border-gray-200 hover:border-red-500/50 rounded-xl p-6 w-full flex flex-col items-center justify-center transition-all duration-300 group"
@@ -541,7 +541,7 @@ export default function FebruaryPage() {
 							<span className="text-xs text-gray-500 mb-2">Week 4</span>
 							<Image
 								src={images.week4Logo}
-								alt="Stream"
+								alt="Vision Agents"
 								className="h-10 md:h-12 w-auto object-contain group-hover:scale-105 transition-transform"
 							/>
 						</Link>
