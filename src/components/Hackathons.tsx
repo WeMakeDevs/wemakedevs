@@ -78,7 +78,7 @@ const Hackathons = ({ className, ...props }: GeneralComponent) => {
 									</div>
 									<div className="flex items-center gap-2 text-sm text-gray-300">
 										<Smartphone className="w-4 h-4 text-accent-4" />
-										<span>Galaxy Flip 7 Raffle</span>
+										<span>Certificates for all</span>
 									</div>
 								</div>
 								<span

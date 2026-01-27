@@ -15,6 +15,7 @@ import {
 	Calendar,
 	Flag,
 	Share2,
+	Award,
 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -458,9 +459,9 @@ export default function FebruaryPage() {
 									<div className="text-sm text-gray-300">With Top AI Companies</div>
 								</div>
 								<div className="bg-gray-800/80 backdrop-blur-sm border-2 border-red-500/50 rounded-xl p-5 text-center">
-									<Calendar className="w-8 h-8 mx-auto mb-2 text-purple-400" />
-									<div className="text-2xl font-bold text-white">1 Month</div>
-									<div className="text-sm text-gray-300">Of Hacking</div>
+									<Award className="w-8 h-8 mx-auto mb-2 text-purple-400" />
+									<div className="text-xl font-bold text-white">Certificates</div>
+									<div className="text-sm text-gray-300">For All Participants</div>
 								</div>
 							</div>
 						</div>
