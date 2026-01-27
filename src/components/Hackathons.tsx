@@ -7,10 +7,12 @@ import {
 	HackathonComingSoonCard,
 	HackathonLastCard,
 } from "@/components/HackathonCard";
+import { images as februaryImages } from "@/app/february/images";
 import { hackathons } from "@/constants/hackathons";
 import { cn } from "@/lib/utils";
 import type { GeneralComponent } from "@/types";
 import { ArrowRight, Trophy, Smartphone } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 import HackathonStatus from "./HackathonStatus";
 import { buttonVariants } from "./ui/button";
@@ -39,14 +41,11 @@ const Hackathons = ({ className, ...props }: GeneralComponent) => {
 					className="block my-10 group"
 				>
 					<div className="relative overflow-hidden rounded-xl bg-gradient-to-r from-[#0A3D71] via-[#1a5a9e] to-[#0A3D71] p-1">
-						<div className="bg-card rounded-lg p-6 md:p-8 relative overflow-hidden">
-							{/* Background decoration */}
-							<div className="absolute top-0 right-0 w-64 h-64 bg-accent-4/10 rounded-full -translate-y-1/2 translate-x-1/2" />
-							<div className="absolute bottom-0 left-0 w-48 h-48 bg-accent-4/10 rounded-full translate-y-1/2 -translate-x-1/2" />
-							
-							<div className="relative flex flex-col md:flex-row items-center justify-between gap-6">
-								<div className="flex-1 text-center md:text-left">
-									<div className="flex items-center justify-center md:justify-start gap-2 mb-2">
+						<div className="bg-[#0d1117] rounded-lg p-6 md:p-8 relative overflow-hidden">
+							<div className="relative flex flex-col lg:flex-row items-center gap-6">
+								{/* Left Content */}
+								<div className="flex-1 text-center lg:text-left z-10">
+									<div className="flex items-center justify-center lg:justify-start gap-2 mb-3">
 										<span className="bg-green-500 text-white text-xs font-bold px-2 py-1 rounded-full animate-pulse">
 											NEW
 										</span>
@@ -54,37 +53,48 @@ const Hackathons = ({ className, ...props }: GeneralComponent) => {
 											February 2026
 										</span>
 									</div>
-									<h3 className="text-2xl md:text-3xl lg:text-4xl font-bold font-title mb-2">
+									<h3 className="text-2xl md:text-3xl lg:text-4xl font-bold font-title mb-3 text-white">
 										Hack All February
 									</h3>
-									<p className="text-muted-foreground text-base md:text-lg max-w-xl">
+									<p className="text-gray-200 text-base md:text-lg max-w-lg mb-4">
 										Join all 4 February hackathons to win a{" "}
 										<span className="text-accent-4 font-semibold">
 											Samsung Galaxy Flip 7
 										</span>{" "}
-										worth ₹1,10,000!
+										phone worth{" "}
+										<span className="text-accent-4 font-semibold">
+											₹1,10,000
+										</span>
+										. Winner will be chosen at random.
 									</p>
-									<div className="flex flex-wrap items-center justify-center md:justify-start gap-4 mt-4">
-										<div className="flex items-center gap-2 text-sm">
+									<div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 mb-5">
+										<div className="flex items-center gap-2 text-sm text-gray-300">
 											<Trophy className="w-4 h-4 text-accent-4" />
 											<span>$40,000+ in prizes</span>
 										</div>
-										<div className="flex items-center gap-2 text-sm">
+										<div className="flex items-center gap-2 text-sm text-gray-300">
 											<Smartphone className="w-4 h-4 text-accent-4" />
 											<span>Galaxy Flip 7 Grand Prize</span>
 										</div>
 									</div>
-								</div>
-								<div className="shrink-0">
 									<span
 										className={cn(
 											buttonVariants(),
-											"group-hover:bg-blue-800 transition-colors",
+											"group-hover:bg-blue-800 transition-colors inline-flex",
 										)}
 									>
 										Learn More
 										<ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
 									</span>
+								</div>
+								
+								{/* Right Banner Image */}
+								<div className="shrink-0 w-full lg:w-[400px] xl:w-[450px]">
+									<Image
+										src={februaryImages.banner}
+										alt="Hack All February"
+										className="w-full h-auto rounded-lg shadow-lg"
+									/>
 								</div>
 							</div>
 						</div>
