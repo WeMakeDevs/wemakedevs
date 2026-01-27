@@ -97,7 +97,7 @@ const Hackathons = ({ className, ...props }: GeneralComponent) => {
 								<Image
 									src={februaryImages.phone1}
 									alt="Samsung Galaxy Flip 7"
-									className="w-[75%] h-auto object-contain drop-shadow-2xl absolute left-[-5%] -bottom-[30%]"
+									className="w-[80%] h-auto object-contain drop-shadow-2xl absolute left-[-5%] -bottom-[15%]"
 								/>
 								<Image
 									src={februaryImages.phone2}
