@@ -167,6 +167,16 @@ const PrizesShowcase = () => {
 						</div>
 					</div>
 				</div>
+
+				{/* Prize Distribution Disclaimer */}
+				<div className="mt-12 text-center">
+					<Link
+						href={`/hackathons/tambo/rules`}
+						className="text-slate-400 hover:text-amber-400 text-sm underline transition-colors"
+					>
+						See the Rules section for how prizes are distributed.
+					</Link>
+				</div>
 			</div>
 		</div>
 	);
