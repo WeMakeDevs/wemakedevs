@@ -286,16 +286,6 @@ const PrizesShowcase = () => {
 					</div>
 				</div>
 
-				{/* Prize Distribution Disclaimer */}
-				<div className="mt-8 text-center">
-					<Link
-						href={`/hackathons/assemblehack25/rules`}
-						className="text-gray-500 hover:text-blue-600 text-sm underline transition-colors"
-					>
-						Check the rules for prize distribution details
-					</Link>
-				</div>
-
 				{/* GSoC Mentorship & Social Media Raffle */}
 				<div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
 					{/* GSoC Mentorship */}
@@ -344,6 +334,16 @@ const PrizesShowcase = () => {
 							</div>
 						</div>
 					</div>
+				</div>
+
+				{/* Prize Distribution Disclaimer */}
+				<div className="mt-12 text-center">
+					<Link
+						href={`/hackathons/assemblehack25/rules`}
+						className="text-gray-500 hover:text-blue-600 text-sm underline transition-colors"
+					>
+						See the Rules section for how prizes are distributed.
+					</Link>
 				</div>
 			</div>
 		</div>
