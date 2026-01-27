@@ -103,6 +103,15 @@ const PrizesShowcase = () => {
 									+ job interview at Archestra.ai with the CEO
 								</span>
 							</div>
+
+							<div className="mt-6 text-center">
+								<Link
+									href={`/hackathons/2fast2mcp/rules`}
+									className="text-slate-300 hover:text-orange-400 text-sm underline transition-colors"
+								>
+									Check the rules for prize distribution details
+								</Link>
+							</div>
 						</div>
 					</div>
 

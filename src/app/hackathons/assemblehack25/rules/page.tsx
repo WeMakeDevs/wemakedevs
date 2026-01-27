@@ -326,6 +326,24 @@ const HackathonRules = async () => {
 
 						<section>
 							<h2 className="text-2xl font-bold mb-4">
+								Prize Distribution
+							</h2>
+							<p>
+								All prizes will be distributed equally among
+								winning team members, with a maximum team size
+								of four. The total prize amount will be divided
+								by the number of team members to ensure
+								fairness. If a project wins as a solo submission,
+								the participant will receive 50% of the listed
+								prize amount, which will still be higher than
+								the amount an individual would receive in a team
+								setting. This policy ensures fair payouts while
+								encouraging collaborative participation.
+							</p>
+						</section>
+
+						<section>
+							<h2 className="text-2xl font-bold mb-4">
 								Code of Conduct
 							</h2>
 							<ul className="space-y-2 list-disc list-outside pl-6">

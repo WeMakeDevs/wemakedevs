@@ -1,5 +1,6 @@
 import { Gift } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 import { images } from "../images";
 
 const PrizesShowcase = () => {
@@ -283,6 +284,16 @@ const PrizesShowcase = () => {
 							</div>
 						</div>
 					</div>
+				</div>
+
+				{/* Prize Distribution Disclaimer */}
+				<div className="mt-8 text-center">
+					<Link
+						href={`/hackathons/assemblehack25/rules`}
+						className="text-gray-500 hover:text-blue-600 text-sm underline transition-colors"
+					>
+						Check the rules for prize distribution details
+					</Link>
 				</div>
 
 				{/* GSoC Mentorship & Social Media Raffle */}

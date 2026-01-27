@@ -66,10 +66,16 @@ const HackathonRules = async () => {
 						</li>
 						<li>Teams may consist of 1–4 members.</li>
 						<li>
-							Prize distribution: All prizes will be equally
-							distributed amongst team members. For solo winners,
-							the cash prizes are: 1st place $3,000, 2nd place
-							$2,000, and 3rd place $1,000.
+							Prize distribution: All prizes will be distributed
+							equally among winning team members, with a maximum
+							team size of four. The total prize amount will be
+							divided by the number of team members to ensure
+							fairness. If a project wins as a solo submission,
+							the participant will receive 50% of the listed prize
+							amount, which will still be higher than the amount
+							an individual would receive in a team setting. This
+							policy ensures fair payouts while encouraging
+							collaborative participation.
 						</li>
 						<li>
 							Any intellectual property developed during the
