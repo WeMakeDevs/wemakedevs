@@ -88,10 +88,10 @@ const Hackathons = ({ className, ...props }: GeneralComponent) => {
 									</span>
 								</div>
 								
-								{/* Right Banner Image */}
+								{/* Right Poster Image */}
 								<div className="shrink-0 w-full lg:w-[400px] xl:w-[450px]">
 									<Image
-										src={februaryImages.banner}
+										src={februaryImages.poster}
 										alt="Hack All February"
 										className="w-full h-auto rounded-lg shadow-lg"
 									/>
