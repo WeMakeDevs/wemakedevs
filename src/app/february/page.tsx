@@ -12,11 +12,13 @@ import {
 	ArrowRight,
 	Trophy,
 	Briefcase,
-	Smartphone,
+	Calendar,
 	Flag,
+	Share2,
 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { images } from "./images";
 
 // Hackathon data for the timeline
 const hackathons = [
@@ -34,7 +36,7 @@ const hackathons = [
 		week: 2,
 		title: "2 Fast 2 MCP",
 		dates: "Feb 9 - Feb 15",
-		status: "live",
+		status: "upcoming",
 		slug: "2fast2mcp",
 		description: "Run powerful MCP-based agents with Archestra",
 		prize: "$10,000+",
@@ -152,7 +154,7 @@ function FebruaryNavbar() {
 // Circle Track Component showing 4 hackathons
 function CircleTrack() {
 	return (
-		<div className="relative w-[320px] h-[320px] md:w-[400px] md:h-[400px]">
+		<div className="relative w-[320px] h-[320px] md:w-[420px] md:h-[420px]">
 			{/* Outer track */}
 			<div className="absolute inset-0 rounded-full border-[12px] border-gray-700" />
 			{/* Inner track line (dashed) */}
@@ -171,22 +173,22 @@ function CircleTrack() {
 
 			{/* Hackathon markers positioned around the circle */}
 			{/* Week 1 - Top */}
-			<div className="absolute -top-4 left-1/2 -translate-x-1/2">
+			<div className="absolute -top-6 left-1/2 -translate-x-1/2">
 				<TrackMarker hackathon={hackathons[0]} position="top" />
 			</div>
 			
 			{/* Week 2 - Right */}
-			<div className="absolute top-1/2 -right-4 -translate-y-1/2">
+			<div className="absolute top-1/2 -right-6 -translate-y-1/2">
 				<TrackMarker hackathon={hackathons[1]} position="right" />
 			</div>
 			
 			{/* Week 3 - Bottom */}
-			<div className="absolute -bottom-4 left-1/2 -translate-x-1/2">
+			<div className="absolute -bottom-6 left-1/2 -translate-x-1/2">
 				<TrackMarker hackathon={hackathons[2]} position="bottom" />
 			</div>
 			
 			{/* Week 4 - Left */}
-			<div className="absolute top-1/2 -left-4 -translate-y-1/2">
+			<div className="absolute top-1/2 -left-6 -translate-y-1/2">
 				<TrackMarker hackathon={hackathons[3]} position="left" />
 			</div>
 		</div>
@@ -201,6 +203,7 @@ function TrackMarker({
 	position: "top" | "right" | "bottom" | "left";
 }) {
 	const isLive = hackathon.status === "live";
+	const isUpcoming = hackathon.status === "upcoming";
 	
 	const tooltipPosition = {
 		top: "top-full mt-2 left-1/2 -translate-x-1/2",
@@ -213,13 +216,16 @@ function TrackMarker({
 		<div className="relative group">
 			<div
 				className={cn(
-					"w-12 h-12 rounded-full flex items-center justify-center font-bold text-lg border-4 cursor-pointer transition-transform hover:scale-110",
+					"w-16 h-16 md:w-20 md:h-20 rounded-full flex flex-col items-center justify-center font-bold border-4 cursor-pointer transition-transform hover:scale-110",
 					isLive
 						? "bg-green-500 border-green-400 text-white animate-pulse"
+						: isUpcoming
+						? "bg-orange-500 border-orange-400 text-white"
 						: "bg-gray-600 border-gray-500 text-gray-300"
 				)}
 			>
-				W{hackathon.week}
+				<span className="text-[10px] md:text-xs">Week</span>
+				<span className="text-lg md:text-xl">{hackathon.week}</span>
 			</div>
 			{/* Tooltip */}
 			<div className={cn(
@@ -232,6 +238,11 @@ function TrackMarker({
 					{isLive && (
 						<span className="inline-block mt-1 px-2 py-0.5 bg-green-500 text-white text-xs rounded-full">
 							Live
+						</span>
+					)}
+					{isUpcoming && (
+						<span className="inline-block mt-1 px-2 py-0.5 bg-orange-500 text-white text-xs rounded-full">
+							Upcoming
 						</span>
 					)}
 				</div>
@@ -247,18 +258,24 @@ function HackathonCard({
 	hackathon: (typeof hackathons)[0];
 }) {
 	const isLive = hackathon.status === "live";
+	const isUpcoming = hackathon.status === "upcoming";
 	const isComingSoon = hackathon.status === "coming_soon";
 
 	return (
 		<div
 			className={cn(
 				"bg-gray-800/80 backdrop-blur-sm border-2 rounded-xl p-6 relative overflow-hidden",
-				isLive ? "border-green-500" : "border-gray-600",
+				isLive ? "border-green-500" : isUpcoming ? "border-orange-500" : "border-gray-600",
 			)}
 		>
 			{isLive && (
 				<div className="absolute top-0 right-0 bg-green-500 text-white px-4 py-1 text-sm font-bold rounded-bl-lg">
 					LIVE NOW
+				</div>
+			)}
+			{isUpcoming && (
+				<div className="absolute top-0 right-0 bg-orange-500 text-white px-4 py-1 text-sm font-bold rounded-bl-lg">
+					UPCOMING
 				</div>
 			)}
 			{isComingSoon && (
@@ -273,6 +290,8 @@ function HackathonCard({
 						"w-14 h-14 rounded-full flex items-center justify-center font-bold text-xl border-4",
 						isLive
 							? "bg-green-500 border-green-400 text-white"
+							: isUpcoming
+							? "bg-orange-500 border-orange-400 text-white"
 							: "bg-red-500 border-red-400 text-white",
 					)}
 				>
@@ -303,7 +322,7 @@ function HackathonCard({
 							href={`/hackathons/${hackathon.slug}`}
 							className={cn(
 								buttonVariants({ variant: "outline", size: "sm" }),
-								"border-gray-500 text-white hover:bg-gray-700",
+								"border-gray-400 bg-white text-black hover:bg-gray-100",
 							)}
 						>
 							Details
@@ -386,8 +405,22 @@ export default function FebruaryPage() {
 
 			<FebruaryNavbar />
 
+			{/* Banner Section */}
+			<section className="pt-20 md:pt-24 relative z-10">
+				<ViewContainer>
+					<div className="rounded-xl overflow-hidden">
+						<Image
+							src={images.banner}
+							alt="Hack All February - Win a Samsung Galaxy Flip 7"
+							className="w-full h-auto object-cover"
+							priority
+						/>
+					</div>
+				</ViewContainer>
+			</section>
+
 			{/* Hero Section with Title + Stats on Left, Circle Track on Right */}
-			<section id="how-it-works" className="pt-24 pb-12 md:pt-32 md:pb-20 relative z-10">
+			<section id="how-it-works" className="py-12 md:py-20 relative z-10">
 				<ViewContainer>
 					<div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
 						{/* Left Side - Title, Subtitle, Stats */}
@@ -422,12 +455,12 @@ export default function FebruaryPage() {
 								<div className="bg-gray-800/80 backdrop-blur-sm border-2 border-red-500/50 rounded-xl p-5 text-center">
 									<Briefcase className="w-8 h-8 mx-auto mb-2 text-blue-400" />
 									<div className="text-xl font-bold text-white">Job Interviews</div>
-									<div className="text-sm text-gray-300">With Sponsors</div>
+									<div className="text-sm text-gray-300">With Top AI Companies</div>
 								</div>
 								<div className="bg-gray-800/80 backdrop-blur-sm border-2 border-red-500/50 rounded-xl p-5 text-center">
-									<Smartphone className="w-8 h-8 mx-auto mb-2 text-purple-400" />
-									<div className="text-xl font-bold text-white">Galaxy Flip 7</div>
-									<div className="text-sm text-gray-300">Grand Prize</div>
+									<Calendar className="w-8 h-8 mx-auto mb-2 text-purple-400" />
+									<div className="text-2xl font-bold text-white">1 Month</div>
+									<div className="text-sm text-gray-300">Of Hacking</div>
 								</div>
 							</div>
 						</div>
@@ -494,8 +527,7 @@ export default function FebruaryPage() {
 							<h3 className="text-xl font-bold text-white mb-2">Build & Submit</h3>
 							<p className="text-gray-300">
 								Create and submit a project for each hackathon.
-								Quality matters for hackathon prizes, but any valid
-								submission counts for the draw!
+								You don't have to be a winner to enter the raffle.
 							</p>
 						</div>
 						<div className="bg-gray-800/80 backdrop-blur-sm border-2 border-red-500/50 rounded-xl p-8 text-center">
@@ -512,6 +544,33 @@ export default function FebruaryPage() {
 				</ViewContainer>
 			</section>
 
+			{/* Share on Socials Section */}
+			<section className="py-12 md:py-20 relative z-10">
+				<ViewContainer>
+					<div className="bg-gradient-to-r from-red-600 to-red-500 rounded-2xl p-8 md:p-12 text-center">
+						<Share2 className="w-14 h-14 mx-auto mb-6 text-white" />
+						<h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+							Share Your Journey
+						</h2>
+						<p className="text-lg md:text-xl text-white/90 max-w-2xl mx-auto mb-8">
+							Document your Hack All February experience! Share your progress, 
+							learnings, and builds on social media.
+						</p>
+						<div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
+							<div className="bg-white text-gray-900 px-6 py-3 rounded-lg text-xl font-bold shadow-lg">
+								#HackAllFebruary
+							</div>
+							<div className="bg-white text-gray-900 px-6 py-3 rounded-lg text-xl font-bold shadow-lg">
+								@WeMakeDevs
+							</div>
+						</div>
+						<p className="text-white/80">
+							Tag us on Twitter/X, LinkedIn, or Instagram!
+						</p>
+					</div>
+				</ViewContainer>
+			</section>
+
 			{/* FAQ Section */}
 			<section id="faq" className="relative z-10">
 				<div className="bg-gray-900/80 backdrop-blur-sm py-12 md:py-20">
@@ -521,25 +580,23 @@ export default function FebruaryPage() {
 								Frequently Asked Questions
 							</h2>
 						</div>
-						<div className="max-w-3xl mx-auto">
-							<div className="space-y-4">
-								{faqs.map((faq, index) => (
-									<details
-										key={index}
-										className="group bg-gray-800/80 border border-gray-700 rounded-xl overflow-hidden"
-									>
-										<summary className="flex items-center justify-between cursor-pointer p-6 text-white font-semibold text-lg hover:bg-gray-700/50 transition-colors">
-											{faq.question}
-											<span className="ml-4 text-red-400 group-open:rotate-180 transition-transform">
-												▼
-											</span>
-										</summary>
-										<div className="px-6 pb-6 text-gray-300" 
-											dangerouslySetInnerHTML={{ __html: faq.answer }} 
-										/>
-									</details>
-								))}
-							</div>
+						<div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+							{faqs.map((faq, index) => (
+								<details
+									key={index}
+									className="group bg-gray-800/80 border border-gray-700 rounded-xl overflow-hidden h-fit"
+								>
+									<summary className="flex items-center justify-between cursor-pointer p-5 text-white font-semibold text-base hover:bg-gray-700/50 transition-colors">
+										{faq.question}
+										<span className="ml-4 text-red-400 group-open:rotate-180 transition-transform flex-shrink-0">
+											▼
+										</span>
+									</summary>
+									<div className="px-5 pb-5 text-gray-300 text-sm" 
+										dangerouslySetInnerHTML={{ __html: faq.answer }} 
+									/>
+								</details>
+							))}
 						</div>
 					</ViewContainer>
 				</div>
