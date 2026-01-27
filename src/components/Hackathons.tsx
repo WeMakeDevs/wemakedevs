@@ -11,7 +11,7 @@ import { images as februaryImages } from "@/app/february/images";
 import { hackathons } from "@/constants/hackathons";
 import { cn } from "@/lib/utils";
 import type { GeneralComponent } from "@/types";
-import { ArrowRight, Trophy, Smartphone, Briefcase } from "lucide-react";
+import { ArrowRight, Trophy, Smartphone, Briefcase, Globe, Award } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import HackathonStatus from "./HackathonStatus";
@@ -77,8 +77,12 @@ const Hackathons = ({ className, ...props }: GeneralComponent) => {
 										<span>Job Interviews</span>
 									</div>
 									<div className="flex items-center gap-2 text-sm text-gray-300">
-										<Smartphone className="w-4 h-4 text-accent-4" />
+										<Award className="w-4 h-4 text-accent-4" />
 										<span>Certificates for all</span>
+									</div>
+									<div className="flex items-center gap-2 text-sm text-gray-300">
+										<Globe className="w-4 h-4 text-accent-4" />
+										<span>4 Online Hackathons</span>
 									</div>
 								</div>
 								<span

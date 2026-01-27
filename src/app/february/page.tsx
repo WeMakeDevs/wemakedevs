@@ -450,7 +450,7 @@ export default function FebruaryPage() {
 								</div>
 								<div className="bg-gray-800/80 backdrop-blur-sm border-2 border-red-500/50 rounded-xl p-5 text-center">
 									<CalendarIcon className="w-8 h-8 mx-auto mb-2 text-red-400" />
-									<div className="text-2xl font-bold text-white">4</div>
+									<div className="text-2xl font-bold text-white">4 Online</div>
 									<div className="text-sm text-gray-300">Hackathons</div>
 								</div>
 								<div className="bg-gray-800/80 backdrop-blur-sm border-2 border-red-500/50 rounded-xl p-5 text-center">
