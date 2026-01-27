@@ -93,16 +93,16 @@ const Hackathons = ({ className, ...props }: GeneralComponent) => {
 							</div>
 							
 							{/* Right Phone Images */}
-							<div className="shrink-0 w-full lg:w-[450px] xl:w-[500px] flex items-center justify-center gap-2">
+							<div className="shrink-0 w-full lg:w-[500px] xl:w-[550px] flex items-end justify-center gap-0 relative h-[300px] md:h-[350px]">
 								<Image
 									src={februaryImages.phone1}
 									alt="Samsung Galaxy Flip 7"
-									className="w-[48%] h-auto object-contain drop-shadow-2xl"
+									className="w-[55%] h-auto object-contain drop-shadow-2xl absolute left-0 bottom-0"
 								/>
 								<Image
 									src={februaryImages.phone2}
 									alt="Samsung Galaxy Flip 7"
-									className="w-[58%] h-auto object-contain drop-shadow-2xl"
+									className="w-[70%] h-auto object-contain drop-shadow-2xl absolute right-0 -bottom-8"
 								/>
 							</div>
 							</div>
