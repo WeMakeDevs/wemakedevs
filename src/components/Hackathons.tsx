@@ -11,7 +11,7 @@ import { images as februaryImages } from "@/app/february/images";
 import { hackathons } from "@/constants/hackathons";
 import { cn } from "@/lib/utils";
 import type { GeneralComponent } from "@/types";
-import { ArrowRight, Trophy, Smartphone } from "lucide-react";
+import { ArrowRight, Trophy, Smartphone, Briefcase } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import HackathonStatus from "./HackathonStatus";
@@ -67,35 +67,44 @@ const Hackathons = ({ className, ...props }: GeneralComponent) => {
 										</span>
 										. Winner will be chosen at random.
 									</p>
-									<div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 mb-5">
-										<div className="flex items-center gap-2 text-sm text-gray-300">
-											<Trophy className="w-4 h-4 text-accent-4" />
-											<span>$40,000+ in prizes</span>
-										</div>
-										<div className="flex items-center gap-2 text-sm text-gray-300">
-											<Smartphone className="w-4 h-4 text-accent-4" />
-											<span>Galaxy Flip 7 Grand Prize</span>
-										</div>
+								<div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 mb-5">
+									<div className="flex items-center gap-2 text-sm text-gray-300">
+										<Trophy className="w-4 h-4 text-accent-4" />
+										<span>$40,000+ in prizes</span>
 									</div>
-									<span
-										className={cn(
-											buttonVariants(),
-											"group-hover:bg-blue-800 transition-colors inline-flex",
-										)}
-									>
-										Learn More
-										<ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-									</span>
+									<div className="flex items-center gap-2 text-sm text-gray-300">
+										<Briefcase className="w-4 h-4 text-accent-4" />
+										<span>Job Interviews</span>
+									</div>
+									<div className="flex items-center gap-2 text-sm text-gray-300">
+										<Smartphone className="w-4 h-4 text-accent-4" />
+										<span>Galaxy Flip 7 Grand Prize</span>
+									</div>
 								</div>
-								
-								{/* Right Poster Image */}
-								<div className="shrink-0 w-full lg:w-[400px] xl:w-[450px]">
-									<Image
-										src={februaryImages.poster}
-										alt="Hack All February"
-										className="w-full h-auto rounded-lg shadow-lg"
-									/>
-								</div>
+								<span
+									className={cn(
+										buttonVariants(),
+										"group-hover:bg-blue-800 transition-colors inline-flex",
+									)}
+								>
+									Learn More
+									<ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+								</span>
+							</div>
+							
+							{/* Right Phone Images */}
+							<div className="shrink-0 w-full lg:w-[350px] xl:w-[400px] flex items-center justify-center gap-4">
+								<Image
+									src={februaryImages.phone1}
+									alt="Samsung Galaxy Flip 7"
+									className="w-[45%] h-auto object-contain drop-shadow-2xl"
+								/>
+								<Image
+									src={februaryImages.phone2}
+									alt="Samsung Galaxy Flip 7"
+									className="w-[55%] h-auto object-contain drop-shadow-2xl"
+								/>
+							</div>
 							</div>
 						</div>
 					</div>
