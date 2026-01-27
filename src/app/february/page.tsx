@@ -554,7 +554,7 @@ export default function FebruaryPage() {
 						</h2>
 						<p className="text-lg md:text-xl text-white/90 max-w-2xl mx-auto mb-8">
 							Document your Hack All February experience! Share your progress, 
-							learnings, and builds on social media.
+							learnings, and builds on social media. Use the hashtag and tag us!
 						</p>
 						<div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
 							<div className="bg-white text-gray-900 px-6 py-3 rounded-lg text-xl font-bold shadow-lg">
