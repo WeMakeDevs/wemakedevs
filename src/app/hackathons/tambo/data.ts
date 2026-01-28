@@ -140,6 +140,36 @@ const schedule = [
 		],
 	},
 	{
+		date: "2026-02-04T00:00:00+05:30",
+		items: [
+			{
+				title: "Tambo Office Hours",
+				description:
+					"Join the Tambo team for office hours. Get your questions answered and learn tips for building generative UI applications.",
+				time: "2026-02-04T23:30:00+05:30",
+				link: {
+					name: "Discord",
+					url: "https://discord.com/events/1251581895414911016/1466023356540391507",
+				},
+			},
+		],
+	},
+	{
+		date: "2026-02-06T00:00:00+05:30",
+		items: [
+			{
+				title: "Tambo Office Hours",
+				description:
+					"Join the Tambo team for office hours. Get your questions answered and learn tips for building generative UI applications.",
+				time: "2026-02-06T23:30:00+05:30",
+				link: {
+					name: "Discord",
+					url: "https://discord.com/events/1251581895414911016/1466023594604757289",
+				},
+			},
+		],
+	},
+	{
 		date: "2026-02-08T00:00:00+05:30",
 		items: [
 			{
