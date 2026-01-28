@@ -442,7 +442,7 @@ export default function FebruaryPage() {
 							</p>
 
 							{/* Stats Grid - 2x2 */}
-							<div className="grid grid-cols-2 gap-4 max-w-lg mx-auto lg:mx-0">
+							<div className="grid grid-cols-2 gap-4 max-w-lg mx-auto lg:mx-0 mb-8">
 								<div className="bg-gray-800/80 backdrop-blur-sm border-2 border-red-500/50 rounded-xl p-5 text-center">
 									<Trophy className="w-8 h-8 mx-auto mb-2 text-yellow-400" />
 									<div className="text-2xl font-bold text-white">$40,000+</div>
@@ -463,6 +463,20 @@ export default function FebruaryPage() {
 									<div className="text-xl font-bold text-white">Certificates</div>
 									<div className="text-sm text-gray-300">For All Participants</div>
 								</div>
+							</div>
+
+							{/* Register Now Button */}
+							<div className="flex justify-center lg:justify-start">
+								<Link
+									href="#hackathons"
+									className={cn(
+										buttonVariants({ size: "lg" }),
+										"bg-red-500 hover:bg-red-600 text-white font-bold shadow-lg shadow-red-500/30 px-8 py-6 text-lg",
+									)}
+								>
+									Register Now
+									<ArrowRight className="w-5 h-5 ml-2" />
+								</Link>
 							</div>
 						</div>
 
@@ -557,8 +571,8 @@ export default function FebruaryPage() {
 						<h2 className="text-3xl md:text-5xl font-bold text-white mb-4">
 							February Hackathons
 						</h2>
-						<p className="text-lg md:text-xl text-gray-300">
-							Register for each hackathon to participate
+						<p className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto">
+							You must register separately for each hackathon to participate. You can participate solo or with a team of up to 4 members. Teams can change per hackathon - you don't need to have the same team members for all 4 events. You can even participate solo in some hackathons and with a team in others.
 						</p>
 					</div>
 
