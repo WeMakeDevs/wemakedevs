@@ -79,7 +79,7 @@ const faqs: FaqType[] = [
 	{
 		question: "Can I participate in individual hackathons without joining all 4?",
 		answer:
-			"Yes! Each hackathon is independent and has its own prizes. You can participate in any hackathon individually and win prizes specific to that event. However, to be eligible for the Galaxy Flip 7 grand prize, you must participate in all 4 hackathons.",
+			"Yes! Each hackathon is independent and has its own prizes. You can participate in any hackathon individually and win prizes specific to that event. However, to be eligible for the Galaxy Flip 7 grand prize, you must participate in all 4 hackathons. Remember, you need to register for each hackathon separately before their respective registration deadlines.",
 	},
 	{
 		question: "What counts as a valid submission?",
@@ -89,7 +89,7 @@ const faqs: FaqType[] = [
 	{
 		question: "Can I participate solo or do I need a team?",
 		answer:
-			"You can participate either solo or with a team of up to 4 members. Team composition can vary between hackathons - you don't need to have the same team for all 4 events.",
+			"You can participate either solo or with a team of up to 4 members. Teams can change per hackathon - you don't need to have the same team members for all 4 events. You can even participate solo in some hackathons and with a team in others.",
 	},
 	{
 		question: "What are the total prizes across all hackathons?",

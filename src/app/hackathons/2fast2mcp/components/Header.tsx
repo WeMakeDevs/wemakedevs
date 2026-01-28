@@ -4,7 +4,7 @@ import { DateAtom } from "@/components/hackathon-content/atoms";
 import { buttonVariants } from "@/components/ui/button";
 import { ViewContainer } from "@/components/ui/view-container";
 import { cn } from "@/lib/utils";
-import { CalendarIcon, Zap } from "lucide-react";
+import { ArrowUpRight, CalendarIcon, Zap } from "lucide-react";
 import Link from "next/link";
 
 type HackathonHeaderProps = {
@@ -45,10 +45,19 @@ const HackathonHeader = ({
 							startDate={startDate}
 							endDate={endDate}
 						/>
-						<div className="flex items-center gap-3 mb-4">
+						<div className="flex items-center gap-3 mb-4 flex-wrap">
 							<span className="inline-block bg-orange-500/20 text-orange-400 px-4 py-1.5 rounded-full text-sm md:text-base font-semibold border border-orange-500/30">
 								Online Hackathon
 							</span>
+							<Link
+								href="https://www.wemakedevs.org/february"
+								className="inline-flex items-center gap-2 bg-red-500/20 text-red-400 px-4 py-1.5 rounded-full text-sm md:text-base font-semibold border border-red-500/30 hover:bg-red-500/30 transition-colors"
+								target="_blank"
+								rel="noopener noreferrer"
+							>
+								Part of Hack All February
+								<ArrowUpRight className="w-4 h-4" />
+							</Link>
 						</div>
 						<h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-orange-400 via-red-500 to-orange-500 bg-clip-text text-transparent leading-tight">
 							{title}

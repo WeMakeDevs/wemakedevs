@@ -30,6 +30,18 @@ const HackathonRules = async () => {
 				<HackathonContentBody className="text-slate-300">
 					<ol className="list-decimal list-outside space-y-4 pl-6">
 						<li>
+							This event is part of the{" "}
+							<Link
+								href="https://www.wemakedevs.org/february"
+								className="text-orange-400 hover:text-orange-300 underline"
+								target="_blank"
+								rel="noopener noreferrer"
+							>
+								Hack All February
+							</Link>{" "}
+							series. You can participate solo or with a team of up to 4 members. Teams can change per hackathon - you don't need to have the same team members for all hackathons in February. You can even participate solo in some hackathons and with a team in others.
+						</li>
+						<li>
 							The more Archestra features you use, the faster you'll cross the finish line. Using Archestra's MCP-based agent orchestration, centralized runtime, security guardrails, observability, and deployment capabilities is recommended to maximize your chances of winning prizes, including cash rewards and exclusive swag. Check out the{" "}
 							<Link
 								href={`/hackathons/${DATA.slug}/resources`}
