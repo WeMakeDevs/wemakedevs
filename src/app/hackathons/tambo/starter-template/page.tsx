@@ -85,7 +85,7 @@ const HackathonStarterTemplate = async () => {
 							so we can contact you
 						</li>
 						<li>
-							<strong>Deadline:</strong> Friday, January 31st at 9am PST
+							<strong>Deadline:</strong> Friday, January 30th at 9am PST
 						</li>
 					</ol>
 				</HackathonContentBody>
