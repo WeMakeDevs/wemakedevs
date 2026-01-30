@@ -7,7 +7,6 @@ import {
 	indehubLogo,
 	kubesimplifyLogo,
 	punedaoLogo,
-	teamLogo,
 	theApiCommunityLogo,
 } from "@/assets/images/communityPartners";
 import {
@@ -220,18 +219,6 @@ const Partners = () => {
 								src={kubesimplifyLogo}
 								alt="Kubesimplify"
 								className="object-contain w-[140px] md:w-[156px] lg:w-52"
-							/>
-						</Link>
-						<Link
-							href="https://www.mumbaitech.team/"
-							target="_blank"
-							rel="noopener noreferrer"
-							className="flex items-center justify-center p-4"
-						>
-							<Image
-								src={teamLogo}
-								alt="Team"
-								className="object-contain w-[100px] md:w-[116px] lg:w-[132px]"
 							/>
 						</Link>
 						<Link
