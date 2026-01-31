@@ -117,10 +117,35 @@ const schedule = [
 			{
 				title: "Live stream - Building Your First Generative UI Application",
 				time: "2026-02-02T21:30:00+05:30",
-				link: {
-					name: "YouTube",
-					url: "https://youtube.com/@wemakedevs",
-				},
+				links: [
+					{
+						platform: "linkedin",
+						url: "https://www.linkedin.com/feed/update/urn:li:ugcPost:7423338290256347136",
+					},
+					{
+						platform: "youtube",
+						url: "https://www.youtube.com/watch?v=wTSDfWItuHU",
+					},
+				],
+			},
+		],
+	},
+	{
+		date: "2026-02-03T00:00:00+05:30",
+		items: [
+			{
+				title: "How to use Charlie to win this Hackathon",
+				time: "2026-02-03T16:00:00Z",
+				links: [
+					{
+						platform: "linkedin",
+						url: "https://www.linkedin.com/feed/update/urn:li:ugcPost:7423340811221872641",
+					},
+					{
+						platform: "youtube",
+						url: "https://www.youtube.com/watch?v=wTSDfWItuHU",
+					},
+				],
 			},
 		],
 	},
