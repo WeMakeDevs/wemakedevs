@@ -1,5 +1,6 @@
 "use client";
 
+import Banner from "@/components/Banner";
 import Faq from "@/components/Faq";
 import Footer from "@/components/Footer";
 import { logo } from "@/assets/images";
@@ -697,6 +698,25 @@ export default function FebruaryPage() {
 			<div className="relative z-10">
 				<Footer />
 			</div>
+
+			<Banner className="flex items-center text-base md:text-lg font-medium">
+				<div className="flex flex-col md:flex-row items-center justify-center">
+					<span className="text-white">
+						Week 1 is LIVE! Register now for "The UI Strikes Back" hackathon - $6,000+ in prizes!{" "}
+					</span>
+					<Link
+						href="https://forms.gle/PG5jppKYjwky4BFUA"
+						target="_blank"
+						rel="noopener noreferrer"
+						className={cn(
+							buttonVariants(),
+							"mt-4 md:mt-0 md:ml-8 px-3 py-2 bg-white hover:bg-white/80 text-[#1a2047] w-full md:w-fit",
+						)}
+					>
+						Register Now
+					</Link>
+				</div>
+			</Banner>
 		</div>
 	);
 }
