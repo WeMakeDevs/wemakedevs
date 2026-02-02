@@ -14,6 +14,8 @@ import { DATA as openSourceFestData } from "@/app/hackathons/opensourcefest25/da
 import { images as openSourceFestImages } from "@/app/hackathons/opensourcefest25/images";
 import { DATA as tamboData } from "@/app/hackathons/tambo/data";
 import { images as tamboImages } from "@/app/hackathons/tambo/images";
+import { DATA as visionData } from "@/app/hackathons/vision/data";
+import { images as visionImages } from "@/app/hackathons/vision/images";
 import {
 	cloudNativeHackathonThumbnail,
 	kestraHackWeekThumbnail,
@@ -48,6 +50,14 @@ const hackathons: HackathonType[] = [
 		thumbnail: tamboImages.thumbnail,
 		startDate: tamboData.startDate,
 		endDate: tamboData.endDate,
+	},
+	{
+		slug: visionData.slug,
+		title: visionData.title,
+		description: visionData.descriptionCard,
+		thumbnail: visionImages.thumbnail,
+		startDate: visionData.startDate,
+		endDate: visionData.endDate,
 	},
 	{
 		slug: assemblehackData.slug,
