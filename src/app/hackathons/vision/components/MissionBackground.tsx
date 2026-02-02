@@ -36,9 +36,9 @@ const MissionBackground = () => {
 				</svg>
 			</div>
 
-			{/* Scanning line effect */}
+			{/* Scanning line effect - continuous scan through full viewport */}
 			<div className="absolute inset-0 overflow-hidden">
-				<div className="absolute w-full h-px bg-gradient-to-r from-transparent via-cyan-500 to-transparent opacity-30 animate-scan" />
+				<div className="absolute w-full h-[2px] bg-gradient-to-r from-transparent via-cyan-400 to-transparent opacity-50 animate-scan shadow-[0_0_10px_2px_rgba(6,182,212,0.5)]" />
 			</div>
 
 			{/* Surveillance camera icons scattered */}

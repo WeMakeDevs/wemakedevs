@@ -61,7 +61,7 @@ const hackathons = [
 		status: "upcoming",
 		slug: "vision",
 		description: "Build multi-modal AI agents that watch, listen, and understand video in real-time",
-		prize: "$5,000+",
+		prize: "$6,000+",
 		registrationLink: "https://forms.gle/b8YS4J4jcR2mSnnf7",
 	},
 ];

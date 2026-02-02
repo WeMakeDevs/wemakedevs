@@ -3,7 +3,7 @@ import { images } from "./images";
 
 const DATA = {
 	title: "Vision Possible: Agent Protocol",
-	prize: "$5,000+",
+	prize: "$6,000+",
 	startDate: "2026-02-23T16:00:00Z",
 	endDate: "2026-03-01T23:59:59Z",
 	description:

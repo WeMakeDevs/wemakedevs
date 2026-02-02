@@ -102,12 +102,7 @@ const HackathonHeader = ({
 					{/* Info card - Dossier style */}
 					<div className="flex justify-center items-start lg:items-center">
 						<div className="bg-slate-900/70 backdrop-blur-sm shadow-2xl rounded-2xl p-6 md:p-8 w-full max-w-sm border border-cyan-500/20 relative overflow-hidden">
-							{/* Classified stamp effect */}
-							<div className="absolute -top-2 -right-2 bg-red-500/20 text-red-400 text-xs font-bold px-3 py-1 rounded-bl-lg border-l border-b border-red-500/30 transform rotate-0">
-								CLASSIFIED
-							</div>
-
-							<div className="flex items-center gap-4 text-cyan-400 mb-4 mt-4">
+							<div className="flex items-center gap-4 text-cyan-400 mb-4">
 								<CalendarIcon size={28} />
 								<p className="text-xl md:text-2xl font-bold">
 									<DateAtom date={startDate} /> -{" "}
@@ -125,7 +120,7 @@ const HackathonHeader = ({
 									Mission Rewards
 								</span>
 								<p className="text-2xl md:text-3xl font-bold text-slate-100 mt-1">
-									$5,000+
+									$6,000+
 								</p>
 								<p className="text-slate-400 mt-1">
 									+ exclusive agent swag

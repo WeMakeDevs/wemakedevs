@@ -1,17 +1,17 @@
 /* Vision Possible Hackathon Custom Styles */
 
-/* Scanning animation for background */
+/* Scanning animation for background - scans through full page */
 @keyframes scan {
 	0% {
-		top: 0%;
+		top: -5%;
 	}
 	100% {
-		top: 100%;
+		top: 105%;
 	}
 }
 
 .animate-scan {
-	animation: scan 4s linear infinite;
+	animation: scan 8s linear infinite;
 }
 
 /* Ensure navbar text is visible on dark background - default state */

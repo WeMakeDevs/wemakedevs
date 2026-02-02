@@ -48,7 +48,7 @@ const PrizesShowcase = () => {
 										<Trophy className="w-6 h-6 text-cyan-400" />
 									</div>
 									<div className="text-4xl md:text-5xl font-bold text-cyan-400">
-										$2,500
+										$3,000
 									</div>
 								</div>
 
@@ -61,7 +61,7 @@ const PrizesShowcase = () => {
 										<Trophy className="w-5 h-5 text-cyan-400/90" />
 									</div>
 									<div className="text-3xl md:text-4xl font-bold text-cyan-400/90">
-										$1,500
+										$2,000
 									</div>
 								</div>
 
