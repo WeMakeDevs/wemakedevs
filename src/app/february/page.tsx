@@ -532,9 +532,9 @@ export default function FebruaryPage() {
 							/>
 						</Link>
 
-						{/* Week 3 - Openwork */}
+						{/* Week 3 - Accomplish */}
 						<Link
-							href="https://openwork.me"
+							href="https://www.accomplish.ai"
 							target="_blank"
 							rel="noopener noreferrer"
 							className="bg-white hover:bg-gray-100 border border-gray-200 hover:border-red-500/50 rounded-xl p-6 w-full flex flex-col items-center justify-center transition-all duration-300 group"
@@ -542,7 +542,7 @@ export default function FebruaryPage() {
 							<span className="text-xs text-gray-500 mb-2">Week 3</span>
 							<Image
 								src={images.week3Logo}
-								alt="Openwork"
+								alt="Accomplish"
 								className="h-10 md:h-12 w-auto object-contain group-hover:scale-105 transition-transform"
 							/>
 						</Link>
