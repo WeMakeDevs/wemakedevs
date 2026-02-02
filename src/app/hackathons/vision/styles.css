@@ -1,0 +1,111 @@
+/* Vision Possible Hackathon Custom Styles */
+
+/* Scanning animation for background */
+@keyframes scan {
+	0% {
+		top: 0%;
+	}
+	100% {
+		top: 100%;
+	}
+}
+
+.animate-scan {
+	animation: scan 4s linear infinite;
+}
+
+/* Ensure navbar text is visible on dark background - default state */
+.vision-hackathon nav a,
+.vision-hackathon nav span,
+.vision-hackathon header,
+.vision-hackathon header a {
+	color: #f1f5f9 !important;
+}
+
+/* When navbar container has white background (scrolled), override to black text */
+.vision-hackathon nav > div.bg-white,
+.vision-hackathon nav > div[class*="bg-white"] {
+	color: #0f172a !important;
+}
+
+.vision-hackathon nav > div.bg-white a:not([class*="text-white"]),
+.vision-hackathon nav > div[class*="bg-white"] a:not([class*="text-white"]),
+.vision-hackathon nav > div.bg-white span:not([class*="text-white"]),
+.vision-hackathon nav > div[class*="bg-white"] span:not([class*="text-white"]) {
+	color: #0f172a !important;
+}
+
+.vision-hackathon nav a:hover,
+.vision-hackathon header a:hover {
+	color: #06b6d4 !important;
+}
+
+/* Keep hover color cyan even when scrolled */
+.vision-hackathon nav > div.bg-white a:not([class*="text-white"]):hover,
+.vision-hackathon nav > div[class*="bg-white"] a:not([class*="text-white"]):hover {
+	color: #0891b2 !important;
+}
+
+/* Fix for sticky/fixed navbar background */
+.vision-hackathon nav[aria-label="secondary nav"] {
+	background-color: rgba(15, 23, 42, 0.9) !important;
+	backdrop-filter: blur(8px);
+	border-color: rgba(6, 182, 212, 0.2) !important;
+}
+
+/* Ensure all section headings are visible */
+.vision-hackathon h2 {
+	color: #06b6d4;
+}
+
+/* Fix link colors in content */
+.vision-hackathon .text-slate-300 a {
+	color: #06b6d4;
+}
+
+.vision-hackathon .text-slate-300 a:hover {
+	color: #22d3ee;
+}
+
+/* FAQ answer text color - dark cyan on white background */
+.vision-hackathon #faq [class*="bg-white"] [class*="pb-4"],
+.vision-hackathon #faq [class*="bg-white"] [class*="pb-4"] * {
+	color: #0e7490 !important;
+}
+
+.vision-hackathon #faq [class*="bg-white"] [class*="pb-4"] a {
+	color: #0e7490 !important;
+}
+
+.vision-hackathon #faq [class*="bg-white"] [class*="pb-4"] a:hover {
+	color: #155e75 !important;
+}
+
+/* Glowing text effect for headings */
+.vision-hackathon .glow-text {
+	text-shadow: 0 0 20px rgba(6, 182, 212, 0.5),
+		0 0 40px rgba(6, 182, 212, 0.3),
+		0 0 60px rgba(6, 182, 212, 0.1);
+}
+
+/* Classified stamp animation */
+@keyframes pulse-border {
+	0%, 100% {
+		border-color: rgba(239, 68, 68, 0.3);
+	}
+	50% {
+		border-color: rgba(239, 68, 68, 0.6);
+	}
+}
+
+.vision-hackathon .classified-stamp {
+	animation: pulse-border 2s ease-in-out infinite;
+}
+
+/* Grid pattern overlay for cards */
+.vision-hackathon .grid-overlay {
+	background-image: 
+		linear-gradient(rgba(6, 182, 212, 0.03) 1px, transparent 1px),
+		linear-gradient(90deg, rgba(6, 182, 212, 0.03) 1px, transparent 1px);
+	background-size: 20px 20px;
+}
