@@ -126,7 +126,7 @@ const HackathonHeader = ({
 									+ exclusive agent swag
 								</p>
 								<p className="text-slate-400 mt-1">
-									+ career opportunities
+									+ job/intern interviews at Stream
 								</p>
 							</div>
 						</div>

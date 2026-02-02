@@ -22,7 +22,7 @@ const DATA = {
 		winning: [
 			{
 				name: "Top 3 Agents",
-				prize: "$5,000 + exclusive swag + career opportunities",
+				prize: "$6,000 + exclusive swag + job/intern interviews at Stream",
 			},
 		],
 		giveaway: [

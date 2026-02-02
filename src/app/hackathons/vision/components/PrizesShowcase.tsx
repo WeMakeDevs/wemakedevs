@@ -84,7 +84,7 @@ const PrizesShowcase = () => {
 									+ exclusive agent swag
 								</span>
 								<span className="inline-block bg-slate-900/40 backdrop-blur-sm px-5 py-2.5 rounded-full font-semibold text-white border border-white/20">
-									+ career opportunities at Stream
+									+ job/intern interviews at Stream
 								</span>
 							</div>
 						</div>
