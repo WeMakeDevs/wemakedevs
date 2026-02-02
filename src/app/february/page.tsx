@@ -60,7 +60,7 @@ const hackathons = [
 		dates: "Feb 23 - Mar 1",
 		status: "upcoming",
 		slug: "vision",
-		description: "Build multi-modal AI agents that watch, listen, and understand video in real-time. Winners get job/intern interviews at Stream!",
+		description: "Build multi-modal AI agents that watch, listen, and understand video in real-time",
 		prize: "$6,000+",
 		registrationLink: "https://forms.gle/b8YS4J4jcR2mSnnf7",
 	},
