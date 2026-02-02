@@ -146,6 +146,22 @@ const HackathonResources = async () => {
 						</li>
 					</ul>
 				</HackathonContentBody>
+				<HackathonContentTitle className="text-amber-400">
+					Build and ship your project with Charlie
+				</HackathonContentTitle>
+				<HackathonContentBody className="text-slate-300">
+					<p className="mb-4">
+						Get an autonomous TypeScript engineer in your GitHub repo — plus 10,000 credits ($500 of value) — more than enough for the hackathon and beyond.
+					</p>
+					<Link
+						href="https://charlielabs.ai/tambo-hackathon/"
+						className="inline-block px-6 py-3 bg-amber-500 hover:bg-amber-400 text-slate-900 font-semibold rounded-lg transition-colors duration-300"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						Claim Your Free Credits
+					</Link>
+				</HackathonContentBody>
 			</ViewContainer>
 		</div>
 	);

@@ -7,6 +7,7 @@ import {
 } from "@/components/hackathon-content";
 import { ViewContainer } from "@/components/ui/view-container";
 import { ArrowUpRight } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 import AboutSection from "./components/AboutSection";
 import HackathonHeader from "./components/Header";
@@ -75,43 +76,80 @@ const HackathonPage = () => {
 			<div id="sponsor" className="py-20 scroll-mt-10 bg-slate-950">
 				<ViewContainer>
 					<h2 className="text-3xl md:text-4xl font-bold text-amber-400 uppercase tracking-wide mb-8">
-						Sponsor
+						Sponsors
 					</h2>
-					<div className="bg-slate-900/60 backdrop-blur-sm rounded-2xl border border-amber-500/20 overflow-hidden">
-						<div className="flex items-center justify-between p-8 border-b border-amber-500/10 flex-col md:flex-row gap-6">
-							<div className="flex items-center gap-4">
-								<div className="bg-gradient-to-br from-amber-500 to-yellow-600 px-6 py-3 rounded-xl">
-									<span className="text-2xl font-bold text-slate-900">
-										Tambo
+					<div className="space-y-8">
+						<div className="bg-slate-900/60 backdrop-blur-sm rounded-2xl border border-amber-500/20 overflow-hidden">
+							<div className="flex items-center justify-between p-8 border-b border-amber-500/10 flex-col md:flex-row gap-6">
+								<div className="flex items-center gap-4">
+									<div className="bg-gradient-to-br from-amber-500 to-yellow-600 px-6 py-3 rounded-xl">
+										<span className="text-2xl font-bold text-slate-900">
+											Tambo
+										</span>
+									</div>
+									<span className="text-slate-400 text-lg">
+										Generative UI SDK for React
 									</span>
 								</div>
-								<span className="text-slate-400 text-lg">
-									Generative UI SDK for React
-								</span>
+								<Link
+									href="https://github.com/tambo-ai/tambo"
+									target="_blank"
+									rel="noopener noreferrer"
+									className="px-6 py-3 rounded-xl border border-amber-500/50 flex gap-2 items-center bg-slate-800/50 hover:bg-amber-500/20 transition-colors duration-300 text-amber-400 font-medium"
+								>
+									Check out Tambo <ArrowUpRight size={18} />
+								</Link>
 							</div>
-							<Link
-								href="https://github.com/tambo-ai/tambo"
-								target="_blank"
-								rel="noopener noreferrer"
-								className="px-6 py-3 rounded-xl border border-amber-500/50 flex gap-2 items-center bg-slate-800/50 hover:bg-amber-500/20 transition-colors duration-300 text-amber-400 font-medium"
-							>
-								Check out Tambo <ArrowUpRight size={18} />
-							</Link>
+							<div className="p-8">
+								<p className="text-lg text-slate-300 leading-relaxed">
+									Tambo is a Generative UI SDK for React. Register
+									your components, and the AI decides which ones
+									to render based on natural language
+									conversations. Users shouldn't have to learn
+									your app - Generative UI shows the right
+									components based on what someone is trying to
+									do. Whether you're building a startup or scaling
+									an enterprise application, Tambo makes creating
+									adaptive, AI-powered interfaces simple and
+									developer-friendly. Join the Rebel Alliance and
+									build UIs that truly respond to user intent!
+								</p>
+							</div>
 						</div>
-						<div className="p-8">
-							<p className="text-lg text-slate-300 leading-relaxed">
-								Tambo is a Generative UI SDK for React. Register
-								your components, and the AI decides which ones
-								to render based on natural language
-								conversations. Users shouldn't have to learn
-								your app - Generative UI shows the right
-								components based on what someone is trying to
-								do. Whether you're building a startup or scaling
-								an enterprise application, Tambo makes creating
-								adaptive, AI-powered interfaces simple and
-								developer-friendly. Join the Rebel Alliance and
-								build UIs that truly respond to user intent!
-							</p>
+
+						<div className="bg-slate-900/60 backdrop-blur-sm rounded-2xl border border-amber-500/20 overflow-hidden">
+							<div className="flex items-center justify-between p-8 border-b border-amber-500/10 flex-col md:flex-row gap-6">
+								<div className="flex items-center gap-4">
+									<div className="bg-[#BFFF00] p-2 rounded-xl">
+										<Image
+											src={images.charlieLogo}
+											alt="Charlie Logo"
+											width={48}
+											height={48}
+											className="rounded-lg"
+										/>
+									</div>
+									<span className="text-slate-400 text-lg">
+										The Coding Agent OS
+									</span>
+								</div>
+								<Link
+									href="https://charlielabs.ai/tambo-hackathon/"
+									target="_blank"
+									rel="noopener noreferrer"
+									className="px-6 py-3 rounded-xl border border-amber-500/50 flex gap-2 items-center bg-slate-800/50 hover:bg-amber-500/20 transition-colors duration-300 text-amber-400 font-medium"
+								>
+									Claim Free Credits <ArrowUpRight size={18} />
+								</Link>
+							</div>
+							<div className="p-8">
+								<p className="text-lg text-slate-300 leading-relaxed mb-4">
+									Build and ship your project with Charlie — get an autonomous TypeScript engineer in your GitHub repo. Charlie can implement new features end-to-end, create ship-ready PRs that match your repo's style and conventions, and iterate based on your feedback.
+								</p>
+								<p className="text-lg text-amber-400 font-semibold">
+									Get 10,000 credits ($500 of value) — more than enough for the hackathon and beyond!
+								</p>
+							</div>
 						</div>
 					</div>
 				</ViewContainer>

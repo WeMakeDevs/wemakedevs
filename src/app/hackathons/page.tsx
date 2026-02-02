@@ -17,10 +17,16 @@ import { useMemo } from "react";
 const Hackathons = () => {
 	const { upcomingHackathons, previousHackathons } = useMemo(() => {
 		const now = new Date();
-		const upcoming = hackathons.filter(hackathon => {
-			const endDate = new Date(hackathon.endDate);
-			return endDate >= now;
-		});
+		const upcoming = hackathons
+			.filter(hackathon => {
+				const endDate = new Date(hackathon.endDate);
+				return endDate >= now;
+			})
+			.sort((a, b) => {
+				const dateA = new Date(a.startDate);
+				const dateB = new Date(b.startDate);
+				return dateA.getTime() - dateB.getTime();
+			});
 		const previous = hackathons.filter(hackathon => {
 			const endDate = new Date(hackathon.endDate);
 			return endDate < now;
