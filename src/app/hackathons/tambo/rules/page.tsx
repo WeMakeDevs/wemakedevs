@@ -75,18 +75,6 @@ const HackathonRules = async () => {
 						</li>
 						<li>Teams may consist of 1–4 members.</li>
 						<li>
-							Prize distribution: All prizes will be distributed
-							equally among winning team members, with a maximum
-							team size of four. The total prize amount will be
-							divided by the number of team members to ensure
-							fairness. If a project wins as a solo submission,
-							the participant will receive 50% of the listed prize
-							amount, which will still be higher than the amount
-							an individual would receive in a team setting. This
-							policy ensures fair payouts while encouraging
-							collaborative participation.
-						</li>
-						<li>
 							While interviews don't guarantee a job, they provide
 							a genuine chance to showcase your skills and access
 							potential roles.
