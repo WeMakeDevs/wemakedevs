@@ -34,48 +34,57 @@ const PrizesShowcase = () => {
 									<Award className="w-8 h-8 text-white" />
 								</div>
 								<h3 className="text-2xl md:text-3xl font-bold text-white">
-									Top 3 Elite Agents
+									Elite Agent Rewards
 								</h3>
 							</div>
 
 							<div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-								{/* 1st Prize */}
+								{/* Grand Prize */}
 								<div className="bg-slate-900 rounded-2xl p-6 border border-cyan-400/30 shadow-xl">
 									<div className="flex items-center justify-between mb-4">
 										<span className="text-cyan-400 font-bold text-lg">
-											Alpha Agent
+											Mission Commander
 										</span>
 										<Trophy className="w-6 h-6 text-cyan-400" />
 									</div>
 									<div className="text-4xl md:text-5xl font-bold text-cyan-400">
 										$3,000
 									</div>
+									<p className="text-slate-400 mt-2 text-sm">
+										Grand Prize
+									</p>
 								</div>
 
-								{/* 2nd Prize */}
+								{/* Duo Prize */}
 								<div className="bg-slate-900/90 rounded-2xl p-6 border border-cyan-400/20 shadow-xl">
 									<div className="flex items-center justify-between mb-4">
 										<span className="text-cyan-400/90 font-bold text-lg">
-											Beta Agent
+											Partner Agents
 										</span>
-										<Trophy className="w-5 h-5 text-cyan-400/90" />
+										<span className="text-xl">🤝</span>
 									</div>
 									<div className="text-3xl md:text-4xl font-bold text-cyan-400/90">
 										$2,000
 									</div>
+									<p className="text-slate-400 mt-2 text-sm">
+										Best Team of 2
+									</p>
 								</div>
 
-								{/* 3rd Prize */}
+								{/* Solo Prize */}
 								<div className="bg-slate-900/80 rounded-2xl p-6 border border-cyan-400/10 shadow-xl">
 									<div className="flex items-center justify-between mb-4">
 										<span className="text-cyan-400/80 font-bold text-lg">
-											Gamma Agent
+											Lone Operative
 										</span>
-										<Trophy className="w-5 h-5 text-cyan-400/80" />
+										<span className="text-xl">🕵️</span>
 									</div>
 									<div className="text-3xl font-bold text-cyan-400/80">
 										$1,000
 									</div>
+									<p className="text-slate-400 mt-2 text-sm">
+										Best Solo Agent
+									</p>
 								</div>
 							</div>
 
@@ -167,15 +176,6 @@ const PrizesShowcase = () => {
 					</div>
 				</div>
 
-				{/* Prize Distribution Disclaimer */}
-				<div className="mt-12 text-center">
-					<Link
-						href="/vision/rules"
-						className="text-slate-400 hover:text-cyan-400 text-sm underline transition-colors"
-					>
-						See the Mission Brief for prize distribution details.
-					</Link>
-				</div>
 			</div>
 		</div>
 	);
