@@ -35,16 +35,16 @@ const PrizesShowcase = () => {
 									<Trophy className="w-8 h-8 text-white" />
 								</div>
 								<h3 className="text-2xl md:text-3xl font-bold text-white">
-									Top 3 Podium Finishers
+									Podium Finishers
 								</h3>
 							</div>
 
 							<div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-								{/* 1st Prize */}
+								{/* Grand Prize */}
 								<div className="bg-slate-900 rounded-2xl p-6 border border-orange-400/30 shadow-xl">
 									<div className="flex items-center justify-between mb-4">
 										<span className="text-orange-400 font-bold text-lg">
-											1st Place
+											Nitro Champion
 										</span>
 										<div className="flex items-center gap-1">
 											<span className="text-2xl">🏆</span>
@@ -54,43 +54,43 @@ const PrizesShowcase = () => {
 										$5,000
 									</div>
 									<p className="text-slate-400 mt-2 text-sm">
-										Champion of the Track
+										Grand Prize
 									</p>
 								</div>
 
-								{/* 2nd Prize */}
+								{/* Team of 2 Prize */}
 								<div className="bg-slate-900/90 rounded-2xl p-6 border border-orange-400/20 shadow-xl">
 									<div className="flex items-center justify-between mb-4">
 										<span className="text-orange-400/90 font-bold text-lg">
-											2nd Place
+											Dynamic Duo
 										</span>
 										<div className="flex items-center gap-1">
-											<span className="text-2xl">🥈</span>
+											<span className="text-2xl">🏎️</span>
 										</div>
 									</div>
 									<div className="text-3xl md:text-4xl font-bold text-orange-400/90">
 										$3,000
 									</div>
 									<p className="text-slate-400 mt-2 text-sm">
-										Speed Demon
+										Best Team of 2
 									</p>
 								</div>
 
-								{/* 3rd Prize */}
+								{/* Solo Prize */}
 								<div className="bg-slate-900/80 rounded-2xl p-6 border border-orange-400/10 shadow-xl">
 									<div className="flex items-center justify-between mb-4">
 										<span className="text-orange-400/80 font-bold text-lg">
-											3rd Place
+											Lone Wolf
 										</span>
 										<div className="flex items-center gap-1">
-											<span className="text-2xl">🥉</span>
+											<span className="text-2xl">🐺</span>
 										</div>
 									</div>
 									<div className="text-3xl font-bold text-orange-400/80">
 										$2,000
 									</div>
 									<p className="text-slate-400 mt-2 text-sm">
-										Road Warrior
+										Best Solo Racer
 									</p>
 								</div>
 							</div>
@@ -185,15 +185,6 @@ const PrizesShowcase = () => {
 					</div>
 				</div>
 
-				{/* Prize Distribution Disclaimer */}
-				<div className="mt-12 text-center">
-					<Link
-						href={`/hackathons/2fast2mcp/rules`}
-						className="text-slate-400 hover:text-orange-400 text-sm underline transition-colors"
-					>
-						See the Rules section for how prizes are distributed.
-					</Link>
-				</div>
 			</div>
 		</div>
 	);
