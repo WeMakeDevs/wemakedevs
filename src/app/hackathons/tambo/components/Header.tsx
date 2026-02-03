@@ -58,6 +58,15 @@ const HackathonHeader = ({
 								Part of Hack All February
 								<ArrowUpRight className="w-4 h-4" />
 							</Link>
+							<Link
+								href="https://forms.gle/dzDNfTwJJn5ap4vY7"
+								className="inline-flex items-center gap-2 bg-green-500/20 text-green-400 px-4 py-1.5 rounded-full text-sm md:text-base font-semibold border border-green-500/30 hover:bg-green-500/30 transition-colors"
+								target="_blank"
+								rel="noopener noreferrer"
+							>
+								Submit Your Project
+								<ArrowUpRight className="w-4 h-4" />
+							</Link>
 						</div>
 						<h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-amber-400 via-yellow-300 to-amber-500 bg-clip-text text-transparent leading-tight">
 							{title}

@@ -96,14 +96,33 @@ const HackathonRules = async () => {
 							something concerning, notify an organizer
 							immediately.
 						</li>
-						<li>
-							Failure to follow these rules or the Code of Conduct
-							may result in disqualification and banishment to the
-							outer rim.
-						</li>
-					</ol>
-				</HackathonContentBody>
-			</ViewContainer>
+					<li>
+						Failure to follow these rules or the Code of Conduct
+						may result in disqualification and banishment to the
+						outer rim.
+					</li>
+				</ol>
+			</HackathonContentBody>
+
+			{/* Project Submission Section */}
+			<div className="mt-12 p-8 bg-gradient-to-r from-amber-500/10 to-yellow-500/10 rounded-2xl border border-amber-500/30">
+				<h3 className="text-2xl font-bold text-amber-400 mb-4">
+					Submit Your Project
+				</h3>
+				<p className="text-slate-300 mb-6">
+					Ready to submit your project? Only one person from a team needs to fill the submission form. Make sure you have your GitHub link, deployed link, and a YouTube demo (max 3 minutes) ready!
+				</p>
+				<Link
+					href="https://forms.gle/dzDNfTwJJn5ap4vY7"
+					target="_blank"
+					rel="noopener noreferrer"
+					className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-amber-500 to-yellow-500 hover:from-amber-400 hover:to-yellow-400 text-slate-900 font-bold rounded-xl transition-all duration-300 shadow-lg shadow-amber-500/30"
+				>
+					Submit Your Project
+					<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+				</Link>
+			</div>
+		</ViewContainer>
 		</div>
 	);
 };
