@@ -75,6 +75,9 @@ const HackathonRules = async () => {
 						</li>
 						<li>Teams may consist of 1–4 members.</li>
 						<li>
+							<strong className="text-amber-400">Prize distribution:</strong> Winners will receive the full prize amount regardless of team size. For teams, the prize will be equally distributed among all team members. Solo winners will also receive the full listed prize amount.
+						</li>
+						<li>
 							While interviews don't guarantee a job, they provide
 							a genuine chance to showcase your skills and access
 							potential roles.
