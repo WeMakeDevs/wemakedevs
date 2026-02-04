@@ -88,8 +88,10 @@ const HackathonHeader = ({
 										}),
 										"bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-400 hover:to-red-400 text-white font-bold shadow-lg shadow-orange-500/30 px-8 py-6 text-lg",
 									)}
-									target="_blank"
-									rel="noopener noreferrer"
+									{...(cta.openInNewTab && {
+										target: "_blank",
+										rel: "noopener noreferrer",
+									})}
 								>
 									<Zap className="w-5 h-5 mr-2" />
 									{cta.label}

@@ -14,8 +14,8 @@ const DATA = {
 	images,
 	cta: {
 		label: "Register Now",
-		href: "https://forms.gle/GtDSjNvxJ7iTD6LD9",
-		openInNewTab: true,
+		href: "/hackathons/2fast2mcp/register",
+		openInNewTab: false,
 		disabled: false,
 	},
 	prizes: {
@@ -84,7 +84,7 @@ const faqs: FaqType[] = [
 	},
 	{
 		question: "I am a beginner in tech, can I still participate?",
-		answer: "Yes! At WeMakeDevs we believe in the \"learn by doing\" approach! Everyone starts somewhere - even Dom Toretto started with a 10-second car.",
+		answer: 'Yes! At WeMakeDevs we believe in the "learn by doing" approach! Everyone starts somewhere - even Dom Toretto started with a 10-second car.',
 	},
 	{
 		question: "Are we allowed to take help of AI tools like ChatGPT?",
