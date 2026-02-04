@@ -51,7 +51,7 @@ const PrizesShowcase = () => {
 										$3,000
 									</div>
 									<p className="text-cyan-400/70 text-sm mt-1">
-										$750 per participant, max 4
+										$750 per team member, with maximum 4 team members
 									</p>
 									<p className="text-slate-400 mt-2 text-sm">
 										Grand Prize
@@ -70,7 +70,7 @@ const PrizesShowcase = () => {
 										$2,000
 									</div>
 									<p className="text-cyan-400/60 text-sm mt-1">
-										$500 per participant, max 4
+										$500 per team member, with maximum 4 team members
 									</p>
 									<p className="text-slate-400 mt-2 text-sm">
 										Second Place
@@ -89,7 +89,7 @@ const PrizesShowcase = () => {
 										$1,000
 									</div>
 									<p className="text-cyan-400/50 text-sm mt-1">
-										$250 per participant, max 4
+										$250 per team member, with maximum 4 team members
 									</p>
 									<p className="text-slate-400 mt-2 text-sm">
 										Third Place
