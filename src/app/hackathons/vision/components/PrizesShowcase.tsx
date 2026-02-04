@@ -165,12 +165,12 @@ const PrizesShowcase = () => {
 							<p className="text-lg text-slate-300 leading-relaxed mb-6 text-center">
 								Outstanding agents may be recruited for positions at{" "}
 								<Link
-									href="https://getstream.io"
+									href="https://www.wemakedevs.org"
 									target="_blank"
 									rel="noopener noreferrer"
 									className="text-cyan-400 hover:text-cyan-300 font-semibold underline decoration-2 underline-offset-2 transition-colors"
 								>
-									Stream
+									WeMakeDevs
 								</Link>
 								. Showcase your vision AI skills and join the team building the future of real-time video!
 							</p>
@@ -178,7 +178,7 @@ const PrizesShowcase = () => {
 							<div className="flex items-center gap-3 bg-slate-800/50 rounded-xl px-5 py-3 w-fit border border-cyan-500/20 mx-auto">
 								<Briefcase className="w-5 h-5 text-cyan-400" />
 								<span className="font-bold text-cyan-400 text-lg">
-									Join the Stream Team
+									Join the WeMakeDevs Team
 								</span>
 							</div>
 						</div>
