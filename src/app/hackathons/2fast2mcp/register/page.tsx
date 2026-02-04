@@ -30,11 +30,12 @@ const HackathonRegister = async () => {
 				</h2>
 				<div className="flex-1 min-h-[1400px] flex justify-center">
 					<iframe
+						width={540}
 						src={REGISTER_IFRAME_SRC}
 						title="2 Fast 2 MCP Registration"
 						className="block mx-auto max-w-full w-full max-w-[540px] border-0 min-h-[1400px]"
 						allowFullScreen
-						style={{ minHeight: "max(1400px, calc(100vh - 8rem))" }}
+						style={{ minHeight: "1400px" }}
 					/>
 				</div>
 			</ViewContainer>
