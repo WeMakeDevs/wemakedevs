@@ -67,6 +67,10 @@ const navLinks = [
 
 const faqs: FaqType[] = [
 	{
+		question: "How do I register for the hackathon?",
+		answer: "It's simple! Click the <a href='/hackathons/2fast2mcp/register' class='text-orange-400 underline hover:text-orange-300'>Register Now</a> button to sign up for 2 Fast 2 MCP. Fill out the registration form with your details and you'll be ready to race!",
+	},
+	{
 		question: "Eligibility criteria to participate in this hackathon?",
 		answer: "You should be above 16 years of age and should abide by the rules of WeMakeDevs hackathons. Teams can have anywhere from 1 to 4 people in them.",
 	},
