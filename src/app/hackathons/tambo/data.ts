@@ -143,7 +143,7 @@ const schedule = [
 					},
 					{
 						platform: "youtube",
-						url: "https://www.youtube.com/watch?v=wTSDfWItuHU",
+						url: "https://www.youtube.com/watch?v=9g_M4MFbKfM",
 					},
 				],
 			},
