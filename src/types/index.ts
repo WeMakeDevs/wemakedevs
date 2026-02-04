@@ -147,6 +147,7 @@ export interface HackathonDateInterface extends GeneralComponent {
 export type PageType =
 	| "overview"
 	| "schedule"
+	| "register"
 	| "submit"
 	| "resources"
 	| "rules"

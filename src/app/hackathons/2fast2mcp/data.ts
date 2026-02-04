@@ -14,8 +14,8 @@ const DATA = {
 	images,
 	cta: {
 		label: "Register Now",
-		href: "https://forms.gle/GtDSjNvxJ7iTD6LD9",
-		openInNewTab: true,
+		href: "/hackathons/2fast2mcp/register",
+		openInNewTab: false,
 		disabled: false,
 	},
 	prizes: {
@@ -62,6 +62,11 @@ const navLinks = [
 		href: `/hackathons/${DATA.slug}/schedule`,
 		label: "Schedule",
 		page: "schedule",
+	},
+	{
+		href: `/hackathons/${DATA.slug}/register`,
+		label: "Register",
+		page: "register",
 	},
 ];
 
