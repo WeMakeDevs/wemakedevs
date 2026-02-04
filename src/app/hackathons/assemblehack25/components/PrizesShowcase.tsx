@@ -8,6 +8,7 @@ const PrizesShowcase = () => {
 		{
 			name: "Infinity Build Award",
 			prize: "$5,000",
+			perMember: "$1,250 per team member, with maximum 4 team members",
 			description:
 				"Awarded to the best project that uses Cline CLI to build powerful autonomous coding workflows and meaningful capabilities on top of the CLI.",
 			image: images.infinityGauntlet,
@@ -20,6 +21,7 @@ const PrizesShowcase = () => {
 		{
 			name: "Wakanda Data Award",
 			prize: "$4,000",
+			perMember: "$1,000 per team member, with maximum 4 team members",
 			description:
 				"Awarded to the best project using Kestra's built-in AI Agent to summarise data from other systems. Bonus credit for enabling the agent to make decisions based on the summarised data.",
 			image: images.blackPanther,
@@ -32,6 +34,7 @@ const PrizesShowcase = () => {
 		{
 			name: "Iron Intelligence Award",
 			prize: "$3,000",
+			perMember: "$750 per team member, with maximum 4 team members",
 			description:
 				"Awarded for the most effective and creative use of Oumi to train/evaluate new LLMs/VLMs and/or most impactful contributions to the open source Oumi repository that would benefit the community.",
 			image: images.ironmanHelmet,
@@ -44,6 +47,7 @@ const PrizesShowcase = () => {
 		{
 			name: "Stormbreaker Deployment Award",
 			prize: "$2,000",
+			perMember: "$500 per team member, with maximum 4 team members",
 			description:
 				"Awarded to the strongest Vercel deployment, showing a smooth, fast, and production-ready experience.",
 			image: images.thorStormBreaker,
@@ -56,6 +60,7 @@ const PrizesShowcase = () => {
 		{
 			name: "Captain Code Award",
 			prize: "$1,000",
+			perMember: "$250 per team member, with maximum 4 team members",
 			description:
 				"Awarded to the team that demonstrates the best open-source engineering using CodeRabbit through clean PRs, documentation, and solid OSS workflows.",
 			image: images.captainAmericaShield,
@@ -118,6 +123,9 @@ const PrizesShowcase = () => {
 									<div className="text-3xl font-black text-purple-600">
 										{prizes[1].prize}
 									</div>
+									<p className="text-sm text-purple-600/80 mt-1">
+										{prizes[1].perMember}
+									</p>
 								</div>
 
 								<p className="text-gray-600 text-center text-sm leading-relaxed">
@@ -162,6 +170,9 @@ const PrizesShowcase = () => {
 									<div className="text-5xl md:text-6xl font-black bg-gradient-to-r from-yellow-500 via-amber-500 to-orange-500 bg-clip-text text-transparent">
 										{prizes[0].prize}
 									</div>
+									<p className="text-sm text-amber-600/90 mt-1">
+										{prizes[0].perMember}
+									</p>
 								</div>
 
 								<p className="text-gray-700 text-center leading-relaxed">
@@ -199,6 +210,9 @@ const PrizesShowcase = () => {
 									<div className="text-3xl font-black text-slate-600">
 										{prizes[2].prize}
 									</div>
+									<p className="text-sm text-slate-600/80 mt-1">
+										{prizes[2].perMember}
+									</p>
 								</div>
 
 								<p className="text-gray-600 text-center text-sm leading-relaxed">
@@ -239,6 +253,9 @@ const PrizesShowcase = () => {
 									<div className="text-2xl font-black text-blue-600">
 										{prizes[3].prize}
 									</div>
+									<p className="text-sm text-blue-600/80 mt-1">
+										{prizes[3].perMember}
+									</p>
 								</div>
 
 								<p className="text-gray-600 text-center text-sm leading-relaxed">
@@ -276,6 +293,9 @@ const PrizesShowcase = () => {
 									<div className="text-2xl font-black text-amber-700">
 										{prizes[4].prize}
 									</div>
+									<p className="text-sm text-amber-700/80 mt-1">
+										{prizes[4].perMember}
+									</p>
 								</div>
 
 								<p className="text-gray-600 text-center text-sm leading-relaxed">

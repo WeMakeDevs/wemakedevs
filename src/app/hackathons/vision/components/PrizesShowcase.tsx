@@ -50,40 +50,49 @@ const PrizesShowcase = () => {
 									<div className="text-4xl md:text-5xl font-bold text-cyan-400">
 										$3,000
 									</div>
+									<p className="text-cyan-400/70 text-sm mt-1">
+										$750 per participant, max 4
+									</p>
 									<p className="text-slate-400 mt-2 text-sm">
 										Grand Prize
 									</p>
 								</div>
 
-								{/* Duo Prize */}
+								{/* Second Place */}
 								<div className="bg-slate-900/90 rounded-2xl p-6 border border-cyan-400/20 shadow-xl">
 									<div className="flex items-center justify-between mb-4">
 										<span className="text-cyan-400/90 font-bold text-lg">
-											Partner Agents
+											Elite Operative
 										</span>
-										<span className="text-xl">🤝</span>
+										<span className="text-xl">🎯</span>
 									</div>
 									<div className="text-3xl md:text-4xl font-bold text-cyan-400/90">
 										$2,000
 									</div>
+									<p className="text-cyan-400/60 text-sm mt-1">
+										$500 per participant, max 4
+									</p>
 									<p className="text-slate-400 mt-2 text-sm">
-										Best Team of 2
+										Second Place
 									</p>
 								</div>
 
-								{/* Solo Prize */}
+								{/* Third Place */}
 								<div className="bg-slate-900/80 rounded-2xl p-6 border border-cyan-400/10 shadow-xl">
 									<div className="flex items-center justify-between mb-4">
 										<span className="text-cyan-400/80 font-bold text-lg">
-											Lone Operative
+											Field Agent
 										</span>
 										<span className="text-xl">🕵️</span>
 									</div>
 									<div className="text-3xl font-bold text-cyan-400/80">
 										$1,000
 									</div>
+									<p className="text-cyan-400/50 text-sm mt-1">
+										$250 per participant, max 4
+									</p>
 									<p className="text-slate-400 mt-2 text-sm">
-										Best Solo Agent
+										Third Place
 									</p>
 								</div>
 							</div>

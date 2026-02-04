@@ -53,16 +53,19 @@ const PrizesShowcase = () => {
 									<div className="text-4xl md:text-5xl font-bold text-orange-400">
 										$5,000
 									</div>
+									<p className="text-orange-400/70 text-sm mt-1">
+										$1,250 per participant, max 4
+									</p>
 									<p className="text-slate-400 mt-2 text-sm">
 										Grand Prize
 									</p>
 								</div>
 
-								{/* Team of 2 Prize */}
+								{/* Second Place */}
 								<div className="bg-slate-900/90 rounded-2xl p-6 border border-orange-400/20 shadow-xl">
 									<div className="flex items-center justify-between mb-4">
 										<span className="text-orange-400/90 font-bold text-lg">
-											Dynamic Duo
+											Turbo Runner
 										</span>
 										<div className="flex items-center gap-1">
 											<span className="text-2xl">🏎️</span>
@@ -71,26 +74,32 @@ const PrizesShowcase = () => {
 									<div className="text-3xl md:text-4xl font-bold text-orange-400/90">
 										$3,000
 									</div>
+									<p className="text-orange-400/60 text-sm mt-1">
+										$750 per participant, max 4
+									</p>
 									<p className="text-slate-400 mt-2 text-sm">
-										Best Team of 2
+										Second Place
 									</p>
 								</div>
 
-								{/* Solo Prize */}
+								{/* Third Place */}
 								<div className="bg-slate-900/80 rounded-2xl p-6 border border-orange-400/10 shadow-xl">
 									<div className="flex items-center justify-between mb-4">
 										<span className="text-orange-400/80 font-bold text-lg">
-											Lone Wolf
+											Speed Demon
 										</span>
 										<div className="flex items-center gap-1">
-											<span className="text-2xl">🐺</span>
+											<span className="text-2xl">🔥</span>
 										</div>
 									</div>
 									<div className="text-3xl font-bold text-orange-400/80">
 										$2,000
 									</div>
+									<p className="text-orange-400/50 text-sm mt-1">
+										$500 per participant, max 4
+									</p>
 									<p className="text-slate-400 mt-2 text-sm">
-										Best Solo Racer
+										Third Place
 									</p>
 								</div>
 							</div>
