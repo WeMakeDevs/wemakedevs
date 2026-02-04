@@ -30,6 +30,10 @@ const HackathonRegister = async () => {
 				</h2>
 				<p className="text-slate-400 text-center mb-8">
 					Fill out the form below to secure your spot in the race.
+					<br />
+					<span className="text-slate-500 text-sm">
+						You can register solo or as part of a team. If you&apos;re participating in a team, each team member must fill out this form individually.
+					</span>
 				</p>
 				<div className="flex-1 min-h-[1300px] flex justify-center">
 					<div className="w-full max-w-[700px] bg-slate-900/60 backdrop-blur-sm rounded-2xl border border-orange-500/20 overflow-hidden shadow-xl shadow-orange-500/5">
