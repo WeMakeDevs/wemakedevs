@@ -32,12 +32,11 @@ const HackathonRegister = async () => {
 					Fill out the form below to secure your spot in the race.
 				</p>
 				<div className="flex-1 min-h-[1300px] flex justify-center">
-					<div className="w-full max-w-[580px] bg-slate-900/60 backdrop-blur-sm rounded-2xl border border-orange-500/20 overflow-hidden shadow-xl shadow-orange-500/5">
+					<div className="w-full max-w-[800px] bg-slate-900/60 backdrop-blur-sm rounded-2xl border border-orange-500/20 overflow-hidden shadow-xl shadow-orange-500/5">
 						{/* Themed top accent */}
 						<div className="h-1 bg-gradient-to-r from-orange-500 via-red-500 to-orange-500" />
 						<div className="p-4 md:p-6">
 							<iframe
-								width={540}
 								src={REGISTER_IFRAME_SRC}
 								title="2 Fast 2 MCP Registration"
 								className="block mx-auto max-w-full w-full border-0 min-h-[1300px] rounded-lg bg-slate-800/50"
