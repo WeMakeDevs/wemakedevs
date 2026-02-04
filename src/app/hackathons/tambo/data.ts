@@ -76,6 +76,10 @@ const faqs: FaqType[] = [
 		answer: "You should be above 16 years of age and should abide by the rule of WeMakeDevs hackathons. Teams can have anywhere from 1 to 4 people in them.",
 	},
 	{
+		question: "I registered as a solo participant. Can I switch to a team?",
+		answer: "Yes! If you initially registered solo and now want to join or form a team, simply submit the registration form again with your team name. Your registration will be updated automatically.",
+	},
+	{
 		question: "Can I use existing or previously made projects?",
 		answer: "No, you have to start making the project only after the hackathon starts.",
 	},

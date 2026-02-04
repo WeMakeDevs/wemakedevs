@@ -71,6 +71,10 @@ const faqs: FaqType[] = [
 		answer: "You must be above 16 years of age and follow the WeMakeDevs hackathon protocols. Teams can have 1-4 agents (members).",
 	},
 	{
+		question: "I registered as a solo agent. Can I switch to a team?",
+		answer: "Affirmative, Agent. If you initially went solo and now want to assemble a squad, simply submit the registration form again with your team name. Your mission profile will be updated automatically.",
+	},
+	{
 		question: "Can I use existing projects or prior work?",
 		answer: "Negative, Agent. All projects must be built from scratch after the mission commences. Using starter templates is permitted.",
 	},

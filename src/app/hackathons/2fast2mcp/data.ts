@@ -75,6 +75,10 @@ const faqs: FaqType[] = [
 		answer: "You should be above 16 years of age and should abide by the rules of WeMakeDevs hackathons. Teams can have anywhere from 1 to 4 people in them.",
 	},
 	{
+		question: "I registered as a solo participant. Can I switch to a team?",
+		answer: "Yes! If you initially registered solo and now want to join or form a team, simply submit the registration form again with your team name. Your registration will be updated automatically - time to assemble your crew!",
+	},
+	{
 		question: "Who is this hackathon for?",
 		answer: "This hackathon is perfect for tinkerers, agent builders, DevOps engineers, and SREs who want to explore the power of MCP (Model Context Protocol) servers and intelligent agent orchestration with Archestra.",
 	},
