@@ -42,7 +42,7 @@ const hackathons = [
 		slug: "2fast2mcp",
 		description: "Run powerful MCP-based agents with Archestra",
 		prize: "$10,000+",
-		registrationLink: "https://forms.gle/GtDSjNvxJ7iTD6LD9",
+		registrationLink: "/hackathons/2fast2mcp/register",
 	},
 	{
 		week: 3,
@@ -332,8 +332,9 @@ function HackathonCard({
 						{hackathon.registrationLink && (
 							<Link
 								href={hackathon.registrationLink}
-								target="_blank"
-								rel="noopener noreferrer"
+								{...(hackathon.registrationLink.startsWith("http")
+									? { target: "_blank", rel: "noopener noreferrer" }
+									: {})}
 								className={cn(
 									buttonVariants({ size: "sm" }),
 									"bg-red-500 hover:bg-red-600 text-white",

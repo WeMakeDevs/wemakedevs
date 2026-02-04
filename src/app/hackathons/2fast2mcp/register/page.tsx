@@ -11,11 +11,11 @@ const REGISTER_IFRAME_SRC =
 
 const HackathonRegister = async () => {
 	return (
-		<div className="pt-20 pb-10 bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 min-h-screen">
+		<div className="pt-20 pb-10 bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 min-h-screen flex flex-col">
 			<HackathonCoverImage src={images.cover} alt={DATA.title} />
 			<HackathonNav
 				slug={DATA.slug}
-				page="register"
+				page="overview"
 				links={navLinks}
 				navCta={{
 					label: DATA.cta.label,
@@ -24,18 +24,17 @@ const HackathonRegister = async () => {
 					disabled: DATA.cta.disabled,
 				}}
 			/>
-			<ViewContainer className="my-14">
+			<ViewContainer className="my-14 flex-1 flex flex-col min-h-0">
 				<h2 className="text-3xl font-bold text-orange-400 mb-8 text-center">
 					Register for 2 Fast 2 MCP
 				</h2>
-				<div className="flex justify-center">
+				<div className="flex-1 min-h-[calc(100vh-18rem)] flex justify-center">
 					<iframe
-						width={540}
-						height={305}
 						src={REGISTER_IFRAME_SRC}
 						title="2 Fast 2 MCP Registration"
-						className="block mx-auto max-w-full border-0 overflow-auto align-middle"
+						className="block mx-auto max-w-full w-full max-w-[540px] border-0 flex-1 min-h-[calc(100vh-22rem)]"
 						allowFullScreen
+						style={{ minHeight: "calc(100vh - 22rem)" }}
 					/>
 				</div>
 			</ViewContainer>
