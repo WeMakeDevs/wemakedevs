@@ -3,7 +3,7 @@ import { images } from "./images";
 
 const DATA = {
 	title: "Vision Possible: Agent Protocol",
-	prize: "$4,500+",
+	prize: "$4,000+",
 	startDate: "2026-02-23T16:00:00Z",
 	endDate: "2026-03-01T23:59:59Z",
 	description:
@@ -22,7 +22,7 @@ const DATA = {
 		winning: [
 			{
 				name: "Top 3 Agents",
-				prize: "$4,500 + exclusive swag + interview at WeMakeDevs",
+				prize: "$4,000 + exclusive swag + interview at WeMakeDevs",
 			},
 		],
 		giveaway: [

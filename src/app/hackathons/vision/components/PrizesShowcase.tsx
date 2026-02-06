@@ -80,7 +80,7 @@ const PrizesShowcase = () => {
 										<span className="text-xl">🥉</span>
 									</div>
 									<div className="text-3xl font-bold text-cyan-400/80">
-										$1,000
+										$500
 									</div>
 									<p className="text-slate-400 mt-2 text-sm">
 										Bronze Medal
