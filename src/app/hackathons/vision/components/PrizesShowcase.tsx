@@ -43,7 +43,7 @@ const PrizesShowcase = () => {
 								<div className="bg-slate-900 rounded-2xl p-6 border border-cyan-400/30 shadow-xl">
 									<div className="flex items-center justify-between mb-4">
 										<span className="text-cyan-400 font-bold text-lg">
-											Mission Commander
+											Alpha Protocol
 										</span>
 										<Trophy className="w-6 h-6 text-cyan-400" />
 									</div>
@@ -59,7 +59,7 @@ const PrizesShowcase = () => {
 								<div className="bg-slate-900/90 rounded-2xl p-6 border border-cyan-400/20 shadow-xl">
 									<div className="flex items-center justify-between mb-4">
 										<span className="text-cyan-400/90 font-bold text-lg">
-											Senior Agent
+											Bravo Protocol
 										</span>
 										<span className="text-xl">🎯</span>
 									</div>
@@ -75,7 +75,7 @@ const PrizesShowcase = () => {
 								<div className="bg-slate-900/80 rounded-2xl p-6 border border-cyan-400/10 shadow-xl">
 									<div className="flex items-center justify-between mb-4">
 										<span className="text-cyan-400/80 font-bold text-lg">
-											Field Operative
+											Delta Protocol
 										</span>
 										<span className="text-xl">🕵️</span>
 									</div>
