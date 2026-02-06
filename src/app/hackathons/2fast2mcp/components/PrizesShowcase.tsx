@@ -51,7 +51,7 @@ const PrizesShowcase = () => {
 										</div>
 									</div>
 									<div className="text-4xl md:text-5xl font-bold text-orange-400">
-										$5,000
+										$4,000
 									</div>
 									<p className="text-slate-400 mt-2 text-sm">
 										Grand Prize
@@ -69,7 +69,7 @@ const PrizesShowcase = () => {
 										</div>
 									</div>
 									<div className="text-3xl md:text-4xl font-bold text-orange-400/90">
-										$3,000
+										$2,000
 									</div>
 									<p className="text-slate-400 mt-2 text-sm">
 										Best Duo Team
@@ -87,7 +87,7 @@ const PrizesShowcase = () => {
 										</div>
 									</div>
 									<div className="text-3xl font-bold text-orange-400/80">
-										$2,000
+										$1,500
 									</div>
 									<p className="text-slate-400 mt-2 text-sm">
 										Best Solo
