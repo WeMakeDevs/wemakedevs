@@ -120,7 +120,7 @@ const HackathonHeader = ({
 									Mission Rewards
 								</span>
 								<p className="text-2xl md:text-3xl font-bold text-slate-100 mt-1">
-									$6,000+
+									{prize}
 								</p>
 								<p className="text-slate-400 mt-1">
 									+ exclusive agent swag

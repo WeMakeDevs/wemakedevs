@@ -43,7 +43,7 @@ const PrizesShowcase = () => {
 								<div className="bg-slate-900 rounded-2xl p-6 border border-cyan-400/30 shadow-xl">
 									<div className="flex items-center justify-between mb-4">
 										<span className="text-cyan-400 font-bold text-lg">
-											1st Place
+											Mission Commander
 										</span>
 										<Trophy className="w-6 h-6 text-cyan-400" />
 									</div>
@@ -51,7 +51,7 @@ const PrizesShowcase = () => {
 										$2,000
 									</div>
 									<p className="text-slate-400 mt-2 text-sm">
-										Gold Medal
+										1st Place
 									</p>
 								</div>
 
@@ -59,15 +59,15 @@ const PrizesShowcase = () => {
 								<div className="bg-slate-900/90 rounded-2xl p-6 border border-cyan-400/20 shadow-xl">
 									<div className="flex items-center justify-between mb-4">
 										<span className="text-cyan-400/90 font-bold text-lg">
-											2nd Place
+											Senior Agent
 										</span>
-										<span className="text-xl">🥈</span>
+										<span className="text-xl">🎯</span>
 									</div>
 									<div className="text-3xl md:text-4xl font-bold text-cyan-400/90">
 										$1,500
 									</div>
 									<p className="text-slate-400 mt-2 text-sm">
-										Silver Medal
+										2nd Place
 									</p>
 								</div>
 
@@ -75,15 +75,15 @@ const PrizesShowcase = () => {
 								<div className="bg-slate-900/80 rounded-2xl p-6 border border-cyan-400/10 shadow-xl">
 									<div className="flex items-center justify-between mb-4">
 										<span className="text-cyan-400/80 font-bold text-lg">
-											3rd Place
+											Field Operative
 										</span>
-										<span className="text-xl">🥉</span>
+										<span className="text-xl">🕵️</span>
 									</div>
 									<div className="text-3xl font-bold text-cyan-400/80">
 										$500
 									</div>
 									<p className="text-slate-400 mt-2 text-sm">
-										Bronze Medal
+										3rd Place
 									</p>
 								</div>
 							</div>
