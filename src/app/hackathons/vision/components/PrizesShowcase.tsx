@@ -39,51 +39,51 @@ const PrizesShowcase = () => {
 							</div>
 
 							<div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-								{/* Grand Prize */}
+								{/* 1st Place */}
 								<div className="bg-slate-900 rounded-2xl p-6 border border-cyan-400/30 shadow-xl">
 									<div className="flex items-center justify-between mb-4">
 										<span className="text-cyan-400 font-bold text-lg">
-											Mission Commander
+											1st Place
 										</span>
 										<Trophy className="w-6 h-6 text-cyan-400" />
 									</div>
 									<div className="text-4xl md:text-5xl font-bold text-cyan-400">
-										$3,000
-									</div>
-									<p className="text-slate-400 mt-2 text-sm">
-										Grand Prize
-									</p>
-								</div>
-
-								{/* Best Duo Team */}
-								<div className="bg-slate-900/90 rounded-2xl p-6 border border-cyan-400/20 shadow-xl">
-									<div className="flex items-center justify-between mb-4">
-										<span className="text-cyan-400/90 font-bold text-lg">
-											Dynamic Duo
-										</span>
-										<span className="text-xl">🎯</span>
-									</div>
-									<div className="text-3xl md:text-4xl font-bold text-cyan-400/90">
 										$2,000
 									</div>
 									<p className="text-slate-400 mt-2 text-sm">
-										Best Duo Team
+										Gold Medal
 									</p>
 								</div>
 
-								{/* Best Solo */}
+								{/* 2nd Place */}
+								<div className="bg-slate-900/90 rounded-2xl p-6 border border-cyan-400/20 shadow-xl">
+									<div className="flex items-center justify-between mb-4">
+										<span className="text-cyan-400/90 font-bold text-lg">
+											2nd Place
+										</span>
+										<span className="text-xl">🥈</span>
+									</div>
+									<div className="text-3xl md:text-4xl font-bold text-cyan-400/90">
+										$1,500
+									</div>
+									<p className="text-slate-400 mt-2 text-sm">
+										Silver Medal
+									</p>
+								</div>
+
+								{/* 3rd Place */}
 								<div className="bg-slate-900/80 rounded-2xl p-6 border border-cyan-400/10 shadow-xl">
 									<div className="flex items-center justify-between mb-4">
 										<span className="text-cyan-400/80 font-bold text-lg">
-											Lone Agent
+											3rd Place
 										</span>
-										<span className="text-xl">🕵️</span>
+										<span className="text-xl">🥉</span>
 									</div>
 									<div className="text-3xl font-bold text-cyan-400/80">
 										$1,000
 									</div>
 									<p className="text-slate-400 mt-2 text-sm">
-										Best Solo
+										Bronze Medal
 									</p>
 								</div>
 							</div>
