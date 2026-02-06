@@ -53,19 +53,16 @@ const PrizesShowcase = () => {
 									<div className="text-4xl md:text-5xl font-bold text-orange-400">
 										$5,000
 									</div>
-									<p className="text-orange-400/70 text-sm mt-1">
-										$1,250 per team member, with maximum 4 team members
-									</p>
 									<p className="text-slate-400 mt-2 text-sm">
 										Grand Prize
 									</p>
 								</div>
 
-								{/* Second Place */}
+								{/* Best Duo Team */}
 								<div className="bg-slate-900/90 rounded-2xl p-6 border border-orange-400/20 shadow-xl">
 									<div className="flex items-center justify-between mb-4">
 										<span className="text-orange-400/90 font-bold text-lg">
-											Turbo Runner
+											Turbo Duo
 										</span>
 										<div className="flex items-center gap-1">
 											<span className="text-2xl">🏎️</span>
@@ -74,19 +71,16 @@ const PrizesShowcase = () => {
 									<div className="text-3xl md:text-4xl font-bold text-orange-400/90">
 										$3,000
 									</div>
-									<p className="text-orange-400/60 text-sm mt-1">
-										$750 per team member, with maximum 4 team members
-									</p>
 									<p className="text-slate-400 mt-2 text-sm">
-										Second Place
+										Best Duo Team
 									</p>
 								</div>
 
-								{/* Third Place */}
+								{/* Best Solo */}
 								<div className="bg-slate-900/80 rounded-2xl p-6 border border-orange-400/10 shadow-xl">
 									<div className="flex items-center justify-between mb-4">
 										<span className="text-orange-400/80 font-bold text-lg">
-											Speed Demon
+											Speed Racer
 										</span>
 										<div className="flex items-center gap-1">
 											<span className="text-2xl">🔥</span>
@@ -95,11 +89,8 @@ const PrizesShowcase = () => {
 									<div className="text-3xl font-bold text-orange-400/80">
 										$2,000
 									</div>
-									<p className="text-orange-400/50 text-sm mt-1">
-										$500 per team member, with maximum 4 team members
-									</p>
 									<p className="text-slate-400 mt-2 text-sm">
-										Third Place
+										Best Solo
 									</p>
 								</div>
 							</div>
