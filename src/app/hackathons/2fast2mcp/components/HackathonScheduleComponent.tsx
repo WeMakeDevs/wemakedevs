@@ -3,7 +3,7 @@
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import type { ScheduleElement } from "@/types";
-import { SiSlack } from "@icons-pack/react-simple-icons";
+import { SiLinkedin, SiSlack } from "@icons-pack/react-simple-icons";
 import { Clock, Link2, Youtube } from "lucide-react";
 import Link from "next/link";
 import { useEffect, useState } from "react";
@@ -240,6 +240,8 @@ const HackathonScheduleComponent = ({
 																	<Youtube size={18} />
 																) : l.platform === "slack" ? (
 																	<SiSlack size={18} />
+																) : l.platform === "linkedin" ? (
+																	<SiLinkedin size={18} />
 																) : (
 																	<Link2 size={16} />
 																)}

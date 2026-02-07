@@ -115,10 +115,16 @@ const schedule = [
 			{
 				title: "Live Stream - Getting Started with Archestra & MCP",
 				time: "2026-02-09T21:30:00+05:30",
-				link: {
-					name: "YouTube",
-					url: "https://youtube.com/@wemakedevs",
-				},
+				links: [
+					{
+						platform: "youtube",
+						url: "https://www.youtube.com/watch?v=aRtR99W-EoI",
+					},
+					{
+						platform: "linkedin",
+						url: "https://www.linkedin.com/feed/update/urn:li:ugcPost:7425859351120093186",
+					},
+				],
 			},
 		],
 	},
