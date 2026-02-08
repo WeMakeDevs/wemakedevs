@@ -28,7 +28,7 @@ const hackathons = [
 		week: 1,
 		title: "The UI Strikes Back",
 		dates: "Feb 2 - Feb 8",
-		status: "live",
+		status: "ended",
 		slug: "tambo",
 		description: "Build generative UI applications with Tambo",
 		prize: "$6,000+",
@@ -38,7 +38,7 @@ const hackathons = [
 		week: 2,
 		title: "2 Fast 2 MCP",
 		dates: "Feb 9 - Feb 15",
-		status: "upcoming",
+		status: "live",
 		slug: "2fast2mcp",
 		description: "Run powerful MCP-based agents with Archestra",
 		prize: "$10,000+",
@@ -206,6 +206,7 @@ function TrackMarker({
 }) {
 	const isLive = hackathon.status === "live";
 	const isUpcoming = hackathon.status === "upcoming";
+	const isEnded = hackathon.status === "ended";
 	
 	const tooltipPosition = {
 		top: "top-full mt-2 left-1/2 -translate-x-1/2",
@@ -223,6 +224,8 @@ function TrackMarker({
 						? "bg-green-500 border-green-400 text-white animate-pulse"
 						: isUpcoming
 						? "bg-orange-500 border-orange-400 text-white"
+						: isEnded
+						? "bg-gray-500 border-gray-400 text-gray-200"
 						: "bg-gray-600 border-gray-500 text-gray-300"
 				)}
 			>
@@ -247,6 +250,11 @@ function TrackMarker({
 							Upcoming
 						</span>
 					)}
+					{isEnded && (
+						<span className="inline-block mt-1 px-2 py-0.5 bg-gray-500 text-white text-xs rounded-full">
+							Ended
+						</span>
+					)}
 				</div>
 			</div>
 		</div>
@@ -262,12 +270,13 @@ function HackathonCard({
 	const isLive = hackathon.status === "live";
 	const isUpcoming = hackathon.status === "upcoming";
 	const isComingSoon = hackathon.status === "coming_soon";
+	const isEnded = hackathon.status === "ended";
 
 	return (
 		<div
 			className={cn(
 				"bg-gray-800/80 backdrop-blur-sm border-2 rounded-xl p-6 relative overflow-hidden",
-				isLive ? "border-green-500" : isUpcoming ? "border-orange-500" : "border-gray-600",
+				isLive ? "border-green-500" : isUpcoming ? "border-orange-500" : isEnded ? "border-gray-500" : "border-gray-600",
 			)}
 		>
 			{isLive && (
@@ -285,6 +294,11 @@ function HackathonCard({
 					COMING SOON
 				</div>
 			)}
+			{isEnded && (
+				<div className="absolute top-0 right-0 bg-gray-500 text-white px-4 py-1 text-sm font-bold rounded-bl-lg">
+					ENDED
+				</div>
+			)}
 
 			<div className="flex items-center gap-4 mb-4">
 				<div
@@ -294,6 +308,8 @@ function HackathonCard({
 							? "bg-green-500 border-green-400 text-white"
 							: isUpcoming
 							? "bg-orange-500 border-orange-400 text-white"
+							: isEnded
+							? "bg-gray-500 border-gray-400 text-white"
 							: "bg-red-500 border-red-400 text-white",
 					)}
 				>
@@ -703,12 +719,10 @@ export default function FebruaryPage() {
 			<Banner className="flex items-center text-base md:text-lg font-medium">
 				<div className="flex flex-col md:flex-row items-center justify-center">
 					<span className="text-white">
-						Week 1 is LIVE! Register now for "The UI Strikes Back" hackathon - $6,000+ in prizes!{" "}
+						Week 2 is LIVE! Register now for "2 Fast 2 MCP" hackathon - $10,000+ in prizes!{" "}
 					</span>
 					<Link
-						href="https://forms.gle/PG5jppKYjwky4BFUA"
-						target="_blank"
-						rel="noopener noreferrer"
+						href="/hackathons/2fast2mcp/register"
 						className={cn(
 							buttonVariants(),
 							"mt-4 md:mt-0 md:ml-8 px-3 py-2 bg-white hover:bg-white/80 text-[#1a2047] w-full md:w-fit",
