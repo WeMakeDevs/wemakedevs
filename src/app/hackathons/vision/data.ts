@@ -21,8 +21,12 @@ const DATA = {
 	prizes: {
 		winning: [
 			{
-				name: "Top 3 Agents",
-				prize: "$4,000 + exclusive swag + interview at WeMakeDevs",
+				name: "Top 2 Agents",
+				prize: "$3,500 + exclusive swag + interview at WeMakeDevs",
+			},
+			{
+				name: "Best Blog Submission",
+				prize: "$500 — Share your experience using Vision Agents SDK in a blog",
 			},
 		],
 		giveaway: [

@@ -22,7 +22,7 @@ const PrizesShowcase = () => {
 
 				{/* Prize Cards */}
 				<div className="space-y-8">
-					{/* Top 3 Winners */}
+					{/* Winners & Blog Prize */}
 					<div className="relative rounded-3xl p-8 md:p-10 overflow-hidden bg-gradient-to-br from-cyan-600 via-cyan-700 to-teal-800">
 						{/* Decorative elements */}
 						<div className="pointer-events-none absolute -top-20 -right-20 w-64 h-64 bg-white/10 rounded-full blur-3xl" />
@@ -71,21 +71,21 @@ const PrizesShowcase = () => {
 									</p>
 								</div>
 
-								{/* 3rd Place */}
-								<div className="bg-slate-900/80 rounded-2xl p-6 border border-cyan-400/10 shadow-xl">
-									<div className="flex items-center justify-between mb-4">
-										<span className="text-cyan-400/80 font-bold text-lg">
-											Delta Protocol
-										</span>
-										<span className="text-xl">🕵️</span>
-									</div>
-									<div className="text-3xl font-bold text-cyan-400/80">
-										$500
-									</div>
-									<p className="text-slate-400 mt-2 text-sm">
-										3rd Place
-									</p>
+							{/* Best Blog Submission */}
+							<div className="bg-slate-900/80 rounded-2xl p-6 border border-cyan-400/10 shadow-xl">
+								<div className="flex items-center justify-between mb-4">
+									<span className="text-cyan-400/80 font-bold text-lg">
+										Best Blog Submission
+									</span>
+									<span className="text-xl">📝</span>
 								</div>
+								<div className="text-3xl font-bold text-cyan-400/80">
+									$500
+								</div>
+								<p className="text-slate-400 mt-2 text-sm">
+									Share your experience using Vision Agents SDK in a blog
+								</p>
+							</div>
 							</div>
 
 							<div className="mt-8 flex flex-wrap gap-3 justify-center">
