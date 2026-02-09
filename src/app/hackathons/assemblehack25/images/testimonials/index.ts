@@ -12,6 +12,7 @@
 // Sponsor testimonials
 import juanPa from "./juan-pa.png";
 import aravind from "./aravind.png";
+import zain from "./zain.png";
 
 import jiten from "./jiten.jpg";
 import karthik from "./karthik.jpg";
@@ -25,6 +26,7 @@ import himanshu from "./himanshu.jpg";
 export {
 	juanPa,
 	aravind,
+	zain,
 	jiten,
 	karthik,
 	pravesh,

@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { images } from "../images";
-import { aravind, juanPa } from "../images/testimonials";
+import { aravind, juanPa, zain } from "../images/testimonials";
 
 const AssembleSpecialTestimonial = () => {
 	return (
@@ -73,6 +73,37 @@ const AssembleSpecialTestimonial = () => {
 						</p>
 						<p className="text-sm font-medium text-gray-500">
 							VP of Growth, CodeRabbit
+						</p>
+					</div>
+				</div>
+			</div>
+			{/* Together AI - Zain */}
+			<div className="space-y-10">
+				<Image
+					src={images.togetheraiLogo}
+					alt="Together AI Logo"
+					className="w-36 mx-auto"
+				/>
+				<div className="space-y-4 text-lg md:text-xl font-medium max-w-4xl mx-auto text-center text-gray-700">
+					<p>
+						Presenting this webinar was a fantastic experience. The
+						audience was highly engaged throughout, with thoughtful
+						questions and active discussion around LLM and coding
+						agents.
+					</p>
+				</div>
+				<div className="flex items-center gap-3 mx-auto w-fit">
+					<Image
+						src={zain}
+						alt="Zain"
+						className="w-14 h-14 rounded-full border-2 border-cyan-500/50 object-cover"
+					/>
+					<div>
+						<p className="text-lg font-semibold text-gray-900">
+							Zain
+						</p>
+						<p className="text-sm font-medium text-gray-500">
+							Together AI
 						</p>
 					</div>
 				</div>
