@@ -20,7 +20,7 @@ const Scholarships = () => {
 			{/* <Carousel /> */}
 			<Sponsor />
 			<Apply />
-			{/* <Dates /> */}
+			<Dates />
 			<PreviousWinners />
 			<Faq
 				FAQS={SCHOLARSHIP_FAQS}

@@ -57,7 +57,7 @@ export const HACKATHON_FAQS: FaqType[] = [
 export const SCHOLARSHIP_FAQS: FaqType[] = [
 	{
 		question: "What are the rules?",
-		answer: "To be eligible, you must sign up to Cerebras using <a href='https://cloud.cerebras.ai/?referral_code=kunal' target='_blank' rel='noopener noreferrer' class='text-blue-700 underline hover:no-underline'>this link</a> and then <a href='https://forms.gle/vYj6fZbzBQtxjkZc6' target='_blank' rel='noopener noreferrer' class='text-blue-700 underline hover:no-underline'>apply here</a>.",
+		answer: "To be eligible, check out <a href='https://github.com/accomplish-ai/accomplish' target='_blank' rel='noopener noreferrer' class='text-blue-700 underline hover:no-underline'>Accomplish on GitHub</a> and then <a href='https://forms.gle/vYj6fZbzBQtxjkZc6' target='_blank' rel='noopener noreferrer' class='text-blue-700 underline hover:no-underline'>apply here</a>. The deadline to submit is February 15, 2026.",
 	},
 	{
 		question: "What does the scholarship cover?",

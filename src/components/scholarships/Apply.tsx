@@ -47,13 +47,13 @@ const Apply = () => {
 							</span>{" "}
 							and{" "}
 							<span className="font-semibold text-primary">
-								@CerebrasSystems
+								@accomplish_ai
 							</span>
 						</p>
 
 						<div className="flex justify-center gap-4 flex-col md:flex-row">
 							<Link
-								href="https://twitter.com/intent/tweet?text=Check%20out%20this%20amazing%20scholarship%20opportunity%20from%20%40WeMakeDevs%20and%20%40CerebrasSystems!%20Apply%20now%20and%20take%20your%20career%20to%20the%20next%20level%20🚀"
+								href="https://twitter.com/intent/tweet?text=Check%20out%20this%20amazing%20scholarship%20opportunity%20from%20%40WeMakeDevs%20and%20%40accomplish_ai!%20Apply%20now%20and%20take%20your%20career%20to%20the%20next%20level%20🚀"
 								target="_blank"
 								rel="noopener noreferrer"
 								className={cn(

@@ -2,19 +2,15 @@ import { ViewContainer } from "../ui/view-container";
 
 const dates = [
 	{
-		date: "August 24, 2025",
-		title: "Scholarship Application Opens",
-	},
-	{
-		date: "September 1, 2025",
+		date: "February 15, 2026",
 		title: "Scholarship Application Deadline",
 	},
 	{
-		date: "October 1, 2025",
-		title: "Results Announced",
+		date: "February 16, 2026",
+		title: "Winners Announced",
 	},
 	{
-		date: "March 19 - 22, 2026",
+		date: "March 23 - 26, 2026",
 		title: "KubeCon Europe 2026",
 	},
 ];
