@@ -13,10 +13,10 @@ const DATA = {
 	slug: "tambo",
 	images,
 	cta: {
-		label: "Register Now",
-		href: "https://forms.gle/PG5jppKYjwky4BFUA",
-		openInNewTab: true,
-		disabled: false,
+		label: "Registrations Closed",
+		href: "#",
+		openInNewTab: false,
+		disabled: true,
 	},
 	prizes: {
 		winning: [
@@ -85,7 +85,7 @@ const faqs: FaqType[] = [
 	},
 	{
 		question: "How can I submit my project?",
-		answer: "Submit your project using the <a href='https://forms.gle/dzDNfTwJJn5ap4vY7' target='_blank' rel='noopener noreferrer' class='text-amber-400 underline hover:text-amber-300'>submission form</a>. Only one person from a team needs to submit. Make sure you have your GitHub link, deployed link, and a YouTube demo (max 3 minutes) ready. Join the <a href='https://discord.gg/dJNvPEHth6' target='_blank' rel='noopener noreferrer' class='text-amber-400 underline hover:text-amber-300'>Tambo Discord</a> for all updates.",
+		answer: "Submissions for this hackathon are now closed. Join the <a href='https://discord.gg/dJNvPEHth6' target='_blank' rel='noopener noreferrer' class='text-amber-400 underline hover:text-amber-300'>Tambo Discord</a> for all updates.",
 	},
 	{
 		question: "I am a beginner in tech, can I still participate?",
@@ -205,14 +205,10 @@ const schedule = [
 				title: "Hacking ends - Return of the Projects",
 				time: "2026-02-08T20:00:00+05:30",
 			},
-			{
-				title: "Submissions due",
-				time: "2026-02-08T23:59:59+05:30",
-				link: {
-					name: "Submit Your Project",
-					url: "https://forms.gle/dzDNfTwJJn5ap4vY7",
-				},
-			},
+		{
+			title: "Submissions due",
+			time: "2026-02-08T23:59:59+05:30",
+		},
 		],
 	},
 ];

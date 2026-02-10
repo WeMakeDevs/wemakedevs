@@ -88,7 +88,7 @@ const faqs: FaqType[] = [
 	},
 	{
 		question: "How can I submit my project?",
-		answer: "Join the <a href='https://join.slack.com/t/archestracommunity/shared_invite/zt-3pxh76ids-sy7J9TrvfQnlbfhGO0uM5A' target='_blank' rel='noopener noreferrer' class='text-orange-400 underline hover:text-orange-300'>Archestra Slack Community</a> for all the updates and announcements regarding submissions.",
+		answer: "Submit your project using the <a href='https://forms.gle/S1fV4shNaDmAbgSB8' target='_blank' rel='noopener noreferrer' class='text-orange-400 underline hover:text-orange-300'>submission form</a>. Only one person from a team needs to submit. Make sure you have your GitHub link, deployed link, and a YouTube demo (max 3 minutes) ready. Join the <a href='https://join.slack.com/t/archestracommunity/shared_invite/zt-3pxh76ids-sy7J9TrvfQnlbfhGO0uM5A' target='_blank' rel='noopener noreferrer' class='text-orange-400 underline hover:text-orange-300'>Archestra Slack Community</a> for all updates.",
 	},
 	{
 		question: "I am a beginner in tech, can I still participate?",
@@ -150,10 +150,14 @@ const schedule = [
 				title: "Finish Line - Hacking Ends",
 				time: "2026-02-15T20:00:00+05:30",
 			},
-			{
-				title: "Submissions Due - Cross the Finish Line",
-				time: "2026-02-15T23:59:59+05:30",
+		{
+			title: "Submissions Due - Cross the Finish Line",
+			time: "2026-02-15T23:59:59+05:30",
+			link: {
+				name: "Submit Your Project",
+				url: "https://forms.gle/S1fV4shNaDmAbgSB8",
 			},
+		},
 		],
 	},
 ];

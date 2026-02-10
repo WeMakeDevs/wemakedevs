@@ -103,6 +103,25 @@ const HackathonRules = async () => {
 						</li>
 					</ol>
 				</HackathonContentBody>
+
+				{/* Project Submission Section */}
+				<div className="mt-12 p-8 bg-gradient-to-r from-orange-500/10 to-amber-500/10 rounded-2xl border border-orange-500/30">
+					<h3 className="text-2xl font-bold text-orange-400 mb-4">
+						Submit Your Project
+					</h3>
+					<p className="text-slate-300 mb-6">
+						Ready to submit your project? Only one person from a team needs to fill the submission form. Make sure you have your GitHub link, deployed link, and a YouTube demo (max 3 minutes) ready!
+					</p>
+					<Link
+						href="https://forms.gle/S1fV4shNaDmAbgSB8"
+						target="_blank"
+						rel="noopener noreferrer"
+						className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-400 hover:to-amber-400 text-slate-900 font-bold rounded-xl transition-all duration-300 shadow-lg shadow-orange-500/30"
+					>
+						Submit Your Project
+						<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+					</Link>
+				</div>
 			</ViewContainer>
 		</div>
 	);
