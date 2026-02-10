@@ -49,16 +49,25 @@ const HackathonHeader = ({
 							<span className="inline-block bg-orange-500/20 text-orange-400 px-4 py-1.5 rounded-full text-sm md:text-base font-semibold border border-orange-500/30">
 								Online Hackathon
 							</span>
-							<Link
-								href="https://www.wemakedevs.org/february"
-								className="inline-flex items-center gap-2 bg-red-500/20 text-red-400 px-4 py-1.5 rounded-full text-sm md:text-base font-semibold border border-red-500/30 hover:bg-red-500/30 transition-colors"
-								target="_blank"
-								rel="noopener noreferrer"
-							>
-								Part of Hack All February
-								<ArrowUpRight className="w-4 h-4" />
-							</Link>
-						</div>
+						<Link
+							href="https://www.wemakedevs.org/february"
+							className="inline-flex items-center gap-2 bg-red-500/20 text-red-400 px-4 py-1.5 rounded-full text-sm md:text-base font-semibold border border-red-500/30 hover:bg-red-500/30 transition-colors"
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							Part of Hack All February
+							<ArrowUpRight className="w-4 h-4" />
+						</Link>
+						<Link
+							href="https://forms.gle/S1fV4shNaDmAbgSB8"
+							className="inline-flex items-center gap-2 bg-green-500/20 text-green-400 px-4 py-1.5 rounded-full text-sm md:text-base font-semibold border border-green-500/30 hover:bg-green-500/30 transition-colors"
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							Submit Your Project
+							<ArrowUpRight className="w-4 h-4" />
+						</Link>
+					</div>
 						<h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-orange-400 via-red-500 to-orange-500 bg-clip-text text-transparent leading-tight">
 							{title}
 						</h1>
