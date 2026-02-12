@@ -110,9 +110,9 @@ const config = {
 				"accordion-down": "accordion-down 0.2s ease-out",
 				"accordion-up": "accordion-up 0.2s ease-out",
 				"sponsor-scroll": "sponsor-scroll 45s linear infinite",
-				fade1: "cycleText 15s ease-in-out infinite 0s",
-				fade2: "cycleText 15s ease-in-out infinite -10s",
-				fade3: "cycleText 15s ease-in-out infinite -5s",
+				fade1: "cycleText 3s ease-in-out infinite 0s",
+				fade2: "cycleText 3s ease-in-out infinite -2s",
+				fade3: "cycleText 3s ease-in-out infinite -1s",
 			},
 			fontFamily: {
 				title: ["var(--font-mono)", ...fontFamily.mono],
