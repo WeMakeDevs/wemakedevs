@@ -1,3 +1,5 @@
+import { DATA as accomplishData } from "@/app/hackathons/accomplish/data";
+import { images as accomplishImages } from "@/app/hackathons/accomplish/images";
 import { DATA as fast2mcpData } from "@/app/hackathons/2fast2mcp/data";
 import { images as fast2mcpImages } from "@/app/hackathons/2fast2mcp/images";
 import { DATA as agenthackData } from "@/app/hackathons/agenthack25/data";
@@ -44,12 +46,12 @@ const hackathons: HackathonType[] = [
 		endDate: fast2mcpData.endDate,
 	},
 	{
-		slug: tamboData.slug,
-		title: tamboData.title,
-		description: tamboData.descriptionCard,
-		thumbnail: tamboImages.thumbnail,
-		startDate: tamboData.startDate,
-		endDate: tamboData.endDate,
+		slug: accomplishData.slug,
+		title: accomplishData.title,
+		description: accomplishData.descriptionCard,
+		thumbnail: accomplishImages.thumbnail,
+		startDate: accomplishData.startDate,
+		endDate: accomplishData.endDate,
 	},
 	{
 		slug: visionData.slug,
@@ -58,6 +60,14 @@ const hackathons: HackathonType[] = [
 		thumbnail: visionImages.thumbnail,
 		startDate: visionData.startDate,
 		endDate: visionData.endDate,
+	},
+	{
+		slug: tamboData.slug,
+		title: tamboData.title,
+		description: tamboData.descriptionCard,
+		thumbnail: tamboImages.thumbnail,
+		startDate: tamboData.startDate,
+		endDate: tamboData.endDate,
 	},
 	{
 		slug: assemblehackData.slug,
