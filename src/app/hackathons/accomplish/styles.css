@@ -1,0 +1,117 @@
+/* Automate Me If You Can - Catch Me If You Can Theme */
+
+/* Ensure navbar text is visible on dark background - default state */
+.accomplish-hackathon nav a,
+.accomplish-hackathon nav span,
+.accomplish-hackathon header,
+.accomplish-hackathon header a {
+	color: #f1f5f9 !important;
+}
+
+/* When navbar container has white background (scrolled), override to black text */
+.accomplish-hackathon nav > div.bg-white,
+.accomplish-hackathon nav > div[class*="bg-white"] {
+	color: #0f172a !important;
+}
+
+.accomplish-hackathon nav > div.bg-white a:not([class*="text-white"]),
+.accomplish-hackathon nav > div[class*="bg-white"] a:not([class*="text-white"]),
+.accomplish-hackathon nav > div.bg-white span:not([class*="text-white"]),
+.accomplish-hackathon nav > div[class*="bg-white"] span:not([class*="text-white"]) {
+	color: #0f172a !important;
+}
+
+.accomplish-hackathon nav a:hover,
+.accomplish-hackathon header a:hover {
+	color: #38bdf8 !important;
+}
+
+/* Keep hover color sky blue even when scrolled */
+.accomplish-hackathon nav > div.bg-white a:not([class*="text-white"]):hover,
+.accomplish-hackathon nav > div[class*="bg-white"] a:not([class*="text-white"]):hover {
+	color: #0284c7 !important;
+}
+
+/* Fix for sticky/fixed navbar background */
+.accomplish-hackathon nav[aria-label="secondary nav"] {
+	background-color: rgba(15, 23, 42, 0.9) !important;
+	backdrop-filter: blur(8px);
+	border-color: rgba(56, 189, 248, 0.2) !important;
+}
+
+/* Ensure all section headings are visible */
+.accomplish-hackathon h2 {
+	color: #38bdf8;
+}
+
+/* Fix link colors in content */
+.accomplish-hackathon .text-slate-300 a {
+	color: #38bdf8;
+}
+
+.accomplish-hackathon .text-slate-300 a:hover {
+	color: #7dd3fc;
+}
+
+/* FAQ answer text color - dark sky on white background */
+.accomplish-hackathon #faq [class*="bg-white"] [class*="pb-4"],
+.accomplish-hackathon #faq [class*="bg-white"] [class*="pb-4"] * {
+	color: #0369a1 !important;
+}
+
+.accomplish-hackathon #faq [class*="bg-white"] [class*="pb-4"] a {
+	color: #0369a1 !important;
+}
+
+.accomplish-hackathon #faq [class*="bg-white"] [class*="pb-4"] a:hover {
+	color: #0c4a6e !important;
+}
+
+/* Vintage paper texture effect for special elements */
+@keyframes paper-stamp {
+	0%, 100% {
+		transform: scale(1);
+	}
+	50% {
+		transform: scale(1.02);
+	}
+}
+
+.accomplish-hackathon .passport-stamp {
+	animation: paper-stamp 3s ease-in-out infinite;
+}
+
+/* Typewriter effect for titles */
+@keyframes blink-caret {
+	50% {
+		border-color: transparent;
+	}
+}
+
+.accomplish-hackathon .typewriter-cursor::after {
+	content: '|';
+	animation: blink-caret 0.75s step-end infinite;
+	color: #fbbf24;
+}
+
+/* Plane trail animation */
+@keyframes fly-across {
+	0% {
+		transform: translateX(-100%) translateY(0);
+		opacity: 0;
+	}
+	10% {
+		opacity: 1;
+	}
+	90% {
+		opacity: 1;
+	}
+	100% {
+		transform: translateX(100vw) translateY(-50px);
+		opacity: 0;
+	}
+}
+
+.accomplish-hackathon .flying-plane {
+	animation: fly-across 20s linear infinite;
+}
