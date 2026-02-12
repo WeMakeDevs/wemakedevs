@@ -1,6 +1,7 @@
 import cover from "./cover.jpg";
+import thumbnail from "./thumbnail.webp";
 
 export const images = {
 	cover,
-	thumbnail: cover,
+	thumbnail,
 } as const;
