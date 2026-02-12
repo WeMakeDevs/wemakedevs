@@ -67,6 +67,10 @@ const config = {
 				sm: "calc(var(--radius) - 4px)",
 			},
 			keyframes: {
+				"sponsor-scroll": {
+					"0%": { transform: "translateX(0)" },
+					"100%": { transform: "translateX(-50%)" },
+				},
 				cycleText: {
 					"0%, 4%": {
 						opacity: "0",
@@ -105,6 +109,7 @@ const config = {
 			animation: {
 				"accordion-down": "accordion-down 0.2s ease-out",
 				"accordion-up": "accordion-up 0.2s ease-out",
+				"sponsor-scroll": "sponsor-scroll 45s linear infinite",
 				fade1: "cycleText 15s ease-in-out infinite 0s",
 				fade2: "cycleText 15s ease-in-out infinite -10s",
 				fade3: "cycleText 15s ease-in-out infinite -5s",
