@@ -29,7 +29,7 @@ const PrizesShowcase = () => {
 						<div className="pointer-events-none absolute -bottom-16 -left-16 w-48 h-48 bg-white/10 rounded-full blur-3xl" />
 
 						<div className="relative z-10">
-							<div className="flex items-center gap-4 mb-6">
+							<div className="flex items-center justify-center gap-4 mb-6">
 								<div className="bg-slate-900/40 backdrop-blur-sm p-4 rounded-xl">
 									<Trophy className="w-8 h-8 text-white" />
 								</div>
