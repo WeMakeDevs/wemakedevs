@@ -96,7 +96,7 @@ const faqs: FaqType[] = [
 	},
 	{
 		question: "I am a beginner in tech, can I still participate?",
-		answer: "Absolutely! At WeMakeDevs we believe in the \"learn by doing\" approach! Everyone starts somewhere - Frank Abagnale was only 16 when he pulled off his first con. Accomplish takes just 2 minutes to set up, and you don't need to write any code to use it.",
+		answer: "Absolutely! At WeMakeDevs we believe in the \"learn by doing\" approach! Everyone starts somewhere - Frank Abagnale was only 16 when he pulled off his first scheme. Accomplish takes just 2 minutes to set up, and you don't need to write any code to use it.",
 	},
 	{
 		question: "Are we allowed to take help of AI tools like ChatGPT?",
