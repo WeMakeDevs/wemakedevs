@@ -24,7 +24,7 @@ const HackathonSchedule = async () => {
 			/>
 			<ViewContainer className="my-14">
 				<h2 className="text-3xl font-bold text-sky-400 mb-8 text-center">
-					Mission Timeline
+					The Itinerary
 				</h2>
 				<HackathonScheduleComponent schedule={schedule} />
 			</ViewContainer>

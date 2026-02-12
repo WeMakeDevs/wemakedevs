@@ -4,7 +4,7 @@ import { DateAtom } from "@/components/hackathon-content/atoms";
 import { buttonVariants } from "@/components/ui/button";
 import { ViewContainer } from "@/components/ui/view-container";
 import { cn } from "@/lib/utils";
-import { ArrowUpRight, CalendarIcon, Plane } from "lucide-react";
+import { ArrowUpRight, CalendarIcon, Sparkles } from "lucide-react";
 import Link from "next/link";
 
 type HackathonHeaderProps = {
@@ -31,7 +31,7 @@ const HackathonHeader = ({
 }: HackathonHeaderProps) => {
 	return (
 		<div className="relative py-20 md:py-28 overflow-hidden">
-			{/* Animated background glow - sky blue */}
+			{/* Animated background glow */}
 			<div className="absolute inset-0 overflow-hidden pointer-events-none">
 				<div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-sky-500/5 rounded-full blur-3xl" />
 			</div>
@@ -91,7 +91,7 @@ const HackathonHeader = ({
 									target={cta.openInNewTab ? "_blank" : "_self"}
 									rel={cta.openInNewTab ? "noopener noreferrer" : undefined}
 								>
-									<Plane className="w-5 h-5 mr-2" />
+									<Sparkles className="w-5 h-5 mr-2" />
 									{cta.label}
 								</Link>
 							)}
@@ -121,7 +121,7 @@ const HackathonHeader = ({
 									{prize}
 								</p>
 								<p className="text-slate-400 mt-1">
-									$500 for each of top 5 winners
+									$500 for each of the top 5 winners
 								</p>
 								<p className="text-slate-400 mt-1">
 									+ job interview at Accomplish.ai

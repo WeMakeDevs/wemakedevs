@@ -13,10 +13,10 @@ const PrizesShowcase = () => {
 						</div>
 					</div>
 					<h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-sky-400 via-amber-400 to-sky-500 bg-clip-text text-transparent mb-4">
-						The Heist Rewards
+						The Bounty
 					</h2>
 					<p className="text-lg text-slate-400 max-w-2xl mx-auto">
-						Pull off the ultimate automation and claim your prize. $2,500+ in rewards for the top agents.
+						The FBI put a bounty on Frank's head. We're putting one on yours. $2,500+ in prizes for the top 5 automations.
 					</p>
 				</div>
 
@@ -34,7 +34,7 @@ const PrizesShowcase = () => {
 									<Trophy className="w-8 h-8 text-white" />
 								</div>
 								<h3 className="text-2xl md:text-3xl font-bold text-white">
-									Top 5 Master Agents
+									Top 5 Most Wanted
 								</h3>
 							</div>
 
@@ -46,7 +46,7 @@ const PrizesShowcase = () => {
 									>
 										<div className="flex items-center justify-between mb-3">
 											<span className="text-sky-400 font-bold text-sm">
-												Agent #{place}
+												#{place}
 											</span>
 											<div className="flex items-center gap-1">
 												<span className="text-xl">
@@ -84,21 +84,21 @@ const PrizesShowcase = () => {
 									<Star className="w-8 h-8 text-white" />
 								</div>
 								<h3 className="text-2xl md:text-3xl font-bold text-sky-400">
-									Insider Rewards
+									Swag Giveaway
 								</h3>
 							</div>
 
 							<p className="text-lg text-slate-300 leading-relaxed mb-6 text-center">
-								Show your support for the mission! Star the{" "}
+								Star the{" "}
 								<Link
 									href="https://github.com/accomplish-ai/accomplish"
 									target="_blank"
 									rel="noopener noreferrer"
 									className="text-sky-400 hover:text-sky-300 font-semibold underline decoration-2 underline-offset-2 transition-colors"
 								>
-									Accomplish repository
+									Accomplish GitHub repo
 								</Link>{" "}
-								on GitHub and register for the hackathon. 10 lucky winners who star the repo will get{" "}
+								and register for the hackathon. 10 lucky winners who star the repo will get{" "}
 								<span className="text-amber-400 font-semibold">swag boxes shipped to them!</span>
 							</p>
 
@@ -117,12 +117,12 @@ const PrizesShowcase = () => {
 									<Briefcase className="w-8 h-8 text-white" />
 								</div>
 								<h3 className="text-2xl md:text-3xl font-bold text-sky-400">
-									Career Extraction
+									Career Opportunity
 								</h3>
 							</div>
 
 							<p className="text-lg text-slate-300 leading-relaxed mb-6 text-center">
-								All top 5 winners will get the opportunity to interview for a job position at{" "}
+								All top 5 winners get a job interview at{" "}
 								<Link
 									href="https://accomplish.ai"
 									target="_blank"
@@ -131,7 +131,7 @@ const PrizesShowcase = () => {
 								>
 									Accomplish.ai
 								</Link>
-								. Showcase your automation skills and join the team building the future of AI desktop agents!
+								. Frank impersonated his way into every job. You can actually earn yours by showing off your skills!
 							</p>
 
 							<div className="flex items-center gap-3 bg-slate-800/50 rounded-xl px-5 py-3 w-fit border border-sky-500/20 mx-auto">
@@ -151,11 +151,11 @@ const PrizesShowcase = () => {
 							rel="noopener noreferrer"
 							className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-sky-500 to-amber-500 text-white font-bold text-lg rounded-xl shadow-lg shadow-sky-500/30 hover:shadow-sky-500/50 hover:scale-105 transition-all duration-300"
 						>
-							Accept Your Mission
+							Join the Con
 							<span className="text-xl">✈️</span>
 						</Link>
 						<p className="text-slate-400 mt-4">
-							Ready to automate? Join the hackathon and compete for these prizes!
+							Think you can automate your way to the top? Prove it.
 						</p>
 					</div>
 				</div>

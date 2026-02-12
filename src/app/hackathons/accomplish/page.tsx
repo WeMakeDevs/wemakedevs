@@ -46,27 +46,24 @@ const HackathonPage = () => {
 					</h2>
 					<div className="text-lg md:text-xl text-slate-300 leading-relaxed max-w-4xl mx-auto text-center space-y-4">
 						<p>
-							Your mission, should you choose to accept it: Build multi-modal AI agents that watch, listen, and understand your workflow.
+							Frank Abagnale forged checks, faked identities, and flew across the world - all because he refused to do things the hard way.
 						</p>
 						<p>
-							Automate Me If You Can is an online hackathon bringing together tinkerers, automation enthusiasts, and AI builders from around the globe.
+							This hackathon is your chance to channel that same energy. Not for fraud, obviously - but for automating all the tedious, repetitive tasks that eat up your day.
 						</p>
 						<p>
-							Harness the power of Accomplish - the open source AI desktop agent that runs locally, respects your privacy, and actually gets work done.
+							<strong className="text-sky-400">Accomplish</strong> is the open source AI coworker that lives on your desktop. It reads your files, creates documents, browses the web, organizes your folders, and handles the boring stuff so you don't have to. It runs locally on your machine, and every action is shown and approved before it runs.
 						</p>
 						<p>
-							Whether you're automating file management, document creation, browser tasks, or inventing entirely new workflows, this hackathon is your stage.
+							Your challenge: <strong className="text-amber-400">use Accomplish to automate something real in your life</strong>. The more creative, the more useful, the more impressive the before-and-after - the more likely you are to walk away with $500 and a job interview.
 						</p>
-						<p>
-							Remember: The best agent is the one nobody sees working.
-						</p>
-						<p>
-							Can they catch you if you automate everything?
+						<p className="text-sky-400 font-semibold text-2xl mt-6">
+							They can't catch you if you've already automated everything.
 						</p>
 					</div>
 				</ViewContainer>
 
-				{/* Features Section */}
+				{/* What Accomplish Can Do + How to Win */}
 				<AboutSection />
 			</div>
 
@@ -90,35 +87,45 @@ const HackathonPage = () => {
 									</span>
 								</div>
 								<span className="text-slate-400 text-lg">
-									Open Source AI Desktop Agent
+									Open Source AI Desktop Coworker
 								</span>
 							</div>
-							<Link
-								href="https://github.com/accomplish-ai/accomplish"
-								target="_blank"
-								rel="noopener noreferrer"
-								className="px-6 py-3 rounded-xl border border-sky-500/50 flex gap-2 items-center bg-slate-800/50 hover:bg-sky-500/20 transition-colors duration-300 text-sky-400 font-medium"
-							>
-								Check out Accomplish <ArrowUpRight size={18} />
-							</Link>
+							<div className="flex gap-3">
+								<Link
+									href="https://www.accomplish.ai"
+									target="_blank"
+									rel="noopener noreferrer"
+									className="px-6 py-3 rounded-xl border border-sky-500/50 flex gap-2 items-center bg-slate-800/50 hover:bg-sky-500/20 transition-colors duration-300 text-sky-400 font-medium"
+								>
+									Website <ArrowUpRight size={18} />
+								</Link>
+								<Link
+									href="https://github.com/accomplish-ai/accomplish"
+									target="_blank"
+									rel="noopener noreferrer"
+									className="px-6 py-3 rounded-xl border border-sky-500/50 flex gap-2 items-center bg-slate-800/50 hover:bg-sky-500/20 transition-colors duration-300 text-sky-400 font-medium"
+								>
+									GitHub <ArrowUpRight size={18} />
+								</Link>
+							</div>
 						</div>
 						<div className="p-8">
 							<div className="text-lg text-slate-300 leading-relaxed space-y-4">
 								<p>
-									Accomplish is an open source AI desktop agent that automates file management, document creation, and browser tasks locally on your machine. Bring your own API keys (OpenAI, Anthropic, Google, xAI) or run local models via Ollama.
+									Accomplish is the open source AI coworker that lives on your desktop. It's an AI computer-use app that runs on your computer. You can ask it to perform any browsing task, rename and organize files based on their contents, generate or rewrite documents, or scan a folder and summarize what's inside.
 								</p>
 								<p>
-									<strong className="text-sky-400">What makes it different?</strong>
+									It can also create calendar entries from meeting notes, draft follow-up documents, or prepare a folder for a project by setting up files and structure. Nothing leaves your machine unless you allow it, and every action is shown and approved before it runs.
+								</p>
+								<p>
+									<strong className="text-sky-400">Why developers love it:</strong>
 								</p>
 								<ul className="list-disc list-inside space-y-2 ml-4">
-									<li><strong>It runs locally:</strong> Your files stay on your machine. You decide which folders it can touch. Nothing gets sent to Accomplish or anyone else.</li>
-									<li><strong>You bring your own AI:</strong> Use your own API key (OpenAI, Anthropic, etc.) or run with Ollama (no API key needed). No subscription, no upsell.</li>
-									<li><strong>It's open source:</strong> Every line of code is on GitHub. MIT licensed. Change it, fork it, break it, fix it.</li>
-									<li><strong>It acts, not just chats:</strong> File management, document creation, custom automations, skill learning.</li>
+									<li><strong>100% open source:</strong> MIT licensed. Every line of code is on GitHub.</li>
+									<li><strong>Runs locally:</strong> Your files never leave your machine. You control access.</li>
+									<li><strong>Bring your own AI:</strong> Use xAI, OpenAI, Anthropic, Google Gemini, DeepSeek, or local models via Ollama. No subscriptions.</li>
+									<li><strong>It acts, not just chats:</strong> File management, document creation, browser automation, custom skills.</li>
 								</ul>
-								<p>
-									<strong className="text-sky-400">How to use it in the hackathon?</strong> Install the app, connect your AI (or use Ollama), give it access to the folders you want, and start automating! Ask it to summarize docs, clean folders, create reports, or build entirely new workflows. Get creative and show us what automation can really do.
-								</p>
 							</div>
 						</div>
 					</div>
@@ -134,12 +141,10 @@ const HackathonPage = () => {
 					<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 						<div className="bg-slate-900/40 backdrop-blur-sm rounded-xl p-6 border border-slate-700/50">
 							<h3 className="text-xl font-bold text-sky-400 mb-3">
-								Potential Impact
+								Real-World Impact
 							</h3>
 							<p className="text-slate-300">
-								Evaluates how effectively the automation addresses
-								a real problem or improves day-to-day workflows.
-								Does it save time? Does it reduce tedious work?
+								Does this automation solve a real problem? Does it save actual time? We want to see boring, tedious tasks vanish. The more practical, the better.
 							</p>
 						</div>
 						<div className="bg-slate-900/40 backdrop-blur-sm rounded-xl p-6 border border-slate-700/50">
@@ -147,9 +152,7 @@ const HackathonPage = () => {
 								Creativity & Originality
 							</h3>
 							<p className="text-slate-300">
-								Assesses the uniqueness of the idea and how
-								Accomplish is used in creative ways. Surprise us with
-								automation use cases we haven't seen before!
+								Frank forged checks that even banks couldn't detect. Show us something we haven't seen before. Unexpected, clever, and uniquely you.
 							</p>
 						</div>
 						<div className="bg-slate-900/40 backdrop-blur-sm rounded-xl p-6 border border-slate-700/50">
@@ -157,29 +160,23 @@ const HackathonPage = () => {
 								Learning & Growth
 							</h3>
 							<p className="text-slate-300">
-								Recognizes the learning curve tackled during the
-								hackathon, especially for first-time AI agent
-								builders. Show us your journey!
+								First time using Accomplish? That's great - we love seeing the learning journey. Show us what you figured out and how you grew.
 							</p>
 						</div>
 						<div className="bg-slate-900/40 backdrop-blur-sm rounded-xl p-6 border border-slate-700/50">
 							<h3 className="text-xl font-bold text-sky-400 mb-3">
-								Technical Implementation
+								Technical Execution
 							</h3>
 							<p className="text-slate-300">
-								Reviews how well the idea was executed
-								technically. Clean code, proper use of
-								Accomplish features, and robust automation flows.
+								How well did you pull it off? Clean implementation, good use of Accomplish features, and a workflow that actually works reliably.
 							</p>
 						</div>
 						<div className="bg-slate-900/40 backdrop-blur-sm rounded-xl p-6 border border-slate-700/50">
 							<h3 className="text-xl font-bold text-sky-400 mb-3">
-								Presentation & Demo
+								Demo & Presentation
 							</h3>
 							<p className="text-slate-300">
-								Considers how well you explain and demonstrate
-								your automation. A clear video demo showing the
-								before/after impact goes a long way.
+								Show us the before and after. A 3-minute video that clearly demonstrates the problem, the solution, and the magic moment where Accomplish takes over.
 							</p>
 						</div>
 						<div className="bg-slate-900/40 backdrop-blur-sm rounded-xl p-6 border border-slate-700/50">
@@ -187,7 +184,7 @@ const HackathonPage = () => {
 								Best Use of Accomplish
 							</h3>
 							<p className="text-slate-300">
-								Evaluates how effectively the project leverages Accomplish's capabilities - file management, document creation, browser automation, and custom skills.
+								How deeply did you leverage Accomplish? File management, document creation, browser automation, custom skills - the more you use, the more impressed we'll be.
 							</p>
 						</div>
 					</div>

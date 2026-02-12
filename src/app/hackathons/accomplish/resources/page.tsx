@@ -26,7 +26,7 @@ const HackathonResources = async () => {
 			/>
 			<ViewContainer>
 				<HackathonContentTitle className="text-sky-400">
-					Need a Safe House?
+					Need Help?
 				</HackathonContentTitle>
 				<HackathonContentBody className="text-slate-300">
 					<ul className="space-y-2 list-disc list-inside">
@@ -40,7 +40,7 @@ const HackathonResources = async () => {
 							>
 								Accomplish Discord
 							</Link>{" "}
-							for support, mission briefings, and updates
+							for support and updates
 						</li>
 						<li>
 							For any other query email us at{" "}
@@ -57,7 +57,7 @@ const HackathonResources = async () => {
 					</ul>
 				</HackathonContentBody>
 				<HackathonContentTitle className="text-sky-400">
-					Agent Toolkit
+					Essential Links
 				</HackathonContentTitle>
 				<HackathonContentBody className="text-slate-300">
 					<ul className="space-y-3 list-disc list-inside">
@@ -92,17 +92,28 @@ const HackathonResources = async () => {
 							>
 								Accomplish Discord Community
 							</Link>{" "}
-							- Connect with other agents and get help
+							- Connect with other participants and get help
+						</li>
+						<li>
+							<Link
+								href="https://github.com/accomplish-ai/accomplish/releases"
+								className="text-sky-400 underline hover:no-underline hover:text-sky-300"
+								target="_blank"
+								rel="noopener noreferrer"
+							>
+								Accomplish Releases
+							</Link>{" "}
+							- Download the latest version
 						</li>
 					</ul>
 				</HackathonContentBody>
 				<HackathonContentTitle className="text-sky-400">
-					Quick Start Guide
+					Quick Start Guide (2 Minutes)
 				</HackathonContentTitle>
 				<HackathonContentBody className="text-slate-300">
 					<ol className="space-y-3 list-decimal list-inside">
 						<li>
-							<strong>Install the App:</strong> Download the DMG (macOS) or installer (Windows) from the{" "}
+							<strong>Install the App:</strong> Download from the{" "}
 							<Link
 								href="https://www.accomplish.ai"
 								className="text-sky-400 underline hover:no-underline hover:text-sky-300"
@@ -110,8 +121,8 @@ const HackathonResources = async () => {
 								rel="noopener noreferrer"
 							>
 								Accomplish website
-							</Link>{" "}
-							and drag it into Applications.
+							</Link>
+							. Available for macOS (Apple Silicon & Intel) and Windows 11.
 						</li>
 						<li>
 							<strong>Connect Your AI:</strong> Use your own API key from OpenAI, Anthropic, Google, xAI, or other supported providers. Or run completely free with{" "}
@@ -123,22 +134,22 @@ const HackathonResources = async () => {
 							>
 								Ollama
 							</Link>{" "}
-							using local models.
+							using local models. No subscriptions needed.
 						</li>
 						<li>
 							<strong>Give It Access:</strong> Choose which folders Accomplish can see and interact with. You stay in control - it only touches what you allow.
 						</li>
 						<li>
-							<strong>Start Automating:</strong> Ask it to summarize a doc, clean a folder, create a report, or automate browser tasks. You approve every action.
+							<strong>Start Automating:</strong> Ask it to summarize a doc, clean a folder, create a report, or browse the web. Every action is shown and approved before it runs.
 						</li>
 					</ol>
 				</HackathonContentBody>
 				<HackathonContentTitle className="text-sky-400">
-					Supported Models & Providers
+					Supported AI Providers
 				</HackathonContentTitle>
 				<HackathonContentBody className="text-slate-300">
 					<p className="mb-4">
-						Accomplish supports a wide range of AI models and providers:
+						Accomplish supports a wide range of AI models and providers. Pick your favorite:
 					</p>
 					<div className="grid grid-cols-2 md:grid-cols-4 gap-3">
 						{[
@@ -165,49 +176,64 @@ const HackathonResources = async () => {
 					</div>
 				</HackathonContentBody>
 				<HackathonContentTitle className="text-sky-400">
-					Automation Ideas
+					Automation Ideas to Get You Started
 				</HackathonContentTitle>
 				<HackathonContentBody className="text-slate-300">
 					<p className="mb-4">
-						Need inspiration? Here are some automation ideas to get you started:
+						Need inspiration for your automation? Here are some ideas - but we encourage you to think beyond this list:
 					</p>
 					<ul className="space-y-3 list-disc list-inside">
 						<li>
-							<strong>File Organization:</strong> Clean up messy folders by project, file type, or date automatically
+							<strong>Downloads Folder Cleanup:</strong> Sort and organize your chaotic Downloads folder by file type, project, or date
 						</li>
 						<li>
-							<strong>Document Generation:</strong> Draft, summarize, and rewrite docs, reports, and meeting notes
+							<strong>Meeting Notes to Action Items:</strong> Scan meeting notes and create follow-up documents, calendar entries, and task lists
 						</li>
 						<li>
-							<strong>Browser Automation:</strong> Automate research, form filling, and web workflows
+							<strong>Weekly Report Generator:</strong> Generate a weekly summary from your files, notes, and project folders
 						</li>
 						<li>
-							<strong>Weekly Updates:</strong> Generate weekly summaries from files, emails, and notes
+							<strong>Browser Research Assistant:</strong> Automate web research workflows - gather information, summarize findings, save to organized files
 						</li>
 						<li>
-							<strong>Meeting Prep:</strong> Prepare meeting materials from docs and calendars automatically
+							<strong>Project Scaffolder:</strong> Prepare a new project folder with the right structure, boilerplate files, and documentation
 						</li>
 						<li>
-							<strong>Data Processing:</strong> Process and organize data from various sources
+							<strong>Email/Document Drafter:</strong> Turn rough notes into polished emails, proposals, or reports
 						</li>
 						<li>
-							<strong>Custom Skills:</strong> Define repeatable workflows and save them as reusable skills
+							<strong>Content Organizer:</strong> Scan a folder of mixed content and organize it into a searchable, summarized structure
+						</li>
+						<li>
+							<strong>Custom Workflow Skills:</strong> Define a multi-step workflow you repeat often and save it as a reusable skill
 						</li>
 					</ul>
 					<p className="mt-4 text-amber-400 font-medium">
-						Get creative! The best automations are the ones that solve YOUR unique problems.
+						The best projects solve YOUR unique problems. Think about what annoys you most, then automate it away!
 					</p>
 				</HackathonContentBody>
 				<HackathonContentTitle className="text-sky-400">
-					System Requirements
+					For Developers: Run from Source
 				</HackathonContentTitle>
 				<HackathonContentBody className="text-slate-300">
-					<ul className="space-y-2 list-disc list-inside">
-						<li>macOS (Apple Silicon or Intel)</li>
-						<li>Windows 10/11</li>
-						<li>Node.js 20+ (for development)</li>
-						<li>pnpm 9+ (for development)</li>
-					</ul>
+					<p className="mb-3">Want to contribute or hack on Accomplish itself? You can run it from source:</p>
+					<div className="bg-slate-800/50 rounded-lg p-4 font-mono text-sm mb-3 border border-sky-500/10">
+						<p className="text-sky-400">pnpm install</p>
+						<p className="text-sky-400">pnpm dev</p>
+					</div>
+					<p className="mb-3">Prerequisites: Node.js 20+ and pnpm 9+</p>
+					<p>
+						Check the{" "}
+						<Link
+							href="https://github.com/accomplish-ai/accomplish/blob/main/CONTRIBUTING.md"
+							className="text-sky-400 underline hover:no-underline hover:text-sky-300"
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							Contributing Guide
+						</Link>{" "}
+						for more details.
+					</p>
 				</HackathonContentBody>
 			</ViewContainer>
 		</div>

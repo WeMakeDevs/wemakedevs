@@ -1,4 +1,4 @@
-/* Automate Me If You Can - Catch Me If You Can Theme */
+/* Automate Me If You Can - Catch Me If You Can Movie Theme */
 
 /* Ensure navbar text is visible on dark background - default state */
 .accomplish-hackathon nav a,
@@ -67,8 +67,8 @@
 	color: #0c4a6e !important;
 }
 
-/* Vintage paper texture effect for special elements */
-@keyframes paper-stamp {
+/* Vintage check paper animation */
+@keyframes check-stamp {
 	0%, 100% {
 		transform: scale(1);
 	}
@@ -77,24 +77,7 @@
 	}
 }
 
-.accomplish-hackathon .passport-stamp {
-	animation: paper-stamp 3s ease-in-out infinite;
-}
-
-/* Typewriter effect for titles */
-@keyframes blink-caret {
-	50% {
-		border-color: transparent;
-	}
-}
-
-.accomplish-hackathon .typewriter-cursor::after {
-	content: '|';
-	animation: blink-caret 0.75s step-end infinite;
-	color: #fbbf24;
-}
-
-/* Plane trail animation */
+/* Pan Am plane fly animation */
 @keyframes fly-across {
 	0% {
 		transform: translateX(-100%) translateY(0);

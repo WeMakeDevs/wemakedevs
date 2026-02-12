@@ -1,102 +1,149 @@
-import { Bot, Rocket, Zap } from "lucide-react";
+import { FileText, FolderOpen, Globe, MonitorSmartphone, PenTool, Sparkles } from "lucide-react";
 
 const AboutSection = () => {
 	return (
 		<div className="py-20 mt-10">
 			<div className="max-w-6xl mx-auto px-4">
-				{/* Section Header */}
+				{/* What is Accomplish Section */}
 				<div className="text-center mb-16">
 					<h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-sky-400 via-amber-400 to-sky-500 bg-clip-text text-transparent mb-6 leading-tight">
-						Your Mission Briefing
+						Meet Your New AI Coworker
 					</h2>
 					<p className="text-xl text-slate-400 max-w-3xl mx-auto">
-						Automate your world with AI agents that run locally, respect your privacy, and get real work done.
+						Accomplish is the open source AI coworker that lives on your desktop. It reads your files, creates documents, and automates repetitive knowledge work - all running locally on your machine.
 					</p>
 				</div>
 
-				{/* Main content - Two columns */}
-				<div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
-					{/* Left column - Text content */}
-					<div className="space-y-8">
-						<p className="text-lg md:text-xl text-slate-300 leading-relaxed">
-							In a world where repetitive tasks steal your time, there's only one solution: automation. But not just any automation - intelligent AI agents that understand context, learn your patterns, and work alongside you.
-						</p>
-						<p className="text-lg md:text-xl text-slate-300 leading-relaxed">
-							Accomplish is your open source AI desktop agent that reads your files, creates documents, and automates repetitive knowledge work. It runs locally on your machine, using your own API keys or local models via Ollama.
-						</p>
-						<p className="text-lg md:text-xl text-slate-300 leading-relaxed">
-							Your mission: use Accomplish to automate your day-to-day tasks. Get creative! Organize messy folders, generate reports, automate browser workflows, or build something we haven't even imagined yet.
-						</p>
-						<p className="text-lg md:text-xl text-slate-300 leading-relaxed">
-							The best automations will be rewarded. Can you catch the prize?
-						</p>
-						<p className="text-lg md:text-xl text-sky-400 font-semibold leading-relaxed">
-							Remember: They can't catch you if you automate everything first.
+				{/* What Accomplish Can Do - organized grid */}
+				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-20">
+					<div className="bg-slate-900/40 backdrop-blur-sm rounded-xl p-6 border border-sky-500/15 hover:border-sky-500/30 transition-colors">
+						<div className="bg-gradient-to-br from-sky-500 to-sky-600 p-3 rounded-xl w-fit mb-4 shadow-lg shadow-sky-500/20">
+							<Globe className="w-6 h-6 text-white" />
+						</div>
+						<h3 className="text-xl font-bold text-sky-400 mb-2">
+							Browse the Web
+						</h3>
+						<p className="text-slate-300 leading-relaxed">
+							Ask it to perform any browsing task - research topics, fill out forms, grab information from websites, or automate repetitive web workflows.
 						</p>
 					</div>
 
-					{/* Right column - Feature cards */}
-					<div className="space-y-8">
-						{/* Local First */}
-						<div className="group">
-							<div className="flex items-start gap-5">
-								<div className="bg-gradient-to-br from-sky-500 to-sky-600 p-4 rounded-2xl shadow-lg shadow-sky-500/20 group-hover:shadow-sky-500/40 transition-shadow">
-									<Zap className="w-7 h-7 text-white" />
-								</div>
-								<div>
-									<h3 className="text-2xl font-bold text-sky-400 mb-2">
-										Runs Locally
-									</h3>
-									<p className="text-slate-400 mb-3">
-										Privacy first, always
-									</p>
-									<p className="text-slate-300 leading-relaxed">
-										Your files stay on your machine. You decide which folders it can touch. Nothing gets sent to Accomplish or anyone else - your data, your rules.
-									</p>
-								</div>
-							</div>
+					<div className="bg-slate-900/40 backdrop-blur-sm rounded-xl p-6 border border-sky-500/15 hover:border-sky-500/30 transition-colors">
+						<div className="bg-gradient-to-br from-amber-500 to-orange-500 p-3 rounded-xl w-fit mb-4 shadow-lg shadow-amber-500/20">
+							<FolderOpen className="w-6 h-6 text-white" />
 						</div>
+						<h3 className="text-xl font-bold text-sky-400 mb-2">
+							Organize Files
+						</h3>
+						<p className="text-slate-300 leading-relaxed">
+							Rename and organize files based on their contents. Clean up messy Downloads folders, sort by project, date, or type - automatically.
+						</p>
+					</div>
 
-						{/* Bring Your Own AI */}
-						<div className="group">
-							<div className="flex items-start gap-5">
-								<div className="bg-gradient-to-br from-amber-500 to-orange-500 p-4 rounded-2xl shadow-lg shadow-amber-500/20 group-hover:shadow-amber-500/40 transition-shadow">
-									<Bot className="w-7 h-7 text-white" />
-								</div>
-								<div>
-									<h3 className="text-2xl font-bold text-sky-400 mb-2">
-										Bring Your Own AI
-									</h3>
-									<p className="text-slate-400 mb-3">
-										Use any model you want
-									</p>
-									<p className="text-slate-300 leading-relaxed">
-										Use your own API keys from OpenAI, Anthropic, Google, xAI, or run completely free with Ollama using local models. No subscription, no upsell - it's a tool, not a service.
-									</p>
-								</div>
-							</div>
+					<div className="bg-slate-900/40 backdrop-blur-sm rounded-xl p-6 border border-sky-500/15 hover:border-sky-500/30 transition-colors">
+						<div className="bg-gradient-to-br from-emerald-500 to-green-600 p-3 rounded-xl w-fit mb-4 shadow-lg shadow-emerald-500/20">
+							<FileText className="w-6 h-6 text-white" />
 						</div>
+						<h3 className="text-xl font-bold text-sky-400 mb-2">
+							Generate Documents
+						</h3>
+						<p className="text-slate-300 leading-relaxed">
+							Generate or rewrite documents. Draft follow-up emails, create meeting summaries, or prepare reports from your existing files.
+						</p>
+					</div>
 
-						{/* Win Big */}
-						<div className="group">
-							<div className="flex items-start gap-5">
-								<div className="bg-gradient-to-br from-green-500 to-emerald-600 p-4 rounded-2xl shadow-lg shadow-green-500/20 group-hover:shadow-green-500/40 transition-shadow">
-									<Rocket className="w-7 h-7 text-white" />
-								</div>
-								<div>
-									<h3 className="text-2xl font-bold text-sky-400 mb-2">
-										Win Big
-									</h3>
-									<p className="text-slate-400 mb-3">
-										$2,500+ in prizes
-									</p>
-									<p className="text-slate-300 leading-relaxed">
-										Top 5 agents take home $500 each plus exclusive swag and a job interview at Accomplish.ai. Show us your best automation heist!
-									</p>
-								</div>
-							</div>
+					<div className="bg-slate-900/40 backdrop-blur-sm rounded-xl p-6 border border-sky-500/15 hover:border-sky-500/30 transition-colors">
+						<div className="bg-gradient-to-br from-purple-500 to-violet-600 p-3 rounded-xl w-fit mb-4 shadow-lg shadow-purple-500/20">
+							<MonitorSmartphone className="w-6 h-6 text-white" />
+						</div>
+						<h3 className="text-xl font-bold text-sky-400 mb-2">
+							Scan & Summarize
+						</h3>
+						<p className="text-slate-300 leading-relaxed">
+							Point it at any folder and get a summary of what's inside. Understand project structures, find important files, or audit your content.
+						</p>
+					</div>
+
+					<div className="bg-slate-900/40 backdrop-blur-sm rounded-xl p-6 border border-sky-500/15 hover:border-sky-500/30 transition-colors">
+						<div className="bg-gradient-to-br from-rose-500 to-pink-600 p-3 rounded-xl w-fit mb-4 shadow-lg shadow-rose-500/20">
+							<PenTool className="w-6 h-6 text-white" />
+						</div>
+						<h3 className="text-xl font-bold text-sky-400 mb-2">
+							Create Calendar Entries
+						</h3>
+						<p className="text-slate-300 leading-relaxed">
+							Turn meeting notes into calendar entries, draft follow-up documents, or prepare a project folder with the right file structure.
+						</p>
+					</div>
+
+					<div className="bg-slate-900/40 backdrop-blur-sm rounded-xl p-6 border border-sky-500/15 hover:border-sky-500/30 transition-colors">
+						<div className="bg-gradient-to-br from-cyan-500 to-teal-600 p-3 rounded-xl w-fit mb-4 shadow-lg shadow-cyan-500/20">
+							<Sparkles className="w-6 h-6 text-white" />
+						</div>
+						<h3 className="text-xl font-bold text-sky-400 mb-2">
+							Custom Automations
+						</h3>
+						<p className="text-slate-300 leading-relaxed">
+							Define repeatable workflows and save them as reusable skills. Build automations that fit your specific routine and needs.
+						</p>
+					</div>
+				</div>
+
+				{/* The big sell + how to win */}
+				<div className="bg-gradient-to-br from-sky-500/10 via-slate-900/50 to-amber-500/10 rounded-3xl border border-sky-500/20 p-8 md:p-12 mb-16">
+					<h2 className="text-3xl md:text-4xl font-bold text-sky-400 mb-6 text-center">
+						How to Pull Off the Perfect Con
+					</h2>
+					<p className="text-lg text-slate-300 text-center max-w-3xl mx-auto mb-8">
+						Frank Abagnale conned his way across the world by making the impossible look effortless. Your job? Make your boring, repetitive tasks <span className="text-amber-400 font-semibold">disappear</span> using Accomplish. Here's how to win:
+					</p>
+
+					<div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+						<div className="space-y-4">
+							<h3 className="text-xl font-bold text-amber-400">1. Pick a Real Problem</h3>
+							<p className="text-slate-300">
+								What eats up your time every day or week? Messy files? Writing the same emails? Repetitive research? Tedious reports? Pick something you actually deal with.
+							</p>
+						</div>
+						<div className="space-y-4">
+							<h3 className="text-xl font-bold text-amber-400">2. Automate It with Accomplish</h3>
+							<p className="text-slate-300">
+								Install Accomplish, connect your AI provider (or use Ollama for free), and put it to work. Let it browse, organize, write, and manage tasks on your behalf.
+							</p>
+						</div>
+						<div className="space-y-4">
+							<h3 className="text-xl font-bold text-amber-400">3. Get Creative</h3>
+							<p className="text-slate-300">
+								The more creative your automation, the better. Chain multiple tasks together. Combine file organization with document generation. Surprise us with something clever.
+							</p>
+						</div>
+						<div className="space-y-4">
+							<h3 className="text-xl font-bold text-amber-400">4. Show the Before & After</h3>
+							<p className="text-slate-300">
+								Record a demo (max 3 min) showing your life <em>before</em> Accomplish and <em>after</em>. The more dramatic the transformation, the more likely you are to win.
+							</p>
 						</div>
 					</div>
+
+					<div className="mt-10 text-center">
+						<p className="text-lg text-slate-400 italic">
+							&ldquo;Two little mice fell in a bucket of cream. The first mouse quickly gave up and drowned. The second mouse wouldn't quit - he struggled so hard that he churned that cream into butter and crawled out.&rdquo;
+						</p>
+						<p className="text-sky-400 font-semibold mt-2">
+							- Frank Abagnale Sr. (Catch Me If You Can)
+						</p>
+					</div>
+				</div>
+
+				{/* Privacy callout */}
+				<div className="bg-slate-900/40 rounded-2xl border border-sky-500/15 p-8 max-w-4xl mx-auto text-center">
+					<p className="text-lg text-slate-300 leading-relaxed">
+						<span className="text-sky-400 font-bold text-xl">Nothing leaves your machine unless you allow it.</span>
+						<br />
+						<span className="text-slate-400 mt-2 block">
+							Accomplish runs 100% locally. Every action is shown and approved before it runs. You bring your own API keys (xAI, OpenAI, Anthropic Claude, Google Gemini) or use local models via Ollama. No subscriptions, no data collection. It's a tool, not a service.
+						</span>
+					</p>
 				</div>
 			</div>
 		</div>

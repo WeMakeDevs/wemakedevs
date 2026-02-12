@@ -25,7 +25,7 @@ const HackathonRules = async () => {
 			/>
 			<ViewContainer className="my-10">
 				<h2 className="text-3xl font-bold text-sky-400 mb-6">
-					The Mission Dossier
+					The Rulebook
 				</h2>
 				<HackathonContentBody className="text-slate-300">
 					<ol className="list-decimal list-outside space-y-4 pl-6">
@@ -39,23 +39,22 @@ const HackathonRules = async () => {
 							>
 								Hack All February
 							</Link>{" "}
-							series (Week 3). You can participate solo or with a team of up to 4 members. Teams can change per hackathon - you don't need to have the same team members for all hackathons in February. You can even participate solo in some hackathons and with a team in others.
+							series (Week 3). You can participate solo or with a team of up to 4 members. Teams can change per hackathon - you don't need to have the same team members for all hackathons in February. You can even go solo in some and team up in others.
 						</li>
 						<li>
-							The more Accomplish features you use, the better your chances. Using Accomplish's file management, document creation, browser automation, and custom skills is recommended to maximize your chances of winning prizes. Check out the{" "}
+							The more Accomplish features you use, the better your chances. File management, document creation, browser automation, custom skills - use them all. Check out the{" "}
 							<Link
 								href={`/hackathons/${DATA.slug}/resources`}
 								className="text-sky-400 hover:text-sky-300 underline"
 							>
 								resources section
-							</Link>
-							.
+							</Link>{" "}
+							for ideas and setup guides.
 						</li>
 						<li>
 							You must build a new project during the hackathon.
 							Simply modifying an existing codebase or app is not
-							allowed - your cover story should be clean before you
-							go undercover.
+							allowed - Frank never used the same fake check twice.
 						</li>
 						<li>
 							All design elements, code, and assets for your
@@ -69,13 +68,13 @@ const HackathonRules = async () => {
 							Teams can plan and discuss ideas in advance, but
 							coding and design work should start only after the
 							hackathon begins. Written notes, sketches, and
-							diagrams are allowed before kickoff - like planning
-							the perfect heist.
+							diagrams are allowed before kickoff - think of it as
+							casing the joint.
 						</li>
 						<li>
+							Focus on automating real day-to-day tasks using Accomplish.
 							Projects must involve building software (hardware
-							components are optional). Focus on automating real
-							day-to-day tasks using Accomplish.
+							components are optional).
 						</li>
 						<li>Teams may consist of 1–4 members.</li>
 						<li>
@@ -91,16 +90,15 @@ const HackathonRules = async () => {
 						</li>
 						<li>
 							Please treat all participants with respect. Act
-							kindly and professionally - we're all agents on the
-							same mission here. Harassment, discrimination, or exclusionary
-							behavior of any kind will not be tolerated. If you
-							see something concerning, notify an organizer
-							immediately.
+							kindly and professionally. Harassment, discrimination,
+							or exclusionary behavior of any kind will not be
+							tolerated. If you see something concerning, notify an
+							organizer immediately.
 						</li>
 						<li>
 							Failure to follow these rules or the Code of Conduct
 							may result in disqualification and a permanent ban
-							from future events.
+							from future events. Unlike Frank, there's no second act.
 						</li>
 					</ol>
 				</HackathonContentBody>
@@ -111,7 +109,7 @@ const HackathonRules = async () => {
 						Submit Your Project
 					</h3>
 					<p className="text-slate-300 mb-6">
-						Ready to submit your mission report? Only one person from a team needs to fill the submission form. Make sure you have your GitHub link, deployed link, and a YouTube demo (max 3 minutes) ready!
+						Ready to show off your automation? Only one person from a team needs to fill the submission form. Make sure you have your GitHub link, deployed link, and a YouTube demo (max 3 minutes) ready!
 					</p>
 					<Link
 						href="https://forms.gle/GRpyeRt8Gsm3r72V8"

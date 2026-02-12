@@ -4,16 +4,16 @@ import { images } from "./images";
 const DATA = {
 	title: "Automate Me If You Can",
 	prize: "$2,500+",
-	startDate: "2026-02-15T08:00:00+05:30",
+	startDate: "2026-02-16T08:00:00+05:30",
 	endDate: "2026-02-22T23:59:59+05:30",
 	description:
-		"Your mission, should you choose to accept it: Build multi-modal AI agents that watch, listen, and automate your day-to-day tasks. Use Accomplish to pull off the ultimate automation heist.",
+		"Frank didn't do his own paperwork. Neither should you. Use Accomplish - the open source AI coworker that lives on your desktop - to automate your boring, repetitive tasks. The most creative automations win $500 each. Think you can pull it off?",
 	descriptionCard:
-		"Automate your world with Accomplish. Your mission starts now.",
+		"Automate your boring tasks with Accomplish. Think you can pull it off?",
 	slug: "accomplish",
 	images,
 	cta: {
-		label: "Accept Mission",
+		label: "Join the Con",
 		href: "https://forms.gle/GRpyeRt8Gsm3r72V8",
 		openInNewTab: true,
 		disabled: false,
@@ -67,59 +67,63 @@ const navLinks = [
 
 const faqs: FaqType[] = [
 	{
-		question: "How do I register for this mission?",
-		answer: "It's simple, agent! Click the <a href='https://forms.gle/GRpyeRt8Gsm3r72V8' target='_blank' rel='noopener noreferrer' class='text-sky-400 underline hover:text-sky-300'>Accept Mission</a> button to sign up for Automate Me If You Can. Fill out the registration form with your details and you'll be ready to start your automation heist!",
+		question: "How do I sign up?",
+		answer: "Easy! Click the <a href='https://forms.gle/GRpyeRt8Gsm3r72V8' target='_blank' rel='noopener noreferrer' class='text-sky-400 underline hover:text-sky-300'>Join the Con</a> button to register for Automate Me If You Can. Fill out the form with your details and you're in. No fake IDs required.",
 	},
 	{
 		question: "Eligibility criteria to participate in this hackathon?",
-		answer: "You should be above 16 years of age and should abide by the rules of WeMakeDevs hackathons. Teams can have anywhere from 1 to 4 agents in them.",
+		answer: "You should be above 16 years of age and should abide by the rules of WeMakeDevs hackathons. Teams can have anywhere from 1 to 4 people in them.",
 	},
 	{
-		question: "I registered as a solo agent. Can I switch to a team?",
-		answer: "Absolutely! If you initially registered solo and now want to join or form a team, simply submit the registration form again with your team name. Your registration will be updated automatically - time to assemble your crew for the heist!",
+		question: "I registered solo. Can I switch to a team?",
+		answer: "Of course! If you initially registered solo and now want to join or form a team, simply submit the registration form again with your team name. Your registration will be updated automatically - time to assemble your crew!",
 	},
 	{
 		question: "Who is this hackathon for?",
-		answer: "This hackathon is perfect for anyone who wants to automate their day-to-day tasks using AI. Whether you're a developer, designer, or just someone who wants to make their life easier, Accomplish is your ticket to the ultimate automation adventure.",
+		answer: "Anyone who's tired of doing the same boring tasks over and over. Developers, students, freelancers, content creators - if you've got repetitive work that eats your time, this is for you. Accomplish is beginner-friendly, so you don't need to be a pro to pull this off.",
+	},
+	{
+		question: "What exactly do I need to build to win?",
+		answer: "Use Accomplish to automate something real in your day-to-day life. Organize messy files, draft documents, automate browser tasks, generate reports - the more creative and useful your automation, the better. Show us a real problem, and how Accomplish solved it for you. Record a demo showing the before and after.",
 	},
 	{
 		question: "Can I use existing or previously made projects?",
-		answer: "No, agent. You have to start your mission fresh only after the hackathon begins. Your cover story should be clean before you go undercover!",
+		answer: "No. You have to start fresh only after the hackathon begins. No recycled work - Frank never used the same fake check twice.",
 	},
 	{
 		question: "How can I submit my project?",
-		answer: "Submit your project using the submission form (will be shared closer to the deadline). Only one person from a team needs to submit. Make sure you have your GitHub link, deployed link, and a YouTube demo (max 3 minutes) ready. Join the <a href='https://discord.gg/bHjupJwF' target='_blank' rel='noopener noreferrer' class='text-sky-400 underline hover:text-sky-300'>Accomplish Discord</a> for all mission briefings and updates.",
+		answer: "Submit your project using the submission form (will be shared closer to the deadline). Only one person from a team needs to submit. Make sure you have your GitHub link, deployed link, and a YouTube demo (max 3 minutes) ready. Join the <a href='https://discord.gg/bHjupJwF' target='_blank' rel='noopener noreferrer' class='text-sky-400 underline hover:text-sky-300'>Accomplish Discord</a> for all updates.",
 	},
 	{
 		question: "I am a beginner in tech, can I still participate?",
-		answer: "Absolutely! At WeMakeDevs we believe in the \"learn by doing\" approach! Everyone starts somewhere - even the greatest con artists had to learn their first trick. Accomplish is designed to be beginner-friendly with simple setup and intuitive tools.",
+		answer: "Absolutely! At WeMakeDevs we believe in the \"learn by doing\" approach! Everyone starts somewhere - Frank Abagnale was only 16 when he pulled off his first con. Accomplish takes just 2 minutes to set up, and you don't need to write any code to use it.",
 	},
 	{
 		question: "Are we allowed to take help of AI tools like ChatGPT?",
-		answer: "If you use ChatGPT or other AI tools, make sure to declare this when submitting your project. Failing to do so will result in your disqualification - we catch all the cheaters, that's what we do!",
+		answer: "If you use ChatGPT or other AI tools to help build your project, make sure to declare this when submitting. Failing to do so will get you disqualified - and unlike Frank, we will catch you.",
 	},
 	{
-		question: "Where can I connect for other queries?",
-		answer: "For any mission-related queries, join the <a href='https://discord.gg/bHjupJwF' target='_blank' rel='noopener noreferrer' class='text-sky-400 underline hover:text-sky-300'>Accomplish Discord</a> for support and mission briefings.",
+		question: "Where can I ask questions?",
+		answer: "Join the <a href='https://discord.gg/bHjupJwF' target='_blank' rel='noopener noreferrer' class='text-sky-400 underline hover:text-sky-300'>Accomplish Discord</a> for support and updates. The Accomplish team is active there and happy to help.",
 	},
 	{
 		question: "What makes Accomplish special?",
-		answer: "Accomplish is 100% open source, runs locally on your machine, and you bring your own API keys. Your files never leave your computer - privacy first, always. It's the perfect tool for building AI agents that automate file management, document creation, and browser tasks.",
+		answer: "It's 100% open source (MIT licensed), runs entirely on your machine, and you bring your own API keys. Your files never leave your computer. It's not just a chatbot - it actually does things: browses the web, organizes files, creates documents, and automates workflows. Think of it as a coworker who never complains.",
 	},
 ];
 
 const schedule = [
 	{
-		date: "2026-02-15T00:00:00+05:30",
+		date: "2026-02-16T00:00:00+05:30",
 		items: [
 			{
-				title: "Mission Begins - Hacking Starts",
-				time: "2026-02-15T08:00:00+05:30",
+				title: "The Con Begins - Hacking Starts",
+				time: "2026-02-16T08:00:00+05:30",
 			},
 			{
 				title: "Live Stream - Getting Started with Accomplish",
-				description: "Learn how to set up Accomplish and start building your first AI agent automation.",
-				time: "2026-02-15T21:30:00+05:30",
+				description: "Learn how to set up Accomplish and start automating your first tasks. From zero to your first automation in under 10 minutes.",
+				time: "2026-02-16T21:30:00+05:30",
 				links: [
 					{
 						platform: "youtube",
@@ -133,9 +137,9 @@ const schedule = [
 		date: "2026-02-18T00:00:00+05:30",
 		items: [
 			{
-				title: "Mid-Mission Check-in - Office Hours with Accomplish Team",
+				title: "Midway Check-in - Office Hours with Accomplish Team",
 				description:
-					"Join the Accomplish team for a mid-hackathon check-in. Get your questions answered and learn tips for building powerful automation agents.",
+					"Join the Accomplish team for a mid-hackathon check-in. Get your questions answered, share progress, and learn tips for building powerful automations.",
 				time: "2026-02-18T21:30:00+05:30",
 				link: {
 					name: "Discord",
@@ -148,11 +152,11 @@ const schedule = [
 		date: "2026-02-22T00:00:00+05:30",
 		items: [
 			{
-				title: "Mission Complete - Hacking Ends",
+				title: "Hacking Ends",
 				time: "2026-02-22T20:00:00+05:30",
 			},
 			{
-				title: "Submissions Due - Extract Your Work",
+				title: "Submissions Due",
 				time: "2026-02-22T23:59:59+05:30",
 				link: {
 					name: "Submit Your Project",
