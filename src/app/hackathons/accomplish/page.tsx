@@ -62,8 +62,10 @@ const HackathonPage = () => {
 						</p>
 					</div>
 				</ViewContainer>
+			</div>
 
-				{/* What Accomplish Can Do + How to Win */}
+			{/* Tips: Meet Your New AI Coworker + How to Pull Off the Perfect Con */}
+			<div id="tips" className="scroll-mt-16 bg-slate-950">
 				<AboutSection />
 			</div>
 
