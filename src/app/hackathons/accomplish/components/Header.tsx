@@ -4,7 +4,7 @@ import { DateAtom } from "@/components/hackathon-content/atoms";
 import { buttonVariants } from "@/components/ui/button";
 import { ViewContainer } from "@/components/ui/view-container";
 import { cn } from "@/lib/utils";
-import { ArrowUpRight, CalendarIcon, Sparkles } from "lucide-react";
+import { ArrowUpRight, CalendarIcon, Sparkles, Trophy } from "lucide-react";
 import Link from "next/link";
 
 type HackathonHeaderProps = {
@@ -113,18 +113,18 @@ const HackathonHeader = ({
 								endDate={endDate}
 							/>
 							<hr className="my-6 border-sky-500/20" />
-							<div>
-								<span className="text-sky-400 font-semibold text-lg">
-									Prizes
-								</span>
-								<p className="text-2xl md:text-3xl font-bold text-slate-100 mt-1">
-									{prize}
+							<div className="rounded-xl bg-gradient-to-br from-amber-500/20 via-sky-500/15 to-amber-500/20 border border-amber-400/30 p-4">
+								<div className="flex items-center gap-2 mb-3">
+									<Trophy className="w-5 h-5 text-amber-400" />
+									<span className="text-amber-400 font-bold text-sm uppercase tracking-wide">
+										Prizes
+									</span>
+								</div>
+								<p className="text-xl md:text-2xl font-bold text-white leading-tight">
+									5 winners · $500 each <span className="text-amber-400">cash</span>
 								</p>
-								<p className="text-slate-400 mt-1">
-									$500 for each of the top 5 winners
-								</p>
-								<p className="text-slate-400 mt-1">
-									+ job interview at Accomplish.ai
+								<p className="text-sky-300 font-semibold mt-2 text-sm flex items-center gap-1.5">
+									<span className="text-amber-400">+</span> job interview at Accomplish.ai
 								</p>
 							</div>
 						</div>

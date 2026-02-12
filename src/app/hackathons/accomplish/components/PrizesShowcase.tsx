@@ -29,7 +29,7 @@ const PrizesShowcase = () => {
 						<div className="pointer-events-none absolute -bottom-16 -left-16 w-48 h-48 bg-white/10 rounded-full blur-3xl" />
 
 						<div className="relative z-10">
-							<div className="flex items-center gap-4 mb-8">
+							<div className="flex items-center gap-4 mb-6">
 								<div className="bg-slate-900/40 backdrop-blur-sm p-4 rounded-xl">
 									<Trophy className="w-8 h-8 text-white" />
 								</div>
@@ -38,33 +38,11 @@ const PrizesShowcase = () => {
 								</h3>
 							</div>
 
-							<div className="grid grid-cols-1 md:grid-cols-5 gap-4">
-								{[1, 2, 3, 4, 5].map((place) => (
-									<div
-										key={place}
-										className="bg-slate-900/80 rounded-2xl p-5 border border-sky-400/20 shadow-xl"
-									>
-										<div className="flex items-center justify-between mb-3">
-											<span className="text-sky-400 font-bold text-sm">
-												#{place}
-											</span>
-											<div className="flex items-center gap-1">
-												<span className="text-xl">
-													{place === 1 ? "🏆" : place === 2 ? "🥈" : place === 3 ? "🥉" : "🎯"}
-												</span>
-											</div>
-										</div>
-										<div className="text-2xl md:text-3xl font-bold text-amber-400">
-											$500
-										</div>
-										<p className="text-slate-400 mt-1 text-xs">
-											Cash Prize
-										</p>
-									</div>
-								))}
-							</div>
+							<p className="text-2xl md:text-3xl font-bold text-amber-400 text-center mb-8">
+								5 winners · $500 each (cash)
+							</p>
 
-							<div className="mt-8 flex flex-wrap gap-3 justify-center">
+							<div className="flex flex-wrap gap-3 justify-center">
 								<span className="inline-block bg-slate-900/40 backdrop-blur-sm px-5 py-2.5 rounded-full font-semibold text-white border border-white/20">
 									+ exclusive swag for all winners
 								</span>
