@@ -51,7 +51,7 @@ const hackathons = [
 		status: "upcoming",
 		slug: "accomplish",
 		description: "Automate your boring tasks with Accomplish. Think you can pull it off?",
-		prize: "$2,500+",
+		prize: "$3,000+",
 		registrationLink: "https://forms.gle/GRpyeRt8Gsm3r72V8",
 	},
 	{
@@ -61,7 +61,7 @@ const hackathons = [
 		status: "upcoming",
 		slug: "vision",
 		description: "Build multi-modal AI agents that watch, listen, and understand video in real-time",
-		prize: "$6,000+",
+		prize: "$4,000+",
 		registrationLink: "https://forms.gle/b8YS4J4jcR2mSnnf7",
 	},
 ];
