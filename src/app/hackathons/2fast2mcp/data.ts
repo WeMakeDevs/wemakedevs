@@ -88,7 +88,7 @@ const faqs: FaqType[] = [
 	},
 	{
 		question: "How can I submit my project?",
-		answer: "Submit your project using the <a href='https://forms.gle/S1fV4shNaDmAbgSB8' target='_blank' rel='noopener noreferrer' class='text-orange-400 underline hover:text-orange-300'>submission form</a>. Only one person from a team needs to submit. Make sure you have your GitHub link, deployed link, and a YouTube demo (max 3 minutes) ready. Join the <a href='https://join.slack.com/t/archestracommunity/shared_invite/zt-3pxh76ids-sy7J9TrvfQnlbfhGO0uM5A' target='_blank' rel='noopener noreferrer' class='text-orange-400 underline hover:text-orange-300'>Archestra Slack Community</a> for all updates.",
+		answer: "Submit your project using the <a href='https://forms.gle/S1fV4shNaDmAbgSB8' target='_blank' rel='noopener noreferrer' class='text-orange-400 underline hover:text-orange-300'>submission form</a>. Only one person from a team needs to submit. Make sure you have your GitHub link, deployed link, and a YouTube demo (max 3 minutes) ready. Join the <a href='https://archestra.ai/join-slack' target='_blank' rel='noopener noreferrer' class='text-orange-400 underline hover:text-orange-300'>Archestra Slack Community</a> for all updates.",
 	},
 	{
 		question: "I am a beginner in tech, can I still participate?",
@@ -100,7 +100,7 @@ const faqs: FaqType[] = [
 	},
 	{
 		question: "Where can I connect for other queries?",
-		answer: "For any hackathon related queries, join the <a href='https://join.slack.com/t/archestracommunity/shared_invite/zt-3pxh76ids-sy7J9TrvfQnlbfhGO0uM5A' target='_blank' rel='noopener noreferrer' class='text-orange-400 underline hover:text-orange-300'>Archestra Slack Community</a> for support.",
+		answer: "For any hackathon related queries, join the <a href='https://archestra.ai/join-slack' target='_blank' rel='noopener noreferrer' class='text-orange-400 underline hover:text-orange-300'>Archestra Slack Community</a> for support.",
 	},
 ];
 
@@ -138,7 +138,7 @@ const schedule = [
 				time: "2026-02-12T21:30:00+05:30",
 				link: {
 					name: "Slack",
-					url: "https://join.slack.com/t/archestracommunity/shared_invite/zt-3pxh76ids-sy7J9TrvfQnlbfhGO0uM5A",
+					url: "https://archestra.ai/join-slack",
 				},
 			},
 		],
