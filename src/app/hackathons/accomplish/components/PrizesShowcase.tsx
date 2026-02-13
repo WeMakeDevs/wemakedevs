@@ -88,7 +88,7 @@ const PrizesShowcase = () => {
 
 					{/* Community Rewards - Two boxes side by side */}
 					<div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-						{/* GitHub Star Rewards */}
+						{/* Social Share Swag Giveaway */}
 						<div className="bg-slate-900/50 backdrop-blur-sm rounded-3xl border border-sky-500/20 p-8 md:p-10">
 							<div className="flex items-center gap-4 mb-6">
 								<div className="bg-gradient-to-br from-sky-500 to-amber-500 p-4 rounded-xl shadow-lg">
@@ -100,16 +100,10 @@ const PrizesShowcase = () => {
 							</div>
 
 							<p className="text-lg text-slate-300 leading-relaxed mb-6 text-center">
-								Star the{" "}
-								<Link
-									href="https://github.com/accomplish-ai/accomplish"
-									target="_blank"
-									rel="noopener noreferrer"
-									className="text-sky-400 hover:text-sky-300 font-semibold underline decoration-2 underline-offset-2 transition-colors"
-								>
-									Accomplish GitHub repo
-								</Link>{" "}
-								and register for the hackathon. 10 lucky winners who star the repo will get{" "}
+								After you register, share on socials and tag{" "}
+								<span className="text-sky-400 font-semibold">@wemakedevs</span> and{" "}
+								<span className="text-sky-400 font-semibold">@Accomplish_ai</span>. Share your
+								experience, what you build, and more. 10 lucky winners will get{" "}
 								<span className="text-amber-400 font-semibold">swag boxes shipped to them!</span>
 							</p>
 

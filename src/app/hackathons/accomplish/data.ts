@@ -40,10 +40,10 @@ const DATA = {
 			},
 			{
 				name: "Community Rewards",
-				prize: "10 lucky winners who star the repo get swag boxes",
+				prize: "10 lucky winners who share on socials get swag boxes",
 				details: {
 					requirements: [
-						"Star the repo and post about participation tagging Accomplish",
+						"After you register, share on socials and tag @wemakedevs and @Accomplish_ai — share your experience, what you build, etc.",
 					],
 					links: {
 						github: "https://github.com/accomplish-ai/accomplish",
