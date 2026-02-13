@@ -127,7 +127,7 @@ const PrizesShowcase = () => {
 							</div>
 
 							<p className="text-lg text-slate-300 leading-relaxed mb-6 text-center">
-								All top 5 winners get a job interview at{" "}
+								All top winners get a job interview at{" "}
 								<Link
 									href="https://accomplish.ai"
 									target="_blank"
