@@ -33,7 +33,7 @@ const HackathonResources = async () => {
 						<li>
 							Join the{" "}
 							<Link
-								href="https://join.slack.com/t/archestracommunity/shared_invite/zt-3pxh76ids-sy7J9TrvfQnlbfhGO0uM5A"
+								href="https://archestra.ai/join-slack"
 								className="text-orange-400 underline hover:no-underline hover:text-orange-300"
 								target="_blank"
 								rel="noopener noreferrer"
@@ -85,7 +85,7 @@ const HackathonResources = async () => {
 						</li>
 						<li>
 							<Link
-								href="https://join.slack.com/t/archestracommunity/shared_invite/zt-3pxh76ids-sy7J9TrvfQnlbfhGO0uM5A"
+								href="https://archestra.ai/join-slack"
 								className="text-orange-400 underline hover:no-underline hover:text-orange-300"
 								target="_blank"
 								rel="noopener noreferrer"
