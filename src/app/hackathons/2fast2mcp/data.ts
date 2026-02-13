@@ -13,7 +13,7 @@ const DATA = {
 	slug: "2fast2mcp",
 	images,
 	cta: {
-		label: "Register Now",
+		label: "Submit Your Project",
 		href: "/hackathons/2fast2mcp/register",
 		openInNewTab: false,
 		disabled: false,
@@ -68,7 +68,7 @@ const navLinks = [
 const faqs: FaqType[] = [
 	{
 		question: "How do I register for the hackathon?",
-		answer: "It's simple! Click the <a href='/hackathons/2fast2mcp/register' class='text-orange-400 underline hover:text-orange-300'>Register Now</a> button to sign up for 2 Fast 2 MCP. Fill out the registration form with your details and you'll be ready to race!",
+		answer: "It's simple! Click the <a href='/hackathons/2fast2mcp/register' class='text-orange-400 underline hover:text-orange-300'>Submit Your Project</a> button to submit for 2 Fast 2 MCP. Fill out the form with your project details and you'll be ready to race!",
 	},
 	{
 		question: "Eligibility criteria to participate in this hackathon?",
