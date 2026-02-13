@@ -3,11 +3,11 @@ import { images } from "./images";
 
 const DATA = {
 	title: "Automate Me If You Can",
-	prize: "$2,500+",
+	prize: "$3000 cash + job interviews",
 	startDate: "2026-02-16T08:00:00+05:30",
 	endDate: "2026-02-22T23:59:59+05:30",
 	description:
-		"Frank didn't do his own paperwork. Neither should you. Use Accomplish - the open source AI coworker that lives on your desktop - to automate your boring, repetitive tasks. The most creative automations win $500 each. Think you can pull it off?",
+		"Frank didn't do his own paperwork. Neither should you. Use Accomplish - the open source AI coworker that lives on your desktop - to automate your boring, repetitive tasks. 10 winners who showcase their use case win $100 each. Think you can pull it off?",
 	descriptionCard:
 		"Automate your boring tasks with Accomplish. Think you can pull it off?",
 	slug: "accomplish",
@@ -21,11 +21,23 @@ const DATA = {
 	prizes: {
 		winning: [
 			{
-				name: "Top 5 Winners",
-				prize: "$500 each + job interview at Accomplish.ai",
+				name: "Top 10 Winners",
+				prize: "$100 each for showcasing their use case + job interview at Accomplish.ai",
 			},
 		],
 		giveaway: [
+			{
+				name: "Start your open source journey",
+				prize: "$100 per merged issue (good-first issues on GitHub)",
+				details: {
+					requirements: [
+						"Pick an issue from the Feb Hackathon label, get a PR merged",
+					],
+					links: {
+						github: "https://github.com/accomplish-ai/accomplish/issues?q=is%3Aissue%20state%3Aopen%20label%3Afeb_hackathon",
+					},
+				},
+			},
 			{
 				name: "Community Rewards",
 				prize: "10 lucky winners who star the repo get swag boxes",

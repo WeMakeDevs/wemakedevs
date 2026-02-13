@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { FileText, FolderOpen, Globe, MonitorSmartphone, PenTool, Sparkles } from "lucide-react";
 
 const AboutSection = () => {
@@ -131,6 +132,25 @@ const AboutSection = () => {
 						</p>
 						<p className="text-sky-400 font-semibold mt-2">
 							- Frank Abagnale Sr. (Catch Me If You Can)
+						</p>
+					</div>
+
+					{/* Start your open source journey - tip */}
+					<div className="mt-10 pt-10 border-t border-sky-500/20">
+						<h3 className="text-xl font-bold text-amber-400 mb-3 text-center">
+							Start your open source journey
+						</h3>
+						<p className="text-lg text-slate-300 text-center max-w-3xl mx-auto">
+							The project has good issues open on GitHub that you can contribute to. 							Pick one from the{" "}
+							<Link
+								href="https://github.com/accomplish-ai/accomplish/issues?q=is%3Aissue%20state%3Aopen%20label%3Afeb_hackathon"
+								target="_blank"
+								rel="noopener noreferrer"
+								className="text-sky-400 hover:text-sky-300 font-semibold underline decoration-2 underline-offset-2"
+							>
+								Feb Hackathon label
+							</Link>
+							, get your PR merged, and earn <span className="text-amber-400 font-semibold">$100 per issue fixed</span>. Great way to build your open source portfolio while getting paid.
 						</p>
 					</div>
 				</div>

@@ -121,10 +121,10 @@ const HackathonHeader = ({
 									</span>
 								</div>
 								<p className="text-xl md:text-2xl font-bold text-white leading-tight">
-									5 winners · $500 each <span className="text-amber-400">cash</span>
+									$3000 cash + job interviews
 								</p>
 								<p className="text-sky-300 font-semibold mt-2 text-sm flex items-center gap-1.5">
-									<span className="text-amber-400">+</span> job interview at Accomplish.ai
+									10 winners · $100 each for showcasing their use case
 								</p>
 							</div>
 						</div>

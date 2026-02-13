@@ -16,13 +16,13 @@ const PrizesShowcase = () => {
 						The Bounty
 					</h2>
 					<p className="text-lg text-slate-400 max-w-2xl mx-auto">
-						The FBI put a bounty on Frank's head. We're putting one on yours. $2,500+ in prizes for the top 5 automations.
+						The FBI put a bounty on Frank's head. We're putting one on yours. $3000 cash + job interviews.
 					</p>
 				</div>
 
 				{/* Prize Cards */}
 				<div className="space-y-8">
-					{/* Top 5 Winners */}
+					{/* Top 3 Winners - Automation Showcase */}
 					<div className="relative rounded-3xl p-8 md:p-10 overflow-hidden bg-gradient-to-br from-sky-600 via-sky-700 to-amber-600">
 						{/* Decorative elements */}
 						<div className="pointer-events-none absolute -top-20 -right-20 w-64 h-64 bg-white/10 rounded-full blur-3xl" />
@@ -34,12 +34,12 @@ const PrizesShowcase = () => {
 									<Trophy className="w-8 h-8 text-white" />
 								</div>
 								<h3 className="text-2xl md:text-3xl font-bold text-white">
-									Top 5 Most Wanted
+									Top 10 Most Wanted
 								</h3>
 							</div>
 
 							<p className="text-2xl md:text-3xl font-bold text-amber-400 text-center mb-8">
-								5 winners · $500 each (cash)
+								10 winners who showcase their use case · $100 each (cash)
 							</p>
 
 							<div className="flex flex-wrap gap-3 justify-center">
@@ -50,6 +50,39 @@ const PrizesShowcase = () => {
 									+ job interview at Accomplish.ai
 								</span>
 							</div>
+						</div>
+					</div>
+
+					{/* Start your open source journey - $100 per merged issue */}
+					<div className="bg-slate-900/50 backdrop-blur-sm rounded-3xl border border-amber-500/30 p-8 md:p-10">
+						<div className="flex items-center gap-4 mb-6">
+							<div className="bg-gradient-to-br from-amber-500 to-orange-500 p-4 rounded-xl shadow-lg">
+								<Star className="w-8 h-8 text-white" />
+							</div>
+							<h3 className="text-2xl md:text-3xl font-bold text-amber-400">
+								Start Your Open Source Journey
+							</h3>
+						</div>
+
+						<p className="text-lg text-slate-300 leading-relaxed mb-6 text-center">
+							The project has good issues open on GitHub that you can contribute to.{" "}
+							<Link
+								href="https://github.com/accomplish-ai/accomplish/issues?q=is%3Aissue%20state%3Aopen%20label%3Afeb_hackathon"
+								target="_blank"
+								rel="noopener noreferrer"
+								className="text-sky-400 hover:text-sky-300 font-semibold underline decoration-2 underline-offset-2 transition-colors"
+							>
+								Pick an issue from the Feb Hackathon label
+							</Link>
+							. Get a PR merged and earn{" "}
+							<span className="text-amber-400 font-semibold">$100 per issue fixed</span>.
+						</p>
+
+						<div className="flex items-center gap-3 bg-slate-800/50 rounded-xl px-5 py-3 w-fit border border-amber-500/30 mx-auto">
+							<Gift className="w-5 h-5 text-amber-400" />
+							<span className="font-bold text-amber-400 text-lg">
+								$100 per merged issue
+							</span>
 						</div>
 					</div>
 

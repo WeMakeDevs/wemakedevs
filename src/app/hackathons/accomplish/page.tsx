@@ -55,7 +55,7 @@ const HackathonPage = () => {
 							<strong className="text-sky-400">Accomplish</strong> is the open source AI coworker that lives on your desktop. It reads your files, creates documents, browses the web, organizes your folders, and handles the boring stuff so you don't have to. It runs locally on your machine, and every action is shown and approved before it runs.
 						</p>
 						<p>
-							Your challenge: <strong className="text-amber-400">use Accomplish to automate something real in your life</strong>. The more creative, the more useful, the more impressive the before-and-after - the more likely you are to walk away with $500 and a job interview.
+							Your challenge: <strong className="text-amber-400">use Accomplish to automate something real in your life</strong>. The more creative, the more useful, the more impressive the before-and-after - the more likely you are to walk away with $100 and a job interview.
 						</p>
 						<p className="text-sky-400 font-semibold text-2xl mt-6">
 							They can't catch you if you've already automated everything.
