@@ -28,7 +28,7 @@ const PreviousWinners = () => {
 						Previous Winners
 					</h2>
 					<p className="text-lg text-gray-600 font-medium max-w-2xl mx-auto leading-relaxed">
-						Meet some of our amazing scholarship recipients who have
+						Meet some of WeMakeDevs' amazing scholarship recipients who have
 						attended major industry events and advanced their
 						careers.
 					</p>
@@ -77,7 +77,7 @@ const PreviousWinners = () => {
 									You could be next
 								</h3>
 								<p className="text-base font-medium leading-relaxed text-gray-600">
-									Apply for scholarships and get a chance to
+									Apply for WeMakeDevs scholarships and get a chance to
 									attend KubeCon Amsterdam 2026!
 								</p>
 							</div>

@@ -19,7 +19,7 @@ const WhyApply = ({ className, ...props }: GeneralComponent) => {
 			icon: Plane,
 			color: "accent-1",
 			description:
-				"Your round-trip flight to Amsterdam is fully covered. Just focus on the experience while we handle the journey there and back.",
+				"Your round-trip flight to Amsterdam is fully covered. Just focus on the experience while WeMakeDevs handles the journey there and back.",
 		},
 		{
 			name: "Hotel Accommodation",

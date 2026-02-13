@@ -25,7 +25,7 @@ const Sponsor = () => {
 				</h2>
 				<div className="space-y-2 font-medium">
 					<p className="text-balance">
-						This scholarship fund is made possible by our sponsor Open Vision
+						This WeMakeDevs scholarship fund is made possible by our sponsor Open Vision
 						Agents by Stream.
 					</p>
 					<p className="">

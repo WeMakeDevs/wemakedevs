@@ -38,7 +38,7 @@ const Apply = () => {
 					{/* Social Media Sharing Section */}
 					<div className="space-y-6">
 						<h3 className="text-2xl font-semibold font-title">
-							Help us spread the word!
+							Help WeMakeDevs spread the word!
 						</h3>
 						<p className="text-black/80 font-medium max-w-2xl mx-auto">
 							Share about it on social media and tag{" "}

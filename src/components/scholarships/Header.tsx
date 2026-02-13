@@ -37,15 +37,15 @@ const Header = ({ className, ...props }: GeneralComponent) => {
 					</h1>
 					<div className="space-y-4">
 						<p className="text-base font-medium text-balance text-gray-700">
-							Our scholarship program is here to open doors for
+							WeMakeDevs' scholarship program is here to open doors for
 							individuals who may not otherwise get the chance to
 							attend major industry events. Whether based on
-							diversity or financial need, we want to support
+							diversity or financial need, WeMakeDevs aims to support
 							passionate builders and contributors in joining the
 							global tech community.
 							<br />
 							Recipients will receive complimentary passes to
-							leading conferences. Awards are granted based on a
+							leading conferences. Awards are granted by WeMakeDevs based on a
 							combination of need and potential impact, with
 							applications carefully reviewed by a diverse panel
 							of community members.
