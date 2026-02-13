@@ -103,6 +103,33 @@ const HackathonRules = async () => {
 					</ol>
 				</HackathonContentBody>
 
+				{/* Contributing to issues Section */}
+				<div className="mt-12 p-8 bg-slate-900/50 rounded-2xl border border-amber-500/30">
+					<h3 className="text-2xl font-bold text-amber-400 mb-4">
+						Contributing to GitHub issues ($100 per merged PR)
+					</h3>
+					<p className="text-slate-300 mb-4">
+						If you want to contribute to an issue from the{" "}
+						<Link
+							href="https://github.com/accomplish-ai/accomplish/issues?q=is%3Aissue%20state%3Aopen%20label%3Afeb_hackathon"
+							className="text-sky-400 hover:text-sky-300 underline"
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							feb_hackathon
+						</Link>{" "}
+						label, follow this process:
+					</p>
+					<ol className="list-decimal list-outside space-y-2 pl-6 text-slate-300 mb-4">
+						<li>Comment on the issue and share how you would fix it.</li>
+						<li>Tag <strong className="text-sky-400">@orcaman</strong> in your comment — he will assign the issue to you.</li>
+						<li>Once assigned, create your PR.</li>
+					</ol>
+					<p className="text-amber-400/90 text-sm font-medium">
+						Do not spam. One thoughtful comment per issue is enough.
+					</p>
+				</div>
+
 				{/* Project Submission Section */}
 				<div className="mt-12 p-8 bg-gradient-to-r from-sky-500/10 to-amber-500/10 rounded-2xl border border-sky-500/30">
 					<h3 className="text-2xl font-bold text-sky-400 mb-4">
