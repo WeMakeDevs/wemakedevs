@@ -57,6 +57,18 @@ const HackathonPage = () => {
 						<p>
 							Your challenge: <strong className="text-amber-400">use Accomplish to automate something real in your life</strong>. The more creative, the more useful, the more impressive the before-and-after - the more likely you are to walk away with $100 and a job interview.
 						</p>
+						<p>
+							Or <strong className="text-sky-400">start your open source journey as a contributor</strong>: pick an issue with the{" "}
+							<Link
+								href="https://github.com/accomplish-ai/accomplish/issues?q=is%3Aissue%20state%3Aopen%20label%3Afeb_hackathon"
+								target="_blank"
+								rel="noopener noreferrer"
+								className="text-sky-400 hover:text-sky-300 font-semibold underline decoration-2 underline-offset-2"
+							>
+								feb_hackathon
+							</Link>{" "}
+							label, get your PR merged, and earn $100 per issue fixed.
+						</p>
 						<p className="text-sky-400 font-semibold text-2xl mt-6">
 							They can't catch you if you've already automated everything.
 						</p>

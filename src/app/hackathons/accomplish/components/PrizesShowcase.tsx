@@ -72,7 +72,7 @@ const PrizesShowcase = () => {
 								rel="noopener noreferrer"
 								className="text-sky-400 hover:text-sky-300 font-semibold underline decoration-2 underline-offset-2 transition-colors"
 							>
-								Pick an issue from the Feb Hackathon label
+								Pick an issue with the label <code className="text-amber-400 bg-slate-800 px-1.5 py-0.5 rounded">feb_hackathon</code>
 							</Link>
 							. Get a PR merged and earn{" "}
 							<span className="text-amber-400 font-semibold">$100 per issue fixed</span>.

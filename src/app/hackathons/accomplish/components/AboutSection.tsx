@@ -141,14 +141,14 @@ const AboutSection = () => {
 							Start your open source journey
 						</h3>
 						<p className="text-lg text-slate-300 text-center max-w-3xl mx-auto">
-							The project has good issues open on GitHub that you can contribute to. 							Pick one from the{" "}
+							The project has good issues open on GitHub that you can contribute to. Pick an issue with the{" "}
 							<Link
 								href="https://github.com/accomplish-ai/accomplish/issues?q=is%3Aissue%20state%3Aopen%20label%3Afeb_hackathon"
 								target="_blank"
 								rel="noopener noreferrer"
 								className="text-sky-400 hover:text-sky-300 font-semibold underline decoration-2 underline-offset-2"
 							>
-								Feb Hackathon label
+								label <code className="text-amber-400 bg-slate-800 px-1.5 py-0.5 rounded text-sm">feb_hackathon</code>
 							</Link>
 							, get your PR merged, and earn <span className="text-amber-400 font-semibold">$100 per issue fixed</span>. Great way to build your open source portfolio while getting paid.
 						</p>

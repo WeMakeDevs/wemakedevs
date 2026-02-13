@@ -31,7 +31,7 @@ const DATA = {
 				prize: "$100 per merged issue (good-first issues on GitHub)",
 				details: {
 					requirements: [
-						"Pick an issue from the Feb Hackathon label, get a PR merged",
+						"Pick an issue with label feb_hackathon, get a PR merged",
 					],
 					links: {
 						github: "https://github.com/accomplish-ai/accomplish/issues?q=is%3Aissue%20state%3Aopen%20label%3Afeb_hackathon",
