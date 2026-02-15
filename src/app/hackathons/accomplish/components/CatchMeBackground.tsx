@@ -56,7 +56,7 @@ const CatchMeBackground = () => {
 					<text x="50" y="55" textAnchor="middle" fill="#fbbf24" fontSize="6" opacity="0.4">?</text>
 					<text x="50" y="92" textAnchor="middle" fill="#fbbf24" fontSize="6">FOR AUTOMATING</text>
 					<text x="50" y="102" textAnchor="middle" fill="#fbbf24" fontSize="6">EVERYTHING</text>
-					<text x="50" y="114" textAnchor="middle" fill="#fbbf24" fontSize="5" opacity="0.5">REWARD: $100</text>
+					<text x="50" y="114" textAnchor="middle" fill="#fbbf24" fontSize="5" opacity="0.5">REWARD: INR 10k</text>
 				</svg>
 			</div>
 

@@ -124,7 +124,7 @@ const HackathonHeader = ({
 									$3000 cash + job interviews
 								</p>
 								<p className="text-sky-300 font-semibold mt-2 text-sm flex items-center gap-1.5">
-									10 winners · $100 each for showcasing their use case
+									Top 20 winners · INR 10,000 each
 								</p>
 							</div>
 						</div>

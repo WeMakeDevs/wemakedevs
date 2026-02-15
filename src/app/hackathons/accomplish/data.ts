@@ -7,7 +7,7 @@ const DATA = {
 	startDate: "2026-02-16T08:00:00+05:30",
 	endDate: "2026-02-22T23:59:59+05:30",
 	description:
-		"Frank didn't do his own paperwork. Neither should you. Use Accomplish - the open source AI coworker that lives on your desktop - to automate your boring, repetitive tasks. 10 winners who showcase their use case win $100 each. Think you can pull it off?",
+		"Frank didn't do his own paperwork. Neither should you. Use Accomplish - the open source AI coworker that lives on your desktop - to automate your boring, repetitive tasks. Top 20 winners get INR 10,000 each. Think you can pull it off?",
 	descriptionCard:
 		"Automate your boring tasks with Accomplish. Think you can pull it off?",
 	slug: "accomplish",
@@ -21,14 +21,26 @@ const DATA = {
 	prizes: {
 		winning: [
 			{
-				name: "Top 10 Winners",
-				prize: "$100 each for showcasing their use case + job interview at Accomplish.ai",
+				name: "Use Accomplish to automate something real",
+				prize: "10 winners · INR 10,000 each + job interview at Accomplish.ai",
+			},
+			{
+				name: "Get your PR merged",
+				prize: "10 winners · INR 10,000 each + job interview at Accomplish.ai",
+				details: {
+					requirements: [
+						"Pick an issue with label feb_hackathon, get a PR merged",
+					],
+					links: {
+						github: "https://github.com/accomplish-ai/accomplish/issues?q=is%3Aissue%20state%3Aopen%20label%3Afeb_hackathon",
+					},
+				},
 			},
 		],
 		giveaway: [
 			{
 				name: "Start your open source journey",
-				prize: "$100 per merged issue (good-first issues on GitHub)",
+				prize: "10 of the top 20 winners for merged PRs · INR 10,000 each",
 				details: {
 					requirements: [
 						"Pick an issue with label feb_hackathon, get a PR merged",

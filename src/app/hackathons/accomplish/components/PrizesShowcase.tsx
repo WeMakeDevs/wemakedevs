@@ -22,7 +22,7 @@ const PrizesShowcase = () => {
 
 				{/* Prize Cards */}
 				<div className="space-y-8">
-					{/* Top 3 Winners - Automation Showcase */}
+					{/* Top 20 Winners - INR 10,000 each */}
 					<div className="relative rounded-3xl p-8 md:p-10 overflow-hidden bg-gradient-to-br from-sky-600 via-sky-700 to-amber-600">
 						{/* Decorative elements */}
 						<div className="pointer-events-none absolute -top-20 -right-20 w-64 h-64 bg-white/10 rounded-full blur-3xl" />
@@ -34,13 +34,32 @@ const PrizesShowcase = () => {
 									<Trophy className="w-8 h-8 text-white" />
 								</div>
 								<h3 className="text-2xl md:text-3xl font-bold text-white">
-									Top 10 Most Wanted
+									Top 20 Most Wanted
 								</h3>
 							</div>
 
-							<p className="text-2xl md:text-3xl font-bold text-amber-400 text-center mb-8">
-								10 winners who showcase their use case · $100 each (cash)
+							<p className="text-2xl md:text-3xl font-bold text-amber-400 text-center mb-6">
+								Top 20 winners · INR 10,000 each
 							</p>
+
+							<p className="text-slate-200 text-center mb-6">
+								The 20 winners are split into two tracks:
+							</p>
+
+							<div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+								<div className="bg-slate-900/40 backdrop-blur-sm rounded-xl p-5 border border-white/20 text-center">
+									<p className="font-bold text-white mb-1">10 winners</p>
+									<p className="text-slate-200 text-sm">
+										Use Accomplish to automate something real in your life
+									</p>
+								</div>
+								<div className="bg-slate-900/40 backdrop-blur-sm rounded-xl p-5 border border-white/20 text-center">
+									<p className="font-bold text-white mb-1">10 winners</p>
+									<p className="text-slate-200 text-sm">
+										Get your PR merged
+									</p>
+								</div>
+							</div>
 
 							<div className="flex flex-wrap gap-3 justify-center">
 								<span className="inline-block bg-slate-900/40 backdrop-blur-sm px-5 py-2.5 rounded-full font-semibold text-white border border-white/20">
@@ -53,36 +72,63 @@ const PrizesShowcase = () => {
 						</div>
 					</div>
 
-					{/* Start your open source journey - $100 per merged issue */}
-					<div className="bg-slate-900/50 backdrop-blur-sm rounded-3xl border border-amber-500/30 p-8 md:p-10">
-						<div className="flex items-center gap-4 mb-6">
-							<div className="bg-gradient-to-br from-amber-500 to-orange-500 p-4 rounded-xl shadow-lg">
-								<Star className="w-8 h-8 text-white" />
+					{/* Two tracks in detail - side by side */}
+					<div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+						{/* 10 winners: Use Accomplish to automate something real */}
+						<div className="bg-slate-900/50 backdrop-blur-sm rounded-3xl border border-amber-500/30 p-8 md:p-10">
+							<div className="flex items-center gap-4 mb-6">
+								<div className="bg-gradient-to-br from-amber-500 to-orange-500 p-4 rounded-xl shadow-lg">
+									<Trophy className="w-8 h-8 text-white" />
+								</div>
+								<h3 className="text-2xl md:text-3xl font-bold text-amber-400">
+									Use Accomplish to Automate Something Real
+								</h3>
 							</div>
-							<h3 className="text-2xl md:text-3xl font-bold text-amber-400">
-								Start Your Open Source Journey
-							</h3>
+
+							<p className="text-lg text-slate-300 leading-relaxed mb-6 text-center">
+								10 of the top 20 winners are chosen for showcasing how they use Accomplish to automate something real in their life. Build something useful and win{" "}
+								<span className="text-amber-400 font-semibold">INR 10,000 each</span> + job interview at Accomplish.ai.
+							</p>
+
+							<div className="flex items-center gap-3 bg-slate-800/50 rounded-xl px-5 py-3 w-fit border border-amber-500/30 mx-auto">
+								<Gift className="w-5 h-5 text-amber-400" />
+								<span className="font-bold text-amber-400 text-lg">
+									10 winners · INR 10,000 each
+								</span>
+							</div>
 						</div>
 
-						<p className="text-lg text-slate-300 leading-relaxed mb-6 text-center">
-							The project has good issues open on GitHub that you can contribute to.{" "}
-							<Link
-								href="https://github.com/accomplish-ai/accomplish/issues?q=is%3Aissue%20state%3Aopen%20label%3Afeb_hackathon"
-								target="_blank"
-								rel="noopener noreferrer"
-								className="text-sky-400 hover:text-sky-300 font-semibold underline decoration-2 underline-offset-2 transition-colors"
-							>
-								Pick an issue with the label <code className="text-amber-400 bg-slate-800 px-1.5 py-0.5 rounded">feb_hackathon</code>
-							</Link>
-							. Get a PR merged and earn{" "}
-							<span className="text-amber-400 font-semibold">$100 per issue fixed</span>.
-						</p>
+						{/* 10 winners: Get your PR merged */}
+						<div className="bg-slate-900/50 backdrop-blur-sm rounded-3xl border border-amber-500/30 p-8 md:p-10">
+							<div className="flex items-center gap-4 mb-6">
+								<div className="bg-gradient-to-br from-amber-500 to-orange-500 p-4 rounded-xl shadow-lg">
+									<Star className="w-8 h-8 text-white" />
+								</div>
+								<h3 className="text-2xl md:text-3xl font-bold text-amber-400">
+									Start Your Open Source Journey
+								</h3>
+							</div>
 
-						<div className="flex items-center gap-3 bg-slate-800/50 rounded-xl px-5 py-3 w-fit border border-amber-500/30 mx-auto">
-							<Gift className="w-5 h-5 text-amber-400" />
-							<span className="font-bold text-amber-400 text-lg">
-								$100 per merged issue
-							</span>
+							<p className="text-lg text-slate-300 leading-relaxed mb-6 text-center">
+								The other 10 of the top 20 winners are for contributors.{" "}
+								<Link
+									href="https://github.com/accomplish-ai/accomplish/issues?q=is%3Aissue%20state%3Aopen%20label%3Afeb_hackathon"
+									target="_blank"
+									rel="noopener noreferrer"
+									className="text-sky-400 hover:text-sky-300 font-semibold underline decoration-2 underline-offset-2 transition-colors"
+								>
+									Pick an issue with the label <code className="text-amber-400 bg-slate-800 px-1.5 py-0.5 rounded">feb_hackathon</code>
+								</Link>
+								, get your PR merged, and win{" "}
+								<span className="text-amber-400 font-semibold">INR 10,000 each</span> + job interview at Accomplish.ai.
+							</p>
+
+							<div className="flex items-center gap-3 bg-slate-800/50 rounded-xl px-5 py-3 w-fit border border-amber-500/30 mx-auto">
+								<Gift className="w-5 h-5 text-amber-400" />
+								<span className="font-bold text-amber-400 text-lg">
+									10 winners · INR 10,000 each
+								</span>
+							</div>
 						</div>
 					</div>
 

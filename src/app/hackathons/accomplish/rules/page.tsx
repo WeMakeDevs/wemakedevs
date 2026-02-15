@@ -106,7 +106,7 @@ const HackathonRules = async () => {
 				{/* Contributing to issues Section */}
 				<div className="mt-12 p-8 bg-slate-900/50 rounded-2xl border border-amber-500/30">
 					<h3 className="text-2xl font-bold text-amber-400 mb-4">
-						Contributing to GitHub issues ($100 per merged PR)
+						Contributing to GitHub issues (10 winners · INR 10,000 each for merged PR)
 					</h3>
 					<p className="text-slate-300 mb-4">
 						If you want to contribute to an issue from the{" "}
