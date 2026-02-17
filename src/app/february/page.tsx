@@ -719,7 +719,7 @@ export default function FebruaryPage() {
 			<Banner className="flex items-center text-base md:text-lg font-medium">
 				<div className="flex flex-col md:flex-row items-center justify-center">
 					<span className="text-white">
-						Week 3 is live! Register now for &quot;Automate Me If You Can&quot; hackathon - $3,000+ in prizes!{" "}
+						Automate Me If You Can is live! $3,000 in cash prizes + job interviews.{" "}
 					</span>
 					<Link
 						href="/hackathons/accomplish"
@@ -728,7 +728,7 @@ export default function FebruaryPage() {
 							"mt-4 md:mt-0 md:ml-8 px-3 py-2 bg-white hover:bg-white/80 text-[#1a2047] w-full md:w-fit",
 						)}
 					>
-						Register Now
+						Explore
 					</Link>
 				</div>
 			</Banner>

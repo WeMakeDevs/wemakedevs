@@ -35,7 +35,7 @@ export default function Home() {
 			<Banner className="flex items-center text-base md:text-lg font-medium">
 				<div className="flex flex-col md:flex-row items-center justify-center">
 					<span className="text-white">
-						Automate Me If You Can is live! Build with Accomplish and win $100+ in prizes.{" "}
+						Automate Me If You Can is live! $3,000 in cash prizes + job interviews.{" "}
 					</span>
 					<Link
 						href="/hackathons/accomplish"
