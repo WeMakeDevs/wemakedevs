@@ -108,8 +108,8 @@ const faqs: FaqType[] = [
 		answer: "Use Accomplish to automate something real in your day-to-day life. Organize messy files, draft documents, automate browser tasks, generate reports - the more creative and useful your automation, the better. Show us a real problem, and how Accomplish solved it for you. Record a demo showing the before and after.",
 	},
 	{
-		question: "Can I use existing or previously made projects?",
-		answer: "No. You have to start fresh only after the hackathon begins. No recycled work - Frank never used the same fake check twice.",
+		question: "Can I win both tracks (submitting a project and merging a pull request)?",
+		answer: "Yes! You can win both. You get $100 for each PR merged (you can merge multiple PRs), and you also get $100 for your automation solution if it's selected as a winner in the highlight track.",
 	},
 	{
 		question: "How can I submit my project?",
@@ -120,16 +120,8 @@ const faqs: FaqType[] = [
 		answer: "Absolutely! At WeMakeDevs we believe in the \"learn by doing\" approach! Everyone starts somewhere - Frank Abagnale was only 16 when he pulled off his first scheme. Accomplish takes just 2 minutes to set up, and you don't need to write any code to use it.",
 	},
 	{
-		question: "Are we allowed to take help of AI tools like ChatGPT?",
-		answer: "If you use ChatGPT or other AI tools to help build your project, make sure to declare this when submitting. Failing to do so will get you disqualified - and unlike Frank, we will catch you.",
-	},
-	{
 		question: "Where can I ask questions?",
 		answer: "Join the <a href='https://discord.gg/bHjupJwF' target='_blank' rel='noopener noreferrer' class='text-sky-400 underline hover:text-sky-300'>Accomplish Discord</a> for support and updates. The Accomplish team is active there and happy to help.",
-	},
-	{
-		question: "What makes Accomplish special?",
-		answer: "It's 100% open source (MIT licensed), runs entirely on your machine, and you bring your own API keys. Your files never leave your computer. It's not just a chatbot - it actually does things: browses the web, organizes files, creates documents, and automates workflows. Think of it as a coworker who never complains.",
 	},
 ];
 
