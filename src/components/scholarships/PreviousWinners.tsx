@@ -1,4 +1,4 @@
-import { dianaImg, tarunImg } from "@/assets/images/scholarships";
+import { dianaImg, shubhamImg, tarunImg } from "@/assets/images/scholarships";
 import { StarIcon } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -16,6 +16,12 @@ const previousWinners = [
 		event: "KubeCon + CloudNativeCon North America 2022",
 		linkedinUrl: "https://www.linkedin.com/in/tarun-c/",
 		image: tarunImg,
+	},
+	{
+		name: "Shubham Sapra",
+		event: "KubeCon + CloudNativeCon Amsterdam 2026",
+		linkedinUrl: "https://www.linkedin.com/in/shubham-sapra/",
+		image: shubhamImg,
 	},
 ];
 

@@ -7,7 +7,6 @@ import Dates from "@/components/scholarships/Dates";
 import ScholarshipsHeader from "@/components/scholarships/Header";
 import ScholarshipsNavbar from "@/components/scholarships/Navbar";
 import PreviousWinners from "@/components/scholarships/PreviousWinners";
-import Sponsor from "@/components/scholarships/Sponsor";
 import WhyApply from "@/components/scholarships/WhyApply";
 import { SCHOLARSHIP_FAQS } from "@/constants";
 
@@ -18,7 +17,6 @@ const Scholarships = () => {
 			<ScholarshipsHeader />
 			<WhyApply />
 			{/* <Carousel /> */}
-			<Sponsor />
 			<Apply />
 			<Dates />
 			<PreviousWinners />

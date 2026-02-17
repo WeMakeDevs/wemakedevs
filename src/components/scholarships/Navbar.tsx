@@ -41,11 +41,6 @@ const ScholarshipsNavbar = ({ className }: { className?: string }) => {
 			type: "link",
 		},
 		{
-			name: "Sponsors",
-			url: "#sponsors",
-			type: "link",
-		},
-		{
 			name: "Apply",
 			url: "#apply",
 			type: "link",

@@ -14,24 +14,11 @@ const Apply = () => {
 							Apply for the Scholarship
 						</h2>
 
-						<div className="bg-primary/5 border border-primary/20 rounded-xl p-8 max-w-2xl mx-auto">
-							<p className="text-primary font-medium mb-6 text-lg">
-								Applications are reviewed on a rolling,
-								first-come-first-serve basis, apply early to
-								increase your chances!
+						<div className="bg-gray-100 border border-gray-200 rounded-xl p-8 max-w-2xl mx-auto">
+							<p className="text-gray-700 font-medium text-lg">
+								Applications for KubeCon + CloudNativeCon Amsterdam 2026 are now closed.
+								Thank you for your interest. Stay tuned for future scholarship opportunities!
 							</p>
-
-							<Link
-								href="https://forms.gle/vYj6fZbzBQtxjkZc6"
-								target="_blank"
-								rel="noopener noreferrer"
-								className={cn(
-									buttonVariants({ size: "lg" }),
-									"bg-primary hover:bg-blue-800 font-extrabold shadow-lg hover:shadow-xl transform hover:-translate-y-0.5",
-								)}
-							>
-								Apply Now
-							</Link>
 						</div>
 					</div>
 

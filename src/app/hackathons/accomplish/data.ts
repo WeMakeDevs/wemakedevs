@@ -96,11 +96,7 @@ const faqs: FaqType[] = [
 	},
 	{
 		question: "Eligibility criteria to participate in this hackathon?",
-		answer: "You should be above 16 years of age and should abide by the rules of WeMakeDevs hackathons. Teams can have anywhere from 1 to 4 people in them.",
-	},
-	{
-		question: "I registered solo. Can I switch to a team?",
-		answer: "Of course! If you initially registered solo and now want to join or form a team, simply submit the registration form again with your team name. Your registration will be updated automatically - time to assemble your crew!",
+		answer: "You should be above 16 years of age and should abide by the rules of WeMakeDevs hackathons. This is a solo hackathon - you participate on your own.",
 	},
 	{
 		question: "Who is this hackathon for?",
@@ -116,7 +112,7 @@ const faqs: FaqType[] = [
 	},
 	{
 		question: "How can I submit my project?",
-		answer: "Submit your project using the submission form (will be shared closer to the deadline). Only one person from a team needs to submit. Make sure you have your GitHub link, deployed link, and a YouTube demo (max 3 minutes) ready. Join the <a href='https://discord.gg/bHjupJwF' target='_blank' rel='noopener noreferrer' class='text-sky-400 underline hover:text-sky-300'>Accomplish Discord</a> for all updates.",
+		answer: "Submit your project using the submission form (will be shared closer to the deadline). Make sure you have your GitHub link, deployed link, and a YouTube demo (max 3 minutes) ready. Join the <a href='https://discord.gg/bHjupJwF' target='_blank' rel='noopener noreferrer' class='text-sky-400 underline hover:text-sky-300'>Accomplish Discord</a> for all updates.",
 	},
 	{
 		question: "I am a beginner in tech, can I still participate?",

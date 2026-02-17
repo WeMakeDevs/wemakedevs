@@ -39,7 +39,7 @@ const HackathonRules = async () => {
 							>
 								Hack All February
 							</Link>{" "}
-							series (Week 3). You can participate solo or with a team of up to 4 members. Teams can change per hackathon - you don't need to have the same team members for all hackathons in February. You can even go solo in some and team up in others.
+							series (Week 3). This is a solo hackathon - you participate on your own.
 						</li>
 						<li>
 							The more Accomplish features you use, the better your chances. File management, document creation, browser automation, custom skills - use them all. Check out the{" "}
@@ -65,7 +65,7 @@ const HackathonRules = async () => {
 							music).
 						</li>
 						<li>
-							Teams can plan and discuss ideas in advance, but
+							You can plan and discuss ideas in advance, but
 							coding and design work should start only after the
 							hackathon begins. Written notes, sketches, and
 							diagrams are allowed before kickoff - think of it as
@@ -76,7 +76,7 @@ const HackathonRules = async () => {
 							Projects must involve building software (hardware
 							components are optional).
 						</li>
-						<li>Teams may consist of 1–4 members.</li>
+						<li>This is a solo hackathon - individual participation only.</li>
 						<li>
 							While interviews don't guarantee a job, they provide
 							a genuine chance to showcase your skills and access
@@ -84,9 +84,7 @@ const HackathonRules = async () => {
 						</li>
 						<li>
 							Any intellectual property developed during the
-							hackathon belongs to the team that created it. Teams
-							are encouraged to agree internally on IP ownership,
-							though this is not mandatory.
+							hackathon belongs to you (the participant who created it).
 						</li>
 						<li>
 							Please treat all participants with respect. Act
@@ -148,7 +146,7 @@ const HackathonRules = async () => {
 						Submit Your Project
 					</h3>
 					<p className="text-slate-300 mb-6">
-						Ready to show off your automation? Only one person from a team needs to fill the submission form. Make sure you have your GitHub link, deployed link, and a YouTube demo (max 3 minutes) ready!
+						Ready to show off your automation? Fill the submission form. Make sure you have your GitHub link, deployed link, and a YouTube demo (max 3 minutes) ready!
 					</p>
 					<Link
 						href="https://forms.gle/GRpyeRt8Gsm3r72V8"
