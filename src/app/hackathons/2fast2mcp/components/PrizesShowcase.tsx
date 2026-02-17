@@ -1,3 +1,4 @@
+import { DATA } from "../data";
 import { Briefcase, Gift, Star, Trophy } from "lucide-react";
 import Link from "next/link";
 
@@ -186,15 +187,27 @@ const PrizesShowcase = () => {
 
 					{/* Submit CTA */}
 					<div className="mt-12 text-center">
-						<Link
-							href="/hackathons/2fast2mcp/register"
-							className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-orange-500 to-red-600 text-white font-bold text-lg rounded-xl shadow-lg shadow-orange-500/30 hover:shadow-orange-500/50 hover:scale-105 transition-all duration-300"
-						>
-							Submit Your Project
-							<span className="text-xl">🏁</span>
-						</Link>
+						{DATA.cta.disabled ? (
+							<div
+								className="inline-flex items-center gap-3 px-8 py-4 bg-slate-600/50 text-slate-400 font-bold text-lg rounded-xl cursor-not-allowed opacity-75"
+								aria-disabled="true"
+							>
+								Submissions closed
+								<span className="text-xl">🏁</span>
+							</div>
+						) : (
+							<Link
+								href="/hackathons/2fast2mcp/register"
+								className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-orange-500 to-red-600 text-white font-bold text-lg rounded-xl shadow-lg shadow-orange-500/30 hover:shadow-orange-500/50 hover:scale-105 transition-all duration-300"
+							>
+								Submit Your Project
+								<span className="text-xl">🏁</span>
+							</Link>
+						)}
 						<p className="text-slate-400 mt-4">
-							Ready to race? Join the hackathon and compete for these prizes!
+							{DATA.cta.disabled
+								? "This hackathon has ended. Thank you for participating!"
+								: "Ready to race? Join the hackathon and compete for these prizes!"}
 						</p>
 					</div>
 				</div>

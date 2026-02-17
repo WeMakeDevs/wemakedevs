@@ -16,7 +16,7 @@ const DATA = {
 		label: "Submit Your Project",
 		href: "/hackathons/2fast2mcp/register",
 		openInNewTab: false,
-		disabled: false,
+		disabled: true,
 	},
 	prizes: {
 		winning: [

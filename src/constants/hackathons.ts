@@ -1,7 +1,5 @@
 import { DATA as accomplishData } from "@/app/hackathons/accomplish/data";
 import { images as accomplishImages } from "@/app/hackathons/accomplish/images";
-import { DATA as fast2mcpData } from "@/app/hackathons/2fast2mcp/data";
-import { images as fast2mcpImages } from "@/app/hackathons/2fast2mcp/images";
 import { DATA as agenthackData } from "@/app/hackathons/agenthack25/data";
 import { DATA as assemblehackData } from "@/app/hackathons/assemblehack25/data";
 import { images as assemblehackImages } from "@/app/hackathons/assemblehack25/images";
@@ -37,14 +35,6 @@ type HackathonType = {
 };
 
 const hackathons: HackathonType[] = [
-	{
-		slug: fast2mcpData.slug,
-		title: fast2mcpData.title,
-		description: fast2mcpData.descriptionCard,
-		thumbnail: fast2mcpImages.thumbnail,
-		startDate: fast2mcpData.startDate,
-		endDate: fast2mcpData.endDate,
-	},
 	{
 		slug: accomplishData.slug,
 		title: accomplishData.title,

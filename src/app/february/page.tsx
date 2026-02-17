@@ -38,7 +38,7 @@ const hackathons = [
 		week: 2,
 		title: "2 Fast 2 MCP",
 		dates: "Feb 9 - Feb 15",
-		status: "live",
+		status: "ended",
 		slug: "2fast2mcp",
 		description: "Run powerful MCP-based agents with Archestra",
 		prize: "$10,000+",
@@ -48,7 +48,7 @@ const hackathons = [
 		week: 3,
 		title: "Automate Me If You Can",
 		dates: "Feb 16 - Feb 22",
-		status: "upcoming",
+		status: "live",
 		slug: "accomplish",
 		description: "Automate your boring tasks with Accomplish. Think you can pull it off?",
 		prize: "$3,000+",
@@ -719,10 +719,10 @@ export default function FebruaryPage() {
 			<Banner className="flex items-center text-base md:text-lg font-medium">
 				<div className="flex flex-col md:flex-row items-center justify-center">
 					<span className="text-white">
-						Week 2 is LIVE! Register now for "2 Fast 2 MCP" hackathon - $10,000+ in prizes!{" "}
+						Week 3 is live! Register now for &quot;Automate Me If You Can&quot; hackathon - $3,000+ in prizes!{" "}
 					</span>
 					<Link
-						href="/hackathons/2fast2mcp/register"
+						href="/hackathons/accomplish"
 						className={cn(
 							buttonVariants(),
 							"mt-4 md:mt-0 md:ml-8 px-3 py-2 bg-white hover:bg-white/80 text-[#1a2047] w-full md:w-fit",
