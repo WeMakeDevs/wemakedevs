@@ -18,6 +18,7 @@ const DATA = {
 		openInNewTab: true,
 		disabled: false,
 	},
+	submissionFormUrl: "https://forms.gle/cD39An6mkmuUAc3t8",
 	prizes: {
 		winning: [
 			{
@@ -112,7 +113,7 @@ const faqs: FaqType[] = [
 	},
 	{
 		question: "How can I submit my project?",
-		answer: "Submit your project using the submission form (will be shared closer to the deadline). Make sure you have your GitHub link, deployed link, and a YouTube demo (max 3 minutes) ready. Join the <a href='https://discord.gg/bHjupJwF' target='_blank' rel='noopener noreferrer' class='text-sky-400 underline hover:text-sky-300'>Accomplish Discord</a> for all updates.",
+		answer: "Submit your project using the <a href='https://forms.gle/cD39An6mkmuUAc3t8' target='_blank' rel='noopener noreferrer' class='text-sky-400 underline hover:text-sky-300'>project submission form</a>. Record a demo, share on X (Twitter) or LinkedIn tagging @archestra_ai and @wemakedevs, then paste the link(s) in the form. For the open source track, paste your merged PR URL(s). Join the <a href='https://discord.gg/bHjupJwF' target='_blank' rel='noopener noreferrer' class='text-sky-400 underline hover:text-sky-300'>Accomplish Discord</a> for all updates.",
 	},
 	{
 		question: "I am a beginner in tech, can I still participate?",
@@ -180,7 +181,7 @@ const schedule = [
 				time: "2026-02-22T23:59:59+05:30",
 				link: {
 					name: "Submit Your Project",
-					url: "https://forms.gle/GRpyeRt8Gsm3r72V8",
+					url: "https://forms.gle/cD39An6mkmuUAc3t8",
 				},
 			},
 		],

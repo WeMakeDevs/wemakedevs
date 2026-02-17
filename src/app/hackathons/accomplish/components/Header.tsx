@@ -19,6 +19,7 @@ type HackathonHeaderProps = {
 		disabled?: boolean;
 		openInNewTab?: boolean;
 	};
+	submissionFormUrl?: string;
 };
 
 const HackathonHeader = ({
@@ -28,6 +29,7 @@ const HackathonHeader = ({
 	endDate,
 	prize,
 	cta,
+	submissionFormUrl,
 }: HackathonHeaderProps) => {
 	return (
 		<div className="relative py-20 md:py-28 overflow-hidden">
@@ -65,7 +67,7 @@ const HackathonHeader = ({
 						<p className="text-lg md:text-xl text-slate-300 font-medium leading-relaxed mt-6 max-w-2xl">
 							{description}
 						</p>
-						<div className="flex items-center gap-4 mt-8">
+						<div className="flex items-center gap-4 mt-8 flex-wrap">
 							{cta.disabled ? (
 								<div
 									className={cn(
@@ -93,6 +95,23 @@ const HackathonHeader = ({
 								>
 									<Sparkles className="w-5 h-5 mr-2" />
 									{cta.label}
+								</Link>
+							)}
+							{submissionFormUrl && (
+								<Link
+									href={submissionFormUrl}
+									className={cn(
+										buttonVariants({
+											variant: "outline",
+											size: "lg",
+										}),
+										"border-sky-500/50 text-sky-400 hover:bg-sky-500/20 px-8 py-6 text-lg font-semibold",
+									)}
+									target="_blank"
+									rel="noopener noreferrer"
+								>
+									Submit Your Project
+									<ArrowUpRight className="w-5 h-5 ml-2" />
 								</Link>
 							)}
 						</div>

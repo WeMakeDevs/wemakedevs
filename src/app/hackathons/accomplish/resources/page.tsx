@@ -63,6 +63,17 @@ const HackathonResources = async () => {
 					<ul className="space-y-3 list-disc list-inside">
 						<li>
 							<Link
+								href={DATA.submissionFormUrl}
+								className="text-sky-400 underline hover:no-underline hover:text-sky-300"
+								target="_blank"
+								rel="noopener noreferrer"
+							>
+								Submit Your Project
+							</Link>{" "}
+							- Record your demo, share on socials, and paste the link(s) here
+						</li>
+						<li>
+							<Link
 								href="https://www.accomplish.ai"
 								className="text-sky-400 underline hover:no-underline hover:text-sky-300"
 								target="_blank"
