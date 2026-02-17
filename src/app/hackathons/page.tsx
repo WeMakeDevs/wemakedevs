@@ -19,6 +19,8 @@ const Hackathons = () => {
 		const now = new Date();
 		const upcoming = hackathons
 			.filter(hackathon => {
+				if (hackathon.listAs === "previous") return false;
+				if (hackathon.listAs === "upcoming") return true;
 				const endDate = new Date(hackathon.endDate);
 				return endDate >= now;
 			})
@@ -28,6 +30,8 @@ const Hackathons = () => {
 				return dateA.getTime() - dateB.getTime();
 			});
 		const previous = hackathons.filter(hackathon => {
+			if (hackathon.listAs === "previous") return true;
+			if (hackathon.listAs === "upcoming") return false;
 			const endDate = new Date(hackathon.endDate);
 			return endDate < now;
 		});

@@ -12,6 +12,8 @@ import { DATA as motiahackData } from "@/app/hackathons/motiahack25/data";
 import { images as motiahackImages } from "@/app/hackathons/motiahack25/images";
 import { DATA as openSourceFestData } from "@/app/hackathons/opensourcefest25/data";
 import { images as openSourceFestImages } from "@/app/hackathons/opensourcefest25/images";
+import { DATA as twoFastTwoMcpData } from "@/app/hackathons/2fast2mcp/data";
+import { images as twoFastTwoMcpImages } from "@/app/hackathons/2fast2mcp/images";
 import { DATA as tamboData } from "@/app/hackathons/tambo/data";
 import { images as tamboImages } from "@/app/hackathons/tambo/images";
 import { DATA as visionData } from "@/app/hackathons/vision/data";
@@ -32,6 +34,8 @@ type HackathonType = {
 	endDate: string;
 	showDate?: boolean;
 	hrefType?: "internal" | "external";
+	/** Force placement in Upcoming or Previous section regardless of endDate */
+	listAs?: "upcoming" | "previous";
 };
 
 const hackathons: HackathonType[] = [
@@ -58,6 +62,15 @@ const hackathons: HackathonType[] = [
 		thumbnail: tamboImages.thumbnail,
 		startDate: tamboData.startDate,
 		endDate: tamboData.endDate,
+	},
+	{
+		slug: twoFastTwoMcpData.slug,
+		title: twoFastTwoMcpData.title,
+		description: twoFastTwoMcpData.descriptionCard,
+		thumbnail: twoFastTwoMcpImages.thumbnail,
+		startDate: twoFastTwoMcpData.startDate,
+		endDate: twoFastTwoMcpData.endDate,
+		listAs: "previous",
 	},
 	{
 		slug: assemblehackData.slug,
