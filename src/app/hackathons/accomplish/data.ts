@@ -3,11 +3,11 @@ import { images } from "./images";
 
 const DATA = {
 	title: "Automate Me If You Can",
-	prize: "$3000 cash + job interviews",
+	prize: "$3000 cash, 30 winners + interview opportunities",
 	startDate: "2026-02-16T08:00:00+05:30",
 	endDate: "2026-02-22T23:59:59+05:30",
 	description:
-		"Frank didn't do his own paperwork. Neither should you. Use Accomplish - the open source AI coworker that lives on your desktop - to automate your boring, repetitive tasks. Top 20 winners get INR 10,000 each. Think you can pull it off?",
+		"Frank didn't do his own paperwork. Neither should you. Use Accomplish - the open source AI coworker that lives on your desktop - to automate your boring, repetitive tasks. 10 winners for showcasing your automation, Top 20 for open source (merged PRs) · $100 each. One person can win both tracks. Think you can pull it off?",
 	descriptionCard:
 		"Automate your boring tasks with Accomplish. Think you can pull it off?",
 	slug: "accomplish",
@@ -21,12 +21,12 @@ const DATA = {
 	prizes: {
 		winning: [
 			{
-				name: "Use Accomplish to automate something real",
-				prize: "10 winners · INR 10,000 each + job interview at Accomplish.ai",
+				name: "Showcase how you used Accomplish to automate your task",
+				prize: "10 winners · $100 each + job interview at Accomplish.ai",
 			},
 			{
 				name: "Get your PR merged",
-				prize: "10 winners · INR 10,000 each + job interview at Accomplish.ai",
+				prize: "Top 20 · $100 each + job interview at Accomplish.ai",
 				details: {
 					requirements: [
 						"Pick an issue with label feb_hackathon, get a PR merged",
@@ -40,7 +40,7 @@ const DATA = {
 		giveaway: [
 			{
 				name: "Start your open source journey",
-				prize: "10 of the top 20 winners for merged PRs · INR 10,000 each",
+				prize: "Top 20 for merged PRs · $100 each (one person can win both tracks)",
 				details: {
 					requirements: [
 						"Pick an issue with label feb_hackathon, get a PR merged",

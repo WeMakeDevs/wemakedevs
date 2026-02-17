@@ -121,10 +121,10 @@ const HackathonHeader = ({
 									</span>
 								</div>
 								<p className="text-xl md:text-2xl font-bold text-white leading-tight">
-									$3000 cash + job interviews
+									$3000 cash, 30 winners + interview opportunities
 								</p>
-								<p className="text-sky-300 font-semibold mt-2 text-sm flex items-center gap-1.5">
-									Top 20 winners · INR 10,000 each
+								<p className="text-sky-300 font-semibold mt-2 text-sm">
+									10 highlight · Top 20 open source · $100 each · One can win both
 								</p>
 							</div>
 						</div>

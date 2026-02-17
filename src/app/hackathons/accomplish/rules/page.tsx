@@ -103,10 +103,22 @@ const HackathonRules = async () => {
 					</ol>
 				</HackathonContentBody>
 
+				{/* Prizes summary */}
+				<div className="mt-12 p-8 bg-slate-800/50 rounded-2xl border border-sky-500/30">
+					<h3 className="text-2xl font-bold text-sky-400 mb-4">
+						Prizes
+					</h3>
+					<ul className="text-slate-300 mb-4 space-y-2 list-disc list-inside">
+						<li><strong className="text-amber-400">10 winners</strong> (highlight) — Showcase how you used Accomplish to automate your task · $100 each</li>
+						<li><strong className="text-amber-400">Top 20</strong> (open source) — Get your PR merged (see below) · $100 each</li>
+						<li>One person can win both tracks.</li>
+					</ul>
+				</div>
+
 				{/* Contributing to issues Section */}
 				<div className="mt-12 p-8 bg-slate-900/50 rounded-2xl border border-amber-500/30">
 					<h3 className="text-2xl font-bold text-amber-400 mb-4">
-						Contributing to GitHub issues (10 winners · INR 10,000 each for merged PR)
+						Contributing to GitHub issues (Top 20 · $100 each for merged PR)
 					</h3>
 					<p className="text-slate-300 mb-4">
 						If you want to contribute to an issue from the{" "}

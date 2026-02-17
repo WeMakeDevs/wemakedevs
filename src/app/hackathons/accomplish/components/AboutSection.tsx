@@ -150,7 +150,7 @@ const AboutSection = () => {
 							>
 								label <code className="text-amber-400 bg-slate-800 px-1.5 py-0.5 rounded text-sm">feb_hackathon</code>
 							</Link>
-							, get your PR merged, and be one of 10 winners to earn <span className="text-amber-400 font-semibold">INR 10,000 each</span>. Great way to build your open source portfolio while getting paid.
+							, get your PR merged, and be one of the Top 20 (open source) to earn <span className="text-amber-400 font-semibold">$100 each</span>. Or showcase how you used Accomplish to automate your task and be one of 10 winners (highlight) for <span className="text-amber-400 font-semibold">$100 each</span>. One person can win both tracks. Great way to build your open source portfolio while getting paid.
 						</p>
 					</div>
 				</div>

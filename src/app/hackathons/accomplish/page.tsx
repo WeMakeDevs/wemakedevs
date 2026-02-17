@@ -55,7 +55,7 @@ const HackathonPage = () => {
 							<strong className="text-sky-400">Accomplish</strong> is the open source AI coworker that lives on your desktop. It reads your files, creates documents, browses the web, organizes your folders, and handles the boring stuff so you don't have to. It runs locally on your machine, and every action is shown and approved before it runs.
 						</p>
 						<p>
-							Your challenge: <strong className="text-amber-400">use Accomplish to automate something real in your life</strong>. The more creative, the more useful, the more impressive the before-and-after - the more likely you are to walk away with INR 10,000 and a job interview (10 winners for this track).
+							Your challenge: <strong className="text-amber-400">use Accomplish to automate something real in your life</strong>. The more creative, the more useful, the more impressive the before-and-after - the more likely you are to walk away with $100 and a job interview (10 winners for the highlight track).
 						</p>
 						<p>
 							Or <strong className="text-sky-400">start your open source journey as a contributor</strong>: pick an issue with the{" "}
@@ -67,7 +67,7 @@ const HackathonPage = () => {
 							>
 								feb_hackathon
 							</Link>{" "}
-							label, get your PR merged, and be one of 10 winners to earn INR 10,000 each.
+							label, get your PR merged, and be one of the Top 20 to earn $100 each. One person can win both tracks (10 for highlight, Top 20 for open source).
 						</p>
 						<p className="text-sky-400 font-semibold text-2xl mt-6">
 							They can't catch you if you've already automated everything.
