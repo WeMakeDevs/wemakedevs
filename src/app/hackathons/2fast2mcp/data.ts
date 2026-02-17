@@ -42,6 +42,19 @@ const DATA = {
 	},
 };
 
+const judges = [
+	{
+		name: "Ildar",
+		imageKey: "ildar" as const,
+		role: "Judge",
+	},
+	{
+		name: "Innokentii Konstantinov",
+		imageKey: "innokentiiKonstantinov" as const,
+		role: "Judge",
+	},
+];
+
 const navLinks = [
 	{
 		href: `/hackathons/${DATA.slug}`,
@@ -162,4 +175,4 @@ const schedule = [
 	},
 ];
 
-export { DATA, navLinks, faqs, schedule };
+export { DATA, navLinks, faqs, schedule, judges };

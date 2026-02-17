@@ -9,8 +9,9 @@ import Link from "next/link";
 import AboutSection from "./components/AboutSection";
 import HackathonHeader from "./components/Header";
 import PrizesShowcase from "./components/PrizesShowcase";
-import { DATA, faqs, navLinks } from "./data";
+import { DATA, faqs, navLinks, judges } from "./data";
 import { images } from "./images";
+import Image from "next/image";
 
 const HackathonPage = () => {
 	return (
@@ -115,6 +116,39 @@ const HackathonPage = () => {
 								</p>
 							</div>
 						</div>
+					</div>
+				</ViewContainer>
+			</div>
+
+			{/* Judges Section */}
+			<div id="judges" className="scroll-mt-10 py-20 bg-slate-950">
+				<ViewContainer>
+					<h2 className="text-3xl md:text-4xl font-bold text-orange-400 uppercase tracking-wide mb-8">
+						Judges
+					</h2>
+					<div className="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-2xl mx-auto">
+						{judges.map(judge => (
+							<div
+								key={judge.name}
+								className="bg-slate-900/60 backdrop-blur-sm rounded-2xl border border-orange-500/20 overflow-hidden flex flex-col items-center text-center p-6"
+							>
+								<div className="relative w-32 h-32 rounded-full overflow-hidden border-2 border-orange-500/30 mb-4">
+									<Image
+										src={images.judges[judge.imageKey]}
+										alt={judge.name}
+										fill
+										className="object-cover"
+										sizes="128px"
+									/>
+								</div>
+								<h3 className="text-xl font-bold text-white">
+									{judge.name}
+								</h3>
+								<p className="text-orange-400 text-sm font-medium uppercase tracking-wide">
+									{judge.role}
+								</p>
+							</div>
+						))}
 					</div>
 				</ViewContainer>
 			</div>
