@@ -13,7 +13,7 @@ const DATA = {
 	slug: "vision",
 	images,
 	cta: {
-		label: "Accept Mission",
+		label: "Register",
 		href: "https://forms.gle/b8YS4J4jcR2mSnnf7",
 		openInNewTab: true,
 		disabled: false,
