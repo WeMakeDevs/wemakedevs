@@ -44,7 +44,7 @@ const DATA = {
 
 const judges = [
 	{
-		name: "Ildar",
+		name: "Ildar Iskhakov",
 		imageKey: "ildar" as const,
 		role: "Judge",
 	},
