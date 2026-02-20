@@ -113,7 +113,7 @@ const faqs: FaqType[] = [
 	},
 	{
 		question: "How can I submit my project?",
-		answer: "Submit your project using the <a href='https://forms.gle/cD39An6mkmuUAc3t8' target='_blank' rel='noopener noreferrer' class='text-sky-400 underline hover:text-sky-300'>project submission form</a>. Record a demo, share on X (Twitter) or LinkedIn tagging @archestra_ai and @wemakedevs, then paste the link(s) in the form. For the open source track, paste your merged PR URL(s). Join the <a href='https://discord.gg/bHjupJwF' target='_blank' rel='noopener noreferrer' class='text-sky-400 underline hover:text-sky-300'>Accomplish Discord</a> for all updates.",
+		answer: "Submit your project using the <a href='https://forms.gle/cD39An6mkmuUAc3t8' target='_blank' rel='noopener noreferrer' class='text-sky-400 underline hover:text-sky-300'>project submission form</a>. Record a demo, share on X (Twitter) or LinkedIn tagging @archestra_ai and @wemakedevs, then paste the link(s) in the form. For the open source track, paste your merged PR URL(s). Join the <a href='https://discord.com/invite/MepaTT55' target='_blank' rel='noopener noreferrer' class='text-sky-400 underline hover:text-sky-300'>Accomplish Discord</a> for all updates.",
 	},
 	{
 		question: "I am a beginner in tech, can I still participate?",
@@ -121,7 +121,7 @@ const faqs: FaqType[] = [
 	},
 	{
 		question: "Where can I ask questions?",
-		answer: "Join the <a href='https://discord.gg/bHjupJwF' target='_blank' rel='noopener noreferrer' class='text-sky-400 underline hover:text-sky-300'>Accomplish Discord</a> for support and updates. The Accomplish team is active there and happy to help.",
+		answer: "Join the <a href='https://discord.com/invite/MepaTT55' target='_blank' rel='noopener noreferrer' class='text-sky-400 underline hover:text-sky-300'>Accomplish Discord</a> for support and updates. The Accomplish team is active there and happy to help.",
 	},
 ];
 
@@ -156,7 +156,7 @@ const schedule = [
 				time: "2026-02-18T21:30:00+05:30",
 				link: {
 					name: "Discord",
-					url: "https://discord.gg/bHjupJwF",
+					url: "https://discord.com/invite/MepaTT55",
 				},
 			},
 		],

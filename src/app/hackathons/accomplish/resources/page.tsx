@@ -33,7 +33,7 @@ const HackathonResources = async () => {
 						<li>
 							Join the{" "}
 							<Link
-								href="https://discord.gg/bHjupJwF"
+								href="https://discord.com/invite/MepaTT55"
 								className="text-sky-400 underline hover:no-underline hover:text-sky-300"
 								target="_blank"
 								rel="noopener noreferrer"
@@ -96,7 +96,7 @@ const HackathonResources = async () => {
 						</li>
 						<li>
 							<Link
-								href="https://discord.gg/bHjupJwF"
+								href="https://discord.com/invite/MepaTT55"
 								className="text-sky-400 underline hover:no-underline hover:text-sky-300"
 								target="_blank"
 								rel="noopener noreferrer"
