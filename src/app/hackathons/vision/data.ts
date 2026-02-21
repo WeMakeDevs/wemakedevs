@@ -108,18 +108,22 @@ const schedule = [
 	{
 		date: "2026-02-23T00:00:00Z",
 		items: [
-			{
-				title: "Mission Briefing Livestream",
-				description:
-					"Join us for the official kickoff where we'll introduce Vision Agents, demonstrate capabilities, and reveal mission objectives.",
-				time: "2026-02-23T16:00:00Z",
-				links: [
-					{
-						platform: "youtube",
-						url: "https://www.youtube.com/@WeMakeDevs",
-					},
-				],
-			},
+		{
+			title: "Build and Deploy Custom Computer Vision Apps in Minutes",
+			description:
+				"Join us for the official kickoff where we'll introduce Vision Agents, demonstrate capabilities, and reveal mission objectives.",
+			time: "2026-02-23T16:00:00Z",
+			links: [
+				{
+					platform: "youtube",
+					url: "https://www.youtube.com/watch?v=uZ-Xs_-Cj8o",
+				},
+				{
+					platform: "linkedin",
+					url: "https://www.linkedin.com/events/7431110550367105024?viewAsMember=true",
+				},
+			],
+		},
 			{
 				title: "Mission Commences - Agents Deployed",
 				time: "2026-02-23T16:30:00Z",
