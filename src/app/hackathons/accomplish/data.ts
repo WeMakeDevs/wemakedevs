@@ -13,7 +13,7 @@ const DATA = {
 	slug: "accomplish",
 	images,
 	cta: {
-		label: "Register",
+		label: "Submit Project",
 		href: "https://forms.gle/GRpyeRt8Gsm3r72V8",
 		openInNewTab: true,
 		disabled: false,
@@ -93,7 +93,7 @@ const navLinks = [
 const faqs: FaqType[] = [
 	{
 		question: "How do I sign up?",
-		answer: "Easy! Click the <a href='https://forms.gle/GRpyeRt8Gsm3r72V8' target='_blank' rel='noopener noreferrer' class='text-sky-400 underline hover:text-sky-300'>Register</a> button to sign up for Automate Me If You Can. Fill out the form with your details and you're in. No fake IDs required.",
+		answer: "Easy! Click the <a href='https://forms.gle/GRpyeRt8Gsm3r72V8' target='_blank' rel='noopener noreferrer' class='text-sky-400 underline hover:text-sky-300'>Submit Project</a> button to sign up for Automate Me If You Can. Fill out the form with your details and you're in. No fake IDs required.",
 	},
 	{
 		question: "Eligibility criteria to participate in this hackathon?",

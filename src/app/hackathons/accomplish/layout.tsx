@@ -42,7 +42,7 @@ export default function RootLayout({
 			type: "link",
 		},
 		{
-			name: "Register",
+			name: "Submit Project",
 			url: DATA.cta.href,
 			type: "button",
 		},
