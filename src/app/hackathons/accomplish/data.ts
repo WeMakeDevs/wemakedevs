@@ -16,7 +16,7 @@ const DATA = {
 		label: "Submit Project",
 		href: "https://forms.gle/GRpyeRt8Gsm3r72V8",
 		openInNewTab: true,
-		disabled: false,
+		disabled: true,
 	},
 	submissionFormUrl: "https://forms.gle/cD39An6mkmuUAc3t8",
 	prizes: {

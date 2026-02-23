@@ -97,7 +97,7 @@ const HackathonHeader = ({
 									{cta.label}
 								</Link>
 							)}
-							{submissionFormUrl && (
+							{submissionFormUrl && !cta.disabled && (
 								<Link
 									href={submissionFormUrl}
 									className={cn(

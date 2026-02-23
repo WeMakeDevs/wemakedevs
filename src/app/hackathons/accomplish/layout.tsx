@@ -41,11 +41,15 @@ export default function RootLayout({
 			url: `/hackathons/${DATA.slug}#faq`,
 			type: "link",
 		},
-		{
-			name: "Submit Project",
-			url: DATA.cta.href,
-			type: "button",
-		},
+		...(DATA.cta.disabled
+			? []
+			: [
+					{
+						name: "Submit Project",
+						url: DATA.cta.href,
+						type: "button" as const,
+					},
+				]),
 	];
 
 	return (
