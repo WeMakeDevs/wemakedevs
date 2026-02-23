@@ -136,11 +136,11 @@ const schedule = [
 			{
 				title: "Office Hours with Vision Agents Team",
 				description:
-					"Get your questions answered and receive tactical support from the Vision Agents team.",
+					"Get your questions answered and receive tactical support from the Vision Agents team. 9:30 PM - 10:30 PM IST.",
 				time: "2026-02-25T16:00:00Z",
 				link: {
 					name: "Discord",
-					url: "https://discord.gg/RkhX9PxMS6",
+					url: "https://discord.gg/hCMSZV7v?event=1475527982365020191",
 				},
 			},
 		],
@@ -151,11 +151,11 @@ const schedule = [
 			{
 				title: "Mid-Mission Check-in",
 				description:
-					"Share your progress and get feedback from mentors and fellow agents.",
+					"Share your progress and get feedback from mentors and fellow agents. 9:30 PM - 10:30 PM IST.",
 				time: "2026-02-27T16:00:00Z",
 				link: {
 					name: "Discord",
-					url: "https://discord.gg/RkhX9PxMS6",
+					url: "https://discord.gg/hCMSZV7v?event=1475528280630366409",
 				},
 			},
 		],
