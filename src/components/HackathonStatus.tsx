@@ -21,7 +21,7 @@ const HackathonStatus = ({
 			)}
 			{...props}
 		>
-			{status.toUpperCase()}
+			{status === "ongoing" ? "LIVE" : status.toUpperCase()}
 		</p>
 	);
 };
