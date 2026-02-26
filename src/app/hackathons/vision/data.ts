@@ -18,6 +18,7 @@ const DATA = {
 		openInNewTab: true,
 		disabled: false,
 	},
+	submissionFormUrl: "https://forms.gle/oG7hWZ1tgbSwbcie8",
 	prizes: {
 		winning: [
 			{
@@ -84,7 +85,7 @@ const faqs: FaqType[] = [
 	},
 	{
 		question: "How do I submit my completed mission?",
-		answer: "Join the <a href='https://discord.gg/RkhX9PxMS6' target='_blank' rel='noopener noreferrer' class='text-cyan-400 underline hover:text-cyan-300'>Vision Agents Discord</a> for mission updates, submission details, and direct communication with HQ.",
+		answer: "Submit your project via the <a href='https://forms.gle/oG7hWZ1tgbSwbcie8' target='_blank' rel='noopener noreferrer' class='text-cyan-400 underline hover:text-cyan-300'>Vision Possible Hackathon Project Submissions form</a>. Only one person per team needs to submit. Join the <a href='https://discord.gg/RkhX9PxMS6' target='_blank' rel='noopener noreferrer' class='text-cyan-400 underline hover:text-cyan-300'>Vision Agents Discord</a> for mission updates and direct communication with HQ.",
 	},
 	{
 		question: "I'm new to Vision AI. Can I still participate?",
@@ -166,10 +167,18 @@ const schedule = [
 			{
 				title: "Mission Extraction - Final Submissions",
 				time: "2026-03-01T20:00:00Z",
+				link: {
+					name: "Submit Project",
+					url: "https://forms.gle/oG7hWZ1tgbSwbcie8",
+				},
 			},
 			{
 				title: "Mission Complete - Deadline",
 				time: "2026-03-01T23:59:59Z",
+				link: {
+					name: "Submission Form",
+					url: "https://forms.gle/oG7hWZ1tgbSwbcie8",
+				},
 			},
 		],
 	},

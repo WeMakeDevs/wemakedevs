@@ -40,6 +40,7 @@ const HackathonPage = () => {
 					endDate={DATA.endDate}
 					prize={DATA.prize}
 					cta={DATA.cta}
+					submissionFormUrl={DATA.submissionFormUrl}
 				/>
 
 				{/* About Content */}
@@ -62,6 +63,26 @@ const HackathonPage = () => {
 
 				{/* Features Section */}
 				<AboutSection />
+
+				{/* Submit Project CTA */}
+				{DATA.submissionFormUrl && (
+					<ViewContainer className="mt-12 pb-4">
+						<Link
+							href={DATA.submissionFormUrl}
+							target="_blank"
+							rel="noopener noreferrer"
+							className="flex flex-col sm:flex-row items-center justify-center gap-4 p-6 md:p-8 rounded-2xl border-2 border-cyan-500/40 bg-cyan-500/10 hover:bg-cyan-500/20 transition-colors group"
+						>
+							<span className="text-xl md:text-2xl font-bold text-cyan-400 group-hover:text-cyan-300">
+								Submit your project →
+							</span>
+							<span className="text-slate-400 text-center sm:text-left">
+								One person per team. Submit via the official form before the deadline.
+							</span>
+							<ArrowUpRight className="w-6 h-6 text-cyan-400 shrink-0" />
+						</Link>
+					</ViewContainer>
+				)}
 			</div>
 
 			{/* Prizes Section */}
