@@ -5,7 +5,7 @@ const DATA = {
 	title: "Vision Possible: Agent Protocol",
 	prize: "$4,000+",
 	startDate: "2026-02-23T00:00:00Z",
-	endDate: "2026-03-01T23:59:59Z",
+	endDate: "2026-03-01T18:15:00Z",
 	description:
 		"Your mission, should you choose to accept it: Build multi-modal AI agents that watch, listen, and understand video in real-time.",
 	descriptionCard:
@@ -165,18 +165,18 @@ const schedule = [
 		date: "2026-03-01T00:00:00Z",
 		items: [
 			{
-				title: "Mission Extraction - Final Submissions",
-				time: "2026-03-01T20:00:00Z",
+				title: "Project submission due - 8 PM IST",
+				time: "2026-03-01T14:30:00Z",
 				link: {
 					name: "Submit Project",
 					url: "https://forms.gle/oG7hWZ1tgbSwbcie8",
 				},
 			},
 			{
-				title: "Mission Complete - Deadline",
-				time: "2026-03-01T23:59:59Z",
+				title: "Final submissions due - 11:45 PM IST",
+				time: "2026-03-01T18:15:00Z",
 				link: {
-					name: "Submission Form",
+					name: "Submit Project",
 					url: "https://forms.gle/oG7hWZ1tgbSwbcie8",
 				},
 			},
