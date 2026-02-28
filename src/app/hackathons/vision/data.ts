@@ -13,8 +13,8 @@ const DATA = {
 	slug: "vision",
 	images,
 	cta: {
-		label: "Register",
-		href: "https://forms.gle/b8YS4J4jcR2mSnnf7",
+		label: "Submit your projects",
+		href: "https://forms.gle/oG7hWZ1tgbSwbcie8",
 		openInNewTab: true,
 		disabled: false,
 	},

@@ -62,7 +62,8 @@ const hackathons = [
 		slug: "vision",
 		description: "Build multi-modal AI agents that watch, listen, and understand video in real-time",
 		prize: "$4,000+",
-		registrationLink: "https://forms.gle/b8YS4J4jcR2mSnnf7",
+		registrationLink: "https://forms.gle/oG7hWZ1tgbSwbcie8",
+		ctaLabel: "Submit your projects",
 	},
 ];
 
@@ -356,7 +357,9 @@ function HackathonCard({
 									"bg-red-500 hover:bg-red-600 text-white",
 								)}
 							>
-								Register
+								{"ctaLabel" in hackathon && hackathon.ctaLabel
+									? hackathon.ctaLabel
+									: "Register"}
 								<ArrowRight className="w-4 h-4 ml-1" />
 							</Link>
 						)}
