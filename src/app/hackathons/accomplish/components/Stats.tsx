@@ -45,19 +45,19 @@ const AccomplishStats = () => {
 					<div
 						key={item.name}
 						className={cn(
-							"group bg-[#0a0f11]/80 backdrop-blur-sm shadow-[0_15px_35px_rgba(0,0,0,0.45)] border border-green-500/20 rounded-xl p-5 pb-4 relative overflow-clip hover:border-green-400/40 transition-colors",
+							"group bg-[#0a0f11]/80 backdrop-blur-sm shadow-[0_15px_35px_rgba(0,0,0,0.45)] border border-sky-500/20 rounded-xl p-5 pb-4 relative overflow-clip hover:border-sky-400/40 transition-colors",
 						)}
 					>
 						<div
 							className={cn(
 								"duration-300 z-0 absolute bottom-0 left-0 w-full h-full transition-transform origin-top group-hover:origin-bottom scale-y-0 group-hover:scale-y-100",
-								index % 4 === 0 && "bg-accent-1",
-								index % 4 === 1 && "bg-accent-2",
-								index % 4 === 2 && "bg-accent-3",
-								index % 4 === 3 && "bg-accent-4",
+								index % 4 === 0 && "bg-sky-500",
+								index % 4 === 1 && "bg-amber-500",
+								index % 4 === 2 && "bg-sky-600",
+								index % 4 === 3 && "bg-amber-400",
 							)}
 						/>
-						<Icon className="opacity-80 z-10 text-green-400" size={28} />
+						<Icon className="opacity-80 z-10 text-sky-400" size={28} />
 						<div className="mt-6 md:mt-12 group-hover:-translate-y-4 transition-transform">
 							<h3 className="font-mono font-medium relative z-10 text-slate-200">
 								{item.name}

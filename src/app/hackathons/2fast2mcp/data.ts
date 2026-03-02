@@ -16,7 +16,7 @@ const DATA = {
 		label: "Projects",
 		href: "/hackathons/2fast2mcp/projects",
 		openInNewTab: false,
-		disabled: true,
+		disabled: false,
 	},
 	showDate: true,
 	prizes: {
@@ -61,6 +61,11 @@ const navLinks = [
 		href: `/hackathons/${DATA.slug}`,
 		label: "Overview",
 		page: "overview",
+	},
+	{
+		href: `/hackathons/${DATA.slug}/projects`,
+		label: "Projects",
+		page: "projects",
 	},
 	{
 		href: `/hackathons/${DATA.slug}/rules`,

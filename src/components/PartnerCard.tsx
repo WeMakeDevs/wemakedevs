@@ -7,7 +7,7 @@ const PartnerCard = ({ className, children, ...props }: GeneralComponent) => {
 		<div
 			className={cn(
 				className,
-				"rounded shadow-xl bg-white p-5 h-[420px] xl:h-[380px] max-w-[340px] md:max-w-none mx-auto",
+				"flex flex-col rounded shadow-xl bg-white p-5 pb-20 h-[420px] xl:h-[380px] max-w-[340px] md:max-w-none mx-auto overflow-hidden",
 			)}
 			{...props}
 		>
@@ -23,7 +23,10 @@ const PartnerCardQuote = ({
 }: GeneralComponent) => {
 	return (
 		<p
-			className={cn(className, "font-medium text-base md:text-lg")}
+			className={cn(
+				className,
+				"font-medium text-base md:text-lg line-clamp-6 min-h-0 flex-1 overflow-hidden",
+			)}
 			{...props}
 		>
 			{children}

@@ -53,7 +53,7 @@ const HackathonPage = () => {
 						The UI Strikes Back 2026 Stats
 					</HackathonContentTitle>
 					<TamboStats />
-					<HackathonContentTitleH3 className="mt-4 text-white">
+					<HackathonContentTitleH3 className="mt-4 text-white [&_h3]:text-white">
 						Sponsor testimonial
 					</HackathonContentTitleH3>
 					<TamboSpecialTestimonial />

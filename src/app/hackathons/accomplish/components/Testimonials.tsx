@@ -39,10 +39,10 @@ const AccomplishTestimonials = ({ className, ...props }: GeneralComponent) => {
 									{...item}
 									className={cn(
 										"min-h-[460px] p-5 md:p-6",
-										index % 4 === 0 && "bg-accent-1",
-										index % 4 === 1 && "bg-accent-2",
-										index % 4 === 2 && "bg-accent-3",
-										index % 4 === 3 && "bg-accent-4",
+										index % 4 === 0 && "bg-sky-500",
+										index % 4 === 1 && "bg-amber-500",
+										index % 4 === 2 && "bg-sky-600",
+										index % 4 === 3 && "bg-amber-400",
 									)}
 								/>
 							</CarouselItem>

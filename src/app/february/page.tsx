@@ -31,7 +31,6 @@ const hackathons = [
 		slug: "tambo",
 		description: "Build generative UI applications with Tambo",
 		prize: "$6,000+",
-		registrationLink: "https://forms.gle/PG5jppKYjwky4BFUA",
 	},
 	{
 		week: 2,
@@ -41,7 +40,6 @@ const hackathons = [
 		slug: "2fast2mcp",
 		description: "Run powerful MCP-based agents with Archestra",
 		prize: "$10,000+",
-		registrationLink: "/hackathons/2fast2mcp/register",
 	},
 	{
 		week: 3,
@@ -485,18 +483,11 @@ export default function FebruaryPage() {
 								</div>
 							</div>
 
-							{/* Register Now Button */}
+							{/* Event Ended Notice */}
 							<div className="flex justify-center lg:justify-start">
-								<Link
-									href="#hackathons"
-									className={cn(
-										buttonVariants({ size: "lg" }),
-										"bg-red-500 hover:bg-red-600 text-white font-bold shadow-lg shadow-red-500/30 px-8 py-6 text-lg",
-									)}
-								>
-									Register Now
-									<ArrowRight className="w-5 h-5 ml-2" />
-								</Link>
+								<div className="bg-gray-700/80 text-gray-300 font-bold px-8 py-4 rounded-lg text-lg border border-gray-600">
+									This event has ended
+								</div>
 							</div>
 						</div>
 

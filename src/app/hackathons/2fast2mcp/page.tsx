@@ -52,7 +52,7 @@ const HackathonPage = () => {
 						2 Fast 2 MCP 2026 Stats
 					</HackathonContentTitle>
 					<TwoFastTwoMcpStats />
-					<HackathonContentTitleH3 className="mt-4 text-white">
+					<HackathonContentTitleH3 className="mt-4 text-white [&_h3]:text-white">
 						Sponsor testimonial
 					</HackathonContentTitleH3>
 					<TwoFastTwoMcpSpecialTestimonial />

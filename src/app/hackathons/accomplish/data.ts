@@ -13,9 +13,9 @@ const DATA = {
 	slug: "accomplish",
 	images,
 	cta: {
-		label: "Submit Project",
-		href: "https://forms.gle/GRpyeRt8Gsm3r72V8",
-		openInNewTab: true,
+		label: "Projects",
+		href: `/hackathons/accomplish/projects`,
+		openInNewTab: false,
 		disabled: true,
 	},
 	submissionFormUrl: "https://forms.gle/cD39An6mkmuUAc3t8",

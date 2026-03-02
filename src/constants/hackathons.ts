@@ -18,6 +18,7 @@ import { DATA as tamboData } from "@/app/hackathons/tambo/data";
 import { images as tamboImages } from "@/app/hackathons/tambo/images";
 import { DATA as visionData } from "@/app/hackathons/vision/data";
 import { images as visionImages } from "@/app/hackathons/vision/images";
+import { images as februaryImages } from "@/app/february/images";
 import {
 	cloudNativeHackathonThumbnail,
 	kestraHackWeekThumbnail,
@@ -56,12 +57,24 @@ const hackathons: HackathonType[] = [
 		endDate: visionData.endDate,
 	},
 	{
+		slug: "/february",
+		title: "Hack All February",
+		description:
+			"Join all 4 February hackathons to win a Samsung Galaxy Flip 7 worth ₹1,10,000!",
+		thumbnail: februaryImages.banner,
+		startDate: "2026-02-02T00:00:00+05:30",
+		endDate: "2026-03-01T23:59:59+05:30",
+		hrefType: "external",
+		listAs: "previous",
+	},
+	{
 		slug: tamboData.slug,
 		title: tamboData.title,
 		description: tamboData.descriptionCard,
 		thumbnail: tamboImages.thumbnail,
 		startDate: tamboData.startDate,
 		endDate: tamboData.endDate,
+		listAs: "previous",
 	},
 	{
 		slug: twoFastTwoMcpData.slug,
