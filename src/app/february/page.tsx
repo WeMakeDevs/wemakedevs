@@ -354,9 +354,11 @@ function HackathonCard({
 									"bg-red-500 hover:bg-red-600 text-white",
 								)}
 							>
-								{"ctaLabel" in hackathon && hackathon.ctaLabel
-									? hackathon.ctaLabel
-									: "Register"}
+								{String(
+									"ctaLabel" in hackathon && hackathon.ctaLabel
+										? hackathon.ctaLabel
+										: "Register",
+								)}
 								<ArrowRight className="w-4 h-4 ml-1" />
 							</Link>
 						)}
