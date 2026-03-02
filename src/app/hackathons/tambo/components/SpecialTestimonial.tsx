@@ -1,15 +1,9 @@
 import Image from "next/image";
-import { images } from "../images";
 import { michaelMagan } from "../images/testimonials";
 
 const TamboSpecialTestimonial = () => {
 	return (
 		<div className="space-y-10 my-10 md:my-20">
-			<Image
-				src={images.tamboLogo}
-				alt="Tambo Logo"
-				className="w-32 mx-auto"
-			/>
 			<div className="space-y-4 text-lg md:text-xl font-medium max-w-4xl mx-auto text-center text-slate-200 font-mono">
 				<p>
 					Working with WeMakeDevs was a game-changer for Tambo. What we
