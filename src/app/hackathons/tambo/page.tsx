@@ -57,7 +57,7 @@ const HackathonPage = () => {
 						Sponsor testimonial
 					</HackathonContentTitleH3>
 					<TamboSpecialTestimonial />
-					<HackathonContentTitleH3 className="mt-4 text-slate-100">
+					<HackathonContentTitleH3 className="mt-4 text-white [&_h3]:text-white">
 						Participants testimonials
 					</HackathonContentTitleH3>
 				</ViewContainer>
