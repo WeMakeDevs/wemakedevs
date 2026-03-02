@@ -9,6 +9,8 @@ import { images as motiaImages } from "@/app/hackathons/motiahack25/images";
 import { mikePiccolo } from "@/app/hackathons/motiahack25/images/testimonials";
 import { images as lingohackImages } from "@/app/hackathons/lingohack25/images";
 import { sumit } from "@/app/hackathons/lingohack25/images/testimonials";
+import { images as tamboImages } from "@/app/hackathons/tambo/images";
+import { michaelMagan } from "@/app/hackathons/tambo/images/testimonials";
 import { cn } from "@/lib/utils";
 import type { StaticImageData } from "next/image";
 import Image from "next/image";
@@ -93,6 +95,15 @@ const sponsorTestimonials: SponsorTestimonialItem[] = [
 		company: "Lingo.dev",
 		logo: lingohackImages.lingoLogo,
 		authorImage: sumit,
+	},
+	// Tambo (The UI Strikes Back)
+	{
+		quote:
+			"Working with WeMakeDevs was a game-changer for Tambo. What we imagined, Kunal and his team delivered, and then some. The results from our hackathon were staggering: we gained over 7,000 GitHub stars in just one week and saw thousands of developers actively building and engaging in our Discord. The quality of the projects produced was incredible. If you are looking to tap into a global developer ecosystem, gather real-world feedback, and discover innovative use cases for your product, I highly recommend partnering with WeMakeDevs. They don't just run events; they build movements.",
+		author: "Michael Magan",
+		company: "CEO, Tambo",
+		logo: tamboImages.tamboLogo,
+		authorImage: michaelMagan,
 	},
 	// Kestra (HackFrost)
 	{

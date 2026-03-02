@@ -1,4 +1,6 @@
 import { images as futurestackImages } from "@/app/hackathons/futurestack25/images";
+import { images as tamboImages } from "@/app/hackathons/tambo/images";
+import { michaelMagan } from "@/app/hackathons/tambo/images/testimonials";
 import {
 	c4gtLogo,
 	draperHouseLogo,
@@ -44,6 +46,14 @@ import {
 import { ViewContainer } from "./ui/view-container";
 
 const partnersData: PartnerData[] = [
+	{
+		image: michaelMagan,
+		logo: tamboImages.tamboLogo,
+		author: "Michael Magan",
+		name: "Tambo",
+		quote: "Working with WeMakeDevs was a game-changer for Tambo. What we imagined, Kunal and his team delivered, and then some. The results from our hackathon were staggering: we gained over 7,000 GitHub stars in just one week and saw thousands of developers actively building and engaging in our Discord. The quality of the projects produced was incredible. If you are looking to tap into a global developer ecosystem, gather real-world feedback, and discover innovative use cases for your product, I highly recommend partnering with WeMakeDevs. They don't just run events; they build movements.",
+		logoClassName: "w-28",
+	},
 	{
 		image: futurestackImages.yashKhare,
 		logo: futurestackImages.metaLogo,

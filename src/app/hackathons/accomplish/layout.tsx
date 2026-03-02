@@ -17,11 +17,6 @@ export default function RootLayout({
 			type: "link",
 		},
 		{
-			name: "Tips",
-			url: `/hackathons/${DATA.slug}#tips`,
-			type: "link",
-		},
-		{
 			name: "Prizes",
 			url: `/hackathons/${DATA.slug}#prizes`,
 			type: "link",
@@ -32,24 +27,15 @@ export default function RootLayout({
 			type: "link",
 		},
 		{
-			name: "Judging",
-			url: `/hackathons/${DATA.slug}#judging`,
+			name: "Hackathons",
+			url: "https://www.wemakedevs.org/hackathons",
 			type: "link",
 		},
 		{
-			name: "FAQ",
-			url: `/hackathons/${DATA.slug}#faq`,
-			type: "link",
+			name: "Partner with us",
+			url: "https://www.wemakedevs.org/#partners",
+			type: "button",
 		},
-		...(DATA.cta.disabled
-			? []
-			: [
-					{
-						name: "Submit Project",
-						url: DATA.cta.href,
-						type: "button" as const,
-					},
-				]),
 	];
 
 	return (

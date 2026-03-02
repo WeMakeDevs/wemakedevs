@@ -27,18 +27,13 @@ export default function RootLayout({
 			type: "link",
 		},
 		{
-			name: "Judging",
-			url: `/hackathons/${DATA.slug}#judging`,
+			name: "Hackathons",
+			url: "https://www.wemakedevs.org/hackathons",
 			type: "link",
 		},
 		{
-			name: "FAQ",
-			url: `/hackathons/${DATA.slug}#faq`,
-			type: "link",
-		},
-		{
-			name: DATA.cta.label,
-			url: DATA.cta.href,
+			name: "Partner with us",
+			url: "https://www.wemakedevs.org/#partners",
 			type: "button",
 		},
 	];

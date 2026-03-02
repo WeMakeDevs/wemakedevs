@@ -14,6 +14,7 @@ import AboutSection from "./components/AboutSection";
 import HackathonHeader from "./components/Header";
 import PrizesShowcase from "./components/PrizesShowcase";
 import TamboStats from "./components/Stats";
+import TamboSpecialTestimonial from "./components/SpecialTestimonial";
 import TamboTestimonials from "./components/Testimonials";
 import { DATA, faqs, navLinks } from "./data";
 import { images } from "./images";
@@ -52,6 +53,10 @@ const HackathonPage = () => {
 						The UI Strikes Back 2026 Stats
 					</HackathonContentTitle>
 					<TamboStats />
+					<HackathonContentTitleH3 className="mt-4 text-slate-100">
+						Sponsor testimonial
+					</HackathonContentTitleH3>
+					<TamboSpecialTestimonial />
 					<HackathonContentTitleH3 className="mt-4 text-slate-100">
 						Participants testimonials
 					</HackathonContentTitleH3>

@@ -16,7 +16,7 @@ const DATA = {
 		label: "Projects",
 		href: "/hackathons/tambo/projects",
 		openInNewTab: false,
-		disabled: true,
+		disabled: false,
 	},
 	showDate: true,
 	prizes: {
@@ -63,6 +63,11 @@ const navLinks = [
 		href: `/hackathons/${DATA.slug}/schedule`,
 		label: "Schedule",
 		page: "schedule",
+	},
+	{
+		href: `/hackathons/${DATA.slug}/projects`,
+		label: "Projects",
+		page: "projects",
 	},
 	{
 		href: `/hackathons/${DATA.slug}/starter-template`,
