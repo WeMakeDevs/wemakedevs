@@ -1,10 +1,10 @@
-import HackathonStatus from "@/components/HackathonStatus";
-import HackathonDate from "@/components/hackathon-content/HackathonDate";
-import { DateAtom } from "@/components/hackathon-content/atoms";
+"use client";
+
 import { buttonVariants } from "@/components/ui/button";
 import { ViewContainer } from "@/components/ui/view-container";
+import { useHackathonStatus } from "@/lib/hooks";
 import { cn } from "@/lib/utils";
-import { ArrowUpRight, CalendarIcon, Sparkles } from "lucide-react";
+import { CalendarIcon } from "lucide-react";
 import Link from "next/link";
 
 type HackathonHeaderProps = {
@@ -13,11 +13,12 @@ type HackathonHeaderProps = {
 	startDate: string;
 	endDate: string;
 	prize: string;
+	showDate?: boolean;
 	cta: {
 		label: string;
 		href: string;
-		disabled?: boolean;
 		openInNewTab?: boolean;
+		disabled?: boolean;
 	};
 };
 
@@ -27,53 +28,67 @@ const HackathonHeader = ({
 	startDate,
 	endDate,
 	prize,
+	showDate = true,
 	cta,
 }: HackathonHeaderProps) => {
-	return (
-		<div className="relative py-20 md:py-28 overflow-hidden">
-			{/* Animated background glow */}
-			<div className="absolute inset-0 overflow-hidden pointer-events-none">
-				<div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-amber-500/5 rounded-full blur-3xl" />
-			</div>
+	const { status, timeDifference } = useHackathonStatus(startDate, endDate);
 
-			<ViewContainer className="relative z-10">
-				<div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12">
-					{/* Main content */}
+	const gridPattern =
+		"data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23f59e0b' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E";
+
+	const formatDate = (dateString: string) => {
+		const date = new Date(dateString);
+		return date.toLocaleDateString("en-US", {
+			month: "short",
+			day: "numeric",
+		});
+	};
+
+	const getTimeDisplay = (days: number, hours: number, minutes: number) => {
+		if (days > 0) return `${days} days`;
+		if (hours > 0) return `${hours} hours`;
+		return `${minutes} minutes`;
+	};
+
+	return (
+		<div className="relative bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 py-24 border-b border-amber-500/10">
+			<div
+				className="absolute inset-0 opacity-30"
+				style={{ backgroundImage: `url("${gridPattern}")` }}
+			/>
+			<ViewContainer className="bg-slate-900/80 backdrop-blur border border-amber-500/20 rounded-2xl p-3 shadow-[0_25px_60px_rgba(0,0,0,0.55)]">
+				<div className="grid grid-cols-1 lg:grid-cols-3 gap-4 p-8 bg-slate-900/80 rounded-xl border border-amber-500/10">
 					<div className="col-span-1 lg:col-span-2">
-						<HackathonStatus
-							className="w-fit mb-6"
-							startDate={startDate}
-							endDate={endDate}
-						/>
-						<div className="flex items-center gap-3 mb-4 flex-wrap">
-							<span className="inline-block bg-amber-500/20 text-amber-400 px-4 py-1.5 rounded-full text-sm md:text-base font-semibold border border-amber-500/30">
-								Online Hackathon
-							</span>
-							<Link
-								href="https://www.wemakedevs.org/february"
-								className="inline-flex items-center gap-2 bg-red-500/20 text-red-400 px-4 py-1.5 rounded-full text-sm md:text-base font-semibold border border-red-500/30 hover:bg-red-500/30 transition-colors"
-								target="_blank"
-								rel="noopener noreferrer"
+						{showDate ? (
+							<p
+								className={cn(
+									"rounded-full px-3 py-1.5 font-semibold text-sm tracking-wide w-fit border shadow-[0_0_10px_rgba(245,158,11,0.3)]",
+									status === "upcoming" &&
+										"bg-amber-500/20 text-amber-400 border-amber-500/50",
+									status === "ongoing" &&
+										"bg-amber-500/20 text-amber-400 border-amber-500/50",
+									status === "ended" &&
+										"bg-slate-500/20 text-slate-400 border-slate-500/50",
+								)}
 							>
-								Part of Hack All February
-								<ArrowUpRight className="w-4 h-4" />
-							</Link>
-						</div>
-						<h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-amber-400 via-yellow-300 to-amber-500 bg-clip-text text-transparent leading-tight">
+								{status.toUpperCase()}
+							</p>
+						) : (
+							<p className="rounded-full px-3 py-1.5 bg-amber-500/20 text-amber-400 font-semibold text-sm tracking-wide w-fit border border-amber-500/50 shadow-[0_0_10px_rgba(245,158,11,0.3)]">
+								COMING SOON
+							</p>
+						)}
+						<h1 className="text-4xl md:text-6xl font-bold mt-6 text-slate-50">
 							{title}
 						</h1>
-						<p className="text-lg md:text-xl text-slate-300 font-medium leading-relaxed mt-6 max-w-2xl">
+						<p className="text-base md:text-lg text-slate-300 font-medium leading-snug mt-4 tracking-wide">
 							{description}
 						</p>
-						<div className="flex items-center gap-4 mt-8">
+						<div className="flex items-center gap-4">
 							{cta.disabled ? (
 								<div
 									className={cn(
-										buttonVariants({
-											variant: "default",
-											size: "lg",
-										}),
-										"cursor-not-allowed opacity-60 bg-amber-500 text-slate-900 px-8 py-6 text-lg",
+										"mt-4 md:mt-6 cursor-not-allowed opacity-60 px-6 py-3 rounded-lg tracking-wide border border-amber-500/30 bg-amber-500/10 text-slate-400",
 									)}
 								>
 									{cta.label}
@@ -81,51 +96,88 @@ const HackathonHeader = ({
 							) : (
 								<Link
 									href={cta.href}
-									className={cn(
-										buttonVariants({
-											variant: "default",
-											size: "lg",
-										}),
-										"bg-gradient-to-r from-amber-500 to-yellow-500 hover:from-amber-400 hover:to-yellow-400 text-slate-900 font-bold shadow-lg shadow-amber-500/30 px-8 py-6 text-lg",
-									)}
-									target="_blank"
-									rel="noopener noreferrer"
+									className="mt-4 md:mt-6 inline-flex items-center gap-2 px-6 py-3 rounded-lg border border-amber-400/30 bg-amber-500/15 text-slate-50 tracking-wide shadow-[0_12px_25px_rgba(0,0,0,0.35)] hover:bg-amber-500/25 hover:border-amber-300 transition-all"
+									target={
+										cta.openInNewTab ? "_blank" : "_self"
+									}
+									rel={
+										cta.openInNewTab
+											? "noopener noreferrer"
+											: undefined
+									}
 								>
-									<Sparkles className="w-5 h-5 mr-2" />
 									{cta.label}
 								</Link>
 							)}
 						</div>
 					</div>
-
-					{/* Info card */}
-					<div className="flex justify-center items-start lg:items-center">
-						<div className="bg-slate-900/70 backdrop-blur-sm shadow-2xl rounded-2xl p-6 md:p-8 w-full max-w-sm border border-amber-500/20">
-							<div className="flex items-center gap-4 text-amber-400 mb-4">
-								<CalendarIcon size={28} />
-								<p className="text-xl md:text-2xl font-bold">
-									<DateAtom date={startDate} /> -{" "}
-									<DateAtom date={endDate} />
-								</p>
-							</div>
-							<HackathonDate
-								startDate={startDate}
-								endDate={endDate}
-							/>
-							<hr className="my-6 border-amber-500/20" />
-							<div>
-								<span className="text-amber-400 font-semibold text-lg">
+					<div className="flex justify-center items-center">
+						<div className="bg-slate-900/90 backdrop-blur-sm shadow-[0_15px_35px_rgba(0,0,0,0.45)] rounded-xl p-4 md:p-6 h-fit w-full border border-amber-500/20">
+							{showDate ? (
+								<>
+									<div className="flex gap-4 text-center font-medium items-center">
+										<CalendarIcon
+											className="text-amber-400"
+											size={30}
+										/>
+										<p className="text-lg md:text-2xl text-slate-200">
+											{formatDate(startDate)} -{" "}
+											{formatDate(endDate)}
+										</p>
+									</div>
+									<div className="font-medium border border-amber-500/40 rounded-full text-sm md:text-base px-3 py-2 flex justify-center items-center w-fit gap-1 md:gap-2 mt-4 bg-amber-500/10 mx-auto text-slate-100 shadow-[0_0_12px_rgba(0,0,0,0.4)]">
+										<div
+											className={cn(
+												"w-4 h-4 rounded-full shadow-[0_0_8px_rgba(245,158,11,0.5)]",
+												status === "upcoming" &&
+													"bg-amber-400 animate-pulse",
+												status === "ongoing" &&
+													"bg-amber-400",
+												status === "ended" &&
+													"bg-slate-400",
+											)}
+										/>
+										{status === "upcoming" &&
+											`Starts in ${getTimeDisplay(
+												timeDifference.daysStartToNow,
+												timeDifference.hoursStartToNow,
+												timeDifference.minutesStartToNow,
+											)}`}
+										{status === "ongoing" &&
+											`Ends in ${getTimeDisplay(
+												timeDifference.daysEndToNow,
+												timeDifference.hoursEndToNow,
+												timeDifference.minutesEndToNow,
+											)}`}
+										{status === "ended" &&
+											"Hackathon has ended"}
+									</div>
+								</>
+							) : (
+								<>
+									<div className="flex gap-4 text-center font-medium items-center justify-center">
+										<CalendarIcon
+											className="text-amber-400"
+											size={30}
+										/>
+										<p className="text-lg md:text-2xl text-slate-200">
+											Coming Soon
+										</p>
+									</div>
+									<div className="font-medium border border-amber-500/40 rounded-full text-sm md:text-base px-3 py-2 flex justify-center items-center w-fit gap-1 md:gap-2 mt-4 bg-amber-500/10 mx-auto text-slate-100 shadow-[0_0_12px_rgba(0,0,0,0.4)]">
+										<div className="w-4 h-4 rounded-full bg-amber-400 animate-pulse shadow-[0_0_8px_rgba(245,158,11,0.5)]" />
+										Starting Soon
+									</div>
+								</>
+							)}
+							<hr className="my-5 border-amber-500/20" />
+							<div className="flex flex-col gap-1 text-slate-200">
+								<span className="text-sm uppercase tracking-wide text-amber-400">
 									Prizes
 								</span>
-								<p className="text-2xl md:text-3xl font-bold text-slate-100 mt-1">
-									$6,000+
-								</p>
-								<p className="text-slate-400 mt-1">
-									+ exclusive swag
-								</p>
-								<p className="text-slate-400 mt-1">
-									+ job/intern interviews at Tambo
-								</p>
+								<span className="text-lg text-slate-100">
+									{prize}
+								</span>
 							</div>
 						</div>
 					</div>

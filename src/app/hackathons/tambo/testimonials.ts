@@ -1,43 +1,54 @@
-export interface TweetTestimonial {
-	handle: string;
-	tweetUrl: string;
-}
+import type { TestimonialInterface } from "@/types";
+import {
+	kundan,
+	honey,
+	pravesh,
+	k0x,
+	allen,
+	kishan,
+} from "./images/testimonials";
 
-export const tamboTestimonials: TweetTestimonial[] = [
+export const tamboTestimonials: TestimonialInterface[] = [
 	{
-		handle: "akinkunmi",
-		tweetUrl: "https://x.com/akinkunmi/status/2019815589863408065?s=20",
+		profileImage: kundan,
+		name: "Kundan",
+		platform: "twitter",
+		testimonialText:
+			"🚀 Participating in The UI Strikes Back hackathon! Exploring Generative UI using @TamboSDK — building UIs that adapt dynamically with AI instead of static layouts 🤖✨ Thanks @WeMakeDevs for hosting! Excited to ship & share soon 🔥",
 	},
 	{
-		handle: "kundanss22",
-		tweetUrl: "https://x.com/kundanss22/status/2019458895350006009?s=20",
+		profileImage: honey,
+		name: "Honey",
+		platform: "twitter",
+		testimonialText:
+			"Reflecting on The UI Strikes Back. Moving from standard React to Generative UI was a total paradigm shift. Big thanks to @mrmagan_, @tambo_ai, and @WeMakeDevs for the Hackathon! 🤝",
 	},
 	{
-		handle: "priyansh0327",
-		tweetUrl: "https://x.com/priyansh0327/status/2019733585776046444?s=20",
+		profileImage: pravesh,
+		name: "Pravesh",
+		platform: "twitter",
+		testimonialText:
+			"Just wrapped up the Project for UI-Strikes-Back Challenge hosted by @WeMakeDevs and @tamboi_ai. I made a http://SkillDebt.ai that takes your resume, and provide visual representation of the risk, gap, improvement in it. Now starting to write a blog about it!",
 	},
 	{
-		handle: "hpaptan7",
-		tweetUrl: "https://x.com/hpaptan7/status/2020747660161163536?s=20",
+		profileImage: k0x,
+		name: "k0x",
+		platform: "twitter",
+		testimonialText:
+			"Just wrapped The UI Strikes Back hackathon — what a ride! 🚀 Built Flex, Early days but solid foundation with cool features incoming.",
 	},
 	{
-		handle: "praveshstwt",
-		tweetUrl: "https://x.com/praveshstwt/status/2019474463155269952?s=20",
+		profileImage: allen,
+		name: "Allen",
+		platform: "twitter",
+		testimonialText:
+			"Built WanderAI for the @tambo_ai \"The UI Strikes Back\" hackathon - a conversational trip planner that streams interactive React components in real-time. Ask it to plan a trip and watch itineraries, budget breakdowns, and place cards render live in the chat. Had no idea about generative UI before this event, went from zero to streaming full React components from AI responses. Great learning experience overall!",
 	},
 	{
-		handle: "arkalgud_kumar",
-		tweetUrl: "https://x.com/arkalgud_kumar/status/2020634547310973350?s=20",
-	},
-	{
-		handle: "ItsK0X",
-		tweetUrl: "https://x.com/ItsK0X/status/2020742661817381138?s=20",
-	},
-	{
-		handle: "mad_allen",
-		tweetUrl: "https://x.com/mad_allen/status/2020478934534836535?s=20",
-	},
-	{
-		handle: "thekishandev",
-		tweetUrl: "https://x.com/thekishandev/status/2020695801207636048?s=20",
+		profileImage: kishan,
+		name: "Kishan",
+		platform: "twitter",
+		testimonialText:
+			"Huge shoutout to @tambo_ai and @WeMakeDevs for hosting this hackathon! This was a blast to build.",
 	},
 ];

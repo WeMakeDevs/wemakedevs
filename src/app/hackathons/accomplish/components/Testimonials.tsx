@@ -9,19 +9,19 @@ import {
 import { ViewContainer } from "@/components/ui/view-container";
 import { cn } from "@/lib/utils";
 import type { GeneralComponent } from "@/types";
-import { twoFastTwoMcpTestimonials } from "../testimonials";
+import { accomplishTestimonials } from "../testimonials";
 
-const TwoFastTwoMcpTestimonials = ({
-	className,
-	...props
-}: GeneralComponent) => {
+const AccomplishTestimonials = ({ className, ...props }: GeneralComponent) => {
 	return (
 		<section
-			className={cn(className, "mt-6 pb-10 scroll-m-[100px]")}
+			className={cn(className, "mt-6 pb-10 scroll-m-[100px] bg-slate-950")}
 			{...props}
 			id="testimonials"
 		>
 			<ViewContainer>
+				<h2 className="text-3xl md:text-4xl font-bold text-sky-400 uppercase tracking-wide mb-8 text-center">
+					What Participants Built
+				</h2>
 				<Carousel
 					className="overflow-clip md:overflow-visible"
 					opts={{
@@ -30,9 +30,9 @@ const TwoFastTwoMcpTestimonials = ({
 					}}
 				>
 					<CarouselContent className="h-[520px]">
-						{twoFastTwoMcpTestimonials.map((item, index) => (
+						{accomplishTestimonials.map((item, index) => (
 							<CarouselItem
-								key={`${item.name}-${index}`}
+								key={item.name}
 								className="md:basis-1/2 lg:basis-1/3"
 							>
 								<TestimonialCard
@@ -48,12 +48,12 @@ const TwoFastTwoMcpTestimonials = ({
 							</CarouselItem>
 						))}
 					</CarouselContent>
-					<CarouselPrevious className="border-orange-500/30 text-orange-400 hover:bg-orange-500/20" />
-					<CarouselNext className="border-orange-500/30 text-orange-400 hover:bg-orange-500/20" />
+					<CarouselPrevious className="text-slate-100 border-slate-700 hover:bg-slate-800" />
+					<CarouselNext className="text-slate-100 border-slate-700 hover:bg-slate-800" />
 				</Carousel>
 			</ViewContainer>
 		</section>
 	);
 };
 
-export default TwoFastTwoMcpTestimonials;
+export default AccomplishTestimonials;

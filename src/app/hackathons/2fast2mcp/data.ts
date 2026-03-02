@@ -13,11 +13,12 @@ const DATA = {
 	slug: "2fast2mcp",
 	images,
 	cta: {
-		label: "Submit Your Project",
-		href: "/hackathons/2fast2mcp/register",
+		label: "Projects",
+		href: "/hackathons/2fast2mcp/projects",
 		openInNewTab: false,
 		disabled: true,
 	},
+	showDate: true,
 	prizes: {
 		winning: [
 			{

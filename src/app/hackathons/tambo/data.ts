@@ -13,11 +13,12 @@ const DATA = {
 	slug: "tambo",
 	images,
 	cta: {
-		label: "Registrations Closed",
-		href: "#",
+		label: "Projects",
+		href: "/hackathons/tambo/projects",
 		openInNewTab: false,
 		disabled: true,
 	},
+	showDate: true,
 	prizes: {
 		winning: [
 			{

@@ -9,6 +9,8 @@ import Link from "next/link";
 import AboutSection from "./components/AboutSection";
 import HackathonHeader from "./components/Header";
 import PrizesShowcase from "./components/PrizesShowcase";
+import AccomplishStats from "./components/Stats";
+import AccomplishTestimonials from "./components/Testimonials";
 import { DATA, faqs, navLinks } from "./data";
 import { images } from "./images";
 
@@ -37,8 +39,10 @@ const HackathonPage = () => {
 					endDate={DATA.endDate}
 					prize={DATA.prize}
 					cta={DATA.cta}
-					submissionFormUrl={DATA.submissionFormUrl}
 				/>
+				<ViewContainer>
+					<AccomplishStats />
+				</ViewContainer>
 
 				{/* About Content */}
 				<ViewContainer className="mt-16 pb-20 bg-slate-900/30 rounded-2xl py-12 px-8">
@@ -86,6 +90,9 @@ const HackathonPage = () => {
 			<div id="prizes" className="scroll-mt-16 bg-slate-900/30">
 				<PrizesShowcase />
 			</div>
+
+			{/* Testimonials Section */}
+			<AccomplishTestimonials />
 
 			{/* Sponsor Section */}
 			<div id="sponsor" className="py-20 scroll-mt-10 bg-slate-950">

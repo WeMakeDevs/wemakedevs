@@ -1,5 +1,7 @@
 import Faq from "@/components/Faq";
 import {
+	HackathonContentTitle,
+	HackathonContentTitleH3,
 	HackathonCoverImage,
 	HackathonNav,
 } from "@/components/hackathon-content";
@@ -9,6 +11,7 @@ import Link from "next/link";
 import AboutSection from "./components/AboutSection";
 import HackathonHeader from "./components/Header";
 import PrizesShowcase from "./components/PrizesShowcase";
+import TwoFastTwoMcpStats from "./components/Stats";
 import TwoFastTwoMcpTestimonials from "./components/Testimonials";
 import { DATA, faqs, navLinks, judges } from "./data";
 import { images } from "./images";
@@ -38,8 +41,21 @@ const HackathonPage = () => {
 					startDate={DATA.startDate}
 					endDate={DATA.endDate}
 					prize={DATA.prize}
+					showDate={DATA.showDate}
 					cta={DATA.cta}
 				/>
+
+				{/* Stats Section */}
+				<ViewContainer className="mt-10">
+					<HackathonContentTitle className="text-slate-100 [&>h2]:text-slate-100">
+						2 Fast 2 MCP 2026 Stats
+					</HackathonContentTitle>
+					<TwoFastTwoMcpStats />
+					<HackathonContentTitleH3 className="mt-4 text-slate-100">
+						Participants testimonials
+					</HackathonContentTitleH3>
+				</ViewContainer>
+				<TwoFastTwoMcpTestimonials />
 
 				{/* About Content */}
 				<ViewContainer className="mt-16 pb-20 bg-slate-900/30 rounded-2xl py-12 px-8">
@@ -70,17 +86,6 @@ const HackathonPage = () => {
 
 				{/* Features Section */}
 				<AboutSection />
-
-				{/* Participant Testimonials */}
-				<ViewContainer className="mt-16">
-					<h2 className="text-3xl md:text-4xl font-bold text-orange-400 uppercase tracking-wide mb-2 text-center">
-						Participants testimonials
-					</h2>
-					<p className="text-slate-400 text-center mb-8 max-w-2xl mx-auto">
-						What participants are saying about 2 Fast 2 MCP
-					</p>
-					<TwoFastTwoMcpTestimonials />
-				</ViewContainer>
 			</div>
 
 			{/* Prizes Section */}
