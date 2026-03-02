@@ -341,25 +341,25 @@ function HackathonCard({
 						>
 							Details
 						</Link>
-						{hackathon.registrationLink && (
-							<Link
-								href={hackathon.registrationLink}
-								{...(hackathon.registrationLink.startsWith("http")
-									? { target: "_blank", rel: "noopener noreferrer" }
-									: {})}
-								className={cn(
-									buttonVariants({ size: "sm" }),
-									"bg-red-500 hover:bg-red-600 text-white",
-								)}
-							>
-								{String(
-									"ctaLabel" in hackathon && hackathon.ctaLabel
-										? hackathon.ctaLabel
-										: "Register",
-								)}
-								<ArrowRight className="w-4 h-4 ml-1" />
-							</Link>
-						)}
+					{"registrationLink" in hackathon && hackathon.registrationLink && (
+						<Link
+							href={hackathon.registrationLink}
+							{...((hackathon.registrationLink as string).startsWith("http")
+								? { target: "_blank", rel: "noopener noreferrer" }
+								: {})}
+							className={cn(
+								buttonVariants({ size: "sm" }),
+								"bg-red-500 hover:bg-red-600 text-white",
+							)}
+						>
+							{String(
+								"ctaLabel" in hackathon && hackathon.ctaLabel
+									? hackathon.ctaLabel
+									: "Register",
+							)}
+							<ArrowRight className="w-4 h-4 ml-1" />
+						</Link>
+					)}
 					</div>
 				) : (
 					<span className="text-gray-400 text-sm">
