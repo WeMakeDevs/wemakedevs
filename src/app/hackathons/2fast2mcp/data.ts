@@ -62,11 +62,6 @@ const navLinks = [
 		page: "overview",
 	},
 	{
-		href: `/hackathons/${DATA.slug}#testimonials`,
-		label: "Testimonials",
-		page: "overview",
-	},
-	{
 		href: `/hackathons/${DATA.slug}/rules`,
 		label: "Rules",
 		page: "rules",
