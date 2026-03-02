@@ -12,6 +12,7 @@ import Link from "next/link";
 import AboutSection from "./components/AboutSection";
 import HackathonHeader from "./components/Header";
 import PrizesShowcase from "./components/PrizesShowcase";
+import TamboTestimonials from "./components/Testimonials";
 import { DATA, faqs, navLinks } from "./data";
 import { images } from "./images";
 
@@ -65,6 +66,17 @@ const HackathonPage = () => {
 
 				{/* Features Section */}
 				<AboutSection />
+
+				{/* Participant Testimonials */}
+				<ViewContainer className="mt-16">
+					<h2 className="text-3xl md:text-4xl font-bold text-amber-400 uppercase tracking-wide mb-2 text-center">
+						Participants testimonials
+					</h2>
+					<p className="text-slate-400 text-center mb-8 max-w-2xl mx-auto">
+						What participants are saying about The UI Strikes Back
+					</p>
+					<TamboTestimonials />
+				</ViewContainer>
 			</div>
 
 			{/* Prizes Section */}
