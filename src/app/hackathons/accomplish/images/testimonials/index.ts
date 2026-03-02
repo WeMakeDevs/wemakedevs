@@ -11,6 +11,7 @@ import sagnik from "./sagnik.png";
 import chetan from "./chetan.png";
 import xenovoid from "./xenovoid.png";
 import abhishek from "./abhishek.png";
+import orHiltch from "./orHiltch.png";
 
 export {
 	raunak,
@@ -25,4 +26,5 @@ export {
 	chetan,
 	xenovoid,
 	abhishek,
+	orHiltch,
 };

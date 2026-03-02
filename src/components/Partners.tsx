@@ -3,6 +3,8 @@ import { images as tamboImages } from "@/app/hackathons/tambo/images";
 import { michaelMagan } from "@/app/hackathons/tambo/images/testimonials";
 import { images as twoFastTwoMcpImages } from "@/app/hackathons/2fast2mcp/images";
 import { matveyKukuy } from "@/app/hackathons/2fast2mcp/images/testimonials";
+import { images as accomplishImages } from "@/app/hackathons/accomplish/images";
+import { orHiltch } from "@/app/hackathons/accomplish/images/testimonials";
 import {
 	c4gtLogo,
 	draperHouseLogo,
@@ -62,6 +64,14 @@ const partnersData: PartnerData[] = [
 		author: "Matvey Kukuy",
 		name: "Archestra",
 		quote: "Kunal and his team didn't just host a hackathon; they built a bridge between our tech and thousands of high-level developers. The results spoke for themselves: 3,000+ GitHub stars and a community of builders actually orchestrating MCP agents in real-time. The sophisticated projects we saw come out of this event proved that WeMakeDevs attracts a higher tier of talent. If you're looking to get your AI tools into the hands of global builders and see what they can really do, look no further.",
+		logoClassName: "w-28",
+	},
+	{
+		image: orHiltch,
+		logo: accomplishImages.accomplishLogo,
+		author: "Or Hiltch",
+		name: "Accomplish.ai",
+		quote: "We expected a hackathon; we got a high-octane engineering sprint. Kunal and the WeMakeDevs team didn't just bring us visibility, they brought us contributors. For Accomplish.ai, the impact was immediate: 5,000+ GitHub stars in a week and thousands of developers diving into our actual issues. The volume of PRs was staggering; we saw bugs squashed and new features shipped faster than we ever imagined. Beyond the code, the cultural ripple effect has been huge, people are sharing their Accomplish setups across social media, and we've gained long-term contributors who are still active in our Discord today. If you want to move the needle on your product development while building a global brand, WeMakeDevs is the ultimate partner.",
 		logoClassName: "w-28",
 	},
 	{

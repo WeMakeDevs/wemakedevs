@@ -1,5 +1,6 @@
 import Faq from "@/components/Faq";
 import {
+	HackathonContentTitleH3,
 	HackathonCoverImage,
 	HackathonNav,
 } from "@/components/hackathon-content";
@@ -9,6 +10,7 @@ import Link from "next/link";
 import AboutSection from "./components/AboutSection";
 import HackathonHeader from "./components/Header";
 import PrizesShowcase from "./components/PrizesShowcase";
+import AccomplishSpecialTestimonial from "./components/SpecialTestimonial";
 import AccomplishStats from "./components/Stats";
 import AccomplishTestimonials from "./components/Testimonials";
 import { DATA, faqs, navLinks } from "./data";
@@ -42,6 +44,10 @@ const HackathonPage = () => {
 				/>
 				<ViewContainer>
 					<AccomplishStats />
+					<HackathonContentTitleH3 className="mt-4 text-white">
+						Sponsor testimonial
+					</HackathonContentTitleH3>
+					<AccomplishSpecialTestimonial />
 				</ViewContainer>
 
 				{/* About Content */}

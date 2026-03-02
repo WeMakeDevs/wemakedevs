@@ -13,6 +13,8 @@ import { images as tamboImages } from "@/app/hackathons/tambo/images";
 import { michaelMagan } from "@/app/hackathons/tambo/images/testimonials";
 import { images as twoFastTwoMcpImages } from "@/app/hackathons/2fast2mcp/images";
 import { matveyKukuy } from "@/app/hackathons/2fast2mcp/images/testimonials";
+import { images as accomplishImages } from "@/app/hackathons/accomplish/images";
+import { orHiltch } from "@/app/hackathons/accomplish/images/testimonials";
 import { cn } from "@/lib/utils";
 import type { StaticImageData } from "next/image";
 import Image from "next/image";
@@ -115,6 +117,15 @@ const sponsorTestimonials: SponsorTestimonialItem[] = [
 		company: "CEO, Archestra",
 		logo: twoFastTwoMcpImages.archestraLogo,
 		authorImage: matveyKukuy,
+	},
+	// Accomplish.ai (Automate Me If You Can)
+	{
+		quote:
+			"We expected a hackathon; we got a high-octane engineering sprint. Kunal and the WeMakeDevs team didn't just bring us visibility, they brought us contributors. For Accomplish.ai, the impact was immediate: 5,000+ GitHub stars in a week and thousands of developers diving into our actual issues. The volume of PRs was staggering; we saw bugs squashed and new features shipped faster than we ever imagined. Beyond the code, the cultural ripple effect has been huge, people are sharing their Accomplish setups across social media, and we've gained long-term contributors who are still active in our Discord today. If you want to move the needle on your product development while building a global brand, WeMakeDevs is the ultimate partner.",
+		author: "Or Hiltch",
+		company: "CEO, Accomplish.ai",
+		logo: accomplishImages.accomplishLogo,
+		authorImage: orHiltch,
 	},
 	// Kestra (HackFrost)
 	{
