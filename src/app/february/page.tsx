@@ -1,6 +1,5 @@
 "use client";
 
-import Banner from "@/components/Banner";
 import Faq from "@/components/Faq";
 import Footer from "@/components/Footer";
 import { logo } from "@/assets/images";
@@ -58,12 +57,10 @@ const hackathons = [
 		week: 4,
 		title: "Vision Possible: Agent Protocol",
 		dates: "Feb 23 - Mar 1",
-		status: "live",
+		status: "ended",
 		slug: "vision",
 		description: "Build multi-modal AI agents that watch, listen, and understand video in real-time",
 		prize: "$4,000+",
-		registrationLink: "https://forms.gle/oG7hWZ1tgbSwbcie8",
-		ctaLabel: "Submit your projects",
 	},
 ];
 
@@ -718,23 +715,6 @@ export default function FebruaryPage() {
 			<div className="relative z-10">
 				<Footer />
 			</div>
-
-			<Banner className="flex items-center text-base md:text-lg font-medium">
-				<div className="flex flex-col md:flex-row items-center justify-center">
-					<span className="text-white">
-						Vision Possible: Agent Protocol is live! $4,000+ in cash prizes.{" "}
-					</span>
-					<Link
-						href="/hackathons/vision"
-						className={cn(
-							buttonVariants(),
-							"mt-4 md:mt-0 md:ml-8 px-3 py-2 bg-white hover:bg-white/80 text-[#1a2047] w-full md:w-fit",
-						)}
-					>
-						Explore
-					</Link>
-				</div>
-			</Banner>
 		</div>
 	);
 }
