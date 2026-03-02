@@ -1,6 +1,8 @@
 import { images as futurestackImages } from "@/app/hackathons/futurestack25/images";
 import { images as tamboImages } from "@/app/hackathons/tambo/images";
 import { michaelMagan } from "@/app/hackathons/tambo/images/testimonials";
+import { images as twoFastTwoMcpImages } from "@/app/hackathons/2fast2mcp/images";
+import { matveyKukuy } from "@/app/hackathons/2fast2mcp/images/testimonials";
 import {
 	c4gtLogo,
 	draperHouseLogo,
@@ -52,6 +54,14 @@ const partnersData: PartnerData[] = [
 		author: "Michael Magan",
 		name: "Tambo",
 		quote: "Working with WeMakeDevs was a game-changer for Tambo. What we imagined, Kunal and his team delivered, and then some. The results from our hackathon were staggering: we gained over 7,000 GitHub stars in just one week and saw thousands of developers actively building and engaging in our Discord. The quality of the projects produced was incredible. If you are looking to tap into a global developer ecosystem, gather real-world feedback, and discover innovative use cases for your product, I highly recommend partnering with WeMakeDevs. They don't just run events; they build movements.",
+		logoClassName: "w-28",
+	},
+	{
+		image: matveyKukuy,
+		logo: twoFastTwoMcpImages.archestraLogo,
+		author: "Matvey Kukuy",
+		name: "Archestra",
+		quote: "Kunal and his team didn't just host a hackathon; they built a bridge between our tech and thousands of high-level developers. The results spoke for themselves: 3,000+ GitHub stars and a community of builders actually orchestrating MCP agents in real-time. The sophisticated projects we saw come out of this event proved that WeMakeDevs attracts a higher tier of talent. If you're looking to get your AI tools into the hands of global builders and see what they can really do, look no further.",
 		logoClassName: "w-28",
 	},
 	{

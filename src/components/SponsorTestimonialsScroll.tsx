@@ -11,6 +11,8 @@ import { images as lingohackImages } from "@/app/hackathons/lingohack25/images";
 import { sumit } from "@/app/hackathons/lingohack25/images/testimonials";
 import { images as tamboImages } from "@/app/hackathons/tambo/images";
 import { michaelMagan } from "@/app/hackathons/tambo/images/testimonials";
+import { images as twoFastTwoMcpImages } from "@/app/hackathons/2fast2mcp/images";
+import { matveyKukuy } from "@/app/hackathons/2fast2mcp/images/testimonials";
 import { cn } from "@/lib/utils";
 import type { StaticImageData } from "next/image";
 import Image from "next/image";
@@ -104,6 +106,15 @@ const sponsorTestimonials: SponsorTestimonialItem[] = [
 		company: "CEO, Tambo",
 		logo: tamboImages.tamboLogo,
 		authorImage: michaelMagan,
+	},
+	// Archestra (2 Fast 2 MCP)
+	{
+		quote:
+			"Kunal and his team didn't just host a hackathon; they built a bridge between our tech and thousands of high-level developers. The results spoke for themselves: 3,000+ GitHub stars and a community of builders actually orchestrating MCP agents in real-time. The sophisticated projects we saw come out of this event proved that WeMakeDevs attracts a higher tier of talent. If you're looking to get your AI tools into the hands of global builders and see what they can really do, look no further.",
+		author: "Matvey Kukuy",
+		company: "CEO, Archestra",
+		logo: twoFastTwoMcpImages.archestraLogo,
+		authorImage: matveyKukuy,
 	},
 	// Kestra (HackFrost)
 	{

@@ -11,6 +11,7 @@ import Link from "next/link";
 import AboutSection from "./components/AboutSection";
 import HackathonHeader from "./components/Header";
 import PrizesShowcase from "./components/PrizesShowcase";
+import TwoFastTwoMcpSpecialTestimonial from "./components/SpecialTestimonial";
 import TwoFastTwoMcpStats from "./components/Stats";
 import TwoFastTwoMcpTestimonials from "./components/Testimonials";
 import { DATA, faqs, navLinks, judges } from "./data";
@@ -51,6 +52,10 @@ const HackathonPage = () => {
 						2 Fast 2 MCP 2026 Stats
 					</HackathonContentTitle>
 					<TwoFastTwoMcpStats />
+					<HackathonContentTitleH3 className="mt-4 text-white">
+						Sponsor testimonial
+					</HackathonContentTitleH3>
+					<TwoFastTwoMcpSpecialTestimonial />
 					<HackathonContentTitleH3 className="mt-4 text-slate-100">
 						Participants testimonials
 					</HackathonContentTitleH3>
