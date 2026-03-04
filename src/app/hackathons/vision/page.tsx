@@ -12,6 +12,8 @@ import Link from "next/link";
 import AboutSection from "./components/AboutSection";
 import HackathonHeader from "./components/Header";
 import PrizesShowcase from "./components/PrizesShowcase";
+import VisionStats from "./components/Stats";
+import VisionTestimonials from "./components/Testimonials";
 import { DATA, faqs, navLinks } from "./data";
 import { images } from "./images";
 
@@ -207,6 +209,26 @@ const HackathonPage = () => {
 						</div>
 					</div>
 				</ViewContainer>
+			</div>
+
+			{/* Stats Section */}
+			<div id="stats" className="scroll-mt-10 py-20 bg-slate-950">
+				<ViewContainer>
+					<h2 className="text-3xl md:text-4xl font-bold text-cyan-400 uppercase tracking-wide mb-2">
+						Mission Stats
+					</h2>
+					<VisionStats />
+				</ViewContainer>
+			</div>
+
+			{/* Testimonials Section */}
+			<div id="testimonials" className="scroll-mt-10 py-20 bg-slate-900/30">
+				<ViewContainer>
+					<h2 className="text-3xl md:text-4xl font-bold text-cyan-400 uppercase tracking-wide mb-8">
+						Agent Testimonials
+					</h2>
+				</ViewContainer>
+				<VisionTestimonials />
 			</div>
 
 			{/* FAQ Section */}
