@@ -118,6 +118,7 @@ const faqs: FaqType[] = [
 // Custom navbar for February page
 function FebruaryNavbar() {
 	const navLinks = [
+		{ name: "Winner", url: "#winner" },
 		{ name: "How It Works", url: "#how-it-works" },
 		{ name: "Hackathons", url: "#hackathons" },
 		{ name: "How to Win", url: "#how-to-win" },
@@ -494,6 +495,53 @@ export default function FebruaryPage() {
 						{/* Right Side - Circle Track */}
 						<div className="flex-shrink-0">
 							<CircleTrack />
+						</div>
+					</div>
+				</ViewContainer>
+			</section>
+
+			{/* Winner Section */}
+			<section id="winner" className="py-12 md:py-20 relative z-10 scroll-mt-20">
+				<ViewContainer>
+					<div className="text-center mb-12">
+						<h2 className="text-3xl md:text-5xl font-bold text-white mb-4">
+							Galaxy Flip 7 Winner
+						</h2>
+						<p className="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto">
+							Congratulations to our grand prize winner! Thank you for taking part in all 4 hackathons in February.
+						</p>
+					</div>
+					<div className="flex flex-col items-center justify-center">
+						<div className="bg-gray-800/80 backdrop-blur-sm border-2 border-yellow-500/50 rounded-2xl p-8 md:p-10 flex flex-col sm:flex-row items-center gap-8 max-w-2xl">
+							<div className="flex-shrink-0">
+								<Image
+									src={images.winnerAkashMohan}
+									alt="Akash Mohan - Hack All February Galaxy Flip 7 Winner"
+									className="w-32 h-32 md:w-40 md:h-40 rounded-full object-cover border-4 border-yellow-500/70 ring-2 ring-yellow-400/30"
+								/>
+							</div>
+							<div className="text-center sm:text-left">
+								<h3 className="text-2xl md:text-3xl font-bold text-white mb-2">
+									Akash Mohan
+								</h3>
+								<p className="text-gray-300 mb-4">
+									Winner of the{" "}
+									<span className="text-yellow-400 font-semibold">Samsung Galaxy Flip 7</span>{" "}
+									phone (worth ₹1,10,000) — chosen at random from everyone who completed all 4 February hackathons.
+								</p>
+								<Link
+									href="https://x.com/Akash_how"
+									target="_blank"
+									rel="noopener noreferrer"
+									className={cn(
+										buttonVariants({ variant: "outline", size: "sm" }),
+										"border-gray-400 bg-white text-black hover:bg-gray-100 inline-flex items-center gap-2",
+									)}
+								>
+									Follow on X
+									<ArrowRight className="w-4 h-4" />
+								</Link>
+							</div>
 						</div>
 					</div>
 				</ViewContainer>

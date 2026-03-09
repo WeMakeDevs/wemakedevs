@@ -5,6 +5,7 @@ import week1Logo from "./week 1.png";
 import week2Logo from "./week 2.png";
 import week3Logo from "./week 3.png";
 import week4Logo from "./week 4.png";
+import winnerAkashMohan from "./winner-akash-mohan.png";
 
 export const images = {
 	banner,
@@ -14,4 +15,5 @@ export const images = {
 	week2Logo,
 	week3Logo,
 	week4Logo,
+	winnerAkashMohan,
 };
