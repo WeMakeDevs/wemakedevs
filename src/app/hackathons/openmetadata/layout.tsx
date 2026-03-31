@@ -13,7 +13,7 @@ export default function RootLayout({
 	const hackathonNavLinks: navLinksType = [
 		{
 			name: "About",
-			url: `/hackathons/${DATA.slug}/#about`,
+			url: `/hackathons/${DATA.slug}#about`,
 			type: "link",
 		},
 		{
@@ -27,18 +27,18 @@ export default function RootLayout({
 			type: "link",
 		},
 		{
-			name: "Sponsor",
+			name: "Sponsors",
 			url: `/hackathons/${DATA.slug}#sponsor`,
 			type: "link",
 		},
 		{
-			name: "Hackathons",
-			url: "https://www.wemakedevs.org/hackathons",
+			name: "FAQs",
+			url: `/hackathons/${DATA.slug}#faq`,
 			type: "link",
 		},
 		{
-			name: "Partner with us",
-			url: "https://www.wemakedevs.org/#partners",
+			name: "Register",
+			url: DATA.cta.href,
 			type: "button",
 		},
 	];

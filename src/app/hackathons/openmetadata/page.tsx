@@ -47,23 +47,8 @@ const HackathonPage = () => {
 	return (
 		<main className="pt-20">
 
-			{/* ── Sticky Sub-page nav ──────────────────────────────────────────────── */}
-			<div className="sticky top-[64px] z-40 openmetadata-sticky-nav">
-				<HackathonNav
-					slug={DATA.slug}
-					page="overview"
-					links={navLinks}
-					navCta={{
-						label: DATA.cta.label,
-						href: DATA.cta.href,
-						openInNewTab: DATA.cta.openInNewTab,
-						disabled: DATA.cta.disabled,
-					}}
-				/>
-			</div>
-
 			{/* ── Hero Section ──────────────────────────────────────────────────────── */}
-			<div id="about" className="scroll-mt-32">
+			<div id="about" className="scroll-mt-20">
 				<HeroSection
 					title={DATA.title}
 					description={DATA.description}
@@ -71,6 +56,15 @@ const HackathonPage = () => {
 					endDate={DATA.endDate}
 					prize={DATA.prize}
 					cta={DATA.cta}
+				/>
+			</div>
+
+			{/* ── Sticky Sub-page nav (Overview, Rules, Resources, Schedule) ───────── */}
+			<div className="sticky top-[64px] z-40 openmetadata-sticky-nav">
+				<HackathonNav
+					slug={DATA.slug}
+					page="overview"
+					links={navLinks}
 				/>
 			</div>
 

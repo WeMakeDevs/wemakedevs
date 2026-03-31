@@ -184,9 +184,12 @@ const PrizesShowcase = () => {
 								<div className="bg-amber-500/15 border border-amber-500/30 p-3 rounded-xl">
 									<Award className="w-7 h-7 text-amber-400" />
 								</div>
-								<h3 className="text-2xl md:text-3xl font-bold text-white">
-									Prizes for Top Winners
-								</h3>
+								<div>
+									<h3 className="text-2xl md:text-3xl font-bold text-white">
+										Prizes for All Team Members
+									</h3>
+									<p className="text-slate-400 text-sm mt-1">Maximum team size of 4</p>
+								</div>
 							</div>
 
 							{/* Prize Cards */}
@@ -209,7 +212,7 @@ const PrizesShowcase = () => {
 								/>
 								<PrizeCard
 									place="3rd Place"
-									title="Keychron Keyboard"
+									title="Keychron Mechanical Keyboards"
 									subtitle="Premium mechanical typing"
 									icon={<KeychronIcon />}
 									accentColor="#34d399"

@@ -322,7 +322,7 @@ const HeroSection = ({ title, description, startDate, endDate, cta }: HeroSectio
 	const dateLabel = `Apr 17 - Apr 26, 2026`;
 
 	return (
-		<div ref={containerRef} className="relative min-h-[100svh] overflow-hidden flex flex-col">
+		<div ref={containerRef} className="relative min-h-[75svh] md:min-h-[80svh] overflow-hidden flex flex-col">
 
 			{/* Parallax star layer */}
 			<motion.div style={{ y: starsY }} className="absolute inset-0 pointer-events-none z-0">
@@ -332,9 +332,9 @@ const HeroSection = ({ title, description, startDate, endDate, cta }: HeroSectio
 			{/* Data lineage background */}
 			<DataLineageTrails />
 
-			{/* Flying DeLorean */}
+			{/* Flying DeLorean - bigger and centered vertically on right */}
 			<motion.div
-				className="absolute top-10 md:top-12 right-0 w-[280px] sm:w-[400px] md:w-[500px] lg:w-[620px] z-10 pointer-events-none"
+				className="absolute top-1/2 -translate-y-1/2 right-[-5%] md:right-0 w-[320px] sm:w-[450px] md:w-[550px] lg:w-[700px] xl:w-[800px] z-10 pointer-events-none"
 				style={{ x: carX, y: carY, opacity: carOpacity }}
 			>
 				<motion.div
@@ -347,7 +347,7 @@ const HeroSection = ({ title, description, startDate, endDate, cta }: HeroSectio
 			</motion.div>
 
 			{/* Hero content */}
-			<ViewContainer className="relative z-20 flex flex-col justify-center pt-24 md:pt-28 pb-16 flex-1">
+			<ViewContainer className="relative z-20 flex flex-col justify-center pt-16 md:pt-20 pb-12 flex-1">
 
 				{/* Status badges */}
 				<motion.div
@@ -400,47 +400,61 @@ const HeroSection = ({ title, description, startDate, endDate, cta }: HeroSectio
 					{description}
 				</motion.p>
 
-				{/* Clean details: Date + Countdown + Prizes */}
+				{/* Prize highlight + Details */}
 				<motion.div
-					className="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-7 max-w-3xl"
+					className="mb-6"
 					initial={{ opacity: 0, y: 20 }}
 					animate={{ opacity: 1, y: 0 }}
 					transition={{ duration: 0.65, delay: 1.9 }}
 				>
-					<div className="border border-amber-500/45 rounded-xl p-4 bg-black/60 backdrop-blur-sm shadow-[0_0_18px_rgba(245,158,11,0.18)]">
-						<div className="text-[11px] uppercase tracking-[0.18em] text-amber-500/80 mb-2 font-bold">
-							Hackathon Dates
-						</div>
-						<div
-							className="font-mono text-sm md:text-base font-bold text-amber-300"
-							style={{ textShadow: "0 0 8px rgba(252,211,77,0.7)" }}
+					{/* Big prize number */}
+					<div className="flex items-baseline gap-3 mb-4">
+						<span
+							className="text-5xl md:text-7xl font-black text-emerald-400"
+							style={{ textShadow: "0 0 40px rgba(52,211,153,0.6), 0 0 80px rgba(52,211,153,0.3)" }}
 						>
-							{dateLabel}
-						</div>
+							$5,000
+						</span>
+						<span className="text-lg md:text-xl text-slate-300 font-medium">in prizes</span>
 					</div>
-					<div className="border border-cyan-500/45 rounded-xl p-4 bg-black/60 backdrop-blur-sm shadow-[0_0_18px_rgba(6,182,212,0.2)]">
-						<div className="text-[11px] uppercase tracking-[0.18em] text-cyan-500/80 mb-2 font-bold">
-							{hackathonStarted ? "Time Remaining" : "Starts In"}
+
+					{/* Info cards */}
+					<div className="grid grid-cols-1 sm:grid-cols-3 gap-3 max-w-3xl">
+						<div className="border border-amber-500/45 rounded-xl p-4 bg-black/60 backdrop-blur-sm shadow-[0_0_18px_rgba(245,158,11,0.18)]">
+							<div className="text-[11px] uppercase tracking-[0.18em] text-amber-500/80 mb-1 font-bold">
+								Dates
+							</div>
+							<div
+								className="font-mono text-sm font-bold text-amber-300"
+								style={{ textShadow: "0 0 8px rgba(252,211,77,0.7)" }}
+							>
+								{dateLabel}
+							</div>
 						</div>
-						<div
-							className="font-mono text-sm md:text-base font-bold text-cyan-300 flex gap-1.5"
-							style={{ textShadow: "0 0 8px rgba(103,232,249,0.65)" }}
-						>
-							<span>{countdown.days}d</span>
-							<span>{countdown.hours}h</span>
-							<span>{countdown.minutes}m</span>
-							<span>{countdown.seconds}s</span>
+						<div className="border border-cyan-500/45 rounded-xl p-4 bg-black/60 backdrop-blur-sm shadow-[0_0_18px_rgba(6,182,212,0.2)]">
+							<div className="text-[11px] uppercase tracking-[0.18em] text-cyan-500/80 mb-1 font-bold">
+								{hackathonStarted ? "Time Left" : "Starts In"}
+							</div>
+							<div
+								className="font-mono text-sm font-bold text-cyan-300 flex gap-1"
+								style={{ textShadow: "0 0 8px rgba(103,232,249,0.65)" }}
+							>
+								<span>{countdown.days}d</span>
+								<span>{countdown.hours}h</span>
+								<span>{countdown.minutes}m</span>
+								<span>{countdown.seconds}s</span>
+							</div>
 						</div>
-					</div>
-					<div className="border border-emerald-500/45 rounded-xl p-4 bg-black/60 backdrop-blur-sm shadow-[0_0_18px_rgba(16,185,129,0.2)]">
-						<div className="text-[11px] uppercase tracking-[0.18em] text-emerald-500/80 mb-2 font-bold">
-							Prizes (All Team Members)
-						</div>
-						<div
-							className="font-mono text-sm md:text-base font-bold text-emerald-300"
-							style={{ textShadow: "0 0 8px rgba(110,231,183,0.65)" }}
-						>
-							MacBook Neo, iPad, Keychron
+						<div className="border border-emerald-500/45 rounded-xl p-4 bg-black/60 backdrop-blur-sm shadow-[0_0_18px_rgba(16,185,129,0.2)]">
+							<div className="text-[11px] uppercase tracking-[0.18em] text-emerald-500/80 mb-1 font-bold">
+								Top Prizes
+							</div>
+							<div
+								className="font-mono text-sm font-bold text-emerald-300"
+								style={{ textShadow: "0 0 8px rgba(110,231,183,0.65)" }}
+							>
+								MacBook, iPad, Keychron
+							</div>
 						</div>
 					</div>
 				</motion.div>
