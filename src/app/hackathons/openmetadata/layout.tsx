@@ -13,27 +13,27 @@ export default function RootLayout({
 	const hackathonNavLinks: navLinksType = [
 		{
 			name: "About",
-			url: `/hackathons/${DATA.slug}/#about`,
+			url: `/hackathons/${DATA.slug}#about`,
 			type: "link",
 		},
 		{
 			name: "Ideas",
-			url: `/hackathons/${DATA.slug}/#ideas`,
+			url: `/hackathons/${DATA.slug}#ideas`,
 			type: "link",
 		},
 		{
 			name: "Prizes",
-			url: `/hackathons/${DATA.slug}/#prizes`,
+			url: `/hackathons/${DATA.slug}#prizes`,
 			type: "link",
 		},
 		{
 			name: "Sponsors",
-			url: `/hackathons/${DATA.slug}/#sponsor`,
+			url: `/hackathons/${DATA.slug}#sponsor`,
 			type: "link",
 		},
 		{
 			name: "FAQs",
-			url: `/hackathons/${DATA.slug}/#faq`,
+			url: `/hackathons/${DATA.slug}#faq`,
 			type: "link",
 		},
 		{

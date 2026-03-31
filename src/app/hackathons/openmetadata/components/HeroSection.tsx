@@ -322,7 +322,7 @@ const HeroSection = ({ title, description, startDate, endDate, cta }: HeroSectio
 	const dateLabel = `Apr 17 - Apr 26, 2026`;
 
 	return (
-		<div ref={containerRef} className="relative min-h-[75svh] md:min-h-[80svh] overflow-hidden flex flex-col">
+		<div ref={containerRef} className="relative min-h-[62svh] md:min-h-[68svh] overflow-hidden flex flex-col">
 
 			{/* Parallax star layer */}
 			<motion.div style={{ y: starsY }} className="absolute inset-0 pointer-events-none z-0">
@@ -347,7 +347,7 @@ const HeroSection = ({ title, description, startDate, endDate, cta }: HeroSectio
 			</motion.div>
 
 			{/* Hero content */}
-			<ViewContainer className="relative z-20 flex flex-col justify-center pt-16 md:pt-20 pb-12 flex-1">
+			<ViewContainer className="relative z-20 flex flex-col justify-start pt-12 md:pt-14 pb-4 flex-1">
 
 				{/* Status badges */}
 				<motion.div
@@ -453,7 +453,7 @@ const HeroSection = ({ title, description, startDate, endDate, cta }: HeroSectio
 								className="font-mono text-sm font-bold text-emerald-300"
 								style={{ textShadow: "0 0 8px rgba(110,231,183,0.65)" }}
 							>
-								MacBook, iPad, Keychron
+							MacBooks, iPads, Keychron keyboards
 							</div>
 						</div>
 					</div>
