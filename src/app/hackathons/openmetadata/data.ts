@@ -27,17 +27,17 @@ const navLinks = [
 	},
 	{
 		href: "/hackathons/openmetadata/rules",
-		label: "Time Travel Protocol",
+		label: "Rules",
 		page: "rules",
 	},
 	{
 		href: "/hackathons/openmetadata/resources",
-		label: "Doc Brown's Lab",
+		label: "Resources",
 		page: "resources",
 	},
 	{
 		href: "/hackathons/openmetadata/schedule",
-		label: "Time Circuits",
+		label: "Schedule",
 		page: "schedule",
 	},
 ];
@@ -61,7 +61,7 @@ const faqs: FaqType[] = [
 	},
 	{
 		question: "How do I set up OpenMetadata locally?",
-		answer: "Install <a href='https://www.docker.com/products/docker-desktop/' target='_blank' rel='noopener noreferrer' class='text-amber-400 underline hover:text-amber-300'>Docker Desktop</a> and follow the <a href='https://docs.open-metadata.org/v1.12.x/quick-start/local-docker-deployment' target='_blank' rel='noopener noreferrer' class='text-amber-400 underline hover:text-amber-300'>OpenMetadata Docker Quickstart</a>. You'll have a running instance in minutes — faster than 88 mph!",
+		answer: "Install <a href='https://www.docker.com/products/docker-desktop/' target='_blank' rel='noopener noreferrer' class='text-amber-400 underline hover:text-amber-300'>Docker Desktop</a> and follow the <a href='https://docs.open-metadata.org/v1.12.x/quick-start/local-docker-deployment' target='_blank' rel='noopener noreferrer' class='text-amber-400 underline hover:text-amber-300'>OpenMetadata Docker Quickstart</a>. You'll have a running instance in minutes, faster than 88 mph!",
 	},
 	{
 		question: "Are AI assistants like ChatGPT or Copilot permitted?",
@@ -69,7 +69,7 @@ const faqs: FaqType[] = [
 	},
 	{
 		question: "What tech stack should I use?",
-		answer: "Your project must integrate with or extend <a href='https://github.com/open-metadata/OpenMetadata' target='_blank' rel='noopener noreferrer' class='text-amber-400 underline hover:text-amber-300'>OpenMetadata</a>. Beyond that, you're free to use any language, framework, or tool. Python, Java, TypeScript — all roads lead to the future.",
+		answer: "Your project must integrate with or extend <a href='https://github.com/open-metadata/OpenMetadata' target='_blank' rel='noopener noreferrer' class='text-amber-400 underline hover:text-amber-300'>OpenMetadata</a>. Beyond that, you're free to use any language, framework, or tool. Python, Java, TypeScript, all roads lead to the future.",
 	},
 	{
 		question: "Where can I get help during the hackathon?",
@@ -90,7 +90,7 @@ const schedule = [
 		date: "2026-04-13T00:00:00Z",
 		items: [
 			{
-				title: "Kickoff Livestream — Getting Started with OpenMetadata",
+				title: "Kickoff Livestream: Getting Started with OpenMetadata",
 				description:
 					"Join us for the official kickoff where we'll introduce OpenMetadata, walk through setup, and reveal hackathon objectives. Get a head start before the build phase begins!",
 				time: "2026-04-13T15:00:00Z",
@@ -107,7 +107,7 @@ const schedule = [
 		date: "2026-04-17T00:00:00Z",
 		items: [
 			{
-				title: "Hackathon Begins — Start Building!",
+				title: "Hackathon Begins: Start Building!",
 				description:
 					"The DeLorean has arrived. Fire up your flux capacitors and start building!",
 				time: "2026-04-17T00:00:00Z",
@@ -131,7 +131,7 @@ const schedule = [
 			{
 				title: "Final Submissions Due",
 				description:
-					"Submit your project before the deadline. Don't be late — this isn't a time machine!",
+					"Submit your project before the deadline. Don't be late, this isn't a time machine!",
 				time: "2026-04-26T23:59:00Z",
 			},
 		],

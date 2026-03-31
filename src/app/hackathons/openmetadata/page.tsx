@@ -47,11 +47,11 @@ const HackathonPage = () => {
 					</h2>
 					<p className="text-lg md:text-xl text-slate-300 leading-relaxed max-w-4xl mx-auto text-center">
 						OpenMetadata is an open-source unified platform for data discovery,
-						data observability, and data governance — powered by a central
+						data observability, and data governance, powered by a central
 						metadata repository, in-depth column-level lineage, and seamless
 						team collaboration. Whether you&apos;re building MCP servers, data
 						observability tools, custom connectors, governance automations, or
-						AI-powered metadata agents — this hackathon is your proving ground.
+						AI-powered metadata agents, this hackathon is your proving ground.
 						Fire up the flux capacitor and build something that changes the
 						timeline of data management forever.
 					</p>
@@ -99,12 +99,11 @@ const HackathonPage = () => {
 							<div className="flex items-center gap-4">
 								<div className="bg-slate-800 px-6 py-3 rounded-xl border border-amber-500/20">
 									<Image
-										src="https://raw.githubusercontent.com/open-metadata/OpenMetadata/main/openmetadata-docs/images/logo/OpenMetadata.svg"
+										src={images.sponsorLogo}
 										alt="OpenMetadata"
 										width={200}
 										height={50}
 										className="h-10 w-auto"
-										unoptimized
 									/>
 								</div>
 								<span className="text-slate-400 text-lg">

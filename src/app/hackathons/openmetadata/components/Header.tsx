@@ -33,7 +33,7 @@ const HackathonHeader = ({
 }: HackathonHeaderProps) => {
 	return (
 		<div className="relative py-20 md:py-28 overflow-hidden">
-			{/* Animated background glow — amber time-warp */}
+			{/* Animated background glow, amber time-warp */}
 			<div className="absolute inset-0 overflow-hidden pointer-events-none">
 				<div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-amber-500/5 rounded-full blur-3xl" />
 			</div>
@@ -109,7 +109,7 @@ const HackathonHeader = ({
 						</div>
 					</div>
 
-					{/* Info card — Time Circuit Display */}
+					{/* Info card, Time Circuit Display */}
 					<div className="flex justify-center items-start lg:items-center">
 						<div className="bg-slate-900/70 backdrop-blur-sm shadow-2xl rounded-2xl p-6 md:p-8 w-full max-w-sm border border-amber-500/20 relative overflow-hidden circuit-pulse">
 							<div className="flex items-center gap-4 text-amber-400 mb-4">

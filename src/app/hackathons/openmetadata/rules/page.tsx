@@ -44,8 +44,8 @@ const HackathonRules = async () => {
 							>
 								OpenMetadata
 							</Link>
-							. The more deeply you leverage its features — APIs, connectors,
-							lineage, governance, observability — the stronger your submission
+							. The more deeply you leverage its features like APIs, connectors,
+							lineage, governance, and observability, the stronger your submission
 							will score.
 						</li>
 						<li>

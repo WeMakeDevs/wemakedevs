@@ -69,7 +69,7 @@ const HackathonResources = async () => {
 							>
 								Docker Desktop Download
 							</Link>{" "}
-							— Select your device type and download Docker Desktop
+							- Select your device type and download Docker Desktop
 						</li>
 						<li>
 							<Link
@@ -80,7 +80,7 @@ const HackathonResources = async () => {
 							>
 								OpenMetadata on Docker Quickstart
 							</Link>{" "}
-							— Get the latest version of OpenMetadata up and running in seconds
+							- Get the latest version of OpenMetadata up and running in seconds
 						</li>
 						<li>
 							<Link
@@ -91,7 +91,7 @@ const HackathonResources = async () => {
 							>
 								OpenMetadata Day 1 Guide (Video)
 							</Link>{" "}
-							— Video walkthrough of getting started on OpenMetadata
+							- Video walkthrough of getting started on OpenMetadata
 						</li>
 						<li>
 							<Link
@@ -102,7 +102,7 @@ const HackathonResources = async () => {
 							>
 								Dev Containers & Development Setup
 							</Link>{" "}
-							— Build tools with OpenMetadata to streamline contributor onboarding
+							- Build tools with OpenMetadata to streamline contributor onboarding
 						</li>
 						<li>
 							<Link
@@ -113,7 +113,7 @@ const HackathonResources = async () => {
 							>
 								Collate Clues Playlist
 							</Link>{" "}
-							— Videos demonstrating various OpenMetadata features
+							- Videos demonstrating various OpenMetadata features
 						</li>
 						<li>
 							<Link
@@ -124,7 +124,7 @@ const HackathonResources = async () => {
 							>
 								Hackathon Resources Issue
 							</Link>{" "}
-							— Curated list of resources compiled for this hackathon
+							- Curated list of resources compiled for this hackathon
 						</li>
 					</ul>
 				</HackathonContentBody>
@@ -145,7 +145,7 @@ const HackathonResources = async () => {
 							>
 								OpenMetadata Hackathon Project Board
 							</Link>{" "}
-							— Browse all project ideas across 6 tracks
+							- Browse all project ideas across 6 tracks
 						</li>
 					</ul>
 					<p className="mt-4">

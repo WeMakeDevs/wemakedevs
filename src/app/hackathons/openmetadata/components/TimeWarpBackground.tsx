@@ -1,7 +1,7 @@
 const TimeWarpBackground = () => {
 	return (
 		<div className="fixed inset-0 pointer-events-none overflow-hidden z-0">
-			{/* Perspective grid floor — retro-futuristic */}
+			{/* Perspective grid floor, retro-futuristic */}
 			<div className="absolute bottom-0 left-0 right-0 h-[40%] opacity-[0.06]">
 				<svg
 					width="100%"
@@ -60,7 +60,7 @@ const TimeWarpBackground = () => {
 				<div className="absolute w-full h-[2px] bg-gradient-to-r from-transparent via-amber-400 to-transparent opacity-40 animate-time-warp shadow-[0_0_15px_3px_rgba(245,158,11,0.4)]" />
 			</div>
 
-			{/* Lightning bolt — top right */}
+			{/* Lightning bolt, top right */}
 			<div className="absolute top-[8%] right-[12%] opacity-[0.08] animate-lightning">
 				<svg width="60" height="120" viewBox="0 0 60 120" fill="none">
 					<path
@@ -70,7 +70,7 @@ const TimeWarpBackground = () => {
 				</svg>
 			</div>
 
-			{/* Lightning bolt — bottom left */}
+			{/* Lightning bolt, bottom left */}
 			<div className="absolute bottom-[15%] left-[8%] opacity-[0.06] animate-lightning" style={{ animationDelay: "4s" }}>
 				<svg width="40" height="80" viewBox="0 0 60 120" fill="none">
 					<path
@@ -80,7 +80,7 @@ const TimeWarpBackground = () => {
 				</svg>
 			</div>
 
-			{/* Flux capacitor glow — center */}
+			{/* Flux capacitor glow, center */}
 			<div className="absolute top-[35%] left-[50%] -translate-x-1/2 -translate-y-1/2 opacity-[0.08]">
 				<div className="relative w-40 h-40">
 					<div className="absolute inset-0 border-2 border-amber-500/40 rounded-full" />
@@ -101,14 +101,14 @@ const TimeWarpBackground = () => {
 				</div>
 			</div>
 
-			{/* "88 MPH" text — top left */}
+			{/* "88 MPH" text, top left */}
 			<div className="absolute top-[20%] left-[3%] opacity-[0.12] text-amber-500 font-mono text-xs leading-relaxed">
 				<div className="animate-pulse">88 MPH</div>
 				<div className="animate-pulse" style={{ animationDelay: "0.5s" }}>1.21 GW</div>
 				<div className="animate-pulse" style={{ animationDelay: "1s" }}>FLUX://</div>
 			</div>
 
-			{/* Clock tower — right side */}
+			{/* Clock tower, right side */}
 			<div className="absolute top-[55%] right-[5%] opacity-[0.06]">
 				<svg width="50" height="80" viewBox="0 0 50 80" fill="none">
 					<rect x="15" y="30" width="20" height="50" fill="#F59E0B" />
@@ -119,7 +119,7 @@ const TimeWarpBackground = () => {
 				</svg>
 			</div>
 
-			{/* Data stream — bottom right */}
+			{/* Data stream, bottom right */}
 			<div className="absolute bottom-[12%] right-[8%] opacity-[0.15] text-amber-500 font-mono text-xs leading-relaxed">
 				<div className="animate-pulse">METADATA</div>
 				<div className="animate-pulse" style={{ animationDelay: "0.3s" }}>DISCOVERY</div>
@@ -132,7 +132,7 @@ const TimeWarpBackground = () => {
 			<div className="absolute top-[20%] right-[20%] w-48 h-48 bg-blue-500/[0.03] rounded-full blur-3xl" />
 			<div className="absolute bottom-[30%] left-[60%] w-40 h-40 bg-amber-400/[0.03] rounded-full blur-2xl" />
 
-			{/* Corner brackets — viewfinder / time-circuit display frame */}
+			{/* Corner brackets, viewfinder / time-circuit display frame */}
 			<div className="absolute top-8 left-8 opacity-20">
 				<div className="w-8 h-8 border-l-2 border-t-2 border-amber-500" />
 			</div>
