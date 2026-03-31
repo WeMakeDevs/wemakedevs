@@ -60,7 +60,7 @@ const HackathonPage = () => {
 			</div>
 
 			{/* ── Sticky Sub-page nav (Overview, Rules, Resources, Schedule) ───────── */}
-			<div className="sticky top-[96px] z-[90]">
+			<div className="sticky top-[96px] z-[120]">
 				<ViewContainer>
 					<div className="openmetadata-sticky-nav rounded-xl overflow-hidden">
 						<HackathonNav

@@ -6,7 +6,8 @@ import type { navLinksType } from "@/types";
 import { Cross2Icon, HamburgerMenuIcon } from "@radix-ui/react-icons";
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { usePathname, useRouter } from "next/navigation";
+import { type MouseEvent, useEffect, useState } from "react";
 import { Button, buttonVariants } from "./ui/button";
 import { NavContainer } from "./ui/nav-container";
 
@@ -17,6 +18,8 @@ interface HackathonNavbarProps {
 const HackathonNavbar = ({ customNavLinks }: HackathonNavbarProps = {}) => {
 	const [isScrolled, setIsScrolled] = useState(false);
 	const [isOpen, setIsOpen] = useState(false);
+	const router = useRouter();
+	const pathname = usePathname();
 
 	const handleToggle = () => {
 		setIsOpen(prev => !prev);
@@ -63,6 +66,34 @@ const HackathonNavbar = ({ customNavLinks }: HackathonNavbarProps = {}) => {
 
 	const navLinks = customNavLinks || defaultNavLinks;
 
+	const normalizePath = (path: string) =>
+		path.endsWith("/") && path !== "/" ? path.slice(0, -1) : path;
+
+	const handleNavClick = (
+		url: string,
+		event: MouseEvent<HTMLAnchorElement>,
+	) => {
+		if (!url.includes("#")) return;
+
+		const [rawPath, hash] = url.split("#");
+		if (!hash) return;
+
+		const targetPath = rawPath || pathname;
+		const samePage = normalizePath(targetPath) === normalizePath(pathname);
+
+		if (!samePage) return;
+
+		event.preventDefault();
+		const target = document.getElementById(hash);
+		if (target) {
+			target.scrollIntoView({ behavior: "smooth", block: "start" });
+			window.history.replaceState(null, "", `#${hash}`);
+		} else {
+			router.push(url);
+		}
+		setIsOpen(false);
+	};
+
 	return (
 		<nav id="nav" className="fixed mx-auto w-full z-[100] md:py-4">
 			<NavContainer
@@ -89,6 +120,7 @@ const HackathonNavbar = ({ customNavLinks }: HackathonNavbarProps = {}) => {
 						<li key={link.name}>
 							<Link
 								href={link.url}
+								onClick={event => handleNavClick(link.url, event)}
 								className={cn(
 									buttonVariants({
 										variant:
@@ -158,13 +190,16 @@ const HackathonNavbar = ({ customNavLinks }: HackathonNavbarProps = {}) => {
 						<li key={link.name}>
 							<Link
 								href={link.url}
+								onClick={event => {
+									handleNavClick(link.url, event);
+									handleToggle();
+								}}
 								className={cn(
 									"w-full px-4 py-2 border-b border-accent-3 flex justify-center items-center",
 									link.type === "button"
 										? "bg-primary hover:bg-blue-700 text-white"
 										: "hover:bg-black/[0.04] bg-transparent",
 								)}
-								onClick={handleToggle}
 								target={link.openInNewTab ? "_blank" : "_self"}
 								rel={
 									link.openInNewTab
