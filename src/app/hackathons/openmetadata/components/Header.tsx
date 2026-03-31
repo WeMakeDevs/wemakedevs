@@ -136,7 +136,7 @@ const HackathonHeader = ({
 									+ exclusive swag
 								</p>
 								<p className="text-slate-400 mt-1">
-									+ job interviews with Team Collate
+									+ job interviews at Collate
 								</p>
 							</div>
 						</div>

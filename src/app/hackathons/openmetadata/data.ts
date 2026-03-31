@@ -2,7 +2,7 @@ import type { FaqType } from "@/types";
 
 const DATA = {
 	title: "Back to the Metadata",
-	prize: "MacBooks, iPads & More",
+	prize: "MacBook Neo, iPad Tablet & Keychron Keyboards",
 	startDate: "2026-04-17T00:00:00Z",
 	endDate: "2026-04-26T23:59:00Z",
 	description:
@@ -12,7 +12,7 @@ const DATA = {
 	slug: "openmetadata",
 	cta: {
 		label: "Register Now",
-		href: "https://forms.gle/placeholder",
+		href: "https://forms.gle/gogMB2AjCbeFQdZZ8",
 		openInNewTab: true,
 		disabled: false,
 	},
@@ -81,7 +81,7 @@ const faqs: FaqType[] = [
 	},
 	{
 		question: "Will winners get job opportunities?",
-		answer: "Yes! Top winners will get interview opportunities with Team Collate (the company behind OpenMetadata). This is a genuine chance to showcase your skills for a career in the data platform space.",
+		answer: "Yes! Top winners will get interview opportunities at Collate (the company behind OpenMetadata). This is a genuine chance to showcase your skills for a career in the data platform space.",
 	},
 ];
 

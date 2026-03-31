@@ -75,7 +75,7 @@ const HackathonRules = async () => {
 							Teams may consist of 1–4 members.
 						</li>
 						<li>
-							Career opportunities (interviews with Team Collate) don&apos;t
+							Career opportunities (interviews at Collate) don&apos;t
 							guarantee a position, but they provide a genuine chance to
 							showcase your skills and access potential roles.
 						</li>
