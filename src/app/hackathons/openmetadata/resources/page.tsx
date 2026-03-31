@@ -13,7 +13,7 @@ const HackathonResources = async () => {
 	return (
 		<div className="pt-20 pb-10 bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 min-h-screen [&_h2]:text-amber-400">
 			<HackathonCoverImage src={images.cover} alt={DATA.title} />
-			<div className="sticky top-[64px] z-40 openmetadata-sticky-nav">
+			<div className="sticky top-[56px] md:top-[72px] z-50 openmetadata-sticky-nav">
 				<HackathonNav
 					slug={DATA.slug}
 					page="resources"

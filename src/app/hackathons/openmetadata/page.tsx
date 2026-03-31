@@ -60,7 +60,7 @@ const HackathonPage = () => {
 			</div>
 
 			{/* ── Sticky Sub-page nav (Overview, Rules, Resources, Schedule) ───────── */}
-			<div className="sticky top-[64px] z-40 openmetadata-sticky-nav">
+			<div className="sticky top-[56px] md:top-[72px] z-50 openmetadata-sticky-nav">
 				<HackathonNav
 					slug={DATA.slug}
 					page="overview"

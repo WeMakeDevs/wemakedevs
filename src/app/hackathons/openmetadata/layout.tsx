@@ -40,6 +40,7 @@ export default function RootLayout({
 			name: "Register",
 			url: DATA.cta.href,
 			type: "button",
+			openInNewTab: true,
 		},
 	];
 
