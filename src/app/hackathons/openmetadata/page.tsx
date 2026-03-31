@@ -1,8 +1,5 @@
 import Faq from "@/components/Faq";
-import {
-	HackathonCoverImage,
-	HackathonNav,
-} from "@/components/hackathon-content";
+import { HackathonNav } from "@/components/hackathon-content";
 import { ViewContainer } from "@/components/ui/view-container";
 import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
@@ -49,9 +46,6 @@ const judgingCriteria = [
 const HackathonPage = () => {
 	return (
 		<main className="pt-20">
-
-			{/* ── Cover Image ──────────────────────────────────────────────────────── */}
-			<HackathonCoverImage src={images.cover} alt={DATA.title} />
 
 			{/* ── Sticky Sub-page nav ──────────────────────────────────────────────── */}
 			<div className="sticky top-[64px] z-40 openmetadata-sticky-nav">
