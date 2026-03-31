@@ -12,18 +12,23 @@ const HackathonRules = async () => {
 	return (
 		<div className="pt-20 pb-10 bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 min-h-screen">
 			<HackathonCoverImage src={images.cover} alt={DATA.title} />
-			<HackathonNav
-				slug={DATA.slug}
-				page="rules"
-				links={navLinks}
-				navCta={{
-					label: DATA.cta.label,
-					href: DATA.cta.href,
-					openInNewTab: DATA.cta.openInNewTab,
-					disabled: DATA.cta.disabled,
-				}}
-				className="sticky top-[96px] z-[120] openmetadata-sticky-nav"
-			/>
+			<div className="sticky top-[96px] z-[120]">
+				<ViewContainer>
+					<div className="openmetadata-sticky-nav rounded-xl">
+						<HackathonNav
+							slug={DATA.slug}
+							page="rules"
+							links={navLinks}
+							navCta={{
+								label: DATA.cta.label,
+								href: DATA.cta.href,
+								openInNewTab: DATA.cta.openInNewTab,
+								disabled: DATA.cta.disabled,
+							}}
+						/>
+					</div>
+				</ViewContainer>
+			</div>
 			<ViewContainer className="my-10">
 				<h2 className="text-3xl font-bold text-amber-400 mb-6">
 					Time Travel Protocol

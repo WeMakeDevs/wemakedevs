@@ -264,22 +264,23 @@
 	border-color: rgba(245, 158, 11, 0.2) !important;
 }
 
-.openmetadata-hackathon nav.openmetadata-sticky-nav {
-	background: linear-gradient(135deg, #b91c1c 0%, #991b1b 100%) !important;
-	border-color: transparent !important;
+.openmetadata-hackathon .openmetadata-sticky-nav {
+	background: linear-gradient(135deg, #b91c1c 0%, #991b1b 100%);
 	box-shadow: 0 4px 24px rgba(185, 28, 28, 0.4), 0 2px 8px rgba(0, 0, 0, 0.3);
-	position: sticky !important;
-	z-index: 200 !important;
-	isolation: isolate;
 }
 
-.openmetadata-hackathon nav.openmetadata-sticky-nav a,
-.openmetadata-hackathon nav.openmetadata-sticky-nav button {
+.openmetadata-hackathon .openmetadata-sticky-nav nav[aria-label="secondary nav"] {
+	background: transparent !important;
+	border: none !important;
+}
+
+.openmetadata-hackathon .openmetadata-sticky-nav a,
+.openmetadata-hackathon .openmetadata-sticky-nav button {
 	color: #fff !important;
 }
 
-.openmetadata-hackathon nav.openmetadata-sticky-nav a:hover,
-.openmetadata-hackathon nav.openmetadata-sticky-nav button:hover {
+.openmetadata-hackathon .openmetadata-sticky-nav a:hover,
+.openmetadata-hackathon .openmetadata-sticky-nav button:hover {
 	color: #fcd34d !important;
 	background-color: rgba(255, 255, 255, 0.15) !important;
 }

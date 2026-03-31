@@ -60,12 +60,17 @@ const HackathonPage = () => {
 			</div>
 
 			{/* ── Sticky Sub-page nav (Overview, Rules, Resources, Schedule) ───────── */}
-			<HackathonNav
-				slug={DATA.slug}
-				page="overview"
-				links={navLinks}
-				className="sticky top-[96px] z-[120] openmetadata-sticky-nav"
-			/>
+			<div className="sticky top-[96px] z-[120]">
+				<ViewContainer>
+					<div className="openmetadata-sticky-nav rounded-xl">
+						<HackathonNav
+							slug={DATA.slug}
+							page="overview"
+							links={navLinks}
+						/>
+					</div>
+				</ViewContainer>
+			</div>
 
 			{/* ── Mission Section (Fixing the Timeline) ────────────────────────────── */}
 			<div className="bg-slate-950 retro-grid">
