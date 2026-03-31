@@ -1,0 +1,152 @@
+/* Back to the Metadata Hackathon — Back to the Future Theme */
+
+@keyframes time-warp {
+	0% {
+		top: -5%;
+	}
+	100% {
+		top: 105%;
+	}
+}
+
+.animate-time-warp {
+	animation: time-warp 6s linear infinite;
+}
+
+@keyframes flicker {
+	0%, 100% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 0.7;
+	}
+}
+
+.animate-flicker {
+	animation: flicker 3s ease-in-out infinite;
+}
+
+@keyframes lightning-flash {
+	0%, 90%, 100% {
+		opacity: 0;
+	}
+	92%, 95% {
+		opacity: 0.3;
+	}
+}
+
+.animate-lightning {
+	animation: lightning-flash 8s ease-in-out infinite;
+}
+
+/* Navbar text visibility on dark background */
+.openmetadata-hackathon nav a,
+.openmetadata-hackathon nav span,
+.openmetadata-hackathon header,
+.openmetadata-hackathon header a {
+	color: #f1f5f9 !important;
+}
+
+.openmetadata-hackathon nav > div.bg-white,
+.openmetadata-hackathon nav > div[class*="bg-white"] {
+	color: #0f172a !important;
+}
+
+.openmetadata-hackathon nav > div.bg-white a:not([class*="text-white"]),
+.openmetadata-hackathon nav > div[class*="bg-white"] a:not([class*="text-white"]),
+.openmetadata-hackathon nav > div.bg-white span:not([class*="text-white"]),
+.openmetadata-hackathon nav > div[class*="bg-white"] span:not([class*="text-white"]) {
+	color: #0f172a !important;
+}
+
+.openmetadata-hackathon nav a:hover,
+.openmetadata-hackathon header a:hover {
+	color: #f59e0b !important;
+}
+
+.openmetadata-hackathon nav > div.bg-white a:not([class*="text-white"]):hover,
+.openmetadata-hackathon nav > div[class*="bg-white"] a:not([class*="text-white"]):hover {
+	color: #d97706 !important;
+}
+
+.openmetadata-hackathon nav[aria-label="secondary nav"] {
+	background-color: rgba(15, 23, 42, 0.9) !important;
+	backdrop-filter: blur(8px);
+	border-color: rgba(245, 158, 11, 0.2) !important;
+}
+
+.openmetadata-hackathon h2 {
+	color: #f59e0b;
+}
+
+.openmetadata-hackathon .text-slate-300 a {
+	color: #f59e0b;
+}
+
+.openmetadata-hackathon .text-slate-300 a:hover {
+	color: #fbbf24;
+}
+
+/* FAQ answer text */
+.openmetadata-hackathon #faq [class*="bg-white"] [class*="pb-4"],
+.openmetadata-hackathon #faq [class*="bg-white"] [class*="pb-4"] * {
+	color: #92400e !important;
+}
+
+.openmetadata-hackathon #faq [class*="bg-white"] [class*="pb-4"] a {
+	color: #b45309 !important;
+}
+
+.openmetadata-hackathon #faq [class*="bg-white"] [class*="pb-4"] a:hover {
+	color: #78350f !important;
+}
+
+/* Glowing text effect */
+.openmetadata-hackathon .glow-text {
+	text-shadow: 0 0 20px rgba(245, 158, 11, 0.5),
+		0 0 40px rgba(245, 158, 11, 0.3),
+		0 0 60px rgba(245, 158, 11, 0.1);
+}
+
+/* Time circuit display pulse */
+@keyframes circuit-pulse {
+	0%, 100% {
+		border-color: rgba(245, 158, 11, 0.3);
+		box-shadow: 0 0 10px rgba(245, 158, 11, 0.1);
+	}
+	50% {
+		border-color: rgba(245, 158, 11, 0.6);
+		box-shadow: 0 0 20px rgba(245, 158, 11, 0.3);
+	}
+}
+
+.openmetadata-hackathon .circuit-pulse {
+	animation: circuit-pulse 2s ease-in-out infinite;
+}
+
+/* Retro grid pattern */
+.openmetadata-hackathon .retro-grid {
+	background-image: 
+		linear-gradient(rgba(245, 158, 11, 0.04) 1px, transparent 1px),
+		linear-gradient(90deg, rgba(245, 158, 11, 0.04) 1px, transparent 1px);
+	background-size: 30px 30px;
+}
+
+/* Speed lines */
+@keyframes speed-line {
+	0% {
+		transform: translateX(-100%);
+		opacity: 0;
+	}
+	50% {
+		opacity: 1;
+	}
+	100% {
+		transform: translateX(200%);
+		opacity: 0;
+	}
+}
+
+.openmetadata-hackathon .speed-line {
+	animation: speed-line 3s linear infinite;
+}

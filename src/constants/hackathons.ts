@@ -16,6 +16,8 @@ import { DATA as twoFastTwoMcpData } from "@/app/hackathons/2fast2mcp/data";
 import { images as twoFastTwoMcpImages } from "@/app/hackathons/2fast2mcp/images";
 import { DATA as tamboData } from "@/app/hackathons/tambo/data";
 import { images as tamboImages } from "@/app/hackathons/tambo/images";
+import { DATA as openmetadataData } from "@/app/hackathons/openmetadata/data";
+import { images as openmetadataImages } from "@/app/hackathons/openmetadata/images";
 import { DATA as visionData } from "@/app/hackathons/vision/data";
 import { images as visionImages } from "@/app/hackathons/vision/images";
 import { images as februaryImages } from "@/app/february/images";
@@ -40,6 +42,14 @@ type HackathonType = {
 };
 
 const hackathons: HackathonType[] = [
+	{
+		slug: openmetadataData.slug,
+		title: openmetadataData.title,
+		description: openmetadataData.descriptionCard,
+		thumbnail: openmetadataImages.thumbnail,
+		startDate: openmetadataData.startDate,
+		endDate: openmetadataData.endDate,
+	},
 	{
 		slug: accomplishData.slug,
 		title: accomplishData.title,
