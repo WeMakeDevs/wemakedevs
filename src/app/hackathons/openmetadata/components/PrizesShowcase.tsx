@@ -230,18 +230,31 @@ const PrizesShowcase = () => {
 									<Award className="w-4 h-4" />
 									Participation certificates for all
 								</span>
-								<span className="inline-flex items-center gap-2 bg-cyan-500/10 backdrop-blur-sm px-5 py-2.5 rounded-full font-semibold text-cyan-300 border border-cyan-500/30">
-									<span className="text-sm">💻</span>
-									$100 for each merged PR from a{" "}
+							</div>
+
+							<div className="mt-5 rounded-2xl border border-cyan-500/40 bg-cyan-500/10 px-6 py-5 backdrop-blur-sm shadow-[0_0_30px_rgba(6,182,212,0.16)]">
+								<div className="flex flex-col md:flex-row md:items-center md:justify-between gap-3">
+									<div className="flex items-start gap-3">
+										<span className="text-xl">💻</span>
+										<div>
+											<p className="text-cyan-300 font-bold text-lg">
+												Contribution Track: $100 per merged PR
+											</p>
+											<p className="text-cyan-100/90 text-sm">
+												Solve any OpenMetadata issue labeled{" "}
+												<span className="font-semibold">good-first-issue</span> and get your PR merged.
+											</p>
+										</div>
+									</div>
 									<Link
 										href="https://github.com/open-metadata/OpenMetadata/issues?q=is%3Aissue%20state%3Aopen%20label%3Agood-first-issue"
 										target="_blank"
 										rel="noopener noreferrer"
-										className="underline decoration-2 underline-offset-2 hover:text-cyan-200"
+										className="inline-flex items-center justify-center px-4 py-2 rounded-lg border border-cyan-300/40 text-cyan-200 hover:text-white hover:bg-cyan-500/20 transition-colors font-semibold text-sm"
 									>
-										good-first-issue
+										View good-first-issues
 									</Link>
-								</span>
+								</div>
 							</div>
 						</div>
 					</div>
