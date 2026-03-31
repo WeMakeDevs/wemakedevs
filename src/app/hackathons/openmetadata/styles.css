@@ -267,6 +267,8 @@
 .openmetadata-hackathon .openmetadata-sticky-nav {
 	background: linear-gradient(135deg, #b91c1c 0%, #991b1b 100%);
 	box-shadow: 0 4px 24px rgba(185, 28, 28, 0.4), 0 2px 8px rgba(0, 0, 0, 0.3);
+	border-radius: 0.75rem;
+	overflow: clip;
 }
 
 .openmetadata-hackathon .openmetadata-sticky-nav nav[aria-label="secondary nav"] {
