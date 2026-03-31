@@ -11,23 +11,18 @@ const HackathonSchedule = async () => {
 	return (
 		<div className="pt-20 pb-10 bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 min-h-screen">
 			<HackathonCoverImage src={images.cover} alt={DATA.title} />
-			<div className="sticky top-[96px] z-[120]">
-				<ViewContainer>
-					<div className="openmetadata-sticky-nav rounded-xl overflow-hidden">
-						<HackathonNav
-							slug={DATA.slug}
-							page="schedule"
-							links={navLinks}
-							navCta={{
-								label: DATA.cta.label,
-								href: DATA.cta.href,
-								openInNewTab: DATA.cta.openInNewTab,
-								disabled: DATA.cta.disabled,
-							}}
-						/>
-					</div>
-				</ViewContainer>
-			</div>
+			<HackathonNav
+				slug={DATA.slug}
+				page="schedule"
+				links={navLinks}
+				navCta={{
+					label: DATA.cta.label,
+					href: DATA.cta.href,
+					openInNewTab: DATA.cta.openInNewTab,
+					disabled: DATA.cta.disabled,
+				}}
+				className="sticky top-[96px] z-[120] openmetadata-sticky-nav"
+			/>
 			<ViewContainer className="my-14">
 				<h2 className="text-3xl font-bold text-amber-400 mb-8 text-center">
 					Time Circuits

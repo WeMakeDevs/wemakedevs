@@ -254,33 +254,22 @@
 	border-color: rgba(245, 158, 11, 0.2) !important;
 }
 
-.openmetadata-hackathon .openmetadata-sticky-nav {
-	background: linear-gradient(135deg, #b91c1c 0%, #991b1b 100%);
-	border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+.openmetadata-hackathon nav.openmetadata-sticky-nav {
+	background: linear-gradient(135deg, #b91c1c 0%, #991b1b 100%) !important;
+	border-color: transparent !important;
 	box-shadow: 0 4px 24px rgba(185, 28, 28, 0.4), 0 2px 8px rgba(0, 0, 0, 0.3);
-	position: relative;
-	z-index: 120;
-	pointer-events: auto;
 }
 
-.openmetadata-hackathon .openmetadata-sticky-nav nav[aria-label="secondary nav"] {
-	background: transparent !important;
-	border: none !important;
-	pointer-events: auto;
-}
-
-.openmetadata-hackathon .openmetadata-sticky-nav nav[aria-label="secondary nav"] a {
+.openmetadata-hackathon nav.openmetadata-sticky-nav a {
 	color: #fff !important;
-	position: relative;
-	z-index: 1;
 }
 
-.openmetadata-hackathon .openmetadata-sticky-nav nav[aria-label="secondary nav"] a:hover {
+.openmetadata-hackathon nav.openmetadata-sticky-nav a:hover {
 	color: #fcd34d !important;
 	background-color: rgba(255, 255, 255, 0.15) !important;
 }
 
-.openmetadata-hackathon .openmetadata-sticky-nav nav[aria-label="secondary nav"] button {
+.openmetadata-hackathon nav.openmetadata-sticky-nav button {
 	color: #fff !important;
 }
 
