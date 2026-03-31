@@ -218,6 +218,16 @@
    Navbar & Layout Overrides
    ═══════════════════════════════════════════════════════════════════════════════ */
 
+/* The fixed main navbar covers the full viewport and blocks clicks on sticky
+   elements below it. Make the outer nav pass-through and only its visible
+   children capture pointer events. */
+.openmetadata-hackathon nav#nav {
+	pointer-events: none;
+}
+.openmetadata-hackathon nav#nav > * {
+	pointer-events: auto;
+}
+
 .openmetadata-hackathon nav a,
 .openmetadata-hackathon nav span,
 .openmetadata-hackathon header,
@@ -258,19 +268,20 @@
 	background: linear-gradient(135deg, #b91c1c 0%, #991b1b 100%) !important;
 	border-color: transparent !important;
 	box-shadow: 0 4px 24px rgba(185, 28, 28, 0.4), 0 2px 8px rgba(0, 0, 0, 0.3);
+	position: sticky !important;
+	z-index: 200 !important;
+	isolation: isolate;
 }
 
-.openmetadata-hackathon nav.openmetadata-sticky-nav a {
-	color: #fff !important;
-}
-
-.openmetadata-hackathon nav.openmetadata-sticky-nav a:hover {
-	color: #fcd34d !important;
-	background-color: rgba(255, 255, 255, 0.15) !important;
-}
-
+.openmetadata-hackathon nav.openmetadata-sticky-nav a,
 .openmetadata-hackathon nav.openmetadata-sticky-nav button {
 	color: #fff !important;
+}
+
+.openmetadata-hackathon nav.openmetadata-sticky-nav a:hover,
+.openmetadata-hackathon nav.openmetadata-sticky-nav button:hover {
+	color: #fcd34d !important;
+	background-color: rgba(255, 255, 255, 0.15) !important;
 }
 
 .openmetadata-hackathon h2 {

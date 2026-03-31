@@ -4,6 +4,7 @@ import { cn } from "@/lib/utils";
 import type { HackathonNavInterface } from "@/types";
 import { Menu, X } from "lucide-react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { buttonVariants } from "../ui/button";
 import { ViewContainer } from "../ui/view-container";
@@ -33,6 +34,7 @@ const HackathonNav = ({
 	navCta?: NavCta;
 }) => {
 	const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+	const router = useRouter();
 
 	const toggleMobileMenu = () => {
 		setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -40,6 +42,11 @@ const HackathonNav = ({
 
 	const closeMobileMenu = () => {
 		setIsMobileMenuOpen(false);
+	};
+
+	const navigate = (href: string) => {
+		closeMobileMenu();
+		window.location.href = href;
 	};
 
 	return (
@@ -56,15 +63,16 @@ const HackathonNav = ({
 				<ul className="hidden md:flex list-none">
 					{links.map(link => (
 						<li key={link.page}>
-							<Link
-								href={link.href}
+							<button
+								type="button"
+								onClick={() => navigate(link.href)}
 								className={cn(
-									"px-6 py-4 font-medium hover:bg-foreground/10 inline-block",
+									"px-6 py-4 font-medium hover:bg-foreground/10 inline-block cursor-pointer",
 									page === link.page && "shadow-secondaryNav",
 								)}
 							>
 								{link.label}
-							</Link>
+							</button>
 						</li>
 					))}
 				</ul>
@@ -133,17 +141,17 @@ const HackathonNav = ({
 					<ul className="flex flex-col list-none">
 						{links.map(link => (
 							<li key={link.page}>
-								<Link
-									href={link.href}
-									onClick={closeMobileMenu}
+								<button
+									type="button"
+									onClick={() => navigate(link.href)}
 									className={cn(
-										"px-6 py-4 font-medium hover:bg-foreground/10 inline-block w-full text-left border-b border-foreground/5 last:border-b-0",
+										"px-6 py-4 font-medium hover:bg-foreground/10 w-full text-left border-b border-foreground/5 last:border-b-0",
 										page === link.page &&
 											"bg-foreground/10 shadow-secondaryNav",
 									)}
 								>
 									{link.label}
-								</Link>
+								</button>
 							</li>
 						))}
 					</ul>
