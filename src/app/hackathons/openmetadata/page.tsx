@@ -1,5 +1,8 @@
 import Faq from "@/components/Faq";
-import { HackathonNav } from "@/components/hackathon-content";
+import {
+	HackathonCoverImage,
+	HackathonNav,
+} from "@/components/hackathon-content";
 import { ViewContainer } from "@/components/ui/view-container";
 import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
@@ -47,18 +50,8 @@ const HackathonPage = () => {
 	return (
 		<main className="pt-20">
 
-			{/* ── Cover Image Banner ───────────────────────────────────────────────── */}
-			<div className="relative w-full h-[280px] md:h-[360px] lg:h-[420px] overflow-hidden">
-				<Image
-					src={images.cover}
-					alt={DATA.title}
-					fill
-					priority
-					className="object-cover object-center"
-				/>
-				<div className="absolute inset-0 bg-gradient-to-b from-slate-950/40 via-transparent to-slate-950" />
-				<div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent" />
-			</div>
+			{/* ── Cover Image ──────────────────────────────────────────────────────── */}
+			<HackathonCoverImage src={images.cover} alt={DATA.title} />
 
 			{/* ── Sticky Sub-page nav ──────────────────────────────────────────────── */}
 			<div className="sticky top-[64px] z-40 openmetadata-sticky-nav">
