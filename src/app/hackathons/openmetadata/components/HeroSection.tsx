@@ -3,9 +3,9 @@
 import HackathonStatus from "@/components/HackathonStatus";
 import { ViewContainer } from "@/components/ui/view-container";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { CalendarDays, Zap } from "lucide-react";
+import { Zap } from "lucide-react";
 import Link from "next/link";
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 type HeroSectionProps = {
 	title: string;
@@ -270,7 +270,37 @@ const DataLineageTrails = () => (
 	</div>
 );
 
-// ─── Hero Section ─────────────────────────────────────────────────────────────
+// Countdown hook
+const useCountdown = (targetDate: Date) => {
+	const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+
+	useEffect(() => {
+		const calculate = () => {
+			const now = new Date().getTime();
+			const target = targetDate.getTime();
+			const diff = target - now;
+
+			if (diff <= 0) {
+				return { days: 0, hours: 0, minutes: 0, seconds: 0 };
+			}
+
+			return {
+				days: Math.floor(diff / (1000 * 60 * 60 * 24)),
+				hours: Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
+				minutes: Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60)),
+				seconds: Math.floor((diff % (1000 * 60)) / 1000),
+			};
+		};
+
+		setTimeLeft(calculate());
+		const interval = setInterval(() => setTimeLeft(calculate()), 1000);
+		return () => clearInterval(interval);
+	}, [targetDate]);
+
+	return timeLeft;
+};
+
+// Hero Section
 const HeroSection = ({ title, description, startDate, endDate, cta }: HeroSectionProps) => {
 	const containerRef = useRef<HTMLDivElement>(null);
 	const { scrollYProgress } = useScroll({ target: containerRef, offset: ["start start", "end start"] });
@@ -284,10 +314,12 @@ const HeroSection = ({ title, description, startDate, endDate, cta }: HeroSectio
 
 	const startD = new Date(startDate);
 	const endD = new Date(endDate);
-	const dateLabel = `${startD.toLocaleString("en-US", {
-		month: "short",
-		day: "numeric",
-	})} - ${endD.toLocaleString("en-US", { month: "short", day: "numeric", year: "numeric" })}`;
+	const now = new Date();
+	const hackathonStarted = now >= startD;
+	const countdownTarget = hackathonStarted ? endD : startD;
+	const countdown = useCountdown(countdownTarget);
+
+	const dateLabel = `Apr 17 - Apr 26, 2026`;
 
 	return (
 		<div ref={containerRef} className="relative min-h-[100svh] overflow-hidden flex flex-col">
@@ -331,7 +363,7 @@ const HeroSection = ({ title, description, startDate, endDate, cta }: HeroSectio
 					</span>
 				</motion.div>
 
-				{/* Title — staggered word entrance */}
+				{/* Title */}
 				<div className="mb-5 max-w-[580px] lg:max-w-[660px]">
 					{titleWords.map((word, wi) => (
 						<span key={wi} className="inline-block overflow-hidden mr-3 mb-1">
@@ -368,9 +400,9 @@ const HeroSection = ({ title, description, startDate, endDate, cta }: HeroSectio
 					{description}
 				</motion.p>
 
-				{/* Clean details: Date + Prizes */}
+				{/* Clean details: Date + Countdown + Prizes */}
 				<motion.div
-					className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-7 max-w-2xl"
+					className="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-7 max-w-3xl"
 					initial={{ opacity: 0, y: 20 }}
 					animate={{ opacity: 1, y: 0 }}
 					transition={{ duration: 0.65, delay: 1.9 }}
@@ -384,6 +416,20 @@ const HeroSection = ({ title, description, startDate, endDate, cta }: HeroSectio
 							style={{ textShadow: "0 0 8px rgba(252,211,77,0.7)" }}
 						>
 							{dateLabel}
+						</div>
+					</div>
+					<div className="border border-cyan-500/45 rounded-xl p-4 bg-black/60 backdrop-blur-sm shadow-[0_0_18px_rgba(6,182,212,0.2)]">
+						<div className="text-[11px] uppercase tracking-[0.18em] text-cyan-500/80 mb-2 font-bold">
+							{hackathonStarted ? "Time Remaining" : "Starts In"}
+						</div>
+						<div
+							className="font-mono text-sm md:text-base font-bold text-cyan-300 flex gap-1.5"
+							style={{ textShadow: "0 0 8px rgba(103,232,249,0.65)" }}
+						>
+							<span>{countdown.days}d</span>
+							<span>{countdown.hours}h</span>
+							<span>{countdown.minutes}m</span>
+							<span>{countdown.seconds}s</span>
 						</div>
 					</div>
 					<div className="border border-emerald-500/45 rounded-xl p-4 bg-black/60 backdrop-blur-sm shadow-[0_0_18px_rgba(16,185,129,0.2)]">
@@ -422,10 +468,6 @@ const HeroSection = ({ title, description, startDate, endDate, cta }: HeroSectio
 							{cta.label}
 						</Link>
 					)}
-					<div className="flex items-center gap-2 text-slate-400 text-sm">
-						<CalendarDays className="w-4 h-4 text-amber-500/60" />
-						<span>Apr 17–26, 2026 · Online</span>
-					</div>
 				</motion.div>
 			</ViewContainer>
 		</div>

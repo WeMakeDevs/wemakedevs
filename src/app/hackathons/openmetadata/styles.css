@@ -248,9 +248,18 @@
 }
 
 .openmetadata-hackathon nav[aria-label="secondary nav"] {
-	background-color: rgba(15, 23, 42, 0.9) !important;
-	backdrop-filter: blur(8px);
+	background-color: rgba(15, 23, 42, 0.95) !important;
+	backdrop-filter: blur(12px);
+	-webkit-backdrop-filter: blur(12px);
 	border-color: rgba(245, 158, 11, 0.2) !important;
+}
+
+.openmetadata-hackathon .openmetadata-sticky-nav {
+	background-color: rgba(15, 23, 42, 0.98);
+	backdrop-filter: blur(16px);
+	-webkit-backdrop-filter: blur(16px);
+	border-bottom: 1px solid rgba(245, 158, 11, 0.15);
+	box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
 }
 
 .openmetadata-hackathon h2 {

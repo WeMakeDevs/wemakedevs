@@ -47,8 +47,36 @@ const HackathonPage = () => {
 	return (
 		<main className="pt-20">
 
+			{/* ── Cover Image Banner ───────────────────────────────────────────────── */}
+			<div className="relative w-full h-[280px] md:h-[360px] lg:h-[420px] overflow-hidden">
+				<Image
+					src={images.cover}
+					alt={DATA.title}
+					fill
+					priority
+					className="object-cover object-center"
+				/>
+				<div className="absolute inset-0 bg-gradient-to-b from-slate-950/40 via-transparent to-slate-950" />
+				<div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent" />
+			</div>
+
+			{/* ── Sticky Sub-page nav ──────────────────────────────────────────────── */}
+			<div className="sticky top-[64px] z-40 openmetadata-sticky-nav">
+				<HackathonNav
+					slug={DATA.slug}
+					page="overview"
+					links={navLinks}
+					navCta={{
+						label: DATA.cta.label,
+						href: DATA.cta.href,
+						openInNewTab: DATA.cta.openInNewTab,
+						disabled: DATA.cta.disabled,
+					}}
+				/>
+			</div>
+
 			{/* ── Hero Section ──────────────────────────────────────────────────────── */}
-			<div id="about" className="scroll-mt-16">
+			<div id="about" className="scroll-mt-32">
 				<HeroSection
 					title={DATA.title}
 					description={DATA.description}
@@ -58,19 +86,6 @@ const HackathonPage = () => {
 					cta={DATA.cta}
 				/>
 			</div>
-
-			{/* ── Sub-page nav ──────────────────────────────────────────────────────── */}
-			<HackathonNav
-				slug={DATA.slug}
-				page="overview"
-				links={navLinks}
-				navCta={{
-					label: DATA.cta.label,
-					href: DATA.cta.href,
-					openInNewTab: DATA.cta.openInNewTab,
-					disabled: DATA.cta.disabled,
-				}}
-			/>
 
 			{/* ── Mission Section (Fixing the Timeline) ────────────────────────────── */}
 			<div className="bg-slate-950 retro-grid">
@@ -89,35 +104,19 @@ const HackathonPage = () => {
 							OpenMetadata is an open-source unified platform for{" "}
 							<span className="text-amber-400 font-semibold">data discovery</span>,{" "}
 							<span className="text-purple-400 font-semibold">data observability</span>, and{" "}
-							<span className="text-cyan-400 font-semibold">data governance</span>—powered by
+							<span className="text-cyan-400 font-semibold">data governance</span>, powered by
 							a central metadata repository, in-depth column-level lineage, and seamless team
 							collaboration. Whether you&apos;re building MCP servers, observability tools,
 							custom connectors, governance automations, or AI-powered metadata agents, this
 							hackathon is your proving ground. Fire up the flux capacitor and build something
 							that changes the timeline of data management forever.
 						</p>
-						<div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-10">
-							{[
-								{ icon: "🔍", label: "Discovery", desc: "Find & understand your data universe" },
-								{ icon: "🔗", label: "Lineage", desc: "Trace the origin of every data point" },
-								{ icon: "🛡️", label: "Governance", desc: "Enforce policies across the timeline" },
-							].map((item) => (
-								<div
-									key={item.label}
-									className="bg-slate-900/50 border border-amber-500/15 rounded-xl p-5 text-center hover:border-amber-500/35 transition-colors"
-								>
-									<div className="text-3xl mb-2">{item.icon}</div>
-									<div className="font-bold text-amber-400 mb-1">{item.label}</div>
-									<div className="text-slate-400 text-sm">{item.desc}</div>
-								</div>
-							))}
-						</div>
 					</div>
 				</ViewContainer>
 			</div>
 
 			{/* ── Ideas / Temporal Paradoxes ────────────────────────────────────────── */}
-			<div id="ideas" className="scroll-mt-16 bg-slate-900/30">
+			<div id="ideas" className="scroll-mt-32 bg-slate-900/30">
 				<IdeasSection />
 			</div>
 
@@ -142,12 +141,12 @@ const HackathonPage = () => {
 			)}
 
 			{/* ── Prizes ────────────────────────────────────────────────────────────── */}
-			<div id="prizes" className="scroll-mt-16 bg-slate-950">
+			<div id="prizes" className="scroll-mt-32 bg-slate-950">
 				<PrizesShowcase />
 			</div>
 
 			{/* ── Sponsor ───────────────────────────────────────────────────────────── */}
-			<div id="sponsor" className="py-20 scroll-mt-10 bg-slate-900/30">
+			<div id="sponsor" className="py-20 scroll-mt-32 bg-slate-900/30">
 				<ViewContainer>
 					<h2 className="text-3xl md:text-4xl font-black italic uppercase text-amber-400 mb-8">
 						Powered By
@@ -191,7 +190,7 @@ const HackathonPage = () => {
 			</div>
 
 			{/* ── Judging Criteria ──────────────────────────────────────────────────── */}
-			<div id="judging" className="scroll-mt-10 py-20 bg-slate-950">
+			<div id="judging" className="scroll-mt-32 py-20 bg-slate-950">
 				<ViewContainer>
 					<div className="text-center mb-12">
 						<span className="inline-flex items-center gap-2 bg-amber-500/10 border border-amber-500/30 text-amber-400 px-5 py-2 rounded-full text-sm font-semibold mb-6 backdrop-blur-sm">
@@ -223,7 +222,7 @@ const HackathonPage = () => {
 			</div>
 
 			{/* ── FAQ ───────────────────────────────────────────────────────────────── */}
-			<div id="faq" className="scroll-mt-20 py-20 bg-slate-900/30">
+			<div id="faq" className="scroll-mt-32 py-20 bg-slate-900/30">
 				<ViewContainer>
 					<div className="[&_h2]:text-amber-400 [&_h2]:font-bold [&_div[class*='pb-4']]:text-amber-700 [&_div[class*='pb-4']_a]:text-amber-700">
 						<Faq FAQS={faqs} />

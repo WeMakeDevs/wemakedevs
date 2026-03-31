@@ -149,7 +149,7 @@ const PrizesShowcase = () => {
 		<div className="py-20">
 			<div className="max-w-6xl mx-auto px-4">
 				{/* Section Header */}
-				<div className="text-center mb-16">
+				<div className="text-center mb-12">
 					<div className="flex justify-center mb-6">
 						<div className="bg-gradient-to-br from-amber-500 to-orange-600 p-5 rounded-2xl shadow-lg shadow-amber-500/30">
 							<Trophy className="w-10 h-10 text-slate-900" />
@@ -158,9 +158,16 @@ const PrizesShowcase = () => {
 					<h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-amber-400 via-orange-300 to-amber-500 bg-clip-text text-transparent mb-4">
 						Temporal Treasures
 					</h2>
-					<p className="text-lg text-slate-400 max-w-2xl mx-auto">
-						The best time travelers get rewarded. Every team member takes home a prize.
+					<p className="text-lg text-slate-400 max-w-2xl mx-auto mb-6">
+						The best time travelers get rewarded.
 					</p>
+					{/* Highlighted banner */}
+					<div className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-gradient-to-r from-emerald-500/20 via-emerald-500/15 to-emerald-500/20 border-2 border-emerald-400/50 shadow-[0_0_30px_rgba(52,211,153,0.25)]">
+						<span className="text-2xl">🎁</span>
+						<span className="text-lg md:text-xl font-bold text-emerald-300" style={{ textShadow: "0 0 12px rgba(110,231,183,0.5)" }}>
+							Every team member receives the full prize!
+						</span>
+					</div>
 				</div>
 
 				{/* Prize Cards Grid */}
@@ -177,12 +184,9 @@ const PrizesShowcase = () => {
 								<div className="bg-amber-500/15 border border-amber-500/30 p-3 rounded-xl">
 									<Award className="w-7 h-7 text-amber-400" />
 								</div>
-								<div>
-									<h3 className="text-2xl md:text-3xl font-bold text-white">
-										Prizes for Top Winners
-									</h3>
-									<p className="text-slate-400 text-sm mt-0.5">Every team member receives the full prize</p>
-								</div>
+								<h3 className="text-2xl md:text-3xl font-bold text-white">
+									Prizes for Top Winners
+								</h3>
 							</div>
 
 							{/* Prize Cards */}
