@@ -87,32 +87,65 @@ const HackathonNavbar = ({ customNavLinks }: HackathonNavbarProps = {}) => {
 				<ul className="flex lg:gap-2">
 					{navLinks.map(link => (
 						<li key={link.name}>
-							<Link
-								href={link.url}
-								className={cn(
-									buttonVariants({
-										variant:
-											link.type === "button"
-												? "default"
-												: "ghost",
-									}),
-									"px-4 py-2",
-									isScrolled
-										? link.type === "button"
-											? "text-white"
-											: "text-slate-900"
-										: "text-foreground",
-									link.type === "button" && !isScrolled && "text-white",
-								)}
-								target={link.openInNewTab ? "_blank" : "_self"}
-								rel={
-									link.openInNewTab
-										? "noreferrer noopener"
-										: ""
-								}
-							>
-								{link.name}
-							</Link>
+							{link.url.includes("#") ? (
+								<a
+									href={link.url}
+									className={cn(
+										buttonVariants({
+											variant:
+												link.type === "button"
+													? "default"
+													: "ghost",
+										}),
+										"px-4 py-2",
+										isScrolled
+											? link.type === "button"
+												? "text-white"
+												: "text-slate-900"
+											: "text-foreground",
+										link.type === "button" &&
+											!isScrolled &&
+											"text-white",
+									)}
+									target={link.openInNewTab ? "_blank" : "_self"}
+									rel={
+										link.openInNewTab
+											? "noreferrer noopener"
+											: ""
+									}
+								>
+									{link.name}
+								</a>
+							) : (
+								<Link
+									href={link.url}
+									className={cn(
+										buttonVariants({
+											variant:
+												link.type === "button"
+													? "default"
+													: "ghost",
+										}),
+										"px-4 py-2",
+										isScrolled
+											? link.type === "button"
+												? "text-white"
+												: "text-slate-900"
+											: "text-foreground",
+										link.type === "button" &&
+											!isScrolled &&
+											"text-white",
+									)}
+									target={link.openInNewTab ? "_blank" : "_self"}
+									rel={
+										link.openInNewTab
+											? "noreferrer noopener"
+											: ""
+									}
+								>
+									{link.name}
+								</Link>
+							)}
 						</li>
 					))}
 				</ul>
@@ -156,18 +189,39 @@ const HackathonNavbar = ({ customNavLinks }: HackathonNavbarProps = {}) => {
 				>
 					{navLinks.map(link => (
 						<li key={link.name}>
-							<Link
-								href={link.url}
-								className={cn(
-									"w-full px-4 py-2 border-b border-accent-3 flex justify-center items-center",
-									link.type === "button"
-										? "bg-primary hover:bg-blue-700 text-white"
-										: "hover:bg-black/[0.04] bg-transparent",
-								)}
-								onClick={handleToggle}
-							>
-								{link.name}
-							</Link>
+							{link.url.includes("#") ? (
+								<a
+									href={link.url}
+									className={cn(
+										"w-full px-4 py-2 border-b border-accent-3 flex justify-center items-center",
+										link.type === "button"
+											? "bg-primary hover:bg-blue-700 text-white"
+											: "hover:bg-black/[0.04] bg-transparent",
+									)}
+									onClick={handleToggle}
+									target={link.openInNewTab ? "_blank" : "_self"}
+									rel={
+										link.openInNewTab
+											? "noreferrer noopener"
+											: ""
+									}
+								>
+									{link.name}
+								</a>
+							) : (
+								<Link
+									href={link.url}
+									className={cn(
+										"w-full px-4 py-2 border-b border-accent-3 flex justify-center items-center",
+										link.type === "button"
+											? "bg-primary hover:bg-blue-700 text-white"
+											: "hover:bg-black/[0.04] bg-transparent",
+									)}
+									onClick={handleToggle}
+								>
+									{link.name}
+								</Link>
+							)}
 						</li>
 					))}
 				</ul>

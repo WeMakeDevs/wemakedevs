@@ -48,7 +48,7 @@ const HackathonPage = () => {
 		<main className="pt-20">
 
 			{/* ── Hero Section ──────────────────────────────────────────────────────── */}
-			<div id="about" className="scroll-mt-20">
+			<div id="about" className="scroll-mt-44">
 				<HeroSection
 					title={DATA.title}
 					description={DATA.description}
@@ -60,7 +60,7 @@ const HackathonPage = () => {
 			</div>
 
 			{/* ── Sticky Sub-page nav (Overview, Rules, Resources, Schedule) ───────── */}
-			<div className="sticky top-[56px] md:top-[72px] z-50 openmetadata-sticky-nav">
+			<div className="sticky top-[96px] z-[90] openmetadata-sticky-nav">
 				<HackathonNav
 					slug={DATA.slug}
 					page="overview"
@@ -97,7 +97,7 @@ const HackathonPage = () => {
 			</div>
 
 			{/* ── Ideas / Temporal Paradoxes ────────────────────────────────────────── */}
-			<div id="ideas" className="scroll-mt-32 bg-slate-900/30">
+			<div id="ideas" className="scroll-mt-44 bg-slate-900/30">
 				<IdeasSection />
 			</div>
 
@@ -122,12 +122,12 @@ const HackathonPage = () => {
 			)}
 
 			{/* ── Prizes ────────────────────────────────────────────────────────────── */}
-			<div id="prizes" className="scroll-mt-32 bg-slate-950">
+			<div id="prizes" className="scroll-mt-44 bg-slate-950">
 				<PrizesShowcase />
 			</div>
 
 			{/* ── Sponsor ───────────────────────────────────────────────────────────── */}
-			<div id="sponsor" className="py-20 scroll-mt-32 bg-slate-900/30">
+			<div id="sponsor" className="py-20 scroll-mt-44 bg-slate-900/30">
 				<ViewContainer>
 					<h2 className="text-3xl md:text-4xl font-black italic uppercase text-amber-400 mb-8">
 						Powered By
@@ -171,7 +171,7 @@ const HackathonPage = () => {
 			</div>
 
 			{/* ── Judging Criteria ──────────────────────────────────────────────────── */}
-			<div id="judging" className="scroll-mt-32 py-20 bg-slate-950">
+			<div id="judging" className="scroll-mt-44 py-20 bg-slate-950">
 				<ViewContainer>
 					<div className="text-center mb-12">
 						<span className="inline-flex items-center gap-2 bg-amber-500/10 border border-amber-500/30 text-amber-400 px-5 py-2 rounded-full text-sm font-semibold mb-6 backdrop-blur-sm">
@@ -203,7 +203,7 @@ const HackathonPage = () => {
 			</div>
 
 			{/* ── FAQ ───────────────────────────────────────────────────────────────── */}
-			<div id="faq" className="scroll-mt-32 py-20 bg-slate-900/30">
+			<div id="faq" className="scroll-mt-44 py-20 bg-slate-900/30">
 				<ViewContainer>
 					<div className="[&_h2]:text-amber-400 [&_h2]:font-bold [&_div[class*='pb-4']]:text-amber-700 [&_div[class*='pb-4']_a]:text-amber-700">
 						<Faq FAQS={faqs} />
