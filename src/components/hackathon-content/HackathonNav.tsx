@@ -56,7 +56,7 @@ const HackathonNav = ({
 				<ul className="hidden md:flex list-none">
 					{links.map(link => (
 						<li key={link.page}>
-							<Link
+							<a
 								href={link.href}
 								className={cn(
 									"px-6 py-4 font-medium hover:bg-foreground/10 inline-block",
@@ -64,7 +64,7 @@ const HackathonNav = ({
 								)}
 							>
 								{link.label}
-							</Link>
+							</a>
 						</li>
 					))}
 				</ul>
@@ -133,7 +133,7 @@ const HackathonNav = ({
 					<ul className="flex flex-col list-none">
 						{links.map(link => (
 							<li key={link.page}>
-								<Link
+								<a
 									href={link.href}
 									onClick={closeMobileMenu}
 									className={cn(
@@ -143,7 +143,7 @@ const HackathonNav = ({
 									)}
 								>
 									{link.label}
-								</Link>
+								</a>
 							</li>
 						))}
 					</ul>

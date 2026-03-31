@@ -230,6 +230,18 @@ const PrizesShowcase = () => {
 									<Award className="w-4 h-4" />
 									Participation certificates for all
 								</span>
+								<span className="inline-flex items-center gap-2 bg-cyan-500/10 backdrop-blur-sm px-5 py-2.5 rounded-full font-semibold text-cyan-300 border border-cyan-500/30">
+									<span className="text-sm">💻</span>
+									$100 for each merged PR from a{" "}
+									<Link
+										href="https://github.com/open-metadata/OpenMetadata/issues?q=is%3Aissue%20state%3Aopen%20label%3Agood-first-issue"
+										target="_blank"
+										rel="noopener noreferrer"
+										className="underline decoration-2 underline-offset-2 hover:text-cyan-200"
+									>
+										good-first-issue
+									</Link>
+								</span>
 							</div>
 						</div>
 					</div>

@@ -413,7 +413,7 @@ const HeroSection = ({ title, description, startDate, endDate, cta }: HeroSectio
 							className="text-5xl md:text-7xl font-black text-emerald-400"
 							style={{ textShadow: "0 0 40px rgba(52,211,153,0.6), 0 0 80px rgba(52,211,153,0.3)" }}
 						>
-							$5,000
+							$7,000
 						</span>
 						<span className="text-lg md:text-xl text-slate-300 font-medium">in prizes</span>
 					</div>
