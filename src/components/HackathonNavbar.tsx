@@ -104,7 +104,12 @@ const HackathonNavbar = ({ customNavLinks }: HackathonNavbarProps = {}) => {
 					"hidden lg:flex",
 				)}
 			>
-				<Link href="/" className="flex items-center gap-4">
+				<Link
+					href="/"
+					target="_blank"
+					rel="noopener noreferrer"
+					className="flex items-center gap-4"
+				>
 					<Image src={logo} alt="WeMakeDevs Logo" className="w-12" />
 					<span
 						className={cn(
@@ -120,7 +125,9 @@ const HackathonNavbar = ({ customNavLinks }: HackathonNavbarProps = {}) => {
 						<li key={link.name}>
 							<Link
 								href={link.url}
-								onClick={event => handleNavClick(link.url, event)}
+								onClick={event =>
+									handleNavClick(link.url, event)
+								}
 								className={cn(
 									buttonVariants({
 										variant:
@@ -134,7 +141,9 @@ const HackathonNavbar = ({ customNavLinks }: HackathonNavbarProps = {}) => {
 											? "text-white"
 											: "text-slate-900"
 										: "text-foreground",
-									link.type === "button" && !isScrolled && "text-white",
+									link.type === "button" &&
+										!isScrolled &&
+										"text-white",
 								)}
 								target={link.openInNewTab ? "_blank" : "_self"}
 								rel={
@@ -157,7 +166,12 @@ const HackathonNavbar = ({ customNavLinks }: HackathonNavbarProps = {}) => {
 				)}
 			>
 				<div className="flex w-full justify-between items-center">
-					<Link href="/" className="flex items-center gap-4">
+					<Link
+						href="/"
+						target="_blank"
+						rel="noopener noreferrer"
+						className="flex items-center gap-4"
+					>
 						<Image
 							src={logo}
 							alt="WeMakeDevs Logo"
