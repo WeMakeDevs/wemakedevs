@@ -86,7 +86,18 @@ const HackathonResources = async () => {
 							>
 								OpenMetadata on Docker Quickstart
 							</Link>{" "}
-							- Get the latest version of OpenMetadata up and running in seconds
+							- Spin up a running OpenMetadata instance locally (not the same as a contributor dev setup)
+						</li>
+						<li>
+							<Link
+								href="https://docs.open-metadata.org/v1.12.x/developers/contribute/development-environment-setup"
+								className="text-amber-400 underline hover:no-underline hover:text-amber-300"
+								target="_blank"
+								rel="noopener noreferrer"
+							>
+								Development environment setup (contributing)
+							</Link>{" "}
+							- Set up your machine to build OpenMetadata from source and contribute to the project
 						</li>
 						<li>
 							<Link
@@ -98,17 +109,6 @@ const HackathonResources = async () => {
 								OpenMetadata Day 1 Guide (Video)
 							</Link>{" "}
 							- Video walkthrough of getting started on OpenMetadata
-						</li>
-						<li>
-							<Link
-								href="https://docs.open-metadata.org/v1.12.x/developers/contribute/development-environment-setup"
-								className="text-amber-400 underline hover:no-underline hover:text-amber-300"
-								target="_blank"
-								rel="noopener noreferrer"
-							>
-								Dev Containers & Development Setup
-							</Link>{" "}
-							- Build tools with OpenMetadata to streamline contributor onboarding
 						</li>
 						<li>
 							<Link

@@ -61,7 +61,7 @@ const faqs: FaqType[] = [
 	},
 	{
 		question: "How do I set up OpenMetadata locally?",
-		answer: "Install <a href='https://www.docker.com/products/docker-desktop/' target='_blank' rel='noopener noreferrer' class='text-amber-400 underline hover:text-amber-300'>Docker Desktop</a> and follow the <a href='https://docs.open-metadata.org/v1.12.x/quick-start/local-docker-deployment' target='_blank' rel='noopener noreferrer' class='text-amber-400 underline hover:text-amber-300'>OpenMetadata Docker Quickstart</a>. You'll have a running instance in minutes, faster than 88 mph!",
+		answer: "Install <a href='https://www.docker.com/products/docker-desktop/' target='_blank' rel='noopener noreferrer' class='text-amber-400 underline hover:text-amber-300'>Docker Desktop</a> and follow the <a href='https://docs.open-metadata.org/v1.12.x/quick-start/local-docker-deployment' target='_blank' rel='noopener noreferrer' class='text-amber-400 underline hover:text-amber-300'>OpenMetadata Docker Quickstart</a> to run OpenMetadata locally. To set up a development environment for contributing to OpenMetadata itself, use the <a href='https://docs.open-metadata.org/v1.12.x/developers/contribute/development-environment-setup' target='_blank' rel='noopener noreferrer' class='text-amber-400 underline hover:text-amber-300'>development environment setup</a> guide. Curated links for both are on the hackathon <a href='/hackathons/openmetadata/resources' class='text-amber-400 underline hover:text-amber-300'>Resources</a> page. You'll have a running instance in minutes—faster than 88 mph!",
 	},
 	{
 		question: "Are AI assistants like ChatGPT or Copilot permitted?",
