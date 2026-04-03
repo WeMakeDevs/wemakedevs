@@ -55,6 +55,12 @@ const HackathonRules = async () => {
 							will score.
 						</li>
 						<li>
+							<strong className="text-amber-400">For GitHub contributions:</strong>{" "}
+							you must get an issue assigned to you before starting work. To get
+							assigned, comment on the issue and tag the maintainer (the person
+							who opened the issue) to request assignment.
+						</li>
+						<li>
 							You can use starter templates, boilerplates, and pre-existing
 							codebases to kickstart your project. However, simply submitting
 							an existing project with minimal modifications is not permitted.
