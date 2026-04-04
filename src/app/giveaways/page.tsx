@@ -4,6 +4,7 @@ import Navbar from "@/components/Navbar";
 import { ViewContainer } from "@/components/ui/view-container";
 import { Gift, PartyPopper, Bell } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 import type { Metadata } from "next";
 
 import jitenIpad from "./images/jiten-ipad.png";
@@ -80,8 +81,40 @@ const GiveawaysPage = () => {
 				</ViewContainer>
 			</section>
 
+			{/* Section Navigation */}
+			<nav className="sticky top-16 z-20 bg-slate-950/80 backdrop-blur-md border-b border-slate-800/50">
+				<ViewContainer>
+					<div className="flex items-center justify-center gap-8 py-3">
+						<a
+							href="#how-it-works"
+							className="text-sm font-medium text-slate-400 hover:text-emerald-400 transition-colors"
+						>
+							How It Works
+						</a>
+						<a
+							href="#past-winners"
+							className="text-sm font-medium text-slate-400 hover:text-emerald-400 transition-colors"
+						>
+							Past Winners
+						</a>
+						<a
+							href="#join"
+							className="text-sm font-medium text-slate-400 hover:text-emerald-400 transition-colors"
+						>
+							Join
+						</a>
+						<Link
+							href="/hackathons"
+							className="text-sm font-medium text-slate-400 hover:text-emerald-400 transition-colors"
+						>
+							Hackathons
+						</Link>
+					</div>
+				</ViewContainer>
+			</nav>
+
 			{/* How It Works */}
-			<section className="py-16 bg-slate-900/40">
+			<section id="how-it-works" className="py-16 bg-slate-900/40 scroll-mt-28">
 				<ViewContainer>
 					<h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">
 						How It Works
@@ -115,7 +148,7 @@ const GiveawaysPage = () => {
 							</h3>
 							<p className="text-slate-400">
 								Each giveaway has simple entry requirements
-								&mdash; usually filling a survey, attending an
+								usually filling a survey, attending an
 								event, or engaging with the community.
 							</p>
 						</div>
@@ -140,7 +173,7 @@ const GiveawaysPage = () => {
 			</section>
 
 			{/* Past Winners */}
-			<section className="py-16 md:py-24">
+			<section id="past-winners" className="py-16 md:py-24 scroll-mt-28">
 				<ViewContainer>
 					<h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-4">
 						Past Winners
@@ -158,7 +191,7 @@ const GiveawaysPage = () => {
 								<div className="relative aspect-[3/4] overflow-hidden">
 									<Image
 										src={winner.image}
-										alt={`${winner.name} — ${winner.prize}`}
+										alt={`${winner.name} ${winner.prize}`}
 										fill
 										className="object-cover group-hover:scale-105 transition-transform duration-500"
 										sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
