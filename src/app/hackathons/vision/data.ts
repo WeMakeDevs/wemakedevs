@@ -13,10 +13,10 @@ const DATA = {
 	slug: "vision",
 	images,
 	cta: {
-		label: "Submit your projects",
-		href: "https://forms.gle/oG7hWZ1tgbSwbcie8",
-		openInNewTab: true,
-		disabled: true,
+		label: "Projects",
+		href: "/hackathons/vision/projects",
+		openInNewTab: false,
+		disabled: false,
 	},
 	submissionFormUrl: undefined,
 	prizes: {
@@ -52,6 +52,11 @@ const navLinks = [
 		href: `/hackathons/vision`,
 		label: "Overview",
 		page: "overview",
+	},
+	{
+		href: `/hackathons/vision/projects`,
+		label: "Projects",
+		page: "projects",
 	},
 	{
 		href: `/hackathons/vision/rules`,

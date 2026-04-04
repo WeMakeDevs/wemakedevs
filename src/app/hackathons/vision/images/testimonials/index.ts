@@ -1,23 +1,17 @@
-import tosif from "./tosif.png";
-import swayam from "./swayam.png";
 import vicky from "./vicky.png";
-import rahul from "./rahul.png";
-import mrityunjay from "./mrityunjay.png";
 import rishi from "./rishi.png";
-import gaurav from "./gaurav.png";
-import srinivas from "./srinivas.png";
-import kaustubh from "./kaustubh.png";
-import dhruva from "./dhruva.png";
+import swayam from "./swayam.png";
+import yamini from "./yamini.png";
+import mehboob from "./mehboob.png";
+import swagatika from "./swagatika.png";
+import tosif from "./tosif.png";
 
 export {
-	tosif,
-	swayam,
 	vicky,
-	rahul,
-	mrityunjay,
 	rishi,
-	gaurav,
-	srinivas,
-	kaustubh,
-	dhruva,
+	swayam,
+	yamini,
+	mehboob,
+	swagatika,
+	tosif,
 };

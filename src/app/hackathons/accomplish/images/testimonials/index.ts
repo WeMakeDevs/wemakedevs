@@ -12,6 +12,10 @@ import chetan from "./chetan.png";
 import xenovoid from "./xenovoid.png";
 import abhishek from "./abhishek.png";
 import orHiltch from "./orHiltch.png";
+import aman from "./aman.png";
+import aniket from "./aniket.png";
+import harsh from "./harsh.png";
+import durgaprasad from "./durgaprasad.png";
 
 export {
 	raunak,
@@ -27,4 +31,8 @@ export {
 	xenovoid,
 	abhishek,
 	orHiltch,
+	aman,
+	aniket,
+	harsh,
+	durgaprasad,
 };

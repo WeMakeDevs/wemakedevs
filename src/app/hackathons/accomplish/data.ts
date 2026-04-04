@@ -16,7 +16,7 @@ const DATA = {
 		label: "Projects",
 		href: `/hackathons/accomplish/projects`,
 		openInNewTab: false,
-		disabled: true,
+		disabled: false,
 	},
 	submissionFormUrl: "https://forms.gle/cD39An6mkmuUAc3t8",
 	prizes: {
@@ -72,6 +72,11 @@ const navLinks = [
 		href: `/hackathons/${DATA.slug}`,
 		label: "Overview",
 		page: "overview",
+	},
+	{
+		href: `/hackathons/${DATA.slug}/projects`,
+		label: "Projects",
+		page: "projects",
 	},
 	{
 		href: `/hackathons/${DATA.slug}/rules`,

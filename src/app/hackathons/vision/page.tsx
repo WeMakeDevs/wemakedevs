@@ -1,7 +1,7 @@
 import Faq from "@/components/Faq";
 import {
-	HackathonContentBody,
 	HackathonContentTitle,
+	HackathonContentTitleH3,
 	HackathonCoverImage,
 	HackathonNav,
 } from "@/components/hackathon-content";
@@ -43,6 +43,18 @@ const HackathonPage = () => {
 					prize={DATA.prize}
 					cta={DATA.cta}
 				/>
+
+				{/* Stats Section */}
+				<ViewContainer className="mt-10">
+					<HackathonContentTitle className="text-slate-100 [&>h2]:text-slate-100">
+						Vision Possible 2025 Stats
+					</HackathonContentTitle>
+					<VisionStats />
+					<HackathonContentTitleH3 className="mt-4 text-white [&_h3]:text-white">
+						Participants testimonials
+					</HackathonContentTitleH3>
+				</ViewContainer>
+				<VisionTestimonials />
 
 				{/* About Content */}
 				<ViewContainer className="mt-16 pb-20 bg-slate-900/30 rounded-2xl py-12 px-8">
@@ -209,26 +221,6 @@ const HackathonPage = () => {
 						</div>
 					</div>
 				</ViewContainer>
-			</div>
-
-			{/* Stats Section */}
-			<div id="stats" className="scroll-mt-10 py-20 bg-slate-950">
-				<ViewContainer>
-					<h2 className="text-3xl md:text-4xl font-bold text-cyan-400 uppercase tracking-wide mb-2">
-						Mission Stats
-					</h2>
-					<VisionStats />
-				</ViewContainer>
-			</div>
-
-			{/* Testimonials Section */}
-			<div id="testimonials" className="scroll-mt-10 py-20 bg-slate-900/30">
-				<ViewContainer>
-					<h2 className="text-3xl md:text-4xl font-bold text-cyan-400 uppercase tracking-wide mb-8">
-						Agent Testimonials
-					</h2>
-				</ViewContainer>
-				<VisionTestimonials />
 			</div>
 
 			{/* FAQ Section */}

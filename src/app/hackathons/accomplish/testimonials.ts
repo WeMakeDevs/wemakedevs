@@ -12,6 +12,10 @@ import {
 	chetan,
 	xenovoid,
 	abhishek,
+	aman,
+	aniket,
+	harsh,
+	durgaprasad,
 } from "./images/testimonials";
 
 export const accomplishTestimonials: TestimonialInterface[] = [
@@ -98,5 +102,33 @@ export const accomplishTestimonials: TestimonialInterface[] = [
 		platform: "twitter",
 		testimonialText:
 			"Built SnapSort using @Accomplish_ai. Organises your whole Downloads folder based on vision or metadata or any parameter you specify :) Also supports Skills files (custom instructions) to automate it, without your intervention.",
+	},
+	{
+		profileImage: aman,
+		name: "Aman",
+		platform: "twitter",
+		testimonialText:
+			"Every beginner wants to contribute to open source. Nobody knows where to start. So I built a fix: GitHub Beginner Issue Finder — an @AccomplishAI skill that asks your tech stack & difficulty level, browses GitHub and finds 10 active repos, generates a markdown guide with beginner issues, required skills & time estimates. All automated. No manual searching. Just results.",
+	},
+	{
+		profileImage: aniket,
+		name: "Aniket",
+		platform: "twitter",
+		testimonialText:
+			"Built and shipped my hackathon project for @WeMakeDevs and @Accomplish_ai. Automated the entire workflow — from input → processing → output generation → notifications. No fluff. Real automation. Real execution.",
+	},
+	{
+		profileImage: harsh,
+		name: "Harsh",
+		platform: "twitter",
+		testimonialText:
+			"I always wonder where am I spending my money, where did it go!!?? Checking back statements is tedious so I automated it using Accomplish :))",
+	},
+	{
+		profileImage: durgaprasad,
+		name: "Durga Prasad",
+		platform: "twitter",
+		testimonialText:
+			"Film shoots are done out of order. Editors fix it manually. I built an automation with @Accomplish_ai that auto-arranges clips into the correct story flow. Built it for the Automate Me If You Can Hackathon.",
 	},
 ];
