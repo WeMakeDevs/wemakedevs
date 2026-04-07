@@ -49,7 +49,7 @@ const faqs: FaqType[] = [
 	},
 	{
 		question: "Do I need prior experience with OpenMetadata?",
-		answer: "Negative, time traveler! OpenMetadata is open source and well-documented. We'll provide getting-started resources, a livestream walkthrough, and the <a href='https://slack.open-metadata.org' target='_blank' rel='noopener noreferrer' class='text-amber-400 underline hover:text-amber-300'>OpenMetadata Slack</a> for support. Start your time circuits now!",
+		answer: "Negative, time traveler! OpenMetadata is open source and well-documented. We'll provide getting-started resources, a livestream walkthrough, and the <a href='https://openmetadata.slack.com/join/shared_invite/zt-3t2fsxoo4-lLfHSA4bTmOPtzySgdsaag#/shared-invite/email' target='_blank' rel='noopener noreferrer' class='text-amber-400 underline hover:text-amber-300'>OpenMetadata Slack</a> for support. Start your time circuits now!",
 	},
 	{
 		question: "I registered solo. Can I switch to a team?",
@@ -73,7 +73,7 @@ const faqs: FaqType[] = [
 	},
 	{
 		question: "Where can I get help during the hackathon?",
-		answer: "Join the <a href='https://slack.open-metadata.org' target='_blank' rel='noopener noreferrer' class='text-amber-400 underline hover:text-amber-300'>OpenMetadata Slack</a> for technical support and community discussion. You can also reach WeMakeDevs at <a href='mailto:contact@wemakedevs.org' class='text-amber-400 underline hover:text-amber-300'>contact@wemakedevs.org</a>.",
+		answer: "Join the <a href='https://openmetadata.slack.com/join/shared_invite/zt-3t2fsxoo4-lLfHSA4bTmOPtzySgdsaag#/shared-invite/email' target='_blank' rel='noopener noreferrer' class='text-amber-400 underline hover:text-amber-300'>OpenMetadata Slack</a> for technical support and community discussion. You can also reach WeMakeDevs at <a href='mailto:contact@wemakedevs.org' class='text-amber-400 underline hover:text-amber-300'>contact@wemakedevs.org</a>.",
 	},
 	{
 		question: "What are the judging criteria?",

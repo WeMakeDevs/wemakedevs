@@ -39,7 +39,7 @@ const HackathonResources = async () => {
 						<li>
 							Join the{" "}
 							<Link
-								href="https://slack.open-metadata.org"
+								href="https://openmetadata.slack.com/join/shared_invite/zt-3t2fsxoo4-lLfHSA4bTmOPtzySgdsaag#/shared-invite/email"
 								className="text-amber-400 underline hover:no-underline hover:text-amber-300"
 								target="_blank"
 								rel="noopener noreferrer"
@@ -228,7 +228,7 @@ const HackathonResources = async () => {
 						</li>
 						<li>
 							<Link
-								href="https://slack.open-metadata.org"
+								href="https://openmetadata.slack.com/join/shared_invite/zt-3t2fsxoo4-lLfHSA4bTmOPtzySgdsaag#/shared-invite/email"
 								className="text-amber-400 underline hover:no-underline hover:text-amber-300"
 								target="_blank"
 								rel="noopener noreferrer"
