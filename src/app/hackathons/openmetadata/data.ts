@@ -97,7 +97,7 @@ const schedule = [
 				links: [
 					{
 						platform: "youtube",
-						url: "https://www.youtube.com/wemakedevs",
+						url: "https://youtube.com/live/lLKGrzqM7-U?feature=share",
 					},
 				],
 			},
