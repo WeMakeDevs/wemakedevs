@@ -1,6 +1,6 @@
 import Footer from "@/components/Footer";
 import Newsletter from "@/components/Newsletter";
-import Navbar from "@/components/Navbar";
+import GiveawaysNavbar from "./components/GiveawaysNavbar";
 import { ViewContainer } from "@/components/ui/view-container";
 import { Gift, PartyPopper, Bell } from "lucide-react";
 import Image from "next/image";
@@ -48,7 +48,7 @@ const pastWinners = [
 const GiveawaysPage = () => {
 	return (
 		<div className="min-h-screen bg-slate-950">
-			<Navbar />
+			<GiveawaysNavbar />
 
 			{/* Hero */}
 			<section className="pt-28 pb-16 md:pt-36 md:pb-24 relative overflow-hidden">
@@ -80,38 +80,6 @@ const GiveawaysPage = () => {
 					</p>
 				</ViewContainer>
 			</section>
-
-			{/* Section Navigation */}
-			<nav className="sticky top-16 z-20 bg-slate-950/80 backdrop-blur-md border-b border-slate-800/50">
-				<ViewContainer>
-					<div className="flex items-center justify-center gap-8 py-3">
-						<a
-							href="#how-it-works"
-							className="text-sm font-medium text-slate-400 hover:text-emerald-400 transition-colors"
-						>
-							How It Works
-						</a>
-						<a
-							href="#past-winners"
-							className="text-sm font-medium text-slate-400 hover:text-emerald-400 transition-colors"
-						>
-							Past Winners
-						</a>
-						<a
-							href="#join"
-							className="text-sm font-medium text-slate-400 hover:text-emerald-400 transition-colors"
-						>
-							Join
-						</a>
-						<Link
-							href="/hackathons"
-							className="text-sm font-medium text-slate-400 hover:text-emerald-400 transition-colors"
-						>
-							Hackathons
-						</Link>
-					</div>
-				</ViewContainer>
-			</nav>
 
 			{/* How It Works */}
 			<section id="how-it-works" className="py-16 bg-slate-900/40 scroll-mt-28">
