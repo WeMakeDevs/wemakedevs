@@ -349,20 +349,6 @@ const HeroSection = ({ title, description, startDate, endDate, cta }: HeroSectio
 			{/* Hero content */}
 			<ViewContainer className="relative z-20 flex flex-col justify-start pt-12 md:pt-14 pb-4 flex-1">
 
-				{/* Status badges */}
-				<motion.div
-					className="mb-5 flex items-center gap-2 overflow-x-auto"
-					initial={{ opacity: 0, y: -18 }}
-					animate={{ opacity: 1, y: 0 }}
-					transition={{ duration: 0.6, delay: 1.0 }}
-				>
-					<HackathonStatus className="w-fit shrink-0" startDate={startDate} endDate={endDate} />
-					<span className="inline-flex items-center gap-2 bg-amber-500/10 text-amber-400 px-4 py-1.5 rounded-full text-sm font-semibold border border-amber-500/30 backdrop-blur-sm whitespace-nowrap shrink-0">
-						<Zap className="w-3.5 h-3.5" />
-						Online Hackathon
-					</span>
-				</motion.div>
-
 				{/* Logo */}
 				<motion.div
 					className="mb-5 max-w-[522px] lg:max-w-[630px]"
