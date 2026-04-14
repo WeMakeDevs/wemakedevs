@@ -4,8 +4,10 @@ import HackathonStatus from "@/components/HackathonStatus";
 import { ViewContainer } from "@/components/ui/view-container";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { Zap } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
+import { images } from "../images";
 
 type HeroSectionProps = {
 	title: string;
@@ -310,8 +312,6 @@ const HeroSection = ({ title, description, startDate, endDate, cta }: HeroSectio
 	const carOpacity = useTransform(scrollYProgress, [0, 0.72], [1, 0.12]);
 	const starsY = useTransform(scrollYProgress, [0, 1], ["0%", "35%"]);
 
-	const titleWords = title.split(" ");
-
 	const startD = new Date(startDate);
 	const endD = new Date(endDate);
 	const now = new Date();
@@ -363,32 +363,33 @@ const HeroSection = ({ title, description, startDate, endDate, cta }: HeroSectio
 					</span>
 				</motion.div>
 
-				{/* Title */}
-				<div className="mb-5 max-w-[580px] lg:max-w-[660px]">
-					{titleWords.map((word, wi) => (
-						<span key={wi} className="inline-block overflow-hidden mr-3 mb-1">
-							<motion.span
-								className="inline-block font-black italic uppercase leading-none tracking-tight"
-								style={{
-									fontSize: "clamp(2.6rem, 7.5vw, 5.2rem)",
-									background:
-										wi % 2 === 0
-											? "linear-gradient(135deg, #FF9D00 0%, #FFD000 55%, #FF6B00 100%)"
-											: "linear-gradient(135deg, #e040fb 0%, #b400e4 55%, #8B5CF6 100%)",
-									WebkitBackgroundClip: "text",
-									WebkitTextFillColor: "transparent",
-									backgroundClip: "text",
-									filter: "drop-shadow(0 0 28px rgba(255,157,0,0.5))",
-								}}
-								initial={{ y: "108%", opacity: 0 }}
-								animate={{ y: "0%", opacity: 1 }}
-								transition={{ duration: 0.65, delay: 1.1 + wi * 0.11, ease: [0.16, 1, 0.3, 1] }}
-							>
-								{word}
-							</motion.span>
-						</span>
-					))}
-				</div>
+				{/* Logo */}
+				<motion.div
+					className="mb-5 max-w-[580px] lg:max-w-[700px]"
+					initial={{ opacity: 0, scale: 0.6, y: 40 }}
+					animate={{ opacity: 1, scale: 1, y: 0 }}
+					transition={{ duration: 0.9, delay: 1.1, ease: [0.16, 1, 0.3, 1] }}
+				>
+					<motion.div
+						animate={{
+							filter: [
+								"drop-shadow(0 0 20px rgba(255,157,0,0.3))",
+								"drop-shadow(0 0 40px rgba(255,157,0,0.6))",
+								"drop-shadow(0 0 20px rgba(255,157,0,0.3))",
+							],
+						}}
+						transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+					>
+						<Image
+							src={images.logo}
+							alt={title}
+							width={700}
+							height={300}
+							className="w-full h-auto"
+							priority
+						/>
+					</motion.div>
+				</motion.div>
 
 				{/* Description */}
 				<motion.p
