@@ -146,7 +146,7 @@ const IdeasSection = () => {
 						transition={{ duration: 0.5, delay: 0.3 }}
 					>
 						<Link
-							href="https://github.com/orgs/open-metadata/projects/107/views/1"
+							href="https://github.com/orgs/open-metadata/projects/107/views/1?pane=info"
 							target="_blank"
 							rel="noopener noreferrer"
 							className="inline-flex items-center gap-2 mt-2 text-amber-400 hover:text-amber-300 font-semibold underline decoration-2 underline-offset-4 transition-colors"
@@ -204,7 +204,7 @@ const IdeasSection = () => {
 					transition={{ duration: 0.5 }}
 				>
 					<Link
-						href="https://github.com/orgs/open-metadata/projects/107/views/1"
+						href="https://github.com/orgs/open-metadata/projects/107/views/1?pane=info"
 						target="_blank"
 						rel="noopener noreferrer"
 						className="inline-flex items-center gap-3 px-8 py-4 rounded-xl bg-amber-500/10 border-2 border-amber-500/30 hover:bg-amber-500/20 transition-all duration-300 text-amber-400 font-bold text-lg hover:shadow-[0_0_24px_rgba(245,158,11,0.2)]"
