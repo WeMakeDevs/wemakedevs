@@ -72,6 +72,10 @@ const faqs: FaqType[] = [
 		answer: "Your project must integrate with or extend <a href='https://github.com/open-metadata/OpenMetadata' target='_blank' rel='noopener noreferrer' class='text-amber-400 underline hover:text-amber-300'>OpenMetadata</a>. Beyond that, you're free to use any language, framework, or tool. Python, Java, TypeScript, all roads lead to the future.",
 	},
 	{
+		question: "Do I have to pick an idea from the GitHub project board?",
+		answer: "Not at all! The hackathon theme is completely open-ended. The ideas on the <a href='https://github.com/orgs/open-metadata/projects/107/views/1?pane=info' target='_blank' rel='noopener noreferrer' class='text-amber-400 underline hover:text-amber-300'>GitHub project board</a> are just suggestions to get you started. You can build anything you want — your own original idea is equally welcome — as long as it uses or integrates with OpenMetadata.",
+	},
+	{
 		question: "Where can I get help during the hackathon?",
 		answer: "Join the <a href='https://slack.open-metadata.org' target='_blank' rel='noopener noreferrer' class='text-amber-400 underline hover:text-amber-300'>OpenMetadata Slack</a> for technical support and community discussion. You can also reach WeMakeDevs at <a href='mailto:contact@wemakedevs.org' class='text-amber-400 underline hover:text-amber-300'>contact@wemakedevs.org</a>.",
 	},

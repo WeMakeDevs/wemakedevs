@@ -55,6 +55,22 @@ const HackathonRules = async () => {
 							will score.
 						</li>
 						<li>
+							<strong className="text-amber-400">Open-ended theme:</strong>{" "}
+							The hackathon theme is completely open-ended. You can build anything
+							you want as long as it uses or integrates with OpenMetadata. The
+							categories and ideas listed on the{" "}
+							<Link
+								href="https://github.com/orgs/open-metadata/projects/107/views/1?pane=info"
+								className="text-amber-400 hover:text-amber-300 underline"
+								target="_blank"
+								rel="noopener noreferrer"
+							>
+								GitHub project board
+							</Link>{" "}
+							are just suggestions to inspire you — you are not limited to those ideas.
+							Your own original idea is equally welcome and encouraged.
+						</li>
+						<li>
 							<strong className="text-amber-400">For GitHub contributions:</strong>{" "}
 							you must get an issue assigned to you before starting work. To get
 							assigned, comment on the issue and tag the maintainer (the person

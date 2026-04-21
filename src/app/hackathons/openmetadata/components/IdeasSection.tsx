@@ -128,15 +128,33 @@ const IdeasSection = () => {
 					</motion.h2>
 
 					<motion.p
-						className="text-lg text-slate-400 max-w-3xl mx-auto mb-4"
+						className="text-lg text-slate-400 max-w-3xl mx-auto mb-2"
 						initial={{ opacity: 0 }}
 						whileInView={{ opacity: 1 }}
 						viewport={{ once: true }}
 						transition={{ duration: 0.55, delay: 0.2 }}
 					>
-						Six alternative realities have fractured the data timeline. Each is an
-						unsolved paradox waiting for a time traveler to fix it. Pick your reality,
-						build your solution, and restore order to the metadata universe.
+						These are just inspiration categories to get you started — the theme is completely open-ended.
+						You can build anything you want, as long as it uses or integrates with{" "}
+						<Link
+							href="https://github.com/open-metadata/OpenMetadata"
+							target="_blank"
+							rel="noopener noreferrer"
+							className="text-amber-400 underline hover:text-amber-300"
+						>
+							OpenMetadata
+						</Link>.
+						You are <span className="text-amber-400 font-semibold">not limited</span> to the ideas on the GitHub project board.
+					</motion.p>
+
+					<motion.p
+						className="text-base text-slate-500 max-w-2xl mx-auto mb-4"
+						initial={{ opacity: 0 }}
+						whileInView={{ opacity: 1 }}
+						viewport={{ once: true }}
+						transition={{ duration: 0.55, delay: 0.25 }}
+					>
+						The project board has curated ideas if you need a starting point, but your own original idea is equally welcome.
 					</motion.p>
 
 					<motion.div
