@@ -16,7 +16,7 @@ const DATA = {
 		openInNewTab: true,
 		disabled: false,
 	},
-	submissionFormUrl: undefined,
+	submissionFormUrl: "https://forms.gle/JHc3YGmaPhsDeiHXA",
 };
 
 const navLinks = [
@@ -80,6 +80,10 @@ const faqs: FaqType[] = [
 		answer: "Join the <a href='https://slack.open-metadata.org' target='_blank' rel='noopener noreferrer' class='text-amber-400 underline hover:text-amber-300'>OpenMetadata Slack</a> for technical support and community discussion. You can also reach WeMakeDevs at <a href='mailto:contact@wemakedevs.org' class='text-amber-400 underline hover:text-amber-300'>contact@wemakedevs.org</a>.",
 	},
 	{
+		question: "How do I submit my project?",
+		answer: "Submit your project using the <a href='https://forms.gle/JHc3YGmaPhsDeiHXA' target='_blank' rel='noopener noreferrer' class='text-amber-400 underline hover:text-amber-300'>project submission form</a>. One submission per team. Make sure to submit before the deadline (April 26, 2026 at 11:59 PM UTC).",
+	},
+	{
 		question: "What are the judging criteria?",
 		answer: "Projects will be evaluated on: Potential Impact, Creativity & Innovation, Technical Excellence, Best Use of OpenMetadata, User Experience, and Presentation Quality. The more deeply you integrate OpenMetadata, the better!",
 	},
@@ -135,7 +139,7 @@ const schedule = [
 			{
 				title: "Final Submissions Due",
 				description:
-					"Submit your project before the deadline. Don't be late, this isn't a time machine!",
+					"Submit your project before the deadline. Don't be late, this isn't a time machine! Submit via the official form: https://forms.gle/JHc3YGmaPhsDeiHXA",
 				time: "2026-04-26T23:59:00Z",
 			},
 		],

@@ -32,6 +32,26 @@ const HackathonResources = async () => {
 			</div>
 			<ViewContainer>
 				<HackathonContentTitle className="text-amber-400">
+					Submit Your Project
+				</HackathonContentTitle>
+				<HackathonContentBody className="text-slate-300">
+					<p className="mb-3">
+						Ready to submit? Use the official submission form (one submission per team):
+					</p>
+					<ul className="space-y-2 list-disc list-inside">
+						<li>
+							<Link
+								href="https://forms.gle/JHc3YGmaPhsDeiHXA"
+								className="text-amber-400 underline hover:no-underline hover:text-amber-300"
+								target="_blank"
+								rel="noopener noreferrer"
+							>
+								Project Submission Form
+							</Link>
+						</li>
+					</ul>
+				</HackathonContentBody>
+				<HackathonContentTitle className="text-amber-400">
 					Need Help? Join the Community
 				</HackathonContentTitle>
 				<HackathonContentBody className="text-slate-300">

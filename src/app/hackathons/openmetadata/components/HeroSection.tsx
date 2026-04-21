@@ -3,7 +3,7 @@
 import HackathonStatus from "@/components/HackathonStatus";
 import { ViewContainer } from "@/components/ui/view-container";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { Zap } from "lucide-react";
+import { ArrowUpRight, Zap } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
@@ -21,6 +21,7 @@ type HeroSectionProps = {
 		disabled?: boolean;
 		openInNewTab?: boolean;
 	};
+	submissionFormUrl?: string;
 };
 
 // ─── Neon DeLorean SVG ────────────────────────────────────────────────────────
@@ -303,7 +304,7 @@ const useCountdown = (targetDate: Date) => {
 };
 
 // Hero Section
-const HeroSection = ({ title, description, startDate, endDate, cta }: HeroSectionProps) => {
+const HeroSection = ({ title, description, startDate, endDate, cta, submissionFormUrl }: HeroSectionProps) => {
 	const containerRef = useRef<HTMLDivElement>(null);
 	const { scrollYProgress } = useScroll({ target: containerRef, offset: ["start start", "end start"] });
 
@@ -467,6 +468,17 @@ const HeroSection = ({ title, description, startDate, endDate, cta }: HeroSectio
 						>
 							<Zap className="w-5 h-5" />
 							{cta.label}
+						</Link>
+					)}
+					{submissionFormUrl && (
+						<Link
+							href={submissionFormUrl}
+							target="_blank"
+							rel="noopener noreferrer"
+							className="inline-flex items-center gap-2 px-6 py-3 rounded-xl border-2 border-amber-500/50 text-amber-400 font-bold hover:bg-amber-500/20 transition-all duration-300 text-base"
+						>
+							Submit Project
+							<ArrowUpRight className="w-5 h-5" />
 						</Link>
 					)}
 				</motion.div>
