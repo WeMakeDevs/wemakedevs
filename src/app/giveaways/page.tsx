@@ -52,39 +52,24 @@ const GiveawaysPage = () => {
 		<div className="min-h-screen bg-slate-950">
 			<GiveawaysNavbar />
 
-			{/* Hero */}
+			{/* Hero + Live Giveaway */}
 			<section className="pt-28 pb-16 md:pt-36 md:pb-24 relative overflow-hidden">
 				<div className="absolute inset-0 bg-gradient-to-b from-emerald-500/10 via-transparent to-transparent" />
 				<div className="absolute top-20 left-1/4 w-72 h-72 bg-emerald-500/5 rounded-full blur-3xl" />
 				<div className="absolute top-32 right-1/4 w-96 h-96 bg-amber-500/5 rounded-full blur-3xl" />
-				<ViewContainer className="relative z-10 text-center space-y-6">
-					<div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-emerald-500/30 bg-emerald-500/10 text-emerald-400 text-sm font-medium mx-auto animate-pulse">
-						<Gift size={16} />
-						<span>🎉 Live Giveaway</span>
+				<ViewContainer className="relative z-10 space-y-12">
+					{/* Title */}
+					<div className="text-center space-y-6">
+						<div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-emerald-500/30 bg-emerald-500/10 text-emerald-400 text-sm font-medium mx-auto animate-pulse">
+							<Gift size={16} />
+							<span>🎉 Live Giveaway</span>
+						</div>
+						<h1 className="text-5xl md:text-7xl font-bold text-white tracking-tight">
+							Giveaways
+						</h1>
 					</div>
-					<h1 className="text-5xl md:text-7xl font-bold text-white tracking-tight">
-						Giveaways
-					</h1>
-					<p className="text-xl md:text-2xl text-slate-300 max-w-2xl mx-auto leading-relaxed">
-						We regularly give away{" "}
-						<span className="text-amber-400 font-semibold">
-							iPads
-						</span>
-						,{" "}
-						<span className="text-emerald-400 font-semibold">
-							Meta Ray-Ban Smart Glasses
-						</span>
-						, and more to our community members.
-					</p>
-					<p className="text-lg text-slate-400 max-w-xl mx-auto">
-						A giveaway is live right now! Scroll down to participate.
-					</p>
-				</ViewContainer>
-			</section>
 
-			{/* Live Giveaway */}
-			<section id="live-giveaway" className="py-16 md:py-24 scroll-mt-28">
-				<ViewContainer>
+					{/* Live Giveaway Card */}
 					<div className="relative rounded-3xl overflow-hidden border border-emerald-500/30 bg-gradient-to-br from-emerald-950/60 via-slate-900 to-amber-950/40">
 						<div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-emerald-500/10 via-transparent to-amber-500/10" />
 						<div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-8 p-8 md:p-12">
