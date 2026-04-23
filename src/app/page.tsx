@@ -1,4 +1,3 @@
-import { DATA as openmetadataHackathon } from "@/app/hackathons/openmetadata/data";
 import Faq from "@/components/Faq";
 import Footer from "@/components/Footer";
 import Hackathons from "@/components/Hackathons";
@@ -11,20 +10,16 @@ import Numbers from "@/components/Numbers";
 import Partners from "@/components/Partners";
 import SponsorTestimonialsScroll from "@/components/SponsorTestimonialsScroll";
 import Testimonials from "@/components/Testimonials";
-import UpcomingHackathonRegisterBar from "@/components/UpcomingHackathonRegisterBar";
+import GiveawayBar from "@/components/GiveawayBar";
 import { FAQS } from "@/constants";
-import { cn } from "@/lib/utils";
+
+const GIVEAWAY_END_DATE = "2026-04-26T23:59:59";
 
 export default function Home() {
-	const showOpenMetadataRegisterBar =
-		new Date() < new Date(openmetadataHackathon.endDate);
+	const showGiveawayBar = new Date() < new Date(GIVEAWAY_END_DATE);
 
 	return (
-		<div
-			className={cn(
-				showOpenMetadataRegisterBar && "pb-[5.5rem] sm:pb-24",
-			)}
-		>
+		<div className={showGiveawayBar ? "pb-[5.5rem] sm:pb-24" : undefined}>
 			<Navbar />
 			<Header />
 			<SponsorTestimonialsScroll />
@@ -37,13 +32,7 @@ export default function Home() {
 			<Faq FAQS={FAQS} />
 			<Partners />
 			<Footer />
-			{showOpenMetadataRegisterBar && (
-				<UpcomingHackathonRegisterBar
-					registerUrl={openmetadataHackathon.cta.href}
-					hackathonPath={`/hackathons/${openmetadataHackathon.slug}`}
-					hackathonTitle={openmetadataHackathon.title}
-				/>
-			)}
+			{showGiveawayBar && <GiveawayBar />}
 		</div>
 	);
 }

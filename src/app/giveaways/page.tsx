@@ -2,7 +2,7 @@ import Footer from "@/components/Footer";
 import Newsletter from "@/components/Newsletter";
 import GiveawaysNavbar from "./components/GiveawaysNavbar";
 import { ViewContainer } from "@/components/ui/view-container";
-import { Gift, PartyPopper, Bell } from "lucide-react";
+import { Gift, PartyPopper, Bell, ExternalLink, Calendar, Trophy } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
@@ -11,6 +11,8 @@ import jitenIpad from "./images/jiten-ipad.png";
 import priyankaRayban from "./images/priyanka-rayban.png";
 import mohitRayban from "./images/mohit-rayban.png";
 import vaniRayban from "./images/vani-rayban.png";
+import ipadGiveawayPoster from "./images/iPad-april-2026.jpeg";
+
 
 export const metadata: Metadata = {
 	title: "Giveaways | WeMakeDevs",
@@ -56,9 +58,9 @@ const GiveawaysPage = () => {
 				<div className="absolute top-20 left-1/4 w-72 h-72 bg-emerald-500/5 rounded-full blur-3xl" />
 				<div className="absolute top-32 right-1/4 w-96 h-96 bg-amber-500/5 rounded-full blur-3xl" />
 				<ViewContainer className="relative z-10 text-center space-y-6">
-					<div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-emerald-500/30 bg-emerald-500/10 text-emerald-400 text-sm font-medium mx-auto">
+					<div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-emerald-500/30 bg-emerald-500/10 text-emerald-400 text-sm font-medium mx-auto animate-pulse">
 						<Gift size={16} />
-						<span>No active giveaway right now</span>
+						<span>🎉 Live Giveaway</span>
 					</div>
 					<h1 className="text-5xl md:text-7xl font-bold text-white tracking-tight">
 						Giveaways
@@ -75,9 +77,82 @@ const GiveawaysPage = () => {
 						, and more to our community members.
 					</p>
 					<p className="text-lg text-slate-400 max-w-xl mx-auto">
-						Subscribe to the newsletter below to be the first to
-						know when the next giveaway drops.
+						A giveaway is live right now! Scroll down to participate.
 					</p>
+				</ViewContainer>
+			</section>
+
+			{/* Live Giveaway */}
+			<section id="live-giveaway" className="py-16 md:py-24 scroll-mt-28">
+				<ViewContainer>
+					<div className="relative rounded-3xl overflow-hidden border border-emerald-500/30 bg-gradient-to-br from-emerald-950/60 via-slate-900 to-amber-950/40">
+						<div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-emerald-500/10 via-transparent to-amber-500/10" />
+						<div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-8 p-8 md:p-12">
+							{/* Poster */}
+							<div className="relative aspect-[3/4] max-w-md mx-auto lg:mx-0 rounded-2xl overflow-hidden shadow-2xl shadow-emerald-500/10">
+								<Image
+									src={ipadGiveawayPoster}
+									alt="Win Apple iPad Giveaway worth ₹50,000 - Fill out our quick survey"
+									fill
+									className="object-cover"
+									sizes="(max-width: 1024px) 100vw, 50vw"
+									priority
+								/>
+							</div>
+
+							{/* Details */}
+							<div className="flex flex-col justify-center space-y-6">
+								<div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-emerald-500/40 bg-emerald-500/15 text-emerald-400 text-xs font-semibold uppercase tracking-wider w-fit">
+									<span className="relative flex h-2 w-2">
+										<span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
+										<span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500" />
+									</span>
+									Live Now
+								</div>
+
+								<h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight">
+									Win an Apple iPad{" "}
+									<span className="text-amber-400">worth ₹50,000</span>
+								</h2>
+
+								<p className="text-lg text-slate-300 leading-relaxed">
+									Fill out our quick open source survey and stand a chance to win an{" "}
+									<span className="text-white font-semibold">Apple iPad</span>! A random winner will be selected from all participants.
+								</p>
+
+								<div className="flex items-center gap-3 text-slate-400">
+									<Calendar size={18} className="text-amber-400 shrink-0" />
+									<span>
+										Winners announced on{" "}
+										<span className="text-white font-semibold">26th April 2026</span>
+									</span>
+								</div>
+
+								<div className="flex items-center gap-3 text-slate-400">
+									<Trophy size={18} className="text-amber-400 shrink-0" />
+									<span>
+										Prize:{" "}
+										<span className="text-white font-semibold">Apple iPad (₹50,000)</span>{" "}
+										to 1 random winner
+									</span>
+								</div>
+
+								<Link
+									href="https://forms.gle/3EZNbXeGmPDzz4sz6"
+									target="_blank"
+									rel="noopener noreferrer"
+									className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-white font-semibold text-lg transition-colors w-fit shadow-lg shadow-emerald-500/25 hover:shadow-emerald-400/30"
+								>
+									Fill the Survey & Enter
+									<ExternalLink size={18} />
+								</Link>
+
+								<p className="text-sm text-slate-500">
+									No purchase necessary. Open to everyone. One entry per person.
+								</p>
+							</div>
+						</div>
+					</div>
 				</ViewContainer>
 			</section>
 
