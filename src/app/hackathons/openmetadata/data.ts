@@ -14,9 +14,9 @@ const DATA = {
 		label: "Register Now",
 		href: "https://forms.gle/gogMB2AjCbeFQdZZ8",
 		openInNewTab: true,
-		disabled: false,
+		disabled: true,
 	},
-	submissionFormUrl: "https://forms.gle/JHc3YGmaPhsDeiHXA",
+	submissionFormUrl: "",
 };
 
 const navLinks = [

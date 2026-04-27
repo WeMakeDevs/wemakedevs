@@ -2,11 +2,11 @@ import Footer from "@/components/Footer";
 import Newsletter from "@/components/Newsletter";
 import GiveawaysNavbar from "./components/GiveawaysNavbar";
 import { ViewContainer } from "@/components/ui/view-container";
-import { Gift, PartyPopper, Bell, ExternalLink, Calendar, Trophy } from "lucide-react";
+import { Gift, PartyPopper, Bell, Calendar, Trophy } from "lucide-react";
 import Image from "next/image";
-import Link from "next/link";
 import type { Metadata } from "next";
 
+import ayaanImage from "./images/Ayaan.png";
 import jitenIpad from "./images/jiten-ipad.png";
 import priyankaRayban from "./images/priyanka-rayban.png";
 import mohitRayban from "./images/mohit-rayban.png";
@@ -21,6 +21,12 @@ export const metadata: Metadata = {
 };
 
 const pastWinners = [
+	{
+		image: ayaanImage,
+		name: "Ayaan",
+		prize: "Apple iPad",
+		worth: "₹50,000",
+	},
 	{
 		image: jitenIpad,
 		name: "Jiten Purswani",
@@ -60,9 +66,9 @@ const GiveawaysPage = () => {
 				<ViewContainer className="relative z-10 space-y-12">
 					{/* Title */}
 					<div className="text-center space-y-6">
-						<div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-emerald-500/30 bg-emerald-500/10 text-emerald-400 text-sm font-medium mx-auto animate-pulse">
+						<div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-slate-500/30 bg-slate-500/10 text-slate-400 text-sm font-medium mx-auto">
 							<Gift size={16} />
-							<span>🎉 Live Giveaway</span>
+							<span>Giveaway Ended</span>
 						</div>
 						<h1 className="text-5xl md:text-7xl font-bold text-white tracking-tight">
 							Giveaways
@@ -87,12 +93,11 @@ const GiveawaysPage = () => {
 
 							{/* Details */}
 							<div className="flex flex-col justify-center space-y-6">
-								<div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-emerald-500/40 bg-emerald-500/15 text-emerald-400 text-xs font-semibold uppercase tracking-wider w-fit">
+								<div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-slate-500/40 bg-slate-500/15 text-slate-400 text-xs font-semibold uppercase tracking-wider w-fit">
 									<span className="relative flex h-2 w-2">
-										<span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
-										<span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500" />
+										<span className="relative inline-flex rounded-full h-2 w-2 bg-slate-500" />
 									</span>
-									Live Now
+									Ended
 								</div>
 
 								<h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight">
@@ -122,18 +127,14 @@ const GiveawaysPage = () => {
 									</span>
 								</div>
 
-								<Link
-									href="https://forms.gle/3EZNbXeGmPDzz4sz6"
-									target="_blank"
-									rel="noopener noreferrer"
-									className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-white font-semibold text-lg transition-colors w-fit shadow-lg shadow-emerald-500/25 hover:shadow-emerald-400/30"
+								<div
+									className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-slate-700 text-slate-400 font-semibold text-lg w-fit cursor-not-allowed opacity-60"
 								>
-									Fill the Survey & Enter
-									<ExternalLink size={18} />
-								</Link>
+									This Giveaway Has Ended
+								</div>
 
-								<p className="text-sm text-slate-500">
-									No purchase necessary. Open to everyone. One entry per person.
+								<p className="text-sm text-slate-400 mt-1">
+									Stay updated via our newsletter below for future giveaways!
 								</p>
 							</div>
 						</div>

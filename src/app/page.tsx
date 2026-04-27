@@ -10,16 +10,11 @@ import Numbers from "@/components/Numbers";
 import Partners from "@/components/Partners";
 import SponsorTestimonialsScroll from "@/components/SponsorTestimonialsScroll";
 import Testimonials from "@/components/Testimonials";
-import GiveawayBar from "@/components/GiveawayBar";
 import { FAQS } from "@/constants";
 
-const GIVEAWAY_END_DATE = "2026-04-26T23:59:59";
-
 export default function Home() {
-	const showGiveawayBar = new Date() < new Date(GIVEAWAY_END_DATE);
-
 	return (
-		<div className={showGiveawayBar ? "pb-[5.5rem] sm:pb-24" : undefined}>
+		<div>
 			<Navbar />
 			<Header />
 			<SponsorTestimonialsScroll />
@@ -32,7 +27,6 @@ export default function Home() {
 			<Faq FAQS={FAQS} />
 			<Partners />
 			<Footer />
-			{showGiveawayBar && <GiveawayBar />}
 		</div>
 	);
 }

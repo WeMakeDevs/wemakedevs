@@ -49,6 +49,7 @@ const hackathons: HackathonType[] = [
 		thumbnail: openmetadataImages.thumbnail,
 		startDate: openmetadataData.startDate,
 		endDate: openmetadataData.endDate,
+		listAs: "previous",
 	},
 	{
 		slug: accomplishData.slug,
