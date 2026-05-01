@@ -171,7 +171,108 @@ const HeroSection = ({ description, startDate, endDate, prize, showDate = true, 
 
 	return (
 		<div className="relative min-h-[65svh] md:min-h-[72svh] overflow-hidden flex flex-col">
-			{/* ═══ THE BLACK PEARL — sails in from the left, absolutely positioned ═══ */}
+			{/* ═══ JACK SPARROW — hanging from rope, swinging with sword ═══ */}
+			<motion.div
+				className="absolute top-0 right-[12%] md:right-[15%] lg:right-[18%] z-20 pointer-events-none select-none"
+				initial={{ y: "-100%", opacity: 0 }}
+				animate={{ y: "0%", opacity: 1 }}
+				transition={{ duration: 1.4, ease: [0.16, 1, 0.3, 1], delay: 1.2 }}
+			>
+				<div className="jack-swing origin-top">
+					<svg viewBox="0 0 120 320" fill="none" className="w-16 sm:w-20 md:w-24 lg:w-28">
+						{/* Rope */}
+						<line x1="60" y1="0" x2="60" y2="95" stroke="#8b6914" strokeWidth="2.5" />
+						<line x1="60" y1="0" x2="60" y2="95" stroke="#d4af37" strokeWidth="1" opacity="0.3" />
+
+						{/* ── BANDANA / HAT ── */}
+						<ellipse cx="60" cy="105" rx="16" ry="10" fill="#8b1a1a" />
+						<path d="M44 105 Q60 95 76 105" fill="#6b1010" />
+						{/* Hat brim */}
+						<path d="M40 108 Q60 115 80 108" stroke="#5c0e0e" strokeWidth="1.5" fill="none" />
+						{/* Bandana tails */}
+						<path d="M76 105 Q82 112 85 125" stroke="#8b1a1a" strokeWidth="2" fill="none" />
+						<path d="M78 106 Q85 115 86 128" stroke="#6b1010" strokeWidth="1.5" fill="none" />
+
+						{/* ── HEAD ── */}
+						<ellipse cx="60" cy="118" rx="14" ry="16" fill="#c4956a" />
+						{/* Hair / dreadlocks */}
+						<path d="M46 115 Q42 130 40 150" stroke="#1a1008" strokeWidth="3" fill="none" strokeLinecap="round" />
+						<path d="M48 118 Q43 135 42 155" stroke="#2a1a0a" strokeWidth="2.5" fill="none" strokeLinecap="round" />
+						<path d="M74 115 Q78 130 80 150" stroke="#1a1008" strokeWidth="3" fill="none" strokeLinecap="round" />
+						<path d="M72 118 Q77 135 78 155" stroke="#2a1a0a" strokeWidth="2.5" fill="none" strokeLinecap="round" />
+						{/* Beard braids */}
+						<path d="M55 132 Q53 145 50 158" stroke="#1a1008" strokeWidth="2" fill="none" />
+						<path d="M65 132 Q67 145 70 158" stroke="#1a1008" strokeWidth="2" fill="none" />
+						{/* Bead on beard */}
+						<circle cx="50" cy="155" r="2" fill="#d4af37" />
+						<circle cx="70" cy="155" r="2" fill="#d4af37" />
+
+						{/* Eyes */}
+						<ellipse cx="54" cy="116" rx="2.5" ry="2" fill="#1a1008" />
+						<ellipse cx="66" cy="116" rx="2.5" ry="2" fill="#1a1008" />
+						{/* Kohl / eyeliner */}
+						<path d="M50 115 Q54 113 58 115" stroke="#0a0a0a" strokeWidth="0.8" fill="none" />
+						<path d="M62 115 Q66 113 70 115" stroke="#0a0a0a" strokeWidth="0.8" fill="none" />
+						{/* Nose */}
+						<path d="M59 120 L60 124 L62 121" stroke="#a07850" strokeWidth="1" fill="none" />
+						{/* Mustache */}
+						<path d="M53 126 Q60 130 67 126" stroke="#1a1008" strokeWidth="1.5" fill="none" />
+						{/* Smirk */}
+						<path d="M54 129 Q60 133 66 128" stroke="#8a5a3a" strokeWidth="1" fill="none" />
+						{/* Gold tooth */}
+						<circle cx="60" cy="130" r="1" fill="#d4af37" />
+
+						{/* ── BODY / COAT ── */}
+						{/* Torso */}
+						<path d="M48 134 L42 200 L78 200 L72 134" fill="#2a1a0a" />
+						{/* Coat opening - white shirt */}
+						<path d="M52 134 L50 195 L70 195 L68 134" fill="#e8dcc8" opacity="0.7" />
+						{/* Coat lapels */}
+						<path d="M48 134 L52 134 L50 170" fill="#1a1008" />
+						<path d="M72 134 L68 134 L70 170" fill="#1a1008" />
+						{/* Belt / sash */}
+						<rect x="42" y="175" width="36" height="8" rx="2" fill="#8b1a1a" />
+						<rect x="56" y="173" width="8" height="12" rx="1" fill="#d4af37" opacity="0.7" />
+						{/* Compass on belt */}
+						<circle cx="48" cy="179" r="3" stroke="#d4af37" strokeWidth="0.8" fill="#2a1a0a" />
+
+						{/* ── LEFT ARM (holding rope) ── */}
+						<path d="M48 140 Q35 155 40 95" stroke="#c4956a" strokeWidth="5" fill="none" strokeLinecap="round" />
+						{/* Hand gripping rope */}
+						<ellipse cx="42" cy="95" rx="5" ry="4" fill="#c4956a" />
+						{/* Sleeve */}
+						<path d="M48 140 Q40 148 38 155" stroke="#2a1a0a" strokeWidth="3" fill="none" />
+
+						{/* ── RIGHT ARM (holding sword, extended) ── */}
+						<path d="M72 140 Q90 150 100 170" stroke="#c4956a" strokeWidth="5" fill="none" strokeLinecap="round" />
+						{/* Sleeve */}
+						<path d="M72 140 Q80 148 85 155" stroke="#2a1a0a" strokeWidth="3" fill="none" />
+						{/* Hand */}
+						<ellipse cx="100" cy="172" rx="4" ry="5" fill="#c4956a" />
+
+						{/* ── CUTLASS SWORD ── */}
+						<path d="M98 168 Q108 155 115 130 Q118 120 116 115" stroke="#c0c0c0" strokeWidth="2.5" fill="none" strokeLinecap="round" />
+						{/* Blade shine */}
+						<path d="M100 165 Q110 150 115 132" stroke="#ffffff" strokeWidth="0.8" fill="none" opacity="0.4" />
+						{/* Guard */}
+						<ellipse cx="99" cy="170" rx="6" ry="2.5" fill="#d4af37" />
+						{/* Pommel */}
+						<circle cx="98" cy="175" r="2" fill="#d4af37" />
+
+						{/* ── LEGS ── */}
+						<path d="M50 200 L46 255" stroke="#2a1a0a" strokeWidth="6" strokeLinecap="round" />
+						<path d="M70 200 L74 255" stroke="#2a1a0a" strokeWidth="6" strokeLinecap="round" />
+						{/* Boots */}
+						<path d="M46 255 L42 270 L35 272 L35 268 L42 265 L44 255" fill="#1a0e04" />
+						<path d="M74 255 L78 270 L85 272 L85 268 L78 265 L76 255" fill="#1a0e04" />
+						{/* Boot cuffs */}
+						<path d="M43 255 Q46 252 49 255" stroke="#3d2510" strokeWidth="1.5" fill="none" />
+						<path d="M71 255 Q74 252 77 255" stroke="#3d2510" strokeWidth="1.5" fill="none" />
+					</svg>
+				</div>
+			</motion.div>
+
+			{/* ═══ THE BLACK PEARL — sails in from the right ═══ */}
 			<motion.div
 				className="absolute top-1/2 -translate-y-1/2 right-[-8%] md:right-[-3%] w-[360px] sm:w-[480px] md:w-[580px] lg:w-[720px] xl:w-[820px] z-10 pointer-events-none select-none"
 				initial={{ x: "50%", opacity: 0 }}
@@ -227,9 +328,6 @@ const HeroSection = ({ description, startDate, endDate, prize, showDate = true, 
 				>
 					<span className="gold-shimmer-text block">Pirates of the</span>
 					<span className="gold-shimmer-text block">Coral-bean</span>
-					<span className="block text-[#93a1a1] text-lg md:text-2xl lg:text-3xl font-medium mt-2 tracking-normal">
-						Dead Men Tell No SQL
-					</span>
 				</motion.h1>
 
 				{/* Description */}

@@ -14,7 +14,7 @@ const HackathonPage = () => {
 	return (
 		<main className="pt-20">
 			{/* Hero */}
-			<div id="about" className="scroll-mt-44">
+			<div className="scroll-mt-44">
 				<HeroSection
 					title={DATA.title}
 					description={DATA.description}
@@ -42,7 +42,7 @@ const HackathonPage = () => {
 			<WaveDivider />
 
 			{/* About */}
-			<div className="bg-[#002b36]/50">
+			<div id="about" className="scroll-mt-44 bg-[#002b36]/50">
 				<AboutSection />
 			</div>
 
@@ -141,14 +141,9 @@ const HackathonPage = () => {
 
 			{/* FAQ */}
 			<div id="faq" className="scroll-mt-44 py-24">
-				<ViewContainer>
-					<h2 className="text-3xl md:text-4xl font-bold text-[#d4af37] mb-10 text-center">
-						Frequently Asked Questions
-					</h2>
-					<div className="[&_h2]:text-[#d4af37] [&_h2]:font-bold [&_div[class*='pb-4']]:text-[#5c4813] [&_div[class*='pb-4']_a]:text-[#5c4813]">
-						<Faq FAQS={faqs} />
-					</div>
-				</ViewContainer>
+				<div className="[&_h2]:text-[#d4af37] [&_h2]:font-bold [&_div[class*='pb-4']]:text-[#5c4813] [&_div[class*='pb-4']_a]:text-[#5c4813]">
+					<Faq FAQS={faqs} />
+				</div>
 			</div>
 		</main>
 	);

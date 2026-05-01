@@ -95,6 +95,12 @@
 	60% { transform: translateY(-22px) rotate(1.8deg); }
 	80% { transform: translateY(-10px) rotate(0.3deg); }
 }
+@keyframes jack-swing {
+	0%, 100% { transform: rotate(-8deg); }
+	30% { transform: rotate(12deg); }
+	60% { transform: rotate(-6deg); }
+	80% { transform: rotate(10deg); }
+}
 @keyframes gentle-bob {
 	0%, 100% { transform: translateY(0) rotate(0deg); }
 	50% { transform: translateY(-8px) rotate(0.5deg); }
@@ -135,6 +141,10 @@
 }
 .coral-hackathon .ship-sailing {
 	animation: ship-sailing 7s ease-in-out infinite;
+}
+.coral-hackathon .jack-swing {
+	animation: jack-swing 4s ease-in-out infinite;
+	transform-origin: top center;
 }
 .coral-hackathon .gentle-bob {
 	animation: gentle-bob 6s ease-in-out infinite;
