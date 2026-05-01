@@ -2,6 +2,8 @@ import { images as februaryImages } from "@/app/february/images";
 import { DATA as twoFastTwoMcpData } from "@/app/hackathons/2fast2mcp/data";
 import { images as twoFastTwoMcpImages } from "@/app/hackathons/2fast2mcp/images";
 import { DATA as accomplishData } from "@/app/hackathons/accomplish/data";
+import { DATA as coralData } from "@/app/hackathons/coral/data";
+import { images as coralImages } from "@/app/hackathons/coral/images";
 import { images as accomplishImages } from "@/app/hackathons/accomplish/images";
 import { DATA as agenthackData } from "@/app/hackathons/agenthack25/data";
 import { DATA as assemblehackData } from "@/app/hackathons/assemblehack25/data";
@@ -42,6 +44,14 @@ type HackathonType = {
 };
 
 const hackathons: HackathonType[] = [
+	{
+		slug: coralData.slug,
+		title: coralData.title,
+		description: coralData.descriptionCard,
+		thumbnail: coralImages.thumbnail,
+		startDate: coralData.startDate,
+		endDate: coralData.endDate,
+	},
 	{
 		slug: openmetadataData.slug,
 		title: openmetadataData.title,

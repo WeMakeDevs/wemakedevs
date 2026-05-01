@@ -1,0 +1,158 @@
+/* Pirates of the Coral-bean Hackathon Custom Styles */
+
+/* Ensure navbar text is visible on dark background */
+.coral-hackathon nav a,
+.coral-hackathon nav span,
+.coral-hackathon header,
+.coral-hackathon header a {
+	color: #f1f5f9 !important;
+}
+
+/* When navbar container has white background (scrolled), override to dark text */
+.coral-hackathon nav > div.bg-white,
+.coral-hackathon nav > div[class*="bg-white"] {
+	color: #0f172a !important;
+}
+
+.coral-hackathon nav > div.bg-white a:not([class*="text-white"]),
+.coral-hackathon nav > div[class*="bg-white"] a:not([class*="text-white"]),
+.coral-hackathon nav > div.bg-white span:not([class*="text-white"]),
+.coral-hackathon nav > div[class*="bg-white"] span:not([class*="text-white"]) {
+	color: #0f172a !important;
+}
+
+.coral-hackathon nav a:hover,
+.coral-hackathon header a:hover {
+	color: #fbbf24 !important;
+}
+
+.coral-hackathon nav > div.bg-white a:not([class*="text-white"]):hover,
+.coral-hackathon nav > div[class*="bg-white"] a:not([class*="text-white"]):hover {
+	color: #d97706 !important;
+}
+
+/* Fix for sticky/fixed navbar background */
+.coral-hackathon nav[aria-label="secondary nav"] {
+	background-color: rgba(10, 15, 30, 0.92) !important;
+	backdrop-filter: blur(8px);
+	border-color: rgba(251, 191, 36, 0.2) !important;
+}
+
+/* Section headings */
+.coral-hackathon h2 {
+	color: #fbbf24;
+}
+
+/* Link colors in content */
+.coral-hackathon .text-slate-300 a {
+	color: #fbbf24;
+}
+
+.coral-hackathon .text-slate-300 a:hover {
+	color: #fcd34d;
+}
+
+/* FAQ answer text color */
+.coral-hackathon #faq [class*="bg-white"] [class*="pb-4"],
+.coral-hackathon #faq [class*="bg-white"] [class*="pb-4"] * {
+	color: #92400e !important;
+}
+
+.coral-hackathon #faq [class*="bg-white"] [class*="pb-4"] a {
+	color: #92400e !important;
+}
+
+.coral-hackathon #faq [class*="bg-white"] [class*="pb-4"] a:hover {
+	color: #78350f !important;
+}
+
+/* Ocean wave animation */
+@keyframes ocean-wave {
+	0%, 100% {
+		transform: translateX(0) translateY(0);
+	}
+	25% {
+		transform: translateX(-5px) translateY(-3px);
+	}
+	50% {
+		transform: translateX(0) translateY(-6px);
+	}
+	75% {
+		transform: translateX(5px) translateY(-3px);
+	}
+}
+
+@keyframes gentle-bob {
+	0%, 100% {
+		transform: translateY(0) rotate(0deg);
+	}
+	50% {
+		transform: translateY(-8px) rotate(1deg);
+	}
+}
+
+@keyframes compass-spin {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes shimmer {
+	0% {
+		background-position: -200% 0;
+	}
+	100% {
+		background-position: 200% 0;
+	}
+}
+
+@keyframes float-bubble {
+	0%, 100% {
+		transform: translateY(0) scale(1);
+		opacity: 0.3;
+	}
+	50% {
+		transform: translateY(-20px) scale(1.1);
+		opacity: 0.6;
+	}
+}
+
+.coral-hackathon .ocean-wave {
+	animation: ocean-wave 4s ease-in-out infinite;
+}
+
+.coral-hackathon .gentle-bob {
+	animation: gentle-bob 6s ease-in-out infinite;
+}
+
+.coral-hackathon .gold-shimmer {
+	background: linear-gradient(
+		90deg,
+		transparent 0%,
+		rgba(251, 191, 36, 0.3) 50%,
+		transparent 100%
+	);
+	background-size: 200% 100%;
+	animation: shimmer 3s ease-in-out infinite;
+}
+
+/* Treasure map texture overlay */
+.coral-hackathon .treasure-map-bg {
+	background-image:
+		radial-gradient(circle at 20% 80%, rgba(139, 92, 42, 0.08) 0%, transparent 50%),
+		radial-gradient(circle at 80% 20%, rgba(251, 191, 36, 0.05) 0%, transparent 50%),
+		radial-gradient(circle at 50% 50%, rgba(6, 78, 59, 0.06) 0%, transparent 70%);
+}
+
+/* Pirate scroll border effect */
+.coral-hackathon .scroll-border {
+	border-image: linear-gradient(
+		to right,
+		rgba(139, 92, 42, 0.3),
+		rgba(251, 191, 36, 0.5),
+		rgba(139, 92, 42, 0.3)
+	) 1;
+}
