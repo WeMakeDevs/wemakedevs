@@ -272,6 +272,70 @@ const HeroSection = ({ description, startDate, endDate, prize, showDate = true, 
 				</div>
 			</motion.div>
 
+			{/* ═══ PIRATE PARROT — flying around below Jack ═══ */}
+			<motion.div
+				className="absolute top-[38%] right-[8%] md:right-[12%] lg:right-[15%] z-20 pointer-events-none select-none"
+				initial={{ opacity: 0, scale: 0.5 }}
+				animate={{ opacity: 1, scale: 1 }}
+				transition={{ duration: 0.8, delay: 2.5 }}
+			>
+				<div className="parrot-fly">
+					<svg viewBox="0 0 100 80" fill="none" className="w-14 sm:w-16 md:w-20 lg:w-24">
+						{/* Body */}
+						<ellipse cx="50" cy="45" rx="14" ry="18" fill="#e53e3e" />
+						<ellipse cx="50" cy="45" rx="14" ry="18" fill="url(#parrotGrad)" />
+						<defs>
+							<linearGradient id="parrotGrad" x1="50" y1="27" x2="50" y2="63" gradientUnits="userSpaceOnUse">
+								<stop offset="0%" stopColor="#e53e3e" />
+								<stop offset="50%" stopColor="#dd6b20" />
+								<stop offset="100%" stopColor="#d69e2e" />
+							</linearGradient>
+						</defs>
+						{/* Belly */}
+						<ellipse cx="50" cy="50" rx="9" ry="12" fill="#fdf6e3" opacity="0.7" />
+
+						{/* Head */}
+						<circle cx="50" cy="28" r="10" fill="#e53e3e" />
+						{/* Eye */}
+						<circle cx="54" cy="26" r="3" fill="#fdf6e3" />
+						<circle cx="55" cy="25.5" r="1.5" fill="#1a1a1a" />
+						{/* Eye ring */}
+						<circle cx="54" cy="26" r="3.5" stroke="#fdf6e3" strokeWidth="0.5" fill="none" opacity="0.5" />
+						{/* Beak */}
+						<path d="M60 28 L70 30 L65 33 L60 31 Z" fill="#1a1a1a" />
+						<path d="M60 28 L68 29 L60 30" fill="#333" />
+						{/* Beak curve */}
+						<path d="M68 29 Q71 31 65 33" stroke="#1a1a1a" strokeWidth="0.8" fill="none" />
+						{/* Head crest */}
+						<path d="M44 22 Q40 14 45 10 Q48 16 46 22" fill="#e53e3e" />
+						<path d="M47 20 Q44 12 48 8 Q50 14 48 20" fill="#dd6b20" />
+
+						{/* Left wing (extended, flapping) */}
+						<path d="M36 40 Q15 28 8 18 Q12 22 18 25 Q10 20 5 12 Q14 24 22 30 Q16 26 12 18 Q20 28 30 36" fill="#2b6cb0" />
+						<path d="M36 40 Q20 32 14 24" stroke="#2c5282" strokeWidth="0.5" fill="none" opacity="0.4" />
+						{/* Wing feather tips */}
+						<path d="M8 18 Q6 15 8 12" stroke="#2b6cb0" strokeWidth="1" fill="none" />
+						<path d="M5 12 Q3 9 5 6" stroke="#2b6cb0" strokeWidth="1" fill="none" />
+
+						{/* Right wing (extended, flapping) */}
+						<path d="M64 40 Q85 28 92 18 Q88 22 82 25 Q90 20 95 12 Q86 24 78 30 Q84 26 88 18 Q80 28 70 36" fill="#2b6cb0" />
+						<path d="M64 40 Q80 32 86 24" stroke="#2c5282" strokeWidth="0.5" fill="none" opacity="0.4" />
+						{/* Wing feather tips */}
+						<path d="M92 18 Q94 15 92 12" stroke="#2b6cb0" strokeWidth="1" fill="none" />
+						<path d="M95 12 Q97 9 95 6" stroke="#2b6cb0" strokeWidth="1" fill="none" />
+
+						{/* Tail feathers */}
+						<path d="M45 62 Q38 75 32 80" stroke="#2b6cb0" strokeWidth="2.5" fill="none" strokeLinecap="round" />
+						<path d="M50 63 Q48 76 45 82" stroke="#e53e3e" strokeWidth="2" fill="none" strokeLinecap="round" />
+						<path d="M55 62 Q58 75 55 80" stroke="#d69e2e" strokeWidth="2" fill="none" strokeLinecap="round" />
+
+						{/* Feet (tucked) */}
+						<path d="M45 58 L43 64 L40 66" stroke="#4a5568" strokeWidth="1.2" fill="none" />
+						<path d="M55 58 L57 64 L60 66" stroke="#4a5568" strokeWidth="1.2" fill="none" />
+					</svg>
+				</div>
+			</motion.div>
+
 			{/* ═══ THE BLACK PEARL — sails in from the right ═══ */}
 			<motion.div
 				className="absolute top-1/2 -translate-y-1/2 right-[-8%] md:right-[-3%] w-[360px] sm:w-[480px] md:w-[580px] lg:w-[720px] xl:w-[820px] z-10 pointer-events-none select-none"
