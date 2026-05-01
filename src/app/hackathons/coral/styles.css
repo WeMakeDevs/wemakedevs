@@ -19,6 +19,23 @@
 	border: 1px solid rgba(212, 175, 55, 0.1);
 }
 
+/* Sub-nav links: red to pop */
+.coral-hackathon .coral-sticky-nav nav button,
+.coral-hackathon .coral-sticky-nav nav a {
+	color: #ef4444 !important;
+	font-weight: 600;
+}
+.coral-hackathon .coral-sticky-nav nav button:hover,
+.coral-hackathon .coral-sticky-nav nav a:hover {
+	color: #fca5a5 !important;
+	background-color: rgba(239, 68, 68, 0.08);
+}
+/* Active sub-nav link */
+.coral-hackathon .coral-sticky-nav nav button[class*="shadow-secondaryNav"],
+.coral-hackathon .coral-sticky-nav nav li button[class*="shadow-secondaryNav"] {
+	color: #fca5a5 !important;
+}
+
 .coral-hackathon nav > div.bg-white,
 .coral-hackathon nav > div[class*="bg-white"] {
 	color: #002b36 !important;

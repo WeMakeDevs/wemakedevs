@@ -173,8 +173,8 @@ const HeroSection = ({ description, startDate, endDate, prize, showDate = true, 
 		<div className="relative min-h-[65svh] md:min-h-[72svh] overflow-hidden flex flex-col">
 			{/* ═══ THE BLACK PEARL — sails in from the left, absolutely positioned ═══ */}
 			<motion.div
-				className="absolute top-1/2 -translate-y-1/2 left-[-8%] md:left-[-3%] w-[360px] sm:w-[480px] md:w-[580px] lg:w-[720px] xl:w-[820px] z-10 pointer-events-none select-none"
-				initial={{ x: "-50%", opacity: 0 }}
+				className="absolute top-1/2 -translate-y-1/2 right-[-8%] md:right-[-3%] w-[360px] sm:w-[480px] md:w-[580px] lg:w-[720px] xl:w-[820px] z-10 pointer-events-none select-none"
+				initial={{ x: "50%", opacity: 0 }}
 				animate={{ x: "0%", opacity: 1 }}
 				transition={{ duration: 2.2, ease: [0.16, 1, 0.3, 1], delay: 0.3 }}
 			>
@@ -185,28 +185,36 @@ const HeroSection = ({ description, startDate, endDate, prize, showDate = true, 
 
 			{/* ═══ Hero content — full width, z-20 above ship ═══ */}
 			<ViewContainer className="relative z-20 flex flex-col justify-start pt-8 md:pt-12 pb-6 flex-1">
-				{/* Status badge */}
+				{/* Status badges */}
 				{showDate && (
 					<motion.div
 						initial={{ opacity: 0, scale: 0.8 }}
 						animate={{ opacity: 1, scale: 1 }}
 						transition={{ delay: 1, duration: 0.5 }}
-						className={cn(
-							"inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-sm font-semibold tracking-wide border mb-5 w-fit",
-							status === "upcoming" && "bg-[#d4af37]/10 text-[#d4af37] border-[#d4af37]/30",
-							status === "ongoing" && "bg-[#2aa198]/10 text-[#2aa198] border-[#2aa198]/30",
-							status === "ended" && "bg-[#586e75]/20 text-[#93a1a1] border-[#586e75]/30",
-						)}
+						className="flex items-center gap-2 mb-5 flex-wrap"
 					>
-						<div className={cn(
-							"w-2 h-2 rounded-full",
-							status === "upcoming" && "bg-[#d4af37] animate-pulse",
-							status === "ongoing" && "bg-[#2aa198]",
-							status === "ended" && "bg-[#586e75]",
-						)} />
-						{status === "upcoming" && "UPCOMING"}
-						{status === "ongoing" && "SAILING NOW"}
-						{status === "ended" && "VOYAGE COMPLETE"}
+						<div
+							className={cn(
+								"inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-sm font-semibold tracking-wide border",
+								status === "upcoming" && "bg-[#d4af37]/10 text-[#d4af37] border-[#d4af37]/30",
+								status === "ongoing" && "bg-[#2aa198]/10 text-[#2aa198] border-[#2aa198]/30",
+								status === "ended" && "bg-[#586e75]/20 text-[#93a1a1] border-[#586e75]/30",
+							)}
+						>
+							<div className={cn(
+								"w-2 h-2 rounded-full",
+								status === "upcoming" && "bg-[#d4af37] animate-pulse",
+								status === "ongoing" && "bg-[#2aa198]",
+								status === "ended" && "bg-[#586e75]",
+							)} />
+							{status === "upcoming" && "UPCOMING"}
+							{status === "ongoing" && "SAILING NOW"}
+							{status === "ended" && "VOYAGE COMPLETE"}
+						</div>
+						<div className="inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-sm font-semibold tracking-wide border bg-[#2aa198]/10 text-[#2aa198] border-[#2aa198]/30">
+							<div className="w-2 h-2 rounded-full bg-[#2aa198]" />
+							ONLINE
+						</div>
 					</motion.div>
 				)}
 
