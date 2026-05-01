@@ -1,7 +1,5 @@
 import Faq from "@/components/Faq";
-import {
-	HackathonNav,
-} from "@/components/hackathon-content";
+import { HackathonNav } from "@/components/hackathon-content";
 import { ViewContainer } from "@/components/ui/view-container";
 import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
@@ -14,21 +12,9 @@ import { DATA, faqs, navLinks } from "./data";
 
 const HackathonPage = () => {
 	return (
-		<main className="pt-0">
-			<HackathonNav
-				slug={DATA.slug}
-				page="overview"
-				links={navLinks}
-				navCta={{
-					label: DATA.cta.label,
-					href: DATA.cta.href,
-					openInNewTab: DATA.cta.openInNewTab,
-					disabled: DATA.cta.disabled,
-				}}
-			/>
-
+		<main className="pt-20">
 			{/* Hero */}
-			<div id="about" className="scroll-mt-16">
+			<div id="about" className="scroll-mt-44">
 				<HeroSection
 					title={DATA.title}
 					description={DATA.description}
@@ -38,6 +24,19 @@ const HackathonPage = () => {
 					showDate={DATA.showDate}
 					cta={DATA.cta}
 				/>
+			</div>
+
+			{/* Sticky sub-nav (Overview, Rules, Resources, Schedule) */}
+			<div className="sticky top-[96px] z-[120]">
+				<ViewContainer>
+					<div className="coral-sticky-nav rounded-xl">
+						<HackathonNav
+							slug={DATA.slug}
+							page="overview"
+							links={navLinks}
+						/>
+					</div>
+				</ViewContainer>
 			</div>
 
 			<WaveDivider />
@@ -50,21 +49,21 @@ const HackathonPage = () => {
 			<WaveDivider />
 
 			{/* Tracks */}
-			<div id="tracks" className="scroll-mt-16">
+			<div id="tracks" className="scroll-mt-44">
 				<TracksSection />
 			</div>
 
 			<WaveDivider />
 
 			{/* Prizes */}
-			<div id="prizes" className="scroll-mt-16 bg-[#002b36]/30">
+			<div id="prizes" className="scroll-mt-44 bg-[#002b36]/30">
 				<PrizesShowcase />
 			</div>
 
 			<WaveDivider />
 
 			{/* Sponsor */}
-			<div id="sponsor" className="scroll-mt-16 py-24">
+			<div id="sponsor" className="scroll-mt-44 py-24">
 				<div className="max-w-6xl mx-auto px-4 md:px-8">
 					<h2 className="text-3xl md:text-5xl font-bold gold-shimmer-text mb-10 text-center">
 						Sponsor
@@ -141,7 +140,7 @@ const HackathonPage = () => {
 			<WaveDivider />
 
 			{/* FAQ */}
-			<div id="faq" className="scroll-mt-16 py-24">
+			<div id="faq" className="scroll-mt-44 py-24">
 				<ViewContainer>
 					<h2 className="text-3xl md:text-4xl font-bold text-[#d4af37] mb-10 text-center">
 						Frequently Asked Questions

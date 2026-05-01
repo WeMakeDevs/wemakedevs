@@ -12,6 +12,13 @@
 	color: #fdf6e3 !important;
 }
 
+/* Sticky sub-nav */
+.coral-hackathon .coral-sticky-nav {
+	background-color: rgba(0, 43, 54, 0.85);
+	backdrop-filter: blur(12px);
+	border: 1px solid rgba(212, 175, 55, 0.1);
+}
+
 .coral-hackathon nav > div.bg-white,
 .coral-hackathon nav > div[class*="bg-white"] {
 	color: #002b36 !important;
