@@ -1,6 +1,5 @@
 import Faq from "@/components/Faq";
 import {
-	HackathonCoverImage,
 	HackathonNav,
 } from "@/components/hackathon-content";
 import { ViewContainer } from "@/components/ui/view-container";
@@ -12,12 +11,10 @@ import PrizesShowcase from "./components/PrizesShowcase";
 import TracksSection from "./components/TracksSection";
 import WaveDivider from "./components/WaveDivider";
 import { DATA, faqs, navLinks } from "./data";
-import { images } from "./images";
 
 const HackathonPage = () => {
 	return (
-		<main className="pt-20">
-			<HackathonCoverImage src={images.cover} alt={DATA.title} />
+		<main className="pt-0">
 			<HackathonNav
 				slug={DATA.slug}
 				page="overview"

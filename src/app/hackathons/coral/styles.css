@@ -64,6 +64,13 @@
 	0%, 100% { transform: translateY(0) rotate(-1deg); }
 	50% { transform: translateY(-14px) rotate(1.5deg); }
 }
+@keyframes ship-sailing {
+	0%, 100% { transform: translateY(0) rotate(-0.8deg); }
+	20% { transform: translateY(-18px) rotate(1.2deg); }
+	40% { transform: translateY(-6px) rotate(-0.5deg); }
+	60% { transform: translateY(-22px) rotate(1.8deg); }
+	80% { transform: translateY(-10px) rotate(0.3deg); }
+}
 @keyframes gentle-bob {
 	0%, 100% { transform: translateY(0) rotate(0deg); }
 	50% { transform: translateY(-8px) rotate(0.5deg); }
@@ -101,6 +108,9 @@
 
 .coral-hackathon .ship-bob {
 	animation: ship-bob 5s ease-in-out infinite;
+}
+.coral-hackathon .ship-sailing {
+	animation: ship-sailing 7s ease-in-out infinite;
 }
 .coral-hackathon .gentle-bob {
 	animation: gentle-bob 6s ease-in-out infinite;
