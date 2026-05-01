@@ -58,8 +58,8 @@ const PrizesShowcase = () => {
 
 						<div className="grid grid-cols-1 md:grid-cols-2 gap-6">
 							{[
-								{ place: "Best Agent Builder", amount: "MacBook", rank: "Track 1 Winner", emoji: "🏴‍☠️" },
-								{ place: "Best Source Connector", amount: "iPhone 17", rank: "Track 2 Winner", emoji: "⚓" },
+								{ place: "Best Agent Builder", amount: "MacBook", rank: "Track 1 Winners", emoji: "🏴‍☠️" },
+								{ place: "Best Source Connector", amount: "iPhone 17", rank: "Track 2 Winners", emoji: "⚓" },
 							].map((p, i) => (
 								<motion.div
 									key={p.place}
@@ -101,7 +101,7 @@ const PrizesShowcase = () => {
 						<h3 className="text-xl font-bold text-[#fdf6e3]">Early Bird Swag: Top 10 Social Sharers</h3>
 					</div>
 					<p className="text-[#93a1a1] mb-4">
-						Register and share on social media (LinkedIn / X / HackerNews / Reddit) tagging Coral.
+						Register and share on social media (LinkedIn / X) tagging Coral.
 					</p>
 					<div className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-[#d4af37]/5 border border-[#d4af37]/10 text-[#d4af37] font-semibold text-sm">
 						<Gift size={16} /> Top 10 Posts → Swag Box 📦

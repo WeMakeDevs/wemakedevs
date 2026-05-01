@@ -14,26 +14,31 @@
 
 /* Sticky sub-nav */
 .coral-hackathon .coral-sticky-nav {
-	background-color: rgba(0, 43, 54, 0.85);
+	background-color: rgba(185, 28, 28, 0.92);
 	backdrop-filter: blur(12px);
-	border: 1px solid rgba(212, 175, 55, 0.1);
+	border: 1px solid rgba(239, 68, 68, 0.4);
 }
 
-/* Sub-nav links: red to pop */
+/* Sub-nav links: white on red background */
 .coral-hackathon .coral-sticky-nav nav button,
 .coral-hackathon .coral-sticky-nav nav a {
-	color: #ef4444 !important;
+	color: #ffffff !important;
 	font-weight: 600;
 }
 .coral-hackathon .coral-sticky-nav nav button:hover,
 .coral-hackathon .coral-sticky-nav nav a:hover {
-	color: #fca5a5 !important;
-	background-color: rgba(239, 68, 68, 0.08);
+	color: #fde68a !important;
+	background-color: rgba(255, 255, 255, 0.1);
 }
 /* Active sub-nav link */
 .coral-hackathon .coral-sticky-nav nav button[class*="shadow-secondaryNav"],
 .coral-hackathon .coral-sticky-nav nav li button[class*="shadow-secondaryNav"] {
-	color: #fca5a5 !important;
+	color: #fde68a !important;
+}
+/* Sub-nav border overrides */
+.coral-hackathon .coral-sticky-nav nav[aria-label="secondary nav"] {
+	background-color: transparent !important;
+	border-color: rgba(255, 255, 255, 0.15) !important;
 }
 
 .coral-hackathon nav > div.bg-white,
