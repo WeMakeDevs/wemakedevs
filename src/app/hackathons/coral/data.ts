@@ -21,7 +21,7 @@ const DATA = {
 		winning: [
 			{
 				name: "Top 3 Winners",
-				prize: "$5,000 + $3,000 + $2,000 + exclusive swag",
+				prize: "MacBook + iPhone 17 + exclusive swag",
 			},
 		],
 		giveaway: [

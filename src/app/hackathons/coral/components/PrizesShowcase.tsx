@@ -48,18 +48,18 @@ const PrizesShowcase = () => {
 					<div className="pointer-events-none absolute -bottom-16 -left-16 w-48 h-48 bg-[#d4af37]/5 rounded-full blur-[60px]" />
 
 					<div className="relative z-10">
-						<div className="flex items-center gap-3 mb-8">
+						<div className="flex items-center gap-3 mb-2">
 							<Trophy className="w-7 h-7 text-[#d4af37]" />
 							<h3 className="text-2xl md:text-3xl font-bold text-[#fdf6e3]">
 								Captain&apos;s Bounty
 							</h3>
 						</div>
+						<p className="text-[#93a1a1] text-sm mb-8">All team members will receive the prize for their placement.</p>
 
-						<div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+						<div className="grid grid-cols-1 md:grid-cols-2 gap-6">
 							{[
-								{ place: "Pirate King", amount: "$5,000", rank: "1st Place", emoji: "👑" },
-								{ place: "First Mate", amount: "$3,000", rank: "2nd Place", emoji: "🏴‍☠️" },
-								{ place: "Quartermaster", amount: "$2,000", rank: "3rd Place", emoji: "⚓" },
+								{ place: "Best Agent Builder", amount: "MacBook", rank: "Track 1 Winner", emoji: "🏴‍☠️" },
+								{ place: "Best Source Connector", amount: "iPhone 17", rank: "Track 2 Winner", emoji: "⚓" },
 							].map((p, i) => (
 								<motion.div
 									key={p.place}
