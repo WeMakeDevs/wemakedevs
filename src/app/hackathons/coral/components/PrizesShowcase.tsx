@@ -43,7 +43,7 @@ const PrizesShowcase = () => {
 									<Trophy className="w-8 h-8 text-yellow-300" />
 								</div>
 								<h3 className="text-2xl md:text-3xl font-bold text-yellow-200">
-									🏴‍☠️ Captain&apos;s Bounty — Top 3 Winners
+									🏴‍☠️ Captain&apos;s Bounty: Top 3 Winners
 								</h3>
 							</div>
 
@@ -112,7 +112,7 @@ const PrizesShowcase = () => {
 								<Gift className="w-8 h-8 text-white" />
 							</div>
 							<h3 className="text-2xl md:text-3xl font-bold text-amber-400">
-								🎁 Early Bird Swag — Top 10 Social Sharers
+								🎁 Early Bird Swag: Top 10 Social Sharers
 							</h3>
 						</div>
 						<p className="text-lg text-slate-300 leading-relaxed mb-6">
@@ -218,7 +218,7 @@ const PrizesShowcase = () => {
 							<p className="text-slate-300 text-sm leading-relaxed mb-4">
 								Write a 2-3 page reproducible guide, e.g.
 								&quot;I built a customer success dashboard with
-								Claude Code + Coral — here&apos;s how.&quot;
+								Claude Code + Coral, here&apos;s how.&quot;
 							</p>
 							<div className="bg-[#0a0f1e]/50 rounded-lg px-4 py-3 border border-purple-500/10">
 								<p className="text-purple-300 font-semibold">
@@ -233,7 +233,7 @@ const PrizesShowcase = () => {
 							<div className="flex items-center gap-3 mb-4">
 								<Users className="w-6 h-6 text-rose-400" />
 								<h4 className="text-xl font-bold text-rose-400">
-									Recruit Yer Crew — Referral Bounty
+									Recruit Yer Crew: Referral Bounty
 								</h4>
 							</div>
 							<p className="text-slate-300 text-sm leading-relaxed mb-4">

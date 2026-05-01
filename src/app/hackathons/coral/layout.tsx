@@ -13,7 +13,12 @@ export default function RootLayout({
 	const hackathonNavLinks: navLinksType = [
 		{
 			name: "About",
-			url: `/hackathons/${DATA.slug}/#about`,
+			url: `/hackathons/${DATA.slug}#about`,
+			type: "link",
+		},
+		{
+			name: "Tracks",
+			url: `/hackathons/${DATA.slug}#tracks`,
 			type: "link",
 		},
 		{
@@ -27,23 +32,21 @@ export default function RootLayout({
 			type: "link",
 		},
 		{
-			name: "Hackathons",
-			url: "https://www.wemakedevs.org/hackathons",
+			name: "FAQs",
+			url: `/hackathons/${DATA.slug}#faq`,
 			type: "link",
 		},
 		{
-			name: "Partner with us",
-			url: "https://www.wemakedevs.org/#partners",
+			name: "Register",
+			url: DATA.cta.href,
 			type: "button",
+			openInNewTab: true,
 		},
 	];
 
 	return (
 		<div className="coral-hackathon bg-[#0a0f1e] text-slate-100 min-h-screen relative">
-			{/* Pirate-themed background with ships, anchors, and ocean elements */}
 			<PirateBackground />
-
-			{/* Main content */}
 			<div className="relative z-10">
 				<HackathonNavbar customNavLinks={hackathonNavLinks} />
 				{children}

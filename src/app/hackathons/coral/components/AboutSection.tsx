@@ -35,7 +35,7 @@ const AboutSection = () => {
 						<p className="text-slate-300 leading-relaxed mb-6">
 							Build an agent for a real use case that retrieves
 							data across multiple sources using Coral. Describe
-							how you did it and what makes it great — ideally
+							how you did it and what makes it great, ideally
 							showcasing Coral&apos;s power.
 						</p>
 						<div className="space-y-3">
@@ -51,7 +51,7 @@ const AboutSection = () => {
 										<strong className="text-slate-300">
 											Coding Agent Debugger
 										</strong>{" "}
-										— Connect GitHub + Sentry + Slack. Agent
+										Connect GitHub + Sentry + Slack. Agent
 										joins failed CI builds with errors and
 										Slack discussions to diagnose root cause
 										in one query.
@@ -65,7 +65,7 @@ const AboutSection = () => {
 										<strong className="text-slate-300">
 											AI SRE Investigator
 										</strong>{" "}
-										— Connect PagerDuty + GitHub + Datadog.
+										Connect PagerDuty + GitHub + Datadog.
 										Correlate incidents with PRs and metrics
 										to auto-generate incident summaries.
 									</span>
@@ -78,7 +78,7 @@ const AboutSection = () => {
 										<strong className="text-slate-300">
 											Sprint Health Dashboard
 										</strong>{" "}
-										— Connect Linear + GitHub + Slack. See
+										Connect Linear + GitHub + Slack. See
 										what&apos;s blocked, in review, and
 										being discussed in real-time.
 									</span>
@@ -91,7 +91,7 @@ const AboutSection = () => {
 										<strong className="text-slate-300">
 											Customer Escalation Agent
 										</strong>{" "}
-										— Connect support tool + Sentry + Slack.
+										Connect support tool + Sentry + Slack.
 										Give support teams full technical
 										context without pinging engineering.
 									</span>
@@ -104,7 +104,7 @@ const AboutSection = () => {
 										<strong className="text-slate-300">
 											Security Monitor
 										</strong>{" "}
-										— Connect GitHub + Slack + Notion.
+										Connect GitHub + Slack + Notion.
 										Monitor for secrets in commits and flag
 										compliance gaps.
 									</span>
@@ -212,7 +212,7 @@ const AboutSection = () => {
 								</h3>
 								<p className="text-slate-300 leading-relaxed text-sm">
 									Join data across GitHub, Slack, Sentry,
-									PagerDuty, and more — all in a single SQL
+									PagerDuty, and more, all in a single SQL
 									query. Coral handles auth, pagination, and
 									rate limits.
 								</p>

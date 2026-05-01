@@ -83,7 +83,7 @@ const HackathonRules = async () => {
 						<li>
 							You must build a new project during the hackathon.
 							Simply modifying an existing codebase or app is not
-							allowed — your ship should be freshly launched when
+							allowed. Your ship should be freshly launched when
 							the voyage begins.
 						</li>
 						<li>
@@ -97,7 +97,7 @@ const HackathonRules = async () => {
 							Crews can plan and discuss ideas in advance, but
 							coding and design work should start only after the
 							hackathon begins. Written notes, sketches, and
-							diagrams are allowed before kickoff — just like
+							diagrams are allowed before kickoff, just like
 							studying the treasure map before setting sail.
 						</li>
 						<li>
@@ -112,7 +112,7 @@ const HackathonRules = async () => {
 						</li>
 						<li>
 							Please treat all participants with respect. Act
-							kindly and professionally — on this ship, we sail
+							kindly and professionally. On this ship, we sail
 							together. Harassment, discrimination, or exclusionary
 							behavior of any kind will not be tolerated. If you
 							see something concerning, notify an organizer
@@ -121,7 +121,7 @@ const HackathonRules = async () => {
 						<li>
 							Failure to follow these rules or the Code of Conduct
 							may result in disqualification and a permanent ban
-							from future events — ye&apos;ll be walking the
+							from future events. Ye&apos;ll be walking the
 							plank!
 						</li>
 					</ol>

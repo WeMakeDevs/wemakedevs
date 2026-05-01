@@ -40,7 +40,7 @@ const HackathonResources = async () => {
 							>
 								Coral Discord
 							</Link>{" "}
-							for support and updates — ask questions in{" "}
+							for support and updates. Ask questions in{" "}
 							<span className="text-amber-400 font-mono">
 								#help-and-questions
 							</span>
@@ -73,7 +73,7 @@ const HackathonResources = async () => {
 							>
 								Coral Website
 							</Link>{" "}
-							— Learn what Coral does and see use cases
+							Learn what Coral does and see use cases
 						</li>
 						<li>
 							<Link
@@ -84,7 +84,7 @@ const HackathonResources = async () => {
 							>
 								Coral Documentation
 							</Link>{" "}
-							— Full docs to get started and go deep
+							Full docs to get started and go deep
 						</li>
 						<li>
 							<Link
@@ -95,7 +95,7 @@ const HackathonResources = async () => {
 							>
 								Coral GitHub README
 							</Link>{" "}
-							— Quick start guide and repo overview
+							Quick start guide and repo overview
 						</li>
 						<li>
 							<Link
@@ -106,7 +106,7 @@ const HackathonResources = async () => {
 							>
 								Coral GitHub Repository
 							</Link>{" "}
-							— Explore the source code (don&apos;t forget to ⭐
+							Explore the source code (don&apos;t forget to ⭐
 							star it!)
 						</li>
 						<li>
@@ -118,7 +118,7 @@ const HackathonResources = async () => {
 							>
 								Coral Discord
 							</Link>{" "}
-							— Connect with the crew and get help
+							Connect with the crew and get help
 						</li>
 					</ul>
 				</HackathonContentBody>
@@ -141,7 +141,7 @@ const HackathonResources = async () => {
 							>
 								Write a Custom Source Guide
 							</Link>{" "}
-							— Step-by-step guide to building a new Coral source
+							Step-by-step guide to building a new Coral source
 							connector
 						</li>
 					</ul>
@@ -183,7 +183,7 @@ const HackathonResources = async () => {
 						</li>
 						<li>
 							<strong>CLI or MCP:</strong> Run Coral from the
-							command line or through MCP — your choice.
+							command line or through MCP. Your choice.
 						</li>
 						<li>
 							<strong>100% local:</strong> Credentials, data, and

@@ -28,7 +28,7 @@ const PirateBackground = () => {
 				</svg>
 			</div>
 
-			{/* Pirate ship silhouette — top right */}
+			{/* Pirate ship silhouette */}
 			<div className="absolute top-[12%] right-[6%] opacity-[0.07]">
 				<svg
 					width="120"
@@ -81,7 +81,7 @@ const PirateBackground = () => {
 				</svg>
 			</div>
 
-			{/* Compass rose — bottom left */}
+			{/* Compass rose */}
 			<div className="absolute bottom-[8%] left-[5%] opacity-[0.05]">
 				<svg
 					width="100"
@@ -131,7 +131,7 @@ const PirateBackground = () => {
 				</svg>
 			</div>
 
-			{/* Treasure chest — middle left */}
+			{/* Treasure chest */}
 			<div className="absolute top-[45%] left-[3%] opacity-[0.06]">
 				<svg
 					width="80"
@@ -170,7 +170,7 @@ const PirateBackground = () => {
 				</svg>
 			</div>
 
-			{/* Skull and crossbones — top left */}
+			{/* Skull and crossbones */}
 			<div className="absolute top-[20%] left-[12%] opacity-[0.04]">
 				<svg
 					width="60"
@@ -214,7 +214,7 @@ const PirateBackground = () => {
 				</svg>
 			</div>
 
-			{/* Anchor — bottom right */}
+			{/* Anchor */}
 			<div className="absolute bottom-[15%] right-[8%] opacity-[0.05]">
 				<svg
 					width="60"
@@ -276,7 +276,7 @@ const PirateBackground = () => {
 				</svg>
 			</div>
 
-			{/* Sword — right side */}
+			{/* Sword */}
 			<div className="absolute top-[60%] right-[15%] opacity-[0.04] transform rotate-45">
 				<svg
 					width="20"
@@ -390,13 +390,13 @@ const PirateBackground = () => {
 				</svg>
 			</div>
 
-			{/* Glow effects — ocean themed */}
+			{/* Glow effects */}
 			<div className="absolute top-[20%] left-[30%] w-64 h-64 bg-amber-500/5 rounded-full blur-3xl" />
 			<div className="absolute bottom-[30%] right-[25%] w-48 h-48 bg-cyan-500/5 rounded-full blur-3xl" />
 			<div className="absolute top-[50%] right-[40%] w-32 h-32 bg-emerald-500/5 rounded-full blur-3xl" />
 			<div className="absolute bottom-[10%] left-[50%] w-56 h-56 bg-amber-600/4 rounded-full blur-3xl" />
 
-			{/* Coral reef silhouette — bottom */}
+			{/* Coral reef silhouette */}
 			<div className="absolute bottom-0 left-0 right-0 opacity-[0.04]">
 				<svg
 					width="100%"
@@ -449,7 +449,7 @@ const PirateBackground = () => {
 				</svg>
 			</div>
 
-			{/* Kraken tentacle hint — far right */}
+			{/* Kraken tentacle hint */}
 			<div className="absolute top-[70%] right-0 opacity-[0.03]">
 				<svg
 					width="60"

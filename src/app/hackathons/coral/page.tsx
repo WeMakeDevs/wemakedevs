@@ -1,6 +1,5 @@
 import Faq from "@/components/Faq";
 import {
-	HackathonContentTitle,
 	HackathonCoverImage,
 	HackathonNav,
 } from "@/components/hackathon-content";
@@ -10,7 +9,6 @@ import Link from "next/link";
 import AboutSection from "./components/AboutSection";
 import CoralHeader from "./components/Header";
 import PrizesShowcase from "./components/PrizesShowcase";
-import CoralStats from "./components/Stats";
 import { DATA, faqs, navLinks } from "./data";
 import { images } from "./images";
 
@@ -30,7 +28,7 @@ const HackathonPage = () => {
 				}}
 			/>
 
-			{/* Hero Section */}
+			{/* About Section */}
 			<div id="about" className="scroll-mt-16 bg-[#0a0f1e]">
 				<CoralHeader
 					title={DATA.title}
@@ -42,15 +40,6 @@ const HackathonPage = () => {
 					cta={DATA.cta}
 				/>
 
-				{/* Stats Section */}
-				<ViewContainer className="mt-10">
-					<HackathonContentTitle className="text-slate-100 [&>h2]:text-slate-100">
-						Pirates of the Coral-bean Stats
-					</HackathonContentTitle>
-					<CoralStats />
-				</ViewContainer>
-
-				{/* About Content */}
 				<ViewContainer className="mt-16 pb-20 bg-[#0c1a2e]/30 rounded-2xl py-12 px-8 treasure-map-bg">
 					<h2 className="text-3xl md:text-4xl font-bold text-amber-400 uppercase tracking-wide mb-6 text-center">
 						About the Voyage
@@ -71,15 +60,15 @@ const HackathonPage = () => {
 						<p>
 							No ETL. No warehouse. No glue code. You can run
 							Coral from the CLI or through MCP. Everything is
-							local — credentials, data, and usage history never
+							local. Credentials, data, and usage history never
 							leave your machine.
 						</p>
 						<p>
 							Whether you&apos;re a seasoned AI engineer, an
 							agent-pilled software developer, or a curious
-							tinkerer experimenting with intelligent agents —
-							this hackathon is your voyage to prove what you can
-							build with the power of unified data access.
+							tinkerer experimenting with intelligent agents, this
+							hackathon is your voyage to prove what you can build
+							with the power of unified data access.
 						</p>
 						<p className="text-amber-300 font-semibold italic">
 							&quot;Not all treasure is silver and gold, mate.
@@ -88,68 +77,11 @@ const HackathonPage = () => {
 						</p>
 					</div>
 				</ViewContainer>
-
-				{/* Features / Tracks Section */}
-				<AboutSection />
 			</div>
 
-			{/* Mid-Week Engagement Activities */}
-			<div className="py-20 bg-[#0c1a2e]/20">
-				<ViewContainer>
-					<h2 className="text-3xl md:text-4xl font-bold text-amber-400 uppercase tracking-wide mb-8 text-center">
-						🐠 Mid-Week Activities
-					</h2>
-					<p className="text-slate-400 text-center mb-10 max-w-2xl mx-auto">
-						Keep the wind in your sails with daily engagement
-						activities throughout the voyage.
-					</p>
-					<div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-						<div className="bg-[#0c1a2e]/60 rounded-xl p-6 border border-amber-500/15 hover:border-amber-500/30 transition-all">
-							<div className="text-2xl mb-3">⚡</div>
-							<h3 className="text-xl font-bold text-amber-400 mb-2">
-								Query of the Day
-							</h3>
-							<p className="text-slate-400 text-sm">
-								Daily creative challenge query. First pirate to
-								run it successfully and share the output wins a
-								prize!
-							</p>
-						</div>
-						<div className="bg-[#0c1a2e]/60 rounded-xl p-6 border border-cyan-500/15 hover:border-cyan-500/30 transition-all">
-							<div className="text-2xl mb-3">🎤</div>
-							<h3 className="text-xl font-bold text-cyan-400 mb-2">
-								Lightning Demos
-							</h3>
-							<p className="text-slate-400 text-sm">
-								30-min Discord voice channel where anyone does a
-								2-min live demo of their WIP. Cross-pollinate
-								ideas!
-							</p>
-						</div>
-						<div className="bg-[#0c1a2e]/60 rounded-xl p-6 border border-emerald-500/15 hover:border-emerald-500/30 transition-all">
-							<div className="text-2xl mb-3">⏰</div>
-							<h3 className="text-xl font-bold text-emerald-400 mb-2">
-								Countdown Content Drops
-							</h3>
-							<p className="text-slate-400 text-sm">
-								Day 5: &quot;48 hours left — here&apos;s the
-								craziest query we&apos;ve seen so far.&quot; Day
-								6: &quot;24 hours left — final push.&quot;
-							</p>
-						</div>
-						<div className="bg-[#0c1a2e]/60 rounded-xl p-6 border border-rose-500/15 hover:border-rose-500/30 transition-all">
-							<div className="text-2xl mb-3">🐠</div>
-							<h3 className="text-xl font-bold text-rose-400 mb-2">
-								Coral Creature of the Day
-							</h3>
-							<p className="text-slate-400 text-sm">
-								Daily highlight: most creative project, funniest
-								bug, or wildest query. &quot;Today&apos;s Sea
-								Urchin Award goes to...&quot;
-							</p>
-						</div>
-					</div>
-				</ViewContainer>
+			{/* Tracks Section */}
+			<div id="tracks" className="scroll-mt-16">
+				<AboutSection />
 			</div>
 
 			{/* Prizes Section */}
@@ -158,7 +90,7 @@ const HackathonPage = () => {
 			</div>
 
 			{/* Sponsor Section */}
-			<div id="sponsor" className="py-20 scroll-mt-10 bg-[#0a0f1e]">
+			<div id="sponsor" className="py-20 scroll-mt-16 bg-[#0a0f1e]">
 				<ViewContainer>
 					<h2 className="text-3xl md:text-4xl font-bold text-amber-400 uppercase tracking-wide mb-8">
 						Sponsor
@@ -197,7 +129,7 @@ const HackathonPage = () => {
 								</p>
 								<p>
 									You can run Coral from the CLI or through
-									MCP. Everything is local — credentials,
+									MCP. Everything is local. Credentials,
 									data, and usage history never leave your
 									machine.
 								</p>
@@ -217,7 +149,7 @@ const HackathonPage = () => {
 									Whether you&apos;re connecting GitHub +
 									Sentry + Slack for a debugging agent, or
 									building a custom source connector for an
-									API that doesn&apos;t exist yet — Coral is
+									API that doesn&apos;t exist yet, Coral is
 									your data layer.
 								</p>
 							</div>
@@ -226,33 +158,8 @@ const HackathonPage = () => {
 				</ViewContainer>
 			</div>
 
-			{/* Livestream Kickoff */}
-			<div className="py-20 bg-[#0c1a2e]/20">
-				<ViewContainer>
-					<h2 className="text-3xl md:text-4xl font-bold text-amber-400 uppercase tracking-wide mb-8 text-center">
-						🎬 Livestream Kickoff
-					</h2>
-					<div className="bg-[#0c1a2e]/60 backdrop-blur-sm rounded-2xl border border-amber-500/20 p-8 max-w-3xl mx-auto text-center">
-						<p className="text-lg text-slate-300 leading-relaxed mb-4">
-							Join us for the livestream kickoff with{" "}
-							<strong className="text-amber-400">
-								Matt, Coral&apos;s Co-founder & CEO
-							</strong>
-							. He&apos;ll walk through Coral, do live demos, and
-							answer your questions.
-						</p>
-						<p className="text-slate-400">
-							Day 1 of the hackathon — don&apos;t miss it!
-						</p>
-					</div>
-				</ViewContainer>
-			</div>
-
-			{/* Judging Section */}
-			<div
-				id="judging"
-				className="scroll-mt-10 py-20 bg-[#0c1a2e]/30"
-			>
+			{/* Judging Criteria */}
+			<div className="scroll-mt-16 py-20 bg-[#0c1a2e]/30">
 				<ViewContainer>
 					<h2 className="text-3xl md:text-4xl font-bold text-amber-400 uppercase tracking-wide mb-8">
 						Judging Criteria
@@ -324,7 +231,7 @@ const HackathonPage = () => {
 			</div>
 
 			{/* FAQ Section */}
-			<div id="faq" className="scroll-mt-20 py-20 bg-[#0a0f1e]">
+			<div id="faq" className="scroll-mt-16 py-20 bg-[#0a0f1e]">
 				<ViewContainer>
 					<div className="[&_h2]:text-amber-400 [&_h2]:font-bold [&_div[class*='pb-4']]:text-amber-700 [&_div[class*='pb-4']_a]:text-amber-700">
 						<Faq FAQS={faqs} />
