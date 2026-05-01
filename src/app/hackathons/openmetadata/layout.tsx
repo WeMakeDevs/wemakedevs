@@ -17,30 +17,24 @@ export default function RootLayout({
 			type: "link",
 		},
 		{
-			name: "Ideas",
-			url: `/hackathons/${DATA.slug}#ideas`,
-			type: "link",
-		},
-		{
 			name: "Prizes",
 			url: `/hackathons/${DATA.slug}#prizes`,
 			type: "link",
 		},
 		{
-			name: "Sponsors",
+			name: "Sponsor",
 			url: `/hackathons/${DATA.slug}#sponsor`,
 			type: "link",
 		},
 		{
-			name: "FAQs",
-			url: `/hackathons/${DATA.slug}#faq`,
+			name: "Hackathons",
+			url: "https://www.wemakedevs.org/hackathons",
 			type: "link",
 		},
 		{
-			name: "Register",
-			url: DATA.cta.href,
+			name: "Partner with us",
+			url: "https://www.wemakedevs.org/#partners",
 			type: "button",
-			openInNewTab: true,
 		},
 	];
 

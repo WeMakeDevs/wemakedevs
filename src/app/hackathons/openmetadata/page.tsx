@@ -7,6 +7,7 @@ import Link from "next/link";
 import HeroSection from "./components/HeroSection";
 import IdeasSection from "./components/IdeasSection";
 import PrizesShowcase from "./components/PrizesShowcase";
+import OpenMetadataStats from "./components/Stats";
 import { DATA, faqs, navLinks } from "./data";
 import { images } from "./images";
 
@@ -76,6 +77,7 @@ const HackathonPage = () => {
 			{/* ── Mission Section (Fixing the Timeline) ────────────────────────────── */}
 			<div className="bg-slate-950 retro-grid">
 				<ViewContainer className="py-20">
+					<OpenMetadataStats />
 					<div className="text-center mb-12">
 						<span className="inline-flex items-center gap-2 bg-amber-500/10 border border-amber-500/30 text-amber-400 px-5 py-2 rounded-full text-sm font-semibold mb-6 backdrop-blur-sm">
 							<span className="w-2 h-2 bg-amber-400 rounded-full animate-pulse" />
