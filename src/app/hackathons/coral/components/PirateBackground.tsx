@@ -1,470 +1,107 @@
+"use client";
+
 const PirateBackground = () => {
 	return (
 		<div className="fixed inset-0 pointer-events-none overflow-hidden z-0">
-			{/* Deep ocean gradient base */}
-			<div className="absolute inset-0 bg-gradient-to-b from-[#0a0f1e] via-[#0c1a2e] to-[#071520]" />
+			{/* Deep teal ocean base */}
+			<div className="absolute inset-0 bg-gradient-to-b from-[#001820] via-[#002b36] to-[#001a1a]" />
 
-			{/* Subtle ocean texture overlay */}
-			<div className="absolute inset-0 opacity-[0.04]">
-				<svg width="100%" height="100%">
-					<defs>
-						<pattern
-							id="waves"
-							x="0"
-							y="0"
-							width="200"
-							height="20"
-							patternUnits="userSpaceOnUse"
-						>
-							<path
-								d="M0 10 Q25 0 50 10 Q75 20 100 10 Q125 0 150 10 Q175 20 200 10"
-								fill="none"
-								stroke="#fbbf24"
-								strokeWidth="1"
-							/>
-						</pattern>
-					</defs>
-					<rect width="100%" height="100%" fill="url(#waves)" />
-				</svg>
+			{/* Grainy parchment noise texture */}
+			<div
+				className="absolute inset-0 opacity-[0.03]"
+				style={{
+					backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E")`,
+				}}
+			/>
+
+			{/* Floating SQL code (bioluminescent plankton) */}
+			<div className="absolute top-[15%] left-[8%] float-code text-[#2aa198] text-xs font-mono opacity-[0.07] select-none">
+				SELECT * FROM github.pull_requests
+			</div>
+			<div className="absolute top-[35%] right-[12%] float-code text-[#d4af37] text-xs font-mono opacity-[0.05] select-none" style={{ animationDelay: '2s' }}>
+				JOIN slack.messages ON channel = &apos;incidents&apos;
+			</div>
+			<div className="absolute top-[55%] left-[20%] float-code text-[#2aa198] text-[10px] font-mono opacity-[0.06] select-none" style={{ animationDelay: '4s' }}>
+				WHERE sentry.errors.level = &apos;fatal&apos;
+			</div>
+			<div className="absolute top-[75%] right-[25%] float-code text-[#d4af37] text-[10px] font-mono opacity-[0.04] select-none" style={{ animationDelay: '6s' }}>
+				CROSS JOIN datadog.metrics
+			</div>
+			<div className="absolute top-[45%] left-[55%] float-code text-[#859900] text-[11px] font-mono opacity-[0.05] select-none" style={{ animationDelay: '3s' }}>
+				GROUP BY sprint_id, assignee
 			</div>
 
-			{/* Pirate ship silhouette */}
-			<div className="absolute top-[12%] right-[6%] opacity-[0.07]">
-				<svg
-					width="120"
-					height="100"
-					viewBox="0 0 120 100"
-					fill="none"
-				>
-					{/* Hull */}
-					<path
-						d="M15 70 Q20 85 60 85 Q100 85 105 70 L100 65 Q90 75 60 75 Q30 75 20 65 Z"
-						fill="#fbbf24"
-					/>
-					{/* Mast */}
-					<line
-						x1="60"
-						y1="20"
-						x2="60"
-						y2="75"
-						stroke="#fbbf24"
-						strokeWidth="3"
-					/>
-					{/* Sail */}
-					<path
-						d="M62 25 Q80 35 75 55 L62 55 Z"
-						fill="#fbbf24"
-						opacity="0.7"
-					/>
-					<path
-						d="M58 25 Q40 35 45 55 L58 55 Z"
-						fill="#fbbf24"
-						opacity="0.5"
-					/>
-					{/* Crow's nest */}
-					<rect
-						x="55"
-						y="18"
-						width="10"
-						height="4"
-						rx="1"
-						fill="#fbbf24"
-					/>
-					{/* Flag */}
-					<path
-						d="M60 18 L60 8 L75 13 L60 18"
-						fill="#fbbf24"
-						opacity="0.8"
-					/>
-					{/* Skull on flag */}
-					<circle cx="67" cy="13" r="2" fill="#0a0f1e" />
-				</svg>
+			{/* Sea mist layers */}
+			<div className="absolute inset-0 mist-drift">
+				<div className="absolute bottom-0 left-0 right-0 h-[40%] bg-gradient-to-t from-[#002b36]/60 via-[#002b36]/20 to-transparent" />
+			</div>
+			<div className="absolute inset-0 mist-drift" style={{ animationDelay: '6s', animationDirection: 'reverse' }}>
+				<div className="absolute top-0 left-0 right-0 h-[30%] bg-gradient-to-b from-[#001820]/40 to-transparent" />
 			</div>
 
 			{/* Compass rose */}
-			<div className="absolute bottom-[8%] left-[5%] opacity-[0.05]">
-				<svg
-					width="100"
-					height="100"
-					viewBox="0 0 100 100"
-					fill="none"
-				>
-					<circle
-						cx="50"
-						cy="50"
-						r="45"
-						stroke="#fbbf24"
-						strokeWidth="1.5"
-						fill="none"
-					/>
-					<circle
-						cx="50"
-						cy="50"
-						r="35"
-						stroke="#fbbf24"
-						strokeWidth="0.5"
-						fill="none"
-					/>
-					{/* N */}
-					<polygon
-						points="50,8 46,40 50,35 54,40"
-						fill="#fbbf24"
-					/>
-					{/* S */}
-					<polygon
-						points="50,92 46,60 50,65 54,60"
-						fill="#fbbf24"
-						opacity="0.6"
-					/>
-					{/* E */}
-					<polygon
-						points="92,50 60,46 65,50 60,54"
-						fill="#fbbf24"
-						opacity="0.6"
-					/>
-					{/* W */}
-					<polygon
-						points="8,50 40,46 35,50 40,54"
-						fill="#fbbf24"
-						opacity="0.6"
-					/>
-				</svg>
-			</div>
-
-			{/* Treasure chest */}
-			<div className="absolute top-[45%] left-[3%] opacity-[0.06]">
-				<svg
-					width="80"
-					height="60"
-					viewBox="0 0 80 60"
-					fill="none"
-				>
-					{/* Chest body */}
-					<rect
-						x="10"
-						y="25"
-						width="60"
-						height="30"
-						rx="3"
-						fill="#fbbf24"
-					/>
-					{/* Chest lid */}
-					<path
-						d="M10 25 Q40 5 70 25"
-						fill="#d97706"
-					/>
-					{/* Lock */}
-					<circle cx="40" cy="35" r="5" fill="#0a0f1e" />
-					<rect
-						x="38"
-						y="35"
-						width="4"
-						height="8"
-						rx="1"
-						fill="#0a0f1e"
-					/>
-					{/* Gold coins spilling */}
-					<circle cx="75" cy="45" r="4" fill="#fcd34d" opacity="0.5" />
-					<circle cx="78" cy="52" r="3" fill="#fcd34d" opacity="0.4" />
-					<circle cx="5" cy="50" r="3" fill="#fcd34d" opacity="0.3" />
-				</svg>
-			</div>
-
-			{/* Skull and crossbones */}
-			<div className="absolute top-[20%] left-[12%] opacity-[0.04]">
-				<svg
-					width="60"
-					height="60"
-					viewBox="0 0 60 60"
-					fill="none"
-				>
-					{/* Skull */}
-					<ellipse cx="30" cy="22" rx="14" ry="16" fill="#fbbf24" />
-					{/* Eyes */}
-					<ellipse cx="24" cy="20" rx="4" ry="5" fill="#0a0f1e" />
-					<ellipse cx="36" cy="20" rx="4" ry="5" fill="#0a0f1e" />
-					{/* Nose */}
-					<path d="M28 27 L30 30 L32 27" fill="#0a0f1e" />
-					{/* Jaw */}
-					<path
-						d="M20 32 Q30 40 40 32"
-						stroke="#0a0f1e"
-						strokeWidth="2"
-						fill="none"
-					/>
-					{/* Crossbones */}
-					<line
-						x1="8"
-						y1="42"
-						x2="52"
-						y2="58"
-						stroke="#fbbf24"
-						strokeWidth="4"
-						strokeLinecap="round"
-					/>
-					<line
-						x1="52"
-						y1="42"
-						x2="8"
-						y2="58"
-						stroke="#fbbf24"
-						strokeWidth="4"
-						strokeLinecap="round"
-					/>
+			<div className="absolute bottom-[6%] left-[4%] opacity-[0.04]">
+				<svg width="120" height="120" viewBox="0 0 120 120" fill="none">
+					<circle cx="60" cy="60" r="55" stroke="#d4af37" strokeWidth="1" />
+					<circle cx="60" cy="60" r="42" stroke="#d4af37" strokeWidth="0.5" />
+					<polygon points="60,8 55,48 60,42 65,48" fill="#d4af37" />
+					<polygon points="60,112 55,72 60,78 65,72" fill="#d4af37" opacity="0.5" />
+					<polygon points="112,60 72,55 78,60 72,65" fill="#d4af37" opacity="0.5" />
+					<polygon points="8,60 48,55 42,60 48,65" fill="#d4af37" opacity="0.5" />
+					{/* Diagonal points */}
+					<polygon points="97,23 70,50 72,55 77,52" fill="#d4af37" opacity="0.3" />
+					<polygon points="23,97 50,70 48,65 43,68" fill="#d4af37" opacity="0.3" />
+					<polygon points="97,97 70,70 72,65 77,68" fill="#d4af37" opacity="0.3" />
+					<polygon points="23,23 50,50 48,55 43,52" fill="#d4af37" opacity="0.3" />
 				</svg>
 			</div>
 
 			{/* Anchor */}
-			<div className="absolute bottom-[15%] right-[8%] opacity-[0.05]">
-				<svg
-					width="60"
-					height="80"
-					viewBox="0 0 60 80"
-					fill="none"
-				>
-					{/* Ring */}
-					<circle
-						cx="30"
-						cy="10"
-						r="8"
-						stroke="#fbbf24"
-						strokeWidth="3"
-						fill="none"
-					/>
-					{/* Shaft */}
-					<line
-						x1="30"
-						y1="18"
-						x2="30"
-						y2="65"
-						stroke="#fbbf24"
-						strokeWidth="3"
-					/>
-					{/* Cross bar */}
-					<line
-						x1="15"
-						y1="30"
-						x2="45"
-						y2="30"
-						stroke="#fbbf24"
-						strokeWidth="3"
-					/>
-					{/* Flukes */}
-					<path
-						d="M30 65 Q15 60 8 50"
-						stroke="#fbbf24"
-						strokeWidth="3"
-						fill="none"
-						strokeLinecap="round"
-					/>
-					<path
-						d="M30 65 Q45 60 52 50"
-						stroke="#fbbf24"
-						strokeWidth="3"
-						fill="none"
-						strokeLinecap="round"
-					/>
-					{/* Fluke tips */}
-					<path
-						d="M8 50 L5 55 L12 52"
-						fill="#fbbf24"
-					/>
-					<path
-						d="M52 50 L55 55 L48 52"
-						fill="#fbbf24"
-					/>
+			<div className="absolute bottom-[12%] right-[6%] opacity-[0.04]">
+				<svg width="70" height="90" viewBox="0 0 70 90" fill="none">
+					<circle cx="35" cy="12" r="10" stroke="#d4af37" strokeWidth="2.5" fill="none" />
+					<line x1="35" y1="22" x2="35" y2="75" stroke="#d4af37" strokeWidth="2.5" />
+					<line x1="18" y1="35" x2="52" y2="35" stroke="#d4af37" strokeWidth="2.5" />
+					<path d="M35 75 Q18 70 10 58" stroke="#d4af37" strokeWidth="2.5" fill="none" strokeLinecap="round" />
+					<path d="M35 75 Q52 70 60 58" stroke="#d4af37" strokeWidth="2.5" fill="none" strokeLinecap="round" />
+					<path d="M10 58 L6 64 L15 60" fill="#d4af37" />
+					<path d="M60 58 L64 64 L55 60" fill="#d4af37" />
 				</svg>
 			</div>
 
-			{/* Sword */}
-			<div className="absolute top-[60%] right-[15%] opacity-[0.04] transform rotate-45">
-				<svg
-					width="20"
-					height="100"
-					viewBox="0 0 20 100"
-					fill="none"
-				>
-					{/* Blade */}
-					<path
-						d="M10 0 L13 60 L10 65 L7 60 Z"
-						fill="#fbbf24"
-					/>
-					{/* Guard */}
-					<rect
-						x="2"
-						y="65"
-						width="16"
-						height="4"
-						rx="2"
-						fill="#d97706"
-					/>
-					{/* Handle */}
-					<rect
-						x="7"
-						y="69"
-						width="6"
-						height="20"
-						rx="2"
-						fill="#92400e"
-					/>
-					{/* Pommel */}
-					<circle cx="10" cy="93" r="4" fill="#d97706" />
+			{/* Skull and crossbones */}
+			<div className="absolute top-[18%] left-[10%] opacity-[0.03]">
+				<svg width="60" height="60" viewBox="0 0 60 60" fill="none">
+					<ellipse cx="30" cy="22" rx="14" ry="16" fill="#fdf6e3" />
+					<ellipse cx="24" cy="20" rx="4" ry="5" fill="#002b36" />
+					<ellipse cx="36" cy="20" rx="4" ry="5" fill="#002b36" />
+					<path d="M28 27 L30 30 L32 27" fill="#002b36" />
+					<line x1="8" y1="42" x2="52" y2="58" stroke="#fdf6e3" strokeWidth="4" strokeLinecap="round" />
+					<line x1="52" y1="42" x2="8" y2="58" stroke="#fdf6e3" strokeWidth="4" strokeLinecap="round" />
 				</svg>
 			</div>
 
-			{/* Ocean bubbles */}
-			<div className="absolute bottom-[25%] left-[25%] opacity-[0.06]">
-				<svg
-					width="40"
-					height="60"
-					viewBox="0 0 40 60"
-					fill="none"
-				>
-					<circle
-						cx="10"
-						cy="50"
-						r="6"
-						stroke="#06b6d4"
-						strokeWidth="1"
-						fill="none"
-					/>
-					<circle
-						cx="25"
-						cy="35"
-						r="4"
-						stroke="#06b6d4"
-						strokeWidth="1"
-						fill="none"
-					/>
-					<circle
-						cx="15"
-						cy="20"
-						r="3"
-						stroke="#06b6d4"
-						strokeWidth="1"
-						fill="none"
-					/>
-					<circle
-						cx="30"
-						cy="10"
-						r="2"
-						stroke="#06b6d4"
-						strokeWidth="1"
-						fill="none"
-					/>
+			{/* Treasure map dotted trail */}
+			<div className="absolute top-[40%] left-[35%] opacity-[0.025]">
+				<svg width="250" height="120" viewBox="0 0 250 120" fill="none">
+					<path d="M0 60 Q60 20 120 60 Q180 100 250 50" stroke="#d4af37" strokeWidth="2" strokeDasharray="10 10" fill="none" />
+					<line x1="238" y1="38" x2="258" y2="62" stroke="#cb4b16" strokeWidth="3" />
+					<line x1="258" y1="38" x2="238" y2="62" stroke="#cb4b16" strokeWidth="3" />
 				</svg>
 			</div>
 
-			{/* Map dotted trail */}
-			<div className="absolute top-[35%] left-[40%] opacity-[0.03]">
-				<svg
-					width="200"
-					height="100"
-					viewBox="0 0 200 100"
-					fill="none"
-				>
-					<path
-						d="M0 50 Q50 20 100 50 Q150 80 200 50"
-						stroke="#fbbf24"
-						strokeWidth="2"
-						strokeDasharray="8 8"
-						fill="none"
-					/>
-					{/* X marks the spot */}
-					<line
-						x1="190"
-						y1="40"
-						x2="210"
-						y2="60"
-						stroke="#ef4444"
-						strokeWidth="3"
-					/>
-					<line
-						x1="210"
-						y1="40"
-						x2="190"
-						y2="60"
-						stroke="#ef4444"
-						strokeWidth="3"
-					/>
-				</svg>
-			</div>
+			{/* Ambient glow orbs */}
+			<div className="absolute top-[20%] left-[30%] w-72 h-72 bg-[#2aa198]/[0.03] rounded-full blur-[100px]" />
+			<div className="absolute bottom-[25%] right-[20%] w-56 h-56 bg-[#d4af37]/[0.03] rounded-full blur-[80px]" />
+			<div className="absolute top-[60%] left-[10%] w-40 h-40 bg-[#268bd2]/[0.02] rounded-full blur-[60px]" />
 
-			{/* Glow effects */}
-			<div className="absolute top-[20%] left-[30%] w-64 h-64 bg-amber-500/5 rounded-full blur-3xl" />
-			<div className="absolute bottom-[30%] right-[25%] w-48 h-48 bg-cyan-500/5 rounded-full blur-3xl" />
-			<div className="absolute top-[50%] right-[40%] w-32 h-32 bg-emerald-500/5 rounded-full blur-3xl" />
-			<div className="absolute bottom-[10%] left-[50%] w-56 h-56 bg-amber-600/4 rounded-full blur-3xl" />
-
-			{/* Coral reef silhouette */}
-			<div className="absolute bottom-0 left-0 right-0 opacity-[0.04]">
-				<svg
-					width="100%"
-					height="80"
-					viewBox="0 0 1200 80"
-					preserveAspectRatio="none"
-					fill="none"
-				>
-					<path
-						d="M0 80 L0 60 Q50 40 100 55 Q150 70 200 50 Q250 30 300 45 Q350 60 400 40 Q450 20 500 35 Q550 50 600 30 Q650 10 700 25 Q750 40 800 20 Q850 0 900 15 Q950 30 1000 20 Q1050 10 1100 30 Q1150 50 1200 40 L1200 80 Z"
-						fill="#fbbf24"
-					/>
-					{/* Coral branches */}
-					<path
-						d="M200 50 Q210 30 220 50"
-						stroke="#f59e0b"
-						strokeWidth="3"
-						fill="none"
-					/>
-					<path
-						d="M500 35 Q510 15 520 35"
-						stroke="#f59e0b"
-						strokeWidth="3"
-						fill="none"
-					/>
-					<path
-						d="M800 20 Q810 0 820 20"
-						stroke="#f59e0b"
-						strokeWidth="3"
-						fill="none"
-					/>
-					<path
-						d="M350 45 L355 25 L360 45"
-						stroke="#f59e0b"
-						strokeWidth="2"
-						fill="none"
-					/>
-					<path
-						d="M650 25 L655 5 L660 25"
-						stroke="#f59e0b"
-						strokeWidth="2"
-						fill="none"
-					/>
-					<path
-						d="M950 15 L955 -5 L960 15"
-						stroke="#f59e0b"
-						strokeWidth="2"
-						fill="none"
-					/>
-				</svg>
-			</div>
-
-			{/* Kraken tentacle hint */}
-			<div className="absolute top-[70%] right-0 opacity-[0.03]">
-				<svg
-					width="60"
-					height="120"
-					viewBox="0 0 60 120"
-					fill="none"
-				>
-					<path
-						d="M50 0 Q40 30 55 50 Q30 70 45 90 Q35 110 50 120"
-						stroke="#06b6d4"
-						strokeWidth="8"
-						fill="none"
-						strokeLinecap="round"
-					/>
-					<circle cx="50" cy="0" r="4" fill="#06b6d4" />
+			{/* Coral reef silhouette at bottom */}
+			<div className="absolute bottom-0 left-0 right-0 opacity-[0.035]">
+				<svg width="100%" height="80" viewBox="0 0 1400 80" preserveAspectRatio="none" fill="none">
+					<path d="M0 80 L0 55 Q70 35 140 50 Q210 65 280 42 Q350 20 420 38 Q490 55 560 30 Q630 5 700 22 Q770 40 840 18 Q910 -5 980 15 Q1050 35 1120 20 Q1190 5 1260 25 Q1330 45 1400 35 L1400 80 Z" fill="#d4af37" />
+					<path d="M250 42 Q260 22 270 42" stroke="#b8960c" strokeWidth="3" fill="none" />
+					<path d="M600 30 Q610 10 620 30" stroke="#b8960c" strokeWidth="3" fill="none" />
+					<path d="M950 15 Q960 -5 970 15" stroke="#b8960c" strokeWidth="3" fill="none" />
 				</svg>
 			</div>
 		</div>

@@ -45,7 +45,7 @@ export default function RootLayout({
 	];
 
 	return (
-		<div className="coral-hackathon bg-[#0a0f1e] text-slate-100 min-h-screen relative">
+		<div className="coral-hackathon bg-[#002b36] text-[#fdf6e3] min-h-screen relative">
 			<PirateBackground />
 			<div className="relative z-10">
 				<HackathonNavbar customNavLinks={hackathonNavLinks} />

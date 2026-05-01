@@ -1,158 +1,199 @@
-/* Pirates of the Coral-bean Hackathon Custom Styles */
+/* ═══════════════════════════════════════════════════════════════
+   Pirates of the Coral-bean: Dead Men Tell No SQL
+   Cinematic AAA Landing Page Styles
+   Palette: Deep Teal #002b36 · Parchment #fdf6e3 · Treasure Gold #d4af37
+   ═══════════════════════════════════════════════════════════════ */
 
-/* Ensure navbar text is visible on dark background */
+/* ── Navbar overrides ─────────────────────────────────────────── */
 .coral-hackathon nav a,
 .coral-hackathon nav span,
 .coral-hackathon header,
 .coral-hackathon header a {
-	color: #f1f5f9 !important;
+	color: #fdf6e3 !important;
 }
 
-/* When navbar container has white background (scrolled), override to dark text */
 .coral-hackathon nav > div.bg-white,
 .coral-hackathon nav > div[class*="bg-white"] {
-	color: #0f172a !important;
+	color: #002b36 !important;
 }
-
 .coral-hackathon nav > div.bg-white a:not([class*="text-white"]),
 .coral-hackathon nav > div[class*="bg-white"] a:not([class*="text-white"]),
 .coral-hackathon nav > div.bg-white span:not([class*="text-white"]),
 .coral-hackathon nav > div[class*="bg-white"] span:not([class*="text-white"]) {
-	color: #0f172a !important;
+	color: #002b36 !important;
 }
-
 .coral-hackathon nav a:hover,
 .coral-hackathon header a:hover {
-	color: #fbbf24 !important;
+	color: #d4af37 !important;
 }
-
 .coral-hackathon nav > div.bg-white a:not([class*="text-white"]):hover,
 .coral-hackathon nav > div[class*="bg-white"] a:not([class*="text-white"]):hover {
-	color: #d97706 !important;
+	color: #b8960c !important;
 }
-
-/* Fix for sticky/fixed navbar background */
 .coral-hackathon nav[aria-label="secondary nav"] {
-	background-color: rgba(10, 15, 30, 0.92) !important;
-	backdrop-filter: blur(8px);
-	border-color: rgba(251, 191, 36, 0.2) !important;
+	background-color: rgba(0, 43, 54, 0.92) !important;
+	backdrop-filter: blur(12px);
+	border-color: rgba(212, 175, 55, 0.15) !important;
 }
 
-/* Section headings */
+/* ── Section headings ─────────────────────────────────────────── */
 .coral-hackathon h2 {
-	color: #fbbf24;
+	color: #d4af37;
 }
-
-/* Link colors in content */
 .coral-hackathon .text-slate-300 a {
-	color: #fbbf24;
+	color: #d4af37;
 }
-
 .coral-hackathon .text-slate-300 a:hover {
-	color: #fcd34d;
+	color: #e8c84a;
 }
 
-/* FAQ answer text color */
+/* ── FAQ answer text ──────────────────────────────────────────── */
 .coral-hackathon #faq [class*="bg-white"] [class*="pb-4"],
 .coral-hackathon #faq [class*="bg-white"] [class*="pb-4"] * {
-	color: #92400e !important;
+	color: #5c4813 !important;
 }
-
 .coral-hackathon #faq [class*="bg-white"] [class*="pb-4"] a {
-	color: #92400e !important;
+	color: #5c4813 !important;
 }
-
 .coral-hackathon #faq [class*="bg-white"] [class*="pb-4"] a:hover {
-	color: #78350f !important;
+	color: #3d300d !important;
 }
 
-/* Ocean wave animation */
-@keyframes ocean-wave {
-	0%, 100% {
-		transform: translateX(0) translateY(0);
-	}
-	25% {
-		transform: translateX(-5px) translateY(-3px);
-	}
-	50% {
-		transform: translateX(0) translateY(-6px);
-	}
-	75% {
-		transform: translateX(5px) translateY(-3px);
-	}
+/* ── Keyframe animations ──────────────────────────────────────── */
+@keyframes ship-bob {
+	0%, 100% { transform: translateY(0) rotate(-1deg); }
+	50% { transform: translateY(-14px) rotate(1.5deg); }
 }
-
 @keyframes gentle-bob {
-	0%, 100% {
-		transform: translateY(0) rotate(0deg);
-	}
-	50% {
-		transform: translateY(-8px) rotate(1deg);
-	}
+	0%, 100% { transform: translateY(0) rotate(0deg); }
+	50% { transform: translateY(-8px) rotate(0.5deg); }
+}
+@keyframes gold-shimmer {
+	0% { background-position: -200% 0; }
+	100% { background-position: 200% 0; }
+}
+@keyframes float-code {
+	0%, 100% { transform: translateY(0) translateX(0); opacity: 0.06; }
+	33% { transform: translateY(-30px) translateX(10px); opacity: 0.12; }
+	66% { transform: translateY(-15px) translateX(-8px); opacity: 0.08; }
+}
+@keyframes mist-drift {
+	0% { transform: translateX(-5%) scaleX(1); opacity: 0.03; }
+	50% { transform: translateX(5%) scaleX(1.05); opacity: 0.06; }
+	100% { transform: translateX(-5%) scaleX(1); opacity: 0.03; }
+}
+@keyframes cursor-blink {
+	0%, 100% { opacity: 1; }
+	50% { opacity: 0; }
+}
+@keyframes typewriter {
+	from { width: 0; }
+	to { width: 100%; }
+}
+@keyframes wave-scroll {
+	0% { transform: translateX(0); }
+	100% { transform: translateX(-50%); }
+}
+@keyframes pulse-gold {
+	0%, 100% { box-shadow: 0 0 20px rgba(212,175,55,0.3); }
+	50% { box-shadow: 0 0 40px rgba(212,175,55,0.6); }
 }
 
-@keyframes compass-spin {
-	0% {
-		transform: rotate(0deg);
-	}
-	100% {
-		transform: rotate(360deg);
-	}
+.coral-hackathon .ship-bob {
+	animation: ship-bob 5s ease-in-out infinite;
 }
-
-@keyframes shimmer {
-	0% {
-		background-position: -200% 0;
-	}
-	100% {
-		background-position: 200% 0;
-	}
-}
-
-@keyframes float-bubble {
-	0%, 100% {
-		transform: translateY(0) scale(1);
-		opacity: 0.3;
-	}
-	50% {
-		transform: translateY(-20px) scale(1.1);
-		opacity: 0.6;
-	}
-}
-
-.coral-hackathon .ocean-wave {
-	animation: ocean-wave 4s ease-in-out infinite;
-}
-
 .coral-hackathon .gentle-bob {
 	animation: gentle-bob 6s ease-in-out infinite;
 }
-
-.coral-hackathon .gold-shimmer {
-	background: linear-gradient(
-		90deg,
-		transparent 0%,
-		rgba(251, 191, 36, 0.3) 50%,
-		transparent 100%
-	);
+.coral-hackathon .gold-shimmer-text {
+	background: linear-gradient(90deg, #d4af37 0%, #f5e6a3 40%, #d4af37 60%, #b8960c 100%);
 	background-size: 200% 100%;
-	animation: shimmer 3s ease-in-out infinite;
+	animation: gold-shimmer 4s ease-in-out infinite;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
+}
+.coral-hackathon .float-code {
+	animation: float-code 8s ease-in-out infinite;
+}
+.coral-hackathon .mist-drift {
+	animation: mist-drift 12s ease-in-out infinite;
+}
+.coral-hackathon .cursor-blink {
+	animation: cursor-blink 1s step-end infinite;
+}
+.coral-hackathon .pulse-gold {
+	animation: pulse-gold 3s ease-in-out infinite;
 }
 
-/* Treasure map texture overlay */
-.coral-hackathon .treasure-map-bg {
+/* ── Parchment texture ────────────────────────────────────────── */
+.coral-hackathon .parchment-bg {
+	background-color: #002b36;
 	background-image:
-		radial-gradient(circle at 20% 80%, rgba(139, 92, 42, 0.08) 0%, transparent 50%),
-		radial-gradient(circle at 80% 20%, rgba(251, 191, 36, 0.05) 0%, transparent 50%),
-		radial-gradient(circle at 50% 50%, rgba(6, 78, 59, 0.06) 0%, transparent 70%);
+		url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23fdf6e3' fill-opacity='0.025' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
 }
 
-/* Pirate scroll border effect */
-.coral-hackathon .scroll-border {
-	border-image: linear-gradient(
-		to right,
-		rgba(139, 92, 42, 0.3),
-		rgba(251, 191, 36, 0.5),
-		rgba(139, 92, 42, 0.3)
-	) 1;
+/* ── Sea mist overlay ─────────────────────────────────────────── */
+.coral-hackathon .sea-mist::before {
+	content: '';
+	position: absolute;
+	inset: 0;
+	background: radial-gradient(ellipse at 30% 80%, rgba(0,43,54,0.4) 0%, transparent 60%),
+	            radial-gradient(ellipse at 70% 20%, rgba(212,175,55,0.04) 0%, transparent 50%);
+	pointer-events: none;
+	z-index: 1;
+}
+
+/* ── SQL console styling ──────────────────────────────────────── */
+.coral-hackathon .sql-console {
+	background: linear-gradient(135deg, #1a0e00 0%, #0d1b1e 50%, #1a0e00 100%);
+	border: 2px solid rgba(212,175,55,0.25);
+	border-radius: 12px;
+	box-shadow:
+		inset 0 2px 20px rgba(0,0,0,0.5),
+		0 0 30px rgba(212,175,55,0.08);
+	font-family: 'Courier New', Courier, monospace;
+}
+.coral-hackathon .sql-console .sql-keyword {
+	color: #d4af37;
+}
+.coral-hackathon .sql-console .sql-table {
+	color: #2aa198;
+}
+.coral-hackathon .sql-console .sql-string {
+	color: #cb4b16;
+}
+.coral-hackathon .sql-console .sql-comment {
+	color: #586e75;
+}
+
+/* ── Treasure map card burn effect ────────────────────────────── */
+.coral-hackathon .map-card {
+	position: relative;
+	overflow: hidden;
+	transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.coral-hackathon .map-card::before {
+	content: '';
+	position: absolute;
+	inset: 0;
+	background: radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+		rgba(212,175,55,0.12) 0%,
+		transparent 60%);
+	opacity: 0;
+	transition: opacity 0.4s;
+	pointer-events: none;
+	z-index: 1;
+}
+.coral-hackathon .map-card:hover::before {
+	opacity: 1;
+}
+.coral-hackathon .map-card:hover {
+	border-color: rgba(212,175,55,0.4);
+	box-shadow: 0 0 40px rgba(212,175,55,0.1);
+}
+
+/* ── Scrolling wave divider ───────────────────────────────────── */
+.coral-hackathon .wave-divider svg {
+	animation: wave-scroll 20s linear infinite;
 }

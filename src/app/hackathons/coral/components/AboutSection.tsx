@@ -1,242 +1,114 @@
-import { Anchor, Database, Ship, Skull, Swords, Waves } from "lucide-react";
+"use client";
+
+import { motion } from "framer-motion";
+import { Compass, Database, Lock, Zap } from "lucide-react";
+
+const features = [
+	{
+		icon: Database,
+		title: "Query Anything as SQL",
+		description: "Any API, database, or file becomes a SQL table. No custom integrations needed.",
+		color: "#d4af37",
+	},
+	{
+		icon: Zap,
+		title: "Cross-Source Joins",
+		description: "Join GitHub + Slack + Sentry in a single query. Coral handles auth, pagination, and rate limits.",
+		color: "#2aa198",
+	},
+	{
+		icon: Lock,
+		title: "100% Local",
+		description: "Credentials, data, and usage history never leave your machine. No ETL, no warehouse.",
+		color: "#859900",
+	},
+	{
+		icon: Compass,
+		title: "CLI or MCP",
+		description: "Run Coral from the command line or through MCP. Schema learning and caching built in.",
+		color: "#268bd2",
+	},
+];
+
+const fadeUp = {
+	hidden: { opacity: 0, y: 30 },
+	visible: (i: number) => ({
+		opacity: 1,
+		y: 0,
+		transition: { delay: i * 0.1, duration: 0.6, ease: [0.4, 0, 0.2, 1] as const },
+	}),
+};
 
 const AboutSection = () => {
 	return (
-		<div className="py-20 mt-10">
-			<div className="max-w-6xl mx-auto px-4">
-				{/* Section Header */}
-				<div className="text-center mb-16">
-					<h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-amber-300 via-yellow-400 to-amber-500 bg-clip-text text-transparent mb-6 leading-tight">
-						Chart Yer Course, Matey
+		<div className="py-24 relative">
+			<div className="max-w-6xl mx-auto px-4 md:px-8">
+				{/* Section header */}
+				<motion.div
+					initial={{ opacity: 0, y: 20 }}
+					whileInView={{ opacity: 1, y: 0 }}
+					viewport={{ once: true, margin: "-100px" }}
+					transition={{ duration: 0.6 }}
+					className="text-center mb-16"
+				>
+					<h2 className="text-3xl md:text-5xl font-bold gold-shimmer-text mb-4">
+						About the Voyage
 					</h2>
-					<p className="text-xl text-slate-400 max-w-3xl mx-auto">
-						Two paths to glory on the high seas of data. Choose your
-						adventure and claim your treasure.
+					<p className="text-[#93a1a1] text-lg max-w-3xl mx-auto leading-relaxed">
+						In a world where AI agents need data from every corner of the seven seas,
+						there&apos;s only one tool that lets them query it all as SQL.
 					</p>
-				</div>
+				</motion.div>
 
-				{/* Two project tracks */}
-				<div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
-					{/* Track 1: Build an Agent */}
-					<div className="bg-gradient-to-br from-[#0c1a2e] to-[#0a1525] rounded-2xl border border-amber-500/20 p-8 hover:border-amber-400/40 transition-all group">
-						<div className="flex items-center gap-4 mb-6">
-							<div className="bg-gradient-to-br from-amber-500 to-amber-700 p-4 rounded-2xl shadow-lg shadow-amber-500/20 group-hover:shadow-amber-500/40 transition-shadow">
-								<Ship className="w-7 h-7 text-white" />
-							</div>
-							<div>
-								<h3 className="text-2xl font-bold text-amber-400">
-									🏴‍☠️ Track 1: Build an Agent
-								</h3>
-								<p className="text-slate-400 text-sm">
-									Captain your own data vessel
-								</p>
-							</div>
-						</div>
-						<p className="text-slate-300 leading-relaxed mb-6">
-							Build an agent for a real use case that retrieves
-							data across multiple sources using Coral. Describe
-							how you did it and what makes it great, ideally
-							showcasing Coral&apos;s power.
+				{/* Description */}
+				<motion.div
+					initial={{ opacity: 0, y: 20 }}
+					whileInView={{ opacity: 1, y: 0 }}
+					viewport={{ once: true, margin: "-80px" }}
+					transition={{ duration: 0.6, delay: 0.2 }}
+					className="max-w-4xl mx-auto text-center mb-20"
+				>
+					<div className="parchment-bg rounded-2xl border border-[#d4af37]/10 p-8 md:p-12 space-y-4 text-[#93a1a1] text-base md:text-lg leading-relaxed">
+						<p>
+							<strong className="text-[#d4af37]">Coral</strong> is an open-source data retrieval layer for agents.
+							It lets them query any API, database, or file as SQL tables. Coral handles auth, pagination,
+							rate limits, cross-source joins, schema learning, and caching.
 						</p>
-						<div className="space-y-3">
-							<p className="text-amber-400 font-semibold text-sm uppercase tracking-wide">
-								Example Voyages:
-							</p>
-							<ul className="space-y-3 text-slate-400 text-sm">
-								<li className="flex gap-2">
-									<Skull
-										className="w-4 h-4 text-amber-500 mt-0.5 shrink-0"
-									/>
-									<span>
-										<strong className="text-slate-300">
-											Coding Agent Debugger
-										</strong>{" "}
-										Connect GitHub + Sentry + Slack. Agent
-										joins failed CI builds with errors and
-										Slack discussions to diagnose root cause
-										in one query.
-									</span>
-								</li>
-								<li className="flex gap-2">
-									<Skull
-										className="w-4 h-4 text-amber-500 mt-0.5 shrink-0"
-									/>
-									<span>
-										<strong className="text-slate-300">
-											AI SRE Investigator
-										</strong>{" "}
-										Connect PagerDuty + GitHub + Datadog.
-										Correlate incidents with PRs and metrics
-										to auto-generate incident summaries.
-									</span>
-								</li>
-								<li className="flex gap-2">
-									<Skull
-										className="w-4 h-4 text-amber-500 mt-0.5 shrink-0"
-									/>
-									<span>
-										<strong className="text-slate-300">
-											Sprint Health Dashboard
-										</strong>{" "}
-										Connect Linear + GitHub + Slack. See
-										what&apos;s blocked, in review, and
-										being discussed in real-time.
-									</span>
-								</li>
-								<li className="flex gap-2">
-									<Skull
-										className="w-4 h-4 text-amber-500 mt-0.5 shrink-0"
-									/>
-									<span>
-										<strong className="text-slate-300">
-											Customer Escalation Agent
-										</strong>{" "}
-										Connect support tool + Sentry + Slack.
-										Give support teams full technical
-										context without pinging engineering.
-									</span>
-								</li>
-								<li className="flex gap-2">
-									<Skull
-										className="w-4 h-4 text-amber-500 mt-0.5 shrink-0"
-									/>
-									<span>
-										<strong className="text-slate-300">
-											Security Monitor
-										</strong>{" "}
-										Connect GitHub + Slack + Notion.
-										Monitor for secrets in commits and flag
-										compliance gaps.
-									</span>
-								</li>
-							</ul>
-						</div>
-					</div>
-
-					{/* Track 2: Build a Source Connector */}
-					<div className="bg-gradient-to-br from-[#0c1a2e] to-[#0a1525] rounded-2xl border border-cyan-500/20 p-8 hover:border-cyan-400/40 transition-all group">
-						<div className="flex items-center gap-4 mb-6">
-							<div className="bg-gradient-to-br from-cyan-500 to-teal-600 p-4 rounded-2xl shadow-lg shadow-cyan-500/20 group-hover:shadow-cyan-500/40 transition-shadow">
-								<Anchor className="w-7 h-7 text-white" />
-							</div>
-							<div>
-								<h3 className="text-2xl font-bold text-cyan-400">
-									⚓ Track 2: Build a Source Connector
-								</h3>
-								<p className="text-slate-400 text-sm">
-									Expand the Coral reef
-								</p>
-							</div>
-						</div>
-						<p className="text-slate-300 leading-relaxed mb-6">
-							Connect any API you wish Coral supported. Build a
-							custom Coral source for an API that doesn&apos;t
-							exist yet. This is a high-value contribution that
-							grows the sources ecosystem.
+						<p>
+							No ETL. No warehouse. No glue code. Everything is local. Credentials, data, and usage history
+							never leave your machine.
 						</p>
-						<div className="space-y-3">
-							<p className="text-cyan-400 font-semibold text-sm uppercase tracking-wide">
-								How to get started:
-							</p>
-							<ul className="space-y-3 text-slate-400 text-sm">
-								<li className="flex gap-2">
-									<Waves
-										className="w-4 h-4 text-cyan-500 mt-0.5 shrink-0"
-									/>
-									<span>
-										Follow the{" "}
-										<a
-											href="https://withcoral.com/docs/guides/write-a-custom-source"
-											target="_blank"
-											rel="noopener noreferrer"
-											className="text-cyan-400 underline hover:text-cyan-300"
-										>
-											custom source guide
-										</a>{" "}
-										in the Coral docs
-									</span>
-								</li>
-								<li className="flex gap-2">
-									<Waves
-										className="w-4 h-4 text-cyan-500 mt-0.5 shrink-0"
-									/>
-									<span>
-										Describe how you built it and what
-										challenges you solved
-									</span>
-								</li>
-								<li className="flex gap-2">
-									<Waves
-										className="w-4 h-4 text-cyan-500 mt-0.5 shrink-0"
-									/>
-									<span>
-										Bonus: build a &quot;wanted&quot; source
-										(Hubspot, Asana, Zendesk, Airtable,
-										etc.) for extra bounty prizes
-									</span>
-								</li>
-							</ul>
-						</div>
+						<p className="text-[#d4af37]/80 italic font-medium pt-2">
+							&quot;Not all treasure is silver and gold, mate. Sometimes it&apos;s a perfectly joined SQL query.&quot;
+						</p>
 					</div>
-				</div>
+				</motion.div>
 
 				{/* Feature cards */}
-				<div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-					<div className="group">
-						<div className="flex items-start gap-5">
-							<div className="bg-gradient-to-br from-amber-500 to-amber-700 p-4 rounded-2xl shadow-lg shadow-amber-500/20 group-hover:shadow-amber-500/40 transition-shadow">
-								<Database className="w-7 h-7 text-white" />
-							</div>
-							<div>
-								<h3 className="text-xl font-bold text-amber-400 mb-2">
-									Query Anything as SQL
-								</h3>
-								<p className="text-slate-300 leading-relaxed text-sm">
-									Coral lets agents query any API, database,
-									or file as SQL tables. No ETL, no
-									warehouse, no glue code. Everything stays
-									local.
-								</p>
-							</div>
-						</div>
-					</div>
-
-					<div className="group">
-						<div className="flex items-start gap-5">
-							<div className="bg-gradient-to-br from-cyan-500 to-teal-600 p-4 rounded-2xl shadow-lg shadow-cyan-500/20 group-hover:shadow-cyan-500/40 transition-shadow">
-								<Swords className="w-7 h-7 text-white" />
-							</div>
-							<div>
-								<h3 className="text-xl font-bold text-cyan-400 mb-2">
-									Cross-Source Joins
-								</h3>
-								<p className="text-slate-300 leading-relaxed text-sm">
-									Join data across GitHub, Slack, Sentry,
-									PagerDuty, and more, all in a single SQL
-									query. Coral handles auth, pagination, and
-									rate limits.
-								</p>
-							</div>
-						</div>
-					</div>
-
-					<div className="group">
-						<div className="flex items-start gap-5">
-							<div className="bg-gradient-to-br from-emerald-500 to-green-600 p-4 rounded-2xl shadow-lg shadow-emerald-500/20 group-hover:shadow-emerald-500/40 transition-shadow">
-								<Ship className="w-7 h-7 text-white" />
-							</div>
-							<div>
-								<h3 className="text-xl font-bold text-emerald-400 mb-2">
-									Win Big Treasure
-								</h3>
-								<p className="text-slate-300 leading-relaxed text-sm">
-									$10,000+ in prizes plus special bounties for
-									source connectors, showcase posts, demo
-									videos, guides, and referrals.
-								</p>
-							</div>
-						</div>
-					</div>
+				<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+					{features.map((feature, i) => {
+						const Icon = feature.icon;
+						return (
+							<motion.div
+								key={feature.title}
+								custom={i}
+								initial="hidden"
+								whileInView="visible"
+								viewport={{ once: true, margin: "-60px" }}
+								variants={fadeUp}
+								className="group parchment-bg rounded-xl border border-[#d4af37]/10 p-6 hover:border-[#d4af37]/25 transition-all duration-300"
+							>
+								<div
+									className="w-12 h-12 rounded-lg flex items-center justify-center mb-4"
+									style={{ backgroundColor: `${feature.color}15`, border: `1px solid ${feature.color}30` }}
+								>
+									<Icon size={22} style={{ color: feature.color }} />
+								</div>
+								<h3 className="text-[#fdf6e3] font-bold text-lg mb-2">{feature.title}</h3>
+								<p className="text-[#586e75] text-sm leading-relaxed">{feature.description}</p>
+							</motion.div>
+						);
+					})}
 				</div>
 			</div>
 		</div>

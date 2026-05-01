@@ -7,8 +7,10 @@ import { ViewContainer } from "@/components/ui/view-container";
 import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 import AboutSection from "./components/AboutSection";
-import CoralHeader from "./components/Header";
+import HeroSection from "./components/HeroSection";
 import PrizesShowcase from "./components/PrizesShowcase";
+import TracksSection from "./components/TracksSection";
+import WaveDivider from "./components/WaveDivider";
 import { DATA, faqs, navLinks } from "./data";
 import { images } from "./images";
 
@@ -28,9 +30,9 @@ const HackathonPage = () => {
 				}}
 			/>
 
-			{/* About Section */}
-			<div id="about" className="scroll-mt-16 bg-[#0a0f1e]">
-				<CoralHeader
+			{/* Hero */}
+			<div id="about" className="scroll-mt-16">
+				<HeroSection
 					title={DATA.title}
 					description={DATA.description}
 					startDate={DATA.startDate}
@@ -39,201 +41,115 @@ const HackathonPage = () => {
 					showDate={DATA.showDate}
 					cta={DATA.cta}
 				/>
-
-				<ViewContainer className="mt-16 pb-20 bg-[#0c1a2e]/30 rounded-2xl py-12 px-8 treasure-map-bg">
-					<h2 className="text-3xl md:text-4xl font-bold text-amber-400 uppercase tracking-wide mb-6 text-center">
-						About the Voyage
-					</h2>
-					<div className="text-lg md:text-xl text-slate-300 leading-relaxed max-w-4xl mx-auto text-center space-y-4">
-						<p>
-							In a world where AI agents need data from every
-							corner of the seven seas, there&apos;s only one tool
-							that lets them query it all as SQL.
-						</p>
-						<p>
-							<strong className="text-amber-400">Coral</strong> is
-							an open-source data retrieval layer for agents. It
-							lets them query any API, database, or file as SQL
-							tables. Coral handles auth, pagination, rate limits,
-							cross-source joins, schema learning, and caching.
-						</p>
-						<p>
-							No ETL. No warehouse. No glue code. You can run
-							Coral from the CLI or through MCP. Everything is
-							local. Credentials, data, and usage history never
-							leave your machine.
-						</p>
-						<p>
-							Whether you&apos;re a seasoned AI engineer, an
-							agent-pilled software developer, or a curious
-							tinkerer experimenting with intelligent agents, this
-							hackathon is your voyage to prove what you can build
-							with the power of unified data access.
-						</p>
-						<p className="text-amber-300 font-semibold italic">
-							&quot;Not all treasure is silver and gold, mate.
-							Sometimes it&apos;s a perfectly joined SQL
-							query.&quot;
-						</p>
-					</div>
-				</ViewContainer>
 			</div>
 
-			{/* Tracks Section */}
-			<div id="tracks" className="scroll-mt-16">
+			<WaveDivider />
+
+			{/* About */}
+			<div className="bg-[#002b36]/50">
 				<AboutSection />
 			</div>
 
-			{/* Prizes Section */}
-			<div id="prizes" className="scroll-mt-16 bg-[#0c1a2e]/30">
+			<WaveDivider />
+
+			{/* Tracks */}
+			<div id="tracks" className="scroll-mt-16">
+				<TracksSection />
+			</div>
+
+			<WaveDivider />
+
+			{/* Prizes */}
+			<div id="prizes" className="scroll-mt-16 bg-[#002b36]/30">
 				<PrizesShowcase />
 			</div>
 
-			{/* Sponsor Section */}
-			<div id="sponsor" className="py-20 scroll-mt-16 bg-[#0a0f1e]">
-				<ViewContainer>
-					<h2 className="text-3xl md:text-4xl font-bold text-amber-400 uppercase tracking-wide mb-8">
+			<WaveDivider />
+
+			{/* Sponsor */}
+			<div id="sponsor" className="scroll-mt-16 py-24">
+				<div className="max-w-6xl mx-auto px-4 md:px-8">
+					<h2 className="text-3xl md:text-5xl font-bold gold-shimmer-text mb-10 text-center">
 						Sponsor
 					</h2>
-					<div className="bg-[#0c1a2e]/60 backdrop-blur-sm rounded-2xl border border-amber-500/20 overflow-hidden">
-						<div className="flex items-center justify-between p-8 border-b border-amber-500/10 flex-col md:flex-row gap-6">
+					<div className="parchment-bg rounded-2xl border border-[#d4af37]/10 overflow-hidden">
+						<div className="flex items-center justify-between p-6 md:p-8 border-b border-[#d4af37]/8 flex-col md:flex-row gap-6">
 							<div className="flex items-center gap-4">
-								<div className="bg-gradient-to-br from-amber-500 to-amber-700 px-6 py-3 rounded-xl">
-									<span className="text-2xl font-bold text-white">
-										🪸 Coral
-									</span>
+								<div className="px-5 py-2.5 rounded-xl bg-gradient-to-r from-[#d4af37]/20 to-[#b8960c]/20 border border-[#d4af37]/20">
+									<span className="text-xl font-bold text-[#d4af37]">🪸 Coral</span>
 								</div>
-								<span className="text-slate-400 text-lg">
-									Data Retrieval Layer for Agents
-								</span>
+								<span className="text-[#586e75] text-base">Data Retrieval Layer for Agents</span>
 							</div>
 							<Link
 								href="https://github.com/withcoral/coral"
 								target="_blank"
 								rel="noopener noreferrer"
-								className="px-6 py-3 rounded-xl border border-amber-500/50 flex gap-2 items-center bg-[#0c1a2e]/50 hover:bg-amber-500/20 transition-colors duration-300 text-amber-400 font-medium"
+								className="px-5 py-2.5 rounded-xl border border-[#d4af37]/20 flex gap-2 items-center hover:bg-[#d4af37]/5 transition-colors text-[#d4af37] font-medium text-sm"
 							>
-								Check out Coral <ArrowUpRight size={18} />
+								Check out Coral <ArrowUpRight size={16} />
 							</Link>
 						</div>
-						<div className="p-8">
-							<div className="text-lg text-slate-300 leading-relaxed space-y-4">
+						<div className="p-6 md:p-8">
+							<div className="text-[#93a1a1] leading-relaxed space-y-4">
 								<p>
-									Coral is an open-source data retrieval layer
-									for agents that lets them query any API,
-									database, or file as SQL tables. Coral
-									handles auth, pagination, rate limits,
-									cross-source joins, schema learning, and
-									caching. No ETL, no warehouse, no glue
-									code.
+									Coral is an open-source data retrieval layer for agents that lets them query any API,
+									database, or file as SQL tables. Coral handles auth, pagination, rate limits,
+									cross-source joins, schema learning, and caching. No ETL, no warehouse, no glue code.
 								</p>
 								<p>
-									You can run Coral from the CLI or through
-									MCP. Everything is local. Credentials,
-									data, and usage history never leave your
-									machine.
+									You can run Coral from the CLI or through MCP. Everything is local. Credentials,
+									data, and usage history never leave your machine.
 								</p>
 								<p>
-									<strong>How to use it?</strong> For
-									hackathon participants, Coral provides a
-									unified SQL interface to query data from
-									multiple sources. Instead of writing custom
-									API integrations, pagination logic, and auth
-									flows for each data source, you write SQL
-									queries and Coral handles the rest. This
-									means you can focus on building your
-									agent&apos;s logic and impact while Coral
-									handles the data plumbing.
-								</p>
-								<p>
-									Whether you&apos;re connecting GitHub +
-									Sentry + Slack for a debugging agent, or
-									building a custom source connector for an
-									API that doesn&apos;t exist yet, Coral is
-									your data layer.
+									<strong className="text-[#fdf6e3]">How to use it?</strong> For hackathon participants,
+									Coral provides a unified SQL interface to query data from multiple sources. Instead of
+									writing custom API integrations, pagination logic, and auth flows for each data source,
+									you write SQL queries and Coral handles the rest. Focus on building your agent&apos;s
+									logic and impact while Coral handles the data plumbing.
 								</p>
 							</div>
 						</div>
 					</div>
-				</ViewContainer>
+				</div>
 			</div>
+
+			<WaveDivider />
 
 			{/* Judging Criteria */}
-			<div className="scroll-mt-16 py-20 bg-[#0c1a2e]/30">
-				<ViewContainer>
-					<h2 className="text-3xl md:text-4xl font-bold text-amber-400 uppercase tracking-wide mb-8">
+			<div className="py-24 bg-[#002b36]/30">
+				<div className="max-w-6xl mx-auto px-4 md:px-8">
+					<h2 className="text-3xl md:text-4xl font-bold text-[#d4af37] mb-10 text-center">
 						Judging Criteria
 					</h2>
-					<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-						<div className="bg-[#0c1a2e]/40 backdrop-blur-sm rounded-xl p-6 border border-slate-700/50 hover:border-amber-500/30 transition-all">
-							<h3 className="text-xl font-bold text-amber-400 mb-3">
-								🏴‍☠️ Potential Impact
-							</h3>
-							<p className="text-slate-300">
-								How effectively does the project address a
-								meaningful problem or unlock a valuable use case
-								using Coral&apos;s data retrieval capabilities?
-							</p>
-						</div>
-						<div className="bg-[#0c1a2e]/40 backdrop-blur-sm rounded-xl p-6 border border-slate-700/50 hover:border-amber-500/30 transition-all">
-							<h3 className="text-xl font-bold text-amber-400 mb-3">
-								⚓ Creativity & Originality
-							</h3>
-							<p className="text-slate-300">
-								How unique is the idea? How creatively is Coral
-								used to solve problems across multiple data
-								sources?
-							</p>
-						</div>
-						<div className="bg-[#0c1a2e]/40 backdrop-blur-sm rounded-xl p-6 border border-slate-700/50 hover:border-amber-500/30 transition-all">
-							<h3 className="text-xl font-bold text-amber-400 mb-3">
-								🗺️ Learning & Growth
-							</h3>
-							<p className="text-slate-300">
-								The learning curve tackled during the hackathon,
-								especially for first-time Coral users and source
-								connector builders.
-							</p>
-						</div>
-						<div className="bg-[#0c1a2e]/40 backdrop-blur-sm rounded-xl p-6 border border-slate-700/50 hover:border-amber-500/30 transition-all">
-							<h3 className="text-xl font-bold text-amber-400 mb-3">
-								⚔️ Technical Implementation
-							</h3>
-							<p className="text-slate-300">
-								How well was the idea executed technically? Quality
-								of integration with Coral, SQL queries, and
-								cross-source joins.
-							</p>
-						</div>
-						<div className="bg-[#0c1a2e]/40 backdrop-blur-sm rounded-xl p-6 border border-slate-700/50 hover:border-amber-500/30 transition-all">
-							<h3 className="text-xl font-bold text-amber-400 mb-3">
-								🎨 Aesthetics & UX
-							</h3>
-							<p className="text-slate-300">
-								How intuitive and user-friendly is the final
-								experience? Especially if the project has a
-								frontend, CLI, or agent interface.
-							</p>
-						</div>
-						<div className="bg-[#0c1a2e]/40 backdrop-blur-sm rounded-xl p-6 border border-slate-700/50 hover:border-amber-500/30 transition-all">
-							<h3 className="text-xl font-bold text-amber-400 mb-3">
-								🪸 Best Use of Coral
-							</h3>
-							<p className="text-slate-300">
-								How effectively does the project leverage
-								Coral&apos;s SQL interface, cross-source joins,
-								schema learning, and caching to build something
-								powerful?
-							</p>
-						</div>
+					<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+						{[
+							{ emoji: "🏴‍☠️", title: "Potential Impact", desc: "How effectively does the project address a meaningful problem using Coral's data retrieval capabilities?" },
+							{ emoji: "⚓", title: "Creativity & Originality", desc: "How unique is the idea? How creatively is Coral used to solve problems across multiple data sources?" },
+							{ emoji: "🗺️", title: "Learning & Growth", desc: "The learning curve tackled during the hackathon, especially for first-time Coral users." },
+							{ emoji: "⚔️", title: "Technical Implementation", desc: "How well was the idea executed technically? Quality of integration with Coral and SQL queries." },
+							{ emoji: "🎨", title: "Aesthetics & UX", desc: "How intuitive and user-friendly is the final experience? Frontend, CLI, or agent interface." },
+							{ emoji: "🪸", title: "Best Use of Coral", desc: "How effectively does the project leverage Coral's SQL interface, cross-source joins, and caching?" },
+						].map((c) => (
+							<div key={c.title} className="parchment-bg rounded-xl p-5 border border-[#d4af37]/8 hover:border-[#d4af37]/20 transition-all">
+								<h3 className="text-lg font-bold text-[#d4af37] mb-2">
+									{c.emoji} {c.title}
+								</h3>
+								<p className="text-[#586e75] text-sm leading-relaxed">{c.desc}</p>
+							</div>
+						))}
 					</div>
-				</ViewContainer>
+				</div>
 			</div>
 
-			{/* FAQ Section */}
-			<div id="faq" className="scroll-mt-16 py-20 bg-[#0a0f1e]">
+			<WaveDivider />
+
+			{/* FAQ */}
+			<div id="faq" className="scroll-mt-16 py-24">
 				<ViewContainer>
-					<div className="[&_h2]:text-amber-400 [&_h2]:font-bold [&_div[class*='pb-4']]:text-amber-700 [&_div[class*='pb-4']_a]:text-amber-700">
+					<h2 className="text-3xl md:text-4xl font-bold text-[#d4af37] mb-10 text-center">
+						Frequently Asked Questions
+					</h2>
+					<div className="[&_h2]:text-[#d4af37] [&_h2]:font-bold [&_div[class*='pb-4']]:text-[#5c4813] [&_div[class*='pb-4']_a]:text-[#5c4813]">
 						<Faq FAQS={faqs} />
 					</div>
 				</ViewContainer>
