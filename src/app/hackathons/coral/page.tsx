@@ -140,8 +140,8 @@ const HackathonPage = () => {
 			<WaveDivider />
 
 			{/* FAQ */}
-			<div id="faq" className="scroll-mt-44 py-24">
-				<div className="[&_h2]:text-[#d4af37] [&_h2]:font-bold [&_div[class*='pb-4']]:text-[#5c4813] [&_div[class*='pb-4']_a]:text-[#5c4813]">
+			<div id="faq" className="scroll-mt-44">
+				<div className="[&_h2]:text-[#d4af37] [&_h2]:font-bold [&_div[class*='pb-4']]:text-[#5c4813] [&_div[class*='pb-4']_a]:text-[#5c4813] [&_section]:my-0 [&_section]:py-24">
 					<Faq FAQS={faqs} />
 				</div>
 			</div>
