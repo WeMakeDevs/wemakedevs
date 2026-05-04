@@ -35,7 +35,7 @@ const steps = [
 		number: 3,
 		title: "Get Certified",
 		description:
-			"Complete the course material and pass the certification exam. You will earn your Official Kestra Certification, a real credential for your profile.",
+			"Complete the course material and pass the certification exam. You will earn your Official Kestra Certification. Add it to the Certificates section on your LinkedIn profile.",
 		icon: Award,
 		color: "text-orange-400",
 		bgColor: "bg-orange-500/10",
