@@ -4,11 +4,15 @@ import { ViewContainer } from "@/components/ui/view-container";
 import { motion } from "framer-motion";
 import { Gift } from "lucide-react";
 import Image from "next/image";
+import boseImg from "../images/bose.png";
+import ipadImg from "../images/ipad.png";
+import iphoneImg from "../images/iphone.png";
+import macbookImg from "../images/macbook.png";
 
 const prizes = [
 	{
 		name: "MacBook Neo",
-		image: "/images/orchestration/macbook.svg",
+		image: macbookImg,
 		gradient: "from-[#00cfb4] to-emerald-600",
 		glowColor: "rgba(0, 207, 180, 0.3)",
 		borderGlow: "hover:border-[#00cfb4]/40",
@@ -19,7 +23,7 @@ const prizes = [
 	},
 	{
 		name: "iPad Pro",
-		image: "/images/orchestration/ipad.svg",
+		image: ipadImg,
 		gradient: "from-purple-500 to-indigo-600",
 		glowColor: "rgba(168, 85, 247, 0.3)",
 		borderGlow: "hover:border-purple-500/40",
@@ -30,7 +34,7 @@ const prizes = [
 	},
 	{
 		name: "iPhone 17e",
-		image: "/images/orchestration/iphone.svg",
+		image: iphoneImg,
 		gradient: "from-orange-500 to-red-500",
 		glowColor: "rgba(249, 115, 22, 0.3)",
 		borderGlow: "hover:border-orange-500/40",
@@ -41,7 +45,7 @@ const prizes = [
 	},
 	{
 		name: "Bose Speakers",
-		image: "/images/orchestration/bose.svg",
+		image: boseImg,
 		gradient: "from-blue-500 to-cyan-500",
 		glowColor: "rgba(59, 130, 246, 0.3)",
 		borderGlow: "hover:border-blue-500/40",
@@ -83,8 +87,10 @@ const PrizesSection = () => {
 						<Gift size={14} />
 						The Loot Drop
 					</div>
-					<h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4">
-						Claim Your Legendary Loot
+					<h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
+						<span className="glow-text-orange text-orange-400">
+							Prizes worth $4,000
+						</span>
 					</h2>
 					<p className="text-lg text-slate-400 max-w-xl mx-auto">
 						Complete the quest and you could walk away with one of

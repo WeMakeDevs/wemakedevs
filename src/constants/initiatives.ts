@@ -1,5 +1,6 @@
-import { images as openSourceFestImages } from "@/app/hackathons/opensourcefest25/images";
 import giveawaysThumbnail from "@/app/giveaways/images/giveaways-thumbnail.png";
+import { images as openSourceFestImages } from "@/app/hackathons/opensourcefest25/images";
+import orchestrationThumbnail from "@/app/orchestration/images/thumbnail.svg";
 import { scholarshipsThumbnail } from "@/assets/images/scholarships";
 import type { StaticImageData } from "next/image";
 
@@ -11,6 +12,13 @@ type InitiativeType = {
 };
 
 const initiatives: InitiativeType[] = [
+	{
+		title: "Kestra Orchestration Challenge",
+		description:
+			"Learn workflow orchestration, earn an official Kestra certification for free, and win a MacBook, iPad, iPhone & more. Beginners welcome!",
+		image: orchestrationThumbnail,
+		url: "/orchestration",
+	},
 	{
 		title: "Giveaways",
 		description:

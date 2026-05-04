@@ -2,22 +2,49 @@
 
 import { motion } from "framer-motion";
 import { Calendar, ChevronDown, Users, Zap } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
+import boseImg from "../images/bose.png";
+import ipadImg from "../images/ipad.png";
+import iphoneImg from "../images/iphone.png";
+import macbookImg from "../images/macbook.png";
 
-const FloatingParticles = () => (
-	<div className="absolute inset-0 overflow-hidden pointer-events-none">
-		{["p1", "p2", "p3", "p4", "p5"].map((id, i) => (
-			<div
-				key={id}
-				className="particle absolute w-2 h-2 rounded-full bg-[#00cfb4]/30"
-				style={{
-					left: `${15 + i * 18}%`,
-					top: `${20 + i * 12}%`,
-				}}
-			/>
-		))}
-	</div>
-);
+const floatingProducts = [
+	{
+		src: macbookImg,
+		alt: "MacBook Neo",
+		className: "absolute left-[2%] top-[18%] w-28 sm:w-36 md:w-44 lg:w-52",
+		delay: 0,
+		y: [0, -18, 0],
+		rotate: [-3, 2, -3],
+	},
+	{
+		src: boseImg,
+		alt: "Bose Speakers",
+		className:
+			"absolute left-[4%] bottom-[16%] w-24 sm:w-28 md:w-36 lg:w-44",
+		delay: 1.5,
+		y: [0, 14, 0],
+		rotate: [2, -2, 2],
+	},
+	{
+		src: ipadImg,
+		alt: "iPad Pro",
+		className: "absolute right-[2%] top-[20%] w-24 sm:w-32 md:w-40 lg:w-48",
+		delay: 0.8,
+		y: [0, -14, 0],
+		rotate: [3, -1, 3],
+	},
+	{
+		src: iphoneImg,
+		alt: "iPhone 17e",
+		className:
+			"absolute right-[6%] bottom-[18%] w-20 sm:w-24 md:w-32 lg:w-36",
+		delay: 2,
+		y: [0, 16, 0],
+		rotate: [-2, 3, -2],
+	},
+];
 
 const HeroSection = () => {
 	return (
@@ -29,7 +56,46 @@ const HeroSection = () => {
 				<div className="absolute top-1/3 right-1/4 w-[300px] h-[300px] bg-orange-500/5 rounded-full blur-[80px]" />
 			</div>
 
-			<FloatingParticles />
+			{/* Floating product images */}
+			<div className="absolute inset-0 pointer-events-none hidden md:block">
+				{floatingProducts.map(product => (
+					<motion.div
+						key={product.alt}
+						className={product.className}
+						initial={{ opacity: 0, scale: 0.8 }}
+						animate={{
+							opacity: 0.25,
+							scale: 1,
+							y: product.y,
+							rotate: product.rotate,
+						}}
+						transition={{
+							opacity: { duration: 1, delay: product.delay },
+							scale: { duration: 1, delay: product.delay },
+							y: {
+								duration: 6,
+								repeat: Number.POSITIVE_INFINITY,
+								ease: "easeInOut",
+								delay: product.delay,
+							},
+							rotate: {
+								duration: 8,
+								repeat: Number.POSITIVE_INFINITY,
+								ease: "easeInOut",
+								delay: product.delay,
+							},
+						}}
+						whileHover={{ opacity: 0.5, scale: 1.05 }}
+					>
+						<Image
+							src={product.src}
+							alt={product.alt}
+							className="w-full h-auto drop-shadow-[0_0_30px_rgba(0,207,180,0.15)]"
+							priority
+						/>
+					</motion.div>
+				))}
+			</div>
 
 			<div className="relative z-10 text-center px-5 max-w-5xl mx-auto">
 				{/* Date & Beginners badges */}
@@ -70,13 +136,25 @@ const HeroSection = () => {
 					initial={{ opacity: 0, y: 20 }}
 					animate={{ opacity: 1, y: 0 }}
 					transition={{ duration: 0.6, delay: 0.2 }}
-					className="text-lg sm:text-xl md:text-2xl text-slate-300 max-w-2xl mx-auto mb-10 leading-relaxed"
+					className="text-lg sm:text-xl md:text-2xl text-slate-300 max-w-2xl mx-auto mb-4 leading-relaxed"
 				>
 					Learn workflow orchestration, earn an{" "}
 					<span className="text-[#00cfb4] font-semibold">
 						official Kestra certification
 					</span>
 					, and win a MacBook, iPad, iPhone &amp; more.
+				</motion.p>
+
+				{/* Prizes highlight */}
+				<motion.p
+					initial={{ opacity: 0, y: 15 }}
+					animate={{ opacity: 1, y: 0 }}
+					transition={{ duration: 0.6, delay: 0.25 }}
+					className="text-2xl sm:text-3xl md:text-4xl font-bold mb-10"
+				>
+					<span className="glow-text-orange text-orange-400">
+						Prizes worth $4,000
+					</span>
 				</motion.p>
 
 				{/* CTA */}

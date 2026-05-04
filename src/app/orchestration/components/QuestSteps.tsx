@@ -17,8 +17,7 @@ const steps = [
 	{
 		number: 1,
 		title: "Sign Up for the Course",
-		description:
-			"Head to Kestra Academy and sign up for the Kestra Fundamentals course. It is 100% free, self-paced, and beginner-friendly.",
+		description: "sign-up-step",
 		icon: UserPlus,
 		color: "text-[#00cfb4]",
 		bgColor: "bg-[#00cfb4]/10",
@@ -158,9 +157,26 @@ const QuestSteps = () => {
 								<h3 className="text-lg md:text-xl font-bold text-white mb-2">
 									{step.title}
 								</h3>
-								<p className="text-slate-400 leading-relaxed">
-									{step.description}
-								</p>
+								{step.description === "sign-up-step" ? (
+									<p className="text-slate-400 leading-relaxed">
+										Head to Kestra Academy and{" "}
+										<a
+											href="https://academy.kestra.io/kestra-fundamentals"
+											target="_blank"
+											rel="noopener noreferrer"
+											className="text-[#00cfb4] font-medium underline underline-offset-2 hover:text-[#00e6c8] transition-colors"
+										>
+											sign up for the Kestra Fundamentals
+											course
+										</a>
+										. It is 100% free, self-paced, and
+										beginner-friendly.
+									</p>
+								) : (
+									<p className="text-slate-400 leading-relaxed">
+										{step.description}
+									</p>
+								)}
 							</div>
 
 							{/* Arrow indicator */}

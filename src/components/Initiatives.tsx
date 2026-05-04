@@ -16,7 +16,7 @@ const Initiatives = ({ className, ...props }: GeneralComponent) => {
 			id="initiatives"
 			{...props}
 		>
-			<ViewContainer className="">
+			<ViewContainer>
 				<div className="flex justify-between flex-col items-center">
 					<h2 className="text-4xl md:text-5xl">Initiatives</h2>
 					<p className="max-w-2xl font-medium leading-snug mt-2 md:mt-3 text-center text-base md:text-lg">
@@ -25,24 +25,26 @@ const Initiatives = ({ className, ...props }: GeneralComponent) => {
 						in technology and innovation.
 					</p>
 				</div>
-				<div className="my-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-6 auto-rows-fr">
-					{initiatives.map(initiative => (
-						<InitiativeCard
-							key={initiative.title}
-							href={initiative.url}
-						>
-							<InitiativeCardImage
-								src={initiative.image}
-								alt={initiative.title}
-							/>
-							<InitiativeCardTitle>
-								{initiative.title}
-							</InitiativeCardTitle>
-							<InitiativeCardDescription>
-								{initiative.description}
-							</InitiativeCardDescription>
-						</InitiativeCard>
-					))}
+				<div className="my-10 max-h-[680px] overflow-y-auto overscroll-contain pr-2 scrollbar-thin">
+					<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-6 auto-rows-fr">
+						{initiatives.map(initiative => (
+							<InitiativeCard
+								key={initiative.title}
+								href={initiative.url}
+							>
+								<InitiativeCardImage
+									src={initiative.image}
+									alt={initiative.title}
+								/>
+								<InitiativeCardTitle>
+									{initiative.title}
+								</InitiativeCardTitle>
+								<InitiativeCardDescription>
+									{initiative.description}
+								</InitiativeCardDescription>
+							</InitiativeCard>
+						))}
+					</div>
 				</div>
 			</ViewContainer>
 		</section>
