@@ -45,7 +45,7 @@ const steps = [
 		number: 4,
 		title: "Share on Socials",
 		description:
-			"Post about your certification on social media using #KestraAcademy. That is your entry into the giveaway!",
+			"Post about your certification on social media using #KestraAcademy. Share what you learned and your experience with the course. That is your entry into the giveaway!",
 		icon: Hash,
 		color: "text-blue-400",
 		bgColor: "bg-blue-500/10",
