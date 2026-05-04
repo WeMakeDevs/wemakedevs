@@ -136,25 +136,17 @@ const HeroSection = () => {
 					initial={{ opacity: 0, y: 20 }}
 					animate={{ opacity: 1, y: 0 }}
 					transition={{ duration: 0.6, delay: 0.2 }}
-					className="text-xl sm:text-2xl md:text-3xl text-slate-300 max-w-2xl mx-auto mb-4 leading-relaxed"
+					className="text-xl sm:text-2xl md:text-3xl text-slate-300 max-w-2xl mx-auto mb-10 leading-relaxed"
 				>
 					Learn workflow orchestration, earn an{" "}
 					<span className="text-[#00cfb4] font-semibold">
 						official Kestra certification
 					</span>
-					, and win a MacBook, iPad, iPhone &amp; more.
-				</motion.p>
-
-				{/* Prizes highlight */}
-				<motion.p
-					initial={{ opacity: 0, y: 15 }}
-					animate={{ opacity: 1, y: 0 }}
-					transition={{ duration: 0.6, delay: 0.25 }}
-					className="text-2xl sm:text-3xl md:text-4xl font-bold mb-10"
-				>
-					<span className="glow-text-orange text-orange-400">
-						Prizes worth $4,000
+					, and win a MacBook, iPad, iPhone &amp; more{" "}
+					<span className="glow-text-orange text-orange-400 font-semibold">
+						worth $4,000
 					</span>
+					.
 				</motion.p>
 
 				{/* CTA */}
