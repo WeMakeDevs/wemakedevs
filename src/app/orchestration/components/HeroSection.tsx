@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Calendar, ChevronDown, Sparkles, Users, Zap } from "lucide-react";
+import { Calendar, ChevronDown, Users, Zap } from "lucide-react";
 import Link from "next/link";
 
 const FloatingParticles = () => (
@@ -32,23 +32,11 @@ const HeroSection = () => {
 			<FloatingParticles />
 
 			<div className="relative z-10 text-center px-5 max-w-5xl mx-auto">
-				{/* Badge */}
+				{/* Date & Beginners badges */}
 				<motion.div
 					initial={{ opacity: 0, y: 20 }}
 					animate={{ opacity: 1, y: 0 }}
 					transition={{ duration: 0.5 }}
-					className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[#00cfb4]/30 bg-[#00cfb4]/10 text-[#00cfb4] text-sm font-medium mb-4"
-				>
-					<Sparkles size={16} />
-					<span>No Pre-requisites</span>
-					<Zap size={16} />
-				</motion.div>
-
-				{/* Date badge */}
-				<motion.div
-					initial={{ opacity: 0, y: 20 }}
-					animate={{ opacity: 1, y: 0 }}
-					transition={{ duration: 0.5, delay: 0.05 }}
 					className="flex flex-wrap items-center justify-center gap-3 mb-8"
 				>
 					<div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-orange-500/30 bg-orange-500/10 text-orange-400 text-sm font-medium">
@@ -84,11 +72,11 @@ const HeroSection = () => {
 					transition={{ duration: 0.6, delay: 0.2 }}
 					className="text-lg sm:text-xl md:text-2xl text-slate-300 max-w-2xl mx-auto mb-10 leading-relaxed"
 				>
-					Master the art of automation, get certified, and claim your{" "}
+					Learn workflow orchestration, earn an{" "}
 					<span className="text-[#00cfb4] font-semibold">
-						legendary loot
+						official Kestra certification
 					</span>
-					.
+					, and win a MacBook, iPad, iPhone &amp; more.
 				</motion.p>
 
 				{/* CTA */}
@@ -112,25 +100,6 @@ const HeroSection = () => {
 						Learn More
 						<ChevronDown size={18} />
 					</Link>
-				</motion.div>
-
-				{/* XP indicator */}
-				<motion.div
-					initial={{ opacity: 0 }}
-					animate={{ opacity: 1 }}
-					transition={{ duration: 0.8, delay: 0.6 }}
-					className="mt-16 inline-flex items-center gap-3 px-5 py-3 rounded-full bg-slate-900/80 border border-slate-800"
-				>
-					<div className="w-8 h-8 rounded-full bg-gradient-to-br from-[#00cfb4] to-purple-500 flex items-center justify-center text-xs font-bold text-black">
-						XP
-					</div>
-					<span className="text-sm text-slate-400">
-						Earn{" "}
-						<span className="text-[#00cfb4] font-semibold">
-							+500 XP
-						</span>{" "}
-						&amp; Official Kestra Certification
-					</span>
 				</motion.div>
 			</div>
 		</section>

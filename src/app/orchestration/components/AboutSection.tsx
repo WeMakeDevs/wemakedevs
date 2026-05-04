@@ -79,8 +79,8 @@ const AboutSection = () => {
 					<p className="text-lg text-slate-400 max-w-2xl mx-auto leading-relaxed">
 						In modern dev, writing code is the easy part. The real
 						challenge? Managing the flow between services, APIs, and
-						data pipelines. That&apos;s where orchestration comes in
-						&mdash; and where{" "}
+						data pipelines. That&apos;s where orchestration comes
+						in, and where{" "}
 						<span className="text-[#00cfb4] font-medium">
 							Kestra
 						</span>{" "}
@@ -88,7 +88,7 @@ const AboutSection = () => {
 						<span className="text-white font-medium">
 							Beginners are absolutely welcome
 						</span>
-						&mdash; the course starts from zero.
+						. The course starts from zero.
 					</p>
 				</motion.div>
 

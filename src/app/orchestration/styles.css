@@ -167,12 +167,13 @@
 	animation-duration: 5s;
 }
 
-/* Navbar overrides for dark page — keep nav visible before and after scroll */
+/* Navbar overrides for dark page - force white text always */
 .orchestration-challenge #nav > div:first-child {
-	background: rgba(10, 10, 26, 0.85);
+	background: rgba(10, 10, 26, 0.85) !important;
 	backdrop-filter: blur(12px);
 	-webkit-backdrop-filter: blur(12px);
 	border: 1px solid rgba(255, 255, 255, 0.06);
+	box-shadow: none !important;
 }
 
 /* Override the white bg that kicks in on scroll */
@@ -181,13 +182,31 @@
 	box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4) !important;
 }
 
-/* Keep text white on scroll instead of switching to dark */
+/* Force all nav text to white, both before and after scroll */
+.orchestration-challenge #nav > div:first-child,
 .orchestration-challenge #nav > div:first-child.text-slate-900 {
 	color: #f1f5f9 !important;
 }
 
-.orchestration-challenge #nav > div:first-child .text-slate-900 {
+.orchestration-challenge #nav > div:first-child .text-slate-900,
+.orchestration-challenge #nav > div:first-child .text-foreground {
 	color: #f1f5f9 !important;
+}
+
+/* Logo text color override */
+.orchestration-challenge #nav > div:first-child span.text-primary,
+.orchestration-challenge #nav > div:first-child span.text-slate-900 {
+	color: #f1f5f9 !important;
+}
+
+/* Nav link text override - covers ghost variant buttons */
+.orchestration-challenge #nav > div:first-child ul a {
+	color: #f1f5f9 !important;
+}
+
+/* Keep the CTA button styled correctly */
+.orchestration-challenge #nav > div:first-child ul a[class*="bg-primary"] {
+	color: #ffffff !important;
 }
 
 /* Mobile navbar override */
@@ -204,12 +223,17 @@
 	color: #f1f5f9 !important;
 }
 
-.orchestration-challenge #nav > div:nth-child(2) a:not([class*="bg-primary"]) {
+.orchestration-challenge #nav > div:nth-child(2) a {
 	color: #f1f5f9 !important;
+	border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.orchestration-challenge #nav > div:nth-child(2) a[class*="bg-primary"] {
+	color: #ffffff !important;
 }
 
 /* Mobile hamburger icon */
 .orchestration-challenge #nav > div:nth-child(2) button {
-	color: #f1f5f9;
-	border-color: rgba(255, 255, 255, 0.15);
+	color: #f1f5f9 !important;
+	border-color: rgba(255, 255, 255, 0.15) !important;
 }

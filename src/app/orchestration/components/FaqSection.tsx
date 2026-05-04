@@ -8,27 +8,27 @@ import { ChevronDown, HelpCircle } from "lucide-react";
 const faqs = [
 	{
 		question: "Who can join the Orchestration Challenge?",
-		answer: "Everyone! Whether you're a student, a working professional, or just getting started with tech — this challenge is open to all. Beginners are absolutely welcome; no prior orchestration experience is needed.",
+		answer: "Everyone! Whether you're a student, a working professional, or just getting started with tech, this challenge is open to all. Beginners are absolutely welcome; no prior orchestration experience is needed.",
 	},
 	{
 		question: "How are winners picked?",
-		answer: "Winners are selected on a first-come, first-serve / rolling basis. The sooner you complete the quest and post on LinkedIn, the better your chances. We pick winners regularly, so don't wait!",
+		answer: "Winners are selected on a first-come, first-serve / rolling basis. The sooner you complete the quest and share on socials, the better your chances. We pick winners regularly, so don't wait!",
 	},
 	{
 		question: "Is the Kestra Fundamentals course free?",
-		answer: "100% free. The course, the exam, and the certification — all of it. Zero cost, zero catch. Kestra Academy is completely free to use.",
+		answer: "100% free. The course, the exam, and the certification, all of it. Zero cost, zero catch. Kestra Academy is completely free to use.",
 	},
 	{
 		question: "How long does the course take to complete?",
-		answer: "The Kestra Fundamentals course is self-paced. Most people complete it in a few hours. You can do it in one sitting or spread it across a few days — totally up to you.",
+		answer: "The Kestra Fundamentals course is self-paced. Most people complete it in a few hours. You can do it in one sitting or spread it across a few days, totally up to you.",
 	},
 	{
 		question: "Do I need prior experience with orchestration tools?",
-		answer: "Not at all — beginners are welcome! The course starts from the basics and builds up. If you know what an API is and have written some code before, you're good to go. Even if you haven't, you'll pick it up.",
+		answer: "Not at all, beginners are welcome! The course starts from the basics and builds up. If you know what an API is and have written some code before, you're good to go. Even if you haven't, you'll pick it up.",
 	},
 	{
-		question: "What do I need to post on LinkedIn exactly?",
-		answer: "Share your Kestra certification on LinkedIn and tag both @WeMakeDevs and @Kestra in your post. That's your entry ticket to the giveaway. Feel free to add your thoughts about the course too!",
+		question: "How do I enter the giveaway?",
+		answer: "Share about your certification on social media using #KestraAcademy. That's your entry ticket to the giveaway. Feel free to add your thoughts about the course too!",
 	},
 	{
 		question: "When does this challenge end?",
@@ -36,7 +36,7 @@ const faqs = [
 	},
 	{
 		question: "Can I participate from any country?",
-		answer: "Yes! This is a global challenge. As long as you can access Kestra Academy and LinkedIn, you're eligible to participate and win.",
+		answer: "Yes! This is a global challenge. As long as you can access Kestra Academy, you're eligible to participate and win.",
 	},
 ];
 
