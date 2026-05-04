@@ -1,41 +1,62 @@
-import { ViewContainer } from "@/components/ui/view-container";
-import { Sparkles } from "lucide-react";
+"use client";
+
+import { cn } from "@/lib/utils";
+import { X } from "lucide-react";
 import Link from "next/link";
+import { useState } from "react";
 
 const OrchestrationBanner = () => {
-	return (
-		<section className="py-12 md:py-16 bg-gradient-to-br from-[#0a0a1a] via-[#0f1029] to-[#0a0a1a] relative overflow-hidden">
-			{/* Subtle glow effects */}
-			<div className="absolute top-0 left-1/3 w-[300px] h-[200px] bg-[#00cfb4]/10 rounded-full blur-[100px]" />
-			<div className="absolute bottom-0 right-1/3 w-[300px] h-[200px] bg-orange-500/10 rounded-full blur-[100px]" />
+	const [isVisible, setIsVisible] = useState(true);
 
-			<ViewContainer className="relative z-10">
-				<div className="flex flex-col md:flex-row items-center justify-between gap-8 md:gap-12 text-center md:text-left">
-					<div className="flex-1">
-						<div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-[#00cfb4]/30 bg-[#00cfb4]/10 text-[#00cfb4] text-xs font-semibold uppercase tracking-wider mb-4">
-							<Sparkles size={12} />
-							Live Challenge · May 4–17
-						</div>
-						<h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-3">
-							The Kestra Orchestration Challenge
-						</h2>
-						<p className="text-slate-400 text-base md:text-lg max-w-xl leading-relaxed">
-							Get certified in workflow orchestration for free and
-							win MacBooks, iPads, iPhones, and more. No
-							pre-requisites — beginners welcome.
-						</p>
-					</div>
-					<div className="shrink-0">
-						<Link
-							href="/orchestration"
-							className="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-gradient-to-r from-[#00cfb4] to-[#00a896] text-[#0a0a1a] font-bold text-lg hover:shadow-[0_0_30px_rgba(0,207,180,0.4)] transition-shadow"
-						>
-							Learn More
-						</Link>
-					</div>
-				</div>
-			</ViewContainer>
-		</section>
+	if (!isVisible) {
+		return null;
+	}
+
+	return (
+		<div
+			className={cn(
+				"fixed bottom-3 left-1/2 -translate-x-1/2 z-[1000] w-[calc(100vw-1.5rem)] max-w-4xl",
+				"rounded-xl bg-gradient-to-r from-[#0a0a1a] via-[#111128] to-[#0a0a1a] border border-[#00cfb4]/20",
+				"shadow-[0_0_30px_rgba(0,207,180,0.1)] backdrop-blur-sm",
+				"px-4 py-3 md:px-6 md:py-3.5",
+				"flex items-center gap-3 md:gap-5",
+			)}
+		>
+			{/* Dot indicator */}
+			<span className="relative flex h-2.5 w-2.5 shrink-0">
+				<span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#00cfb4] opacity-75" />
+				<span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-[#00cfb4]" />
+			</span>
+
+			{/* Text */}
+			<p className="flex-1 text-sm md:text-base text-slate-200 font-medium font-title truncate">
+				<span className="hidden sm:inline">
+					The Kestra Orchestration Challenge is live! Prizes worth
+					$4,000.
+				</span>
+				<span className="sm:hidden">
+					Orchestration Challenge is live!
+				</span>
+			</p>
+
+			{/* CTA */}
+			<Link
+				href="/orchestration"
+				className="shrink-0 px-4 py-1.5 md:px-5 md:py-2 rounded-lg bg-[#00cfb4] text-[#0a0a1a] text-sm font-bold hover:bg-[#00e6c8] transition-colors"
+			>
+				Learn More
+			</Link>
+
+			{/* Close */}
+			<button
+				type="button"
+				onClick={() => setIsVisible(false)}
+				className="shrink-0 text-slate-500 hover:text-slate-300 transition-colors"
+				aria-label="Dismiss banner"
+			>
+				<X size={18} />
+			</button>
+		</div>
 	);
 };
 

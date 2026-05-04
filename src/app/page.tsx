@@ -27,8 +27,8 @@ export default function Home() {
 			<Initiatives />
 			<Faq FAQS={FAQS} />
 			<Partners />
-			<OrchestrationBanner />
 			<Footer />
+			<OrchestrationBanner />
 		</div>
 	);
 }

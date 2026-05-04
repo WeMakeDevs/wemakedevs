@@ -25,13 +25,15 @@ const Initiatives = ({ className, ...props }: GeneralComponent) => {
 						in technology and innovation.
 					</p>
 				</div>
-				<div className="my-10 max-h-[680px] overflow-y-auto overscroll-contain pr-2 scrollbar-thin">
-					<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-6 auto-rows-fr">
-						{initiatives.map(initiative => (
-							<InitiativeCard
-								key={initiative.title}
-								href={initiative.url}
-							>
+			</ViewContainer>
+			<div className="my-10 overflow-x-auto overscroll-x-contain scrollbar-thin pb-4">
+				<div className="flex gap-6 px-5 lg:px-[max(1.25rem,calc((100vw-1200px)/2))]">
+					{initiatives.map(initiative => (
+						<div
+							key={initiative.title}
+							className="w-[320px] md:w-[360px] shrink-0"
+						>
+							<InitiativeCard href={initiative.url}>
 								<InitiativeCardImage
 									src={initiative.image}
 									alt={initiative.title}
@@ -43,10 +45,10 @@ const Initiatives = ({ className, ...props }: GeneralComponent) => {
 									{initiative.description}
 								</InitiativeCardDescription>
 							</InitiativeCard>
-						))}
-					</div>
+						</div>
+					))}
 				</div>
-			</ViewContainer>
+			</div>
 		</section>
 	);
 };
