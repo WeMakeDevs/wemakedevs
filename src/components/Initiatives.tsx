@@ -40,9 +40,8 @@ const Initiatives = ({ className, ...props }: GeneralComponent) => {
 	const scroll = (direction: "left" | "right") => {
 		const el = scrollRef.current;
 		if (!el) return;
-		const amount = 380;
 		el.scrollBy({
-			left: direction === "left" ? -amount : amount,
+			left: direction === "left" ? -380 : 380,
 			behavior: "smooth",
 		});
 	};
@@ -62,69 +61,70 @@ const Initiatives = ({ className, ...props }: GeneralComponent) => {
 						in technology and innovation.
 					</p>
 				</div>
-			</ViewContainer>
 
-			<div className="relative max-w-[100vw] overflow-hidden">
-				{/* Left arrow */}
-				{canScrollLeft && (
-					<button
-						type="button"
-						onClick={() => scroll("left")}
-						className="absolute left-2 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-background border border-border shadow-lg flex items-center justify-center hover:bg-accent transition-colors"
-						aria-label="Scroll left"
+				{/* Carousel wrapper — constrained to ViewContainer width */}
+				<div className="relative my-10">
+					{/* Left arrow */}
+					{canScrollLeft && (
+						<button
+							type="button"
+							onClick={() => scroll("left")}
+							className="absolute left-0 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-background border border-border shadow-lg flex items-center justify-center hover:bg-accent transition-colors"
+							aria-label="Scroll left"
+						>
+							<ChevronLeft size={20} />
+						</button>
+					)}
+
+					{/* Right arrow */}
+					{canScrollRight && (
+						<button
+							type="button"
+							onClick={() => scroll("right")}
+							className="absolute right-0 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-background border border-border shadow-lg flex items-center justify-center hover:bg-accent transition-colors"
+							aria-label="Scroll right"
+						>
+							<ChevronRight size={20} />
+						</button>
+					)}
+
+					{/* Fade edges */}
+					{canScrollLeft && (
+						<div className="absolute left-0 top-0 bottom-0 w-10 bg-gradient-to-r from-background to-transparent z-[1] pointer-events-none" />
+					)}
+					{canScrollRight && (
+						<div className="absolute right-0 top-0 bottom-0 w-10 bg-gradient-to-l from-background to-transparent z-[1] pointer-events-none" />
+					)}
+
+					{/* Scrollable row */}
+					<div
+						ref={scrollRef}
+						className="overflow-x-auto overscroll-x-contain scrollbar-thin pb-4"
 					>
-						<ChevronLeft size={20} />
-					</button>
-				)}
-
-				{/* Right arrow */}
-				{canScrollRight && (
-					<button
-						type="button"
-						onClick={() => scroll("right")}
-						className="absolute right-2 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-background border border-border shadow-lg flex items-center justify-center hover:bg-accent transition-colors"
-						aria-label="Scroll right"
-					>
-						<ChevronRight size={20} />
-					</button>
-				)}
-
-				{/* Fade edges */}
-				{canScrollLeft && (
-					<div className="absolute left-0 top-0 bottom-0 w-12 bg-gradient-to-r from-background to-transparent z-[1] pointer-events-none" />
-				)}
-				{canScrollRight && (
-					<div className="absolute right-0 top-0 bottom-0 w-12 bg-gradient-to-l from-background to-transparent z-[1] pointer-events-none" />
-				)}
-
-				{/* Scrollable row */}
-				<div
-					ref={scrollRef}
-					className="my-10 overflow-x-auto overscroll-x-contain scrollbar-thin pb-4 px-5 lg:px-[max(1.25rem,calc((100vw-1200px)/2))]"
-				>
-					<div className="flex gap-6 w-max">
-						{initiatives.map(initiative => (
-							<div
-								key={initiative.title}
-								className="w-[320px] md:w-[360px] shrink-0"
-							>
-								<InitiativeCard href={initiative.url}>
-									<InitiativeCardImage
-										src={initiative.image}
-										alt={initiative.title}
-									/>
-									<InitiativeCardTitle>
-										{initiative.title}
-									</InitiativeCardTitle>
-									<InitiativeCardDescription>
-										{initiative.description}
-									</InitiativeCardDescription>
-								</InitiativeCard>
-							</div>
-						))}
+						<div className="flex gap-6 w-max">
+							{initiatives.map(initiative => (
+								<div
+									key={initiative.title}
+									className="w-[320px] md:w-[360px] shrink-0"
+								>
+									<InitiativeCard href={initiative.url}>
+										<InitiativeCardImage
+											src={initiative.image}
+											alt={initiative.title}
+										/>
+										<InitiativeCardTitle>
+											{initiative.title}
+										</InitiativeCardTitle>
+										<InitiativeCardDescription>
+											{initiative.description}
+										</InitiativeCardDescription>
+									</InitiativeCard>
+								</div>
+							))}
+						</div>
 					</div>
 				</div>
-			</div>
+			</ViewContainer>
 		</section>
 	);
 };
