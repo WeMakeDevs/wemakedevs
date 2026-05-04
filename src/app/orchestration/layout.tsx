@@ -13,6 +13,19 @@ export const metadata: Metadata = {
 		description:
 			"Master the art of automation, get certified, and claim legendary loot. Complete the Kestra Fundamentals course, earn your certification, and win MacBooks, iPads, iPhones, and more!",
 		url: "https://wemakedevs.org/orchestration",
+		images: {
+			url: "/orchestration/opengraph-image.png",
+			width: 1200,
+			height: 630,
+			alt: "The Kestra Orchestration Challenge - Win prizes worth $4,000",
+		},
+	},
+	twitter: {
+		card: "summary_large_image",
+		title: "The Kestra Orchestration Challenge | WeMakeDevs",
+		description:
+			"Learn workflow orchestration, earn an official Kestra certification, and win a MacBook, iPad, iPhone & more worth $4,000.",
+		images: ["/orchestration/opengraph-image.png"],
 	},
 };
 
