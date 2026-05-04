@@ -164,13 +164,15 @@ const HeroSection = () => {
 					transition={{ duration: 0.6, delay: 0.3 }}
 					className="flex flex-col sm:flex-row items-center justify-center gap-4"
 				>
-					<Link
-						href="#quest-steps"
+					<a
+						href="https://forms.gle/veQSZHHVG49firuj9"
+						target="_blank"
+						rel="noopener noreferrer"
 						className="glow-btn inline-flex items-center gap-2"
 					>
 						<Zap size={20} />
-						Start the Quest
-					</Link>
+						Register Now
+					</a>
 					<Link
 						href="#about"
 						className="inline-flex items-center gap-2 px-6 py-4 rounded-xl border border-slate-700 text-slate-300 hover:border-slate-500 hover:text-white transition-all font-medium"

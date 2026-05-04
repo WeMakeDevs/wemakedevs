@@ -38,8 +38,8 @@ const navLinks: navLinksType = [
 		type: "link",
 	},
 	{
-		name: "Start the Quest",
-		url: "https://academy.kestra.io/kestra-fundamentals",
+		name: "Register",
+		url: "https://forms.gle/veQSZHHVG49firuj9",
 		type: "button",
 		openInNewTab: true,
 	},

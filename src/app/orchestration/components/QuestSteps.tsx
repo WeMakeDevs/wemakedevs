@@ -5,43 +5,41 @@ import { motion } from "framer-motion";
 import {
 	AlertTriangle,
 	Award,
+	BookOpen,
 	ChevronRight,
+	ClipboardEdit,
 	ExternalLink,
 	Hash,
-	Linkedin,
-	UserPlus,
 } from "lucide-react";
-import Link from "next/link";
 
 const steps = [
 	{
 		number: 1,
-		title: "Sign Up for the Course",
-		description: "sign-up-step",
-		icon: UserPlus,
+		title: "Register",
+		icon: ClipboardEdit,
 		color: "text-[#00cfb4]",
 		bgColor: "bg-[#00cfb4]/10",
 		borderColor: "border-[#00cfb4]/30",
+		content: "register-step",
 	},
 	{
 		number: 2,
-		title: "Complete the Course & Get Certified",
-		description:
-			"Work through the course material and pass the certification exam at the end. You will earn your Official Kestra Certification.",
-		icon: Award,
+		title: "Sign Up to the Academy",
+		icon: BookOpen,
 		color: "text-purple-400",
 		bgColor: "bg-purple-500/10",
 		borderColor: "border-purple-500/30",
+		content: "academy-step",
 	},
 	{
 		number: 3,
-		title: "Add the Certificate on LinkedIn",
+		title: "Get Certified",
 		description:
-			"Add your Kestra certification to your LinkedIn profile. It is a real credential that shows employers you know orchestration.",
-		icon: Linkedin,
-		color: "text-blue-400",
-		bgColor: "bg-blue-500/10",
-		borderColor: "border-blue-500/30",
+			"Complete the course material and pass the certification exam. You will earn your Official Kestra Certification, a real credential for your profile.",
+		icon: Award,
+		color: "text-orange-400",
+		bgColor: "bg-orange-500/10",
+		borderColor: "border-orange-500/30",
 	},
 	{
 		number: 4,
@@ -49,9 +47,9 @@ const steps = [
 		description:
 			"Post about your certification on social media using #KestraAcademy. That is your entry into the giveaway!",
 		icon: Hash,
-		color: "text-orange-400",
-		bgColor: "bg-orange-500/10",
-		borderColor: "border-orange-500/30",
+		color: "text-blue-400",
+		bgColor: "bg-blue-500/10",
+		borderColor: "border-blue-500/30",
 	},
 ];
 
@@ -157,7 +155,21 @@ const QuestSteps = () => {
 								<h3 className="text-xl md:text-2xl font-bold text-white mb-2">
 									{step.title}
 								</h3>
-								{step.description === "sign-up-step" ? (
+								{step.content === "register-step" ? (
+									<p className="text-slate-400 leading-relaxed">
+										Fill out the{" "}
+										<a
+											href="https://forms.gle/veQSZHHVG49firuj9"
+											target="_blank"
+											rel="noopener noreferrer"
+											className="text-[#00cfb4] font-medium underline underline-offset-2 hover:text-[#00e6c8] transition-colors"
+										>
+											registration form
+										</a>{" "}
+										to enter the challenge. It only takes a
+										minute.
+									</p>
+								) : step.content === "academy-step" ? (
 									<p className="text-slate-400 leading-relaxed">
 										Head to Kestra Academy and{" "}
 										<a
@@ -199,12 +211,12 @@ const QuestSteps = () => {
 					className="text-center mt-12"
 				>
 					<a
-						href="https://academy.kestra.io/kestra-fundamentals"
+						href="https://forms.gle/veQSZHHVG49firuj9"
 						target="_blank"
 						rel="noopener noreferrer"
 						className="glow-btn inline-flex items-center gap-2"
 					>
-						Sign Up on Kestra Academy
+						Register Now
 						<ExternalLink size={18} />
 					</a>
 				</motion.div>
