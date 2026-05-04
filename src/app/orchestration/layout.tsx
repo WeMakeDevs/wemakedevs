@@ -12,29 +12,29 @@ export const metadata: Metadata = {
 		title: "The Kestra Orchestration Challenge | WeMakeDevs",
 		description:
 			"Master the art of automation, get certified, and claim legendary loot. Complete the Kestra Fundamentals course, earn your certification, and win MacBooks, iPads, iPhones, and more!",
-		url: "https://wemakedevs.org/orchestration-challenge",
+		url: "https://wemakedevs.org/orchestration",
 	},
 };
 
 const navLinks: navLinksType = [
 	{
 		name: "About",
-		url: "/orchestration-challenge#about",
+		url: "/orchestration#about",
 		type: "link",
 	},
 	{
 		name: "Prizes",
-		url: "/orchestration-challenge#prizes",
+		url: "/orchestration#prizes",
 		type: "link",
 	},
 	{
 		name: "How to Win",
-		url: "/orchestration-challenge#quest-steps",
+		url: "/orchestration#quest-steps",
 		type: "link",
 	},
 	{
 		name: "FAQ",
-		url: "/orchestration-challenge#faq",
+		url: "/orchestration#faq",
 		type: "link",
 	},
 	{

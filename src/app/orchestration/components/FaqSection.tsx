@@ -8,7 +8,7 @@ import { ChevronDown, HelpCircle } from "lucide-react";
 const faqs = [
 	{
 		question: "Who can join the Orchestration Challenge?",
-		answer: "Everyone! Whether you're a student, a working professional, or just getting started with tech — this challenge is open to all. No prerequisites, no gatekeeping.",
+		answer: "Everyone! Whether you're a student, a working professional, or just getting started with tech — this challenge is open to all. Beginners are absolutely welcome; no prior orchestration experience is needed.",
 	},
 	{
 		question: "How are winners picked?",
@@ -24,7 +24,7 @@ const faqs = [
 	},
 	{
 		question: "Do I need prior experience with orchestration tools?",
-		answer: "Nope. The course starts from the basics and builds up. If you know what an API is and have written some code before, you're good to go.",
+		answer: "Not at all — beginners are welcome! The course starts from the basics and builds up. If you know what an API is and have written some code before, you're good to go. Even if you haven't, you'll pick it up.",
 	},
 	{
 		question: "What do I need to post on LinkedIn exactly?",
@@ -32,7 +32,7 @@ const faqs = [
 	},
 	{
 		question: "When does this challenge end?",
-		answer: "The challenge runs until we announce otherwise. Since winners are picked on a rolling basis, the earlier you complete it, the better. Follow @WeMakeDevs on socials for updates.",
+		answer: "The challenge runs from May 4 to May 17, 2026. Since winners are picked on a rolling basis, the earlier you complete it, the better. Follow @WeMakeDevs on socials for updates.",
 	},
 	{
 		question: "Can I participate from any country?",

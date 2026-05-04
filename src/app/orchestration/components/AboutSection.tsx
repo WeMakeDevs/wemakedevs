@@ -84,7 +84,11 @@ const AboutSection = () => {
 						<span className="text-[#00cfb4] font-medium">
 							Kestra
 						</span>{" "}
-						makes it seamless.
+						makes it seamless. New to this?{" "}
+						<span className="text-white font-medium">
+							Beginners are absolutely welcome
+						</span>
+						&mdash; the course starts from zero.
 					</p>
 				</motion.div>
 

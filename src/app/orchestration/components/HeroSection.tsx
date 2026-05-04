@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ChevronDown, Sparkles, Zap } from "lucide-react";
+import { Calendar, ChevronDown, Sparkles, Users, Zap } from "lucide-react";
 import Link from "next/link";
 
 const FloatingParticles = () => (
@@ -37,11 +37,28 @@ const HeroSection = () => {
 					initial={{ opacity: 0, y: 20 }}
 					animate={{ opacity: 1, y: 0 }}
 					transition={{ duration: 0.5 }}
-					className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[#00cfb4]/30 bg-[#00cfb4]/10 text-[#00cfb4] text-sm font-medium mb-8"
+					className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[#00cfb4]/30 bg-[#00cfb4]/10 text-[#00cfb4] text-sm font-medium mb-4"
 				>
 					<Sparkles size={16} />
 					<span>Side Quest Available</span>
 					<Zap size={16} />
+				</motion.div>
+
+				{/* Date badge */}
+				<motion.div
+					initial={{ opacity: 0, y: 20 }}
+					animate={{ opacity: 1, y: 0 }}
+					transition={{ duration: 0.5, delay: 0.05 }}
+					className="flex flex-wrap items-center justify-center gap-3 mb-8"
+				>
+					<div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-orange-500/30 bg-orange-500/10 text-orange-400 text-sm font-medium">
+						<Calendar size={14} />
+						<span>May 4 – 17, 2026</span>
+					</div>
+					<div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-purple-500/30 bg-purple-500/10 text-purple-400 text-sm font-medium">
+						<Users size={14} />
+						<span>Beginners Welcome</span>
+					</div>
 				</motion.div>
 
 				{/* Title */}
