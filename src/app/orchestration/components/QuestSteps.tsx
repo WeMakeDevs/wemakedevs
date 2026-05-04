@@ -3,35 +3,36 @@
 import { ViewContainer } from "@/components/ui/view-container";
 import { motion } from "framer-motion";
 import {
-	AtSign,
+	AlertTriangle,
 	Award,
-	BookOpen,
 	ChevronRight,
 	ExternalLink,
+	Linkedin,
 	Share2,
+	UserPlus,
 } from "lucide-react";
 import Link from "next/link";
 
 const steps = [
 	{
 		number: 1,
-		title: "Complete the Course",
+		title: "Sign Up for the Course",
 		description:
-			"Head to Kestra Academy and complete the Kestra Fundamentals course. It's 100% free and self-paced.",
-		icon: BookOpen,
+			"Head to Kestra Academy and sign up for the Kestra Fundamentals course. It's 100% free, self-paced, and beginner-friendly.",
+		icon: UserPlus,
 		color: "text-[#00cfb4]",
 		bgColor: "bg-[#00cfb4]/10",
 		borderColor: "border-[#00cfb4]/30",
-		link: {
-			label: "Go to Kestra Academy",
+		cta: {
+			label: "Sign Up on Kestra Academy",
 			url: "https://academy.kestra.io/kestra-fundamentals",
 		},
 	},
 	{
 		number: 2,
-		title: "Pass the Exam",
+		title: "Complete the Course & Get Certified",
 		description:
-			"Take the certification exam at the end of the course. Pass it and earn your Official Kestra Certification.",
+			"Work through the course material and pass the certification exam at the end. You'll earn your Official Kestra Certification.",
 		icon: Award,
 		color: "text-purple-400",
 		bgColor: "bg-purple-500/10",
@@ -39,23 +40,33 @@ const steps = [
 	},
 	{
 		number: 3,
-		title: "Post on LinkedIn",
+		title: "Add the Certificate on LinkedIn",
 		description:
-			"Share your shiny new certificate on LinkedIn. Show the world you've leveled up your orchestration skills.",
+			"Add your Kestra certification to your LinkedIn profile. It's a real credential that shows employers you know orchestration.",
+		icon: Linkedin,
+		color: "text-blue-400",
+		bgColor: "bg-blue-500/10",
+		borderColor: "border-blue-500/30",
+	},
+	{
+		number: 4,
+		title: "Share a Post & Tag Us",
+		description:
+			"Write a LinkedIn post about your experience and tag both @WeMakeDevs and @Kestra. That's your entry into the giveaway!",
 		icon: Share2,
 		color: "text-orange-400",
 		bgColor: "bg-orange-500/10",
 		borderColor: "border-orange-500/30",
-	},
-	{
-		number: 4,
-		title: "Tag & Enter",
-		description:
-			"Tag @WeMakeDevs and @Kestra in your LinkedIn post to officially enter the giveaway. That's it!",
-		icon: AtSign,
-		color: "text-blue-400",
-		bgColor: "bg-blue-500/10",
-		borderColor: "border-blue-500/30",
+		linkedIns: [
+			{
+				label: "WeMakeDevs on LinkedIn",
+				url: "https://linkedin.com/company/WeMakeDevs",
+			},
+			{
+				label: "Kestra on LinkedIn",
+				url: "https://linkedin.com/company/Kestra",
+			},
+		],
 	},
 ];
 
@@ -85,7 +96,7 @@ const QuestSteps = () => {
 					whileInView={{ opacity: 1, y: 0 }}
 					viewport={{ once: true, margin: "-100px" }}
 					transition={{ duration: 0.5 }}
-					className="text-center mb-16"
+					className="text-center mb-8"
 				>
 					<div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-slate-700 bg-slate-800/50 text-slate-400 text-xs font-semibold uppercase tracking-wider mb-6">
 						The Quest Steps
@@ -97,6 +108,34 @@ const QuestSteps = () => {
 						Four steps. That&apos;s all it takes to complete this
 						quest and enter the loot drop.
 					</p>
+				</motion.div>
+
+				{/* Urgency callout */}
+				<motion.div
+					initial={{ opacity: 0, y: 15 }}
+					whileInView={{ opacity: 1, y: 0 }}
+					viewport={{ once: true, margin: "-50px" }}
+					transition={{ duration: 0.5, delay: 0.1 }}
+					className="max-w-3xl mx-auto mb-10"
+				>
+					<div className="flex items-start gap-4 p-5 rounded-xl bg-orange-500/5 border border-orange-500/20">
+						<AlertTriangle
+							className="text-orange-400 shrink-0 mt-0.5"
+							size={22}
+						/>
+						<div>
+							<p className="text-white font-semibold mb-1">
+								First come, first served!
+							</p>
+							<p className="text-slate-400 text-sm leading-relaxed">
+								We pick winners at random on a rolling basis.
+								The sooner you finish the course and post on
+								LinkedIn, the more draws you&apos;re in for.
+								Don&apos;t sleep on it — complete the course
+								ASAP!
+							</p>
+						</div>
+					</div>
 				</motion.div>
 
 				{/* Steps */}
@@ -137,16 +176,37 @@ const QuestSteps = () => {
 								<p className="text-slate-400 leading-relaxed mb-3">
 									{step.description}
 								</p>
-								{step.link && (
+
+								{/* CTA button for step 1 */}
+								{step.cta && (
 									<Link
-										href={step.link.url}
+										href={step.cta.url}
 										target="_blank"
 										rel="noopener noreferrer"
-										className={`inline-flex items-center gap-2 text-sm font-medium ${step.color} hover:underline`}
+										className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-[#00cfb4]/10 border border-[#00cfb4]/30 text-[#00cfb4] text-sm font-semibold hover:bg-[#00cfb4]/20 transition-colors"
 									>
-										{step.link.label}
+										{step.cta.label}
 										<ExternalLink size={14} />
 									</Link>
+								)}
+
+								{/* LinkedIn links for step 4 */}
+								{step.linkedIns && (
+									<div className="flex flex-wrap gap-3">
+										{step.linkedIns.map(li => (
+											<Link
+												key={li.url}
+												href={li.url}
+												target="_blank"
+												rel="noopener noreferrer"
+												className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-medium hover:bg-blue-500/20 transition-colors"
+											>
+												<Linkedin size={14} />
+												{li.label}
+												<ExternalLink size={12} />
+											</Link>
+										))}
+									</div>
 								)}
 							</div>
 

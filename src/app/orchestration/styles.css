@@ -166,3 +166,50 @@
 	animation-delay: 0.5s;
 	animation-duration: 5s;
 }
+
+/* Navbar overrides for dark page — keep nav visible before and after scroll */
+.orchestration-challenge #nav > div:first-child {
+	background: rgba(10, 10, 26, 0.85);
+	backdrop-filter: blur(12px);
+	-webkit-backdrop-filter: blur(12px);
+	border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* Override the white bg that kicks in on scroll */
+.orchestration-challenge #nav > div:first-child.bg-white {
+	background: rgba(10, 10, 26, 0.95) !important;
+	box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4) !important;
+}
+
+/* Keep text white on scroll instead of switching to dark */
+.orchestration-challenge #nav > div:first-child.text-slate-900 {
+	color: #f1f5f9 !important;
+}
+
+.orchestration-challenge #nav > div:first-child .text-slate-900 {
+	color: #f1f5f9 !important;
+}
+
+/* Mobile navbar override */
+.orchestration-challenge #nav > div:nth-child(2) {
+	background: rgba(10, 10, 26, 0.95) !important;
+	backdrop-filter: blur(12px);
+	-webkit-backdrop-filter: blur(12px);
+	box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4) !important;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* Mobile nav text */
+.orchestration-challenge #nav > div:nth-child(2) span {
+	color: #f1f5f9 !important;
+}
+
+.orchestration-challenge #nav > div:nth-child(2) a:not([class*="bg-primary"]) {
+	color: #f1f5f9 !important;
+}
+
+/* Mobile hamburger icon */
+.orchestration-challenge #nav > div:nth-child(2) button {
+	color: #f1f5f9;
+	border-color: rgba(255, 255, 255, 0.15);
+}

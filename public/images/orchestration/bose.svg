@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none">
+  <rect x="35" y="55" width="130" height="90" rx="20" fill="#1a1a2e" stroke="#3b82f6" stroke-width="2"/>
+  <circle cx="75" cy="100" r="25" fill="#0d0d1a" stroke="#3b82f6" stroke-width="1.5"/>
+  <circle cx="75" cy="100" r="15" stroke="#3b82f6" stroke-width="0.5" opacity="0.5"/>
+  <circle cx="75" cy="100" r="8" fill="#3b82f6" opacity="0.2"/>
+  <circle cx="125" cy="100" r="25" fill="#0d0d1a" stroke="#3b82f6" stroke-width="1.5"/>
+  <circle cx="125" cy="100" r="15" stroke="#3b82f6" stroke-width="0.5" opacity="0.5"/>
+  <circle cx="125" cy="100" r="8" fill="#3b82f6" opacity="0.2"/>
+  <!-- Sound waves -->
+  <path d="M155 85 Q165 100 155 115" stroke="#3b82f6" stroke-width="1" opacity="0.3" fill="none"/>
+  <path d="M160 78 Q175 100 160 122" stroke="#3b82f6" stroke-width="1" opacity="0.2" fill="none"/>
+  <path d="M45 85 Q35 100 45 115" stroke="#3b82f6" stroke-width="1" opacity="0.3" fill="none"/>
+  <path d="M40 78 Q25 100 40 122" stroke="#3b82f6" stroke-width="1" opacity="0.2" fill="none"/>
+</svg>

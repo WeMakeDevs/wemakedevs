@@ -4,7 +4,6 @@ import HeroSection from "./components/HeroSection";
 import PrizesSection from "./components/PrizesSection";
 import QuestProgress from "./components/QuestProgress";
 import QuestSteps from "./components/QuestSteps";
-import SocialProof from "./components/SocialProof";
 
 const OrchestrationChallengePage = () => {
 	return (
@@ -13,7 +12,6 @@ const OrchestrationChallengePage = () => {
 			<HeroSection />
 			<AboutSection />
 			<PrizesSection />
-			<SocialProof />
 			<QuestSteps />
 			<FaqSection />
 		</>

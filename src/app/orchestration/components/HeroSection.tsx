@@ -40,7 +40,7 @@ const HeroSection = () => {
 					className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[#00cfb4]/30 bg-[#00cfb4]/10 text-[#00cfb4] text-sm font-medium mb-4"
 				>
 					<Sparkles size={16} />
-					<span>Side Quest Available</span>
+					<span>No Pre-requisites</span>
 					<Zap size={16} />
 				</motion.div>
 

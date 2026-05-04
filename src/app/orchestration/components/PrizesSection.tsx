@@ -2,44 +2,53 @@
 
 import { ViewContainer } from "@/components/ui/view-container";
 import { motion } from "framer-motion";
-import { Gift, Laptop, Smartphone, Speaker, Tablet } from "lucide-react";
+import { Gift } from "lucide-react";
+import Image from "next/image";
 
 const prizes = [
 	{
 		name: "MacBook Neo",
-		icon: Laptop,
+		image: "/images/orchestration/macbook.svg",
 		gradient: "from-[#00cfb4] to-emerald-600",
 		glowColor: "rgba(0, 207, 180, 0.3)",
+		borderGlow: "hover:border-[#00cfb4]/40",
 		description: "The ultimate dev machine for the ultimate orchestrator.",
 		tier: "Legendary",
 		tierColor: "text-amber-400",
+		tierBg: "bg-amber-400/10 border-amber-400/20",
 	},
 	{
 		name: "iPad Pro",
-		icon: Tablet,
+		image: "/images/orchestration/ipad.svg",
 		gradient: "from-purple-500 to-indigo-600",
 		glowColor: "rgba(168, 85, 247, 0.3)",
+		borderGlow: "hover:border-purple-500/40",
 		description: "Sketch your workflows, review your pipelines on the go.",
 		tier: "Epic",
 		tierColor: "text-purple-400",
+		tierBg: "bg-purple-400/10 border-purple-400/20",
 	},
 	{
 		name: "iPhone 17e",
-		icon: Smartphone,
+		image: "/images/orchestration/iphone.svg",
 		gradient: "from-orange-500 to-red-500",
 		glowColor: "rgba(249, 115, 22, 0.3)",
+		borderGlow: "hover:border-orange-500/40",
 		description: "Stay connected to your orchestration dashboards 24/7.",
 		tier: "Rare",
 		tierColor: "text-orange-400",
+		tierBg: "bg-orange-400/10 border-orange-400/20",
 	},
 	{
 		name: "Bose Speakers",
-		icon: Speaker,
+		image: "/images/orchestration/bose.svg",
 		gradient: "from-blue-500 to-cyan-500",
 		glowColor: "rgba(59, 130, 246, 0.3)",
+		borderGlow: "hover:border-blue-500/40",
 		description: "Code to your favorite beats with premium sound quality.",
 		tier: "Rare",
 		tierColor: "text-blue-400",
+		tierBg: "bg-blue-400/10 border-blue-400/20",
 	},
 ];
 
@@ -108,23 +117,27 @@ const PrizesSection = () => {
 								y: -8,
 								transition: { duration: 0.2 },
 							}}
-							className="glow-card p-6 text-center group cursor-default"
-							style={{
-								boxShadow: `0 0 0px ${prize.glowColor}`,
-							}}
+							className={`glow-card p-6 text-center group cursor-default transition-colors ${prize.borderGlow}`}
 						>
 							{/* Tier badge */}
 							<div
-								className={`text-xs font-bold uppercase tracking-wider ${prize.tierColor} mb-4`}
+								className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider ${prize.tierColor} ${prize.tierBg} border mb-4`}
 							>
 								{prize.tier}
 							</div>
 
-							{/* Icon */}
-							<div
-								className={`w-20 h-20 rounded-2xl bg-gradient-to-br ${prize.gradient} flex items-center justify-center mx-auto mb-5 group-hover:scale-110 transition-transform duration-300`}
-							>
-								<prize.icon className="text-white" size={36} />
+							{/* Product image */}
+							<div className="relative w-full aspect-square mb-5 flex items-center justify-center">
+								<div
+									className={`absolute inset-0 bg-gradient-to-br ${prize.gradient} opacity-5 rounded-2xl group-hover:opacity-10 transition-opacity duration-300`}
+								/>
+								<Image
+									src={prize.image}
+									alt={prize.name}
+									width={200}
+									height={200}
+									className="relative z-10 object-contain w-4/5 h-4/5 drop-shadow-2xl group-hover:scale-110 transition-transform duration-300"
+								/>
 							</div>
 
 							{/* Name */}
