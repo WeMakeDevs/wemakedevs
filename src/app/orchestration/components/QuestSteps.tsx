@@ -89,7 +89,7 @@ const QuestSteps = () => {
 					<h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4">
 						How to Win
 					</h2>
-					<p className="text-lg text-slate-400 max-w-xl mx-auto">
+					<p className="text-xl text-slate-400 max-w-xl mx-auto">
 						Four steps. That&apos;s all it takes to complete this
 						quest and enter the loot drop.
 					</p>
@@ -112,7 +112,7 @@ const QuestSteps = () => {
 							<p className="text-white font-semibold mb-1">
 								First come, first served!
 							</p>
-							<p className="text-slate-400 text-sm leading-relaxed">
+							<p className="text-slate-400 text-base leading-relaxed">
 								We pick winners at random on a rolling basis.
 								The sooner you finish the course and post on
 								socials, the more draws you&apos;re in for.
@@ -154,7 +154,7 @@ const QuestSteps = () => {
 
 							{/* Content */}
 							<div className="flex-1 min-w-0">
-								<h3 className="text-lg md:text-xl font-bold text-white mb-2">
+								<h3 className="text-xl md:text-2xl font-bold text-white mb-2">
 									{step.title}
 								</h3>
 								{step.description === "sign-up-step" ? (

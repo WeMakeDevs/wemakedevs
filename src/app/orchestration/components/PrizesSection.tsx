@@ -92,7 +92,7 @@ const PrizesSection = () => {
 							Prizes worth $4,000
 						</span>
 					</h2>
-					<p className="text-lg text-slate-400 max-w-xl mx-auto">
+					<p className="text-xl text-slate-400 max-w-xl mx-auto">
 						Complete the quest and you could walk away with one of
 						these prizes.
 					</p>
@@ -103,7 +103,7 @@ const PrizesSection = () => {
 						whileInView={{ opacity: 1, scale: 1 }}
 						viewport={{ once: true }}
 						transition={{ duration: 0.4, delay: 0.2 }}
-						className="mt-6 inline-flex items-center gap-2 px-4 py-2 rounded-full rolling-badge text-white text-sm font-bold"
+						className="mt-6 inline-flex items-center gap-2 px-4 py-2 rounded-full rolling-badge text-white text-base font-bold"
 					>
 						🎲 Winners Picked on a Rolling Basis
 					</motion.div>
@@ -152,7 +152,7 @@ const PrizesSection = () => {
 							</h3>
 
 							{/* Description */}
-							<p className="text-sm text-slate-400 leading-relaxed">
+							<p className="text-base text-slate-400 leading-relaxed">
 								{prize.description}
 							</p>
 						</motion.div>

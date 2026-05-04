@@ -105,11 +105,11 @@ const HeroSection = () => {
 					transition={{ duration: 0.5 }}
 					className="flex flex-wrap items-center justify-center gap-3 mb-8"
 				>
-					<div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-orange-500/30 bg-orange-500/10 text-orange-400 text-sm font-medium">
+					<div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-orange-500/30 bg-orange-500/10 text-orange-400 text-base font-medium">
 						<Calendar size={14} />
 						<span>May 4 – 17, 2026</span>
 					</div>
-					<div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-purple-500/30 bg-purple-500/10 text-purple-400 text-sm font-medium">
+					<div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-purple-500/30 bg-purple-500/10 text-purple-400 text-base font-medium">
 						<Users size={14} />
 						<span>Beginners Welcome</span>
 					</div>
@@ -136,7 +136,7 @@ const HeroSection = () => {
 					initial={{ opacity: 0, y: 20 }}
 					animate={{ opacity: 1, y: 0 }}
 					transition={{ duration: 0.6, delay: 0.2 }}
-					className="text-lg sm:text-xl md:text-2xl text-slate-300 max-w-2xl mx-auto mb-4 leading-relaxed"
+					className="text-xl sm:text-2xl md:text-3xl text-slate-300 max-w-2xl mx-auto mb-4 leading-relaxed"
 				>
 					Learn workflow orchestration, earn an{" "}
 					<span className="text-[#00cfb4] font-semibold">

@@ -76,7 +76,7 @@ const AboutSection = () => {
 					<h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6">
 						Why Workflow Orchestration?
 					</h2>
-					<p className="text-lg text-slate-400 max-w-2xl mx-auto leading-relaxed">
+					<p className="text-xl text-slate-400 max-w-2xl mx-auto leading-relaxed">
 						In modern dev, writing code is the easy part. The real
 						challenge? Managing the flow between services, APIs, and
 						data pipelines. That&apos;s where orchestration comes
@@ -130,7 +130,7 @@ const AboutSection = () => {
 					whileInView={{ opacity: 1 }}
 					viewport={{ once: true }}
 					transition={{ duration: 0.5, delay: 0.3 }}
-					className="text-center text-slate-500 mt-12 text-sm"
+					className="text-center text-slate-500 mt-12 text-base"
 				>
 					This isn&apos;t a sales pitch. It&apos;s a skill that makes
 					you a better engineer.

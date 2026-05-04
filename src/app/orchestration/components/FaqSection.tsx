@@ -60,7 +60,7 @@ const FaqSection = () => {
 					<h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4">
 						Frequently Asked Questions
 					</h2>
-					<p className="text-lg text-slate-400 max-w-xl mx-auto">
+					<p className="text-xl text-slate-400 max-w-xl mx-auto">
 						Everything you need to know before starting your quest.
 					</p>
 				</motion.div>
@@ -85,7 +85,7 @@ const FaqSection = () => {
 								className="glow-card overflow-hidden group"
 							>
 								<Accordion.Trigger className="flex items-center justify-between w-full p-5 md:p-6 text-left hover:bg-[#161636] transition-colors">
-									<span className="text-base md:text-lg font-semibold text-white pr-4">
+									<span className="text-lg md:text-xl font-semibold text-white pr-4">
 										{faq.question}
 									</span>
 									<ChevronDown
