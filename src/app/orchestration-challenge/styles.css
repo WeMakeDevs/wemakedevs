@@ -1,0 +1,168 @@
+/* Orchestration Challenge - Gamified Theme Styles */
+
+.orchestration-challenge {
+	--kestra-teal: #00cfb4;
+	--kestra-teal-dim: #00cfb450;
+	--wmd-orange: #f97316;
+	--wmd-blue: #3b82f6;
+	--neon-purple: #a855f7;
+	--neon-pink: #ec4899;
+	--deep-bg: #0a0a1a;
+	--card-bg: #111128;
+	--card-border: #1e1e3a;
+}
+
+/* Glowing text */
+.glow-text {
+	text-shadow: 0 0 20px var(--kestra-teal-dim), 0 0 40px
+		var(--kestra-teal-dim);
+}
+
+.glow-text-orange {
+	text-shadow: 0 0 20px rgba(249, 115, 22, 0.4), 0 0 40px
+		rgba(249, 115, 22, 0.2);
+}
+
+/* Glowing border card */
+.glow-card {
+	position: relative;
+	background: var(--card-bg);
+	border: 1px solid var(--card-border);
+	border-radius: 1rem;
+	overflow: hidden;
+}
+
+.glow-card::before {
+	content: "";
+	position: absolute;
+	inset: -1px;
+	border-radius: inherit;
+	padding: 1px;
+	background: linear-gradient(
+		135deg,
+		var(--kestra-teal),
+		var(--neon-purple),
+		var(--wmd-orange)
+	);
+	-webkit-mask: linear-gradient(#fff 0 0) content-box,
+		linear-gradient(#fff 0 0);
+	-webkit-mask-composite: xor;
+	mask-composite: exclude;
+	opacity: 0;
+	transition: opacity 0.4s ease;
+}
+
+.glow-card:hover::before {
+	opacity: 1;
+}
+
+/* Glowing CTA button */
+.glow-btn {
+	position: relative;
+	background: linear-gradient(135deg, var(--kestra-teal), #00a896);
+	color: #0a0a1a;
+	font-weight: 700;
+	border-radius: 0.75rem;
+	padding: 1rem 2.5rem;
+	font-size: 1.125rem;
+	transition: all 0.3s ease;
+	box-shadow: 0 0 20px rgba(0, 207, 180, 0.3), 0 0 60px rgba(0, 207, 180, 0.1);
+}
+
+.glow-btn:hover {
+	box-shadow: 0 0 30px rgba(0, 207, 180, 0.5), 0 0 80px rgba(0, 207, 180, 0.2);
+	transform: translateY(-2px);
+}
+
+/* Progress bar glow */
+.progress-bar-glow {
+	box-shadow: 0 0 10px var(--kestra-teal-dim), 0 0 20px var(--kestra-teal-dim);
+}
+
+/* Rolling badge */
+.rolling-badge {
+	background: linear-gradient(135deg, var(--wmd-orange), var(--neon-pink));
+	animation: badge-pulse 2s ease-in-out infinite;
+}
+
+@keyframes badge-pulse {
+	0%,
+	100% {
+		box-shadow: 0 0 10px rgba(249, 115, 22, 0.3);
+	}
+	50% {
+		box-shadow: 0 0 20px rgba(249, 115, 22, 0.6);
+	}
+}
+
+/* Grid background pattern */
+.grid-bg {
+	background-image: linear-gradient(
+			rgba(0, 207, 180, 0.03) 1px,
+			transparent 1px
+		), linear-gradient(90deg, rgba(0, 207, 180, 0.03) 1px, transparent 1px);
+	background-size: 60px 60px;
+}
+
+/* Marquee animation */
+@keyframes marquee {
+	0% {
+		transform: translateX(0);
+	}
+	100% {
+		transform: translateX(-50%);
+	}
+}
+
+.animate-marquee {
+	animation: marquee 30s linear infinite;
+}
+
+/* Step connector line */
+.step-connector {
+	position: relative;
+}
+
+.step-connector::after {
+	content: "";
+	position: absolute;
+	left: 50%;
+	bottom: -2rem;
+	width: 2px;
+	height: 2rem;
+	background: linear-gradient(to bottom, var(--kestra-teal), transparent);
+}
+
+/* Floating particles */
+@keyframes float {
+	0%,
+	100% {
+		transform: translateY(0) rotate(0deg);
+		opacity: 0.3;
+	}
+	50% {
+		transform: translateY(-20px) rotate(180deg);
+		opacity: 0.6;
+	}
+}
+
+.particle {
+	animation: float 6s ease-in-out infinite;
+}
+
+.particle:nth-child(2) {
+	animation-delay: 1s;
+	animation-duration: 8s;
+}
+.particle:nth-child(3) {
+	animation-delay: 2s;
+	animation-duration: 7s;
+}
+.particle:nth-child(4) {
+	animation-delay: 3s;
+	animation-duration: 9s;
+}
+.particle:nth-child(5) {
+	animation-delay: 0.5s;
+	animation-duration: 5s;
+}
