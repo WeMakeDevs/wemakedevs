@@ -48,7 +48,7 @@ const HackathonRules = async () => {
 							</strong>{" "}
 							You must ⭐ star the{" "}
 							<Link
-								href="https://github.com/withcoral/coral"
+								href="https://git.new/coral-wemakedevs-may26"
 								className="text-amber-400 hover:text-amber-300 underline"
 								target="_blank"
 								rel="noopener noreferrer"

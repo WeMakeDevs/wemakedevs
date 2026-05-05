@@ -54,7 +54,7 @@ const HackathonRegister = async () => {
 								<span>
 									⭐ Star the{" "}
 									<Link
-										href="https://github.com/withcoral/coral"
+										href="https://git.new/coral-wemakedevs-may26"
 										target="_blank"
 										rel="noopener noreferrer"
 										className="text-amber-400 underline hover:text-amber-300"

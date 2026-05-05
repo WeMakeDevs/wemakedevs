@@ -88,7 +88,7 @@ const HackathonResources = async () => {
 						</li>
 						<li>
 							<Link
-								href="https://github.com/withcoral/coral/blob/main/README.md"
+								href="https://git.new/coral-wemakedevs-may26/blob/main/README.md"
 								className="text-amber-400 underline hover:no-underline hover:text-amber-300"
 								target="_blank"
 								rel="noopener noreferrer"
@@ -99,7 +99,7 @@ const HackathonResources = async () => {
 						</li>
 						<li>
 							<Link
-								href="https://github.com/withcoral/coral"
+								href="https://git.new/coral-wemakedevs-may26"
 								className="text-amber-400 underline hover:no-underline hover:text-amber-300"
 								target="_blank"
 								rel="noopener noreferrer"

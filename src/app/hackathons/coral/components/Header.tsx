@@ -113,7 +113,7 @@ const CoralHeader = ({
 								</Link>
 							)}
 							<Link
-								href="https://github.com/withcoral/coral"
+								href="https://git.new/coral-wemakedevs-may26"
 								target="_blank"
 								rel="noopener noreferrer"
 								className="mt-4 md:mt-6 inline-flex items-center gap-2 px-6 py-3 rounded-lg border border-slate-600 bg-slate-800/50 text-slate-300 tracking-wide hover:bg-slate-700/50 hover:border-slate-500 transition-all"

@@ -465,7 +465,7 @@ const HeroSection = ({ description, startDate, endDate, prize, showDate = true, 
 						</Link>
 					)}
 					<Link
-						href="https://github.com/withcoral/coral"
+						href="https://git.new/coral-wemakedevs-may26"
 						target="_blank"
 						rel="noopener noreferrer"
 						className="px-7 py-3.5 rounded-xl border border-[#586e75]/40 text-[#93a1a1] font-semibold hover:border-[#d4af37]/40 hover:text-[#d4af37] transition-all duration-300 flex items-center gap-2"

@@ -77,7 +77,7 @@ const HackathonPage = () => {
 								<span className="text-[#586e75] text-base">Data Retrieval Layer for Agents</span>
 							</div>
 							<Link
-								href="https://github.com/withcoral/coral"
+								href="https://git.new/coral-wemakedevs-may26"
 								target="_blank"
 								rel="noopener noreferrer"
 								className="px-5 py-2.5 rounded-xl border border-[#d4af37]/20 flex gap-2 items-center hover:bg-[#d4af37]/5 transition-colors text-[#d4af37] font-medium text-sm"

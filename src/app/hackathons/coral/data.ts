@@ -33,7 +33,7 @@ const DATA = {
 						"Star the Coral repo + join Discord and post about participation tagging Coral",
 					],
 					links: {
-						github: "https://github.com/withcoral/coral",
+						github: "https://git.new/coral-wemakedevs-may26",
 					},
 				},
 			},
@@ -67,7 +67,7 @@ const navLinks = [
 const faqs: FaqType[] = [
 	{
 		question: "How do I register for the hackathon?",
-		answer: "Click the <a href='https://forms.gle/dxBPLK17A8dXwp64A' target='_blank' rel='noopener noreferrer' class='text-amber-400 underline hover:text-amber-300'>Register Now</a> button to sign up. You must also ⭐ star the <a href='https://github.com/withcoral/coral' target='_blank' rel='noopener noreferrer' class='text-amber-400 underline hover:text-amber-300'>Coral GitHub repo</a> and join the <a href='https://withcoral.com/discord' target='_blank' rel='noopener noreferrer' class='text-amber-400 underline hover:text-amber-300'>Coral Discord</a> to be eligible.",
+		answer: "Click the <a href='https://forms.gle/dxBPLK17A8dXwp64A' target='_blank' rel='noopener noreferrer' class='text-amber-400 underline hover:text-amber-300'>Register Now</a> button to sign up. You must also ⭐ star the <a href='https://git.new/coral-wemakedevs-may26' target='_blank' rel='noopener noreferrer' class='text-amber-400 underline hover:text-amber-300'>Coral GitHub repo</a> and join the <a href='https://withcoral.com/discord' target='_blank' rel='noopener noreferrer' class='text-amber-400 underline hover:text-amber-300'>Coral Discord</a> to be eligible.",
 	},
 	{
 		question: "What is Coral?",
@@ -99,7 +99,7 @@ const faqs: FaqType[] = [
 	},
 	{
 		question: "What are the entry requirements?",
-		answer: "Two things: (1) ⭐ Star the <a href='https://github.com/withcoral/coral' target='_blank' rel='noopener noreferrer' class='text-amber-400 underline hover:text-amber-300'>Coral GitHub repo</a>, and (2) Join the <a href='https://withcoral.com/discord' target='_blank' rel='noopener noreferrer' class='text-amber-400 underline hover:text-amber-300'>Coral Discord</a>. Then register through the hackathon page.",
+		answer: "Two things: (1) ⭐ Star the <a href='https://git.new/coral-wemakedevs-may26' target='_blank' rel='noopener noreferrer' class='text-amber-400 underline hover:text-amber-300'>Coral GitHub repo</a>, and (2) Join the <a href='https://withcoral.com/discord' target='_blank' rel='noopener noreferrer' class='text-amber-400 underline hover:text-amber-300'>Coral Discord</a>. Then register through the hackathon page.",
 	},
 ];
 
