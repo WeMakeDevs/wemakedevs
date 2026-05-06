@@ -183,7 +183,7 @@ const PrizesShowcase = () => {
 									plundered.
 								</>
 							),
-							reward: "🏆 Best 50 showcases → Claude Max 5x 1-month vouchers",
+							reward: "🏆 Best 50 showcases → Claude Max 5x 1-month vouchers + featured on Kunal's YouTube channel (860k+ subscribers)",
 							link: null,
 						},
 						{

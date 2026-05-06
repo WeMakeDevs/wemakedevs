@@ -2,6 +2,7 @@ import Faq from "@/components/Faq";
 import { HackathonNav } from "@/components/hackathon-content";
 import { ViewContainer } from "@/components/ui/view-container";
 import { ArrowUpRight } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 import AboutSection from "./components/AboutSection";
 import HeroSection from "./components/HeroSection";
@@ -9,6 +10,7 @@ import PrizesShowcase from "./components/PrizesShowcase";
 import TracksSection from "./components/TracksSection";
 import WaveDivider from "./components/WaveDivider";
 import { DATA, faqs, navLinks } from "./data";
+import { images } from "./images";
 
 const HackathonPage = () => {
 	return (
@@ -71,10 +73,13 @@ const HackathonPage = () => {
 					<div className="parchment-bg rounded-2xl border border-[#d4af37]/10 overflow-hidden">
 						<div className="flex items-center justify-between p-6 md:p-8 border-b border-[#d4af37]/8 flex-col md:flex-row gap-6">
 							<div className="flex items-center gap-4">
-								<div className="px-5 py-2.5 rounded-xl bg-gradient-to-r from-[#d4af37]/20 to-[#b8960c]/20 border border-[#d4af37]/20">
-									<span className="text-xl font-bold text-[#d4af37]">
-										🪸 Coral
-									</span>
+								<div className="px-4 py-3 rounded-xl bg-gradient-to-r from-[#d4af37]/15 to-[#b8960c]/15 border border-[#d4af37]/20 flex items-center">
+									<Image
+										src={images.coralLogo}
+										alt="Coral"
+										className="h-8 md:h-10 w-auto object-contain"
+										priority
+									/>
 								</div>
 								<span className="text-[#586e75] text-base">
 									Open-source query layer for agents
