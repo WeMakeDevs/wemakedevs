@@ -130,29 +130,6 @@ const PrizesShowcase = () => {
 					</div>
 				</motion.div>
 
-				{/* Social Sharing */}
-				<motion.div
-					initial={{ opacity: 0, y: 20 }}
-					whileInView={{ opacity: 1, y: 0 }}
-					viewport={{ once: true, margin: "-60px" }}
-					transition={{ duration: 0.5 }}
-					className="parchment-bg rounded-2xl border border-[#d4af37]/10 p-8 mb-8"
-				>
-					<div className="flex items-center gap-3 mb-4">
-						<Gift className="w-6 h-6 text-[#d4af37]" />
-						<h3 className="text-xl font-bold text-[#fdf6e3]">
-							Early Bird Swag: Top 10 Social Sharers
-						</h3>
-					</div>
-					<p className="text-[#93a1a1] mb-4">
-						Register and share on social media (LinkedIn / X)
-						tagging Coral.
-					</p>
-					<div className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-[#d4af37]/5 border border-[#d4af37]/10 text-[#d4af37] font-semibold text-sm">
-						<Gift size={16} /> Top 10 Posts → Swag Box 📦
-					</div>
-				</motion.div>
-
 				{/* Special Bounties */}
 				<motion.div
 					id="special-bounties"
@@ -173,6 +150,22 @@ const PrizesShowcase = () => {
 
 				<div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
 					{[
+						{
+							icon: Gift,
+							color: "#d4af37",
+							emoji: "🎁",
+							title: "Early Bird Swag: Top 10 Social Sharers",
+							desc: (
+								<>
+									Register early and share on social media
+									(LinkedIn / X) tagging Coral. The first 10
+									pirates to spread the word get a swag box
+									shipped to them.
+								</>
+							),
+							reward: "📦 Top 10 Posts → Coral Swag Box",
+							link: null,
+						},
 						{
 							icon: Megaphone,
 							color: "#d4af37",
