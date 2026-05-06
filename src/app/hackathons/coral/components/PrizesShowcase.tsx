@@ -287,28 +287,6 @@ const PrizesShowcase = () => {
 					})}
 				</div>
 
-				{/* Referral */}
-				<motion.div
-					initial={{ opacity: 0, y: 20 }}
-					whileInView={{ opacity: 1, y: 0 }}
-					viewport={{ once: true, margin: "-40px" }}
-					transition={{ duration: 0.5 }}
-					className="parchment-bg rounded-xl border border-[#cb4b16]/10 p-6 mb-12"
-				>
-					<div className="flex items-center gap-3 mb-3">
-						<Users size={20} className="text-[#cb4b16]" />
-						<h4 className="text-lg font-bold text-[#fdf6e3]">
-							Recruit Yer Crew: Referral Bounty
-						</h4>
-					</div>
-					<p className="text-[#586e75] text-sm mb-3">
-						Refer 5 people who register AND submit a project.
-					</p>
-					<div className="px-3 py-2 rounded-lg bg-[#002b36] border border-[#cb4b16]/10 text-[#cb4b16] text-sm font-medium">
-						🎲 Lucky draw for 5 Claude Pro 3-month vouchers
-					</div>
-				</motion.div>
-
 				{/* CTA */}
 				<div className="text-center">
 					{DATA.cta.disabled ? (
