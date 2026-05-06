@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Anchor, Ship, Skull, Waves } from "lucide-react";
+import { ArrowRight, Compass, Skull, Swords } from "lucide-react";
 import type { MouseEvent } from "react";
 
 const handleMouseMove = (e: MouseEvent<HTMLDivElement>) => {
@@ -12,13 +12,180 @@ const handleMouseMove = (e: MouseEvent<HTMLDivElement>) => {
 	e.currentTarget.style.setProperty("--mouse-y", `${y}%`);
 };
 
-const agentExamples = [
-	{ name: "Coding Agent Debugger", detail: "GitHub + Sentry + Slack" },
-	{ name: "AI SRE Investigator", detail: "PagerDuty + GitHub + Datadog" },
-	{ name: "Sprint Health Dashboard", detail: "Linear + GitHub + Slack" },
-	{ name: "Customer Escalation Agent", detail: "Support + Sentry + Slack" },
-	{ name: "Security Monitor", detail: "GitHub + Slack + Notion" },
+type Voyage = {
+	name: string;
+	sources: string;
+	description: string;
+};
+
+const enterpriseVoyages: Voyage[] = [
+	{
+		name: "Coding Agent Debugger",
+		sources: "GitHub + Sentry + Slack + Datadog",
+		description:
+			"Agent joins failed CI builds with error logs, service metrics, and related team discussions to diagnose root cause in one query.",
+	},
+	{
+		name: "AI SRE Investigator",
+		sources: "PagerDuty + Datadog + GitHub + StatusGator",
+		description:
+			"Agent correlates high-urgency incidents with recent deploys, metrics, and third-party service status to auto-generate incident summaries.",
+	},
+	{
+		name: "Sprint Health Dashboard",
+		sources: "Linear + GitHub + Slack + Confluence",
+		description:
+			"Agent joins open issues with PR status, relevant threads, and project docs to show what's blocked and what's in review.",
+	},
+	{
+		name: "Customer Escalation Agent",
+		sources: "Intercom + Sentry + Grafana + Slack",
+		description:
+			"Agent joins open tickets with error spikes, service health dashboards, and internal discussions so support crews get full technical context without pinging engineering.",
+	},
+	{
+		name: "Security & Compliance Monitor",
+		sources: "GitHub + Slack + Notion + OSV*",
+		description:
+			"Agent surfaces risky access changes, secrets in commits, and cross-references them with known CVE databases and internal policy docs.",
+	},
 ];
+
+const personalVoyages: Voyage[] = [
+	{
+		name: '"What should I work on?" Assistant',
+		sources: "Gmail* + Google Calendar* + Notion",
+		description:
+			"Agent checks your inbox, calendar, and notes to prioritise your morning.",
+	},
+	{
+		name: "Content Creator Dashboard",
+		sources: "YouTube* + Twitter* + Discord*",
+		description:
+			"Agent tracks your views, engagement, and community activity across platforms in one query.",
+	},
+	{
+		name: "Open Source Maintainer's First Mate",
+		sources: "GitHub + Slack",
+		description:
+			"Agent triages new issues, identifies duplicates, and drafts release notes from merged PRs.",
+	},
+	{
+		name: "Personal Health Monitor",
+		sources: "Apple Health* + Google Sheets* + Notion",
+		description:
+			"Agent correlates your sleep, steps, and workout data with mood logs to spot patterns.",
+	},
+	{
+		name: "Study Planner Agent",
+		sources: "Google Calendar* + Notion + Google Drive*",
+		description:
+			"Agent joins your class schedule, study notes, and assignments to tell you what's due, what to revise, and what you're behind on.",
+	},
+];
+
+type TrackCardProps = {
+	emoji: string;
+	title: string;
+	tagline: string;
+	description: string;
+	voyages: Voyage[];
+	accentColor: string;
+	borderColor: string;
+	bgColor: string;
+	Icon: typeof Swords;
+	direction: "left" | "right";
+	delay?: number;
+};
+
+const TrackCard = ({
+	emoji,
+	title,
+	tagline,
+	description,
+	voyages,
+	accentColor,
+	borderColor,
+	bgColor,
+	Icon,
+	direction,
+	delay = 0,
+}: TrackCardProps) => {
+	return (
+		<motion.div
+			initial={{ opacity: 0, x: direction === "left" ? -30 : 30 }}
+			whileInView={{ opacity: 1, x: 0 }}
+			viewport={{ once: true, margin: "-80px" }}
+			transition={{ duration: 0.6, delay }}
+			onMouseMove={handleMouseMove}
+			className="map-card parchment-bg rounded-2xl p-8 group"
+			style={{ borderWidth: 1, borderStyle: "solid", borderColor }}
+		>
+			<div className="relative z-10">
+				<div className="flex items-center gap-4 mb-6">
+					<div
+						className="w-14 h-14 rounded-xl flex items-center justify-center transition-colors"
+						style={{
+							backgroundColor: bgColor,
+							borderColor,
+							borderWidth: 1,
+							borderStyle: "solid",
+						}}
+					>
+						<Icon
+							className="w-7 h-7"
+							style={{ color: accentColor }}
+						/>
+					</div>
+					<div>
+						<h3 className="text-2xl font-bold text-[#fdf6e3] flex items-center gap-2">
+							<span>{emoji}</span>
+							{title}
+						</h3>
+						<p className="text-[#586e75] text-sm">{tagline}</p>
+					</div>
+				</div>
+
+				<p className="text-[#93a1a1] leading-relaxed mb-6">
+					{description}
+				</p>
+
+				<p
+					className="font-semibold text-xs uppercase tracking-widest mb-4"
+					style={{ color: accentColor }}
+				>
+					Example Voyages
+				</p>
+				<div className="space-y-4">
+					{voyages.map(voyage => (
+						<div
+							key={voyage.name}
+							className="flex items-start gap-3 group/item"
+						>
+							<Skull
+								className="w-4 h-4 mt-1 shrink-0 transition-colors"
+								style={{ color: `${accentColor}99` }}
+							/>
+							<div className="flex-1">
+								<div className="flex flex-wrap items-baseline gap-x-2">
+									<span className="text-[#fdf6e3] text-base font-semibold">
+										{voyage.name}
+									</span>
+									<span className="text-[#586e75] text-sm">
+										· {voyage.sources}
+									</span>
+								</div>
+								<p className="text-[#93a1a1] text-sm leading-relaxed mt-1">
+									{voyage.description}
+								</p>
+							</div>
+						</div>
+					))}
+				</div>
+			</div>
+		</motion.div>
+	);
+};
 
 const TracksSection = () => {
 	return (
@@ -35,111 +202,67 @@ const TracksSection = () => {
 						The Treasure Map
 					</h2>
 					<p className="text-[#93a1a1] text-lg max-w-2xl mx-auto">
-						Two paths to glory on the high seas of data. Choose your adventure.
+						Two paths to glory on the high seas of data. Choose your
+						adventure.
 					</p>
 				</motion.div>
 
 				<div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-					{/* Track 1: Build an Agent */}
-					<motion.div
-						initial={{ opacity: 0, x: -30 }}
-						whileInView={{ opacity: 1, x: 0 }}
-						viewport={{ once: true, margin: "-80px" }}
-						transition={{ duration: 0.6 }}
-						onMouseMove={handleMouseMove}
-						className="map-card parchment-bg rounded-2xl border border-[#d4af37]/15 p-8 group"
-					>
-						<div className="relative z-10">
-							<div className="flex items-center gap-4 mb-6">
-								<div className="w-14 h-14 rounded-xl bg-[#d4af37]/10 border border-[#d4af37]/20 flex items-center justify-center group-hover:bg-[#d4af37]/15 transition-colors">
-									<Ship className="w-7 h-7 text-[#d4af37]" />
-								</div>
-								<div>
-									<h3 className="text-2xl font-bold text-[#fdf6e3]">
-										Track 1: Build an Agent
-									</h3>
-									<p className="text-[#586e75] text-sm">Captain your own data vessel</p>
-								</div>
-							</div>
+					<TrackCard
+						emoji="⚔️"
+						title="Track 1: Build an Enterprise Agent"
+						tagline="Arm your organisation with a smarter crew"
+						description="Build an agent that retrieves data across multiple sources using Coral to solve a real problem for an organisation. Showcase how Coral powers it."
+						voyages={enterpriseVoyages}
+						accentColor="#d4af37"
+						borderColor="rgba(212, 175, 55, 0.18)"
+						bgColor="rgba(212, 175, 55, 0.08)"
+						Icon={Swords}
+						direction="left"
+					/>
 
-							<p className="text-[#93a1a1] leading-relaxed mb-6">
-								Build an agent for a real use case that retrieves data across multiple sources using Coral.
-								Describe how you did it and what makes it great, ideally showcasing Coral&apos;s power.
-							</p>
-
-							<p className="text-[#d4af37] font-semibold text-xs uppercase tracking-widest mb-4">
-								Example Voyages
-							</p>
-							<div className="space-y-2.5">
-								{agentExamples.map((ex) => (
-									<div key={ex.name} className="flex items-start gap-3 group/item">
-										<Skull className="w-3.5 h-3.5 text-[#d4af37]/60 mt-1 shrink-0 group-hover/item:text-[#d4af37] transition-colors" />
-										<div>
-											<span className="text-[#fdf6e3] text-sm font-medium">{ex.name}</span>
-											<span className="text-[#586e75] text-sm ml-2">{ex.detail}</span>
-										</div>
-									</div>
-								))}
-							</div>
-						</div>
-					</motion.div>
-
-					{/* Track 2: Build a Source Connector */}
-					<motion.div
-						initial={{ opacity: 0, x: 30 }}
-						whileInView={{ opacity: 1, x: 0 }}
-						viewport={{ once: true, margin: "-80px" }}
-						transition={{ duration: 0.6, delay: 0.15 }}
-						onMouseMove={handleMouseMove}
-						className="map-card parchment-bg rounded-2xl border border-[#2aa198]/15 p-8 group"
-					>
-						<div className="relative z-10">
-							<div className="flex items-center gap-4 mb-6">
-								<div className="w-14 h-14 rounded-xl bg-[#2aa198]/10 border border-[#2aa198]/20 flex items-center justify-center group-hover:bg-[#2aa198]/15 transition-colors">
-									<Anchor className="w-7 h-7 text-[#2aa198]" />
-								</div>
-								<div>
-									<h3 className="text-2xl font-bold text-[#fdf6e3]">
-										Track 2: Build a Source Connector
-									</h3>
-									<p className="text-[#586e75] text-sm">Expand the Coral reef</p>
-								</div>
-							</div>
-
-							<p className="text-[#93a1a1] leading-relaxed mb-6">
-								Connect any API you wish Coral supported. Build a custom Coral source for an API that
-								doesn&apos;t exist yet. This is a high-value contribution that grows the sources ecosystem.
-							</p>
-
-							<p className="text-[#2aa198] font-semibold text-xs uppercase tracking-widest mb-4">
-								How to get started
-							</p>
-							<div className="space-y-2.5">
-								<div className="flex items-start gap-3">
-									<Waves className="w-3.5 h-3.5 text-[#2aa198]/60 mt-1 shrink-0" />
-									<span className="text-[#93a1a1] text-sm">
-										Follow the{" "}
-										<a href="https://withcoral.com/docs/guides/write-a-custom-source" target="_blank" rel="noopener noreferrer" className="text-[#2aa198] underline decoration-[#2aa198]/30 hover:decoration-[#2aa198] transition-colors">
-											custom source guide
-										</a>{" "}in the Coral docs
-									</span>
-								</div>
-								<div className="flex items-start gap-3">
-									<Waves className="w-3.5 h-3.5 text-[#2aa198]/60 mt-1 shrink-0" />
-									<span className="text-[#93a1a1] text-sm">
-										Describe how you built it and what challenges you solved
-									</span>
-								</div>
-								<div className="flex items-start gap-3">
-									<Waves className="w-3.5 h-3.5 text-[#2aa198]/60 mt-1 shrink-0" />
-									<span className="text-[#93a1a1] text-sm">
-										Bonus: build a &quot;wanted&quot; source (Hubspot, Asana, Zendesk, Airtable, etc.) for extra bounty prizes
-									</span>
-								</div>
-							</div>
-						</div>
-					</motion.div>
+					<TrackCard
+						emoji="🧭"
+						title="Track 2: Build a Personal Agent"
+						tagline="Every pirate needs a first mate"
+						description="Build an agent that makes your personal workflow more productive. Connect the tools you use every day. Coral handles the rest."
+						voyages={personalVoyages}
+						accentColor="#2aa198"
+						borderColor="rgba(42, 161, 152, 0.18)"
+						bgColor="rgba(42, 161, 152, 0.08)"
+						Icon={Compass}
+						direction="right"
+						delay={0.15}
+					/>
 				</div>
+
+				{/* Footer note about missing sources */}
+				<motion.div
+					initial={{ opacity: 0, y: 15 }}
+					whileInView={{ opacity: 1, y: 0 }}
+					viewport={{ once: true }}
+					transition={{ duration: 0.5, delay: 0.3 }}
+					className="mt-10 max-w-3xl mx-auto"
+				>
+					<div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 p-5 rounded-xl border border-[#d4af37]/15 bg-[#d4af37]/[0.04]">
+						<p className="text-[#93a1a1] text-sm leading-relaxed flex-1">
+							<span className="text-[#d4af37] font-semibold">
+								*
+							</span>{" "}
+							Source not built yet? Build it yourself and earn a
+							special bounty!
+						</p>
+						<a
+							href="https://withcoral.com/docs/guides/write-a-custom-source"
+							target="_blank"
+							rel="noopener noreferrer"
+							className="inline-flex items-center gap-2 text-[#d4af37] text-sm font-semibold whitespace-nowrap hover:text-[#e8c35a] transition-colors"
+						>
+							See Build &quot;Wanted&quot; Source Specs
+							<ArrowRight className="w-4 h-4" />
+						</a>
+					</div>
+				</motion.div>
 			</div>
 		</div>
 	);

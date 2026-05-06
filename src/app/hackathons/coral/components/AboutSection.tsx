@@ -52,11 +52,12 @@ const AboutSection = () => {
 					className="text-center mb-16"
 				>
 					<h2 className="text-3xl md:text-5xl font-bold gold-shimmer-text mb-4">
-						About the Voyage
+						Why Set Sail?
 					</h2>
 					<p className="text-[#93a1a1] text-lg max-w-3xl mx-auto leading-relaxed">
-						In a world where AI agents need data from every corner of the seven seas,
-						there&apos;s only one tool that lets them query it all as SQL.
+						In a world where AI agents need data from every corner
+						of the seven seas, there&apos;s only one tool that lets
+						them query it all as SQL.
 					</p>
 				</motion.div>
 
@@ -70,16 +71,23 @@ const AboutSection = () => {
 				>
 					<div className="parchment-bg rounded-2xl border border-[#d4af37]/10 p-8 md:p-12 space-y-4 text-[#93a1a1] text-base md:text-lg leading-relaxed">
 						<p>
-							<strong className="text-[#d4af37]">Coral</strong> is an open-source data retrieval layer for agents.
-							It lets them query any API, database, or file as SQL tables. Coral handles auth, pagination,
-							rate limits, cross-source joins, schema learning, and caching.
+							Building agents with MCP servers, CLI tools, and API
+							wrappers? Every data source is a separate voyage.
+							Your agent hops between them one at a time, stuffing
+							the context window with raw responses, burning
+							tokens at every port.
 						</p>
 						<p>
-							No ETL. No warehouse. No glue code. Everything is local. Credentials, data, and usage history
-							never leave your machine.
+							<strong className="text-[#d4af37]">Coral</strong>{" "}
+							gives your agent one map for all the seas. One SQL
+							query. Multiple sources. Cross-source JOINs. Auth,
+							pagination, rate limits, all handled below deck. The
+							data resolves inside Coral, not inside your
+							agent&apos;s head.
 						</p>
 						<p className="text-[#d4af37]/80 italic font-medium pt-2">
-							&quot;Not all treasure is silver and gold, mate. Sometimes it&apos;s a perfectly joined SQL query.&quot;
+							One install. One query language. $10,000+ in
+							treasure. ☠️
 						</p>
 					</div>
 				</motion.div>

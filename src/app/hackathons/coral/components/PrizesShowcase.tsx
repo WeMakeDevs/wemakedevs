@@ -58,8 +58,18 @@ const PrizesShowcase = () => {
 
 						<div className="grid grid-cols-1 md:grid-cols-2 gap-6">
 							{[
-								{ place: "Best Agent Builder", amount: "MacBook", rank: "Track 1 Winners", emoji: "🏴‍☠️" },
-								{ place: "Best Source Connector", amount: "iPhone 17", rank: "Track 2 Winners", emoji: "⚓" },
+								{
+									place: "Track 1: Enterprise Agent",
+									amount: "MacBook Neo",
+									rank: "Best Enterprise Agent Winner",
+									emoji: "⚔️",
+								},
+								{
+									place: "Track 2: Personal Agent",
+									amount: "Apple iPad",
+									rank: "Best Personal Agent Winner",
+									emoji: "🧭",
+								},
 							].map((p, i) => (
 								<motion.div
 									key={p.place}

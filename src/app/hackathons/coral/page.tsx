@@ -72,9 +72,13 @@ const HackathonPage = () => {
 						<div className="flex items-center justify-between p-6 md:p-8 border-b border-[#d4af37]/8 flex-col md:flex-row gap-6">
 							<div className="flex items-center gap-4">
 								<div className="px-5 py-2.5 rounded-xl bg-gradient-to-r from-[#d4af37]/20 to-[#b8960c]/20 border border-[#d4af37]/20">
-									<span className="text-xl font-bold text-[#d4af37]">🪸 Coral</span>
+									<span className="text-xl font-bold text-[#d4af37]">
+										🪸 Coral
+									</span>
 								</div>
-								<span className="text-[#586e75] text-base">Data Retrieval Layer for Agents</span>
+								<span className="text-[#586e75] text-base">
+									Open-source query layer for agents
+								</span>
 							</div>
 							<Link
 								href="https://git.new/coral-wemakedevs-may26"
@@ -86,23 +90,90 @@ const HackathonPage = () => {
 							</Link>
 						</div>
 						<div className="p-6 md:p-8">
-							<div className="text-[#93a1a1] leading-relaxed space-y-4">
+							<div className="text-[#93a1a1] leading-relaxed space-y-5">
 								<p>
-									Coral is an open-source data retrieval layer for agents that lets them query any API,
-									database, or file as SQL tables. Coral handles auth, pagination, rate limits,
-									cross-source joins, schema learning, and caching. No ETL, no warehouse, no glue code.
+									Coral is an open-source query layer for
+									agents. Any API, database, or file becomes
+									a SQL table. Write one query across all of
+									them. Coral handles auth, pagination, rate
+									limits, and schema mapping.
 								</p>
 								<p>
-									You can run Coral from the CLI or through MCP. Everything is local. Credentials,
-									data, and usage history never leave your machine.
+									Run Coral from CLI or over MCP. Everything
+									runs locally.
 								</p>
-								<p>
-									<strong className="text-[#fdf6e3]">How to use it?</strong> For hackathon participants,
-									Coral provides a unified SQL interface to query data from multiple sources. Instead of
-									writing custom API integrations, pagination logic, and auth flows for each data source,
-									you write SQL queries and Coral handles the rest. Focus on building your agent&apos;s
-									logic and impact while Coral handles the data plumbing.
-								</p>
+
+								{/* Quickstart */}
+								<div className="pt-2">
+									<p className="text-[#fdf6e3] font-semibold mb-3">
+										Quickstart
+									</p>
+									<div className="rounded-lg border border-[#d4af37]/10 bg-[#001e26] overflow-hidden">
+										<div className="flex items-center gap-2 px-4 py-2 border-b border-[#d4af37]/10 bg-[#001a20]">
+											<span className="w-2.5 h-2.5 rounded-full bg-[#dc322f]/60" />
+											<span className="w-2.5 h-2.5 rounded-full bg-[#d4af37]/60" />
+											<span className="w-2.5 h-2.5 rounded-full bg-[#859900]/60" />
+											<span className="text-[#586e75] text-xs font-mono ml-2">
+												terminal
+											</span>
+										</div>
+										<div className="p-4 font-mono text-sm space-y-1.5 overflow-x-auto">
+											<p className="whitespace-nowrap">
+												<span className="text-[#2aa198]">
+													$
+												</span>{" "}
+												<span className="text-[#fdf6e3]">
+													brew install
+													withcoral/tap/coral
+												</span>
+											</p>
+											<p className="whitespace-nowrap">
+												<span className="text-[#2aa198]">
+													$
+												</span>{" "}
+												<span className="text-[#fdf6e3]">
+													coral source add
+												</span>{" "}
+												<span className="text-[#586e75]">
+													[your source]
+												</span>
+											</p>
+											<p className="whitespace-nowrap">
+												<span className="text-[#586e75]">
+													# start querying
+												</span>
+											</p>
+										</div>
+									</div>
+								</div>
+
+								{/* Quick links */}
+								<div className="flex flex-wrap gap-3 pt-2">
+									<Link
+										href="https://withcoral.com/docs"
+										target="_blank"
+										rel="noopener noreferrer"
+										className="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg border border-[#d4af37]/15 bg-[#d4af37]/5 text-[#d4af37] text-sm font-medium hover:bg-[#d4af37]/10 transition-colors"
+									>
+										Docs <ArrowUpRight size={14} />
+									</Link>
+									<Link
+										href="https://withcoral.com/discord"
+										target="_blank"
+										rel="noopener noreferrer"
+										className="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg border border-[#2aa198]/15 bg-[#2aa198]/5 text-[#2aa198] text-sm font-medium hover:bg-[#2aa198]/10 transition-colors"
+									>
+										Discord <ArrowUpRight size={14} />
+									</Link>
+									<Link
+										href="https://git.new/coral-wemakedevs-may26"
+										target="_blank"
+										rel="noopener noreferrer"
+										className="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg border border-[#859900]/15 bg-[#859900]/5 text-[#859900] text-sm font-medium hover:bg-[#859900]/10 transition-colors"
+									>
+										GitHub <ArrowUpRight size={14} />
+									</Link>
+								</div>
 							</div>
 						</div>
 					</div>
