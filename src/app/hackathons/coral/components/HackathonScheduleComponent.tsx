@@ -251,14 +251,14 @@ const HackathonScheduleComponent = ({
 																			}
 																		/>
 																	) : l.platform ===
-																	  "slack" ? (
+																		"slack" ? (
 																		<SiSlack
 																			size={
 																				18
 																			}
 																		/>
 																	) : l.platform ===
-																	  "linkedin" ? (
+																		"linkedin" ? (
 																		<SiLinkedin
 																			size={
 																				18

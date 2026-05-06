@@ -1,15 +1,20 @@
 "use client";
 
-import { DATA } from "../data";
 import { motion } from "framer-motion";
-import { Anchor, BookOpen, Gift, Heart, Megaphone, Trophy, Users, Video } from "lucide-react";
+import { Anchor, BookOpen, Gift, Megaphone, Trophy, Users } from "lucide-react";
 import Link from "next/link";
+import { DATA } from "../data";
 
 const fadeUp = {
 	hidden: { opacity: 0, y: 30 },
 	visible: (i: number) => ({
-		opacity: 1, y: 0,
-		transition: { delay: i * 0.1, duration: 0.5, ease: [0.4, 0, 0.2, 1] as const },
+		opacity: 1,
+		y: 0,
+		transition: {
+			delay: i * 0.1,
+			duration: 0.5,
+			ease: [0.4, 0, 0.2, 1] as const,
+		},
 	}),
 };
 
@@ -32,7 +37,8 @@ const PrizesShowcase = () => {
 						The Treasure Chest
 					</h2>
 					<p className="text-[#93a1a1] text-lg max-w-2xl mx-auto">
-						$10,000+ in gold doubloons and bounties for the bravest pirates on the data seas.
+						$10,000+ in gold doubloons and bounties for the bravest
+						pirates on the data seas.
 					</p>
 				</motion.div>
 
@@ -54,7 +60,19 @@ const PrizesShowcase = () => {
 								Captain&apos;s Bounty
 							</h3>
 						</div>
-						<p className="text-[#93a1a1] text-sm mb-8">All team members will receive the prize for their placement.</p>
+						<p className="text-[#93a1a1] text-sm mb-6">
+							One winning crew per track. Each crew can have up to
+							4 members.
+						</p>
+
+						{/* Prominent everyone-wins callout */}
+						<div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[#d4af37]/30 bg-[#d4af37]/10 text-[#d4af37] text-sm font-semibold mb-8">
+							<Users size={14} />
+							<span>
+								Every teammate gets their own prize. No
+								splitting treasure!
+							</span>
+						</div>
 
 						<div className="grid grid-cols-1 md:grid-cols-2 gap-6">
 							{[
@@ -62,12 +80,14 @@ const PrizesShowcase = () => {
 									place: "Track 1: Enterprise Agent",
 									amount: "MacBook Neo",
 									rank: "Best Enterprise Agent Winner",
+									detail: "One MacBook Neo per teammate (up to 4)",
 									emoji: "⚔️",
 								},
 								{
 									place: "Track 2: Personal Agent",
 									amount: "Apple iPad",
 									rank: "Best Personal Agent Winner",
+									detail: "One Apple iPad per teammate (up to 4)",
 									emoji: "🧭",
 								},
 							].map((p, i) => (
@@ -81,11 +101,23 @@ const PrizesShowcase = () => {
 									className="parchment-bg rounded-xl p-6 border border-[#d4af37]/15 hover:border-[#d4af37]/30 transition-all"
 								>
 									<div className="flex items-center justify-between mb-3">
-										<span className="text-[#d4af37] font-bold">{p.place}</span>
-										<span className="text-2xl">{p.emoji}</span>
+										<span className="text-[#d4af37] font-bold">
+											{p.place}
+										</span>
+										<span className="text-2xl">
+											{p.emoji}
+										</span>
 									</div>
-									<div className="text-3xl md:text-4xl font-bold text-[#d4af37]">{p.amount}</div>
-									<p className="text-[#586e75] text-sm mt-1">{p.rank}</p>
+									<div className="text-3xl md:text-4xl font-bold text-[#d4af37]">
+										{p.amount}
+									</div>
+									<p className="text-[#586e75] text-sm mt-1">
+										{p.rank}
+									</p>
+									<p className="text-[#d4af37]/80 text-xs mt-3 flex items-center gap-1.5">
+										<Users size={12} />
+										{p.detail}
+									</p>
 								</motion.div>
 							))}
 						</div>
@@ -108,10 +140,13 @@ const PrizesShowcase = () => {
 				>
 					<div className="flex items-center gap-3 mb-4">
 						<Gift className="w-6 h-6 text-[#d4af37]" />
-						<h3 className="text-xl font-bold text-[#fdf6e3]">Early Bird Swag: Top 10 Social Sharers</h3>
+						<h3 className="text-xl font-bold text-[#fdf6e3]">
+							Early Bird Swag: Top 10 Social Sharers
+						</h3>
 					</div>
 					<p className="text-[#93a1a1] mb-4">
-						Register and share on social media (LinkedIn / X) tagging Coral.
+						Register and share on social media (LinkedIn / X)
+						tagging Coral.
 					</p>
 					<div className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-[#d4af37]/5 border border-[#d4af37]/10 text-[#d4af37] font-semibold text-sm">
 						<Gift size={16} /> Top 10 Posts → Swag Box 📦
@@ -120,37 +155,87 @@ const PrizesShowcase = () => {
 
 				{/* Special Bounties */}
 				<motion.div
+					id="special-bounties"
 					initial={{ opacity: 0, y: 20 }}
 					whileInView={{ opacity: 1, y: 0 }}
 					viewport={{ once: true, margin: "-60px" }}
 					transition={{ duration: 0.5 }}
-					className="text-center mb-8"
+					className="text-center mb-8 scroll-mt-44"
 				>
-					<h3 className="text-2xl font-bold text-[#d4af37]">⚔️ Special Bounties</h3>
-					<p className="text-[#586e75] mt-2">Beyond the main prizes, earn extra treasure through these challenges.</p>
+					<h3 className="text-2xl font-bold text-[#d4af37]">
+						⚔️ Special Bounties
+					</h3>
+					<p className="text-[#586e75] mt-2">
+						Beyond the main prizes, earn extra treasure through
+						these challenges.
+					</p>
 				</motion.div>
 
 				<div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
 					{[
 						{
-							icon: Megaphone, color: "#d4af37", title: "Discord Showcase + Social Post",
-							desc: "Share your project in Discord #how-i-coral + at least one social platform with screenshots.",
-							reward: "🏆 Best 50 showcases → Claude Max 5x 1-month vouchers or $100 cash",
+							icon: Megaphone,
+							color: "#d4af37",
+							emoji: "🗣️",
+							title: "Tell the Tale: Discord Showcase + Social Post",
+							desc: (
+								<>
+									Share your voyage in Discord{" "}
+									<code className="px-1.5 py-0.5 rounded bg-[#002b36] text-[#d4af37] text-xs font-mono">
+										#how-i-coral
+									</code>{" "}
+									with screenshots and a write-up, then post
+									it on at least one social platform (LinkedIn
+									/ X) tagging Coral. Show the world what you
+									plundered.
+								</>
+							),
+							reward: "🏆 Best 50 showcases → Claude Max 5x 1-month vouchers",
+							link: null,
 						},
 						{
-							icon: Anchor, color: "#2aa198", title: 'Build "Wanted" Source Specs',
-							desc: "We'll share a list of 10 \"wanted\" new sources (Hubspot, Asana, Zendesk, Airtable, etc.).",
-							reward: "🐠 Best per source → $200 cash + $50 donation to sea life charity",
+							icon: Anchor,
+							color: "#2aa198",
+							emoji: "⚓",
+							title: "Chart New Waters: Build a Source Spec",
+							desc: (
+								<>
+									Need a source that doesn&apos;t exist yet?
+									Build it. Any new source spec that gets
+									reviewed and accepted by the Coral crew
+									earns a bounty, whether it&apos;s from the
+									track examples above (Gmail, Google
+									Calendar, Discord, LinkedIn) or something
+									completely new. Every new source grows the
+									reef.
+								</>
+							),
+							reward: "🐠 Best per source → $100 cash + $50 donation to sea life charity",
+							link: {
+								label: "How to write a custom source spec",
+								href: "https://withcoral.com/docs/guides/write-a-custom-source",
+							},
 						},
 						{
-							icon: Video, color: "#859900", title: '"Before & After" Demo Videos',
-							desc: "Record a max 3-min video: building without Coral vs. with Coral.",
-							reward: "🎬 Top 3 → $50 Amazon voucher + featured on Kunal's YouTube",
-						},
-						{
-							icon: BookOpen, color: "#6c71c4", title: 'End-to-End "How to Build X" Guides',
-							desc: 'Write a 2-3 page reproducible guide, e.g. "I built a dashboard with Claude Code + Coral."',
-							reward: "📝 Best guides → Keychron mechanical keyboard / AirPods",
+							icon: BookOpen,
+							color: "#6c71c4",
+							emoji: "📝",
+							title: 'Captain\'s Log: End-to-End "How to Build X" Guides',
+							desc: (
+								<>
+									Write a 2-3 page reproducible guide (a blog
+									post) that any pirate can follow. e.g.{" "}
+									<em>
+										&quot;I built a customer success
+										dashboard with Claude Code + Coral,
+										here&apos;s the route.&quot;
+									</em>{" "}
+									Make sure it&apos;s published as a blog
+									that&apos;s shareable.
+								</>
+							),
+							reward: "⌨️ Best guides → Keychron mechanical keyboard",
+							link: null,
 						},
 					].map((bounty, i) => {
 						const Icon = bounty.icon;
@@ -165,11 +250,36 @@ const PrizesShowcase = () => {
 								className="parchment-bg rounded-xl border border-[#d4af37]/8 p-6 hover:border-[#d4af37]/20 transition-all"
 							>
 								<div className="flex items-center gap-3 mb-3">
-									<Icon size={20} style={{ color: bounty.color }} />
-									<h4 className="text-lg font-bold text-[#fdf6e3]">{bounty.title}</h4>
+									<span className="text-xl">
+										{bounty.emoji}
+									</span>
+									<Icon
+										size={20}
+										style={{ color: bounty.color }}
+									/>
+									<h4 className="text-lg font-bold text-[#fdf6e3]">
+										{bounty.title}
+									</h4>
 								</div>
-								<p className="text-[#586e75] text-sm mb-3">{bounty.desc}</p>
-								<div className="px-3 py-2 rounded-lg bg-[#002b36] border border-[#d4af37]/8 text-sm font-medium" style={{ color: bounty.color }}>
+								<p className="text-[#586e75] text-sm mb-3 leading-relaxed">
+									{bounty.desc}
+								</p>
+								{bounty.link && (
+									<Link
+										href={bounty.link.href}
+										target="_blank"
+										rel="noopener noreferrer"
+										className="inline-flex items-center gap-1.5 mb-3 text-sm font-medium hover:underline"
+										style={{ color: bounty.color }}
+									>
+										<BookOpen size={14} />
+										{bounty.link.label} →
+									</Link>
+								)}
+								<div
+									className="px-3 py-2 rounded-lg bg-[#002b36] border border-[#d4af37]/8 text-sm font-medium"
+									style={{ color: bounty.color }}
+								>
 									{bounty.reward}
 								</div>
 							</motion.div>
@@ -187,9 +297,13 @@ const PrizesShowcase = () => {
 				>
 					<div className="flex items-center gap-3 mb-3">
 						<Users size={20} className="text-[#cb4b16]" />
-						<h4 className="text-lg font-bold text-[#fdf6e3]">Recruit Yer Crew: Referral Bounty</h4>
+						<h4 className="text-lg font-bold text-[#fdf6e3]">
+							Recruit Yer Crew: Referral Bounty
+						</h4>
 					</div>
-					<p className="text-[#586e75] text-sm mb-3">Refer 5 people who register AND submit a project.</p>
+					<p className="text-[#586e75] text-sm mb-3">
+						Refer 5 people who register AND submit a project.
+					</p>
 					<div className="px-3 py-2 rounded-lg bg-[#002b36] border border-[#cb4b16]/10 text-[#cb4b16] text-sm font-medium">
 						🎲 Lucky draw for 5 Claude Pro 3-month vouchers
 					</div>
@@ -212,7 +326,9 @@ const PrizesShowcase = () => {
 						</Link>
 					)}
 					<p className="text-[#586e75] mt-4 text-sm">
-						{DATA.cta.disabled ? "This hackathon has ended. Thank you for sailing with us!" : "Ready to set sail? Register and start building!"}
+						{DATA.cta.disabled
+							? "This hackathon has ended. Thank you for sailing with us!"
+							: "Ready to set sail? Register and start building!"}
 					</p>
 				</div>
 			</div>

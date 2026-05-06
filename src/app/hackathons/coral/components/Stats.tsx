@@ -1,8 +1,8 @@
 "use client";
-import type { NumbersShowcaseType } from "@/types";
 import { cn } from "@/lib/utils";
-import CountUp from "react-countup";
+import type { NumbersShowcaseType } from "@/types";
 import { Anchor, Globe, Skull, Trophy } from "lucide-react";
+import CountUp from "react-countup";
 
 const numbers: NumbersShowcaseType[] = [
 	{

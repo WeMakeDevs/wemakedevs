@@ -7,25 +7,29 @@ const features = [
 	{
 		icon: Database,
 		title: "Query Anything as SQL",
-		description: "Any API, database, or file becomes a SQL table. No custom integrations needed.",
+		description:
+			"Any API, database, or file becomes a SQL table. No custom integrations needed.",
 		color: "#d4af37",
 	},
 	{
 		icon: Zap,
 		title: "Cross-Source Joins",
-		description: "Join GitHub + Slack + Sentry in a single query. Coral handles auth, pagination, and rate limits.",
+		description:
+			"Join GitHub + Slack + Sentry in a single query. Coral handles auth, pagination, and rate limits.",
 		color: "#2aa198",
 	},
 	{
 		icon: Lock,
 		title: "100% Local",
-		description: "Credentials, data, and usage history never leave your machine. No ETL, no warehouse.",
+		description:
+			"Credentials, data, and usage history never leave your machine. No ETL, no warehouse.",
 		color: "#859900",
 	},
 	{
 		icon: Compass,
 		title: "CLI or MCP",
-		description: "Run Coral from the command line or through MCP. Schema learning and caching built in.",
+		description:
+			"Run Coral from the command line or through MCP. Schema learning and caching built in.",
 		color: "#268bd2",
 	},
 ];
@@ -35,7 +39,11 @@ const fadeUp = {
 	visible: (i: number) => ({
 		opacity: 1,
 		y: 0,
-		transition: { delay: i * 0.1, duration: 0.6, ease: [0.4, 0, 0.2, 1] as const },
+		transition: {
+			delay: i * 0.1,
+			duration: 0.6,
+			ease: [0.4, 0, 0.2, 1] as const,
+		},
 	}),
 };
 
@@ -108,12 +116,22 @@ const AboutSection = () => {
 							>
 								<div
 									className="w-12 h-12 rounded-lg flex items-center justify-center mb-4"
-									style={{ backgroundColor: `${feature.color}15`, border: `1px solid ${feature.color}30` }}
+									style={{
+										backgroundColor: `${feature.color}15`,
+										border: `1px solid ${feature.color}30`,
+									}}
 								>
-									<Icon size={22} style={{ color: feature.color }} />
+									<Icon
+										size={22}
+										style={{ color: feature.color }}
+									/>
 								</div>
-								<h3 className="text-[#fdf6e3] font-bold text-lg mb-2">{feature.title}</h3>
-								<p className="text-[#586e75] text-sm leading-relaxed">{feature.description}</p>
+								<h3 className="text-[#fdf6e3] font-bold text-lg mb-2">
+									{feature.title}
+								</h3>
+								<p className="text-[#586e75] text-sm leading-relaxed">
+									{feature.description}
+								</p>
 							</motion.div>
 						);
 					})}

@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight, Compass, Skull, Swords } from "lucide-react";
+import { ArrowDown, ArrowRight, Compass, Skull, Swords } from "lucide-react";
 import type { MouseEvent } from "react";
 
 const handleMouseMove = (e: MouseEvent<HTMLDivElement>) => {
@@ -258,10 +258,27 @@ const TracksSection = () => {
 							rel="noopener noreferrer"
 							className="inline-flex items-center gap-2 text-[#d4af37] text-sm font-semibold whitespace-nowrap hover:text-[#e8c35a] transition-colors"
 						>
-							See Build &quot;Wanted&quot; Source Specs
+							Custom Source Spec Guide
 							<ArrowRight className="w-4 h-4" />
 						</a>
 					</div>
+				</motion.div>
+
+				{/* Scroll to bounties CTA */}
+				<motion.div
+					initial={{ opacity: 0, y: 15 }}
+					whileInView={{ opacity: 1, y: 0 }}
+					viewport={{ once: true }}
+					transition={{ duration: 0.5, delay: 0.4 }}
+					className="mt-8 text-center"
+				>
+					<a
+						href="#special-bounties"
+						className="inline-flex items-center gap-2 px-6 py-3 rounded-xl border border-[#d4af37]/30 bg-[#d4af37]/10 text-[#d4af37] font-semibold text-sm hover:bg-[#d4af37]/15 hover:border-[#d4af37]/50 transition-all"
+					>
+						⚔️ See Special Bounties
+						<ArrowDown className="w-4 h-4" />
+					</a>
 				</motion.div>
 			</div>
 		</div>

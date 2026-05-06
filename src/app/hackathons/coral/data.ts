@@ -21,11 +21,11 @@ const DATA = {
 		winning: [
 			{
 				name: "Track 1: Enterprise Agent Winner",
-				prize: "MacBook Neo + exclusive swag",
+				prize: "MacBook Neo for each teammate (up to 4) + exclusive swag",
 			},
 			{
 				name: "Track 2: Personal Agent Winner",
-				prize: "Apple iPad + exclusive swag",
+				prize: "Apple iPad for each teammate (up to 4) + exclusive swag",
 			},
 		],
 		giveaway: [
@@ -83,7 +83,7 @@ const faqs: FaqType[] = [
 	},
 	{
 		question: "Eligibility criteria to participate?",
-		answer: "You should be above 16 years of age and abide by the rules of WeMakeDevs hackathons. Teams can have 1 to 4 members. You must star the Coral repo and join the Coral Discord to be eligible.",
+		answer: "You should be above 16 years of age and abide by the rules of WeMakeDevs hackathons. Teams can have 1 to 4 members, and every member of the winning team will receive the prize individually (each teammate gets their own MacBook Neo or Apple iPad). You must star the Coral repo and join the Coral Discord to be eligible.",
 	},
 	{
 		question: "Who is this hackathon for?",
