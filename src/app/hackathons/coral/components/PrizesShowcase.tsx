@@ -91,9 +91,9 @@ const PrizesShowcase = () => {
 							{[
 								{
 									place: "Track 1: Enterprise Agent",
-									amount: "iPhone 17e",
+									amount: "MacBook Neo",
 									rank: "Best Enterprise Agent Winners",
-									detail: "One iPhone 17e for every teammate (up to 4)",
+									detail: "One MacBook Neo for every teammate (up to 4)",
 									emoji: "⚔️",
 								},
 								{
@@ -211,7 +211,22 @@ const PrizesShowcase = () => {
 									. Show the world what you plundered.
 								</>
 							),
-							reward: "🏆 Best 50 showcases → Claude Max 5x 1-month vouchers",
+							reward: (
+								<>
+									🏆 Best 50 showcases → Claude Max 5x
+									1-month vouchers. Top entries will be
+									highlighted on{" "}
+									<a
+										href="https://www.youtube.com/@KunalKushwaha"
+										target="_blank"
+										rel="noopener noreferrer"
+										className="underline underline-offset-2 hover:text-[#e8c35a] transition-colors"
+									>
+										Kunal Kushwaha&apos;s YouTube channel
+									</a>{" "}
+									(870,000+ subscribers).
+								</>
+							),
 							link: null,
 						},
 						{
