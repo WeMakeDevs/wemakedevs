@@ -238,11 +238,11 @@ const PrizesShowcase = () => {
 										<span className="text-xl">💻</span>
 										<div>
 											<p className="text-cyan-300 font-bold text-lg">
-												Contribution Track: $100 per merged PR
+												Contribution Track: $100 per meaningful merged PR
 											</p>
 											<p className="text-cyan-100/90 text-sm">
 												Solve any OpenMetadata issue labeled{" "}
-												<span className="font-semibold">good-first-issue</span> and get your PR merged.
+												<span className="font-semibold">good-first-issue</span> and get your PR merged. PR winners are chosen by the OpenMetadata team. Low-effort or spam PRs will be rejected.
 											</p>
 										</div>
 									</div>

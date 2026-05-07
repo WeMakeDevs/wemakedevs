@@ -77,6 +77,18 @@ const HackathonRules = async () => {
 							who opened the issue) to request assignment.
 						</li>
 						<li>
+							<strong className="text-amber-400">Contribution Track winners are selected by the OpenMetadata team.</strong>{" "}
+							Only meaningful, merged pull requests qualify for the $100 bounty. The OpenMetadata maintainers have sole discretion over which PRs are accepted and rewarded, based on code quality, impact, and alignment with the project roadmap.
+						</li>
+						<li>
+							<strong className="text-amber-400">Zero tolerance for spam.</strong>{" "}
+							Low-effort PRs (typo-only fixes, whitespace changes, README
+							reformatting, duplicate or auto-generated submissions) will be
+							rejected without review. Repeated spam or attempts to game the
+							bounty system will result in immediate disqualification from the
+							entire hackathon and a ban from future WeMakeDevs events.
+						</li>
+						<li>
 							You can use starter templates, boilerplates, and pre-existing
 							codebases to kickstart your project. However, simply submitting
 							an existing project with minimal modifications is not permitted.
