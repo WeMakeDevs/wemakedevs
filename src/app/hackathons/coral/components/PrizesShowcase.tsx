@@ -40,6 +40,19 @@ const PrizesShowcase = () => {
 						$10,000+ in gold doubloons and bounties for the bravest
 						pirates on the data seas.
 					</p>
+					<p className="text-[#d4af37]/90 text-base md:text-lg max-w-2xl mx-auto mt-4">
+						🎓 Top winners also get a personal mentorship session
+						with{" "}
+						<a
+							href="https://www.linkedin.com/in/kunal-kushwaha"
+							target="_blank"
+							rel="noopener noreferrer"
+							className="underline underline-offset-2 hover:text-[#e8c35a] transition-colors"
+						>
+							Kunal Kushwaha
+						</a>
+						.
+					</p>
 				</motion.div>
 
 				{/* Top 3 Winners */}
@@ -78,16 +91,16 @@ const PrizesShowcase = () => {
 							{[
 								{
 									place: "Track 1: Enterprise Agent",
-									amount: "MacBook Neo",
-									rank: "Best Enterprise Agent Winner",
-									detail: "One MacBook Neo per teammate (up to 4)",
+									amount: "iPhone 17e",
+									rank: "Best Enterprise Agent Winners",
+									detail: "One iPhone 17e for every teammate (up to 4)",
 									emoji: "⚔️",
 								},
 								{
 									place: "Track 2: Personal Agent",
 									amount: "Apple iPad",
-									rank: "Best Personal Agent Winner",
-									detail: "One Apple iPad per teammate (up to 4)",
+									rank: "Best Personal Agent Winners",
+									detail: "One Apple iPad for every teammate (up to 4)",
 									emoji: "🧭",
 								},
 							].map((p, i) => (
@@ -153,43 +166,57 @@ const PrizesShowcase = () => {
 						{
 							icon: Gift,
 							color: "#d4af37",
-							emoji: "🎁",
-							title: "Early Bird Swag: Top 10 Social Sharers",
+							title: "Early Bird Swag: 10 Lucky Social Sharers",
 							desc: (
 								<>
 									Register early and share on social media
-									(LinkedIn / X) tagging Coral. The first 10
-									pirates to spread the word get a swag box
-									shipped to them.
+									(LinkedIn / X) tagging Coral. 10 random
+									pirates will be picked from everyone who
+									spread the word and get a swag box shipped
+									to them.
 								</>
 							),
-							reward: "📦 Top 10 Posts → Coral Swag Box",
+							reward: "📦 10 Random Posts → Coral Swag Box",
 							link: null,
 						},
 						{
 							icon: Megaphone,
 							color: "#d4af37",
-							emoji: "🗣️",
 							title: "Tell the Tale: Discord Showcase + Social Post",
 							desc: (
 								<>
-									Share your voyage in Discord{" "}
+									Share your voyage in the{" "}
+									<a
+										href="https://withcoral.com/discord"
+										target="_blank"
+										rel="noopener noreferrer"
+										className="text-[#d4af37] underline underline-offset-2 hover:text-[#e8c35a] transition-colors"
+									>
+										Coral Discord
+									</a>{" "}
 									<code className="px-1.5 py-0.5 rounded bg-[#002b36] text-[#d4af37] text-xs font-mono">
 										#how-i-coral
 									</code>{" "}
 									with screenshots and a write-up, then post
 									it on at least one social platform (LinkedIn
-									/ X) tagging Coral. Show the world what you
-									plundered.
+									/ X) tagging{" "}
+									<a
+										href="https://www.linkedin.com/company/withcoral"
+										target="_blank"
+										rel="noopener noreferrer"
+										className="text-[#d4af37] underline underline-offset-2 hover:text-[#e8c35a] transition-colors"
+									>
+										Coral
+									</a>
+									. Show the world what you plundered.
 								</>
 							),
-							reward: "🏆 Best 50 showcases → Claude Max 5x 1-month vouchers + featured on Kunal's YouTube channel (860k+ subscribers)",
+							reward: "🏆 Best 50 showcases → Claude Max 5x 1-month vouchers",
 							link: null,
 						},
 						{
 							icon: Anchor,
 							color: "#2aa198",
-							emoji: "⚓",
 							title: "Chart New Waters: Build a Source Spec",
 							desc: (
 								<>
@@ -212,7 +239,6 @@ const PrizesShowcase = () => {
 						{
 							icon: BookOpen,
 							color: "#6c71c4",
-							emoji: "📝",
 							title: 'Captain\'s Log: End-to-End "How to Build X" Guides',
 							desc: (
 								<>
@@ -243,9 +269,6 @@ const PrizesShowcase = () => {
 								className="parchment-bg rounded-xl border border-[#d4af37]/8 p-6 hover:border-[#d4af37]/20 transition-all"
 							>
 								<div className="flex items-center gap-3 mb-3">
-									<span className="text-xl">
-										{bounty.emoji}
-									</span>
 									<Icon
 										size={20}
 										style={{ color: bounty.color }}

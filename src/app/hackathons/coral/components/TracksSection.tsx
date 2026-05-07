@@ -85,7 +85,6 @@ const personalVoyages: Voyage[] = [
 ];
 
 type TrackCardProps = {
-	emoji: string;
 	title: string;
 	tagline: string;
 	description: string;
@@ -99,7 +98,6 @@ type TrackCardProps = {
 };
 
 const TrackCard = ({
-	emoji,
 	title,
 	tagline,
 	description,
@@ -138,8 +136,7 @@ const TrackCard = ({
 						/>
 					</div>
 					<div>
-						<h3 className="text-2xl font-bold text-[#fdf6e3] flex items-center gap-2">
-							<span>{emoji}</span>
+						<h3 className="text-2xl font-bold text-[#fdf6e3]">
 							{title}
 						</h3>
 						<p className="text-[#586e75] text-sm">{tagline}</p>
@@ -209,7 +206,6 @@ const TracksSection = () => {
 
 				<div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
 					<TrackCard
-						emoji="⚔️"
 						title="Track 1: Build an Enterprise Agent"
 						tagline="Arm your organisation with a smarter crew"
 						description="Build an agent that retrieves data across multiple sources using Coral to solve a real problem for an organisation. Showcase how Coral powers it."
@@ -222,7 +218,6 @@ const TracksSection = () => {
 					/>
 
 					<TrackCard
-						emoji="🧭"
 						title="Track 2: Build a Personal Agent"
 						tagline="Every pirate needs a first mate"
 						description="Build an agent that makes your personal workflow more productive. Connect the tools you use every day. Coral handles the rest."

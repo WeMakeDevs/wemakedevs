@@ -39,11 +39,16 @@ const HackathonResources = async () => {
 								rel="noopener noreferrer"
 							>
 								Coral Discord
-							</Link>{" "}
-							for support and updates. Ask questions in{" "}
+							</Link>
+							. For Coral-related questions use{" "}
 							<span className="text-amber-400 font-mono">
-								#help-and-questions
+								#support-questions
 							</span>
+							. For hackathon-related questions use{" "}
+							<span className="text-amber-400 font-mono">
+								#hackathon-wemakedevs-may26
+							</span>
+							.
 						</li>
 						<li>
 							For any other query email us at{" "}
@@ -194,44 +199,6 @@ const HackathonResources = async () => {
 							Just SQL queries against live data.
 						</li>
 					</ol>
-				</HackathonContentBody>
-
-				<HackathonContentTitle className="text-amber-400">
-					🏴‍☠️ Example Agent Use Cases
-				</HackathonContentTitle>
-				<HackathonContentBody className="text-slate-300">
-					<ul className="space-y-3 list-disc list-inside">
-						<li>
-							<strong>Coding Agent Debugger:</strong> Connect
-							GitHub + Sentry + Slack. Agent joins failed CI
-							builds with Sentry errors and related Slack
-							discussions to diagnose root cause in one query.
-						</li>
-						<li>
-							<strong>AI SRE / Incident Investigator:</strong>{" "}
-							Connect PagerDuty + GitHub + Datadog. Agent
-							correlates high-urgency incidents with PRs merged
-							in the same time window and Datadog metrics.
-						</li>
-						<li>
-							<strong>Sprint Health Dashboard:</strong> Connect
-							Linear + GitHub + Slack. Agent joins open issues
-							with PR status and relevant Slack threads for a
-							real-time view of what&apos;s blocked.
-						</li>
-						<li>
-							<strong>Customer Escalation Agent:</strong> Connect
-							support tool + Sentry + Slack. Agent joins open
-							tickets with error spikes and internal Slack
-							threads.
-						</li>
-						<li>
-							<strong>Security/Compliance Monitor:</strong>{" "}
-							Connect GitHub + Slack + Notion. Agent monitors for
-							secrets in commits, permission changes, and flags
-							compliance gaps.
-						</li>
-					</ul>
 				</HackathonContentBody>
 			</ViewContainer>
 		</div>

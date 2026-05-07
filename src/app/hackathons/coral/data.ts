@@ -3,8 +3,8 @@ import type { FaqType } from "@/types";
 const DATA = {
 	title: "Pirates of the Coral-bean",
 	prize: "$10,000+",
-	startDate: "2026-05-18T08:00:00+05:30",
-	endDate: "2026-05-24T23:59:59+05:30",
+	startDate: "2026-05-25T08:00:00+05:30",
+	endDate: "2026-05-31T23:59:59+05:30",
 	description:
 		"Hoist the Jolly Roger and set sail on the high seas of data! Build agents that query any API, database, or file as SQL, powered by Coral. No ETL, no warehouse, no glue code. Just you, your crew, and the open ocean of data.",
 	descriptionCard:
@@ -20,12 +20,12 @@ const DATA = {
 	prizes: {
 		winning: [
 			{
-				name: "Track 1: Enterprise Agent Winner",
-				prize: "MacBook Neo for each teammate (up to 4) + exclusive swag",
+				name: "Track 1: Enterprise Agent Winners",
+				prize: "iPhone 17e for every teammate (up to 4) + exclusive swag",
 			},
 			{
-				name: "Track 2: Personal Agent Winner",
-				prize: "Apple iPad for each teammate (up to 4) + exclusive swag",
+				name: "Track 2: Personal Agent Winners",
+				prize: "Apple iPad for every teammate (up to 4) + exclusive swag",
 			},
 		],
 		giveaway: [
@@ -83,7 +83,7 @@ const faqs: FaqType[] = [
 	},
 	{
 		question: "Eligibility criteria to participate?",
-		answer: "You should be above 16 years of age and abide by the rules of WeMakeDevs hackathons. Teams can have 1 to 4 members, and every member of the winning team will receive the prize individually (each teammate gets their own MacBook Neo or Apple iPad). You must star the Coral repo and join the Coral Discord to be eligible.",
+		answer: "You should be above 16 years of age and abide by the rules of WeMakeDevs hackathons. Teams can have 1 to 4 members, and every member of the winning team will receive the prize individually (each teammate gets their own iPhone 17e or Apple iPad). You must star the Coral repo and join the Coral Discord to be eligible.",
 	},
 	{
 		question: "Who is this hackathon for?",
@@ -99,7 +99,7 @@ const faqs: FaqType[] = [
 	},
 	{
 		question: "Where can I get help during the hackathon?",
-		answer: "Join the <a href='https://withcoral.com/discord' target='_blank' rel='noopener noreferrer' class='text-amber-400 underline hover:text-amber-300'>Coral Discord</a> and ask questions in the #help-and-questions channel. The Coral crew will be standing by!",
+		answer: "Join the <a href='https://withcoral.com/discord' target='_blank' rel='noopener noreferrer' class='text-amber-400 underline hover:text-amber-300'>Coral Discord</a>. Ask Coral-related questions in <span class='text-amber-400 font-mono'>#support-questions</span> and hackathon-related questions in <span class='text-amber-400 font-mono'>#hackathon-wemakedevs-may26</span>. The Coral crew will be standing by!",
 	},
 	{
 		question: "What are the entry requirements?",
@@ -109,17 +109,31 @@ const faqs: FaqType[] = [
 
 const schedule = [
 	{
-		date: "2026-05-18T00:00:00+05:30",
+		date: "2026-05-22T00:00:00+05:30",
+		items: [
+			{
+				title: "📺 Video Tutorial on Kunal's YouTube",
+				description:
+					"Video tutorial up on this channel.",
+				link: {
+					name: "youtube.com/@KunalKushwaha",
+					url: "https://www.youtube.com/@KunalKushwaha",
+				},
+			},
+		],
+	},
+	{
+		date: "2026-05-25T00:00:00+05:30",
 		items: [
 			{
 				title: "⚓ Set Sail: Hacking Begins",
-				time: "2026-05-18T08:00:00+05:30",
+				time: "2026-05-25T08:00:00+05:30",
 			},
 			{
 				title: "🎬 Livestream Kickoff with Matt (Coral Co-founder & CEO)",
 				description:
 					"Meet the captain of the Coral ship! Matt walks through Coral, live demos, and answers your questions.",
-				time: "2026-05-18T21:30:00+05:30",
+				time: "2026-05-25T21:30:00+05:30",
 				links: [
 					{
 						platform: "youtube",
@@ -130,13 +144,13 @@ const schedule = [
 		],
 	},
 	{
-		date: "2026-05-21T00:00:00+05:30",
+		date: "2026-05-28T00:00:00+05:30",
 		items: [
 			{
 				title: "🎤 Lightning Demos: 30-min Discord Voice Channel",
 				description:
 					"Anyone can do a 2-min live demo of their WIP. Cross-pollinate ideas with fellow pirates!",
-				time: "2026-05-21T15:00:00+02:00",
+				time: "2026-05-28T15:00:00+02:00",
 				link: {
 					name: "Discord",
 					url: "https://withcoral.com/discord",
@@ -145,15 +159,15 @@ const schedule = [
 		],
 	},
 	{
-		date: "2026-05-24T00:00:00+05:30",
+		date: "2026-05-31T00:00:00+05:30",
 		items: [
 			{
 				title: "🏴‍☠️ Land Ho: Hacking Ends",
-				time: "2026-05-24T20:00:00+05:30",
+				time: "2026-05-31T20:00:00+05:30",
 			},
 			{
 				title: "📜 Submissions Due: Deliver Your Treasure",
-				time: "2026-05-24T23:59:59+05:30",
+				time: "2026-05-31T23:59:59+05:30",
 				link: {
 					name: "Submit Your Project",
 					url: "https://forms.gle/dxBPLK17A8dXwp64A",
