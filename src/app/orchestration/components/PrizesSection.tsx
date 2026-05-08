@@ -107,6 +107,11 @@ const PrizesSection = () => {
 					>
 						🎲 Winners Picked on a Rolling Basis
 					</motion.div>
+
+					<p className="mt-4 text-sm text-slate-500">
+						Winners get to choose between an iPhone or a MacBook
+						Neo.
+					</p>
 				</motion.div>
 
 				{/* Prize cards */}
