@@ -33,8 +33,9 @@ const HackathonSchedule = async () => {
 					Time Circuits
 				</h2>
 				<p className="text-center text-slate-400 mb-8 max-w-2xl mx-auto">
-					Mark these dates, time traveler. The hackathon runs April 17–26, 2026.
-					Don&apos;t miss the kickoff livestream on April 13 at 4 PM BST.
+					Mark these dates, time traveler. The hackathon runs April
+					17–26, 2026. Don&apos;t miss the kickoff livestream on April
+					13 at 4 PM BST.
 				</p>
 				<HackathonScheduleComponent schedule={schedule} />
 			</ViewContainer>

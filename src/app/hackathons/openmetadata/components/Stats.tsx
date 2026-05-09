@@ -1,8 +1,8 @@
 "use client";
-import type { NumbersShowcaseType } from "@/types";
 import { cn } from "@/lib/utils";
-import CountUp from "react-countup";
+import type { NumbersShowcaseType } from "@/types";
 import { Code, Globe, Trophy, Users } from "lucide-react";
+import CountUp from "react-countup";
 
 const numbers: NumbersShowcaseType[] = [
 	{
@@ -56,7 +56,10 @@ const OpenMetadataStats = () => {
 								index % 4 === 3 && "bg-orange-400",
 							)}
 						/>
-						<Icon className="opacity-80 z-10 text-amber-400" size={28} />
+						<Icon
+							className="opacity-80 z-10 text-amber-400"
+							size={28}
+						/>
 						<div className="mt-6 md:mt-12 group-hover:-translate-y-4 transition-transform">
 							<h3 className="font-mono font-medium relative z-10 text-slate-200">
 								{item.name}
@@ -69,7 +72,9 @@ const OpenMetadataStats = () => {
 									suffix={item.suffix || ""}
 									enableScrollSpy
 								>
-									{({ countUpRef }) => <span ref={countUpRef} />}
+									{({ countUpRef }) => (
+										<span ref={countUpRef} />
+									)}
 								</CountUp>
 							</p>
 						</div>

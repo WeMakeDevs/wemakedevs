@@ -2,12 +2,16 @@
    Back to the Metadata — 80s Synthwave × Enterprise Theme
    ═══════════════════════════════════════════════════════════════════════════════ */
 
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&display=swap");
 
 /* ── Time-warp scan line ─────────────────────────────────────────────────────── */
 @keyframes time-warp {
-	0%   { top: -5%; }
-	100% { top: 105%; }
+	0% {
+		top: -5%;
+	}
+	100% {
+		top: 105%;
+	}
 }
 .animate-time-warp {
 	animation: time-warp 6s linear infinite;
@@ -15,8 +19,13 @@
 
 /* ── Flicker ─────────────────────────────────────────────────────────────────── */
 @keyframes flicker {
-	0%, 100% { opacity: 1; }
-	50%       { opacity: 0.7; }
+	0%,
+	100% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 0.7;
+	}
 }
 .animate-flicker {
 	animation: flicker 3s ease-in-out infinite;
@@ -24,8 +33,15 @@
 
 /* ── Lightning flash ─────────────────────────────────────────────────────────── */
 @keyframes lightning-flash {
-	0%, 90%, 100% { opacity: 0; }
-	92%, 95%      { opacity: 0.3; }
+	0%,
+	90%,
+	100% {
+		opacity: 0;
+	}
+	92%,
+	95% {
+		opacity: 0.3;
+	}
 }
 .animate-lightning {
 	animation: lightning-flash 8s ease-in-out infinite;
@@ -33,29 +49,35 @@
 
 /* ── Data Lineage draw-on animation ─────────────────────────────────────────── */
 @keyframes drawLineage {
-	to { stroke-dashoffset: 0; }
+	to {
+		stroke-dashoffset: 0;
+	}
 }
 
 /* ── Node pulse ──────────────────────────────────────────────────────────────── */
 @keyframes pulseNode {
-	0%, 100% { opacity: 1;   transform: scale(1); }
-	50%      { opacity: 0.6; transform: scale(1.4); }
+	0%,
+	100% {
+		opacity: 1;
+		transform: scale(1);
+	}
+	50% {
+		opacity: 0.6;
+		transform: scale(1.4);
+	}
 }
 
 /* ── Flux Capacitor button pulse ─────────────────────────────────────────────── */
 @keyframes fluxPulse {
-	0%, 100% {
-		box-shadow:
-			0 0 18px rgba(255,157,0,0.55),
-			0 0 36px rgba(255,157,0,0.3),
-			inset 0 0 18px rgba(255,255,255,0.08);
+	0%,
+	100% {
+		box-shadow: 0 0 18px rgba(255, 157, 0, 0.55), 0 0 36px
+			rgba(255, 157, 0, 0.3), inset 0 0 18px rgba(255, 255, 255, 0.08);
 	}
 	50% {
-		box-shadow:
-			0 0 32px rgba(255,157,0,0.85),
-			0 0 64px rgba(255,157,0,0.5),
-			0 0 100px rgba(255,157,0,0.2),
-			inset 0 0 24px rgba(255,255,255,0.12);
+		box-shadow: 0 0 32px rgba(255, 157, 0, 0.85), 0 0 64px
+			rgba(255, 157, 0, 0.5), 0 0 100px rgba(255, 157, 0, 0.2), inset 0 0
+			24px rgba(255, 255, 255, 0.12);
 	}
 }
 
@@ -68,48 +90,46 @@
 	font-size: 1.0625rem;
 	font-weight: 800;
 	color: #0a0e1a;
-	background: linear-gradient(135deg, #FF9D00 0%, #FFB800 50%, #FF6B00 100%);
+	background: linear-gradient(135deg, #ff9d00 0%, #ffb800 50%, #ff6b00 100%);
 	border-radius: 0.75rem;
 	text-decoration: none;
 	transition: transform 0.2s ease, box-shadow 0.2s ease;
 	animation: fluxPulse 2.2s ease-in-out infinite;
-	border: 1px solid rgba(255,220,100,0.4);
+	border: 1px solid rgba(255, 220, 100, 0.4);
 	letter-spacing: 0.02em;
 }
 
 .openmetadata-hackathon .flux-capacitor-btn:hover {
 	transform: scale(1.06) translateY(-2px);
-	box-shadow:
-		0 0 44px rgba(255,157,0,0.9),
-		0 0 88px rgba(255,157,0,0.5),
-		inset 0 0 24px rgba(255,255,255,0.15);
+	box-shadow: 0 0 44px rgba(255, 157, 0, 0.9), 0 0 88px rgba(255, 157, 0, 0.5),
+		inset 0 0 24px rgba(255, 255, 255, 0.15);
 }
 
 /* ── Retro grid pattern (used on sections) ───────────────────────────────────── */
 .openmetadata-hackathon .retro-grid {
-	background-image:
-		linear-gradient(rgba(245,158,11,0.05) 1px, transparent 1px),
-		linear-gradient(90deg, rgba(245,158,11,0.05) 1px, transparent 1px);
+	background-image: linear-gradient(
+			rgba(245, 158, 11, 0.05) 1px,
+			transparent 1px
+		), linear-gradient(90deg, rgba(245, 158, 11, 0.05) 1px, transparent 1px);
 	background-size: 30px 30px;
 }
 
 /* ── Glowing text ────────────────────────────────────────────────────────────── */
 .openmetadata-hackathon .glow-text {
-	text-shadow:
-		0 0 20px rgba(245,158,11,0.55),
-		0 0 40px rgba(245,158,11,0.3),
-		0 0 60px rgba(245,158,11,0.12);
+	text-shadow: 0 0 20px rgba(245, 158, 11, 0.55), 0 0 40px
+		rgba(245, 158, 11, 0.3), 0 0 60px rgba(245, 158, 11, 0.12);
 }
 
 /* ── Circuit-pulse border animation ─────────────────────────────────────────── */
 @keyframes circuit-pulse {
-	0%, 100% {
-		border-color: rgba(245,158,11,0.3);
-		box-shadow: 0 0 10px rgba(245,158,11,0.1);
+	0%,
+	100% {
+		border-color: rgba(245, 158, 11, 0.3);
+		box-shadow: 0 0 10px rgba(245, 158, 11, 0.1);
 	}
 	50% {
-		border-color: rgba(245,158,11,0.65);
-		box-shadow: 0 0 24px rgba(245,158,11,0.32);
+		border-color: rgba(245, 158, 11, 0.65);
+		box-shadow: 0 0 24px rgba(245, 158, 11, 0.32);
 	}
 }
 .openmetadata-hackathon .circuit-pulse {
@@ -118,9 +138,17 @@
 
 /* ── Speed lines ─────────────────────────────────────────────────────────────── */
 @keyframes speed-line {
-	0%   { transform: translateX(-100%); opacity: 0; }
-	50%  { opacity: 1; }
-	100% { transform: translateX(200%); opacity: 0; }
+	0% {
+		transform: translateX(-100%);
+		opacity: 0;
+	}
+	50% {
+		opacity: 1;
+	}
+	100% {
+		transform: translateX(200%);
+		opacity: 0;
+	}
 }
 .openmetadata-hackathon .speed-line {
 	animation: speed-line 3s linear infinite;
@@ -130,13 +158,22 @@
    Hero Star Field
    ═══════════════════════════════════════════════════════════════════════════════ */
 @keyframes twinkle {
-	0%, 100% { opacity: 0.9; }
-	50%       { opacity: 0.3; }
+	0%,
+	100% {
+		opacity: 0.9;
+	}
+	50% {
+		opacity: 0.3;
+	}
 }
 
 @keyframes driftStars {
-	from { background-position: 0 0; }
-	to   { background-position: 0 600px; }
+	from {
+		background-position: 0 0;
+	}
+	to {
+		background-position: 0 600px;
+	}
 }
 
 .openmetadata-hackathon .hero-star-field {
@@ -145,42 +182,170 @@
 	width: 100%;
 	height: 130%;
 	/* Three overlapping star layers at different scales */
+	/* tiny stars */
 	background-image:
-		/* tiny stars */
-		radial-gradient(1px 1px at 8%   12%, rgba(255,255,255,0.75) 0%, transparent 100%),
-		radial-gradient(1px 1px at 22%  4%,  rgba(255,255,255,0.55) 0%, transparent 100%),
-		radial-gradient(1px 1px at 36%  18%, rgba(255,255,255,0.65) 0%, transparent 100%),
-		radial-gradient(1px 1px at 51%  7%,  rgba(255,255,255,0.45) 0%, transparent 100%),
-		radial-gradient(1px 1px at 67%  15%, rgba(255,255,255,0.7)  0%, transparent 100%),
-		radial-gradient(1px 1px at 82%  3%,  rgba(255,255,255,0.5)  0%, transparent 100%),
-		radial-gradient(1px 1px at 95%  21%, rgba(255,255,255,0.65) 0%, transparent 100%),
-		radial-gradient(1px 1px at 14%  38%, rgba(255,255,255,0.55) 0%, transparent 100%),
-		radial-gradient(1px 1px at 29%  42%, rgba(255,255,255,0.4)  0%, transparent 100%),
-		radial-gradient(1px 1px at 44%  33%, rgba(255,255,255,0.6)  0%, transparent 100%),
-		radial-gradient(1px 1px at 59%  45%, rgba(255,255,255,0.5)  0%, transparent 100%),
-		radial-gradient(1px 1px at 74%  37%, rgba(255,255,255,0.65) 0%, transparent 100%),
-		radial-gradient(1px 1px at 88%  48%, rgba(255,255,255,0.45) 0%, transparent 100%),
-		radial-gradient(1px 1px at 5%   61%, rgba(255,255,255,0.6)  0%, transparent 100%),
-		radial-gradient(1px 1px at 19%  56%, rgba(255,255,255,0.5)  0%, transparent 100%),
-		radial-gradient(1px 1px at 33%  68%, rgba(255,255,255,0.4)  0%, transparent 100%),
-		radial-gradient(1px 1px at 48%  62%, rgba(255,255,255,0.7)  0%, transparent 100%),
-		radial-gradient(1px 1px at 62%  72%, rgba(255,255,255,0.45) 0%, transparent 100%),
-		radial-gradient(1px 1px at 77%  65%, rgba(255,255,255,0.55) 0%, transparent 100%),
-		radial-gradient(1px 1px at 91%  75%, rgba(255,255,255,0.6)  0%, transparent 100%),
+		radial-gradient(
+			1px 1px at 8% 12%,
+			rgba(255, 255, 255, 0.75) 0%,
+			transparent 100%
+		),
+		radial-gradient(
+			1px 1px at 22% 4%,
+			rgba(255, 255, 255, 0.55) 0%,
+			transparent 100%
+		),
+		radial-gradient(
+			1px 1px at 36% 18%,
+			rgba(255, 255, 255, 0.65) 0%,
+			transparent 100%
+		),
+		radial-gradient(
+			1px 1px at 51% 7%,
+			rgba(255, 255, 255, 0.45) 0%,
+			transparent 100%
+		),
+		radial-gradient(
+			1px 1px at 67% 15%,
+			rgba(255, 255, 255, 0.7) 0%,
+			transparent 100%
+		),
+		radial-gradient(
+			1px 1px at 82% 3%,
+			rgba(255, 255, 255, 0.5) 0%,
+			transparent 100%
+		),
+		radial-gradient(
+			1px 1px at 95% 21%,
+			rgba(255, 255, 255, 0.65) 0%,
+			transparent 100%
+		),
+		radial-gradient(
+			1px 1px at 14% 38%,
+			rgba(255, 255, 255, 0.55) 0%,
+			transparent 100%
+		),
+		radial-gradient(
+			1px 1px at 29% 42%,
+			rgba(255, 255, 255, 0.4) 0%,
+			transparent 100%
+		),
+		radial-gradient(
+			1px 1px at 44% 33%,
+			rgba(255, 255, 255, 0.6) 0%,
+			transparent 100%
+		),
+		radial-gradient(
+			1px 1px at 59% 45%,
+			rgba(255, 255, 255, 0.5) 0%,
+			transparent 100%
+		),
+		radial-gradient(
+			1px 1px at 74% 37%,
+			rgba(255, 255, 255, 0.65) 0%,
+			transparent 100%
+		),
+		radial-gradient(
+			1px 1px at 88% 48%,
+			rgba(255, 255, 255, 0.45) 0%,
+			transparent 100%
+		),
+		radial-gradient(
+			1px 1px at 5% 61%,
+			rgba(255, 255, 255, 0.6) 0%,
+			transparent 100%
+		),
+		radial-gradient(
+			1px 1px at 19% 56%,
+			rgba(255, 255, 255, 0.5) 0%,
+			transparent 100%
+		),
+		radial-gradient(
+			1px 1px at 33% 68%,
+			rgba(255, 255, 255, 0.4) 0%,
+			transparent 100%
+		),
+		radial-gradient(
+			1px 1px at 48% 62%,
+			rgba(255, 255, 255, 0.7) 0%,
+			transparent 100%
+		),
+		radial-gradient(
+			1px 1px at 62% 72%,
+			rgba(255, 255, 255, 0.45) 0%,
+			transparent 100%
+		),
+		radial-gradient(
+			1px 1px at 77% 65%,
+			rgba(255, 255, 255, 0.55) 0%,
+			transparent 100%
+		),
+		radial-gradient(
+			1px 1px at 91% 75%,
+			rgba(255, 255, 255, 0.6) 0%,
+			transparent 100%
+		),
 		/* medium stars */
-		radial-gradient(1.5px 1.5px at 11%  28%, rgba(255,255,255,0.8)  0%, transparent 100%),
-		radial-gradient(1.5px 1.5px at 27%  82%, rgba(255,255,255,0.65) 0%, transparent 100%),
-		radial-gradient(1.5px 1.5px at 41%  25%, rgba(255,255,255,0.7)  0%, transparent 100%),
-		radial-gradient(1.5px 1.5px at 56%  88%, rgba(255,255,255,0.55) 0%, transparent 100%),
-		radial-gradient(1.5px 1.5px at 71%  30%, rgba(255,255,255,0.75) 0%, transparent 100%),
-		radial-gradient(1.5px 1.5px at 84%  85%, rgba(255,255,255,0.6)  0%, transparent 100%),
-		radial-gradient(1.5px 1.5px at 3%   92%, rgba(255,255,255,0.5)  0%, transparent 100%),
+		radial-gradient(
+			1.5px 1.5px at 11% 28%,
+			rgba(255, 255, 255, 0.8) 0%,
+			transparent 100%
+		),
+		radial-gradient(
+			1.5px 1.5px at 27% 82%,
+			rgba(255, 255, 255, 0.65) 0%,
+			transparent 100%
+		),
+		radial-gradient(
+			1.5px 1.5px at 41% 25%,
+			rgba(255, 255, 255, 0.7) 0%,
+			transparent 100%
+		),
+		radial-gradient(
+			1.5px 1.5px at 56% 88%,
+			rgba(255, 255, 255, 0.55) 0%,
+			transparent 100%
+		),
+		radial-gradient(
+			1.5px 1.5px at 71% 30%,
+			rgba(255, 255, 255, 0.75) 0%,
+			transparent 100%
+		),
+		radial-gradient(
+			1.5px 1.5px at 84% 85%,
+			rgba(255, 255, 255, 0.6) 0%,
+			transparent 100%
+		),
+		radial-gradient(
+			1.5px 1.5px at 3% 92%,
+			rgba(255, 255, 255, 0.5) 0%,
+			transparent 100%
+		),
 		/* warm-tinted stars (amber/cyan tint for atmosphere) */
-		radial-gradient(1.5px 1.5px at 17%  52%, rgba(255,220,120,0.6)  0%, transparent 100%),
-		radial-gradient(1.5px 1.5px at 63%  19%, rgba(100,220,255,0.5)  0%, transparent 100%),
-		radial-gradient(1.5px 1.5px at 79%  57%, rgba(255,180,80,0.55)  0%, transparent 100%),
-		radial-gradient(1.5px 1.5px at 38%  79%, rgba(180,0,228,0.45)   0%, transparent 100%),
-		radial-gradient(1.5px 1.5px at 93%  44%, rgba(100,220,255,0.5)  0%, transparent 100%);
+		radial-gradient(
+			1.5px 1.5px at 17% 52%,
+			rgba(255, 220, 120, 0.6) 0%,
+			transparent 100%
+		),
+		radial-gradient(
+			1.5px 1.5px at 63% 19%,
+			rgba(100, 220, 255, 0.5) 0%,
+			transparent 100%
+		),
+		radial-gradient(
+			1.5px 1.5px at 79% 57%,
+			rgba(255, 180, 80, 0.55) 0%,
+			transparent 100%
+		),
+		radial-gradient(
+			1.5px 1.5px at 38% 79%,
+			rgba(180, 0, 228, 0.45) 0%,
+			transparent 100%
+		),
+		radial-gradient(
+			1.5px 1.5px at 93% 44%,
+			rgba(100, 220, 255, 0.5) 0%,
+			transparent 100%
+		);
 	background-size:
 		100% 100%, 100% 100%, 100% 100%, 100% 100%,
 		100% 100%, 100% 100%, 100% 100%, 100% 100%,
@@ -200,18 +365,15 @@
 	background: rgba(15, 23, 42, 0.55);
 	backdrop-filter: blur(16px);
 	-webkit-backdrop-filter: blur(16px);
-	border: 1px solid rgba(245,158,11,0.18);
-	box-shadow:
-		0 4px 24px rgba(0,0,0,0.4),
-		inset 0 1px 0 rgba(255,255,255,0.06);
+	border: 1px solid rgba(245, 158, 11, 0.18);
+	box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4), inset 0 1px 0
+		rgba(255, 255, 255, 0.06);
 }
 
 .openmetadata-hackathon .glass-card:hover {
-	border-color: rgba(245,158,11,0.35);
-	box-shadow:
-		0 8px 32px rgba(0,0,0,0.5),
-		0 0 24px rgba(245,158,11,0.12),
-		inset 0 1px 0 rgba(255,255,255,0.08);
+	border-color: rgba(245, 158, 11, 0.35);
+	box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5), 0 0 24px rgba(245, 158, 11, 0.12),
+		inset 0 1px 0 rgba(255, 255, 255, 0.08);
 }
 
 /* ═══════════════════════════════════════════════════════════════════════════════
@@ -241,9 +403,15 @@
 }
 
 .openmetadata-hackathon nav > div.bg-white a:not([class*="text-white"]),
-.openmetadata-hackathon nav > div[class*="bg-white"] a:not([class*="text-white"]),
+.openmetadata-hackathon
+	nav
+	> div[class*="bg-white"]
+	a:not([class*="text-white"]),
 .openmetadata-hackathon nav > div.bg-white span:not([class*="text-white"]),
-.openmetadata-hackathon nav > div[class*="bg-white"] span:not([class*="text-white"]) {
+.openmetadata-hackathon
+	nav
+	> div[class*="bg-white"]
+	span:not([class*="text-white"]) {
 	color: #0f172a !important;
 }
 
@@ -253,7 +421,10 @@
 }
 
 .openmetadata-hackathon nav > div.bg-white a:not([class*="text-white"]):hover,
-.openmetadata-hackathon nav > div[class*="bg-white"] a:not([class*="text-white"]):hover {
+.openmetadata-hackathon
+	nav
+	> div[class*="bg-white"]
+	a:not([class*="text-white"]):hover {
 	color: #d97706 !important;
 }
 
@@ -271,7 +442,9 @@
 	overflow: clip;
 }
 
-.openmetadata-hackathon .openmetadata-sticky-nav nav[aria-label="secondary nav"] {
+.openmetadata-hackathon
+	.openmetadata-sticky-nav
+	nav[aria-label="secondary nav"] {
 	background: transparent !important;
 	border: none !important;
 }

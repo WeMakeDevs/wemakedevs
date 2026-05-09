@@ -16,7 +16,7 @@ export const assemblehackTestimonials: TestimonialInterface[] = [
 		name: "Jiten Purswani",
 		platform: "linkedin",
 		testimonialText:
-			"I'm pleased to share that I've officially begun my journey in the AI Agents Assemble Hackathon. My sincere thanks to Kunal Kushwaha and the entire WeMakeDevs team for organizing this initiative and consistently creating high-quality, learning-driven experiences for the developer community.",
+			"Officially begun my journey in the AI Agents Assemble Hackathon. Sincere thanks to Kunal Kushwaha and the WeMakeDevs team for consistently creating high-quality, learning-driven experiences for the developer community.",
 	},
 	{
 		profileImage: karthik,
@@ -37,14 +37,14 @@ export const assemblehackTestimonials: TestimonialInterface[] = [
 		name: "Pranjal Shahi",
 		platform: "linkedin",
 		testimonialText:
-			"During this hackathon, my team and I challenged ourselves to solve a real-world problem: Emergency situations often go unnoticed in CCTV systems. That idea became AI Emergency Agent — a system that analyzes videos, detects incidents, and escalates critical events in real time.",
+			"My team and I challenged ourselves to solve a real-world problem: emergency situations often go unnoticed in CCTV systems. That became AI Emergency Agent — a system that analyzes videos, detects incidents, and escalates critical events in real time.",
 	},
 	{
 		profileImage: kamran,
 		name: "Md. Kamran Alam",
 		platform: "linkedin",
 		testimonialText:
-			"Thrilled to share our latest hackathon project — FinCompliance-AI! As a 2-member team, we built an AI-powered compliance assistant for the Assemble Hack 2025 organized by WeMakeDevs. A big shoutout to WeMakeDevs and Kunal Kushwaha for organizing such an inspiring hackathon!",
+			"Thrilled to share our latest hackathon project — FinCompliance-AI! A 2-member team built an AI-powered compliance assistant for Assemble Hack 2025 by WeMakeDevs. Big shoutout to WeMakeDevs and Kunal Kushwaha!",
 	},
 	{
 		profileImage: mohit,
@@ -58,7 +58,7 @@ export const assemblehackTestimonials: TestimonialInterface[] = [
 		name: "Nikil Paul",
 		platform: "linkedin",
 		testimonialText:
-			"Just wrapped up the AI Agents Assemble hackathon by WeMakeDevs!! Built Reclaim, a learning app with AI agents for Coding, Writing, and Math. Cline was the absolute backbone — gotta give it to Cline for absolutely crushing it even in free tier. Had a blast learning and building!",
+			"Just wrapped up the AI Agents Assemble hackathon by WeMakeDevs! Built Reclaim — a learning app with AI agents for Coding, Writing, and Math. Cline was the absolute backbone, crushing it even on the free tier. Had a blast building!",
 	},
 	{
 		profileImage: himanshu,

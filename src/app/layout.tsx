@@ -59,7 +59,7 @@ export default function RootLayout({
 		<html lang="en">
 			<body
 				className={cn(
-					"min-h-screen bg-background font-body antialiased",
+					"min-h-screen bg-background font-body antialiased overflow-x-hidden",
 					fontSans.variable,
 					fontMono.variable,
 				)}

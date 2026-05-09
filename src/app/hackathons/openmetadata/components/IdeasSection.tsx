@@ -2,14 +2,7 @@
 
 import { ViewContainer } from "@/components/ui/view-container";
 import { motion } from "framer-motion";
-import {
-	Bot,
-	Eye,
-	MessageSquare,
-	Plug,
-	Shield,
-	Wrench,
-} from "lucide-react";
+import { Bot, Eye, MessageSquare, Plug, Shield, Wrench } from "lucide-react";
 import Link from "next/link";
 
 const iconMap: Record<string, React.ReactNode> = {
@@ -97,7 +90,11 @@ const containerVariants = {
 
 const cardVariants = {
 	hidden: { opacity: 0, y: 24 },
-	visible: { opacity: 1, y: 0, transition: { duration: 0.55, ease: "easeOut" as const } },
+	visible: {
+		opacity: 1,
+		y: 0,
+		transition: { duration: 0.55, ease: "easeOut" as const },
+	},
 };
 
 const IdeasSection = () => {
@@ -134,8 +131,9 @@ const IdeasSection = () => {
 						viewport={{ once: true }}
 						transition={{ duration: 0.55, delay: 0.2 }}
 					>
-						These are just inspiration categories to get you started — the theme is completely open-ended.
-						You can build anything you want, as long as it uses or integrates with{" "}
+						These are just inspiration categories to get you started
+						— the theme is completely open-ended. You can build
+						anything you want, as long as it uses or integrates with{" "}
 						<Link
 							href="https://github.com/open-metadata/OpenMetadata"
 							target="_blank"
@@ -143,8 +141,12 @@ const IdeasSection = () => {
 							className="text-amber-400 underline hover:text-amber-300"
 						>
 							OpenMetadata
-						</Link>.
-						You are <span className="text-amber-400 font-semibold">not limited</span> to the ideas on the GitHub project board.
+						</Link>
+						. You are{" "}
+						<span className="text-amber-400 font-semibold">
+							not limited
+						</span>{" "}
+						to the ideas on the GitHub project board.
 					</motion.p>
 
 					<motion.p
@@ -154,7 +156,9 @@ const IdeasSection = () => {
 						viewport={{ once: true }}
 						transition={{ duration: 0.55, delay: 0.25 }}
 					>
-						The project board has curated ideas if you need a starting point, but your own original idea is equally welcome.
+						The project board has curated ideas if you need a
+						starting point, but your own original idea is equally
+						welcome.
 					</motion.p>
 
 					<motion.div
@@ -182,7 +186,7 @@ const IdeasSection = () => {
 					whileInView="visible"
 					viewport={{ once: true, margin: "-60px" }}
 				>
-					{paradoxes.map((p) => (
+					{paradoxes.map(p => (
 						<motion.div
 							key={p.id}
 							variants={cardVariants}
@@ -190,7 +194,9 @@ const IdeasSection = () => {
 						>
 							{/* Corner tag */}
 							<div className="absolute top-3 right-3">
-								<span className="font-mono text-[9px] text-slate-500 tracking-widest">{p.label}</span>
+								<span className="font-mono text-[9px] text-slate-500 tracking-widest">
+									{p.label}
+								</span>
 							</div>
 
 							{/* Subtle corner glow on hover */}

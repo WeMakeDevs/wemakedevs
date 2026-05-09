@@ -58,7 +58,7 @@ export const lingohackTestimonials: TestimonialInterface[] = [
 		name: "Jasmeenkaur Pabla",
 		platform: "linkedin",
 		testimonialText:
-			"Excited to have been part of building DevDocs Global! An AI-driven tool that translates developer documentation effortlessly with Lingo.dev SDK. Grateful for the experience and the learning during the WeMakeDevs hackathon! Check out the project — open source and ready to try!",
+			"Excited to have been part of building DevDocs Global! An AI-driven tool that translates developer documentation effortlessly with Lingo.dev SDK. Grateful for the experience during the WeMakeDevs hackathon!",
 	},
 	{
 		profileImage: devansh,

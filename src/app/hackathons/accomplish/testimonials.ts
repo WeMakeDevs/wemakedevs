@@ -24,7 +24,7 @@ export const accomplishTestimonials: TestimonialInterface[] = [
 		name: "Raunak",
 		platform: "twitter",
 		testimonialText:
-			"I got tired setting up the same environment again and again for every project, then I started using @Accomplish_ai. I just gave a prompt explaining what I want in my project, what it does, what to install, how to set it up. That's it. It searched official docs online, installed everything, and set up my whole basic project structure in one shot. It handles initial setup like Google authentication, a basic landing page, basic backend boilerplate and more. Now I can just focus on building the core logic part.",
+			"Got tired setting up the same environment again and again. One prompt to @Accomplish_ai installs everything, sets up Google auth, a landing page, basic backend boilerplate — all in one shot. Now I just focus on the core logic.",
 	},
 	{
 		profileImage: rishi,
@@ -80,14 +80,14 @@ export const accomplishTestimonials: TestimonialInterface[] = [
 		name: "Sagnik",
 		platform: "twitter",
 		testimonialText:
-			"Built an AI startup hunting agent for the @WeMakeDevs x @Accomplish_ai hackathon 🔨 It automatically: → Scrapes YC for recently funded startups → Matches roles against your tech stack → Gives personalized cold email templates for every match. All running locally on your machine with @Accomplish_ai skills. No more applying into the void 🎯",
+			"Built an AI startup hunting agent for @WeMakeDevs x @Accomplish_ai 🔨 Scrapes YC for recently funded startups, matches roles against your tech stack, and drafts personalized cold emails. All running locally. No more applying into the void 🎯",
 	},
 	{
 		profileImage: chetan,
 		name: "Chetan",
 		platform: "twitter",
 		testimonialText:
-			"Few days ago I joined Automate Me If You Can Hackathon @wemakedevs x @accomplish_ai, realized Linux users couldn't even run Accomplish 😅 So I raised a PR to bring Linux support to @accomplish_ai 🐧 AppImage, .deb, and .rpm — all three. What's in the PR: → electron-builder Linux targets → CI/CD job for Linux x64 builds → Per-platform binary exclusions → Node.js Linux arm64 + x64 downloads → Fixed CLI resolver so tasks actually run on Linux. Linux devs shouldn't have to miss out 🙌",
+			"Realized Linux users couldn't even run Accomplish 😅 So I raised a PR to bring Linux support to @accomplish_ai 🐧 AppImage, .deb, and .rpm — all three. Linux devs shouldn't have to miss out 🙌",
 	},
 	{
 		profileImage: xenovoid,
@@ -108,7 +108,7 @@ export const accomplishTestimonials: TestimonialInterface[] = [
 		name: "Aman",
 		platform: "twitter",
 		testimonialText:
-			"Every beginner wants to contribute to open source. Nobody knows where to start. So I built a fix: GitHub Beginner Issue Finder — an @AccomplishAI skill that asks your tech stack & difficulty level, browses GitHub and finds 10 active repos, generates a markdown guide with beginner issues, required skills & time estimates. All automated. No manual searching. Just results.",
+			"Every beginner wants to contribute to open source, but nobody knows where to start. Built GitHub Beginner Issue Finder — an @AccomplishAI skill that takes your tech stack + difficulty level and returns 10 active repos with beginner issues. All automated.",
 	},
 	{
 		profileImage: aniket,

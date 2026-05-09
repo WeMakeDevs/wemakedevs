@@ -55,7 +55,7 @@ export const futurestackTestimonials: TestimonialInterface[] = [
 		name: "Dhruva Wani",
 		platform: "twitter",
 		testimonialText:
-			"Huge shoutout to @WeMakeDevs for organizing FutureStack GenAI Hackathon A global stage to learn, create, and push the limits of AI & cloud-native tech. Win prizes, gain exclusive learning, and connect with top engineers. Build the future with Cerebras,  Meta, Docker. Thank you",
+			"A global stage to learn, create, and push the limits of AI & cloud-native tech. Huge shoutout to @WeMakeDevs for organizing FutureStack GenAI Hackathon with Cerebras, Meta, and Docker. Thank you!",
 	},
 	{
 		profileImage: pabitra,
@@ -70,7 +70,7 @@ export const futurestackTestimonials: TestimonialInterface[] = [
 		name: "Utpal Kalita",
 		platform: "linkedin",
 		testimonialText:
-			"Our hackathon project from FutureStack GenAI Hackathon! organized by WeMakeDevs Built an AI tool that helps you understand and reduce your carbon footprint. I worked on the frontend, while Vaibhav Sharma handled the backend and Muhammad Kamran Alam built the AI core. Couldn’t have asked for a better team! 🙌",
+			"Our FutureStack GenAI hackathon project organized by WeMakeDevs: an AI tool that helps you understand and reduce your carbon footprint. I worked on frontend, Vaibhav on backend, Kamran on the AI core. Couldn't have asked for a better team! 🙌",
 	},
 	{
 		profileImage: anik,
@@ -87,7 +87,7 @@ export const futurestackTestimonials: TestimonialInterface[] = [
 		name: "Mujahid Zubair M",
 		platform: "linkedin",
 		testimonialText:
-			"Hey! Super proud of what we've built with Cerebras Systems on Hackathon which was conducted by WeMakeDevs of FutureStack GENAI Hackathon. These sleepless nights, endless debugging sessions, and 'one more try' moments? They're always worth it when you see your solution actually working.  🚀",
+			"Super proud of what we built with Cerebras Systems at the FutureStack GenAI Hackathon by WeMakeDevs. Sleepless nights, endless debugging, and 'one more try' moments — always worth it when you see your solution actually working. 🚀",
 	},
 	{
 		profileImage: aayush,

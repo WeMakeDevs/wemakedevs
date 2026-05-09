@@ -42,7 +42,7 @@ export const tamboTestimonials: TestimonialInterface[] = [
 		name: "Allen",
 		platform: "twitter",
 		testimonialText:
-			"Built WanderAI for the @tambo_ai \"The UI Strikes Back\" hackathon - a conversational trip planner that streams interactive React components in real-time. Ask it to plan a trip and watch itineraries, budget breakdowns, and place cards render live in the chat. Had no idea about generative UI before this event, went from zero to streaming full React components from AI responses. Great learning experience overall!",
+			"Built WanderAI for @tambo_ai's UI Strikes Back hackathon — a conversational trip planner that streams interactive React components in real-time. Went from zero to streaming full React components from AI responses. Great learning experience!",
 	},
 	{
 		profileImage: kishan,

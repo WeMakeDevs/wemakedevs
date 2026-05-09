@@ -16,7 +16,7 @@ export const agenthackTestimonials: TestimonialInterface[] = [
 		name: "Sai Vardhan Penmetsa",
 		platform: "linkedin",
 		testimonialText:
-			"✨ Five days of pure hustle, late-night debugging, and incredible learning! Building an AI-powered Trading Agent during AgentHack 2025 with Portia AI and guidance from the WeMakeDevs community was intense yet rewarding, turning raw ideas into a fully functional AI trading assistant. 🚀",
+			"✨ Five days of pure hustle, late-night debugging, and incredible learning! Built an AI-powered Trading Agent during AgentHack 2025 with Portia AI — turning raw ideas into a fully functional trading assistant. 🚀",
 	},
 	{
 		profileImage: shresth,
@@ -51,7 +51,7 @@ export const agenthackTestimonials: TestimonialInterface[] = [
 		name: "Sachin M.",
 		platform: "linkedin",
 		testimonialText:
-			'I\'ve just finished building my project for #AgentHack2025! Faced a critical bug in Portia, so pivoted to Google Gemini API and built the "AI Grocery Helper" app. This project is about real-world problem-solving under pressure. Proud of the result! Thanks to WeMakeDevs!',
+			'Just finished building my project for #AgentHack2025! Faced a critical bug in Portia, pivoted to Google Gemini API, and built "AI Grocery Helper." Real-world problem-solving under pressure. Thanks WeMakeDevs!',
 	},
 	{
 		profileImage: anujkumar,

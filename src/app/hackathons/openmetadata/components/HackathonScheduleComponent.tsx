@@ -239,12 +239,23 @@ const HackathonScheduleComponent = ({
 																	className="text-amber-400 hover:text-amber-300"
 																	target="_blank"
 																	rel="noopener noreferrer"
-																	title={l.platform}
+																	title={
+																		l.platform
+																	}
 																>
-																	{l.platform === "youtube" ? (
-																		<Youtube size={18} />
+																	{l.platform ===
+																	"youtube" ? (
+																		<Youtube
+																			size={
+																				18
+																			}
+																		/>
 																	) : (
-																		<Link2 size={16} />
+																		<Link2
+																			size={
+																				16
+																			}
+																		/>
 																	)}
 																</Link>
 															),

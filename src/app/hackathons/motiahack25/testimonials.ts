@@ -17,7 +17,7 @@ export const motiahackTestimonials: TestimonialInterface[] = [
 		name: "Rishi",
 		platform: "twitter",
 		testimonialText:
-			"Day-8 of #30Days30Automations 🚀 Built CloudJanitor using @motiadev to catch idle cloud resources and make cleanup safe. Backend Reloaded hackathon is going big. Thanks to @WeMakeDevs and @kunalstwt. Me & Rohit are sharing real backend automations for people joining the hackathon",
+			"Day-8 of #30Days30Automations 🚀 Built CloudJanitor with @motiadev to catch idle cloud resources and make cleanup safe. Backend Reloaded hackathon is going big. Thanks @WeMakeDevs and @kunalstwt!",
 	},
 	{
 		profileImage: shubham,
@@ -66,7 +66,7 @@ export const motiahackTestimonials: TestimonialInterface[] = [
 		name: "Manav",
 		platform: "twitter",
 		testimonialText:
-			"It was a great learning experience 🙌 Thanks to the @WeMakeDevs and @motiadev team for organizing the hackathon. Working with the Motia framework was amazing — it simplifies everything from REST APIs and cron jobs to events. The Workbench feature is an absolute banger 🚀🔥",
+			"Great learning experience! 🙌 Thanks to @WeMakeDevs and @motiadev for organizing. Motia simplifies everything from REST APIs and cron jobs to events. The Workbench feature is an absolute banger 🚀🔥",
 	},
 	{
 		profileImage: shruti,

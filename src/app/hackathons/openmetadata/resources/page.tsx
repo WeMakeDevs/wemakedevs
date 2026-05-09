@@ -36,7 +36,8 @@ const HackathonResources = async () => {
 				</HackathonContentTitle>
 				<HackathonContentBody className="text-slate-300">
 					<p className="mb-3">
-						Ready to submit? Use the official submission form (one submission per team):
+						Ready to submit? Use the official submission form (one
+						submission per team):
 					</p>
 					<ul className="space-y-2 list-disc list-inside">
 						<li>
@@ -66,7 +67,8 @@ const HackathonResources = async () => {
 							>
 								OpenMetadata Slack
 							</Link>{" "}
-							for technical support, doubts, and community discussion
+							for technical support, doubts, and community
+							discussion
 						</li>
 						<li>
 							For other queries, contact us at{" "}
@@ -95,7 +97,8 @@ const HackathonResources = async () => {
 							>
 								Docker Desktop Download
 							</Link>{" "}
-							- Select your device type and download Docker Desktop
+							- Select your device type and download Docker
+							Desktop
 						</li>
 						<li>
 							<Link
@@ -106,7 +109,8 @@ const HackathonResources = async () => {
 							>
 								OpenMetadata on Docker Quickstart
 							</Link>{" "}
-							- Spin up a running OpenMetadata instance locally (not the same as a contributor dev setup)
+							- Spin up a running OpenMetadata instance locally
+							(not the same as a contributor dev setup)
 						</li>
 						<li>
 							<Link
@@ -117,7 +121,8 @@ const HackathonResources = async () => {
 							>
 								Development environment setup (contributing)
 							</Link>{" "}
-							- Set up your machine to build OpenMetadata from source and contribute to the project
+							- Set up your machine to build OpenMetadata from
+							source and contribute to the project
 						</li>
 						<li>
 							<Link
@@ -128,7 +133,8 @@ const HackathonResources = async () => {
 							>
 								OpenMetadata Day 1 Guide (Video)
 							</Link>{" "}
-							- Video walkthrough of getting started on OpenMetadata
+							- Video walkthrough of getting started on
+							OpenMetadata
 						</li>
 						<li>
 							<Link
@@ -150,7 +156,8 @@ const HackathonResources = async () => {
 							>
 								Hackathon Resources Issue
 							</Link>{" "}
-							- Curated list of resources compiled for this hackathon
+							- Curated list of resources compiled for this
+							hackathon
 						</li>
 					</ul>
 				</HackathonContentBody>
@@ -159,7 +166,8 @@ const HackathonResources = async () => {
 				</HackathonContentTitle>
 				<HackathonContentBody className="text-slate-300">
 					<p className="mb-4">
-						Explore the official project board for detailed ideas across all tracks:
+						Explore the official project board for detailed ideas
+						across all tracks:
 					</p>
 					<ul className="space-y-3 list-disc list-inside">
 						<li>
@@ -175,9 +183,11 @@ const HackathonResources = async () => {
 						</li>
 					</ul>
 					<p className="mt-4">
-						<strong className="text-amber-400">Tracks:</strong> MCP Ecosystem & AI Agents, Data Observability,
-						OpenMetadata Connectors & Ingestion, Developer Tooling & CI/CD,
-						Community & Communication Apps, Governance & Classification
+						<strong className="text-amber-400">Tracks:</strong> MCP
+						Ecosystem & AI Agents, Data Observability, OpenMetadata
+						Connectors & Ingestion, Developer Tooling & CI/CD,
+						Community & Communication Apps, Governance &
+						Classification
 					</p>
 				</HackathonContentBody>
 				<HackathonContentTitle className="text-amber-400">
@@ -186,28 +196,46 @@ const HackathonResources = async () => {
 				<HackathonContentBody className="text-slate-300">
 					<ul className="space-y-3 list-disc list-inside">
 						<li>
-							<strong className="text-amber-400">Data Discovery:</strong>{" "}
-							Centralized metadata repository with search, tags, and descriptions
+							<strong className="text-amber-400">
+								Data Discovery:
+							</strong>{" "}
+							Centralized metadata repository with search, tags,
+							and descriptions
 						</li>
 						<li>
-							<strong className="text-amber-400">Column-Level Lineage:</strong>{" "}
-							Trace data flow from source to destination at the column level
+							<strong className="text-amber-400">
+								Column-Level Lineage:
+							</strong>{" "}
+							Trace data flow from source to destination at the
+							column level
 						</li>
 						<li>
-							<strong className="text-amber-400">Data Quality:</strong>{" "}
-							Automated tests, profiling, and anomaly detection for your data
+							<strong className="text-amber-400">
+								Data Quality:
+							</strong>{" "}
+							Automated tests, profiling, and anomaly detection
+							for your data
 						</li>
 						<li>
-							<strong className="text-amber-400">Governance:</strong>{" "}
-							Policies, roles, classifications, and compliance management
+							<strong className="text-amber-400">
+								Governance:
+							</strong>{" "}
+							Policies, roles, classifications, and compliance
+							management
 						</li>
 						<li>
-							<strong className="text-amber-400">70+ Connectors:</strong>{" "}
-							Ingestion from databases, dashboards, ML models, pipelines, and more
+							<strong className="text-amber-400">
+								70+ Connectors:
+							</strong>{" "}
+							Ingestion from databases, dashboards, ML models,
+							pipelines, and more
 						</li>
 						<li>
-							<strong className="text-amber-400">API-First:</strong>{" "}
-							Full REST API for programmatic access to all metadata
+							<strong className="text-amber-400">
+								API-First:
+							</strong>{" "}
+							Full REST API for programmatic access to all
+							metadata
 						</li>
 					</ul>
 				</HackathonContentBody>

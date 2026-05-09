@@ -8,6 +8,7 @@ import HeroSection from "./components/HeroSection";
 import IdeasSection from "./components/IdeasSection";
 import PrizesShowcase from "./components/PrizesShowcase";
 import OpenMetadataStats from "./components/Stats";
+import OpenMetadataTestimonials from "./components/Testimonials";
 import { DATA, faqs, navLinks } from "./data";
 import { images } from "./images";
 
@@ -47,7 +48,6 @@ const judgingCriteria = [
 const HackathonPage = () => {
 	return (
 		<main className="pt-20">
-
 			{/* ── Hero Section ──────────────────────────────────────────────────────── */}
 			<div id="about" className="scroll-mt-44">
 				<HeroSection
@@ -90,14 +90,25 @@ const HackathonPage = () => {
 					<div className="glass-card rounded-2xl py-12 px-8 max-w-4xl mx-auto">
 						<p className="text-lg md:text-xl text-slate-300 leading-relaxed text-center">
 							OpenMetadata is an open-source unified platform for{" "}
-							<span className="text-amber-400 font-semibold">data discovery</span>,{" "}
-							<span className="text-purple-400 font-semibold">data observability</span>, and{" "}
-							<span className="text-cyan-400 font-semibold">data governance</span>, powered by
-							a central metadata repository, in-depth column-level lineage, and seamless team
-							collaboration. Whether you&apos;re building MCP servers, observability tools,
-							custom connectors, governance automations, or AI-powered metadata agents, this
-							hackathon is your proving ground. Fire up the flux capacitor and build something
-							that changes the timeline of data management forever.
+							<span className="text-amber-400 font-semibold">
+								data discovery
+							</span>
+							,{" "}
+							<span className="text-purple-400 font-semibold">
+								data observability
+							</span>
+							, and{" "}
+							<span className="text-cyan-400 font-semibold">
+								data governance
+							</span>
+							, powered by a central metadata repository, in-depth
+							column-level lineage, and seamless team
+							collaboration. Whether you&apos;re building MCP
+							servers, observability tools, custom connectors,
+							governance automations, or AI-powered metadata
+							agents, this hackathon is your proving ground. Fire
+							up the flux capacitor and build something that
+							changes the timeline of data management forever.
 						</p>
 					</div>
 				</ViewContainer>
@@ -121,7 +132,8 @@ const HackathonPage = () => {
 							Submit your project →
 						</span>
 						<span className="text-slate-400 text-center sm:text-left">
-							One person per team. Submit via the official form before the deadline.
+							One person per team. Submit via the official form
+							before the deadline.
 						</span>
 						<ArrowUpRight className="w-6 h-6 text-amber-400 shrink-0" />
 					</Link>
@@ -131,6 +143,11 @@ const HackathonPage = () => {
 			{/* ── Prizes ────────────────────────────────────────────────────────────── */}
 			<div id="prizes" className="scroll-mt-44 bg-slate-950">
 				<PrizesShowcase />
+			</div>
+
+			{/* ── Participant Testimonials ───────────────────────────────────────────── */}
+			<div className="bg-slate-900/30">
+				<OpenMetadataTestimonials />
 			</div>
 
 			{/* ── Sponsor ───────────────────────────────────────────────────────────── */}
@@ -151,7 +168,9 @@ const HackathonPage = () => {
 										className="h-10 w-auto"
 									/>
 								</div>
-								<span className="text-slate-400 text-lg">OpenMetadata by Collate</span>
+								<span className="text-slate-400 text-lg">
+									OpenMetadata by Collate
+								</span>
 							</div>
 							<Link
 								href="https://github.com/open-metadata"
@@ -164,13 +183,17 @@ const HackathonPage = () => {
 						</div>
 						<div className="p-8">
 							<p className="text-lg text-slate-300 leading-relaxed">
-								OpenMetadata is an open-source unified metadata platform for data discovery,
-								data observability, and data governance. It provides a central metadata
-								repository, in-depth column-level lineage, seamless team collaboration, and
-								robust governance capabilities. With support for 70+ connectors, automated
-								data quality tests, and a powerful API-first architecture, OpenMetadata is
-								the backbone of modern data teams. Your mission: push the boundaries of
-								what&apos;s possible with metadata.
+								OpenMetadata is an open-source unified metadata
+								platform for data discovery, data observability,
+								and data governance. It provides a central
+								metadata repository, in-depth column-level
+								lineage, seamless team collaboration, and robust
+								governance capabilities. With support for 70+
+								connectors, automated data quality tests, and a
+								powerful API-first architecture, OpenMetadata is
+								the backbone of modern data teams. Your mission:
+								push the boundaries of what&apos;s possible with
+								metadata.
 							</p>
 						</div>
 					</div>
@@ -198,7 +221,9 @@ const HackathonPage = () => {
 									<span className="font-mono text-xs text-amber-600/80 bg-amber-500/10 px-2 py-0.5 rounded">
 										{String(i + 1).padStart(2, "0")}
 									</span>
-									<h3 className="text-lg font-bold text-amber-400">{criterion.title}</h3>
+									<h3 className="text-lg font-bold text-amber-400">
+										{criterion.title}
+									</h3>
 								</div>
 								<p className="text-slate-300 text-sm leading-relaxed">
 									{criterion.description}

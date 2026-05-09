@@ -1,13 +1,14 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Calendar, ChevronDown, Users, Zap } from "lucide-react";
+import { Calendar, ChevronDown, Trophy, Users, Zap } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import boseImg from "../images/bose.png";
 import ipadImg from "../images/ipad.png";
 import iphoneImg from "../images/iphone.png";
 import macbookImg from "../images/macbook.png";
+import jishanImg from "../images/winners/jishanahmed-ar-shaikh.png";
 
 const floatingProducts = [
 	{
@@ -172,6 +173,50 @@ const HeroSection = () => {
 						Learn More
 						<ChevronDown size={18} />
 					</Link>
+				</motion.div>
+
+				{/* First winner highlight */}
+				<motion.div
+					initial={{ opacity: 0, y: 30 }}
+					animate={{ opacity: 1, y: 0 }}
+					transition={{ duration: 0.6, delay: 0.5 }}
+					className="mt-14 mx-auto max-w-2xl"
+				>
+					<div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-[#00cfb4]/30 bg-[#00cfb4]/10 text-[#00cfb4] text-xs font-semibold uppercase tracking-wider mb-4">
+						<Trophy size={12} />
+						First Winner · Next announced May 13
+					</div>
+					<div className="relative overflow-hidden rounded-2xl border border-[#00cfb4]/20 bg-gradient-to-br from-slate-900/80 via-slate-900/60 to-[#00cfb4]/[0.04] backdrop-blur-sm p-5 md:p-6 text-left">
+						<div className="absolute -top-10 -right-10 w-40 h-40 rounded-full bg-[#00cfb4]/10 blur-3xl pointer-events-none" />
+						<div className="relative flex flex-col sm:flex-row items-start sm:items-center gap-5">
+							<div className="relative shrink-0 mx-auto sm:mx-0">
+								<div className="absolute inset-0 rounded-full bg-gradient-to-br from-[#00cfb4] to-purple-500 blur-md opacity-40" />
+								<Image
+									src={jishanImg}
+									alt="Jishanahmed AR Shaikh"
+									className="relative w-24 h-24 md:w-28 md:h-28 rounded-full object-cover border-2 border-[#00cfb4]/40"
+								/>
+							</div>
+							<div className="flex-1 min-w-0 text-center sm:text-left">
+								<h3 className="text-lg md:text-xl font-bold text-white mb-1">
+									Jishanahmed AR Shaikh
+								</h3>
+								<p className="text-sm text-[#00cfb4] font-semibold mb-2">
+									🏆 First Winner
+								</p>
+								<p className="text-slate-300 text-sm md:text-base leading-relaxed">
+									Built an AI-powered{" "}
+									<span className="text-white font-semibold">
+										GitHub PR Reviewer Agent
+									</span>{" "}
+									that reviews pull requests when you&apos;re
+									away. Entirely powered by Kestra
+									orchestration and an LLM, with no backend
+									code.
+								</p>
+							</div>
+						</div>
+					</div>
 				</motion.div>
 			</div>
 		</section>

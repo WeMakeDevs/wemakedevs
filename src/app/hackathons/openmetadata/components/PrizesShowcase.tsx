@@ -6,7 +6,12 @@ import Link from "next/link";
 // ─── Product Icons (clean minimal SVGs) ───────────────────────────────────────
 
 const MacBookIcon = () => (
-	<svg viewBox="0 0 120 80" className="w-full h-full" fill="none" xmlns="http://www.w3.org/2000/svg">
+	<svg
+		viewBox="0 0 120 80"
+		className="w-full h-full"
+		fill="none"
+		xmlns="http://www.w3.org/2000/svg"
+	>
 		<defs>
 			<linearGradient id="mbScreen" x1="0" y1="0" x2="0" y2="1">
 				<stop offset="0%" stopColor="#1e293b" />
@@ -19,20 +24,43 @@ const MacBookIcon = () => (
 		</defs>
 		{/* Screen */}
 		<rect x="10" y="5" width="100" height="58" rx="4" fill="url(#mbBody)" />
-		<rect x="14" y="9" width="92" height="50" rx="2" fill="url(#mbScreen)" />
+		<rect
+			x="14"
+			y="9"
+			width="92"
+			height="50"
+			rx="2"
+			fill="url(#mbScreen)"
+		/>
 		{/* Apple logo hint */}
 		<ellipse cx="60" cy="34" rx="6" ry="7" fill="#334155" />
 		<ellipse cx="63" cy="28" rx="2" ry="3" fill="#334155" />
 		{/* Base */}
-		<path d="M5 63 L115 63 L118 72 C118 74 116 76 114 76 L6 76 C4 76 2 74 2 72 L5 63Z" fill="url(#mbBody)" />
+		<path
+			d="M5 63 L115 63 L118 72 C118 74 116 76 114 76 L6 76 C4 76 2 74 2 72 L5 63Z"
+			fill="url(#mbBody)"
+		/>
 		<rect x="45" y="66" width="30" height="4" rx="2" fill="#334155" />
 		{/* Shine */}
-		<rect x="14" y="9" width="92" height="8" rx="1" fill="white" fillOpacity="0.05" />
+		<rect
+			x="14"
+			y="9"
+			width="92"
+			height="8"
+			rx="1"
+			fill="white"
+			fillOpacity="0.05"
+		/>
 	</svg>
 );
 
 const IPadIcon = () => (
-	<svg viewBox="0 0 70 100" className="w-full h-full" fill="none" xmlns="http://www.w3.org/2000/svg">
+	<svg
+		viewBox="0 0 70 100"
+		className="w-full h-full"
+		fill="none"
+		xmlns="http://www.w3.org/2000/svg"
+	>
 		<defs>
 			<linearGradient id="ipadBody" x1="0" y1="0" x2="0" y2="1">
 				<stop offset="0%" stopColor="#64748b" />
@@ -46,19 +74,39 @@ const IPadIcon = () => (
 		{/* Body */}
 		<rect x="5" y="5" width="60" height="90" rx="6" fill="url(#ipadBody)" />
 		{/* Screen */}
-		<rect x="9" y="12" width="52" height="76" rx="3" fill="url(#ipadScreen)" />
+		<rect
+			x="9"
+			y="12"
+			width="52"
+			height="76"
+			rx="3"
+			fill="url(#ipadScreen)"
+		/>
 		{/* Camera */}
 		<circle cx="35" cy="8" r="2" fill="#334155" />
 		{/* Apple logo hint */}
 		<ellipse cx="35" cy="50" rx="5" ry="6" fill="#334155" />
 		<ellipse cx="37" cy="45" rx="1.5" ry="2.5" fill="#334155" />
 		{/* Shine */}
-		<rect x="9" y="12" width="52" height="12" rx="2" fill="white" fillOpacity="0.04" />
+		<rect
+			x="9"
+			y="12"
+			width="52"
+			height="12"
+			rx="2"
+			fill="white"
+			fillOpacity="0.04"
+		/>
 	</svg>
 );
 
 const KeychronIcon = () => (
-	<svg viewBox="0 0 140 50" className="w-full h-full" fill="none" xmlns="http://www.w3.org/2000/svg">
+	<svg
+		viewBox="0 0 140 50"
+		className="w-full h-full"
+		fill="none"
+		xmlns="http://www.w3.org/2000/svg"
+	>
 		<defs>
 			<linearGradient id="kbBody" x1="0" y1="0" x2="0" y2="1">
 				<stop offset="0%" stopColor="#374151" />
@@ -68,7 +116,7 @@ const KeychronIcon = () => (
 		{/* Keyboard body */}
 		<rect x="5" y="10" width="130" height="35" rx="5" fill="url(#kbBody)" />
 		{/* Key rows */}
-		{[0, 1, 2].map((row) => (
+		{[0, 1, 2].map(row => (
 			<g key={row}>
 				{Array.from({ length: 14 }).map((_, i) => (
 					<rect
@@ -79,10 +127,13 @@ const KeychronIcon = () => (
 						height="7"
 						rx="1.5"
 						fill={
-							(row === 0 && i === 0) ? "#ef4444" :
-							(row === 0 && i === 13) ? "#22c55e" :
-							(row === 1 && i === 0) ? "#f59e0b" :
-							"#4b5563"
+							row === 0 && i === 0
+								? "#ef4444"
+								: row === 0 && i === 13
+									? "#22c55e"
+									: row === 1 && i === 0
+										? "#f59e0b"
+										: "#4b5563"
 						}
 					/>
 				))}
@@ -91,7 +142,15 @@ const KeychronIcon = () => (
 		{/* Spacebar */}
 		<rect x="35" y="38" width="50" height="5" rx="2" fill="#4b5563" />
 		{/* RGB glow under */}
-		<rect x="10" y="44" width="120" height="2" rx="1" fill="#a855f7" fillOpacity="0.4" />
+		<rect
+			x="10"
+			y="44"
+			width="120"
+			height="2"
+			rx="1"
+			fill="#a855f7"
+			fillOpacity="0.4"
+		/>
 	</svg>
 );
 
@@ -106,7 +165,14 @@ type PrizeCardProps = {
 	glowColor: string;
 };
 
-const PrizeCard = ({ place, title, subtitle, icon, accentColor, glowColor }: PrizeCardProps) => (
+const PrizeCard = ({
+	place,
+	title,
+	subtitle,
+	icon,
+	accentColor,
+	glowColor,
+}: PrizeCardProps) => (
 	<div
 		className="group relative bg-slate-900/90 rounded-2xl p-6 border border-slate-700/60 hover:border-amber-500/40 transition-all duration-300 overflow-hidden"
 		style={{ boxShadow: `0 0 40px ${glowColor}` }}
@@ -120,7 +186,11 @@ const PrizeCard = ({ place, title, subtitle, icon, accentColor, glowColor }: Pri
 		{/* Place badge */}
 		<div
 			className="absolute top-4 right-4 text-xs font-bold px-3 py-1 rounded-full border"
-			style={{ color: accentColor, borderColor: accentColor, background: `${accentColor}15` }}
+			style={{
+				color: accentColor,
+				borderColor: accentColor,
+				background: `${accentColor}15`,
+			}}
 		>
 			{place}
 		</div>
@@ -131,13 +201,17 @@ const PrizeCard = ({ place, title, subtitle, icon, accentColor, glowColor }: Pri
 		</div>
 
 		{/* Text */}
-		<h4 className="text-xl md:text-2xl font-bold text-white mb-1">{title}</h4>
+		<h4 className="text-xl md:text-2xl font-bold text-white mb-1">
+			{title}
+		</h4>
 		<p className="text-slate-400 text-sm">{subtitle}</p>
 
 		{/* Bottom accent line */}
 		<div
 			className="absolute bottom-0 left-0 right-0 h-1 opacity-60 group-hover:opacity-100 transition-opacity"
-			style={{ background: `linear-gradient(90deg, transparent, ${accentColor}, transparent)` }}
+			style={{
+				background: `linear-gradient(90deg, transparent, ${accentColor}, transparent)`,
+			}}
 		/>
 	</div>
 );
@@ -164,7 +238,12 @@ const PrizesShowcase = () => {
 					{/* Highlighted banner */}
 					<div className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-gradient-to-r from-emerald-500/20 via-emerald-500/15 to-emerald-500/20 border-2 border-emerald-400/50 shadow-[0_0_30px_rgba(52,211,153,0.25)]">
 						<span className="text-2xl">🎁</span>
-						<span className="text-lg md:text-xl font-bold text-emerald-300" style={{ textShadow: "0 0 12px rgba(110,231,183,0.5)" }}>
+						<span
+							className="text-lg md:text-xl font-bold text-emerald-300"
+							style={{
+								textShadow: "0 0 12px rgba(110,231,183,0.5)",
+							}}
+						>
 							Every team member receives the full prize!
 						</span>
 					</div>
@@ -188,7 +267,9 @@ const PrizesShowcase = () => {
 									<h3 className="text-2xl md:text-3xl font-bold text-white">
 										Prizes for All Team Members
 									</h3>
-									<p className="text-slate-400 text-sm mt-1">Maximum team size of 4</p>
+									<p className="text-slate-400 text-sm mt-1">
+										Maximum team size of 4
+									</p>
 								</div>
 							</div>
 
@@ -238,11 +319,19 @@ const PrizesShowcase = () => {
 										<span className="text-xl">💻</span>
 										<div>
 											<p className="text-cyan-300 font-bold text-lg">
-												Contribution Track: $100 per meaningful merged PR
+												Contribution Track: $100 per
+												meaningful merged PR
 											</p>
 											<p className="text-cyan-100/90 text-sm">
-												Solve any OpenMetadata issue labeled{" "}
-												<span className="font-semibold">good-first-issue</span> and get your PR merged. PR winners are chosen by the OpenMetadata team. Low-effort or spam PRs will be rejected.
+												Solve any OpenMetadata issue
+												labeled{" "}
+												<span className="font-semibold">
+													good-first-issue
+												</span>{" "}
+												and get your PR merged. PR
+												winners are chosen by the
+												OpenMetadata team. Low-effort or
+												spam PRs will be rejected.
 											</p>
 										</div>
 									</div>
@@ -282,7 +371,8 @@ const PrizesShowcase = () => {
 								>
 									OpenMetadata repository
 								</Link>{" "}
-								on GitHub and share your participation on social media.
+								on GitHub and share your participation on social
+								media.
 							</p>
 
 							<div className="flex items-center gap-3 bg-slate-800/60 rounded-xl px-4 py-3 border border-amber-500/20">
