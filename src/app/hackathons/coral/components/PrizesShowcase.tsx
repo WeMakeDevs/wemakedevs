@@ -1,7 +1,15 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Anchor, BookOpen, Gift, Megaphone, Trophy, Users } from "lucide-react";
+import {
+	Anchor,
+	BookOpen,
+	Gift,
+	Megaphone,
+	Sparkles,
+	Trophy,
+	Users,
+} from "lucide-react";
 import Link from "next/link";
 import { DATA } from "../data";
 
@@ -139,6 +147,60 @@ const PrizesShowcase = () => {
 							<span className="inline-block px-5 py-2 rounded-full text-sm font-medium text-[#d4af37]/80 border border-[#d4af37]/15 bg-[#d4af37]/5">
 								+ exclusive swag for all winners
 							</span>
+						</div>
+					</div>
+				</motion.div>
+
+				{/* Early Bird Random Draw Highlight */}
+				<motion.div
+					initial={{ opacity: 0, y: 20 }}
+					whileInView={{ opacity: 1, y: 0 }}
+					viewport={{ once: true, margin: "-60px" }}
+					transition={{ duration: 0.5 }}
+					className="relative overflow-hidden rounded-2xl border border-[#2aa198]/30 bg-gradient-to-br from-[#002b36] via-[#0a3740] to-[#002b36] p-6 md:p-8 mb-8"
+				>
+					<div className="pointer-events-none absolute -top-16 -right-16 w-56 h-56 bg-[#2aa198]/15 rounded-full blur-[80px]" />
+					<div className="pointer-events-none absolute -bottom-12 -left-12 w-40 h-40 bg-[#d4af37]/10 rounded-full blur-[60px]" />
+
+					<div className="relative flex flex-col md:flex-row items-start md:items-center gap-5 md:gap-8">
+						<div className="shrink-0 flex items-center gap-3">
+							<div className="w-12 h-12 rounded-xl bg-[#2aa198]/15 border border-[#2aa198]/30 flex items-center justify-center">
+								<Sparkles className="w-6 h-6 text-[#2aa198]" />
+							</div>
+							<div className="inline-flex md:hidden items-center px-2.5 py-1 rounded-full border border-[#2aa198]/30 bg-[#2aa198]/10 text-[#2aa198] text-xs font-semibold uppercase tracking-wider">
+								Early Bird · Register Now
+							</div>
+						</div>
+						<div className="flex-1 min-w-0">
+							<div className="hidden md:inline-flex items-center gap-2 px-3 py-1 rounded-full border border-[#2aa198]/30 bg-[#2aa198]/10 text-[#2aa198] text-xs font-semibold uppercase tracking-wider mb-3">
+								Early Bird · Register Now
+							</div>
+							<h3 className="text-xl md:text-2xl font-bold text-[#fdf6e3] mb-2">
+								Register early, win before the voyage even
+								begins!
+							</h3>
+							<p className="text-[#93a1a1] text-sm md:text-base leading-relaxed">
+								Form your team and register by{" "}
+								<span className="text-white font-semibold">
+									May 18th
+								</span>
+								. One random team picked will receive{" "}
+								<span className="text-[#d4af37] font-semibold">
+									₹5,000 / $50 Amazon Gift Card per teammate
+								</span>{" "}
+								(up to 4 members). Fair winds to the early
+								birds!
+							</p>
+						</div>
+						<div className="shrink-0 w-full md:w-auto">
+							<Link
+								href={DATA.cta.href}
+								target="_blank"
+								rel="noopener noreferrer"
+								className="inline-flex items-center justify-center w-full md:w-auto gap-2 px-5 py-3 rounded-lg bg-[#d4af37] text-[#002b36] font-bold text-sm hover:bg-[#e8c35a] transition-colors whitespace-nowrap"
+							>
+								Register Now →
+							</Link>
 						</div>
 					</div>
 				</motion.div>
