@@ -16,35 +16,35 @@ const OrchestrationBanner = () => {
 		<div
 			className={cn(
 				"fixed bottom-3 left-1/2 -translate-x-1/2 z-[1000] w-[calc(100vw-1.5rem)] max-w-4xl",
-				"rounded-xl bg-gradient-to-r from-[#0a0a1a] via-[#111128] to-[#0a0a1a] border border-[#00cfb4]/20",
-				"shadow-[0_0_30px_rgba(0,207,180,0.1)] backdrop-blur-sm",
+				"rounded-xl bg-gradient-to-r from-[#002b36] via-[#0a3740] to-[#002b36] border border-[#d4af37]/25",
+				"shadow-[0_0_30px_rgba(212,175,55,0.12)] backdrop-blur-sm",
 				"px-4 py-3 md:px-6 md:py-3.5",
 				"flex items-center gap-3 md:gap-5",
 			)}
 		>
 			{/* Dot indicator */}
 			<span className="relative flex h-2.5 w-2.5 shrink-0">
-				<span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#00cfb4] opacity-75" />
-				<span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-[#00cfb4]" />
+				<span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#d4af37] opacity-75" />
+				<span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-[#d4af37]" />
 			</span>
 
 			{/* Text */}
 			<p className="flex-1 text-sm md:text-base text-slate-200 font-medium font-title truncate">
 				<span className="hidden sm:inline">
-					The Kestra Orchestration Challenge is live! Prizes worth
-					$4,000.
+					🏴‍☠️ Pirates of the Coral-bean is live! $10,000+ in
+					treasure awaits.
 				</span>
 				<span className="sm:hidden">
-					Orchestration Challenge is live!
+					🏴‍☠️ Coral Hackathon is live!
 				</span>
 			</p>
 
 			{/* CTA */}
 			<Link
-				href="/orchestration"
-				className="shrink-0 px-4 py-1.5 md:px-5 md:py-2 rounded-lg bg-[#00cfb4] text-[#0a0a1a] text-sm font-bold hover:bg-[#00e6c8] transition-colors"
+				href="/hackathons/coral"
+				className="shrink-0 px-4 py-1.5 md:px-5 md:py-2 rounded-lg bg-[#d4af37] text-[#002b36] text-sm font-bold hover:bg-[#e8c35a] transition-colors"
 			>
-				Learn More
+				Set Sail
 			</Link>
 
 			{/* Close */}
