@@ -133,7 +133,7 @@ const schedule = [
 				title: "🎬 Livestream Kickoff with Matt (Coral Co-founder & CEO)",
 				description:
 					"Meet the captain of the Coral ship! Matt walks through Coral, live demos, and answers your questions.",
-				time: "2026-05-25T21:30:00+05:30",
+				time: "2026-05-25T16:00:00+01:00",
 				links: [
 					{
 						platform: "youtube",
