@@ -114,6 +114,11 @@ const HackathonPage = () => {
 				</ViewContainer>
 			</div>
 
+			{/* ── Participant Testimonials ───────────────────────────────────────────── */}
+			<div className="bg-slate-900/30">
+				<OpenMetadataTestimonials />
+			</div>
+
 			{/* ── Ideas / Temporal Paradoxes ────────────────────────────────────────── */}
 			<div id="ideas" className="scroll-mt-44 bg-slate-900/30">
 				<IdeasSection />
@@ -143,11 +148,6 @@ const HackathonPage = () => {
 			{/* ── Prizes ────────────────────────────────────────────────────────────── */}
 			<div id="prizes" className="scroll-mt-44 bg-slate-950">
 				<PrizesShowcase />
-			</div>
-
-			{/* ── Participant Testimonials ───────────────────────────────────────────── */}
-			<div className="bg-slate-900/30">
-				<OpenMetadataTestimonials />
 			</div>
 
 			{/* ── Sponsor ───────────────────────────────────────────────────────────── */}
