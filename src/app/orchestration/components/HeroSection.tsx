@@ -9,6 +9,48 @@ import ipadImg from "../images/ipad.png";
 import iphoneImg from "../images/iphone.png";
 import macbookImg from "../images/macbook.png";
 import jishanImg from "../images/winners/jishanahmed-ar-shaikh.png";
+import mananImg from "../images/winners/manan-patel.jpg";
+
+type Winner = {
+	name: string;
+	image: typeof jishanImg;
+	prize: string;
+	emoji: string;
+	description: React.ReactNode;
+};
+
+const winners: Winner[] = [
+	{
+		name: "Jishanahmed AR Shaikh",
+		image: jishanImg,
+		prize: "First Winner",
+		emoji: "🏆",
+		description: (
+			<>
+				Built an AI-powered{" "}
+				<span className="text-white font-semibold">
+					GitHub PR Reviewer Agent
+				</span>{" "}
+				that reviews pull requests when you&apos;re away. Entirely
+				powered by Kestra orchestration and an LLM, with no backend
+				code.
+			</>
+		),
+	},
+	{
+		name: "Manan Patel",
+		image: mananImg,
+		prize: "iPad Winner",
+		emoji: "💻",
+		description: (
+			<>
+				Took home an{" "}
+				<span className="text-white font-semibold">iPad</span> for his
+				Kestra orchestration build. Congrats Manan!
+			</>
+		),
+	},
+];
 
 const floatingProducts = [
 	{
@@ -175,47 +217,53 @@ const HeroSection = () => {
 					</Link>
 				</motion.div>
 
-				{/* First winner highlight */}
+				{/* Winners highlight */}
 				<motion.div
 					initial={{ opacity: 0, y: 30 }}
 					animate={{ opacity: 1, y: 0 }}
 					transition={{ duration: 0.6, delay: 0.5 }}
-					className="mt-14 mx-auto max-w-2xl"
+					className="mt-14 mx-auto max-w-3xl"
 				>
 					<div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-[#00cfb4]/30 bg-[#00cfb4]/10 text-[#00cfb4] text-xs font-semibold uppercase tracking-wider mb-4">
 						<Trophy size={12} />
-						First Winner · Next announced May 13
+						Winners So Far · Next announced soon
 					</div>
-					<div className="relative overflow-hidden rounded-2xl border border-[#00cfb4]/20 bg-gradient-to-br from-slate-900/80 via-slate-900/60 to-[#00cfb4]/[0.04] backdrop-blur-sm p-5 md:p-6 text-left">
-						<div className="absolute -top-10 -right-10 w-40 h-40 rounded-full bg-[#00cfb4]/10 blur-3xl pointer-events-none" />
-						<div className="relative flex flex-col sm:flex-row items-start sm:items-center gap-5">
-							<div className="relative shrink-0 mx-auto sm:mx-0">
-								<div className="absolute inset-0 rounded-full bg-gradient-to-br from-[#00cfb4] to-purple-500 blur-md opacity-40" />
-								<Image
-									src={jishanImg}
-									alt="Jishanahmed AR Shaikh"
-									className="relative w-24 h-24 md:w-28 md:h-28 rounded-full object-cover border-2 border-[#00cfb4]/40"
-								/>
-							</div>
-							<div className="flex-1 min-w-0 text-center sm:text-left">
-								<h3 className="text-lg md:text-xl font-bold text-white mb-1">
-									Jishanahmed AR Shaikh
-								</h3>
-								<p className="text-sm text-[#00cfb4] font-semibold mb-2">
-									🏆 First Winner
-								</p>
-								<p className="text-slate-300 text-sm md:text-base leading-relaxed">
-									Built an AI-powered{" "}
-									<span className="text-white font-semibold">
-										GitHub PR Reviewer Agent
-									</span>{" "}
-									that reviews pull requests when you&apos;re
-									away. Entirely powered by Kestra
-									orchestration and an LLM, with no backend
-									code.
-								</p>
-							</div>
-						</div>
+					<div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+						{winners.map((winner, i) => (
+							<motion.div
+								key={winner.name}
+								initial={{ opacity: 0, y: 20 }}
+								animate={{ opacity: 1, y: 0 }}
+								transition={{
+									duration: 0.5,
+									delay: 0.55 + i * 0.1,
+								}}
+								className="relative overflow-hidden rounded-2xl border border-[#00cfb4]/20 bg-gradient-to-br from-slate-900/80 via-slate-900/60 to-[#00cfb4]/[0.04] backdrop-blur-sm p-5 text-left"
+							>
+								<div className="absolute -top-10 -right-10 w-32 h-32 rounded-full bg-[#00cfb4]/10 blur-3xl pointer-events-none" />
+								<div className="relative flex flex-col sm:flex-row items-start sm:items-center gap-4">
+									<div className="relative shrink-0 mx-auto sm:mx-0">
+										<div className="absolute inset-0 rounded-full bg-gradient-to-br from-[#00cfb4] to-purple-500 blur-md opacity-40" />
+										<Image
+											src={winner.image}
+											alt={winner.name}
+											className="relative w-20 h-20 md:w-24 md:h-24 rounded-full object-cover border-2 border-[#00cfb4]/40"
+										/>
+									</div>
+									<div className="flex-1 min-w-0 text-center sm:text-left">
+										<h3 className="text-base md:text-lg font-bold text-white mb-1">
+											{winner.name}
+										</h3>
+										<p className="text-xs text-[#00cfb4] font-semibold mb-2">
+											{winner.emoji} {winner.prize}
+										</p>
+										<p className="text-slate-300 text-sm leading-relaxed">
+											{winner.description}
+										</p>
+									</div>
+								</div>
+							</motion.div>
+						))}
 					</div>
 				</motion.div>
 			</div>
