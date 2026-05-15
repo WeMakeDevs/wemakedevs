@@ -137,7 +137,11 @@ const schedule = [
 				links: [
 					{
 						platform: "youtube",
-						url: "https://youtube.com/@WeMakeDevs",
+						url: "https://www.youtube.com/watch?v=gWfm2jTaRJ4",
+					},
+					{
+						platform: "linkedin",
+						url: "https://www.linkedin.com/feed/update/urn:li:ugcPost:7460853801206308866",
 					},
 				],
 			},
