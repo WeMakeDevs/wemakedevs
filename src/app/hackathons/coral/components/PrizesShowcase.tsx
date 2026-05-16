@@ -307,7 +307,7 @@ const PrizesShowcase = () => {
 									reef.
 								</>
 							),
-							reward: "🐠 Best per source → $100 cash + $50 donation to sea life charity",
+							reward: "🐠 Top 10 source specs → $100 cash + $50 donation to sea life charity",
 							link: {
 								label: "How to write a custom source spec",
 								href: "https://withcoral.com/docs/guides/write-a-custom-source",
