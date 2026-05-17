@@ -92,7 +92,7 @@ const GiveawaysPage = () => {
 						<div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-emerald-500/10 via-transparent to-amber-500/10" />
 						<div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-8 p-8 md:p-12">
 							{/* Poster */}
-							<div className="relative aspect-square max-w-md mx-auto lg:mx-0 rounded-2xl overflow-hidden shadow-2xl shadow-emerald-500/10">
+							<div className="relative aspect-[3/4] max-w-md mx-auto lg:mx-0 rounded-2xl overflow-hidden shadow-2xl shadow-emerald-500/10">
 								<Image
 									src={aiToolsPoster}
 									alt="AI Tools Survey Giveaway - Win Nike Air Jordans, Logitech MX Master 3, or a Keychron Keyboard"
