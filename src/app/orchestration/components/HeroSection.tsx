@@ -8,6 +8,7 @@ import boseImg from "../images/bose.png";
 import ipadImg from "../images/ipad.png";
 import iphoneImg from "../images/iphone.png";
 import macbookImg from "../images/macbook.png";
+import bavyaImg from "../images/winners/bavya-sakthivel.png";
 import jishanImg from "../images/winners/jishanahmed-ar-shaikh.png";
 import mananImg from "../images/winners/manan-patel.jpg";
 
@@ -20,6 +21,36 @@ type Winner = {
 };
 
 const winners: Winner[] = [
+	{
+		name: "Bavya Sakthivel",
+		image: bavyaImg,
+		prize: "MacBook Neo Winner",
+		emoji: "💻",
+		description: (
+			<>
+				Built a{" "}
+				<span className="text-white font-semibold">
+					women&apos;s safety workflow
+				</span>{" "}
+				inspired by her sister&apos;s night shifts. Turns a distress
+				signal into a fully automated emergency response with
+				AI-powered alerts, all orchestrated with Kestra.
+			</>
+		),
+	},
+	{
+		name: "Manan Patel",
+		image: mananImg,
+		prize: "iPad Winner",
+		emoji: "📱",
+		description: (
+			<>
+				Took home an{" "}
+				<span className="text-white font-semibold">iPad</span> for his
+				Kestra orchestration build. Congrats Manan!
+			</>
+		),
+	},
 	{
 		name: "Jishanahmed AR Shaikh",
 		image: jishanImg,
@@ -34,19 +65,6 @@ const winners: Winner[] = [
 				that reviews pull requests when you&apos;re away. Entirely
 				powered by Kestra orchestration and an LLM, with no backend
 				code.
-			</>
-		),
-	},
-	{
-		name: "Manan Patel",
-		image: mananImg,
-		prize: "iPad Winner",
-		emoji: "💻",
-		description: (
-			<>
-				Took home an{" "}
-				<span className="text-white font-semibold">iPad</span> for his
-				Kestra orchestration build. Congrats Manan!
 			</>
 		),
 	},
@@ -222,13 +240,13 @@ const HeroSection = () => {
 					initial={{ opacity: 0, y: 30 }}
 					animate={{ opacity: 1, y: 0 }}
 					transition={{ duration: 0.6, delay: 0.5 }}
-					className="mt-14 mx-auto max-w-3xl"
+					className="mt-14 mx-auto max-w-5xl"
 				>
 					<div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-[#00cfb4]/30 bg-[#00cfb4]/10 text-[#00cfb4] text-xs font-semibold uppercase tracking-wider mb-4">
 						<Trophy size={12} />
 						Winners So Far · Next announced soon
 					</div>
-					<div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+					<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
 						{winners.map((winner, i) => (
 							<motion.div
 								key={winner.name}
