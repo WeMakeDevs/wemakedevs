@@ -1,8 +1,8 @@
 import HackathonFooter from "@/components/HackathonFooter";
 import HackathonNavbar from "@/components/HackathonNavbar";
+import OrchestrationBanner from "@/components/OrchestrationBanner";
 import type { navLinksType } from "@/types";
 import type { Metadata } from "next";
-import EarlyBirdBanner from "./components/EarlyBirdBanner";
 import PirateBackground from "./components/PirateBackground";
 import { DATA } from "./data";
 import "./styles.css";
@@ -76,7 +76,7 @@ export default function RootLayout({
 				{children}
 				<HackathonFooter />
 			</div>
-			<EarlyBirdBanner />
+			<OrchestrationBanner />
 		</div>
 	);
 }
