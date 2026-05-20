@@ -17,6 +17,7 @@ import GiveawaysNavbar from "./components/GiveawaysNavbar";
 
 import ayaanImage from "./images/Ayaan.png";
 import aiToolsPoster from "./images/ai-tools.jpg";
+import biwashImage from "./images/biwash.jpg";
 import ipadGiveawayPoster from "./images/iPad-april-2026.jpeg";
 import jitenIpad from "./images/jiten-ipad.png";
 import mohitRayban from "./images/mohit-rayban.png";
@@ -33,6 +34,12 @@ export const metadata: Metadata = {
 const AI_TOOLS_SURVEY_URL = "https://forms.gle/qU7eA2qnQ6eWYtRV7";
 
 const pastWinners = [
+	{
+		image: biwashImage,
+		name: "Biwash",
+		prize: "Apple iPad",
+		worth: "₹50,000",
+	},
 	{
 		image: ayaanImage,
 		name: "Ayaan",
