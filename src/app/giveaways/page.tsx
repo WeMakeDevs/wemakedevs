@@ -18,10 +18,10 @@ import GiveawaysNavbar from "./components/GiveawaysNavbar";
 import ayaanImage from "./images/Ayaan.png";
 import aiToolsPoster from "./images/ai-tools.jpg";
 import biwashImage from "./images/biwash.jpg";
-import ipadGiveawayPoster from "./images/iPad-april-2026.jpeg";
 import jitenIpad from "./images/jiten-ipad.png";
 import mohitRayban from "./images/mohit-rayban.png";
 import priyankaRayban from "./images/priyanka-rayban.png";
+import rahilImage from "./images/rahil.png";
 import vaniRayban from "./images/vani-rayban.png";
 
 export const metadata: Metadata = {
@@ -34,6 +34,12 @@ export const metadata: Metadata = {
 const AI_TOOLS_SURVEY_URL = "https://forms.gle/qU7eA2qnQ6eWYtRV7";
 
 const pastWinners = [
+	{
+		image: rahilImage,
+		name: "Rahil",
+		prize: "Apple iPad",
+		worth: "₹50,000",
+	},
 	{
 		image: biwashImage,
 		name: "Biwash",
@@ -202,39 +208,6 @@ const GiveawaysPage = () => {
 
 								<p className="text-sm text-slate-400 mt-1">
 									One submission per person.
-								</p>
-							</div>
-						</div>
-					</div>
-
-					{/* Past iPad giveaway (ended) */}
-					<div className="relative rounded-3xl overflow-hidden border border-slate-700/50 bg-slate-900/60">
-						<div className="relative z-10 grid grid-cols-1 lg:grid-cols-[280px_1fr] gap-8 p-6 md:p-8 items-center">
-							<div className="relative aspect-[3/4] max-w-[240px] mx-auto lg:mx-0 rounded-2xl overflow-hidden opacity-70">
-								<Image
-									src={ipadGiveawayPoster}
-									alt="Apple iPad giveaway (ended)"
-									fill
-									className="object-cover"
-									sizes="(max-width: 1024px) 100vw, 280px"
-								/>
-							</div>
-							<div className="space-y-4">
-								<div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-slate-500/40 bg-slate-500/15 text-slate-400 text-xs font-semibold uppercase tracking-wider w-fit">
-									<span className="relative flex h-2 w-2">
-										<span className="relative inline-flex rounded-full h-2 w-2 bg-slate-500" />
-									</span>
-									Ended
-								</div>
-								<h3 className="text-2xl md:text-3xl font-bold text-white">
-									Apple iPad worth ₹50,000
-								</h3>
-								<p className="text-slate-400">
-									Winner announced on{" "}
-									<span className="text-white font-medium">
-										26th April 2026
-									</span>
-									. Thanks to everyone who participated!
 								</p>
 							</div>
 						</div>
