@@ -1,18 +1,9 @@
 import Footer from "@/components/Footer";
 import Newsletter from "@/components/Newsletter";
 import { ViewContainer } from "@/components/ui/view-container";
-import {
-	ArrowUpRight,
-	Bell,
-	Calendar,
-	Gift,
-	PartyPopper,
-	Sparkles,
-	Trophy,
-} from "lucide-react";
+import { Bell, Gift, PartyPopper, Trophy } from "lucide-react";
 import type { Metadata } from "next";
 import Image from "next/image";
-import Link from "next/link";
 import GiveawaysNavbar from "./components/GiveawaysNavbar";
 
 import ayaanImage from "./images/Ayaan.png";
@@ -29,9 +20,6 @@ export const metadata: Metadata = {
 	description:
 		"Win exciting prizes from WeMakeDevs! Take our AI tools survey for a chance to win Nike Air Jordans, Logitech MX Master 3 Mouse, or a Keychron Keyboard.",
 };
-
-// Survey URL for the AI tools giveaway
-const AI_TOOLS_SURVEY_URL = "https://forms.gle/qU7eA2qnQ6eWYtRV7";
 
 const pastWinners = [
 	{
@@ -91,21 +79,20 @@ const GiveawaysPage = () => {
 				<ViewContainer className="relative z-10 space-y-12">
 					{/* Title */}
 					<div className="text-center space-y-6">
-						<div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-emerald-500/30 bg-emerald-500/10 text-emerald-400 text-sm font-medium mx-auto">
-							<Sparkles size={16} />
-							<span>Live Giveaway</span>
+						<div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-slate-500/30 bg-slate-500/10 text-slate-400 text-sm font-medium mx-auto">
+							<Gift size={16} />
+							<span>Giveaway Ended</span>
 						</div>
 						<h1 className="text-5xl md:text-7xl font-bold text-white tracking-tight">
 							Giveaways
 						</h1>
 					</div>
 
-					{/* Live AI Tools Survey Giveaway */}
-					<div className="relative rounded-3xl overflow-hidden border border-emerald-500/30 bg-gradient-to-br from-emerald-950/60 via-slate-900 to-amber-950/40">
-						<div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-emerald-500/10 via-transparent to-amber-500/10" />
+					{/* AI Tools Survey Giveaway (Ended) */}
+					<div className="relative rounded-3xl overflow-hidden border border-slate-700/50 bg-gradient-to-br from-slate-900 via-slate-900 to-slate-800/80">
 						<div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-8 p-8 md:p-12">
 							{/* Poster */}
-							<div className="relative aspect-[3/4] max-w-md mx-auto lg:mx-0 rounded-2xl overflow-hidden shadow-2xl shadow-emerald-500/10">
+							<div className="relative aspect-[3/4] max-w-md mx-auto lg:mx-0 rounded-2xl overflow-hidden shadow-2xl opacity-80">
 								<Image
 									src={aiToolsPoster}
 									alt="AI Tools Survey Giveaway - Win Nike Air Jordans, Logitech MX Master 3, or a Keychron Keyboard"
@@ -118,12 +105,11 @@ const GiveawaysPage = () => {
 
 							{/* Details */}
 							<div className="flex flex-col justify-center space-y-6">
-								<div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-emerald-500/40 bg-emerald-500/15 text-emerald-400 text-xs font-semibold uppercase tracking-wider w-fit">
+								<div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-slate-500/40 bg-slate-500/15 text-slate-400 text-xs font-semibold uppercase tracking-wider w-fit">
 									<span className="relative flex h-2 w-2">
-										<span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
-										<span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-400" />
+										<span className="relative inline-flex rounded-full h-2 w-2 bg-slate-500" />
 									</span>
-									Live Now
+									Ended
 								</div>
 
 								<h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight">
@@ -135,12 +121,8 @@ const GiveawaysPage = () => {
 								</h2>
 
 								<p className="text-lg text-slate-300 leading-relaxed">
-									Fill out a quick survey about the AI tools
-									you use and how you use them. It takes just{" "}
-									<span className="text-white font-semibold">
-										1 minute
-									</span>
-									, and we&apos;ll pick{" "}
+									Thanks to everyone who filled out the survey
+									about the AI tools you use! We picked{" "}
 									<span className="text-white font-semibold">
 										3 random winners
 									</span>{" "}
@@ -186,28 +168,13 @@ const GiveawaysPage = () => {
 									</div>
 								</div>
 
-								<div className="flex items-center gap-3 text-slate-400">
-									<Calendar
-										size={18}
-										className="text-emerald-400 shrink-0"
-									/>
-									<span>
-										3 random winners picked from all entries
-									</span>
+								<div className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-slate-700 text-slate-400 font-semibold text-lg w-fit cursor-not-allowed opacity-60">
+									Submissions Closed
 								</div>
 
-								<Link
-									href={AI_TOOLS_SURVEY_URL}
-									target="_blank"
-									rel="noopener noreferrer"
-									className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-gradient-to-r from-emerald-500 to-amber-400 text-slate-950 font-bold text-lg w-fit hover:shadow-[0_0_30px_rgba(52,211,153,0.4)] transition-shadow"
-								>
-									Take the 1-min Survey
-									<ArrowUpRight size={20} />
-								</Link>
-
 								<p className="text-sm text-slate-400 mt-1">
-									One submission per person.
+									Stay tuned via our newsletter for the next
+									giveaway!
 								</p>
 							</div>
 						</div>
