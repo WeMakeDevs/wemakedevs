@@ -99,7 +99,7 @@ const faqs: FaqType[] = [
 	},
 	{
 		question: "Where can I get help during the hackathon?",
-		answer: "Join the <a href='https://withcoral.com/discord' target='_blank' rel='noopener noreferrer' class='text-amber-400 underline hover:text-amber-300'>Coral Discord</a>. Ask Coral-related questions in <span class='text-amber-400 font-mono'>#support-questions</span> and hackathon-related questions in <span class='text-amber-400 font-mono'>#hackathon-wemakedevs-may26</span>. The Coral crew will be standing by!",
+		answer: "Join the <a href='https://withcoral.com/discord' target='_blank' rel='noopener noreferrer' class='text-amber-400 underline hover:text-amber-300'>Coral Discord</a>. Ask Coral-related questions in <span class='text-amber-400 font-mono'>#ask-for-help</span> and hackathon-related questions in <span class='text-amber-400 font-mono'>#hackathon-general</span>. The Coral crew will be standing by!",
 	},
 	{
 		question: "What are the entry requirements?",

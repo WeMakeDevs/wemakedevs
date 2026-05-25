@@ -257,7 +257,7 @@ const PrizesShowcase = () => {
 										Coral Discord
 									</a>{" "}
 									<code className="px-1.5 py-0.5 rounded bg-[#002b36] text-[#d4af37] text-xs font-mono">
-										#how-i-coral
+										#show-and-tell
 									</code>{" "}
 									with screenshots and a write-up, then post
 									it on at least one social platform (LinkedIn

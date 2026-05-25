@@ -42,11 +42,11 @@ const HackathonResources = async () => {
 							</Link>
 							. For Coral-related questions use{" "}
 							<span className="text-amber-400 font-mono">
-								#support-questions
+								#ask-for-help
 							</span>
 							. For hackathon-related questions use{" "}
 							<span className="text-amber-400 font-mono">
-								#hackathon-wemakedevs-may26
+								#hackathon-general
 							</span>
 							.
 						</li>
