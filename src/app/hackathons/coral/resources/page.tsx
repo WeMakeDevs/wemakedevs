@@ -26,6 +26,45 @@ const HackathonResources = async () => {
 			/>
 			<ViewContainer>
 				<HackathonContentTitle className="text-amber-400">
+					📜 Submit Your Project
+				</HackathonContentTitle>
+				<HackathonContentBody className="text-slate-300">
+					<p className="mb-4">
+						Ready to deliver your treasure? Use the official
+						submission form (only one person per crew needs to
+						submit):
+					</p>
+					<Link
+						href="https://forms.gle/iLRYXPsGHFTj7xaeA"
+						target="_blank"
+						rel="noopener noreferrer"
+						className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-amber-500 to-amber-700 hover:from-amber-400 hover:to-amber-600 text-white font-bold transition-all shadow-lg shadow-amber-500/30"
+					>
+						🏴‍☠️ Submit Your Project
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							width="18"
+							height="18"
+							viewBox="0 0 24 24"
+							fill="none"
+							stroke="currentColor"
+							strokeWidth="2"
+							strokeLinecap="round"
+							strokeLinejoin="round"
+							aria-hidden="true"
+						>
+							<title>External link</title>
+							<path d="M7 7h10v10" />
+							<path d="M7 17 17 7" />
+						</svg>
+					</Link>
+					<p className="mt-4 text-sm text-slate-400">
+						Make sure you have your GitHub link, deployed link, and
+						a YouTube demo (max 3 minutes) ready before you submit.
+					</p>
+				</HackathonContentBody>
+
+				<HackathonContentTitle className="text-amber-400">
 					🏴‍☠️ Need a Port of Call?
 				</HackathonContentTitle>
 				<HackathonContentBody className="text-slate-300">

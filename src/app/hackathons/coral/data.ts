@@ -174,7 +174,7 @@ const schedule = [
 				time: "2026-05-31T23:59:59+05:30",
 				link: {
 					name: "Submit Your Project",
-					url: "https://forms.gle/dxBPLK17A8dXwp64A",
+					url: "https://forms.gle/iLRYXPsGHFTj7xaeA",
 				},
 			},
 		],

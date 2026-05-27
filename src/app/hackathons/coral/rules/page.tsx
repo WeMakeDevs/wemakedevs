@@ -168,7 +168,7 @@ const HackathonRules = async () => {
 								link, and a YouTube demo (max 3 minutes) ready!
 							</p>
 							<Link
-								href="https://forms.gle/dxBPLK17A8dXwp64A"
+								href="https://forms.gle/iLRYXPsGHFTj7xaeA"
 								target="_blank"
 								rel="noopener noreferrer"
 								className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-amber-500 to-amber-700 hover:from-amber-400 hover:to-amber-600 text-white font-bold rounded-xl transition-all duration-300 shadow-lg shadow-amber-500/30"
