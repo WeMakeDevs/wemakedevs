@@ -1081,6 +1081,10 @@ const Prospects = () => {
 									Local dev community feedback &amp; social
 									buzz
 								</li>
+								<li>
+									Featured content on Kunal&apos;s personal
+									channels &amp; YouTube (1.6M+ reach)
+								</li>
 							</ul>
 						</div>
 					</div>
