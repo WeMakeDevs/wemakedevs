@@ -24,6 +24,29 @@
 	overflow: hidden;
 }
 
+/* Force dark text + heading colors inside the deck (overrides global h1-h6 rule) */
+.prospects,
+.prospects h1,
+.prospects h2,
+.prospects h3,
+.prospects h4,
+.prospects h5,
+.prospects h6,
+.prospects p,
+.prospects li,
+.prospects span,
+.prospects div {
+	color: inherit;
+}
+.prospects h1,
+.prospects h2,
+.prospects h3,
+.prospects h4,
+.prospects h5,
+.prospects h6 {
+	color: var(--text);
+}
+
 /* radial accent glow */
 .prospects::before {
 	content: "";
