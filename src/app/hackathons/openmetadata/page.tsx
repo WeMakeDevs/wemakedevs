@@ -7,6 +7,7 @@ import Link from "next/link";
 import HeroSection from "./components/HeroSection";
 import IdeasSection from "./components/IdeasSection";
 import PrizesShowcase from "./components/PrizesShowcase";
+import OpenMetadataSponsorTestimonial from "./components/SponsorTestimonial";
 import OpenMetadataStats from "./components/Stats";
 import OpenMetadataTestimonials from "./components/Testimonials";
 import { DATA, faqs, navLinks } from "./data";
@@ -74,10 +75,26 @@ const HackathonPage = () => {
 				</ViewContainer>
 			</div>
 
+			{/* ── Stats ─────────────────────────────────────────────────────────────── */}
+			<div className="bg-slate-950 retro-grid">
+				<ViewContainer className="py-16 md:py-20">
+					<OpenMetadataStats />
+				</ViewContainer>
+			</div>
+
+			{/* ── Sponsor Testimonial (Steve Wooledge, CMO at Collate) ───────────────── */}
+			<div className="bg-slate-900/40">
+				<OpenMetadataSponsorTestimonial />
+			</div>
+
+			{/* ── Participant Testimonials ───────────────────────────────────────────── */}
+			<div className="bg-slate-900/30">
+				<OpenMetadataTestimonials />
+			</div>
+
 			{/* ── Mission Section (Fixing the Timeline) ────────────────────────────── */}
 			<div className="bg-slate-950 retro-grid">
 				<ViewContainer className="py-20">
-					<OpenMetadataStats />
 					<div className="text-center mb-12">
 						<span className="inline-flex items-center gap-2 bg-amber-500/10 border border-amber-500/30 text-amber-400 px-5 py-2 rounded-full text-sm font-semibold mb-6 backdrop-blur-sm">
 							<span className="w-2 h-2 bg-amber-400 rounded-full animate-pulse" />
@@ -112,11 +129,6 @@ const HackathonPage = () => {
 						</p>
 					</div>
 				</ViewContainer>
-			</div>
-
-			{/* ── Participant Testimonials ───────────────────────────────────────────── */}
-			<div className="bg-slate-900/30">
-				<OpenMetadataTestimonials />
 			</div>
 
 			{/* ── Ideas / Temporal Paradoxes ────────────────────────────────────────── */}
