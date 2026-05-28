@@ -28,7 +28,7 @@ const numbers: NumbersShowcaseType[] = [
 	},
 	{
 		name: "Countries",
-		number: 15,
+		number: 20,
 		icon: Globe,
 		color: "accent-4",
 		suffix: "+",
