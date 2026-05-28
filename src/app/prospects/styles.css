@@ -47,6 +47,25 @@
 	color: var(--text);
 }
 
+/* Numeric / title divs that don't use heading tags but should be white */
+.prospects .founder-name,
+.prospects .stat .num,
+.prospects .ev-stat .num,
+.prospects .price-num,
+.prospects .price-list li,
+.prospects .social .count,
+.prospects .value-num,
+.prospects .value-headline,
+.prospects .testimonial-attr .who,
+.prospects .testimonial-text,
+.prospects .pack h3 {
+	color: var(--text);
+}
+
+.prospects .price-num .currency {
+	color: var(--text-faint);
+}
+
 /* radial accent glow */
 .prospects::before {
 	content: "";
