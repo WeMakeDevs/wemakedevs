@@ -1082,8 +1082,9 @@ const Prospects = () => {
 									buzz
 								</li>
 								<li>
-									Featured content on Kunal&apos;s personal
-									channels &amp; YouTube (1.6M+ reach)
+									Dedicated tutorial video, newsletter, blog
+									&amp; social posts on Kunal&apos;s personal
+									channels (1.6M+ reach)
 								</li>
 							</ul>
 						</div>
