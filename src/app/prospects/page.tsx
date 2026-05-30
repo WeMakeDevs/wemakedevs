@@ -788,12 +788,12 @@ const Prospects = () => {
 					<div className="testimonial-stack">
 						<div className="testimonial compact">
 							<div className="testimonial-text">
-								&quot;A fantastic platform for developers and
-								students to showcase their skills and learn from
-								each other. A great opportunity to share
-								knowledge and see innovative ideas being built,
-								like someone leveraging Llama models for
-								database schema generation.&quot;
+								&quot;A fantastic platform for developers to
+								showcase their skills and learn from each
+								other. A great opportunity to share knowledge
+								and see innovative ideas being built, like
+								someone leveraging Llama models for database
+								schema generation.&quot;
 							</div>
 							<div className="testimonial-attr">
 								<div>
