@@ -14,7 +14,7 @@ const FutureStackSpecialTestimonial = () => {
 				<div className="space-y-4 text-lg md:text-xl font-medium max-w-4xl mx-auto text-center">
 					<p className="">
 						The WeMakeDevs hackathon provided a fantastic platform
-						for developers and students to showcase their skills and
+						for developers to showcase their skills and
 						learn from each other. It was an amazing experience for
 						me to be invited for a QA session. The questions ranged
 						from tactical hackathon strategies to AI career advice,

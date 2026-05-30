@@ -75,7 +75,7 @@ const partnersData: PartnerData[] = [
 		logo: futurestackImages.metaLogo,
 		author: "Yash Khare",
 		name: "Meta",
-		quote: "The WeMakeDevs hackathon provided a fantastic platform for developers and students to showcase their skills. It was an amazing experience to be invited for a QA session covering hackathon strategies and AI career advice. Great opportunity to share knowledge.",
+		quote: "The WeMakeDevs hackathon provided a fantastic platform for developers to showcase their skills. It was an amazing experience to be invited for a QA session covering hackathon strategies and AI career advice. Great opportunity to share knowledge.",
 		logoClassName: "w-28",
 	},
 	{
