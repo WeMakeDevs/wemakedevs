@@ -71,15 +71,10 @@ const prContributors = submittedProjects
 	);
 
 const totalPrs = prContributors.reduce((s, p) => s + p.prs.length, 0);
-const totalBlogs = blogContributors.reduce((s, p) => s + p.blogs.length, 0);
-const totalProjects = submittedProjects.length;
 
 export const counts = {
 	prs: totalPrs,
 	prTeams: prContributors.length,
-	blogs: totalBlogs,
-	blogTeams: blogContributors.length,
-	projects: totalProjects,
 };
 
 export const PrsSection = () => (
@@ -164,9 +159,6 @@ export const BlogsSection = () => (
 			<h2 className="text-2xl md:text-3xl font-black italic uppercase text-[#d4af37]">
 				Top Blogs
 			</h2>
-			<span className="inline-flex items-center justify-center text-xs font-mono font-semibold bg-[#d4af37]/10 border border-[#d4af37]/30 text-[#d4af37] rounded-full px-3 py-1">
-				{totalBlogs} posts
-			</span>
 		</div>
 		<p className="text-[#93a1a1] text-sm md:text-base mb-6">
 			End-to-end &quot;How to Build X&quot; guides written by pirates
@@ -186,11 +178,6 @@ export const BlogsSection = () => (
 						<h3 className="font-semibold text-[#fdf6e3] grow truncate">
 							{project.title}
 						</h3>
-						<span className="text-xs font-mono text-[#d4af37] bg-[#d4af37]/10 border border-[#d4af37]/30 px-2 py-0.5 rounded shrink-0">
-							{project.blogs.length === 1
-								? "1 post"
-								: `${project.blogs.length} posts`}
-						</span>
 					</div>
 					<p className="text-xs text-[#586e75] mb-2 truncate">
 						{project.isSolo
@@ -230,9 +217,6 @@ export const ProjectsSection = () => (
 			<h2 className="text-2xl md:text-3xl font-black italic uppercase text-[#d4af37]">
 				Top Projects
 			</h2>
-			<span className="inline-flex items-center justify-center text-xs font-mono font-semibold bg-[#d4af37]/10 border border-[#d4af37]/30 text-[#d4af37] rounded-full px-3 py-1">
-				{totalProjects} projects
-			</span>
 		</div>
 		<p className="text-[#93a1a1] text-sm md:text-base mb-6">
 			Every project built on top of Coral during the hackathon.
@@ -324,9 +308,7 @@ export const ProjectsSection = () => (
 							{project.blogs.length > 0 && (
 								<span className="inline-flex items-center gap-1 hover:text-[#d4af37]">
 									<BookOpen className="w-3.5 h-3.5" />
-									{project.blogs.length === 1
-										? "Blog"
-										: `${project.blogs.length} blogs`}
+									Blog
 								</span>
 							)}
 							{project.prs.length > 0 && (

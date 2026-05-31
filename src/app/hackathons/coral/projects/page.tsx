@@ -15,7 +15,7 @@ const filters = [
 		title: "Top PRs",
 		description:
 			"Pirates who built source specs and sent pull requests to withcoral/coral.",
-		count: counts.prs,
+		showCount: true,
 		countLabel: counts.prs === 1 ? "1 PR" : `${counts.prs} PRs`,
 		teamsLabel:
 			counts.prTeams === 1
@@ -32,10 +32,9 @@ const filters = [
 		title: "Top Projects",
 		description:
 			"Every voyage shipped during the hackathon. Browse all crews and their builds.",
-		count: counts.projects,
-		countLabel:
-			counts.projects === 1 ? "1 project" : `${counts.projects} projects`,
-		teamsLabel: "All submissions",
+		showCount: false,
+		countLabel: "",
+		teamsLabel: "",
 		href: "/hackathons/coral/projects/all",
 		icon: Users,
 		accent: "from-[#2aa198]/20 to-[#2aa198]/5",
@@ -47,10 +46,9 @@ const filters = [
 		title: "Top Blogs",
 		description:
 			'End-to-end "How to Build X" guides written by pirates during their voyage.',
-		count: counts.blogs,
-		countLabel: counts.blogs === 1 ? "1 post" : `${counts.blogs} posts`,
-		teamsLabel:
-			counts.blogTeams === 1 ? "1 author" : `${counts.blogTeams} authors`,
+		showCount: false,
+		countLabel: "",
+		teamsLabel: "",
 		href: "/hackathons/coral/projects/blogs",
 		icon: BookOpen,
 		accent: "from-[#cb4b16]/20 to-[#cb4b16]/5",
@@ -120,16 +118,18 @@ const ProjectsHubPage = () => {
 									</p>
 								</div>
 
-								<div className="relative mt-auto pt-3 border-t border-[#586e75]/20 flex items-center justify-between">
-									<span
-										className={`text-2xl font-mono font-bold ${filter.iconColor}`}
-									>
-										{filter.countLabel}
-									</span>
-									<span className="text-xs text-[#586e75] uppercase tracking-wider">
-										{filter.teamsLabel}
-									</span>
-								</div>
+								{filter.showCount && (
+									<div className="relative mt-auto pt-3 border-t border-[#586e75]/20 flex items-center justify-between">
+										<span
+											className={`text-2xl font-mono font-bold ${filter.iconColor}`}
+										>
+											{filter.countLabel}
+										</span>
+										<span className="text-xs text-[#586e75] uppercase tracking-wider">
+											{filter.teamsLabel}
+										</span>
+									</div>
+								)}
 							</Link>
 						);
 					})}
