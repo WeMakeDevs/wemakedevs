@@ -50,7 +50,7 @@ export default function RootLayout({
 			type: "link",
 		},
 		{
-			name: "Hackathon",
+			name: "Hackathons",
 			url: "https://www.wemakedevs.org/hackathons",
 			type: "link",
 			openInNewTab: true,

@@ -16,6 +16,12 @@ const DATA = {
 		openInNewTab: true,
 		disabled: true,
 	},
+	projectsCta: {
+		label: "View Projects",
+		href: "/hackathons/coral/projects",
+		openInNewTab: false,
+		disabled: false,
+	},
 	showDate: true,
 	prizes: {
 		winning: [
@@ -50,6 +56,11 @@ const navLinks = [
 		href: `/hackathons/${DATA.slug}`,
 		label: "Overview",
 		page: "overview",
+	},
+	{
+		href: `/hackathons/${DATA.slug}/projects`,
+		label: "Projects",
+		page: "projects",
 	},
 	{
 		href: `/hackathons/${DATA.slug}/rules`,
@@ -113,8 +124,7 @@ const schedule = [
 		items: [
 			{
 				title: "📺 Video Tutorial on Kunal's YouTube",
-				description:
-					"Video tutorial up on this channel.",
+				description: "Video tutorial up on this channel.",
 				link: {
 					name: "youtube.com/@KunalKushwaha",
 					url: "https://www.youtube.com/@KunalKushwaha",
