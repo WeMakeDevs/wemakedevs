@@ -99,7 +99,7 @@ const ProjectsPage = () => {
 					<p className="text-[#93a1a1] text-base md:text-lg max-w-2xl mx-auto">
 						Every voyage shipped during the {DATA.title} hackathon.
 						Crews built agents that query any API, database, or file
-						as SQL — no ETL, no warehouse, no glue code.
+						as SQL. No ETL, no warehouse, no glue code.
 					</p>
 
 					{/* Section anchor nav */}
@@ -108,19 +108,19 @@ const ProjectsPage = () => {
 							href="#prs"
 							className="px-4 py-2 rounded-lg border border-[#d4af37]/20 text-[#d4af37] hover:bg-[#d4af37]/10 transition-colors"
 						>
-							Chart New Waters · PRs
+							Top PRs
 						</a>
 						<a
 							href="#blogs"
 							className="px-4 py-2 rounded-lg border border-[#d4af37]/20 text-[#d4af37] hover:bg-[#d4af37]/10 transition-colors"
 						>
-							Captain&apos;s Log · Blogs
+							Top Blogs
 						</a>
 						<a
 							href="#all-projects"
 							className="px-4 py-2 rounded-lg border border-[#d4af37]/20 text-[#d4af37] hover:bg-[#d4af37]/10 transition-colors"
 						>
-							All Projects
+							Top Projects
 						</a>
 					</nav>
 				</div>
@@ -131,7 +131,7 @@ const ProjectsPage = () => {
 				<div className="flex items-center gap-3 mb-2 flex-wrap">
 					<GitPullRequest className="w-6 h-6 text-[#d4af37]" />
 					<h2 className="text-2xl md:text-3xl font-black italic uppercase text-[#d4af37]">
-						Chart New Waters · Pull Requests
+						Top PRs
 					</h2>
 					<span className="inline-flex items-center justify-center text-xs font-mono font-semibold bg-[#d4af37]/10 border border-[#d4af37]/30 text-[#d4af37] rounded-full px-3 py-1">
 						{totalPrs} PRs · {prContributors.length} crews
@@ -205,7 +205,7 @@ const ProjectsPage = () => {
 				<div className="flex items-center gap-3 mb-2 flex-wrap">
 					<BookOpen className="w-6 h-6 text-[#d4af37]" />
 					<h2 className="text-2xl md:text-3xl font-black italic uppercase text-[#d4af37]">
-						Captain&apos;s Log · Blogs
+						Top Blogs
 					</h2>
 					<span className="inline-flex items-center justify-center text-xs font-mono font-semibold bg-[#d4af37]/10 border border-[#d4af37]/30 text-[#d4af37] rounded-full px-3 py-1">
 						{totalBlogs} posts · {blogContributors.length} crews
@@ -270,7 +270,7 @@ const ProjectsPage = () => {
 				<div className="flex items-center gap-3 mb-2 flex-wrap">
 					<Users className="w-6 h-6 text-[#d4af37]" />
 					<h2 className="text-2xl md:text-3xl font-black italic uppercase text-[#d4af37]">
-						All Projects
+						Top Projects
 					</h2>
 					<span className="inline-flex items-center justify-center text-xs font-mono font-semibold bg-[#d4af37]/10 border border-[#d4af37]/30 text-[#d4af37] rounded-full px-3 py-1">
 						{submittedProjects.length} submissions
