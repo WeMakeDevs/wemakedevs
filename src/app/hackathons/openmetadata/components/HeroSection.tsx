@@ -578,13 +578,6 @@ const HeroSection = ({
 	const carOpacity = useTransform(scrollYProgress, [0, 0.72], [1, 0.12]);
 	const starsY = useTransform(scrollYProgress, [0, 1], ["0%", "35%"]);
 
-	const startD = new Date(startDate);
-	const endD = new Date(endDate);
-	const now = new Date();
-	const hackathonStarted = now >= startD;
-	const countdownTarget = hackathonStarted ? endD : startD;
-	const countdown = useCountdown(countdownTarget);
-
 	const dateLabel = `Apr 17 - Apr 26, 2026`;
 
 	return (
@@ -693,7 +686,7 @@ const HeroSection = ({
 					</div>
 
 					{/* Info cards */}
-					<div className="grid grid-cols-1 sm:grid-cols-3 gap-3 max-w-3xl">
+					<div className="grid grid-cols-1 sm:grid-cols-2 gap-3 max-w-3xl">
 						<div className="border border-amber-500/45 rounded-xl p-4 bg-black/60 backdrop-blur-sm shadow-[0_0_18px_rgba(245,158,11,0.18)]">
 							<div className="text-[11px] uppercase tracking-[0.18em] text-amber-500/80 mb-1 font-bold">
 								Dates
@@ -705,23 +698,6 @@ const HeroSection = ({
 								}}
 							>
 								{dateLabel}
-							</div>
-						</div>
-						<div className="border border-cyan-500/45 rounded-xl p-4 bg-black/60 backdrop-blur-sm shadow-[0_0_18px_rgba(6,182,212,0.2)]">
-							<div className="text-[11px] uppercase tracking-[0.18em] text-cyan-500/80 mb-1 font-bold">
-								{hackathonStarted ? "Time Left" : "Starts In"}
-							</div>
-							<div
-								className="font-mono text-sm font-bold text-cyan-300 flex gap-1"
-								style={{
-									textShadow:
-										"0 0 8px rgba(103,232,249,0.65)",
-								}}
-							>
-								<span>{countdown.days}d</span>
-								<span>{countdown.hours}h</span>
-								<span>{countdown.minutes}m</span>
-								<span>{countdown.seconds}s</span>
 							</div>
 						</div>
 						<div className="border border-emerald-500/45 rounded-xl p-4 bg-black/60 backdrop-blur-sm shadow-[0_0_18px_rgba(16,185,129,0.2)]">

@@ -17,6 +17,11 @@ export default function RootLayout({
 			type: "link",
 		},
 		{
+			name: "Winners",
+			url: `/hackathons/${DATA.slug}#winners`,
+			type: "link",
+		},
+		{
 			name: "Prizes",
 			url: `/hackathons/${DATA.slug}#prizes`,
 			type: "link",

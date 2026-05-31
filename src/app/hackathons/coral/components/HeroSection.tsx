@@ -1148,14 +1148,6 @@ const HeroSection = ({
 						</Link>
 					)}
 					<Link
-						href="https://forms.gle/iLRYXPsGHFTj7xaeA"
-						target="_blank"
-						rel="noopener noreferrer"
-						className="px-7 py-3.5 rounded-xl bg-gradient-to-r from-[#2aa198] to-[#1a8079] text-[#002b36] font-bold text-base shadow-lg shadow-[#2aa198]/20 hover:shadow-[#2aa198]/40 hover:scale-[1.02] transition-all duration-300"
-					>
-						📜 Submit Project
-					</Link>
-					<Link
 						href="https://git.new/coral-wemakedevs-may26"
 						target="_blank"
 						rel="noopener noreferrer"

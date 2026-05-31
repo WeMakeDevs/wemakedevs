@@ -3,7 +3,6 @@ import HackathonNavbar from "@/components/HackathonNavbar";
 import type { navLinksType } from "@/types";
 import type { Metadata } from "next";
 import PirateBackground from "./components/PirateBackground";
-import SubmissionBanner from "./components/SubmissionBanner";
 import { DATA } from "./data";
 import "./styles.css";
 
@@ -41,11 +40,6 @@ export default function RootLayout({
 			type: "link",
 		},
 		{
-			name: "Tracks",
-			url: `/hackathons/${DATA.slug}#tracks`,
-			type: "link",
-		},
-		{
 			name: "Prizes",
 			url: `/hackathons/${DATA.slug}#prizes`,
 			type: "link",
@@ -56,13 +50,14 @@ export default function RootLayout({
 			type: "link",
 		},
 		{
-			name: "FAQs",
-			url: `/hackathons/${DATA.slug}#faq`,
+			name: "Hackathon",
+			url: "https://www.wemakedevs.org/hackathons",
 			type: "link",
+			openInNewTab: true,
 		},
 		{
-			name: "Register",
-			url: DATA.cta.href,
+			name: "Partner with us",
+			url: "https://www.wemakedevs.org/#partners",
 			type: "button",
 			openInNewTab: true,
 		},
@@ -76,7 +71,6 @@ export default function RootLayout({
 				{children}
 				<HackathonFooter />
 			</div>
-			<SubmissionBanner />
 		</div>
 	);
 }

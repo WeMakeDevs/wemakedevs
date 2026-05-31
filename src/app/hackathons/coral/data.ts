@@ -11,10 +11,10 @@ const DATA = {
 		"Build agents powered by Coral. Query any API, database, or file as SQL. $10K+ in treasure awaits.",
 	slug: "coral",
 	cta: {
-		label: "Register Now",
+		label: "Projects",
 		href: "https://forms.gle/dxBPLK17A8dXwp64A",
 		openInNewTab: true,
-		disabled: false,
+		disabled: true,
 	},
 	showDate: true,
 	prizes: {

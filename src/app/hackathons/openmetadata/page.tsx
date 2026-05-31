@@ -10,6 +10,7 @@ import PrizesShowcase from "./components/PrizesShowcase";
 import OpenMetadataSponsorTestimonial from "./components/SponsorTestimonial";
 import OpenMetadataStats from "./components/Stats";
 import OpenMetadataTestimonials from "./components/Testimonials";
+import WinnersSection from "./components/WinnersSection";
 import { DATA, faqs, navLinks } from "./data";
 import { images } from "./images";
 
@@ -74,6 +75,9 @@ const HackathonPage = () => {
 					</div>
 				</ViewContainer>
 			</div>
+
+			{/* ── Winners ───────────────────────────────────────────────────────────── */}
+			<WinnersSection />
 
 			{/* ── Stats ─────────────────────────────────────────────────────────────── */}
 			<div className="bg-slate-950 retro-grid">

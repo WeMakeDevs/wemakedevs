@@ -7,7 +7,6 @@ import Meetups from "@/components/Meetups";
 import Navbar from "@/components/Navbar";
 import Newsletter from "@/components/Newsletter";
 import Numbers from "@/components/Numbers";
-import OrchestrationBanner from "@/components/OrchestrationBanner";
 import Partners from "@/components/Partners";
 import SponsorTestimonialsScroll from "@/components/SponsorTestimonialsScroll";
 import Testimonials from "@/components/Testimonials";
@@ -28,7 +27,6 @@ export default function Home() {
 			<Faq FAQS={FAQS} />
 			<Partners />
 			<Footer />
-			<OrchestrationBanner />
 		</div>
 	);
 }
