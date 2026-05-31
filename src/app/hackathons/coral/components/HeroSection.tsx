@@ -14,12 +14,6 @@ type HeroProps = {
 	endDate: string;
 	prize: string;
 	showDate?: boolean;
-	cta: {
-		label: string;
-		href: string;
-		openInNewTab?: boolean;
-		disabled?: boolean;
-	};
 };
 
 /* ═══════════════════════════════════════════════════════════════════
@@ -460,7 +454,6 @@ const HeroSection = ({
 	endDate,
 	prize,
 	showDate = true,
-	cta,
 }: HeroProps) => {
 	const startD = new Date(startDate);
 	const endD = new Date(endDate);
@@ -1127,26 +1120,14 @@ const HeroSection = ({
 					initial={{ opacity: 0, scale: 0.9 }}
 					animate={{ opacity: 1, scale: 1 }}
 					transition={{ delay: 1.9, duration: 0.5 }}
-					className="flex flex-wrap gap-3 mt-7"
+					className="relative z-30 flex flex-wrap gap-3 mt-7"
 				>
-					{cta.disabled ? (
-						<div className="px-7 py-3.5 rounded-xl bg-[#586e75]/20 text-[#586e75] font-semibold cursor-not-allowed">
-							{cta.label}
-						</div>
-					) : (
-						<Link
-							href={cta.href}
-							target={cta.openInNewTab ? "_blank" : "_self"}
-							rel={
-								cta.openInNewTab
-									? "noopener noreferrer"
-									: undefined
-							}
-							className="px-7 py-3.5 rounded-xl bg-gradient-to-r from-[#d4af37] to-[#b8960c] text-[#002b36] font-bold text-base shadow-lg shadow-[#d4af37]/20 hover:shadow-[#d4af37]/40 hover:scale-[1.02] transition-all duration-300"
-						>
-							🏴‍☠️ {cta.label}
-						</Link>
-					)}
+					<Link
+						href="/hackathons/coral/projects"
+						className="px-7 py-3.5 rounded-xl bg-gradient-to-r from-[#d4af37] to-[#b8960c] text-[#002b36] font-bold text-base shadow-lg shadow-[#d4af37]/20 hover:shadow-[#d4af37]/40 hover:scale-[1.02] transition-all duration-300"
+					>
+						🏴‍☠️ View Projects
+					</Link>
 					<Link
 						href="https://git.new/coral-wemakedevs-may26"
 						target="_blank"
