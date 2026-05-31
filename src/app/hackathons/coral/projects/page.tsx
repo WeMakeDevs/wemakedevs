@@ -79,7 +79,6 @@ const ProjectsPage = () => {
 				b.prs.length - a.prs.length || a.team.localeCompare(b.team),
 		);
 
-	const totalBlogs = blogContributors.reduce((s, p) => s + p.blogs.length, 0);
 	const totalPrs = prContributors.reduce((s, p) => s + p.prs.length, 0);
 
 	return (
@@ -134,7 +133,7 @@ const ProjectsPage = () => {
 						Top PRs
 					</h2>
 					<span className="inline-flex items-center justify-center text-xs font-mono font-semibold bg-[#d4af37]/10 border border-[#d4af37]/30 text-[#d4af37] rounded-full px-3 py-1">
-						{totalPrs} PRs · {prContributors.length} crews
+						{totalPrs} PRs
 					</span>
 				</div>
 				<p className="text-[#93a1a1] text-sm md:text-base mb-6">
@@ -207,9 +206,6 @@ const ProjectsPage = () => {
 					<h2 className="text-2xl md:text-3xl font-black italic uppercase text-[#d4af37]">
 						Top Blogs
 					</h2>
-					<span className="inline-flex items-center justify-center text-xs font-mono font-semibold bg-[#d4af37]/10 border border-[#d4af37]/30 text-[#d4af37] rounded-full px-3 py-1">
-						{totalBlogs} posts · {blogContributors.length} crews
-					</span>
 				</div>
 				<p className="text-[#93a1a1] text-sm md:text-base mb-6">
 					End-to-end &quot;How to Build X&quot; guides written by
@@ -272,9 +268,6 @@ const ProjectsPage = () => {
 					<h2 className="text-2xl md:text-3xl font-black italic uppercase text-[#d4af37]">
 						Top Projects
 					</h2>
-					<span className="inline-flex items-center justify-center text-xs font-mono font-semibold bg-[#d4af37]/10 border border-[#d4af37]/30 text-[#d4af37] rounded-full px-3 py-1">
-						{submittedProjects.length} submissions
-					</span>
 				</div>
 				<p className="text-[#93a1a1] text-sm md:text-base mb-6">
 					Every project built on top of Coral during the hackathon.
