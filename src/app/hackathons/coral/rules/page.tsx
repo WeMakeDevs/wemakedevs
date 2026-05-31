@@ -17,10 +17,10 @@ const HackathonRules = async () => {
 				page="rules"
 				links={navLinks}
 				navCta={{
-					label: DATA.cta.label,
-					href: DATA.cta.href,
-					openInNewTab: DATA.cta.openInNewTab,
-					disabled: DATA.cta.disabled,
+					label: DATA.projectsCta.label,
+					href: DATA.projectsCta.href,
+					openInNewTab: DATA.projectsCta.openInNewTab,
+					disabled: DATA.projectsCta.disabled,
 				}}
 			/>
 			<ViewContainer className="my-10">

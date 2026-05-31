@@ -24,7 +24,7 @@ const HackathonPage = () => {
 					endDate={DATA.endDate}
 					prize={DATA.prize}
 					showDate={DATA.showDate}
-					cta={DATA.cta}
+					cta={DATA.projectsCta}
 				/>
 			</div>
 

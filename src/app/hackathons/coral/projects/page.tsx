@@ -66,16 +66,6 @@ const prLabel = (url: string) => {
 };
 
 const ProjectsPage = () => {
-	const trackCounts = submittedProjects.reduce(
-		(acc, p) => {
-			for (const t of p.tracks) {
-				acc[t] = (acc[t] ?? 0) + 1;
-			}
-			return acc;
-		},
-		{} as Record<string, number>,
-	);
-
 	const blogContributors = submittedProjects
 		.filter(p => p.blogs.length > 0)
 		.sort(
@@ -95,17 +85,7 @@ const ProjectsPage = () => {
 	return (
 		<div className="pt-20 pb-16 min-h-screen">
 			<HackathonCoverImage src={images.cover} alt={DATA.title} />
-			<HackathonNav
-				slug={DATA.slug}
-				page="projects"
-				links={navLinks}
-				navCta={{
-					label: DATA.projectsCta.label,
-					href: DATA.projectsCta.href,
-					openInNewTab: DATA.projectsCta.openInNewTab,
-					disabled: DATA.projectsCta.disabled,
-				}}
-			/>
+			<HackathonNav slug={DATA.slug} page="projects" links={navLinks} />
 
 			{/* Hero / Header */}
 			<ViewContainer className="pt-12">
@@ -122,56 +102,19 @@ const ProjectsPage = () => {
 						as SQL — no ETL, no warehouse, no glue code.
 					</p>
 
-					{/* Stat pills */}
-					<div className="flex flex-wrap justify-center gap-3 mt-8">
-						<div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#001e26] border border-[#d4af37]/20 text-[#fdf6e3] text-sm">
-							<Users className="w-4 h-4 text-[#d4af37]" />
-							<span className="font-semibold">
-								{submittedProjects.length}
-							</span>
-							<span className="text-[#586e75]">submissions</span>
-						</div>
-						<div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#001e26] border border-[#d4af37]/20 text-[#fdf6e3] text-sm">
-							<BookOpen className="w-4 h-4 text-[#d4af37]" />
-							<span className="font-semibold">{totalBlogs}</span>
-							<span className="text-[#586e75]">blogs</span>
-						</div>
-						<div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#001e26] border border-[#d4af37]/20 text-[#fdf6e3] text-sm">
-							<GitPullRequest className="w-4 h-4 text-[#d4af37]" />
-							<span className="font-semibold">{totalPrs}</span>
-							<span className="text-[#586e75]">PRs to Coral</span>
-						</div>
-						{(["Track 1", "Track 2", "Bounties"] as const).map(t =>
-							trackCounts[t] ? (
-								<div
-									key={t}
-									className={cn(
-										"inline-flex items-center gap-2 px-4 py-2 rounded-full border text-sm font-medium",
-										trackStyles[t],
-									)}
-								>
-									<span className="font-semibold">
-										{trackCounts[t]}
-									</span>
-									<span className="opacity-80">{t}</span>
-								</div>
-							) : null,
-						)}
-					</div>
-
 					{/* Section anchor nav */}
 					<nav className="flex flex-wrap justify-center gap-2 mt-8 text-sm">
-						<a
-							href="#blogs"
-							className="px-4 py-2 rounded-lg border border-[#d4af37]/20 text-[#d4af37] hover:bg-[#d4af37]/10 transition-colors"
-						>
-							Captain&apos;s Log · Blogs
-						</a>
 						<a
 							href="#prs"
 							className="px-4 py-2 rounded-lg border border-[#d4af37]/20 text-[#d4af37] hover:bg-[#d4af37]/10 transition-colors"
 						>
 							Chart New Waters · PRs
+						</a>
+						<a
+							href="#blogs"
+							className="px-4 py-2 rounded-lg border border-[#d4af37]/20 text-[#d4af37] hover:bg-[#d4af37]/10 transition-colors"
+						>
+							Captain&apos;s Log · Blogs
 						</a>
 						<a
 							href="#all-projects"
@@ -183,73 +126,8 @@ const ProjectsPage = () => {
 				</div>
 			</ViewContainer>
 
-			{/* Blogs Section */}
-			<ViewContainer id="blogs" className="mt-12 scroll-mt-32">
-				<div className="flex items-center gap-3 mb-2 flex-wrap">
-					<BookOpen className="w-6 h-6 text-[#d4af37]" />
-					<h2 className="text-2xl md:text-3xl font-black italic uppercase text-[#d4af37]">
-						Captain&apos;s Log · Blogs
-					</h2>
-					<span className="inline-flex items-center justify-center text-xs font-mono font-semibold bg-[#d4af37]/10 border border-[#d4af37]/30 text-[#d4af37] rounded-full px-3 py-1">
-						{totalBlogs} posts · {blogContributors.length} crews
-					</span>
-				</div>
-				<p className="text-[#93a1a1] text-sm md:text-base mb-6">
-					End-to-end &quot;How to Build X&quot; guides written by
-					pirates during their voyage.
-				</p>
-				<div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-					{blogContributors.map(project => (
-						<div
-							key={`${project.team}-blogs`}
-							className="rounded-xl border border-[#d4af37]/15 hover:border-[#d4af37]/40 transition-colors parchment-bg px-4 py-4"
-						>
-							<div className="flex items-center gap-3 mb-3">
-								<BookOpen
-									className="text-[#d4af37] shrink-0"
-									size={18}
-								/>
-								<h3 className="font-semibold text-[#fdf6e3] grow truncate">
-									{project.title}
-								</h3>
-								<span className="text-xs font-mono text-[#d4af37] bg-[#d4af37]/10 border border-[#d4af37]/30 px-2 py-0.5 rounded shrink-0">
-									{project.blogs.length === 1
-										? "1 post"
-										: `${project.blogs.length} posts`}
-								</span>
-							</div>
-							<p className="text-xs text-[#586e75] mb-2 truncate">
-								{project.isSolo
-									? project.team
-									: `Crew · ${project.team}`}
-							</p>
-							<ul className="flex flex-col gap-1.5 ml-1">
-								{project.blogs.map(url => (
-									<li key={url}>
-										<a
-											href={url}
-											target="_blank"
-											rel="noopener noreferrer"
-											className="group inline-flex items-start gap-2 text-sm text-[#93a1a1] hover:text-[#d4af37] transition-colors"
-										>
-											<ExternalLink
-												className="w-3 h-3 text-[#586e75] group-hover:text-[#d4af37] mt-1 shrink-0"
-												aria-hidden="true"
-											/>
-											<span className="line-clamp-2 break-words">
-												{blogLabel(url)}
-											</span>
-										</a>
-									</li>
-								))}
-							</ul>
-						</div>
-					))}
-				</div>
-			</ViewContainer>
-
 			{/* PRs Section */}
-			<ViewContainer id="prs" className="mt-16 scroll-mt-32">
+			<ViewContainer id="prs" className="mt-12 scroll-mt-32">
 				<div className="flex items-center gap-3 mb-2 flex-wrap">
 					<GitPullRequest className="w-6 h-6 text-[#d4af37]" />
 					<h2 className="text-2xl md:text-3xl font-black italic uppercase text-[#d4af37]">
@@ -312,6 +190,71 @@ const ProjectsPage = () => {
 											/>
 											<span className="font-mono">
 												{prLabel(url)}
+											</span>
+										</a>
+									</li>
+								))}
+							</ul>
+						</div>
+					))}
+				</div>
+			</ViewContainer>
+
+			{/* Blogs Section */}
+			<ViewContainer id="blogs" className="mt-16 scroll-mt-32">
+				<div className="flex items-center gap-3 mb-2 flex-wrap">
+					<BookOpen className="w-6 h-6 text-[#d4af37]" />
+					<h2 className="text-2xl md:text-3xl font-black italic uppercase text-[#d4af37]">
+						Captain&apos;s Log · Blogs
+					</h2>
+					<span className="inline-flex items-center justify-center text-xs font-mono font-semibold bg-[#d4af37]/10 border border-[#d4af37]/30 text-[#d4af37] rounded-full px-3 py-1">
+						{totalBlogs} posts · {blogContributors.length} crews
+					</span>
+				</div>
+				<p className="text-[#93a1a1] text-sm md:text-base mb-6">
+					End-to-end &quot;How to Build X&quot; guides written by
+					pirates during their voyage.
+				</p>
+				<div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+					{blogContributors.map(project => (
+						<div
+							key={`${project.team}-blogs`}
+							className="rounded-xl border border-[#d4af37]/15 hover:border-[#d4af37]/40 transition-colors parchment-bg px-4 py-4"
+						>
+							<div className="flex items-center gap-3 mb-3">
+								<BookOpen
+									className="text-[#d4af37] shrink-0"
+									size={18}
+								/>
+								<h3 className="font-semibold text-[#fdf6e3] grow truncate">
+									{project.title}
+								</h3>
+								<span className="text-xs font-mono text-[#d4af37] bg-[#d4af37]/10 border border-[#d4af37]/30 px-2 py-0.5 rounded shrink-0">
+									{project.blogs.length === 1
+										? "1 post"
+										: `${project.blogs.length} posts`}
+								</span>
+							</div>
+							<p className="text-xs text-[#586e75] mb-2 truncate">
+								{project.isSolo
+									? project.team
+									: `Crew · ${project.team}`}
+							</p>
+							<ul className="flex flex-col gap-1.5 ml-1">
+								{project.blogs.map(url => (
+									<li key={url}>
+										<a
+											href={url}
+											target="_blank"
+											rel="noopener noreferrer"
+											className="group inline-flex items-start gap-2 text-sm text-[#93a1a1] hover:text-[#d4af37] transition-colors"
+										>
+											<ExternalLink
+												className="w-3 h-3 text-[#586e75] group-hover:text-[#d4af37] mt-1 shrink-0"
+												aria-hidden="true"
+											/>
+											<span className="line-clamp-2 break-words">
+												{blogLabel(url)}
 											</span>
 										</a>
 									</li>
