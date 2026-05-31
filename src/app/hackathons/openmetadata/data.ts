@@ -11,10 +11,10 @@ const DATA = {
 		"Build the future of metadata with OpenMetadata. Where we're going, we don't need silos.",
 	slug: "openmetadata",
 	cta: {
-		label: "Register Now",
-		href: "https://forms.gle/gogMB2AjCbeFQdZZ8",
-		openInNewTab: true,
-		disabled: true,
+		label: "View Projects",
+		href: "/hackathons/openmetadata/projects",
+		openInNewTab: false,
+		disabled: false,
 	},
 	submissionFormUrl: "",
 };
@@ -24,6 +24,11 @@ const navLinks = [
 		href: "/hackathons/openmetadata",
 		label: "Overview",
 		page: "overview",
+	},
+	{
+		href: "/hackathons/openmetadata/projects",
+		label: "Projects",
+		page: "projects",
 	},
 	{
 		href: "/hackathons/openmetadata/rules",
