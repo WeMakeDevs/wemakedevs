@@ -134,6 +134,83 @@ const ProjectsPage = () => {
 				</div>
 			</ViewContainer>
 
+			{/* PR Submissions Section */}
+			<ViewContainer className="mt-16">
+				<div className="flex items-center gap-3 mb-2">
+					<GitPullRequest className="w-6 h-6 text-amber-400" />
+					<h2 className="text-2xl md:text-3xl font-black italic uppercase text-amber-400">
+						Open Source Track · Pull Requests
+					</h2>
+					<span className="ml-2 inline-flex items-center justify-center text-xs font-mono font-semibold bg-amber-500/15 border border-amber-500/30 text-amber-300 rounded-full px-3 py-1">
+						{totalPrs} PRs · {prContributors.length} contributors
+					</span>
+				</div>
+				<p className="text-slate-400 text-sm md:text-base mb-6">
+					Contributors who submitted pull requests directly to the{" "}
+					<Link
+						href="https://github.com/open-metadata/OpenMetadata"
+						target="_blank"
+						rel="noopener noreferrer"
+						className="text-amber-400 hover:text-amber-300 underline"
+					>
+						open-metadata/OpenMetadata
+					</Link>{" "}
+					repository during the hackathon.
+				</p>
+				<div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+					{prContributors.map(contributor => (
+						<div
+							key={contributor.name}
+							className="rounded-xl border border-amber-500/15 hover:border-amber-500/40 transition-colors bg-slate-950/60 px-4 py-4"
+						>
+							<div className="flex items-center gap-3 mb-3">
+								<GitPullRequest
+									className="text-amber-400 shrink-0"
+									size={18}
+								/>
+								<h3 className="font-semibold text-slate-100 grow">
+									{contributor.name}
+								</h3>
+								<span className="text-xs font-mono text-amber-300 bg-amber-500/10 border border-amber-500/30 px-2 py-0.5 rounded">
+									{contributor.prLinks.length === 1
+										? "1 PR"
+										: `${contributor.prLinks.length} PRs`}
+								</span>
+							</div>
+							<ul className="flex flex-col gap-1.5 ml-1">
+								{contributor.prLinks.map(prLink => {
+									const match = prLink.match(
+										/github\.com\/open-metadata\/([\w-]+)\/(?:pull|issues)\/(\d+)/i,
+									);
+									const repo = match ? match[1] : "OpenMetadata";
+									const num = match ? `#${match[2]}` : prLink;
+									return (
+										<li key={prLink}>
+											<a
+												href={prLink}
+												target="_blank"
+												rel="noopener noreferrer"
+												className="group inline-flex items-center gap-2 text-sm text-slate-300 hover:text-amber-300 transition-colors"
+											>
+												<ExternalLink
+													className="w-3 h-3 text-slate-500 group-hover:text-amber-400"
+													aria-hidden="true"
+												/>
+												<span className="font-mono">
+													{repo}
+													{" · "}
+													{num}
+												</span>
+											</a>
+										</li>
+									);
+								})}
+							</ul>
+						</div>
+					))}
+				</div>
+			</ViewContainer>
+
 			{/* All Projects Section */}
 			<ViewContainer className="mt-16">
 				<div className="flex items-center gap-3 mb-2">
@@ -213,83 +290,6 @@ const ProjectsPage = () => {
 							</a>
 						);
 					})}
-				</div>
-			</ViewContainer>
-
-			{/* PR Submissions Section */}
-			<ViewContainer className="mt-16">
-				<div className="flex items-center gap-3 mb-2">
-					<GitPullRequest className="w-6 h-6 text-amber-400" />
-					<h2 className="text-2xl md:text-3xl font-black italic uppercase text-amber-400">
-						Open Source Track · Pull Requests
-					</h2>
-					<span className="ml-2 inline-flex items-center justify-center text-xs font-mono font-semibold bg-amber-500/15 border border-amber-500/30 text-amber-300 rounded-full px-3 py-1">
-						{totalPrs} PRs · {prContributors.length} contributors
-					</span>
-				</div>
-				<p className="text-slate-400 text-sm md:text-base mb-6">
-					Contributors who submitted pull requests directly to the{" "}
-					<Link
-						href="https://github.com/open-metadata/OpenMetadata"
-						target="_blank"
-						rel="noopener noreferrer"
-						className="text-amber-400 hover:text-amber-300 underline"
-					>
-						open-metadata/OpenMetadata
-					</Link>{" "}
-					repository during the hackathon.
-				</p>
-				<div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-					{prContributors.map(contributor => (
-						<div
-							key={contributor.name}
-							className="rounded-xl border border-amber-500/15 hover:border-amber-500/40 transition-colors bg-slate-950/60 px-4 py-4"
-						>
-							<div className="flex items-center gap-3 mb-3">
-								<GitPullRequest
-									className="text-amber-400 shrink-0"
-									size={18}
-								/>
-								<h3 className="font-semibold text-slate-100 grow">
-									{contributor.name}
-								</h3>
-								<span className="text-xs font-mono text-amber-300 bg-amber-500/10 border border-amber-500/30 px-2 py-0.5 rounded">
-									{contributor.prLinks.length === 1
-										? "1 PR"
-										: `${contributor.prLinks.length} PRs`}
-								</span>
-							</div>
-							<ul className="flex flex-col gap-1.5 ml-1">
-								{contributor.prLinks.map(prLink => {
-									const match = prLink.match(
-										/github\.com\/open-metadata\/([\w-]+)\/(?:pull|issues)\/(\d+)/i,
-									);
-									const repo = match ? match[1] : "OpenMetadata";
-									const num = match ? `#${match[2]}` : prLink;
-									return (
-										<li key={prLink}>
-											<a
-												href={prLink}
-												target="_blank"
-												rel="noopener noreferrer"
-												className="group inline-flex items-center gap-2 text-sm text-slate-300 hover:text-amber-300 transition-colors"
-											>
-												<ExternalLink
-													className="w-3 h-3 text-slate-500 group-hover:text-amber-400"
-													aria-hidden="true"
-												/>
-												<span className="font-mono">
-													{repo}
-													{" · "}
-													{num}
-												</span>
-											</a>
-										</li>
-									);
-								})}
-							</ul>
-						</div>
-					))}
 				</div>
 			</ViewContainer>
 		</main>
