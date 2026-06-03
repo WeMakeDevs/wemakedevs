@@ -1149,6 +1149,12 @@
 		font-size: 0.85rem;
 		margin-bottom: 1.25rem;
 	}
+	.prospects .event-sub a,
+	.prospects .cover-footer a {
+		display: inline-block;
+		padding: 0.5rem 0;
+		min-height: 36px;
+	}
 	.prospects .event-stats {
 		grid-template-columns: 1fr 1fr;
 		gap: 0.75rem;
