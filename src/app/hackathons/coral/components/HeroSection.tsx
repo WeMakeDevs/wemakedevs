@@ -1123,7 +1123,7 @@ const HeroSection = ({
 					className="relative z-30 flex flex-wrap gap-3 mt-7"
 				>
 					<Link
-						href="/hackathons/coral/projects"
+						href="/hackathons/coral/projects/prs"
 						className="px-7 py-3.5 rounded-xl bg-gradient-to-r from-[#d4af37] to-[#b8960c] text-[#002b36] font-bold text-base shadow-lg shadow-[#d4af37]/20 hover:shadow-[#d4af37]/40 hover:scale-[1.02] transition-all duration-300"
 					>
 						🏴‍☠️ View Projects

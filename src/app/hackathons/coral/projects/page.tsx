@@ -3,57 +3,25 @@ import {
 	HackathonNav,
 } from "@/components/hackathon-content";
 import { ViewContainer } from "@/components/ui/view-container";
-import { ArrowUpRight, BookOpen, GitPullRequest, Users } from "lucide-react";
+import { ArrowUpRight, GitPullRequest } from "lucide-react";
 import Link from "next/link";
 import { DATA, navLinks } from "../data";
 import { images } from "../images";
-import { counts } from "./sections";
 
 const filters = [
 	{
 		key: "prs",
-		title: "Top PRs",
+		title: "237 PRs",
 		description:
 			"Pirates who built source specs and sent pull requests to withcoral/coral.",
-		showCount: true,
-		countLabel: counts.prs === 1 ? "1 PR" : `${counts.prs} PRs`,
-		teamsLabel:
-			counts.prTeams === 1
-				? "1 contributor"
-				: `${counts.prTeams} contributors`,
+		showCount: false,
+		countLabel: "",
+		teamsLabel: "",
 		href: "/hackathons/coral/projects/prs",
 		icon: GitPullRequest,
 		accent: "from-[#d4af37]/20 to-[#d4af37]/5",
 		border: "border-[#d4af37]/30 hover:border-[#d4af37]/60",
 		iconColor: "text-[#d4af37]",
-	},
-	{
-		key: "all",
-		title: "Top Projects",
-		description:
-			"Every voyage shipped during the hackathon. Browse all crews and their builds.",
-		showCount: true,
-		countLabel: "800+",
-		teamsLabel: "submissions",
-		href: "/hackathons/coral/projects/all",
-		icon: Users,
-		accent: "from-[#2aa198]/20 to-[#2aa198]/5",
-		border: "border-[#2aa198]/30 hover:border-[#2aa198]/60",
-		iconColor: "text-[#2aa198]",
-	},
-	{
-		key: "blogs",
-		title: "Top Blogs",
-		description:
-			'End-to-end "How to Build X" guides written by pirates during their voyage.',
-		showCount: true,
-		countLabel: "500+",
-		teamsLabel: "posts",
-		href: "/hackathons/coral/projects/blogs",
-		icon: BookOpen,
-		accent: "from-[#cb4b16]/20 to-[#cb4b16]/5",
-		border: "border-[#cb4b16]/30 hover:border-[#cb4b16]/60",
-		iconColor: "text-[#cb4b16]",
 	},
 ];
 
@@ -82,7 +50,7 @@ const ProjectsHubPage = () => {
 
 			{/* Filter Cards */}
 			<ViewContainer>
-				<div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+				<div className="grid grid-cols-1 md:grid-cols-1 max-w-md mx-auto gap-5">
 					{filters.map(filter => {
 						const Icon = filter.icon;
 						return (

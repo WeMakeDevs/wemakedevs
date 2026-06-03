@@ -43,6 +43,7 @@
 		"@biomejs/biome": "1.9.4",
 		"@types/node": "22.10.2",
 		"postcss": "^8.5.6",
+		"puppeteer": "^25.1.0",
 		"shadcn": "^3.5.1",
 		"tailwindcss": "^3.4.18",
 		"typescript": "^5.9.3"
