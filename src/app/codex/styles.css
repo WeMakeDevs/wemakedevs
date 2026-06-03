@@ -923,4 +923,366 @@
 		align-items: flex-start;
 		gap: 0.5rem;
 	}
+
+	/* Give the strip room above the headline so it never overlaps */
+	.prospects .slide {
+		padding: 11vh 6vw 14vh;
+	}
+	.prospects .strip {
+		top: 4vh;
+		left: 6vw;
+		right: 6vw;
+		font-size: 10px;
+		gap: 0.5rem;
+	}
+	.prospects .strip .meta {
+		gap: 1rem;
+	}
+	.prospects .cover-footer {
+		left: 6vw;
+		right: 6vw;
+		bottom: 12vh;
+		font-size: 0.7rem;
+	}
+
+	/* Cover lockup wraps cleanly on tablets */
+	.prospects .lockup {
+		flex-wrap: wrap;
+		gap: 0.75rem 1rem;
+		margin-bottom: 2rem;
+	}
+
+	/* Founder image not too tall on tablet */
+	.prospects .founder-photo-wrap {
+		max-height: 50vh;
+	}
+	.prospects .socials {
+		grid-template-columns: repeat(3, 1fr);
+		gap: 0.6rem;
+	}
+	.prospects .social {
+		padding: 0.9rem;
+	}
+
+	/* Pricing/total banner readability */
+	.prospects .price-card {
+		padding: 1.75rem;
+	}
+	.prospects .price-card.featured::after {
+		top: 1rem;
+		right: 1rem;
+	}
+	.prospects .price-num .was {
+		display: inline-block;
+		margin-left: 0;
+	}
+	.prospects .total-banner {
+		padding: 1.25rem 1.25rem;
+	}
+
+	/* Testimonial stack should be allowed to scroll instead of clip */
+	.prospects .testimonial-stack {
+		max-height: none;
+	}
+}
+
+@media (max-width: 640px) {
+	/* Allow slides to grow + scroll naturally on phones */
+	.prospects {
+		overflow: visible;
+	}
+	.prospects .slide-stage {
+		height: auto;
+		min-height: calc(100svh - 96px);
+		overflow: visible;
+	}
+	.prospects .slide {
+		position: relative;
+		inset: auto;
+		height: auto;
+		min-height: calc(100svh - 96px);
+		padding: 9vh 5vw 14vh;
+		justify-content: flex-start;
+		gap: 1.25rem;
+	}
+	.prospects .slide:not(.active) {
+		display: none;
+	}
+
+	/* Strip stays inside flow on phones to avoid headline overlap */
+	.prospects .strip {
+		position: static;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		font-size: 9.5px;
+		margin-bottom: 1rem;
+		gap: 0.5rem;
+	}
+	.prospects .strip .meta {
+		gap: 0.6rem;
+		text-align: right;
+	}
+
+	/* Typography tuned for 360–414px screens */
+	.prospects h1.display {
+		font-size: clamp(2rem, 9vw, 3rem);
+		line-height: 1.05;
+		letter-spacing: -0.02em;
+	}
+	.prospects h2.title {
+		font-size: clamp(1.5rem, 7vw, 2.25rem);
+		line-height: 1.1;
+		margin-bottom: 1.25rem;
+	}
+	.prospects .lede {
+		font-size: 0.95rem;
+	}
+	.prospects .eyebrow {
+		font-size: 0.7rem;
+		margin-bottom: 1rem;
+	}
+	.prospects .eyebrow::before {
+		width: 20px;
+	}
+
+	/* Cover */
+	.prospects .lockup {
+		gap: 0.5rem 0.75rem;
+		margin-bottom: 1.5rem;
+	}
+	.prospects .lockup .codex {
+		font-size: 1rem;
+	}
+	.prospects .lockup .codex .dot {
+		width: 22px;
+		height: 22px;
+		font-size: 0.7rem;
+	}
+	.prospects .cover-logo {
+		font-size: 1rem;
+		gap: 0.4rem;
+	}
+	.prospects .cover-logo .mark {
+		padding: 4px 7px;
+		font-size: 0.85rem;
+	}
+	.prospects .cover-footer {
+		position: static;
+		margin-top: 2rem;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 0.4rem;
+	}
+
+	/* Stats become single column with tighter type */
+	.prospects .stats-grid {
+		gap: 1.25rem;
+		margin-top: 2rem;
+	}
+	.prospects .stat .num {
+		font-size: clamp(2.5rem, 12vw, 3.5rem);
+	}
+	.prospects .stat {
+		padding-left: 1rem;
+	}
+
+	/* Founder layout */
+	.prospects .founder {
+		gap: 1.5rem;
+	}
+	.prospects .founder-photo-wrap {
+		max-height: 60vw;
+		aspect-ratio: 4 / 3;
+	}
+	.prospects .founder-name {
+		font-size: clamp(1.75rem, 8vw, 2.5rem);
+		margin-bottom: 0.5rem;
+	}
+	.prospects .founder-role {
+		margin-bottom: 1rem;
+	}
+	.prospects .founder-bio {
+		font-size: 0.95rem;
+		margin-bottom: 1.5rem;
+	}
+	.prospects .socials {
+		grid-template-columns: repeat(3, 1fr);
+		gap: 0.5rem;
+	}
+	.prospects .social {
+		padding: 0.7rem 0.6rem;
+	}
+	.prospects .social .platform {
+		font-size: 0.6rem;
+	}
+	.prospects .social .count {
+		font-size: 1.25rem;
+	}
+
+	/* Past-event slides */
+	.prospects .event-tag {
+		font-size: 0.62rem;
+		padding: 0.3rem 0.6rem;
+		margin-bottom: 0.9rem;
+	}
+	.prospects .event-title {
+		font-size: clamp(1.6rem, 8vw, 2.5rem);
+	}
+	.prospects .event-sub {
+		font-size: 0.85rem;
+		margin-bottom: 1.25rem;
+	}
+	.prospects .event-stats {
+		grid-template-columns: 1fr 1fr;
+		gap: 0.75rem;
+	}
+	.prospects .ev-stat {
+		padding: 1rem 1rem 0.9rem;
+		border-radius: 12px;
+	}
+	.prospects .ev-stat .num {
+		font-size: 1.6rem;
+	}
+	.prospects .ev-stat .label {
+		font-size: 0.6rem;
+	}
+	.prospects .testimonial {
+		padding: 1.5rem 1.25rem;
+		border-radius: 14px;
+	}
+	.prospects .testimonial::before {
+		font-size: 3.5rem;
+		left: 16px;
+	}
+	.prospects .testimonial-text {
+		font-size: 0.92rem;
+	}
+	.prospects .testimonial.compact {
+		padding: 1rem 1.1rem;
+	}
+	.prospects .testimonial.compact .testimonial-text {
+		font-size: 0.85rem;
+	}
+
+	/* Divider chapter */
+	.prospects .divider h2 {
+		font-size: clamp(2.25rem, 12vw, 4rem);
+	}
+
+	/* Included grid + packs */
+	.prospects .included-grid {
+		gap: 1rem;
+		margin-top: 1.25rem;
+	}
+	.prospects .pack {
+		padding: 1.5rem;
+		border-radius: 14px;
+	}
+	.prospects .pack .ico {
+		width: 36px;
+		height: 36px;
+		margin-bottom: 1rem;
+	}
+	.prospects .pack h3 {
+		font-size: 1.1rem;
+	}
+
+	/* Pricing cards */
+	.prospects .pricing-grid {
+		gap: 1rem;
+		margin-top: 1.25rem;
+	}
+	.prospects .price-card {
+		padding: 1.5rem;
+		border-radius: 16px;
+	}
+	.prospects .price-format {
+		font-size: 0.7rem;
+		margin-bottom: 0.6rem;
+	}
+	.prospects .price-num {
+		font-size: clamp(2.25rem, 11vw, 3.25rem);
+		margin-bottom: 1rem;
+	}
+	.prospects .price-num .was {
+		display: block;
+		margin-left: 0;
+		margin-top: 0.25rem;
+		font-size: 0.95rem;
+	}
+	.prospects .price-list li {
+		padding: 0.55rem 0;
+		font-size: 0.88rem;
+	}
+
+	/* Total banner stacks cleanly */
+	.prospects .total-banner {
+		padding: 1.1rem 1.1rem;
+		gap: 0.4rem;
+	}
+	.prospects .total-banner .total-label {
+		font-size: 0.7rem;
+	}
+	.prospects .total-banner .total-num {
+		font-size: clamp(2.25rem, 11vw, 3rem);
+	}
+
+	/* Value banner stacks vertically */
+	.prospects .value-banner {
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 0.6rem;
+		padding: 1.1rem 1.1rem;
+	}
+	.prospects .value-num {
+		font-size: clamp(2rem, 10vw, 2.75rem);
+	}
+	.prospects .value-headline {
+		font-size: 1rem;
+	}
+	.prospects .value-sub {
+		font-size: 0.85rem;
+	}
+
+	/* CTA */
+	.prospects .cta-sub {
+		font-size: 1rem;
+		margin-bottom: 2rem;
+	}
+	.prospects .cta-link {
+		font-size: 0.9rem;
+		padding: 0.75rem 1.5rem;
+	}
+	.prospects .cta-sig {
+		margin-top: 2.5rem;
+		font-size: 0.75rem;
+	}
+
+	/* Nav controls compacted to bottom row, no overlap */
+	.prospects .nav-arrows {
+		bottom: 1.25rem;
+		left: 1rem;
+		gap: 0.4rem;
+	}
+	.prospects .nav-btn {
+		width: 34px;
+		height: 34px;
+	}
+	.prospects .counter {
+		bottom: 1.6rem;
+		right: 1rem;
+		font-size: 0.7rem;
+	}
+	.prospects .dots {
+		bottom: 2.4rem;
+	}
+	.prospects .dot {
+		width: 5px;
+		height: 5px;
+	}
+	.prospects .dot.active {
+		width: 16px;
+	}
 }
