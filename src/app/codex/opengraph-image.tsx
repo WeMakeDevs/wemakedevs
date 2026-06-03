@@ -153,9 +153,9 @@ export default function OpengraphImage() {
 							color: "transparent",
 						}}
 					>
-						Codex in the hands of builders
+						Codex in the hands of India&apos;s builders
 					</span>
-					&nbsp;worldwide.
+					.
 				</div>
 			</div>
 
@@ -170,7 +170,7 @@ export default function OpengraphImage() {
 				}}
 			>
 				{[
-					["200K+", "Community Builders"],
+					["200K+", "Builders · India-first"],
 					["5,000+", "Hackathon Participants"],
 					["1.6M+", "Content Reach"],
 				].map(([num, label]) => (

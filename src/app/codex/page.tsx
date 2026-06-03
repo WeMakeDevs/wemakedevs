@@ -97,9 +97,9 @@ const Codex = () => {
 							<span className="grad">
 								Codex in the hands
 								<br />
-								of builders
-							</span>{" "}
-							worldwide.
+								of India&apos;s builders
+							</span>
+							.
 						</h1>
 					</div>
 					<div className="cover-footer">
@@ -129,15 +129,16 @@ const Codex = () => {
 						A community of{" "}
 						<span className="grad">200,000+ builders</span>
 						<br />
-						across 30+ countries.
+						with our heart in India.
 					</h2>
 					<p className="lede">
-						WeMakeDevs is a global developer community built to
-						empower the next generation of builders. We connect,
-						educate, and amplify developers worldwide through
-						hackathons, content, and hands-on programs, and
-						we&apos;ve become a home for emerging tech, from
-						cloud-native and DevOps to AI and developer tooling.
+						WeMakeDevs is a developer community built to empower the
+						next generation of builders, with our largest and most
+						engaged audience in India. We connect, educate, and
+						amplify developers through hackathons, content, and
+						hands-on programs, and we&apos;ve become a home for
+						emerging tech, from cloud-native and DevOps to AI and
+						developer tooling.
 					</p>
 					<div className="stats-grid">
 						<div className="stat">
@@ -147,10 +148,8 @@ const Codex = () => {
 							<div className="label">Community Members</div>
 						</div>
 						<div className="stat">
-							<div className="num">
-								30<span className="plus">+</span>
-							</div>
-							<div className="label">Countries Represented</div>
+							<div className="num">#1</div>
+							<div className="label">Audience Base · India</div>
 						</div>
 						<div className="stat">
 							<div className="num">
@@ -974,8 +973,8 @@ const Codex = () => {
 					</div>
 					<div className="eyebrow">How we&apos;ll work together</div>
 					<h2 className="title">
-						Two pillars to put{" "}
-						<span className="grad">Codex everywhere.</span>
+						Two pillars to win{" "}
+						<span className="grad">India&apos;s builders.</span>
 					</h2>
 					<div
 						className="included-grid"
@@ -1008,8 +1007,8 @@ const Codex = () => {
 									Codex
 								</li>
 								<li>
-									Hybrid format with an in-person event in
-									India
+									Hybrid format anchored by an in-person event
+									in India
 								</li>
 								<li>
 									Livestream, on-site interviews with the
@@ -1023,8 +1022,9 @@ const Codex = () => {
 						style={{ marginTop: "2.5rem", textAlign: "center" }}
 					>
 						Authentic developer love at the top of the funnel,
-						thousands of real builds at the bottom. We run all of
-						it.
+						thousands of real builds at the bottom, all anchored in
+						India&apos;s fastest-growing developer ecosystem. We run
+						all of it.
 					</p>
 				</section>
 
@@ -1158,7 +1158,7 @@ const Codex = () => {
 								Codex Bundle Price
 							</div>
 							<div className="price-num">
-								<span className="currency">$</span>30,000
+								<span className="currency">$</span>25,000
 								<span className="was">$42,000</span>
 							</div>
 							<ul className="price-list">
@@ -1166,7 +1166,7 @@ const Codex = () => {
 								<li>All social posts included</li>
 								<li>Newsletter &amp; blog coverage included</li>
 								<li>1.6M+ combined reach</li>
-								<li>You save $12,000</li>
+								<li>You save $17,000</li>
 							</ul>
 						</div>
 					</div>
@@ -1182,7 +1182,7 @@ const Codex = () => {
 					</div>
 					<div className="eyebrow">Flagship Hackathon</div>
 					<h2 className="title" style={{ marginBottom: "1.5rem" }}>
-						5,000+ builders shipping with{" "}
+						5,000+ Indian builders shipping with{" "}
 						<span className="grad">Codex.</span>
 					</h2>
 					<div className="event-body" style={{ alignItems: "start" }}>
@@ -1207,7 +1207,8 @@ const Codex = () => {
 							>
 								<div className="num">Hybrid</div>
 								<div className="label">
-									In-person event in India + global online
+									In-person flagship in India + online across
+									the country
 								</div>
 							</div>
 						</div>
@@ -1260,7 +1261,7 @@ const Codex = () => {
 								Content &amp; Demos
 							</div>
 							<div className="price-num">
-								<span className="currency">$</span>30,000
+								<span className="currency">$</span>25,000
 								<span className="was">$42,000</span>
 							</div>
 							<ul className="price-list">
@@ -1292,7 +1293,7 @@ const Codex = () => {
 							Total investment · everything included
 						</div>
 						<div className="total-num">
-							<span className="currency">$</span>60,000
+							<span className="currency">$</span>55,000
 						</div>
 					</div>
 				</section>
@@ -1303,7 +1304,7 @@ const Codex = () => {
 						className="eyebrow"
 						style={{ justifyContent: "center" }}
 					>
-						Let&apos;s put Codex in builders&apos; hands
+						Let&apos;s put Codex in India&apos;s hands
 					</div>
 					<h1 className="display">
 						Ready to launch with
