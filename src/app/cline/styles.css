@@ -1,0 +1,1303 @@
+/* ═══════════════════════════════════════════════════════════════════
+   Cline × WeMakeDevs proposal deck — themed to match WeMakeDevs pages
+   Uses site fonts: --font-mono (Space Grotesk), --font-sans (Satoshi)
+   ═══════════════════════════════════════════════════════════════════ */
+
+.prospects {
+	--bg: #07090f;
+	--bg-2: #0c111b;
+	--panel: rgba(255, 255, 255, 0.04);
+	--line: rgba(255, 255, 255, 0.08);
+	--text: #f5f7fa;
+	--text-dim: #a4acbc;
+	--text-faint: #6b7280;
+	--cyan: #1fe4f5;
+	--blue: #2f6bff;
+	--gradient: linear-gradient(135deg, #1fe4f5 0%, #2f6bff 100%);
+
+	background: var(--bg);
+	color: var(--text);
+	font-family: var(--font-sans), system-ui, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	min-height: 100vh;
+	position: relative;
+	overflow: hidden;
+}
+
+/* Force dark text + heading colors inside the deck (overrides global h1-h6 rule) */
+.prospects,
+.prospects h1,
+.prospects h2,
+.prospects h3,
+.prospects h4,
+.prospects h5,
+.prospects h6,
+.prospects p,
+.prospects li,
+.prospects span,
+.prospects div {
+	color: inherit;
+}
+.prospects h1,
+.prospects h2,
+.prospects h3,
+.prospects h4,
+.prospects h5,
+.prospects h6 {
+	color: var(--text);
+}
+
+/* Numeric / title divs that don't use heading tags but should be white */
+.prospects .founder-name,
+.prospects .stat .num,
+.prospects .ev-stat .num,
+.prospects .price-num,
+.prospects .price-list li,
+.prospects .social .count,
+.prospects .value-num,
+.prospects .value-headline,
+.prospects .testimonial-attr .who,
+.prospects .testimonial-text,
+.prospects .pack h3 {
+	color: var(--text);
+}
+
+.prospects .price-num .currency {
+	color: var(--text-faint);
+}
+
+/* radial accent glow */
+.prospects::before {
+	content: "";
+	position: fixed;
+	top: -300px;
+	left: -300px;
+	width: 800px;
+	height: 800px;
+	background: radial-gradient(
+		circle,
+		rgba(31, 228, 245, 0.1) 0%,
+		transparent 60%
+	);
+	pointer-events: none;
+	z-index: 0;
+}
+.prospects::after {
+	content: "";
+	position: fixed;
+	bottom: -400px;
+	right: -300px;
+	width: 900px;
+	height: 900px;
+	background: radial-gradient(
+		circle,
+		rgba(47, 107, 255, 0.08) 0%,
+		transparent 60%
+	);
+	pointer-events: none;
+	z-index: 0;
+}
+
+.prospects .slide {
+	position: absolute;
+	inset: 0;
+	width: 100%;
+	height: 100%;
+	display: none;
+	padding: 5vh 7vw;
+	flex-direction: column;
+	justify-content: center;
+	opacity: 0;
+	transition: opacity 0.4s ease;
+	z-index: 1;
+	overflow-y: auto;
+}
+.prospects .slide.active {
+	display: flex;
+	opacity: 1;
+}
+
+.prospects .slide-stage {
+	position: relative;
+	width: 100%;
+	height: calc(100vh - 80px);
+	overflow: hidden;
+}
+
+.prospects .strip {
+	position: absolute;
+	top: 3.5vh;
+	left: 7vw;
+	right: 7vw;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-family: var(--font-mono), monospace;
+	font-size: 11px;
+	letter-spacing: 0.12em;
+	color: var(--text-faint);
+	text-transform: uppercase;
+}
+.prospects .strip .brand {
+	color: var(--cyan);
+	font-weight: 600;
+}
+.prospects .strip .brand span {
+	color: var(--text);
+}
+.prospects .strip .meta {
+	display: flex;
+	gap: 2rem;
+}
+
+.prospects .eyebrow {
+	font-family: var(--font-mono), monospace;
+	font-size: 0.78rem;
+	letter-spacing: 0.18em;
+	text-transform: uppercase;
+	color: var(--cyan);
+	margin-bottom: 1.5rem;
+	display: flex;
+	align-items: center;
+	gap: 0.75rem;
+}
+.prospects .eyebrow::before {
+	content: "";
+	width: 32px;
+	height: 1px;
+	background: var(--cyan);
+}
+
+.prospects h1.display {
+	font-family: var(--font-mono), monospace;
+	font-size: clamp(3rem, 7vw, 7.5rem);
+	font-weight: 700;
+	line-height: 0.95;
+	letter-spacing: -0.04em;
+}
+.prospects .grad {
+	background: var(--gradient);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
+}
+.prospects h2.title {
+	font-family: var(--font-mono), monospace;
+	font-size: clamp(2rem, 4.5vw, 4rem);
+	font-weight: 700;
+	line-height: 1;
+	letter-spacing: -0.03em;
+	margin-bottom: 2rem;
+}
+.prospects .lede {
+	font-size: clamp(1rem, 1.4vw, 1.3rem);
+	color: var(--text-dim);
+	max-width: 800px;
+	line-height: 1.55;
+}
+
+/* COVER */
+.prospects .cover-content {
+	z-index: 2;
+}
+.prospects .cover-logo {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.6rem;
+	font-family: var(--font-mono), monospace;
+	font-weight: 700;
+	font-size: 1.25rem;
+	margin-bottom: 3rem;
+	color: var(--text);
+}
+.prospects .cover-logo .mark {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: 2px;
+	padding: 6px 10px;
+	border-radius: 8px;
+	background: linear-gradient(135deg, var(--blue) 0%, #1739b0 100%);
+	color: white;
+	font-family: var(--font-mono), monospace;
+	font-size: 1rem;
+	letter-spacing: -0.05em;
+}
+.prospects .cover-logo .mark .gt {
+	color: var(--cyan);
+}
+
+/* Co-brand lockup (Partner × WeMakeDevs) */
+.prospects .lockup {
+	display: inline-flex;
+	align-items: center;
+	gap: 1rem;
+	margin-bottom: 3rem;
+}
+.prospects .lockup .x {
+	color: var(--text-faint);
+	font-family: var(--font-mono), monospace;
+	font-size: 1.1rem;
+}
+.prospects .lockup .partner {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.55rem;
+	font-family: var(--font-mono), monospace;
+	font-weight: 700;
+	font-size: 1.25rem;
+	color: var(--text);
+}
+.prospects .lockup .partner .dot {
+	width: 26px;
+	height: 26px;
+	border-radius: 50%;
+	border: 2px solid var(--text);
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 0.85rem;
+}
+/* Cline mark: monospace bracket cursor */
+.prospects .lockup .partner .mark {
+	width: 26px;
+	height: 26px;
+	border-radius: 6px;
+	background: var(--text);
+	color: var(--bg);
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	font-family: var(--font-mono), monospace;
+	font-weight: 800;
+	font-size: 0.85rem;
+}
+
+.prospects .cover-footer {
+	position: absolute;
+	bottom: 5vh;
+	left: 7vw;
+	right: 7vw;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+	font-family: var(--font-mono), monospace;
+	font-size: 0.8rem;
+	color: var(--text-faint);
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+}
+.prospects .cover-footer a {
+	color: var(--cyan);
+	text-decoration: none;
+}
+
+/* STATS */
+.prospects .stats-grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 2rem;
+	margin-top: 4rem;
+}
+.prospects .stat {
+	border-left: 2px solid var(--cyan);
+	padding-left: 1.5rem;
+}
+.prospects .stat .num {
+	font-family: var(--font-mono), monospace;
+	font-size: clamp(3rem, 6vw, 5.5rem);
+	font-weight: 700;
+	line-height: 1;
+	letter-spacing: -0.04em;
+	color: var(--text);
+}
+.prospects .stat .num .plus {
+	color: var(--cyan);
+}
+.prospects .stat .label {
+	margin-top: 0.75rem;
+	font-family: var(--font-mono), monospace;
+	font-size: 0.75rem;
+	text-transform: uppercase;
+	letter-spacing: 0.12em;
+	color: var(--text-dim);
+}
+
+/* FOUNDER */
+.prospects .founder {
+	display: grid;
+	grid-template-columns: 0.85fr 1.15fr;
+	gap: 5rem;
+	align-items: center;
+}
+.prospects .founder-photo-wrap {
+	position: relative;
+	aspect-ratio: 4 / 5;
+	max-height: 70vh;
+	border-radius: 18px;
+	overflow: hidden;
+	background: var(--panel);
+}
+.prospects .founder-photo-wrap::after {
+	content: "";
+	position: absolute;
+	inset: 0;
+	border-radius: 18px;
+	box-shadow: inset 0 0 0 1px var(--line);
+	pointer-events: none;
+}
+.prospects .founder-photo-wrap img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	display: block;
+}
+.prospects .founder-name {
+	font-family: var(--font-mono), monospace;
+	font-size: clamp(2rem, 4vw, 3.75rem);
+	font-weight: 700;
+	line-height: 1;
+	letter-spacing: -0.03em;
+	margin-bottom: 0.75rem;
+}
+.prospects .founder-role {
+	font-family: var(--font-mono), monospace;
+	color: var(--cyan);
+	font-size: 0.85rem;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	margin-bottom: 2rem;
+}
+.prospects .founder-bio {
+	font-size: 1.05rem;
+	line-height: 1.6;
+	color: var(--text-dim);
+	margin-bottom: 2.5rem;
+}
+.prospects .founder-bio strong {
+	color: var(--text);
+	font-weight: 600;
+}
+.prospects .socials {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 1rem;
+}
+.prospects .social {
+	background: var(--panel);
+	border: 1px solid var(--line);
+	border-radius: 12px;
+	padding: 1.25rem;
+}
+.prospects .social .platform {
+	font-family: var(--font-mono), monospace;
+	font-size: 0.7rem;
+	letter-spacing: 0.12em;
+	text-transform: uppercase;
+	color: var(--text-faint);
+	margin-bottom: 0.4rem;
+}
+.prospects .social .count {
+	font-family: var(--font-mono), monospace;
+	font-size: 1.8rem;
+	font-weight: 700;
+	color: var(--text);
+	letter-spacing: -0.02em;
+}
+.prospects .social .count .accent {
+	color: var(--cyan);
+}
+
+/* EVENT */
+.prospects .event-tag {
+	display: inline-block;
+	font-family: var(--font-mono), monospace;
+	font-size: 0.7rem;
+	letter-spacing: 0.15em;
+	text-transform: uppercase;
+	color: var(--cyan);
+	background: rgba(31, 228, 245, 0.08);
+	border: 1px solid rgba(31, 228, 245, 0.25);
+	padding: 0.4rem 0.8rem;
+	border-radius: 999px;
+	margin-bottom: 1.25rem;
+}
+.prospects .event-title {
+	font-family: var(--font-mono), monospace;
+	font-size: clamp(2rem, 4.2vw, 3.5rem);
+	font-weight: 700;
+	line-height: 1;
+	letter-spacing: -0.03em;
+	margin-bottom: 0.6rem;
+}
+.prospects .event-sub {
+	color: var(--text-dim);
+	font-size: 1rem;
+	margin-bottom: 2.5rem;
+}
+.prospects .event-sub a {
+	color: var(--cyan);
+	text-decoration: none;
+}
+.prospects .event-body {
+	display: grid;
+	grid-template-columns: 1fr 1.1fr;
+	gap: 3.5rem;
+	align-items: stretch;
+}
+.prospects .event-stats {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 1.25rem;
+	align-content: start;
+}
+.prospects .ev-stat {
+	background: var(--panel);
+	border: 1px solid var(--line);
+	border-radius: 14px;
+	padding: 1.5rem 1.5rem 1.4rem;
+	position: relative;
+	overflow: hidden;
+}
+.prospects .ev-stat::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 3px;
+	height: 100%;
+	background: var(--gradient);
+	opacity: 0;
+	transition: opacity 0.3s;
+}
+.prospects .ev-stat.featured::before {
+	opacity: 1;
+}
+.prospects .ev-stat .num {
+	font-family: var(--font-mono), monospace;
+	font-size: clamp(2rem, 3.5vw, 3rem);
+	font-weight: 700;
+	line-height: 1;
+	letter-spacing: -0.03em;
+	margin-bottom: 0.4rem;
+}
+.prospects .ev-stat .num .plus {
+	color: var(--cyan);
+}
+.prospects .ev-stat .label {
+	font-family: var(--font-mono), monospace;
+	font-size: 0.7rem;
+	color: var(--text-dim);
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+}
+
+.prospects .testimonial {
+	background: linear-gradient(
+		180deg,
+		rgba(31, 228, 245, 0.04) 0%,
+		rgba(47, 107, 255, 0.02) 100%
+	);
+	border: 1px solid var(--line);
+	border-radius: 16px;
+	padding: 2rem 2.25rem;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+.prospects .testimonial::before {
+	content: "“";
+	position: absolute;
+	top: -10px;
+	left: 24px;
+	font-family: var(--font-mono), monospace;
+	font-size: 5rem;
+	color: var(--cyan);
+	line-height: 1;
+	font-weight: 700;
+}
+.prospects .testimonial-text {
+	font-size: 1.02rem;
+	line-height: 1.55;
+	color: var(--text);
+	font-style: italic;
+	margin-bottom: 1.5rem;
+}
+.prospects .testimonial-attr {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+	padding-top: 1rem;
+	border-top: 1px solid var(--line);
+}
+.prospects .testimonial-attr .who {
+	font-weight: 600;
+	color: var(--text);
+	font-size: 0.95rem;
+}
+.prospects .testimonial-attr .role {
+	font-family: var(--font-mono), monospace;
+	font-size: 0.75rem;
+	color: var(--text-dim);
+	letter-spacing: 0.05em;
+	margin-top: 0.2rem;
+}
+.prospects .testimonial-stack {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	max-height: 70vh;
+	overflow: hidden;
+}
+.prospects .testimonial.compact {
+	padding: 1.25rem 1.5rem;
+}
+.prospects .testimonial.compact::before {
+	display: none;
+}
+.prospects .testimonial.compact .testimonial-text {
+	font-size: 0.92rem;
+	margin-bottom: 0.8rem;
+	font-style: normal;
+}
+.prospects .testimonial.compact .testimonial-attr {
+	padding-top: 0.6rem;
+}
+
+/* DIVIDER */
+.prospects .divider {
+	text-align: left;
+}
+.prospects .divider .number {
+	font-family: var(--font-mono), monospace;
+	color: var(--cyan);
+	font-size: 0.9rem;
+	letter-spacing: 0.2em;
+	margin-bottom: 1rem;
+}
+.prospects .divider h2 {
+	font-family: var(--font-mono), monospace;
+	font-size: clamp(3rem, 8vw, 7rem);
+	font-weight: 700;
+	line-height: 0.95;
+	letter-spacing: -0.04em;
+}
+
+/* INCLUDED */
+.prospects .included-grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 1.5rem;
+	margin-top: 2rem;
+}
+.prospects .pack {
+	background: var(--panel);
+	border: 1px solid var(--line);
+	border-radius: 16px;
+	padding: 2rem;
+}
+.prospects .pack .ico {
+	width: 44px;
+	height: 44px;
+	border-radius: 10px;
+	background: var(--gradient);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 1.5rem;
+	font-family: var(--font-mono), monospace;
+	font-weight: 700;
+	color: #07090f;
+}
+.prospects .pack h3 {
+	font-family: var(--font-mono), monospace;
+	font-size: 1.3rem;
+	font-weight: 600;
+	margin-bottom: 0.8rem;
+	letter-spacing: -0.02em;
+}
+.prospects .pack ul {
+	list-style: none;
+	padding: 0;
+}
+.prospects .pack li {
+	color: var(--text-dim);
+	font-size: 0.9rem;
+	line-height: 1.5;
+	padding-left: 1.2rem;
+	position: relative;
+	margin-bottom: 0.5rem;
+}
+.prospects .pack li::before {
+	content: "→";
+	position: absolute;
+	left: 0;
+	color: var(--cyan);
+}
+
+/* PRICING */
+.prospects .pricing-grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 1.5rem;
+	margin-top: 2rem;
+}
+.prospects .price-card {
+	background: var(--panel);
+	border: 1px solid var(--line);
+	border-radius: 20px;
+	padding: 2.5rem;
+	position: relative;
+	overflow: hidden;
+}
+.prospects .price-card.featured {
+	background: linear-gradient(
+		180deg,
+		rgba(31, 228, 245, 0.06) 0%,
+		rgba(47, 107, 255, 0.03) 100%
+	);
+	border-color: rgba(31, 228, 245, 0.35);
+}
+.prospects .price-card.featured::after {
+	content: "HACKATHON";
+	position: absolute;
+	top: 1.5rem;
+	right: 1.5rem;
+	font-family: var(--font-mono), monospace;
+	font-size: 0.65rem;
+	color: var(--cyan);
+	background: rgba(31, 228, 245, 0.1);
+	padding: 0.3rem 0.6rem;
+	border-radius: 999px;
+	letter-spacing: 0.12em;
+}
+.prospects .price-format {
+	font-family: var(--font-mono), monospace;
+	font-size: 0.75rem;
+	letter-spacing: 0.15em;
+	text-transform: uppercase;
+	color: var(--text-dim);
+	margin-bottom: 1rem;
+}
+.prospects .price-num {
+	font-family: var(--font-mono), monospace;
+	font-size: clamp(3rem, 5vw, 4.5rem);
+	font-weight: 700;
+	line-height: 1;
+	letter-spacing: -0.04em;
+	margin-bottom: 1.5rem;
+}
+.prospects .price-num .currency {
+	color: var(--text-faint);
+	font-weight: 500;
+}
+.prospects .price-num .was {
+	font-size: 1.4rem;
+	color: var(--text-faint);
+	text-decoration: line-through;
+	margin-left: 0.75rem;
+	letter-spacing: 0;
+}
+.prospects .price-list {
+	list-style: none;
+	padding: 0;
+}
+.prospects .price-list li {
+	padding: 0.7rem 0;
+	border-top: 1px solid var(--line);
+	color: var(--text);
+	font-size: 0.95rem;
+	line-height: 1.5;
+}
+.prospects .price-list li:first-child {
+	border-top: none;
+}
+
+/* TOTAL banner under pricing */
+.prospects .total-banner {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 1.5rem;
+	margin-top: 1.5rem;
+	padding: 1.5rem 2rem;
+	background: linear-gradient(
+		135deg,
+		rgba(31, 228, 245, 0.12) 0%,
+		rgba(47, 107, 255, 0.07) 100%
+	);
+	border: 1px solid rgba(31, 228, 245, 0.35);
+	border-radius: 16px;
+}
+.prospects .total-banner .total-label {
+	font-family: var(--font-mono), monospace;
+	font-size: 0.8rem;
+	letter-spacing: 0.15em;
+	text-transform: uppercase;
+	color: var(--text-dim);
+}
+.prospects .total-banner .total-num {
+	font-family: var(--font-mono), monospace;
+	font-size: clamp(2.5rem, 5vw, 4rem);
+	font-weight: 700;
+	line-height: 1;
+	letter-spacing: -0.04em;
+	color: var(--text);
+}
+.prospects .total-banner .total-num .currency {
+	color: var(--text-faint);
+	font-weight: 500;
+}
+
+/* VALUE BANNER */
+.prospects .value-banner {
+	display: flex;
+	align-items: center;
+	gap: 1.75rem;
+	padding: 1.5rem 1.75rem;
+	background: linear-gradient(
+		135deg,
+		rgba(31, 228, 245, 0.1) 0%,
+		rgba(47, 107, 255, 0.06) 100%
+	);
+	border: 1px solid rgba(31, 228, 245, 0.3);
+	border-radius: 16px;
+	margin-bottom: 1.75rem;
+}
+.prospects .value-num {
+	font-family: var(--font-mono), monospace;
+	font-size: clamp(2.5rem, 4.5vw, 3.75rem);
+	font-weight: 700;
+	line-height: 1;
+	letter-spacing: -0.04em;
+	color: var(--text);
+	white-space: nowrap;
+}
+.prospects .value-num .plus {
+	color: var(--cyan);
+}
+.prospects .value-copy {
+	flex: 1;
+}
+.prospects .value-headline {
+	font-family: var(--font-mono), monospace;
+	font-size: clamp(1.05rem, 1.6vw, 1.5rem);
+	font-weight: 600;
+	line-height: 1.25;
+	color: var(--text);
+	margin-bottom: 0.4rem;
+	letter-spacing: -0.01em;
+}
+.prospects .value-sub {
+	font-size: 0.92rem;
+	line-height: 1.5;
+	color: var(--text-dim);
+}
+
+/* CTA */
+.prospects .cta {
+	text-align: center;
+	align-items: center;
+}
+.prospects .cta .display {
+	margin-bottom: 2rem;
+}
+.prospects .cta-sub {
+	font-size: 1.3rem;
+	color: var(--text-dim);
+	max-width: 700px;
+	margin: 0 auto 3rem;
+	line-height: 1.5;
+}
+.prospects .cta-links {
+	display: flex;
+	gap: 1rem;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+.prospects .cta-link {
+	font-family: var(--font-mono), monospace;
+	font-size: 1.05rem;
+	color: var(--cyan);
+	text-decoration: none;
+	border: 1px solid var(--cyan);
+	padding: 1rem 2.5rem;
+	border-radius: 999px;
+	letter-spacing: 0.05em;
+	transition: all 0.2s;
+	display: inline-block;
+}
+.prospects .cta-link.primary {
+	background: var(--gradient);
+	color: #07090f;
+	border-color: transparent;
+	font-weight: 600;
+}
+.prospects .cta-link:hover {
+	background: rgba(31, 228, 245, 0.08);
+}
+.prospects .cta-link.primary:hover {
+	opacity: 0.92;
+}
+.prospects .cta-sig {
+	margin-top: 4rem;
+	font-family: var(--font-mono), monospace;
+	font-size: 0.85rem;
+	color: var(--text-faint);
+	letter-spacing: 0.05em;
+}
+
+/* NAV CONTROLS */
+.prospects .nav-arrows {
+	position: fixed;
+	bottom: 3vh;
+	left: 7vw;
+	display: flex;
+	gap: 0.5rem;
+	z-index: 100;
+}
+.prospects .nav-btn {
+	width: 38px;
+	height: 38px;
+	border-radius: 50%;
+	background: var(--panel);
+	border: 1px solid var(--line);
+	color: var(--text);
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: all 0.2s;
+	font-family: var(--font-mono), monospace;
+}
+.prospects .nav-btn:hover:not(:disabled) {
+	background: rgba(31, 228, 245, 0.1);
+	border-color: var(--cyan);
+	color: var(--cyan);
+}
+.prospects .nav-btn:disabled {
+	opacity: 0.3;
+	cursor: not-allowed;
+}
+.prospects .counter {
+	position: fixed;
+	bottom: 3vh;
+	right: 7vw;
+	font-family: var(--font-mono), monospace;
+	font-size: 0.78rem;
+	color: var(--text-faint);
+	letter-spacing: 0.1em;
+	z-index: 100;
+}
+.prospects .counter .cur {
+	color: var(--cyan);
+}
+.prospects .dots {
+	position: fixed;
+	bottom: 3vh;
+	left: 50%;
+	transform: translateX(-50%);
+	display: flex;
+	gap: 6px;
+	z-index: 100;
+}
+.prospects .dot {
+	width: 6px;
+	height: 6px;
+	border-radius: 50%;
+	background: var(--line);
+	cursor: pointer;
+	transition: all 0.2s;
+	border: none;
+	padding: 0;
+}
+.prospects .dot.active {
+	background: var(--cyan);
+	width: 22px;
+	border-radius: 3px;
+}
+
+@media (max-width: 900px) {
+	.prospects .stats-grid,
+	.prospects .included-grid,
+	.prospects .pricing-grid {
+		grid-template-columns: 1fr;
+	}
+	.prospects .founder,
+	.prospects .event-body {
+		grid-template-columns: 1fr;
+		gap: 2rem;
+	}
+	.prospects .event-stats {
+		grid-template-columns: 1fr 1fr;
+	}
+	.prospects .total-banner {
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 0.5rem;
+	}
+
+	/* Give the strip room above the headline so it never overlaps */
+	.prospects .slide {
+		padding: 11vh 6vw 14vh;
+	}
+	.prospects .strip {
+		top: 4vh;
+		left: 6vw;
+		right: 6vw;
+		font-size: 10px;
+		gap: 0.5rem;
+	}
+	.prospects .strip .meta {
+		gap: 1rem;
+	}
+	.prospects .cover-footer {
+		left: 6vw;
+		right: 6vw;
+		bottom: 12vh;
+		font-size: 0.7rem;
+	}
+
+	/* Cover lockup wraps cleanly on tablets */
+	.prospects .lockup {
+		flex-wrap: wrap;
+		gap: 0.75rem 1rem;
+		margin-bottom: 2rem;
+	}
+
+	/* Founder image not too tall on tablet */
+	.prospects .founder-photo-wrap {
+		max-height: 50vh;
+	}
+	.prospects .socials {
+		grid-template-columns: repeat(3, 1fr);
+		gap: 0.6rem;
+	}
+	.prospects .social {
+		padding: 0.9rem;
+	}
+
+	/* Pricing/total banner readability */
+	.prospects .price-card {
+		padding: 1.75rem;
+	}
+	.prospects .price-card.featured::after {
+		top: 1rem;
+		right: 1rem;
+	}
+	.prospects .price-num .was {
+		display: inline-block;
+		margin-left: 0;
+	}
+	.prospects .total-banner {
+		padding: 1.25rem 1.25rem;
+	}
+
+	/* Testimonial stack should be allowed to scroll instead of clip */
+	.prospects .testimonial-stack {
+		max-height: none;
+	}
+}
+
+@media (max-width: 640px) {
+	/* Allow slides to grow + scroll naturally on phones */
+	.prospects {
+		overflow: visible;
+	}
+	.prospects .slide-stage {
+		height: auto;
+		min-height: calc(100svh - 96px);
+		overflow: visible;
+	}
+	.prospects .slide {
+		position: relative;
+		inset: auto;
+		height: auto;
+		min-height: calc(100svh - 96px);
+		padding: 9vh 5vw 14vh;
+		justify-content: flex-start;
+		gap: 1.25rem;
+	}
+	.prospects .slide:not(.active) {
+		display: none;
+	}
+
+	/* Strip stays inside flow on phones to avoid headline overlap */
+	.prospects .strip {
+		position: static;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		font-size: 9.5px;
+		margin-bottom: 1rem;
+		gap: 0.5rem;
+	}
+	.prospects .strip .meta {
+		gap: 0.6rem;
+		text-align: right;
+	}
+
+	/* Typography tuned for 360–414px screens */
+	.prospects h1.display {
+		font-size: clamp(2rem, 9vw, 3rem);
+		line-height: 1.05;
+		letter-spacing: -0.02em;
+	}
+	.prospects h2.title {
+		font-size: clamp(1.5rem, 7vw, 2.25rem);
+		line-height: 1.1;
+		margin-bottom: 1.25rem;
+	}
+	.prospects .lede {
+		font-size: 0.95rem;
+	}
+	.prospects .eyebrow {
+		font-size: 0.7rem;
+		margin-bottom: 1rem;
+	}
+	.prospects .eyebrow::before {
+		width: 20px;
+	}
+
+	/* Cover */
+	.prospects .lockup {
+		gap: 0.5rem 0.75rem;
+		margin-bottom: 1.5rem;
+	}
+	.prospects .lockup .partner {
+		font-size: 1rem;
+	}
+	.prospects .lockup .partner .dot,
+	.prospects .lockup .partner .mark {
+		width: 22px;
+		height: 22px;
+		font-size: 0.7rem;
+	}
+	.prospects .cover-logo {
+		font-size: 1rem;
+		gap: 0.4rem;
+	}
+	.prospects .cover-logo .mark {
+		padding: 4px 7px;
+		font-size: 0.85rem;
+	}
+	.prospects .cover-footer {
+		position: static;
+		margin-top: 2rem;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 0.4rem;
+	}
+
+	/* Stats become single column with tighter type */
+	.prospects .stats-grid {
+		gap: 1.25rem;
+		margin-top: 2rem;
+	}
+	.prospects .stat .num {
+		font-size: clamp(2.5rem, 12vw, 3.5rem);
+	}
+	.prospects .stat {
+		padding-left: 1rem;
+	}
+
+	/* Founder layout */
+	.prospects .founder {
+		gap: 1.5rem;
+	}
+	.prospects .founder-photo-wrap {
+		max-height: 60vw;
+		aspect-ratio: 4 / 3;
+	}
+	.prospects .founder-name {
+		font-size: clamp(1.75rem, 8vw, 2.5rem);
+		margin-bottom: 0.5rem;
+	}
+	.prospects .founder-role {
+		margin-bottom: 1rem;
+	}
+	.prospects .founder-bio {
+		font-size: 0.95rem;
+		margin-bottom: 1.5rem;
+	}
+	.prospects .socials {
+		grid-template-columns: repeat(3, 1fr);
+		gap: 0.5rem;
+	}
+	.prospects .social {
+		padding: 0.7rem 0.6rem;
+	}
+	.prospects .social .platform {
+		font-size: 0.6rem;
+	}
+	.prospects .social .count {
+		font-size: 1.25rem;
+	}
+
+	/* Past-event slides */
+	.prospects .event-tag {
+		font-size: 0.62rem;
+		padding: 0.3rem 0.6rem;
+		margin-bottom: 0.9rem;
+	}
+	.prospects .event-title {
+		font-size: clamp(1.6rem, 8vw, 2.5rem);
+	}
+	.prospects .event-sub {
+		font-size: 0.85rem;
+		margin-bottom: 1.25rem;
+	}
+	.prospects .event-stats {
+		grid-template-columns: 1fr 1fr;
+		gap: 0.75rem;
+	}
+	.prospects .ev-stat {
+		padding: 1rem 1rem 0.9rem;
+		border-radius: 12px;
+	}
+	.prospects .ev-stat .num {
+		font-size: 1.6rem;
+	}
+	.prospects .ev-stat .label {
+		font-size: 0.6rem;
+	}
+	.prospects .testimonial {
+		padding: 1.5rem 1.25rem;
+		border-radius: 14px;
+	}
+	.prospects .testimonial::before {
+		font-size: 3.5rem;
+		left: 16px;
+	}
+	.prospects .testimonial-text {
+		font-size: 0.92rem;
+	}
+	.prospects .testimonial.compact {
+		padding: 1rem 1.1rem;
+	}
+	.prospects .testimonial.compact .testimonial-text {
+		font-size: 0.85rem;
+	}
+
+	/* Divider chapter */
+	.prospects .divider h2 {
+		font-size: clamp(2.25rem, 12vw, 4rem);
+	}
+
+	/* Included grid + packs */
+	.prospects .included-grid {
+		gap: 1rem;
+		margin-top: 1.25rem;
+	}
+	.prospects .pack {
+		padding: 1.5rem;
+		border-radius: 14px;
+	}
+	.prospects .pack .ico {
+		width: 36px;
+		height: 36px;
+		margin-bottom: 1rem;
+	}
+	.prospects .pack h3 {
+		font-size: 1.1rem;
+	}
+
+	/* Pricing cards */
+	.prospects .pricing-grid {
+		gap: 1rem;
+		margin-top: 1.25rem;
+	}
+	.prospects .price-card {
+		padding: 1.5rem;
+		border-radius: 16px;
+	}
+	.prospects .price-format {
+		font-size: 0.7rem;
+		margin-bottom: 0.6rem;
+	}
+	.prospects .price-num {
+		font-size: clamp(2.25rem, 11vw, 3.25rem);
+		margin-bottom: 1rem;
+	}
+	.prospects .price-num .was {
+		display: block;
+		margin-left: 0;
+		margin-top: 0.25rem;
+		font-size: 0.95rem;
+	}
+	.prospects .price-list li {
+		padding: 0.55rem 0;
+		font-size: 0.88rem;
+	}
+
+	/* Total banner stacks cleanly */
+	.prospects .total-banner {
+		padding: 1.1rem 1.1rem;
+		gap: 0.4rem;
+	}
+	.prospects .total-banner .total-label {
+		font-size: 0.7rem;
+	}
+	.prospects .total-banner .total-num {
+		font-size: clamp(2.25rem, 11vw, 3rem);
+	}
+
+	/* Value banner stacks vertically */
+	.prospects .value-banner {
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 0.6rem;
+		padding: 1.1rem 1.1rem;
+	}
+	.prospects .value-num {
+		font-size: clamp(2rem, 10vw, 2.75rem);
+	}
+	.prospects .value-headline {
+		font-size: 1rem;
+	}
+	.prospects .value-sub {
+		font-size: 0.85rem;
+	}
+
+	/* CTA */
+	.prospects .cta-sub {
+		font-size: 1rem;
+		margin-bottom: 2rem;
+	}
+	.prospects .cta-link {
+		font-size: 0.9rem;
+		padding: 0.75rem 1.5rem;
+	}
+	.prospects .cta-sig {
+		margin-top: 2.5rem;
+		font-size: 0.75rem;
+	}
+
+	/* Nav controls compacted to bottom row, no overlap */
+	.prospects .nav-arrows {
+		bottom: 1.25rem;
+		left: 1rem;
+		gap: 0.4rem;
+	}
+	.prospects .nav-btn {
+		width: 34px;
+		height: 34px;
+	}
+	.prospects .counter {
+		bottom: 1.6rem;
+		right: 1rem;
+		font-size: 0.7rem;
+	}
+	.prospects .dots {
+		bottom: 2.4rem;
+	}
+	.prospects .dot {
+		width: 5px;
+		height: 5px;
+	}
+	.prospects .dot.active {
+		width: 16px;
+	}
+}
