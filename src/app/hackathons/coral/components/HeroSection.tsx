@@ -420,6 +420,7 @@ const SQLConsole = () => (
 );
 
 const useCountdown = (targetDate: Date) => {
+	const targetTime = targetDate.getTime();
 	const [timeLeft, setTimeLeft] = useState({
 		days: 0,
 		hours: 0,
@@ -429,7 +430,7 @@ const useCountdown = (targetDate: Date) => {
 
 	useEffect(() => {
 		const calculate = () => {
-			const diff = targetDate.getTime() - Date.now();
+			const diff = targetTime - Date.now();
 			if (diff <= 0) return { days: 0, hours: 0, minutes: 0, seconds: 0 };
 			return {
 				days: Math.floor(diff / (1000 * 60 * 60 * 24)),
@@ -443,7 +444,7 @@ const useCountdown = (targetDate: Date) => {
 		setTimeLeft(calculate());
 		const interval = setInterval(() => setTimeLeft(calculate()), 1000);
 		return () => clearInterval(interval);
-	}, [targetDate]);
+	}, [targetTime]);
 
 	return timeLeft;
 };
