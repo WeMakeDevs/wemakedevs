@@ -3,7 +3,7 @@
 import { useCallback, useEffect, useState } from "react";
 import "./styles.css";
 
-const TOTAL_SLIDES = 20;
+const TOTAL_SLIDES = 18;
 
 const Codex = () => {
 	const [current, setCurrent] = useState(0);
@@ -1122,131 +1122,11 @@ const Codex = () => {
 					</div>
 				</section>
 
-				{/* SLIDE 17: CONTENT INVESTMENT */}
+				{/* SLIDE 17: INVESTMENT */}
 				<section className={isActive(16)}>
 					<div className="strip">
 						<div className="brand">
-							<span>06 /</span> Content Investment
-						</div>
-						<div className="meta">Videos · Shorts · Blogs</div>
-					</div>
-					<div className="eyebrow">Investment · Content</div>
-					<h2 className="title" style={{ marginBottom: "1.25rem" }}>
-						Bundled &amp; <span className="grad">discounted.</span>
-					</h2>
-					<div className="pricing-grid">
-						<div className="price-card">
-							<div className="price-format">Standard Rates</div>
-							<div className="price-num">
-								<span className="currency">$</span>42,000
-							</div>
-							<ul className="price-list">
-								<li>
-									3 long-form videos · $9,000 each = $27,000
-								</li>
-								<li>
-									3 YouTube Shorts · $5,000 each = $15,000
-								</li>
-								<li>Newsletter &amp; blog mentions</li>
-								<li>
-									Social posts across Kunal&apos;s channels
-								</li>
-							</ul>
-						</div>
-						<div className="price-card featured">
-							<div className="price-format">
-								Codex Bundle Price
-							</div>
-							<div className="price-num">
-								<span className="currency">$</span>25,000
-								<span className="was">$42,000</span>
-							</div>
-							<ul className="price-list">
-								<li>All 6 videos (3 long-form + 3 Shorts)</li>
-								<li>All social posts included</li>
-								<li>Newsletter &amp; blog coverage included</li>
-								<li>1.6M+ combined reach</li>
-								<li>You save $17,000</li>
-							</ul>
-						</div>
-					</div>
-				</section>
-
-				{/* SLIDE 18: HACKATHON */}
-				<section className={isActive(17)}>
-					<div className="strip">
-						<div className="brand">
-							<span>07 /</span> The Hackathon
-						</div>
-						<div className="meta">Hybrid · In-person in India</div>
-					</div>
-					<div className="eyebrow">Flagship Hackathon</div>
-					<h2 className="title" style={{ marginBottom: "1.5rem" }}>
-						5,000+ Indian builders shipping with{" "}
-						<span className="grad">Codex.</span>
-					</h2>
-					<div className="event-body" style={{ alignItems: "start" }}>
-						<div className="event-stats">
-							<div className="ev-stat featured">
-								<div className="num">
-									5K<span className="plus">+</span>
-								</div>
-								<div className="label">
-									Guaranteed Participants
-								</div>
-							</div>
-							<div className="ev-stat featured">
-								<div className="num">$30K</div>
-								<div className="label">
-									Prize Pool · Attracts top builders
-								</div>
-							</div>
-							<div
-								className="ev-stat"
-								style={{ gridColumn: "1 / -1" }}
-							>
-								<div className="num">Hybrid</div>
-								<div className="label">
-									In-person flagship in India + online across
-									the country
-								</div>
-							</div>
-						</div>
-						<div className="pack" style={{ marginTop: 0 }}>
-							<div className="ico">★</div>
-							<h3>What&apos;s included</h3>
-							<ul>
-								<li>
-									Incredible projects solving real challenges
-									with Codex
-								</li>
-								<li>
-									Social posts, builder buzz &amp; event
-									amplification
-								</li>
-								<li>
-									Livestream + recorded interviews with the
-									Codex team in person
-								</li>
-								<li>
-									Top projects showcased on our socials and
-									platforms
-								</li>
-								<li>
-									$30,000 prize pool so incredible people take
-									part, as our track record proves
-								</li>
-								<li>We manage everything, end to end</li>
-							</ul>
-						</div>
-					</div>
-				</section>
-
-				{/* SLIDE 19: TOTAL INVESTMENT */}
-				<section className={isActive(18)}>
-					<div className="strip">
-						<div className="brand">
-							<span>08 /</span> Investment
+							<span>06 /</span> Investment
 						</div>
 						<div className="meta">Total package</div>
 					</div>
@@ -1266,7 +1146,10 @@ const Codex = () => {
 							</div>
 							<ul className="price-list">
 								<li>
-									3 videos + 3 Shorts on Kunal&apos;s channels
+									3 long-form videos · <span className="was">$9,000 each</span> discounted
+								</li>
+								<li>
+									3 YouTube Shorts · <span className="was">$5,000 each</span> discounted
 								</li>
 								<li>Newsletter, blog &amp; social posts</li>
 								<li>1.6M+ combined reach</li>
@@ -1281,9 +1164,9 @@ const Codex = () => {
 							</div>
 							<ul className="price-list">
 								<li>5,000+ guaranteed participants</li>
-								<li>Includes $30K prize pool</li>
 								<li>Hybrid · in-person in India</li>
 								<li>Livestream, interviews &amp; showcases</li>
+								<li>Fully organized &amp; promoted</li>
 								<li>Fully managed by WeMakeDevs</li>
 							</ul>
 						</div>
@@ -1298,8 +1181,8 @@ const Codex = () => {
 					</div>
 				</section>
 
-				{/* SLIDE 20: CTA */}
-				<section className={`${isActive(19)} cta`}>
+				{/* SLIDE 18: CTA */}
+				<section className={`${isActive(17)} cta`}>
 					<div
 						className="eyebrow"
 						style={{ justifyContent: "center" }}

@@ -685,6 +685,10 @@
 	margin-left: 0.75rem;
 	letter-spacing: 0;
 }
+.prospects .price-list .was {
+	text-decoration: line-through;
+	color: var(--text-faint);
+}
 .prospects .price-list {
 	list-style: none;
 	padding: 0;
