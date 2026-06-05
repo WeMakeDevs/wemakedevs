@@ -9,9 +9,10 @@ const Numbers = ({ className, ...props }: GeneralComponent) => {
 	const numbers: numbersType = [
 		{
 			name: "Community of",
-			number: 200000,
+			number: 200,
 			icon: Users,
 			color: "accent-1",
+			suffix: "k+",
 		},
 		{
 			name: "Prizes",
