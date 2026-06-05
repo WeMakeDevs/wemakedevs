@@ -1141,7 +1141,7 @@ const Codex = () => {
 								Content &amp; Demos
 							</div>
 							<div className="price-num">
-								<span className="currency">$</span>25,000
+								<span className="currency">$</span>20,000
 								<span className="was">$42,000</span>
 							</div>
 							<ul className="price-list">
@@ -1176,7 +1176,7 @@ const Codex = () => {
 							Total investment · everything included
 						</div>
 						<div className="total-num">
-							<span className="currency">$</span>55,000
+							<span className="currency">$</span>50,000
 						</div>
 					</div>
 				</section>
