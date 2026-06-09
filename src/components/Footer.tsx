@@ -89,6 +89,10 @@ const footerLinks: FooterLinkSection[] = [
 				href: "/careers",
 				opensInNewTab: true,
 			},
+			{
+				name: "Code of Conduct",
+				href: "/coc",
+			},
 		],
 	},
 	{
