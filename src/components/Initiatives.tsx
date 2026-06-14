@@ -99,7 +99,7 @@ const Initiatives = ({ className, ...props }: GeneralComponent) => {
 					{/* Scrollable row */}
 					<div
 						ref={scrollRef}
-						className="overflow-x-auto overscroll-x-contain scrollbar-thin pb-4"
+						className="overflow-x-auto overscroll-x-contain scrollbar-thin pb-10"
 					>
 						<div className="flex gap-6 w-max">
 							{initiatives.map(initiative => (
