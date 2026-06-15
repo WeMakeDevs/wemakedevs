@@ -3,10 +3,21 @@ import {
 	HackathonNav,
 } from "@/components/hackathon-content";
 import { ViewContainer } from "@/components/ui/view-container";
-import { ArrowUpRight, BookOpen, GitPullRequest, Users } from "lucide-react";
+import {
+	ArrowUpRight,
+	BookOpen,
+	ExternalLink,
+	GitPullRequest,
+	Globe,
+	Trophy,
+	Users,
+	Youtube,
+	Zap,
+} from "lucide-react";
 import Link from "next/link";
 import { DATA, navLinks } from "../data";
 import { images } from "../images";
+import { winningProjects } from "../projects";
 
 const filters = [
 	{
@@ -78,6 +89,85 @@ const ProjectsHubPage = () => {
 
 			{/* Filter Cards */}
 			<ViewContainer>
+				{/* Winners Section */}
+				<div className="mb-12">
+					<div className="flex items-center gap-3 mb-2">
+						<Trophy className="w-6 h-6 text-[#d4af37]" />
+						<h2 className="text-2xl md:text-3xl font-black italic uppercase gold-shimmer-text">
+							🏆 Winners
+						</h2>
+					</div>
+					<p className="text-[#93a1a1] text-sm md:text-base mb-6">
+						The crews that conquered the Coral-bean seas.
+					</p>
+					<div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+						{winningProjects.map(project => (
+							<div
+								key={project.teamName}
+								className="relative rounded-2xl p-6 border-2 border-[#d4af37]/40 parchment-bg shadow-[0_0_24px_rgba(212,175,55,0.12)] hover:border-[#d4af37]/70 transition-all"
+							>
+								<div className="absolute top-3 right-3">
+									<span className="inline-flex items-center gap-1.5 text-xs font-mono font-semibold bg-[#d4af37]/10 border border-[#d4af37]/30 text-[#d4af37] rounded-full px-3 py-1">
+										{project.track}
+									</span>
+								</div>
+								<div className="flex items-center gap-2 mb-3">
+									<Zap className="w-5 h-5 text-[#d4af37]" />
+									<h3 className="text-xl font-bold text-[#fdf6e3]">
+										{project.teamName}
+									</h3>
+								</div>
+								<p className="text-[#d4af37] font-semibold text-sm mb-2">
+									{project.projectTitle}
+								</p>
+								<p className="text-[#93a1a1] text-xs mb-4">
+									{project.members.join(" · ")}
+								</p>
+								<div className="flex items-center gap-2 mb-4 flex-wrap">
+									<span className="inline-flex items-center gap-1.5 font-semibold rounded-full px-3 py-1 text-sm border-2 border-[#d4af37]/60 text-[#d4af37] bg-[#d4af37]/10">
+										🏆 {project.prize}
+									</span>
+								</div>
+								<div className="flex items-center gap-4 text-sm">
+									{project.github && (
+										<a
+											href={project.github}
+											target="_blank"
+											rel="noopener noreferrer"
+											className="inline-flex items-center gap-1.5 text-[#93a1a1] hover:text-[#d4af37] transition-colors"
+										>
+											<ExternalLink className="w-3.5 h-3.5" />
+											Code
+										</a>
+									)}
+									{project.deployed && (
+										<a
+											href={project.deployed}
+											target="_blank"
+											rel="noopener noreferrer"
+											className="inline-flex items-center gap-1.5 text-[#93a1a1] hover:text-[#d4af37] transition-colors"
+										>
+											<Globe className="w-3.5 h-3.5" />
+											Live
+										</a>
+									)}
+									{project.youtube && (
+										<a
+											href={project.youtube}
+											target="_blank"
+											rel="noopener noreferrer"
+											className="inline-flex items-center gap-1.5 text-[#93a1a1] hover:text-[#d4af37] transition-colors"
+										>
+											<Youtube className="w-3.5 h-3.5" />
+											Demo
+										</a>
+									)}
+								</div>
+							</div>
+						))}
+					</div>
+				</div>
+
 				<div className="grid grid-cols-1 md:grid-cols-3 gap-5">
 					{filters.map(filter => {
 						const Icon = filter.icon;

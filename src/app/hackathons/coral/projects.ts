@@ -4179,5 +4179,44 @@ const submittedProjects: SubmittedProject[] = [
 	},
 ];
 
-export { submittedProjects };
-export type { SubmittedProject };
+type WinningProject = {
+	teamName: string;
+	projectTitle: string;
+	track: string;
+	prize: string;
+	members: string[];
+	github: string;
+	deployed: string;
+	youtube: string;
+};
+
+const winningProjects: WinningProject[] = [
+	{
+		teamName: "Miny Labs",
+		projectTitle: "Manthan",
+		track: "Track 1",
+		prize: "Apple MacBook Neo (MacBook to every team member — 4 MacBooks)",
+		members: [
+			"Snehashree Tripathy",
+			"Hitakshi Arora",
+			"Akash Mondal",
+			"Akash Deep",
+		],
+		github: "https://github.com/akash-mondal/manthan",
+		deployed: "https://www.manthan.quest",
+		youtube: "https://www.youtube.com/watch?v=eSu1lUD_vbU",
+	},
+	{
+		teamName: "Yash Dedhia",
+		projectTitle: "GSoC and Open-Source Matchmaker",
+		track: "Track 2",
+		prize: "Apple iPad",
+		members: ["Yash Dedhia"],
+		github: "https://github.com/yashhh-23/coral-powered-optimizer",
+		deployed: "https://open-source-matchmaker-seven.vercel.app",
+		youtube: "https://youtu.be/eyZ94pjGKDk",
+	},
+];
+
+export { submittedProjects, winningProjects };
+export type { SubmittedProject, WinningProject };
