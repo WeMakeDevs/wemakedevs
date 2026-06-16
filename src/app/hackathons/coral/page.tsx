@@ -42,6 +42,97 @@ const HackathonPage = () => {
 
 			<WaveDivider />
 
+			{/* Stats & Testimonials */}
+			<div className="py-24 bg-[#002b36]/40">
+				<div className="max-w-6xl mx-auto px-4 md:px-8">
+					{/* Stats */}
+					<div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
+						{[
+							{ value: "5,400+", label: "Participants" },
+							{ value: "800+", label: "Projects" },
+							{ value: "270", label: "PRs Merged" },
+							{ value: "30+", label: "Countries" },
+						].map((stat) => (
+							<div
+								key={stat.label}
+								className="text-center parchment-bg rounded-xl border border-[#d4af37]/15 p-6"
+							>
+								<p className="text-3xl md:text-4xl font-black text-[#d4af37] font-mono">
+									{stat.value}
+								</p>
+								<p className="text-[#93a1a1] text-sm mt-1 font-medium">
+									{stat.label}
+								</p>
+							</div>
+						))}
+					</div>
+
+					{/* Testimonials */}
+					<h2 className="text-2xl md:text-3xl font-bold gold-shimmer-text mb-8 text-center">
+						What Pirates Are Saying
+					</h2>
+					<div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+						<div className="parchment-bg rounded-xl border border-[#d4af37]/10 p-6 hover:border-[#d4af37]/25 transition-all">
+							<p className="text-[#93a1a1] text-sm leading-relaxed mb-4">
+								&ldquo;Just registered for my first-ever hackathon starting today! 🏴‍☠️ The energy that Kunal Kushwaha, Aayush Sharma, and the WeMakeDevs, Coral community have built around this made it the perfect excuse to finally jump into my first hackathon.&rdquo;
+							</p>
+							<Link
+								href="https://www.linkedin.com/in/yashpanwar88070/"
+								target="_blank"
+								rel="noopener noreferrer"
+								className="inline-flex items-center gap-1.5 text-[#d4af37] text-sm font-medium hover:text-[#e8c84a] transition-colors"
+							>
+								— Yash Panwar <ArrowUpRight size={14} />
+							</Link>
+						</div>
+
+						<div className="parchment-bg rounded-xl border border-[#d4af37]/10 p-6 hover:border-[#d4af37]/25 transition-all">
+							<p className="text-[#93a1a1] text-sm leading-relaxed mb-4">
+								&ldquo;12 Pull Requests merged into an open-source project. 3 more in review. 🪸 Special thanks to James Summerfield (CTO of Coral) for the thorough and incredibly fast reviews. Kunal Kushwaha and WeMakeDevs for hosting this hackathon and highlighting open-source opportunities.&rdquo;
+							</p>
+							<Link
+								href="https://www.linkedin.com/in/vinayaksonthalia/"
+								target="_blank"
+								rel="noopener noreferrer"
+								className="inline-flex items-center gap-1.5 text-[#d4af37] text-sm font-medium hover:text-[#e8c84a] transition-colors"
+							>
+								— Vinayak Sonthalia <ArrowUpRight size={14} />
+							</Link>
+						</div>
+
+						<div className="parchment-bg rounded-xl border border-[#d4af37]/10 p-6 hover:border-[#d4af37]/25 transition-all">
+							<p className="text-[#93a1a1] text-sm leading-relaxed mb-4">
+								&ldquo;Big thanks to WeMakeDevs and Kunal Kushwaha for creating such an amazing hackathon experience that genuinely pushes people to build and ship. Contributed back to the ecosystem with 2 PRs during the process while learning more about open source and Coral.&rdquo;
+							</p>
+							<Link
+								href="https://www.linkedin.com/in/shivanshbagga/"
+								target="_blank"
+								rel="noopener noreferrer"
+								className="inline-flex items-center gap-1.5 text-[#d4af37] text-sm font-medium hover:text-[#e8c84a] transition-colors"
+							>
+								— Shivansh Bagga <ArrowUpRight size={14} />
+							</Link>
+						</div>
+
+						<div className="parchment-bg rounded-xl border border-[#d4af37]/10 p-6 hover:border-[#d4af37]/25 transition-all">
+							<p className="text-[#93a1a1] text-sm leading-relaxed mb-4">
+								&ldquo;A few days ago, I took a leap of faith and registered for the Pirates of the Coral-Bean Hackathon, presented by WeMakeDevs and sponsored by Coral. This was not an ordinary hackathon as it gave us hands-on experience with live data infrastructure, pushed us to build and iterate.&rdquo;
+							</p>
+							<Link
+								href="https://www.linkedin.com/in/disha-sonowal-95831a29b/"
+								target="_blank"
+								rel="noopener noreferrer"
+								className="inline-flex items-center gap-1.5 text-[#d4af37] text-sm font-medium hover:text-[#e8c84a] transition-colors"
+							>
+								— Disha Sonowal <ArrowUpRight size={14} />
+							</Link>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<WaveDivider />
+
 			{/* About */}
 			<div id="about" className="scroll-mt-44 bg-[#002b36]/50">
 				<AboutSection />
