@@ -130,8 +130,8 @@ const footerLinks: FooterLinkSection[] = [
 			},
 			{
 				name: "Meetups",
-				href: "https://lu.ma/wemakedevs",
-				opensInNewTab: true,
+				href: "/meetups",
+				opensInNewTab: false,
 			},
 		],
 	},

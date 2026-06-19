@@ -9,7 +9,7 @@ import {
 import Link from "next/link";
 
 const Register = () => {
-	const shareUrl = "https://www.wemakedevs.org/hackathons/opensourcefest25";
+	const shareUrl = "https://www.wemakedevs.org/initiatives/opensourcefest25";
 	const shareTitle = "WeMakeDevs Open Source Fest";
 	const shareText =
 		"Join me in the WeMakeDevs Open Source Fest! A month-long challenge to contribute to real-world open source projects and win amazing prizes!";

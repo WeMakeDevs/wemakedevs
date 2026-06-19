@@ -1,36 +1,12 @@
 import { cn } from "@/lib/utils";
-import type { GeneralComponent, MeetupData } from "@/types";
+import type { GeneralComponent } from "@/types";
+import { meetups } from "@/constants/meetups";
 import Link from "next/link";
-import { MeetupCard, MeetupComingSoonCard, MeetupLastCard } from "./MeetupCard";
+import { MeetupCard } from "./MeetupCard";
+import { buttonVariants } from "./ui/button";
 import { ViewContainer } from "./ui/view-container";
 
-import {
-	openSourceConnectBangaloreMeetup,
-	openSourceConnectMeetup,
-} from "@/assets/images/meetups";
-
-const meetupEntries: MeetupData[] = [
-	{
-		title: "Open Source Connect (Bangalore)",
-		image: openSourceConnectBangaloreMeetup,
-		date: "2025-03-06",
-		description:
-			"Meet fellow professionals, hear insightful talks from industry experts, and enjoy good conversations over pizza and drinks. Plus, there’s swag!",
-		url: "https://lu.ma/mww6iphz",
-		location: "JFrog India, Bengaluru",
-	},
-	{
-		title: "Open Source Connect (Delhi)",
-		image: openSourceConnectMeetup,
-		date: "2024-12-13",
-		description:
-			"Explore open source and tech with expert talks, networking, pizza, drinks, and swag!",
-		url: "https://lu.ma/v0dhix0t",
-		location: "The Circle-Huda City Center, Gurgaon",
-	},
-];
-
-const Hackathons = ({ className, ...props }: GeneralComponent) => {
+const Meetups = ({ className, ...props }: GeneralComponent) => {
 	return (
 		<section
 			id="meetups"
@@ -47,13 +23,24 @@ const Hackathons = ({ className, ...props }: GeneralComponent) => {
 					</p>
 				</div>
 				<div className="my-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-6">
-					{meetupEntries.map(meetup => (
+					{meetups.slice(0, 3).map(meetup => (
 						<MeetupCard key={meetup.title} {...meetup} />
 					))}
+				</div>
+				<div className="flex justify-center">
+					<Link
+						href="/meetups"
+						className={cn(
+							buttonVariants({ variant: "outline", size: "lg" }),
+							"font-semibold",
+						)}
+					>
+						View All Meetups
+					</Link>
 				</div>
 			</ViewContainer>
 		</section>
 	);
 };
 
-export default Hackathons;
+export default Meetups;

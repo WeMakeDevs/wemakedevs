@@ -29,7 +29,7 @@ const MeetupCard = ({
 				<Image
 					className={cn(
 						className,
-						"aspect-video object-cover rounded",
+						"aspect-square object-cover rounded",
 					)}
 					src={image}
 					alt={title}

@@ -20,7 +20,7 @@ const GiveawayBar = ({ className }: { className?: string }) => {
 				</p>
 				<div className="flex w-full shrink-0 flex-col gap-2 sm:w-auto sm:flex-row">
 					<Link
-						href="/giveaways"
+						href="/initiatives/giveaways"
 						className={cn(
 							buttonVariants({
 								variant: "secondary",

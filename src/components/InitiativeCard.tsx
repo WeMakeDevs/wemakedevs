@@ -76,7 +76,7 @@ const ScholarshipLastCard = () => {
 	return (
 		<Link
 			className="overflow-clip p-5 rounded group relative shadow-xl bg-accent-1 text-[#0A3D71] "
-			href="/scholarships"
+			href="/initiatives/scholarships"
 		>
 			<svg
 				className="-translate-x-4 w-16 mx-auto"

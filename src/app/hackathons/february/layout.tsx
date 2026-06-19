@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 		description:
 			"Join all 4 February hackathons to win a Samsung Galaxy Flip 7 worth ₹1,10,000! Over $40,000 in cash prizes.",
 		type: "website",
-		url: "https://wemakedevs.org/february",
+		url: "https://wemakedevs.org/hackathons/february",
 	},
 	twitter: {
 		card: "summary_large_image",

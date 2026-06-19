@@ -1,4 +1,4 @@
-import { images as februaryImages } from "@/app/february/images";
+import { images as februaryImages } from "@/app/hackathons/february/images";
 import { DATA as twoFastTwoMcpData } from "@/app/hackathons/2fast2mcp/data";
 import { images as twoFastTwoMcpImages } from "@/app/hackathons/2fast2mcp/images";
 import { DATA as accomplishData } from "@/app/hackathons/accomplish/data";
@@ -17,8 +17,6 @@ import { DATA as motiahackData } from "@/app/hackathons/motiahack25/data";
 import { images as motiahackImages } from "@/app/hackathons/motiahack25/images";
 import { DATA as openmetadataData } from "@/app/hackathons/openmetadata/data";
 import { images as openmetadataImages } from "@/app/hackathons/openmetadata/images";
-import { DATA as openSourceFestData } from "@/app/hackathons/opensourcefest25/data";
-import { images as openSourceFestImages } from "@/app/hackathons/opensourcefest25/images";
 import { DATA as tamboData } from "@/app/hackathons/tambo/data";
 import { images as tamboImages } from "@/app/hackathons/tambo/images";
 import { DATA as visionData } from "@/app/hackathons/vision/data";
@@ -78,7 +76,7 @@ const hackathons: HackathonType[] = [
 		endDate: visionData.endDate,
 	},
 	{
-		slug: "/february",
+		slug: "/hackathons/february",
 		title: "Hack All February",
 		description:
 			"Join all 4 February hackathons to win a Samsung Galaxy Flip 7 worth ₹1,10,000!",

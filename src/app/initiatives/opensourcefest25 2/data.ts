@@ -14,7 +14,7 @@ const DATA = {
 	images,
 	cta: {
 		label: "Contributor Stories",
-		href: "/hackathons/opensourcefest25/contributors",
+		href: "/initiatives/opensourcefest25/contributors",
 		openInNewTab: false,
 		disabled: false,
 	},
@@ -30,22 +30,22 @@ const DATA = {
 
 const navLinks = [
 	{
-		href: `/hackathons/${DATA.slug}`,
+		href: `/initiatives/${DATA.slug}`,
 		label: "Overview",
 		page: "overview",
 	},
 	{
-		href: `/hackathons/${DATA.slug}/rules`,
+		href: `/initiatives/${DATA.slug}/rules`,
 		label: "Rules",
 		page: "rules",
 	},
 	{
-		href: `/hackathons/${DATA.slug}/resources`,
+		href: `/initiatives/${DATA.slug}/resources`,
 		label: "Resources",
 		page: "resources",
 	},
 	// {
-	// 	href: `/hackathons/${DATA.slug}/schedule`,
+	// 	href: `/initiatives/${DATA.slug}/schedule`,
 	// 	label: "Schedule",
 	// 	page: "schedule",
 	// },
@@ -62,7 +62,7 @@ const faqs: FaqType[] = [
 	},
 	{
 		question: "How do I get started with contributing to Kestra?",
-		answer: "Join the <a href='https://kestra.io/slack' target='_blank' rel='noopener noreferrer' class='text-blue-700 underline hover:no-underline'>Kestra Slack community</a> and check out the <a href='https://www.wemakedevs.org/hackathons/opensourcefest25/resources' target='_blank' rel='noopener noreferrer' class='text-blue-700 underline hover:no-underline'>Resources</a> section for getting started guides and documentation. Also read the <a href='https://kestra.io/docs/getting-started/contributing' target='_blank' rel='noopener noreferrer' class='text-blue-700 underline hover:no-underline'>Kestra Contributing Guide</a>.",
+		answer: "Join the <a href='https://kestra.io/slack' target='_blank' rel='noopener noreferrer' class='text-blue-700 underline hover:no-underline'>Kestra Slack community</a> and check out the <a href='https://www.wemakedevs.org/initiatives/opensourcefest25/resources' target='_blank' rel='noopener noreferrer' class='text-blue-700 underline hover:no-underline'>Resources</a> section for getting started guides and documentation. Also read the <a href='https://kestra.io/docs/getting-started/contributing' target='_blank' rel='noopener noreferrer' class='text-blue-700 underline hover:no-underline'>Kestra Contributing Guide</a>.",
 	},
 	{
 		question: "What kind of contributions count for this event?",
