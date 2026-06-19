@@ -7,7 +7,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRef } from "react";
 import { images } from "../images";
-import { ChickenCartoon, Dice, TigerCartoon } from "./Characters";
+import { Dice } from "./Characters";
 
 type HeroSectionProps = {
 	title: string;
@@ -108,7 +108,6 @@ const HeroSection = ({
 		target: containerRef,
 		offset: ["start start", "end start"],
 	});
-	const crewY = useTransform(scrollYProgress, [0, 1], ["0%", "-14%"]);
 	const crewOpacity = useTransform(scrollYProgress, [0, 0.75], [1, 0.1]);
 
 	return (
@@ -118,28 +117,26 @@ const HeroSection = ({
 		>
 			<MemoryGraph />
 
-			{/* ── Floating cartoon crew (right side) ── */}
+			{/* ── The Wolfpack team photo (right side, waist cutout blended into the sand) ── */}
 			<motion.div
-				style={{ y: crewY, opacity: crewOpacity }}
-				className="absolute inset-0 pointer-events-none z-10 hidden lg:block"
+				style={{ opacity: crewOpacity }}
+				className="absolute bottom-0 right-0 w-[46%] max-w-[600px] z-[5] hidden lg:block pointer-events-none"
 			>
 				<motion.div
-					className="absolute bottom-[16%] right-[10%] w-[170px] xl:w-[210px] float-bob"
-					style={{ animationDelay: "1.2s" }}
-					initial={{ y: 80, opacity: 0 }}
-					animate={{ y: 0, opacity: 1 }}
-					transition={{ duration: 1.2, delay: 1 }}
+					initial={{ x: 80, opacity: 0 }}
+					animate={{ x: 0, opacity: 1 }}
+					transition={{
+						duration: 1.2,
+						ease: [0.16, 1, 0.3, 1],
+						delay: 0.4,
+					}}
 				>
-					<TigerCartoon className="w-full h-auto drop-shadow-[0_10px_24px_rgba(120,80,30,0.3)]" />
-				</motion.div>
-				<motion.div
-					className="absolute top-[20%] right-[14%] w-[100px] xl:w-[120px] float-bob"
-					style={{ animationDelay: "0.6s" }}
-					initial={{ y: -60, opacity: 0 }}
-					animate={{ y: 0, opacity: 1 }}
-					transition={{ duration: 1.2, delay: 1.3 }}
-				>
-					<ChickenCartoon className="w-full h-auto drop-shadow-[0_10px_20px_rgba(120,80,30,0.3)]" />
+					<Image
+						src={images.background}
+						alt="The Wolfpack"
+						className="w-full h-auto object-contain object-bottom drop-shadow-[0_18px_30px_rgba(120,80,30,0.4)] [mask-image:linear-gradient(to_bottom,black_72%,transparent_100%)] [-webkit-mask-image:linear-gradient(to_bottom,black_72%,transparent_100%)]"
+						priority
+					/>
 				</motion.div>
 			</motion.div>
 
