@@ -1,0 +1,43 @@
+<svg width="1200" height="420" viewBox="0 0 1200 420" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="cvBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#160a26"/>
+      <stop offset="50%" stop-color="#0d0618"/>
+      <stop offset="100%" stop-color="#1a0b2e"/>
+    </linearGradient>
+    <radialGradient id="cvGlow" cx="50%" cy="20%" r="70%">
+      <stop offset="0%" stop-color="#ffb800" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#ffb800" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="cvNeon" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="1200" height="420" fill="url(#cvBg)"/>
+  <rect width="1200" height="420" fill="url(#cvGlow)"/>
+
+  <!-- skyline -->
+  <g opacity="0.45" fill="#2a1840">
+    <rect x="0" y="260" width="80" height="160"/>
+    <rect x="95" y="200" width="60" height="220"/>
+    <rect x="170" y="290" width="90" height="130"/>
+    <rect x="950" y="230" width="70" height="190"/>
+    <rect x="1035" y="180" width="60" height="240"/>
+    <rect x="1110" y="280" width="90" height="140"/>
+  </g>
+
+  <g fill="#ffffff">
+    <circle cx="160" cy="70" r="2" opacity="0.7"/>
+    <circle cx="400" cy="50" r="2" opacity="0.6"/>
+    <circle cx="820" cy="60" r="2" opacity="0.7"/>
+    <circle cx="1040" cy="90" r="2" opacity="0.6"/>
+  </g>
+
+  <path d="M260 170 Q600 60 940 170" stroke="#ffb800" stroke-width="7" fill="none" filter="url(#cvNeon)" opacity="0.85"/>
+
+  <text x="600" y="180" text-anchor="middle" font-family="Arial Black, Arial, sans-serif" font-weight="900" font-size="62" fill="#ffd24a" filter="url(#cvNeon)" font-style="italic">THE HANGOVER PART AI</text>
+  <text x="600" y="232" text-anchor="middle" font-family="Arial, sans-serif" font-weight="700" font-size="30" fill="#ff2d7e" letter-spacing="4">WHERE'S MY CONTEXT?</text>
+  <text x="600" y="300" text-anchor="middle" font-family="Arial, sans-serif" font-weight="700" font-size="24" fill="#21e6c1">Build AI that doesn't forget · Powered by Cognee · $10,000 in prizes</text>
+  <text x="600" y="345" text-anchor="middle" font-family="Arial, sans-serif" font-weight="600" font-size="20" fill="#e8def7" opacity="0.85">June 29 – July 5, 2026</text>
+</svg>

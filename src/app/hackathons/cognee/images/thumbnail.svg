@@ -1,0 +1,60 @@
+<svg width="1000" height="700" viewBox="0 0 1000 700" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="tbBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#160a26"/>
+      <stop offset="55%" stop-color="#0d0618"/>
+      <stop offset="100%" stop-color="#1a0b2e"/>
+    </linearGradient>
+    <radialGradient id="tbGlow" cx="50%" cy="32%" r="60%">
+      <stop offset="0%" stop-color="#ff2d7e" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#ff2d7e" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="tbNeon" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="6" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="1000" height="700" fill="url(#tbBg)"/>
+  <rect width="1000" height="700" fill="url(#tbGlow)"/>
+
+  <!-- skyline -->
+  <g opacity="0.5" fill="#2a1840">
+    <rect x="40" y="430" width="70" height="230"/>
+    <rect x="125" y="370" width="55" height="290"/>
+    <rect x="195" y="470" width="80" height="190"/>
+    <rect x="720" y="400" width="70" height="260"/>
+    <rect x="800" y="350" width="60" height="310"/>
+    <rect x="875" y="450" width="85" height="210"/>
+  </g>
+
+  <!-- stars -->
+  <g fill="#ffffff">
+    <circle cx="120" cy="90" r="2.5" opacity="0.8"/>
+    <circle cx="300" cy="60" r="2" opacity="0.6"/>
+    <circle cx="520" cy="100" r="2.5" opacity="0.7"/>
+    <circle cx="760" cy="70" r="2" opacity="0.6"/>
+    <circle cx="900" cy="120" r="2.5" opacity="0.8"/>
+    <circle cx="640" cy="50" r="1.8" opacity="0.5"/>
+  </g>
+
+  <!-- neon arc sign -->
+  <path d="M210 250 Q500 90 790 250" stroke="#ffb800" stroke-width="10" fill="none" filter="url(#tbNeon)" opacity="0.9"/>
+
+  <!-- title -->
+  <text x="500" y="300" text-anchor="middle" font-family="Arial Black, Arial, sans-serif" font-weight="900" font-size="78" fill="#ffd24a" filter="url(#tbNeon)" font-style="italic">THE HANGOVER</text>
+  <text x="500" y="380" text-anchor="middle" font-family="Arial Black, Arial, sans-serif" font-weight="900" font-size="96" fill="#ff2d7e" filter="url(#tbNeon)" font-style="italic">PART AI</text>
+  <text x="500" y="445" text-anchor="middle" font-family="Arial, sans-serif" font-weight="700" font-size="34" fill="#21e6c1" letter-spacing="3">WHERE'S MY CONTEXT?</text>
+
+  <!-- subtitle -->
+  <text x="500" y="540" text-anchor="middle" font-family="Arial, sans-serif" font-weight="700" font-size="26" fill="#e8def7">Build AI that doesn't forget · Powered by Cognee</text>
+
+  <!-- prize chip -->
+  <rect x="365" y="575" width="270" height="58" rx="29" fill="#ffb800"/>
+  <text x="500" y="613" text-anchor="middle" font-family="Arial Black, Arial, sans-serif" font-weight="900" font-size="32" fill="#160a26">$10,000 IN PRIZES</text>
+
+  <!-- poker chips -->
+  <circle cx="90" cy="600" r="42" fill="#ff2d7e" opacity="0.9"/>
+  <circle cx="90" cy="600" r="42" fill="none" stroke="#ffffff" stroke-width="4" stroke-dasharray="10 14"/>
+  <circle cx="910" cy="600" r="42" fill="#21e6c1" opacity="0.9"/>
+  <circle cx="910" cy="600" r="42" fill="none" stroke="#ffffff" stroke-width="4" stroke-dasharray="10 14"/>
+</svg>

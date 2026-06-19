@@ -1,13 +1,15 @@
-import { images as februaryImages } from "@/app/hackathons/february/images";
 import { DATA as twoFastTwoMcpData } from "@/app/hackathons/2fast2mcp/data";
 import { images as twoFastTwoMcpImages } from "@/app/hackathons/2fast2mcp/images";
 import { DATA as accomplishData } from "@/app/hackathons/accomplish/data";
-import { DATA as coralData } from "@/app/hackathons/coral/data";
-import { images as coralImages } from "@/app/hackathons/coral/images";
 import { images as accomplishImages } from "@/app/hackathons/accomplish/images";
 import { DATA as agenthackData } from "@/app/hackathons/agenthack25/data";
 import { DATA as assemblehackData } from "@/app/hackathons/assemblehack25/data";
 import { images as assemblehackImages } from "@/app/hackathons/assemblehack25/images";
+import { DATA as cogneeData } from "@/app/hackathons/cognee/data";
+import { images as cogneeImages } from "@/app/hackathons/cognee/images";
+import { DATA as coralData } from "@/app/hackathons/coral/data";
+import { images as coralImages } from "@/app/hackathons/coral/images";
+import { images as februaryImages } from "@/app/hackathons/february/images";
 import { DATA as futurestackaiData } from "@/app/hackathons/futurestack25/data";
 import { images as futurestackaiImages } from "@/app/hackathons/futurestack25/images";
 import hackfrost24Data from "@/app/hackathons/hackfrost24/data";
@@ -42,6 +44,15 @@ type HackathonType = {
 };
 
 const hackathons: HackathonType[] = [
+	{
+		slug: cogneeData.slug,
+		title: cogneeData.titleCard,
+		description: cogneeData.descriptionCard,
+		thumbnail: cogneeImages.thumbnail,
+		startDate: cogneeData.startDate,
+		endDate: cogneeData.endDate,
+		listAs: "upcoming",
+	},
 	{
 		slug: coralData.slug,
 		title: coralData.title,

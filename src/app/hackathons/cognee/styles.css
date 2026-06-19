@@ -1,0 +1,269 @@
+/* ═══════════════════════════════════════════════════════════════════════════════
+   The Hangover Part AI — Vegas Neon × Cognee Memory Theme
+   ═══════════════════════════════════════════════════════════════════════════════ */
+
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+
+/* ── Neon sign flicker ───────────────────────────────────────────────────────── */
+@keyframes neon-flicker {
+	0%,
+	19%,
+	21%,
+	23%,
+	25%,
+	54%,
+	56%,
+	100% {
+		opacity: 1;
+	}
+	20%,
+	24%,
+	55% {
+		opacity: 0.55;
+	}
+}
+.cognee-hackathon .neon-flicker {
+	animation: neon-flicker 5s infinite;
+}
+
+/* ── Slow neon glow pulse ────────────────────────────────────────────────────── */
+@keyframes neon-pulse {
+	0%,
+	100% {
+		filter: drop-shadow(0 0 8px rgba(255, 184, 0, 0.5))
+			drop-shadow(0 0 22px rgba(255, 45, 126, 0.35));
+	}
+	50% {
+		filter: drop-shadow(0 0 16px rgba(255, 184, 0, 0.8))
+			drop-shadow(0 0 40px rgba(255, 45, 126, 0.55));
+	}
+}
+.cognee-hackathon .neon-pulse {
+	animation: neon-pulse 3s ease-in-out infinite;
+}
+
+/* ── Scan light sweep ────────────────────────────────────────────────────────── */
+@keyframes light-sweep {
+	0% {
+		transform: translateX(-120%);
+	}
+	100% {
+		transform: translateX(220%);
+	}
+}
+.cognee-hackathon .light-sweep {
+	animation: light-sweep 7s linear infinite;
+}
+
+/* ── Spin (poker chip / record) ──────────────────────────────────────────────── */
+@keyframes chip-spin {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+.cognee-hackathon .chip-spin {
+	animation: chip-spin 14s linear infinite;
+}
+
+/* ── Float bob ───────────────────────────────────────────────────────────────── */
+@keyframes float-bob {
+	0%,
+	100% {
+		transform: translateY(0);
+	}
+	50% {
+		transform: translateY(-14px);
+	}
+}
+.cognee-hackathon .float-bob {
+	animation: float-bob 5s ease-in-out infinite;
+}
+
+/* ── Memory graph node pulse ─────────────────────────────────────────────────── */
+@keyframes mem-pulse {
+	0%,
+	100% {
+		opacity: 1;
+		transform: scale(1);
+	}
+	50% {
+		opacity: 0.5;
+		transform: scale(1.4);
+	}
+}
+
+@keyframes drawEdge {
+	to {
+		stroke-dashoffset: 0;
+	}
+}
+
+/* ── CTA button glow ─────────────────────────────────────────────────────────── */
+@keyframes ctaPulse {
+	0%,
+	100% {
+		box-shadow: 0 0 18px rgba(255, 184, 0, 0.5), 0 0 36px
+			rgba(255, 45, 126, 0.3);
+	}
+	50% {
+		box-shadow: 0 0 30px rgba(255, 184, 0, 0.8), 0 0 64px
+			rgba(255, 45, 126, 0.5);
+	}
+}
+.cognee-hackathon .vegas-btn {
+	position: relative;
+	display: inline-flex;
+	align-items: center;
+	gap: 0.5rem;
+	padding: 0.9rem 2rem;
+	font-size: 1.0625rem;
+	font-weight: 800;
+	color: #160a26;
+	background: linear-gradient(135deg, #ffd24a 0%, #ffb800 50%, #ff8a00 100%);
+	border-radius: 0.75rem;
+	text-decoration: none;
+	transition: transform 0.2s ease, box-shadow 0.2s ease;
+	animation: ctaPulse 2.4s ease-in-out infinite;
+	border: 1px solid rgba(255, 220, 120, 0.5);
+	letter-spacing: 0.02em;
+}
+.cognee-hackathon .vegas-btn:hover {
+	transform: scale(1.06) translateY(-2px);
+	box-shadow: 0 0 44px rgba(255, 184, 0, 0.9), 0 0 88px
+		rgba(255, 45, 126, 0.5);
+}
+
+/* ── Neon grid ───────────────────────────────────────────────────────────────── */
+.cognee-hackathon .neon-grid {
+	background-image: linear-gradient(
+			rgba(255, 45, 126, 0.05) 1px,
+			transparent 1px
+		), linear-gradient(90deg, rgba(0, 224, 213, 0.05) 1px, transparent 1px);
+	background-size: 32px 32px;
+}
+
+/* ── Glowing text ────────────────────────────────────────────────────────────── */
+.cognee-hackathon .glow-gold {
+	text-shadow: 0 0 18px rgba(255, 184, 0, 0.6), 0 0 44px
+		rgba(255, 184, 0, 0.3);
+}
+.cognee-hackathon .glow-pink {
+	text-shadow: 0 0 18px rgba(255, 45, 126, 0.7), 0 0 44px
+		rgba(255, 45, 126, 0.35);
+}
+.cognee-hackathon .glow-cyan {
+	text-shadow: 0 0 18px rgba(0, 224, 213, 0.7), 0 0 44px
+		rgba(0, 224, 213, 0.35);
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════════
+   Glassmorphism cards
+   ═══════════════════════════════════════════════════════════════════════════════ */
+.cognee-hackathon .glass-card {
+	background: rgba(22, 12, 38, 0.6);
+	backdrop-filter: blur(16px);
+	-webkit-backdrop-filter: blur(16px);
+	border: 1px solid rgba(255, 184, 0, 0.18);
+	box-shadow: 0 4px 24px rgba(0, 0, 0, 0.45), inset 0 1px 0
+		rgba(255, 255, 255, 0.05);
+}
+.cognee-hackathon .glass-card:hover {
+	border-color: rgba(255, 45, 126, 0.4);
+	box-shadow: 0 8px 32px rgba(0, 0, 0, 0.55), 0 0 24px
+		rgba(255, 45, 126, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════════
+   Navbar & layout overrides
+   ═══════════════════════════════════════════════════════════════════════════════ */
+.cognee-hackathon nav#nav {
+	pointer-events: none;
+}
+.cognee-hackathon nav#nav > * {
+	pointer-events: auto;
+}
+
+.cognee-hackathon nav a,
+.cognee-hackathon nav span,
+.cognee-hackathon header,
+.cognee-hackathon header a {
+	color: #f4ecff !important;
+}
+
+.cognee-hackathon nav > div.bg-white,
+.cognee-hackathon nav > div[class*="bg-white"] {
+	color: #160a26 !important;
+}
+.cognee-hackathon nav > div.bg-white a:not([class*="text-white"]),
+.cognee-hackathon nav > div[class*="bg-white"] a:not([class*="text-white"]),
+.cognee-hackathon nav > div.bg-white span:not([class*="text-white"]),
+.cognee-hackathon nav > div[class*="bg-white"] span:not([class*="text-white"]) {
+	color: #160a26 !important;
+}
+
+.cognee-hackathon nav a:hover,
+.cognee-hackathon header a:hover {
+	color: #ffb800 !important;
+}
+
+.cognee-hackathon nav[aria-label="secondary nav"] {
+	background-color: rgba(13, 6, 24, 0.95) !important;
+	backdrop-filter: blur(12px);
+	-webkit-backdrop-filter: blur(12px);
+	border-color: rgba(255, 184, 0, 0.2) !important;
+}
+
+.cognee-hackathon .cognee-sticky-nav {
+	background: linear-gradient(135deg, #ff2d7e 0%, #9d4edd 100%);
+	box-shadow: 0 4px 24px rgba(255, 45, 126, 0.4), 0 2px 8px
+		rgba(0, 0, 0, 0.35);
+	border-radius: 0.75rem;
+	overflow: clip;
+}
+.cognee-hackathon .cognee-sticky-nav nav[aria-label="secondary nav"] {
+	background: transparent !important;
+	border: none !important;
+}
+.cognee-hackathon .cognee-sticky-nav a,
+.cognee-hackathon .cognee-sticky-nav button {
+	color: #fff !important;
+}
+.cognee-hackathon .cognee-sticky-nav a:hover,
+.cognee-hackathon .cognee-sticky-nav button:hover {
+	color: #ffe27a !important;
+	background-color: rgba(255, 255, 255, 0.15) !important;
+}
+
+.cognee-hackathon h2 {
+	color: #ffb800;
+}
+
+.cognee-hackathon .text-slate-300 a {
+	color: #ffb800;
+}
+.cognee-hackathon .text-slate-300 a:hover {
+	color: #ffd24a;
+}
+
+/* ── FAQ answer text ──────────────────────────────────────────────────────────── */
+.cognee-hackathon #faq [class*="bg-white"] [class*="pb-4"],
+.cognee-hackathon #faq [class*="bg-white"] [class*="pb-4"] * {
+	color: #6b2a52 !important;
+}
+.cognee-hackathon #faq [class*="bg-white"] [class*="pb-4"] a {
+	color: #b91c5c !important;
+}
+.cognee-hackathon #faq [class*="bg-white"] [class*="pb-4"] a:hover {
+	color: #7a1340 !important;
+}
+.cognee-hackathon #faq code {
+	background: rgba(255, 184, 0, 0.15);
+	border: 1px solid rgba(255, 184, 0, 0.3);
+	border-radius: 4px;
+	padding: 1px 5px;
+	font-size: 0.85em;
+	color: #b45309;
+}
