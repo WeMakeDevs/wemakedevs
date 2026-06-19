@@ -107,15 +107,7 @@ const HackathonPage = () => {
 									className="px-6 py-3 rounded-xl flex gap-2 items-center bg-gradient-to-r from-[#e23b2d] to-[#c33124] hover:opacity-90 transition-opacity duration-300 text-white font-bold border-2 border-[#f6c453] shadow-md"
 								>
 									<Star size={18} className="fill-white" />{" "}
-									Star Cognee
-								</Link>
-								<Link
-									href="https://github.com/topoteretes/cognee"
-									target="_blank"
-									rel="noopener noreferrer"
-									className="px-6 py-3 rounded-xl border-2 border-[#b07d12]/40 flex gap-2 items-center bg-[#fff8ea] hover:bg-[#fff1d6] transition-colors duration-300 text-[#8a5a00] font-bold"
-								>
-									Visit GitHub <ArrowUpRight size={18} />
+									Star Cognee on GitHub
 								</Link>
 							</div>
 						</div>
