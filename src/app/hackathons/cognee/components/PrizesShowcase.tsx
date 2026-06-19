@@ -158,9 +158,9 @@ const PrizesShowcase = () => {
 						$10,000 in prizes. The house always remembers, and so
 						will you.
 					</p>
-					<div className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-[#fffdf6] border-2 border-[#e7a92b] shadow-md">
-						<span className="text-2xl">🎰</span>
-						<span className="text-lg md:text-xl font-bold text-[#c33124]">
+					<div className="inline-flex max-w-full items-center gap-3 px-5 py-3 rounded-2xl bg-[#fffdf6] border-2 border-[#e7a92b] shadow-md">
+						<span className="text-2xl shrink-0">🎰</span>
+						<span className="text-base md:text-xl font-bold text-[#c33124] text-left">
 							Every member of a winning team receives the full
 							prize!
 						</span>

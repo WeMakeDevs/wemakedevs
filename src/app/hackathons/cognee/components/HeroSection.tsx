@@ -193,7 +193,7 @@ const HeroSection = ({
 					animate={{ opacity: 1, y: 0 }}
 					transition={{ duration: 0.65, delay: 0.8 }}
 				>
-					<div className="flex items-baseline gap-3 mb-4">
+					<div className="flex flex-wrap items-baseline gap-x-3 gap-y-1 mb-4">
 						<span className="text-5xl md:text-7xl font-black text-[#c33124] glow-red">
 							$10,000
 						</span>
