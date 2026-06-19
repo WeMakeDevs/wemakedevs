@@ -65,6 +65,18 @@ export default function RootLayout({
 			<div className="relative z-10">
 				<HackathonNavbar customNavLinks={hackathonNavLinks} />
 				{children}
+				<div className="border-t border-[#b07d12]/20 bg-[#f1dcb4]/50">
+					<div className="max-w-4xl mx-auto px-6 py-6 text-center">
+						<p className="text-xs leading-relaxed text-[#7c6244]">
+							Disclaimer: &ldquo;The Hangover Part AI&rdquo; is an
+							independent developer hackathon by WeMakeDevs and
+							Cognee. It is not affiliated with, endorsed by, or
+							associated with the &ldquo;The Hangover&rdquo;
+							films, Warner Bros. Entertainment, or any of their
+							rights holders. The theme is used purely for fun.
+						</p>
+					</div>
+				</div>
 				<HackathonFooter />
 			</div>
 		</div>
