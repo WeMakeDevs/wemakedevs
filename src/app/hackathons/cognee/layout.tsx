@@ -37,18 +37,18 @@ export default function RootLayout({
 			type: "link",
 		},
 		{
-			name: "Build",
+			name: "Sponsor",
+			url: `/hackathons/${DATA.slug}#sponsor`,
+			type: "link",
+		},
+		{
+			name: "Ideas",
 			url: `/hackathons/${DATA.slug}#ideas`,
 			type: "link",
 		},
 		{
 			name: "Prizes",
 			url: `/hackathons/${DATA.slug}#prizes`,
-			type: "link",
-		},
-		{
-			name: "Sponsor",
-			url: `/hackathons/${DATA.slug}#sponsor`,
 			type: "link",
 		},
 		{

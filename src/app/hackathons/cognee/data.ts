@@ -75,7 +75,7 @@ const faqs: FaqType[] = [
 	},
 	{
 		question: "What tech stack should I use?",
-		answer: "Your project must use <a href='https://github.com/topoteretes/cognee' target='_blank' rel='noopener noreferrer' class='text-amber-300 underline hover:text-amber-200'>Cognee</a> for memory. Beyond that you're free to use any language, framework, or tool, and you can leverage plug-and-play integrations like <code>cognee-integration-langgraph</code>, <code>n8n-nodes-cognee</code>, or the MCP server for Claude Code and Cursor.",
+		answer: "Your project must use <a href='https://github.com/topoteretes/cognee' target='_blank' rel='noopener noreferrer' class='text-amber-300 underline hover:text-amber-200'>Cognee</a> for memory. Beyond that you're free to use any language, framework, or tool, and you can leverage plug-and-play integrations for Claude Code, Codex, n8n, and OpenClaw, plus the MCP server for your favorite IDE agents.",
 	},
 	{
 		question: "What can I win?",

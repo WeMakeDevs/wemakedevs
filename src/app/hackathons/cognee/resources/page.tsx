@@ -176,29 +176,108 @@ const HackathonResources = async () => {
 				</HackathonContentBody>
 
 				<HackathonContentTitle className="text-[#c33124]">
+					Setup &amp; Configuration
+				</HackathonContentTitle>
+				<HackathonContentBody className="text-[#4a3624]">
+					<p className="mb-3">
+						Configure your LLM providers, vector stores, graph
+						stores, and everything else you need to run Cognee your
+						way:
+					</p>
+					<ul className="space-y-2 list-disc list-inside">
+						<li>
+							<Link
+								href="https://docs.cognee.ai/setup-configuration/overview"
+								className={linkClass}
+								target="_blank"
+								rel="noopener noreferrer"
+							>
+								Setup &amp; Configuration Overview
+							</Link>{" "}
+							(LLM providers, vector stores, graph stores, and
+							more)
+						</li>
+					</ul>
+				</HackathonContentBody>
+
+				<HackathonContentTitle className="text-[#c33124]">
 					Ecosystem Integrations
 				</HackathonContentTitle>
 				<HackathonContentBody className="text-[#4a3624]">
+					<p className="mb-3">
+						Plug Cognee into your favorite tools with these
+						ready-made integrations and guides:
+					</p>
 					<ul className="space-y-3 list-disc list-inside">
 						<li>
 							<strong className="text-[#c33124]">
-								LangGraph:
+								Claude Code:
 							</strong>{" "}
-							use <code>cognee-integration-langgraph</code> to
-							spin up session-isolated memory tools
+							<Link
+								href="https://github.com/topoteretes/cognee-integrations/tree/main/integrations/claude-code"
+								className={linkClass}
+								target="_blank"
+								rel="noopener noreferrer"
+							>
+								Claude Code integration guide
+							</Link>
 						</li>
 						<li>
-							<strong className="text-[#c33124]">n8n:</strong> use{" "}
-							<code>n8n-nodes-cognee</code> to build never-forget
-							AI workflows without writing backend code
+							<strong className="text-[#c33124]">Codex:</strong>{" "}
+							<Link
+								href="https://github.com/topoteretes/cognee-integrations/tree/main/integrations/codex"
+								className={linkClass}
+								target="_blank"
+								rel="noopener noreferrer"
+							>
+								Codex integration guide
+							</Link>
+						</li>
+						<li>
+							<strong className="text-[#c33124]">n8n:</strong>{" "}
+							<Link
+								href="https://github.com/topoteretes/cognee-integrations/tree/main/integrations/n8n"
+								className={linkClass}
+								target="_blank"
+								rel="noopener noreferrer"
+							>
+								n8n integration guide
+							</Link>
 						</li>
 						<li>
 							<strong className="text-[#c33124]">
-								Claude Code & Cursor:
+								OpenClaw:
 							</strong>{" "}
-							build plugins or use the Model Context Protocol
-							(MCP) server so your IDE agents have local project
-							memory
+							<Link
+								href="https://www.npmjs.com/package/@cognee/cognee-openclaw"
+								className={linkClass}
+								target="_blank"
+								rel="noopener noreferrer"
+							>
+								npm package
+							</Link>{" "}
+							&middot;{" "}
+							<Link
+								href="https://github.com/topoteretes/cognee-integrations/tree/main/integrations/openclaw-skills"
+								className={linkClass}
+								target="_blank"
+								rel="noopener noreferrer"
+							>
+								OpenClaw skills guide
+							</Link>
+						</li>
+						<li>
+							<strong className="text-[#c33124]">
+								All integrations:
+							</strong>{" "}
+							<Link
+								href="https://github.com/topoteretes/cognee-integrations/tree/main/integrations"
+								className={linkClass}
+								target="_blank"
+								rel="noopener noreferrer"
+							>
+								Full list of integrations &amp; guides
+							</Link>
 						</li>
 					</ul>
 				</HackathonContentBody>
