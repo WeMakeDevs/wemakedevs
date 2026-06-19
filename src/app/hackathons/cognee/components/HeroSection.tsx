@@ -3,8 +3,10 @@
 import { ViewContainer } from "@/components/ui/view-container";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { ArrowUpRight, BrainCircuit } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 import { useRef } from "react";
+import { images } from "../images";
 import { ChickenCartoon, Dice, TigerCartoon } from "./Characters";
 
 type HeroSectionProps = {
@@ -142,25 +144,9 @@ const HeroSection = ({
 			</motion.div>
 
 			<ViewContainer className="relative z-20 flex flex-col justify-center pt-16 md:pt-20 pb-10 flex-1">
-				{/* Marquee pills */}
+				{/* Title image */}
 				<motion.div
-					className="flex items-center gap-3 self-start mb-6"
-					initial={{ opacity: 0, y: -12 }}
-					animate={{ opacity: 1, y: 0 }}
-					transition={{ duration: 0.6 }}
-				>
-					<span className="inline-flex items-center gap-2 bg-[#0e8a80] text-white px-4 py-1.5 rounded-full text-sm font-extrabold uppercase tracking-wider shadow-md">
-						<span className="w-2 h-2 bg-white rounded-full bulb-flicker" />
-						Online
-					</span>
-					<span className="inline-flex items-center gap-2 bg-[#c33124] text-white px-4 py-1.5 rounded-full text-sm font-extrabold uppercase tracking-wider shadow-md border-2 border-[#f6c453]">
-						Hackathon
-					</span>
-				</motion.div>
-
-				{/* Title */}
-				<motion.div
-					className="mb-4 max-w-4xl"
+					className="mb-5 w-full max-w-[560px] lg:max-w-[680px]"
 					initial={{ opacity: 0, scale: 0.85, y: 30 }}
 					animate={{ opacity: 1, scale: 1, y: 0 }}
 					transition={{
@@ -169,17 +155,12 @@ const HeroSection = ({
 						ease: [0.16, 1, 0.3, 1],
 					}}
 				>
-					<h1 className="font-black italic uppercase leading-[0.92] tracking-tight glow-red">
-						<span className="block text-4xl md:text-6xl text-[#c33124]">
-							The Hangover
-						</span>
-						<span className="block text-5xl md:text-7xl text-[#b07d12]">
-							Part AI
-						</span>
-					</h1>
-					<p className="mt-3 text-xl md:text-2xl font-extrabold text-[#0e8a80] uppercase tracking-wide">
-						Where&apos;s My Context?
-					</p>
+					<Image
+						src={images.title}
+						alt="The Hangover Part AI: Where's My Context?"
+						className="w-full h-auto"
+						priority
+					/>
 				</motion.div>
 
 				{/* Subtitle */}
