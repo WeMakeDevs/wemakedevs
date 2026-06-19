@@ -110,6 +110,16 @@ const HeroSection = ({
 	});
 	const crewOpacity = useTransform(scrollYProgress, [0, 0.75], [1, 0.1]);
 
+	// Fade the bottom (waist cutout) and the left edge (cut-off arm) into the background
+	const blendMask = {
+		WebkitMaskImage:
+			"linear-gradient(to bottom, black 74%, transparent 100%), linear-gradient(to right, transparent 0%, black 15%)",
+		maskImage:
+			"linear-gradient(to bottom, black 74%, transparent 100%), linear-gradient(to right, transparent 0%, black 15%)",
+		WebkitMaskComposite: "source-in",
+		maskComposite: "intersect",
+	} as const;
+
 	return (
 		<div
 			ref={containerRef}
@@ -120,7 +130,7 @@ const HeroSection = ({
 			{/* ── The Wolfpack team photo (right side, waist cutout blended into the sand) ── */}
 			<motion.div
 				style={{ opacity: crewOpacity }}
-				className="absolute bottom-0 right-0 w-[46%] max-w-[600px] z-[5] hidden lg:block pointer-events-none"
+				className="absolute bottom-0 right-0 w-[54%] max-w-[760px] z-[5] hidden lg:block pointer-events-none"
 			>
 				<motion.div
 					initial={{ x: 80, opacity: 0 }}
@@ -134,7 +144,8 @@ const HeroSection = ({
 					<Image
 						src={images.background}
 						alt="The Wolfpack"
-						className="w-full h-auto object-contain object-bottom drop-shadow-[0_18px_30px_rgba(120,80,30,0.4)] [mask-image:linear-gradient(to_bottom,black_72%,transparent_100%)] [-webkit-mask-image:linear-gradient(to_bottom,black_72%,transparent_100%)]"
+						className="w-full h-auto object-contain object-bottom drop-shadow-[0_18px_30px_rgba(120,80,30,0.4)]"
+						style={blendMask}
 						priority
 					/>
 				</motion.div>
@@ -257,6 +268,21 @@ const HeroSection = ({
 						</Link>
 					)}
 					<Dice className="w-20 h-auto hidden sm:block drop-shadow-[0_6px_12px_rgba(120,80,30,0.25)]" />
+				</motion.div>
+
+				{/* Team photo for small screens (in-flow, blended at the bottom) */}
+				<motion.div
+					className="lg:hidden mt-10 flex justify-center"
+					initial={{ opacity: 0, y: 30 }}
+					animate={{ opacity: 1, y: 0 }}
+					transition={{ duration: 1, delay: 0.5 }}
+				>
+					<Image
+						src={images.background}
+						alt="The Wolfpack"
+						className="w-full max-w-xs sm:max-w-sm h-auto object-contain drop-shadow-[0_14px_24px_rgba(120,80,30,0.4)]"
+						style={blendMask}
+					/>
 				</motion.div>
 			</ViewContainer>
 		</div>

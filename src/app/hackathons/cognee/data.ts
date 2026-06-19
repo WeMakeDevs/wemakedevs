@@ -12,8 +12,8 @@ const DATA = {
 		"What happens in the context window doesn't have to stay there. Build AI that doesn't forget with Cognee.",
 	slug: "cognee",
 	cta: {
-		label: "Join the Wolfpack",
-		href: "https://discord.com/invite/m63hxKsp4p",
+		label: "Register Now",
+		href: "https://forms.gle/aGefvBfYfAMux5sL9",
 		openInNewTab: true,
 		disabled: false,
 	},
