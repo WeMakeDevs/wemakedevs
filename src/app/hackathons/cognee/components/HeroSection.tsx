@@ -146,7 +146,7 @@ const HeroSection = ({
 			<ViewContainer className="relative z-20 flex flex-col justify-center pt-16 md:pt-20 pb-10 flex-1">
 				{/* Title image */}
 				<motion.div
-					className="mb-5 w-full max-w-[560px] lg:max-w-[680px]"
+					className="mb-8 md:mb-10 w-full max-w-[560px] lg:max-w-[680px]"
 					initial={{ opacity: 0, scale: 0.85, y: 30 }}
 					animate={{ opacity: 1, scale: 1, y: 0 }}
 					transition={{
@@ -163,16 +163,6 @@ const HeroSection = ({
 					/>
 				</motion.div>
 
-				{/* Subtitle */}
-				<motion.p
-					className="text-2xl md:text-3xl font-black italic text-[#3a2a1c] mb-5"
-					initial={{ opacity: 0, y: 14 }}
-					animate={{ opacity: 1, y: 0 }}
-					transition={{ duration: 0.6, delay: 0.5 }}
-				>
-					Build AI that doesn&apos;t forget.
-				</motion.p>
-
 				{/* Description */}
 				<motion.p
 					className="text-base md:text-lg text-[#5a4632] max-w-xl leading-relaxed mb-7"
@@ -180,7 +170,20 @@ const HeroSection = ({
 					animate={{ opacity: 1, y: 0 }}
 					transition={{ duration: 0.65, delay: 0.65 }}
 				>
-					{description}
+					{(() => {
+						const phrase = "Build AI that doesn't forget";
+						const idx = description.indexOf(phrase);
+						if (idx === -1) return description;
+						return (
+							<>
+								{description.slice(0, idx)}
+								<strong className="font-bold text-[#3a2a1c]">
+									{phrase}
+								</strong>
+								{description.slice(idx + phrase.length)}
+							</>
+						);
+					})()}
 				</motion.p>
 
 				{/* Prize + dates */}
