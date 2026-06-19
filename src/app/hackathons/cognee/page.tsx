@@ -71,13 +71,18 @@ const HackathonPage = () => {
 				</ViewContainer>
 			</div>
 
+			{/* ── Prizes ────────────────────────────────────────────────────────── */}
+			<div id="prizes" className="scroll-mt-44 bg-[#f1dcb4]/60">
+				<PrizesShowcase />
+			</div>
+
 			{/* ── Why we're doing this (Problem / Solution) ─────────────────────── */}
-			<div id="why" className="scroll-mt-44 bg-[#f1dcb4]/60">
+			<div id="why" className="scroll-mt-44 bg-[#f7ead0]">
 				<ProblemSolution />
 			</div>
 
 			{/* ── Sponsor ───────────────────────────────────────────────────────── */}
-			<div id="sponsor" className="py-20 scroll-mt-44 bg-[#f7ead0]">
+			<div id="sponsor" className="py-20 scroll-mt-44 bg-[#f1dcb4]/60">
 				<ViewContainer>
 					<h2 className="text-3xl md:text-4xl font-black italic uppercase text-[#c33124] glow-red mb-8">
 						Powered By Cognee
@@ -178,23 +183,18 @@ const HackathonPage = () => {
 			</div>
 
 			{/* ── Core Memory Lifecycle APIs ────────────────────────────────────── */}
-			<div id="apis" className="scroll-mt-44 bg-[#f1dcb4]/60 desert-grid">
+			<div id="apis" className="scroll-mt-44 bg-[#f7ead0] desert-grid">
 				<MemoryApi />
 			</div>
 
 			{/* ── What can you build (examples) ─────────────────────────────────── */}
-			<div id="ideas" className="scroll-mt-44 bg-[#f7ead0]">
+			<div id="ideas" className="scroll-mt-44 bg-[#f1dcb4]/60">
 				<Tracks />
 			</div>
 
 			{/* ── Ecosystem Integrations ────────────────────────────────────────── */}
-			<div className="bg-[#f1dcb4]/60 desert-grid">
+			<div className="bg-[#f7ead0] desert-grid">
 				<Integrations />
-			</div>
-
-			{/* ── Prizes ────────────────────────────────────────────────────────── */}
-			<div id="prizes" className="scroll-mt-44 bg-[#f7ead0]">
-				<PrizesShowcase />
 			</div>
 
 			{/* ── Judging Criteria ──────────────────────────────────────────────── */}
