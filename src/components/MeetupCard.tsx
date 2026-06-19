@@ -80,9 +80,7 @@ const MeetupLastCard = () => {
 	return (
 		<Link
 			className="overflow-clip p-5 rounded group relative shadow-xl bg-accent-2 text-[#12462e] "
-			href="https://guild.host/wemakedevs/guilds"
-			target="_blank"
-			rel="noreferrer noopener"
+			href="/meetups"
 		>
 			<svg
 				className="-translate-x-4 w-16 mx-auto"
@@ -133,7 +131,7 @@ const MeetupLastCard = () => {
 			</svg>
 			<div className="mt-28 group-hover:-translate-y-20 transition-transform">
 				<h3 className="text-center leading-tight text-2xl md:text-3xl text-[#12462e]">
-					Our Past
+					View All
 					<br />
 					Meetups
 				</h3>

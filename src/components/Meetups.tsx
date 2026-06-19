@@ -1,9 +1,7 @@
 import { cn } from "@/lib/utils";
 import type { GeneralComponent } from "@/types";
 import { meetups } from "@/constants/meetups";
-import Link from "next/link";
-import { MeetupCard } from "./MeetupCard";
-import { buttonVariants } from "./ui/button";
+import { MeetupCard, MeetupLastCard } from "./MeetupCard";
 import { ViewContainer } from "./ui/view-container";
 
 const Meetups = ({ className, ...props }: GeneralComponent) => {
@@ -22,21 +20,11 @@ const Meetups = ({ className, ...props }: GeneralComponent) => {
 						and talk about latest tech innovations.
 					</p>
 				</div>
-				<div className="my-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-6">
-					{meetups.slice(0, 3).map(meetup => (
+				<div className="my-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-6 auto-rows-fr">
+					{meetups.slice(0, 2).map(meetup => (
 						<MeetupCard key={meetup.title} {...meetup} />
 					))}
-				</div>
-				<div className="flex justify-center">
-					<Link
-						href="/meetups"
-						className={cn(
-							buttonVariants({ variant: "outline", size: "lg" }),
-							"font-semibold",
-						)}
-					>
-						View All Meetups
-					</Link>
+					<MeetupLastCard />
 				</div>
 			</ViewContainer>
 		</section>
