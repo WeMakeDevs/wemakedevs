@@ -10,7 +10,7 @@ import { images } from "../images";
 
 const HackathonRules = async () => {
 	return (
-		<div className="pt-20 pb-10 bg-gradient-to-b from-[#0d0618] via-[#160a26] to-[#0d0618] min-h-screen">
+		<div className="pt-20 pb-10 bg-gradient-to-b from-[#f7ead0] via-[#f1dcb4] to-[#f7ead0] min-h-screen">
 			<HackathonCoverImage src={images.cover} alt={DATA.title} />
 			<div className="sticky top-[96px] z-[120]">
 				<ViewContainer>
@@ -30,10 +30,10 @@ const HackathonRules = async () => {
 				</ViewContainer>
 			</div>
 			<ViewContainer className="my-10">
-				<h2 className="text-3xl font-bold text-[#ffd24a] mb-6">
+				<h2 className="text-3xl font-bold text-[#c33124] mb-6">
 					House Rules
 				</h2>
-				<HackathonContentBody className="text-slate-300">
+				<HackathonContentBody className="text-[#4a3624]">
 					<ol className="list-decimal list-outside space-y-4 pl-6">
 						<li>
 							You can operate solo or assemble your own Wolfpack
@@ -41,13 +41,13 @@ const HackathonRules = async () => {
 							any time before the hackathon begins.
 						</li>
 						<li>
-							<strong className="text-[#ffd24a]">
+							<strong className="text-[#c33124]">
 								Required tech:
 							</strong>{" "}
 							Your project must use{" "}
 							<Link
 								href="https://github.com/topoteretes/cognee"
-								className="text-[#ffb800] hover:text-[#ffd24a] underline"
+								className="text-[#8a5a00] hover:text-[#c33124] underline"
 								target="_blank"
 								rel="noopener noreferrer"
 							>
@@ -59,7 +59,7 @@ const HackathonRules = async () => {
 							submission will score.
 						</li>
 						<li>
-							<strong className="text-[#ffd24a]">
+							<strong className="text-[#c33124]">
 								Open-ended theme:
 							</strong>{" "}
 							The theme is completely open. Build anything you
@@ -69,13 +69,13 @@ const HackathonRules = async () => {
 							limited to them.
 						</li>
 						<li>
-							<strong className="text-[#ffd24a]">
+							<strong className="text-[#c33124]">
 								Open Source Track ($100 per PR · top 20):
 							</strong>{" "}
 							Find issues on the{" "}
 							<Link
 								href="https://github.com/topoteretes/cognee"
-								className="text-[#ffb800] hover:text-[#ffd24a] underline"
+								className="text-[#8a5a00] hover:text-[#c33124] underline"
 								target="_blank"
 								rel="noopener noreferrer"
 							>
@@ -87,7 +87,7 @@ const HackathonRules = async () => {
 							on it and tagging the maintainer.
 						</li>
 						<li>
-							<strong className="text-[#ffd24a]">
+							<strong className="text-[#c33124]">
 								Zero tolerance for spam.
 							</strong>{" "}
 							Low-effort PRs (typo-only fixes, whitespace changes,
@@ -98,13 +98,13 @@ const HackathonRules = async () => {
 							WeMakeDevs events.
 						</li>
 						<li>
-							<strong className="text-[#ffd24a]">
+							<strong className="text-[#c33124]">
 								Job interviews do not guarantee a job.
 							</strong>{" "}
 							Top winners get interview opportunities at Cognee.
 							These are a genuine chance to showcase your skills,
 							but they do{" "}
-							<strong className="text-[#ff8ab8]">not</strong>{" "}
+							<strong className="text-[#c33124]">not</strong>{" "}
 							guarantee a position or offer of employment.
 						</li>
 						<li>

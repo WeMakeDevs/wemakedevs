@@ -103,7 +103,7 @@ const HackathonScheduleComponent = ({
 	if (!isLoaded) {
 		return (
 			<div className="flex justify-center items-center py-20">
-				<div className="text-lg text-slate-400">
+				<div className="text-lg text-[#6b513a]">
 					Shuffling the deck...
 				</div>
 			</div>
@@ -122,8 +122,8 @@ const HackathonScheduleComponent = ({
 							buttonVariants(),
 							"focus:outline-none",
 							selectedDate === index
-								? "bg-gradient-to-r from-[#ffb800] to-[#ff2d7e] text-[#160a26] hover:opacity-90"
-								: "bg-[#241338] text-[#ffd24a] hover:bg-[#2e1845] border border-[#ffb800]/30",
+								? "bg-gradient-to-r from-[#e23b2d] to-[#c33124] text-white hover:opacity-90"
+								: "bg-[#fffdf6] text-[#c33124] hover:bg-[#fff1d6] border-2 border-[#c33124]/30",
 						)}
 						onClick={() => setSelectedDate(index)}
 						type="button"
@@ -147,37 +147,37 @@ const HackathonScheduleComponent = ({
 								{totalItems > 1 && (
 									<>
 										{index === 0 && (
-											<div className="absolute h-[100%] w-1 top-1/2 left-[14px] bg-[#ffb800]/30 z-0" />
+											<div className="absolute h-[100%] w-1 top-1/2 left-[14px] bg-[#c33124]/30 z-0" />
 										)}
 										{index === totalItems - 1 &&
 											index > 0 && (
-												<div className="absolute h-[50%] w-1 top-0 left-[14px] bg-[#ffb800]/30 z-0" />
+												<div className="absolute h-[50%] w-1 top-0 left-[14px] bg-[#c33124]/30 z-0" />
 											)}
 										{index > 0 &&
 											index < totalItems - 1 && (
-												<div className="absolute h-[145%] w-1 top-0 left-[14px] bg-[#ffb800]/30 z-0" />
+												<div className="absolute h-[145%] w-1 top-0 left-[14px] bg-[#c33124]/30 z-0" />
 											)}
 									</>
 								)}
 
-								<div className="rounded-full p-1.5 bg-[#ffb800]/50 shadow-lg shadow-[#ffb800]/30 relative z-10">
-									<div className="rounded-full bg-gradient-to-br from-[#ffb800] to-[#ff2d7e] shadow-md h-5 w-5" />
+								<div className="rounded-full p-1.5 bg-[#e7a92b]/50 shadow-lg shadow-[#c8901a]/30 relative z-10">
+									<div className="rounded-full bg-gradient-to-br from-[#e23b2d] to-[#c33124] shadow-md h-5 w-5" />
 								</div>
 
 								{isTextItem ? (
 									<div className="flex-1">
-										<p className="text-lg font-body font-medium md:text-xl text-slate-300">
+										<p className="text-lg font-body font-medium md:text-xl text-[#5a4632]">
 											{item.title}
 										</p>
 									</div>
 								) : (
-									<div className="px-4 py-2 ring-2 ring-[#ffb800]/20 w-full hover:ring-[#ff2d7e]/40 transition-all bg-[#241338]/50 rounded-lg">
-										<h3 className="text-lg font-body font-semibold md:text-xl text-[#ffd24a]">
+									<div className="px-4 py-2 ring-2 ring-[#c33124]/20 w-full hover:ring-[#c33124]/40 transition-all bg-[#fffdf6] rounded-lg">
+										<h3 className="text-lg font-body font-semibold md:text-xl text-[#c33124]">
 											{item.title}
 										</h3>
 										<div className="flex gap-2 md:gap-5 items-center font-medium flex-wrap mt-2">
 											{item.time && (
-												<span className="flex gap-2 text-slate-400 items-center">
+												<span className="flex gap-2 text-[#6b513a] items-center">
 													<Clock size={16} />
 													{formatLocalTime(item.time)}
 												</span>
@@ -191,7 +191,7 @@ const HackathonScheduleComponent = ({
 																<Link
 																	key={`${l.platform}-${idx}`}
 																	href={l.url}
-																	className="text-[#ffd24a] hover:text-[#ffb800]"
+																	className="text-[#c33124] hover:text-[#931f15]"
 																	target="_blank"
 																	rel="noopener noreferrer"
 																	title={
@@ -220,7 +220,7 @@ const HackathonScheduleComponent = ({
 												(item.link && (
 													<Link
 														href={item.link.url}
-														className="hover:underline no-underline text-[#ffd24a] flex items-center gap-2 uppercase"
+														className="hover:underline no-underline text-[#c33124] flex items-center gap-2 uppercase"
 														target="_blank"
 														rel="noopener noreferrer"
 													>
@@ -230,7 +230,7 @@ const HackathonScheduleComponent = ({
 												))}
 										</div>
 										{item.description && (
-											<p className="max-w-2xl text-base md:text-lg font-medium leading-snug mt-2 text-slate-400">
+											<p className="max-w-2xl text-base md:text-lg font-medium leading-snug mt-2 text-[#6b513a]">
 												{item.description}
 											</p>
 										)}

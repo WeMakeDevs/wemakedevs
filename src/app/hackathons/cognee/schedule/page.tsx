@@ -9,7 +9,7 @@ import { images } from "../images";
 
 const HackathonSchedule = async () => {
 	return (
-		<div className="pt-20 pb-10 bg-gradient-to-b from-[#0d0618] via-[#160a26] to-[#0d0618] min-h-screen">
+		<div className="pt-20 pb-10 bg-gradient-to-b from-[#f7ead0] via-[#f1dcb4] to-[#f7ead0] min-h-screen">
 			<HackathonCoverImage src={images.cover} alt={DATA.title} />
 			<div className="sticky top-[96px] z-[120]">
 				<ViewContainer>
@@ -29,10 +29,10 @@ const HackathonSchedule = async () => {
 				</ViewContainer>
 			</div>
 			<ViewContainer className="my-14">
-				<h2 className="text-3xl font-bold text-[#ffd24a] mb-8 text-center">
+				<h2 className="text-3xl font-bold text-[#c33124] mb-8 text-center">
 					The Itinerary
 				</h2>
-				<p className="text-center text-slate-400 mb-8 max-w-2xl mx-auto">
+				<p className="text-center text-[#6b513a] mb-8 max-w-2xl mx-auto">
 					Mark these dates. The hackathon runs June 29 – July 5, 2026.
 					Don&apos;t miss the kickoff livestream on June 26 — try to
 					remember this time.

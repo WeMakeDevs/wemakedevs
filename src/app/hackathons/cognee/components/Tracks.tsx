@@ -19,7 +19,7 @@ const tracks = [
 		icon: Bot,
 		description:
 			"Assistants that remember every conversation, preference, and decision across infinite sessions. Your AI finally stops asking the same question twice.",
-		gradient: "from-[#ffb800] to-[#ff8a00]",
+		gradient: "from-[#e23b2d] to-[#c33124]",
 	},
 	{
 		id: "02",
@@ -27,7 +27,7 @@ const tracks = [
 		icon: Search,
 		description:
 			"Ingest papers, docs, and the web into a living knowledge graph, then recall answers with deep graph traversals. Think Andrej Karpathy Wiki, but yours.",
-		gradient: "from-[#ff2d7e] to-[#9d4edd]",
+		gradient: "from-[#e7a92b] to-[#c8901a]",
 	},
 	{
 		id: "03",
@@ -35,7 +35,7 @@ const tracks = [
 		icon: Workflow,
 		description:
 			"Automations and pipelines that carry context between runs. Build agents that learn from yesterday and act smarter today.",
-		gradient: "from-[#00e0d5] to-[#21a8e6]",
+		gradient: "from-[#0e8a80] to-[#0c736b]",
 	},
 	{
 		id: "04",
@@ -43,7 +43,7 @@ const tracks = [
 		icon: Sparkles,
 		description:
 			"Use improve()/memify to enrich memory and adapt weights from feedback so your agent gets sharper the more it's used.",
-		gradient: "from-[#9d4edd] to-[#ff2d7e]",
+		gradient: "from-[#e0762a] to-[#cf5f1c]",
 	},
 	{
 		id: "05",
@@ -51,7 +51,7 @@ const tracks = [
 		icon: Headphones,
 		description:
 			"Support bots that remember a customer's full history, past tickets, and context — no more 'can you repeat your account number?'",
-		gradient: "from-[#ffb800] to-[#ff2d7e]",
+		gradient: "from-[#c33124] to-[#e0762a]",
 	},
 	{
 		id: "06",
@@ -59,7 +59,7 @@ const tracks = [
 		icon: GraduationCap,
 		description:
 			"Tutors that track what a learner already knows, adapt to their pace, and build a personalized knowledge map over time.",
-		gradient: "from-[#21e6c1] to-[#9d4edd]",
+		gradient: "from-[#0e8a80] to-[#e7a92b]",
 	},
 ];
 
@@ -82,18 +82,18 @@ const Tracks = () => {
 			<ViewContainer>
 				<div className="text-center mb-14">
 					<motion.div
-						className="inline-flex items-center gap-2 bg-[#ffb800]/10 border border-[#ffb800]/30 text-[#ffd24a] px-5 py-2 rounded-full text-sm font-semibold mb-6 backdrop-blur-sm"
+						className="inline-flex items-center gap-2 bg-[#b07d12]/10 border border-[#b07d12]/30 text-[#8a5a00] px-5 py-2 rounded-full text-sm font-semibold mb-6"
 						initial={{ opacity: 0, y: -12 }}
 						whileInView={{ opacity: 1, y: 0 }}
 						viewport={{ once: true }}
 						transition={{ duration: 0.5 }}
 					>
-						<span className="w-2 h-2 bg-[#ffb800] rounded-full neon-flicker" />
+						<span className="w-2 h-2 bg-[#b07d12] rounded-full bulb-flicker" />
 						What Can You Build?
 					</motion.div>
 
 					<motion.h2
-						className="text-3xl md:text-5xl font-black italic uppercase text-[#ffd24a] glow-gold mb-4"
+						className="text-3xl md:text-5xl font-black italic uppercase text-[#c33124] glow-red mb-4"
 						initial={{ opacity: 0, y: 16 }}
 						whileInView={{ opacity: 1, y: 0 }}
 						viewport={{ once: true }}
@@ -103,14 +103,14 @@ const Tracks = () => {
 					</motion.h2>
 
 					<motion.p
-						className="text-lg text-slate-400 max-w-3xl mx-auto"
+						className="text-lg text-[#6b513a] max-w-3xl mx-auto"
 						initial={{ opacity: 0 }}
 						whileInView={{ opacity: 1 }}
 						viewport={{ once: true }}
 						transition={{ duration: 0.55, delay: 0.2 }}
 					>
 						Build{" "}
-						<span className="text-[#ffd24a] font-semibold">
+						<span className="text-[#c33124] font-semibold">
 							anything you want
 						</span>{" "}
 						— agents, apps, tools, games, automations — as long as
@@ -119,13 +119,13 @@ const Tracks = () => {
 							href="https://github.com/topoteretes/cognee"
 							target="_blank"
 							rel="noopener noreferrer"
-							className="text-[#ffb800] underline hover:text-[#ffd24a]"
+							className="text-[#8a5a00] underline hover:text-[#c33124]"
 						>
 							Cognee
 						</Link>{" "}
 						for memory. The tracks below are just inspiration to get
 						the ideas flowing. They are{" "}
-						<span className="text-[#ff8ab8] font-semibold">
+						<span className="text-[#c33124] font-semibold">
 							examples only
 						</span>
 						, not requirements.
@@ -145,24 +145,24 @@ const Tracks = () => {
 							<motion.div
 								key={t.id}
 								variants={cardVariants}
-								className="group relative rounded-2xl border border-[#ffb800]/15 p-6 transition-all duration-300 hover:border-[#ff2d7e]/40 cursor-default overflow-hidden glass-card"
+								className="group relative rounded-2xl p-6 cursor-default overflow-hidden paper-card"
 							>
 								<div className="absolute top-3 right-3">
-									<span className="font-mono text-[10px] text-slate-500 tracking-widest">
+									<span className="font-mono text-[10px] text-[#b09475] tracking-widest">
 										TRACK #{t.id}
 									</span>
 								</div>
 								<div className="flex items-start gap-4 mb-4">
 									<div
-										className={`bg-gradient-to-br ${t.gradient} p-3 rounded-xl shadow-lg group-hover:scale-110 transition-transform duration-300 shrink-0`}
+										className={`bg-gradient-to-br ${t.gradient} p-3 rounded-xl shadow-md group-hover:scale-110 transition-transform duration-300 shrink-0`}
 									>
-										<Icon className="w-7 h-7 text-[#160a26]" />
+										<Icon className="w-7 h-7 text-white" />
 									</div>
-									<h3 className="text-lg font-bold text-[#ffd24a] mt-1 leading-tight">
+									<h3 className="text-lg font-bold text-[#c33124] mt-1 leading-tight">
 										{t.title}
 									</h3>
 								</div>
-								<p className="text-slate-300 leading-relaxed text-sm md:text-base">
+								<p className="text-[#5a4632] leading-relaxed text-sm md:text-base">
 									{t.description}
 								</p>
 							</motion.div>
@@ -171,7 +171,7 @@ const Tracks = () => {
 				</motion.div>
 
 				<motion.p
-					className="text-center text-slate-500 mt-10 max-w-2xl mx-auto"
+					className="text-center text-[#6b513a] mt-10 max-w-2xl mx-auto"
 					initial={{ opacity: 0 }}
 					whileInView={{ opacity: 1 }}
 					viewport={{ once: true }}

@@ -5,7 +5,6 @@ import type { Metadata } from "next";
 import VegasBackground from "./components/VegasBackground";
 import { DATA } from "./data";
 import "./styles.css";
-
 export const metadata: Metadata = {
 	title: `${DATA.title} | WeMakeDevs`,
 	description: DATA.description,
@@ -57,7 +56,7 @@ export default function RootLayout({
 	];
 
 	return (
-		<div className="cognee-hackathon bg-[#0d0618] text-slate-100 min-h-screen relative">
+		<div className="cognee-hackathon bg-[#f7ead0] text-[#4a3624] min-h-screen relative">
 			<VegasBackground />
 			<div className="relative z-10">
 				<HackathonNavbar customNavLinks={hackathonNavLinks} />

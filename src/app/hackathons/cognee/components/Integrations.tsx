@@ -9,7 +9,7 @@ const integrations = [
 	{
 		icon: Network,
 		audience: "LangGraph Developers",
-		color: "#ffb800",
+		color: "#c33124",
 		body: "Use cognee-integration-langgraph to easily spin up session-isolated memory tools for your graphs.",
 		pkg: "cognee-integration-langgraph",
 		href: "https://github.com/topoteretes/cognee",
@@ -17,7 +17,7 @@ const integrations = [
 	{
 		icon: Workflow,
 		audience: "Workflow Automation (n8n)",
-		color: "#ff2d7e",
+		color: "#e0762a",
 		body: "Drop in n8n-nodes-cognee to build never-forget AI workflows without writing backend code.",
 		pkg: "n8n-nodes-cognee",
 		href: "https://github.com/topoteretes/cognee",
@@ -25,7 +25,7 @@ const integrations = [
 	{
 		icon: Code2,
 		audience: "Claude Code & Cursor Users",
-		color: "#21e6c1",
+		color: "#0e8a80",
 		body: "Build plugins or use the Model Context Protocol (MCP) server so your favorite IDE agents have local project memory.",
 		pkg: "cognee MCP server",
 		href: "https://docs.cognee.ai",
@@ -37,13 +37,13 @@ const Integrations = () => {
 		<div className="py-20">
 			<ViewContainer>
 				<div className="text-center mb-12">
-					<span className="inline-flex items-center gap-2 bg-[#00e0d5]/10 border border-[#00e0d5]/30 text-[#21e6c1] px-5 py-2 rounded-full text-sm font-semibold mb-6 backdrop-blur-sm">
+					<span className="inline-flex items-center gap-2 bg-[#0e8a80]/10 border border-[#0e8a80]/30 text-[#0e8a80] px-5 py-2 rounded-full text-sm font-semibold mb-6">
 						🔌 Plug-and-Play
 					</span>
-					<h2 className="text-3xl md:text-5xl font-black italic uppercase text-[#ffd24a] glow-gold">
+					<h2 className="text-3xl md:text-5xl font-black italic uppercase text-[#c33124] glow-red">
 						Don&apos;t Build It Alone
 					</h2>
-					<p className="text-lg text-slate-400 max-w-3xl mx-auto mt-4">
+					<p className="text-lg text-[#6b513a] max-w-3xl mx-auto mt-4">
 						You don&apos;t have to build custom agent frameworks
 						from scratch. Leverage Cognee&apos;s plug-and-play
 						integrations and ship faster.
@@ -56,7 +56,7 @@ const Integrations = () => {
 						return (
 							<motion.div
 								key={it.audience}
-								className="glass-card rounded-2xl p-6 flex flex-col"
+								className="paper-card rounded-2xl p-6 flex flex-col"
 								initial={{ opacity: 0, y: 24 }}
 								whileInView={{ opacity: 1, y: 0 }}
 								viewport={{ once: true }}
@@ -65,7 +65,7 @@ const Integrations = () => {
 								<div
 									className="inline-flex p-3 rounded-xl mb-4 w-fit"
 									style={{
-										background: `${it.color}22`,
+										background: `${it.color}18`,
 										border: `1px solid ${it.color}55`,
 									}}
 								>
@@ -80,11 +80,11 @@ const Integrations = () => {
 								>
 									{it.audience}
 								</h3>
-								<p className="text-slate-300 text-sm leading-relaxed mb-5 flex-1">
+								<p className="text-[#5a4632] text-sm leading-relaxed mb-5 flex-1">
 									{it.body}
 								</p>
 								<div className="flex items-center justify-between gap-2">
-									<code className="font-mono text-xs text-slate-400 bg-black/40 border border-white/10 rounded px-2 py-1 truncate">
+									<code className="font-mono text-xs text-[#6b513a] bg-[#f1dcb4]/70 border border-[#b07d12]/25 rounded px-2 py-1 truncate">
 										{it.pkg}
 									</code>
 									<Link

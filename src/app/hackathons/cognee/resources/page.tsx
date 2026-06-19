@@ -10,11 +10,11 @@ import { DATA, navLinks } from "../data";
 import { images } from "../images";
 
 const linkClass =
-	"text-[#ffb800] underline hover:no-underline hover:text-[#ffd24a]";
+	"text-[#8a5a00] underline hover:no-underline hover:text-[#c33124]";
 
 const HackathonResources = async () => {
 	return (
-		<div className="pt-20 pb-10 bg-gradient-to-b from-[#0d0618] via-[#160a26] to-[#0d0618] min-h-screen [&_h2]:text-[#ffd24a]">
+		<div className="pt-20 pb-10 bg-gradient-to-b from-[#f7ead0] via-[#f1dcb4] to-[#f7ead0] min-h-screen [&_h2]:text-[#c33124]">
 			<HackathonCoverImage src={images.cover} alt={DATA.title} />
 			<div className="sticky top-[96px] z-[120]">
 				<ViewContainer>
@@ -34,19 +34,19 @@ const HackathonResources = async () => {
 				</ViewContainer>
 			</div>
 			<ViewContainer>
-				<HackathonContentTitle className="text-[#ffd24a]">
+				<HackathonContentTitle className="text-[#c33124]">
 					Claim Your Free Cognee Cloud Credit
 				</HackathonContentTitle>
-				<HackathonContentBody className="text-slate-300">
-					<div className="rounded-2xl border border-[#21e6c1]/40 bg-[#00e0d5]/10 px-6 py-5 backdrop-blur-sm shadow-[0_0_30px_rgba(0,224,213,0.16)]">
+				<HackathonContentBody className="text-[#4a3624]">
+					<div className="rounded-2xl border-2 border-[#0e8a80]/30 bg-[#0e8a80]/8 px-6 py-5">
 						<div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
 							<div className="flex items-start gap-3">
 								<span className="text-2xl">🎁</span>
 								<div>
-									<p className="text-[#21e6c1] font-bold text-lg">
+									<p className="text-[#0e8a80] font-bold text-lg">
 										Free Developer plan ($35 value)
 									</p>
-									<p className="text-slate-300 text-sm">
+									<p className="text-[#4a3624] text-sm">
 										Sign up to{" "}
 										<Link
 											href="https://platform.cognee.ai/sign-in"
@@ -58,7 +58,7 @@ const HackathonResources = async () => {
 										</Link>{" "}
 										for free and unlock the Developer plan
 										with code{" "}
-										<code className="font-mono font-bold text-[#ffd24a] bg-[#ffb800]/15 border border-[#ffb800]/30 rounded px-1.5 py-0.5">
+										<code className="font-mono font-bold text-[#c33124] bg-[#b07d12]/15 border border-[#b07d12]/30 rounded px-1.5 py-0.5">
 											COGNEE-35
 										</code>{" "}
 										for free access.
@@ -69,17 +69,17 @@ const HackathonResources = async () => {
 								href="https://platform.cognee.ai/sign-in"
 								target="_blank"
 								rel="noopener noreferrer"
-								className="shrink-0 inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-lg bg-gradient-to-r from-[#00e0d5] to-[#21a8e6] text-[#0d0618] font-bold hover:opacity-90 transition-opacity"
+								className="shrink-0 inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-lg bg-gradient-to-r from-[#0e8a80] to-[#0c736b] text-white font-bold hover:opacity-90 transition-opacity"
 							>
 								Claim free credit
 							</Link>
 						</div>
 					</div>
 				</HackathonContentBody>
-				<HackathonContentTitle className="text-[#ffd24a]">
+				<HackathonContentTitle className="text-[#c33124]">
 					Get Started with Cognee
 				</HackathonContentTitle>
-				<HackathonContentBody className="text-slate-300">
+				<HackathonContentBody className="text-[#4a3624]">
 					<ul className="space-y-3 list-disc list-inside">
 						<li>
 							<Link
@@ -143,57 +143,57 @@ const HackathonResources = async () => {
 					</ul>
 				</HackathonContentBody>
 
-				<HackathonContentTitle className="text-[#ffd24a]">
+				<HackathonContentTitle className="text-[#c33124]">
 					The Core Memory Lifecycle APIs
 				</HackathonContentTitle>
-				<HackathonContentBody className="text-slate-300">
+				<HackathonContentBody className="text-[#4a3624]">
 					<ul className="space-y-3 list-disc list-inside">
 						<li>
-							<strong className="text-[#ffd24a]">
+							<strong className="text-[#c33124]">
 								remember()
 							</strong>{" "}
 							— ingest text, files, and URLs and permanently
 							structure them into the knowledge graph
 						</li>
 						<li>
-							<strong className="text-[#ffd24a]">recall()</strong>{" "}
+							<strong className="text-[#c33124]">recall()</strong>{" "}
 							— query memory; Cognee automatically routes between
 							semantic similarity and deep graph traversals
 						</li>
 						<li>
-							<strong className="text-[#ffd24a]">
+							<strong className="text-[#c33124]">
 								improve() / memify
 							</strong>{" "}
 							— run post-ingestion enrichment, prune stale nodes,
 							and adapt weights based on feedback
 						</li>
 						<li>
-							<strong className="text-[#ffd24a]">forget()</strong>{" "}
+							<strong className="text-[#c33124]">forget()</strong>{" "}
 							— surgically prune or delete datasets when
 							they&apos;re no longer needed
 						</li>
 					</ul>
 				</HackathonContentBody>
 
-				<HackathonContentTitle className="text-[#ffd24a]">
+				<HackathonContentTitle className="text-[#c33124]">
 					Ecosystem Integrations
 				</HackathonContentTitle>
-				<HackathonContentBody className="text-slate-300">
+				<HackathonContentBody className="text-[#4a3624]">
 					<ul className="space-y-3 list-disc list-inside">
 						<li>
-							<strong className="text-[#ffd24a]">
+							<strong className="text-[#c33124]">
 								LangGraph:
 							</strong>{" "}
 							use <code>cognee-integration-langgraph</code> to
 							spin up session-isolated memory tools
 						</li>
 						<li>
-							<strong className="text-[#ffd24a]">n8n:</strong> use{" "}
+							<strong className="text-[#c33124]">n8n:</strong> use{" "}
 							<code>n8n-nodes-cognee</code> to build never-forget
 							AI workflows without writing backend code
 						</li>
 						<li>
-							<strong className="text-[#ffd24a]">
+							<strong className="text-[#c33124]">
 								Claude Code & Cursor:
 							</strong>{" "}
 							build plugins or use the Model Context Protocol
@@ -203,10 +203,10 @@ const HackathonResources = async () => {
 					</ul>
 				</HackathonContentBody>
 
-				<HackathonContentTitle className="text-[#ffd24a]">
+				<HackathonContentTitle className="text-[#c33124]">
 					Need Help? Join the Community
 				</HackathonContentTitle>
-				<HackathonContentBody className="text-slate-300">
+				<HackathonContentBody className="text-[#4a3624]">
 					<ul className="space-y-2 list-disc list-inside">
 						<li>
 							Join the{" "}

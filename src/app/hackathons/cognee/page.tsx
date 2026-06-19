@@ -1,5 +1,4 @@
 import Faq from "@/components/Faq";
-import { HackathonNav } from "@/components/hackathon-content";
 import { ViewContainer } from "@/components/ui/view-container";
 import { ArrowUpRight, Star } from "lucide-react";
 import Link from "next/link";
@@ -8,9 +7,9 @@ import Integrations from "./components/Integrations";
 import MemoryApi from "./components/MemoryApi";
 import PrizesShowcase from "./components/PrizesShowcase";
 import ProblemSolution from "./components/ProblemSolution";
-import CogneeStats from "./components/Stats";
+import SectionNav from "./components/SectionNav";
 import Tracks from "./components/Tracks";
-import { DATA, faqs, navLinks } from "./data";
+import { DATA, faqs } from "./data";
 
 const judgingCriteria = [
 	{
@@ -59,66 +58,55 @@ const HackathonPage = () => {
 				/>
 			</div>
 
-			{/* ── Sticky sub-page nav ───────────────────────────────────────────── */}
+			{/* ── Sticky section nav (scrolls the page) ─────────────────────────── */}
 			<div className="sticky top-[96px] z-[120]">
 				<ViewContainer>
 					<div className="cognee-sticky-nav rounded-xl">
-						<HackathonNav
-							slug={DATA.slug}
-							page="overview"
-							links={navLinks}
-						/>
+						<SectionNav registerHref={DATA.cta.href} />
 					</div>
 				</ViewContainer>
 			</div>
 
-			{/* ── Stats ─────────────────────────────────────────────────────────── */}
-			<div className="bg-[#0d0618] neon-grid">
-				<ViewContainer className="py-16 md:py-20">
-					<CogneeStats />
-				</ViewContainer>
-			</div>
-
 			{/* ── Why we're doing this (Problem / Solution) ─────────────────────── */}
-			<div className="bg-[#160a26]/40">
+			<div id="why" className="scroll-mt-44 bg-[#f1dcb4]/60">
 				<ProblemSolution />
 			</div>
 
 			{/* ── Core Memory Lifecycle APIs ────────────────────────────────────── */}
-			<div className="bg-[#0d0618] neon-grid">
+			<div id="apis" className="scroll-mt-44 bg-[#f7ead0] desert-grid">
 				<MemoryApi />
 			</div>
 
 			{/* ── What can you build (Tracks) ───────────────────────────────────── */}
-			<div id="ideas" className="scroll-mt-44 bg-[#160a26]/40">
+			<div id="ideas" className="scroll-mt-44 bg-[#f1dcb4]/60">
 				<Tracks />
 			</div>
 
 			{/* ── Ecosystem Integrations ────────────────────────────────────────── */}
-			<div className="bg-[#0d0618] neon-grid">
+			<div className="bg-[#f7ead0] desert-grid">
 				<Integrations />
 			</div>
 
 			{/* ── Prizes ────────────────────────────────────────────────────────── */}
-			<div id="prizes" className="scroll-mt-44 bg-[#160a26]/40">
+			<div id="prizes" className="scroll-mt-44 bg-[#f1dcb4]/60">
 				<PrizesShowcase />
 			</div>
 
 			{/* ── Sponsor ───────────────────────────────────────────────────────── */}
-			<div id="sponsor" className="py-20 scroll-mt-44 bg-[#0d0618]">
+			<div id="sponsor" className="py-20 scroll-mt-44 bg-[#f7ead0]">
 				<ViewContainer>
-					<h2 className="text-3xl md:text-4xl font-black italic uppercase text-[#ffd24a] glow-gold mb-8">
+					<h2 className="text-3xl md:text-4xl font-black italic uppercase text-[#c33124] glow-red mb-8">
 						Powered By Cognee
 					</h2>
-					<div className="glass-card rounded-2xl overflow-hidden">
-						<div className="flex items-center justify-between p-8 border-b border-[#ffb800]/10 flex-col md:flex-row gap-6">
+					<div className="paper-card rounded-2xl overflow-hidden">
+						<div className="flex items-center justify-between p-8 border-b border-[#b07d12]/15 flex-col md:flex-row gap-6">
 							<div className="flex items-center gap-4">
-								<div className="bg-[#241338]/80 px-6 py-3 rounded-xl border border-[#ffb800]/20">
-									<span className="text-2xl font-black italic text-[#21e6c1]">
+								<div className="bg-[#fff8ea] px-6 py-3 rounded-xl border border-[#b07d12]/25">
+									<span className="text-2xl font-black italic text-[#0e8a80]">
 										cognee
 									</span>
 								</div>
-								<span className="text-slate-400 text-lg">
+								<span className="text-[#6b513a] text-lg">
 									The memory layer for AI agents
 								</span>
 							</div>
@@ -127,43 +115,40 @@ const HackathonPage = () => {
 									href="https://github.com/topoteretes/cognee"
 									target="_blank"
 									rel="noopener noreferrer"
-									className="px-6 py-3 rounded-xl border border-[#ffb800]/50 flex gap-2 items-center bg-gradient-to-r from-[#ffb800] to-[#ff8a00] hover:opacity-90 transition-opacity duration-300 text-[#160a26] font-bold"
+									className="px-6 py-3 rounded-xl flex gap-2 items-center bg-gradient-to-r from-[#e23b2d] to-[#c33124] hover:opacity-90 transition-opacity duration-300 text-white font-bold border-2 border-[#f6c453] shadow-md"
 								>
-									<Star
-										size={18}
-										className="fill-[#160a26]"
-									/>{" "}
+									<Star size={18} className="fill-white" />{" "}
 									Star Cognee
 								</Link>
 								<Link
 									href="https://github.com/topoteretes/cognee"
 									target="_blank"
 									rel="noopener noreferrer"
-									className="px-6 py-3 rounded-xl border border-[#ffb800]/50 flex gap-2 items-center bg-[#241338]/50 hover:bg-[#ffb800]/15 transition-colors duration-300 text-[#ffd24a] font-medium"
+									className="px-6 py-3 rounded-xl border-2 border-[#b07d12]/40 flex gap-2 items-center bg-[#fff8ea] hover:bg-[#fff1d6] transition-colors duration-300 text-[#8a5a00] font-bold"
 								>
 									Visit GitHub <ArrowUpRight size={18} />
 								</Link>
 							</div>
 						</div>
 						<div className="p-8">
-							<p className="text-lg text-slate-300 leading-relaxed">
+							<p className="text-lg text-[#5a4632] leading-relaxed">
 								Cognee is an open-source, self-hosted memory
 								layer for AI agents. It turns text, files, and
 								URLs into a hybrid graph-vector knowledge store,
 								so your agents can{" "}
-								<span className="text-[#ffd24a] font-semibold">
+								<span className="text-[#c33124] font-semibold">
 									remember
 								</span>
 								,{" "}
-								<span className="text-[#21e6c1] font-semibold">
+								<span className="text-[#0e8a80] font-semibold">
 									recall
 								</span>
 								,{" "}
-								<span className="text-[#ff8ab8] font-semibold">
+								<span className="text-[#e0762a] font-semibold">
 									improve
 								</span>
 								, and{" "}
-								<span className="text-[#cbb4ff] font-semibold">
+								<span className="text-[#b07d12] font-semibold">
 									forget
 								</span>{" "}
 								— carrying context across infinite sessions.
@@ -172,20 +157,20 @@ const HackathonPage = () => {
 							</p>
 
 							{/* Cognee Cloud free credit offer */}
-							<div className="mt-6 rounded-2xl border border-[#21e6c1]/40 bg-[#00e0d5]/10 px-6 py-5 backdrop-blur-sm shadow-[0_0_30px_rgba(0,224,213,0.16)]">
+							<div className="mt-6 rounded-2xl border-2 border-[#0e8a80]/30 bg-[#0e8a80]/8 px-6 py-5">
 								<div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
 									<div className="flex items-start gap-3">
 										<span className="text-2xl">🎁</span>
 										<div>
-											<p className="text-[#21e6c1] font-bold text-lg">
+											<p className="text-[#0e8a80] font-bold text-lg">
 												Free Cognee Cloud Developer plan
 												($35 value)
 											</p>
-											<p className="text-slate-300 text-sm">
+											<p className="text-[#5a4632] text-sm">
 												Sign up to Cognee Cloud for free
 												and unlock the Developer plan
 												with code{" "}
-												<code className="font-mono font-bold text-[#ffd24a] bg-[#ffb800]/15 border border-[#ffb800]/30 rounded px-1.5 py-0.5">
+												<code className="font-mono font-bold text-[#8a5a00] bg-[#b07d12]/15 border border-[#b07d12]/30 rounded px-1.5 py-0.5">
 													COGNEE-35
 												</code>{" "}
 												for free access.
@@ -196,7 +181,7 @@ const HackathonPage = () => {
 										href="https://platform.cognee.ai/sign-in"
 										target="_blank"
 										rel="noopener noreferrer"
-										className="shrink-0 inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-lg bg-gradient-to-r from-[#00e0d5] to-[#21a8e6] text-[#0d0618] font-bold hover:opacity-90 transition-opacity"
+										className="shrink-0 inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-lg bg-gradient-to-r from-[#0e8a80] to-[#0c736b] text-white font-bold hover:opacity-90 transition-opacity"
 									>
 										Claim free credit{" "}
 										<ArrowUpRight size={18} />
@@ -209,13 +194,13 @@ const HackathonPage = () => {
 			</div>
 
 			{/* ── Judging Criteria ──────────────────────────────────────────────── */}
-			<div id="judging" className="scroll-mt-44 py-20 bg-[#160a26]/40">
+			<div id="judging" className="scroll-mt-44 py-20 bg-[#f1dcb4]/60">
 				<ViewContainer>
 					<div className="text-center mb-12">
-						<span className="inline-flex items-center gap-2 bg-[#ffb800]/10 border border-[#ffb800]/30 text-[#ffd24a] px-5 py-2 rounded-full text-sm font-semibold mb-6 backdrop-blur-sm">
+						<span className="inline-flex items-center gap-2 bg-[#c33124]/10 border border-[#c33124]/30 text-[#c33124] px-5 py-2 rounded-full text-sm font-semibold mb-6">
 							⚖️ How You&apos;re Judged
 						</span>
-						<h2 className="text-3xl md:text-4xl font-black italic uppercase text-[#ffd24a] glow-gold">
+						<h2 className="text-3xl md:text-4xl font-black italic uppercase text-[#c33124] glow-red">
 							Judging Criteria
 						</h2>
 					</div>
@@ -223,17 +208,17 @@ const HackathonPage = () => {
 						{judgingCriteria.map((criterion, i) => (
 							<div
 								key={criterion.title}
-								className="glass-card rounded-xl p-6 group hover:border-[#ff2d7e]/35 transition-all duration-300"
+								className="paper-card rounded-xl p-6 group"
 							>
 								<div className="flex items-center gap-3 mb-3">
-									<span className="font-mono text-xs text-[#ffb800]/80 bg-[#ffb800]/10 px-2 py-0.5 rounded">
+									<span className="font-mono text-xs text-[#8a5a00] bg-[#b07d12]/12 px-2 py-0.5 rounded">
 										{String(i + 1).padStart(2, "0")}
 									</span>
-									<h3 className="text-lg font-bold text-[#ffd24a]">
+									<h3 className="text-lg font-bold text-[#c33124]">
 										{criterion.title}
 									</h3>
 								</div>
-								<p className="text-slate-300 text-sm leading-relaxed">
+								<p className="text-[#5a4632] text-sm leading-relaxed">
 									{criterion.description}
 								</p>
 							</div>
@@ -243,9 +228,9 @@ const HackathonPage = () => {
 			</div>
 
 			{/* ── FAQ ───────────────────────────────────────────────────────────── */}
-			<div id="faq" className="scroll-mt-44 py-20 bg-[#0d0618]">
+			<div id="faq" className="scroll-mt-44 py-20 bg-[#f7ead0]">
 				<ViewContainer>
-					<div className="[&_h2]:text-[#ffd24a] [&_h2]:font-bold">
+					<div className="[&_h2]:text-[#c33124] [&_h2]:font-bold">
 						<Faq FAQS={faqs} />
 					</div>
 				</ViewContainer>
