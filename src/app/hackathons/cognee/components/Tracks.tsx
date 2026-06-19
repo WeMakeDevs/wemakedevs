@@ -50,7 +50,7 @@ const tracks = [
 		title: "Support & Customer Memory",
 		icon: Headphones,
 		description:
-			"Support bots that remember a customer's full history, past tickets, and context — no more 'can you repeat your account number?'",
+			"Support bots that remember a customer's full history, past tickets, and context, no more 'can you repeat your account number?'",
 		gradient: "from-[#c33124] to-[#e0762a]",
 	},
 	{
@@ -112,8 +112,8 @@ const Tracks = () => {
 						Build{" "}
 						<span className="text-[#c33124] font-semibold">
 							anything you want
-						</span>{" "}
-						— agents, apps, tools, games, automations — as long as
+						</span>
+						: agents, apps, tools, games, automations, as long as
 						you use{" "}
 						<Link
 							href="https://github.com/topoteretes/cognee"
@@ -123,8 +123,8 @@ const Tracks = () => {
 						>
 							Cognee
 						</Link>{" "}
-						for memory. The tracks below are just inspiration to get
-						the ideas flowing. They are{" "}
+						for memory. The examples below are just inspiration to
+						get the ideas flowing. They are{" "}
 						<span className="text-[#c33124] font-semibold">
 							examples only
 						</span>
@@ -149,7 +149,7 @@ const Tracks = () => {
 							>
 								<div className="absolute top-3 right-3">
 									<span className="font-mono text-[10px] text-[#b09475] tracking-widest">
-										TRACK #{t.id}
+										EXAMPLE #{t.id}
 									</span>
 								</div>
 								<div className="flex items-start gap-4 mb-4">
@@ -177,7 +177,7 @@ const Tracks = () => {
 					viewport={{ once: true }}
 					transition={{ duration: 0.5 }}
 				>
-					Got a wilder idea? Even better. Surprise us — the only rule
+					Got a wilder idea? Even better. Surprise us, the only rule
 					is that Cognee powers the memory.
 				</motion.p>
 			</ViewContainer>

@@ -207,7 +207,7 @@ const PrizesShowcase = () => {
 						The Jackpot
 					</h2>
 					<p className="text-lg text-[#6b513a] max-w-2xl mx-auto mb-6">
-						$10,000 in prizes. The house always remembers — and so
+						$10,000 in prizes. The house always remembers, and so
 						will you.
 					</p>
 					<div className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-[#fffdf6] border-2 border-[#e7a92b] shadow-md">
@@ -269,7 +269,7 @@ const PrizesShowcase = () => {
 											Showcase your skills directly to the
 											team building the memory layer for
 											AI. (Interviews do not guarantee a
-											job — see the{" "}
+											job, see the{" "}
 											<Link
 												href="/hackathons/cognee/rules"
 												className="text-[#8a5a00] underline hover:text-[#c33124]"

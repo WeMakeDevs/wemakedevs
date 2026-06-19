@@ -89,8 +89,8 @@ const HackathonResources = async () => {
 								rel="noopener noreferrer"
 							>
 								Self-Improvement Quickstart
-							</Link>{" "}
-							— spin up your memory layer and call remember() /
+							</Link>
+							: spin up your memory layer and call remember() /
 							recall() in minutes
 						</li>
 						<li>
@@ -101,8 +101,8 @@ const HackathonResources = async () => {
 								rel="noopener noreferrer"
 							>
 								Cognee Documentation
-							</Link>{" "}
-							— full docs for the memory lifecycle APIs and
+							</Link>
+							: full docs for the memory lifecycle APIs and
 							integrations
 						</li>
 						<li>
@@ -113,8 +113,8 @@ const HackathonResources = async () => {
 								rel="noopener noreferrer"
 							>
 								Cognee GitHub Repository
-							</Link>{" "}
-							— the open-source repo. Star it and find issues to
+							</Link>
+							: the open-source repo. Star it and find issues to
 							contribute to
 						</li>
 						<li>
@@ -125,8 +125,8 @@ const HackathonResources = async () => {
 								rel="noopener noreferrer"
 							>
 								Cognee Website
-							</Link>{" "}
-							— learn about the memory layer for AI
+							</Link>
+							: learn about the memory layer for AI
 						</li>
 						<li>
 							<Link
@@ -136,8 +136,8 @@ const HackathonResources = async () => {
 								rel="noopener noreferrer"
 							>
 								Andrej Karpathy Wiki
-							</Link>{" "}
-							— a real example of Cognee turning content into a
+							</Link>
+							: a real example of Cognee turning content into a
 							queryable knowledge graph
 						</li>
 					</ul>
@@ -151,25 +151,25 @@ const HackathonResources = async () => {
 						<li>
 							<strong className="text-[#c33124]">
 								remember()
-							</strong>{" "}
-							— ingest text, files, and URLs and permanently
+							</strong>
+							: ingest text, files, and URLs and permanently
 							structure them into the knowledge graph
 						</li>
 						<li>
-							<strong className="text-[#c33124]">recall()</strong>{" "}
-							— query memory; Cognee automatically routes between
+							<strong className="text-[#c33124]">recall()</strong>
+							: query memory; Cognee automatically routes between
 							semantic similarity and deep graph traversals
 						</li>
 						<li>
 							<strong className="text-[#c33124]">
 								improve() / memify
-							</strong>{" "}
-							— run post-ingestion enrichment, prune stale nodes,
+							</strong>
+							: run post-ingestion enrichment, prune stale nodes,
 							and adapt weights based on feedback
 						</li>
 						<li>
-							<strong className="text-[#c33124]">forget()</strong>{" "}
-							— surgically prune or delete datasets when
+							<strong className="text-[#c33124]">forget()</strong>
+							: surgically prune or delete datasets when
 							they&apos;re no longer needed
 						</li>
 					</ul>

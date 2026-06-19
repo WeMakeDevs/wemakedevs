@@ -205,11 +205,15 @@
 	background-color: rgba(255, 255, 255, 0.18) !important;
 }
 
-/* Register button keeps dark text on its light pill */
-.cognee-hackathon .cognee-sticky-nav .cognee-register-btn,
-.cognee-hackathon .cognee-sticky-nav .cognee-register-btn:hover {
-	color: #5a1410 !important;
-	background-color: #fff8e6 !important;
+/* Register button in the top header — Vegas red with white text */
+.cognee-hackathon nav a[class*="bg-primary"],
+.cognee-hackathon nav a[class*="bg-primary"]:hover {
+	background-color: #c33124 !important;
+	color: #fff !important;
+	border: 1px solid #f6c453;
+}
+.cognee-hackathon nav a[class*="bg-primary"]:hover {
+	background-color: #a8281d !important;
 }
 
 .cognee-hackathon h2 {

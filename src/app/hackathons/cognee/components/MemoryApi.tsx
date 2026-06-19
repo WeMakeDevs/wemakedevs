@@ -15,7 +15,7 @@ const operations = [
 		fn: "recall()",
 		icon: Search,
 		color: "#0e8a80",
-		desc: "Query memory — Cognee automatically routes the search between semantic similarity and deep graph traversals.",
+		desc: "Query memory, Cognee automatically routes the search between semantic similarity and deep graph traversals.",
 	},
 	{
 		fn: "improve()",

@@ -55,7 +55,7 @@ const faqs: FaqType[] = [
 	},
 	{
 		question: "Is the theme really open-ended?",
-		answer: "Yes. Build literally anything you want — agents, apps, tools, games, automations — as long as it uses Cognee for memory. The project tracks on this page are just inspiration to spark ideas, not requirements.",
+		answer: "Yes. Build literally anything you want, agents, apps, tools, games, automations, as long as it uses Cognee for memory. The examples on this page are just inspiration to spark ideas, not requirements.",
 	},
 	{
 		question: "I registered solo. Can I switch to a team?",
@@ -75,7 +75,7 @@ const faqs: FaqType[] = [
 	},
 	{
 		question: "What tech stack should I use?",
-		answer: "Your project must use <a href='https://github.com/topoteretes/cognee' target='_blank' rel='noopener noreferrer' class='text-amber-300 underline hover:text-amber-200'>Cognee</a> for memory. Beyond that you're free to use any language, framework, or tool — and you can leverage plug-and-play integrations like <code>cognee-integration-langgraph</code>, <code>n8n-nodes-cognee</code>, or the MCP server for Claude Code and Cursor.",
+		answer: "Your project must use <a href='https://github.com/topoteretes/cognee' target='_blank' rel='noopener noreferrer' class='text-amber-300 underline hover:text-amber-200'>Cognee</a> for memory. Beyond that you're free to use any language, framework, or tool, and you can leverage plug-and-play integrations like <code>cognee-integration-langgraph</code>, <code>n8n-nodes-cognee</code>, or the MCP server for Claude Code and Cursor.",
 	},
 	{
 		question: "What can I win?",

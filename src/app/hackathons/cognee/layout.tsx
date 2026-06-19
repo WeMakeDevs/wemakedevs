@@ -32,6 +32,16 @@ export default function RootLayout({
 			type: "link",
 		},
 		{
+			name: "The Problem",
+			url: `/hackathons/${DATA.slug}#why`,
+			type: "link",
+		},
+		{
+			name: "Build",
+			url: `/hackathons/${DATA.slug}#ideas`,
+			type: "link",
+		},
+		{
 			name: "Prizes",
 			url: `/hackathons/${DATA.slug}#prizes`,
 			type: "link",
@@ -42,14 +52,8 @@ export default function RootLayout({
 			type: "link",
 		},
 		{
-			name: "Hackathons",
-			url: "https://www.wemakedevs.org/hackathons",
-			type: "link",
-			openInNewTab: true,
-		},
-		{
-			name: "Partner with us",
-			url: "https://www.wemakedevs.org/#partners",
+			name: "Register",
+			url: DATA.cta.href,
 			type: "button",
 			openInNewTab: true,
 		},

@@ -63,7 +63,7 @@ const HackathonRules = async () => {
 								Open-ended theme:
 							</strong>{" "}
 							The theme is completely open. Build anything you
-							want — agents, apps, tools, games, automations — as
+							want, agents, apps, tools, games, automations, as
 							long as it uses Cognee. The project tracks listed on
 							the overview page are inspiration only; you are not
 							limited to them.

@@ -1,4 +1,5 @@
 import Faq from "@/components/Faq";
+import { HackathonNav } from "@/components/hackathon-content";
 import { ViewContainer } from "@/components/ui/view-container";
 import { ArrowUpRight, Star } from "lucide-react";
 import Link from "next/link";
@@ -7,9 +8,8 @@ import Integrations from "./components/Integrations";
 import MemoryApi from "./components/MemoryApi";
 import PrizesShowcase from "./components/PrizesShowcase";
 import ProblemSolution from "./components/ProblemSolution";
-import SectionNav from "./components/SectionNav";
 import Tracks from "./components/Tracks";
-import { DATA, faqs } from "./data";
+import { DATA, faqs, navLinks } from "./data";
 
 const judgingCriteria = [
 	{
@@ -58,11 +58,15 @@ const HackathonPage = () => {
 				/>
 			</div>
 
-			{/* ── Sticky section nav (scrolls the page) ─────────────────────────── */}
+			{/* ── Sticky sub-page nav ───────────────────────────────────────────── */}
 			<div className="sticky top-[96px] z-[120]">
 				<ViewContainer>
 					<div className="cognee-sticky-nav rounded-xl">
-						<SectionNav registerHref={DATA.cta.href} />
+						<HackathonNav
+							slug={DATA.slug}
+							page="overview"
+							links={navLinks}
+						/>
 					</div>
 				</ViewContainer>
 			</div>
@@ -70,26 +74,6 @@ const HackathonPage = () => {
 			{/* ── Why we're doing this (Problem / Solution) ─────────────────────── */}
 			<div id="why" className="scroll-mt-44 bg-[#f1dcb4]/60">
 				<ProblemSolution />
-			</div>
-
-			{/* ── Core Memory Lifecycle APIs ────────────────────────────────────── */}
-			<div id="apis" className="scroll-mt-44 bg-[#f7ead0] desert-grid">
-				<MemoryApi />
-			</div>
-
-			{/* ── What can you build (Tracks) ───────────────────────────────────── */}
-			<div id="ideas" className="scroll-mt-44 bg-[#f1dcb4]/60">
-				<Tracks />
-			</div>
-
-			{/* ── Ecosystem Integrations ────────────────────────────────────────── */}
-			<div className="bg-[#f7ead0] desert-grid">
-				<Integrations />
-			</div>
-
-			{/* ── Prizes ────────────────────────────────────────────────────────── */}
-			<div id="prizes" className="scroll-mt-44 bg-[#f1dcb4]/60">
-				<PrizesShowcase />
 			</div>
 
 			{/* ── Sponsor ───────────────────────────────────────────────────────── */}
@@ -150,8 +134,8 @@ const HackathonPage = () => {
 								, and{" "}
 								<span className="text-[#b07d12] font-semibold">
 									forget
-								</span>{" "}
-								— carrying context across infinite sessions.
+								</span>
+								, carrying context across infinite sessions.
 								Your mission: build AI that doesn&apos;t wake up
 								in Vegas with no memory of last night.
 							</p>
@@ -191,6 +175,26 @@ const HackathonPage = () => {
 						</div>
 					</div>
 				</ViewContainer>
+			</div>
+
+			{/* ── Core Memory Lifecycle APIs ────────────────────────────────────── */}
+			<div id="apis" className="scroll-mt-44 bg-[#f1dcb4]/60 desert-grid">
+				<MemoryApi />
+			</div>
+
+			{/* ── What can you build (examples) ─────────────────────────────────── */}
+			<div id="ideas" className="scroll-mt-44 bg-[#f7ead0]">
+				<Tracks />
+			</div>
+
+			{/* ── Ecosystem Integrations ────────────────────────────────────────── */}
+			<div className="bg-[#f1dcb4]/60 desert-grid">
+				<Integrations />
+			</div>
+
+			{/* ── Prizes ────────────────────────────────────────────────────────── */}
+			<div id="prizes" className="scroll-mt-44 bg-[#f7ead0]">
+				<PrizesShowcase />
 			</div>
 
 			{/* ── Judging Criteria ──────────────────────────────────────────────── */}

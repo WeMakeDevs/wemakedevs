@@ -34,7 +34,7 @@ const HackathonSchedule = async () => {
 				</h2>
 				<p className="text-center text-[#6b513a] mb-8 max-w-2xl mx-auto">
 					Mark these dates. The hackathon runs June 29 – July 5, 2026.
-					Don&apos;t miss the kickoff livestream on June 26 — try to
+					Don&apos;t miss the kickoff livestream on June 26, try to
 					remember this time.
 				</p>
 				<HackathonScheduleComponent schedule={schedule} />

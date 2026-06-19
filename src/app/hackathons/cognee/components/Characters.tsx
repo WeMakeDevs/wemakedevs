@@ -2,7 +2,7 @@
 
 type SvgProps = { className?: string };
 
-// Alan — bearded guy in shades with the baby in a chest carrier (the icon)
+// Alan, bearded guy in shades with the baby in a chest carrier (the icon)
 export const AlanCartoon = ({ className }: SvgProps) => (
 	<svg
 		viewBox="0 0 220 300"
