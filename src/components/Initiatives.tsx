@@ -1,51 +1,21 @@
-"use client";
-
 import {
 	InitiativeCard,
 	InitiativeCardDescription,
 	InitiativeCardImage,
 	InitiativeCardTitle,
+	InitiativeLastCard,
 } from "@/components/InitiativeCard";
 import { initiatives } from "@/constants/initiatives";
 import { cn } from "@/lib/utils";
 import type { GeneralComponent } from "@/types";
-import { ChevronLeft, ChevronRight } from "lucide-react";
-import { useCallback, useEffect, useRef, useState } from "react";
 import { ViewContainer } from "./ui/view-container";
 
+const FEATURED_INITIATIVES = [
+	initiatives.find(i => i.title === "Giveaways"),
+	initiatives.find(i => i.title === "KubeCon + CNC Europe 2026"),
+].filter(Boolean);
+
 const Initiatives = ({ className, ...props }: GeneralComponent) => {
-	const scrollRef = useRef<HTMLDivElement>(null);
-	const [canScrollLeft, setCanScrollLeft] = useState(false);
-	const [canScrollRight, setCanScrollRight] = useState(false);
-
-	const checkScroll = useCallback(() => {
-		const el = scrollRef.current;
-		if (!el) return;
-		setCanScrollLeft(el.scrollLeft > 2);
-		setCanScrollRight(el.scrollLeft < el.scrollWidth - el.clientWidth - 2);
-	}, []);
-
-	useEffect(() => {
-		checkScroll();
-		const el = scrollRef.current;
-		if (!el) return;
-		el.addEventListener("scroll", checkScroll, { passive: true });
-		window.addEventListener("resize", checkScroll);
-		return () => {
-			el.removeEventListener("scroll", checkScroll);
-			window.removeEventListener("resize", checkScroll);
-		};
-	}, [checkScroll]);
-
-	const scroll = (direction: "left" | "right") => {
-		const el = scrollRef.current;
-		if (!el) return;
-		el.scrollBy({
-			left: direction === "left" ? -380 : 380,
-			behavior: "smooth",
-		});
-	};
-
 	return (
 		<section
 			className={cn(className, "mt-24 mb-16 scroll-m-[100px]")}
@@ -62,67 +32,25 @@ const Initiatives = ({ className, ...props }: GeneralComponent) => {
 					</p>
 				</div>
 
-				{/* Carousel wrapper — constrained to ViewContainer width */}
-				<div className="relative my-10">
-					{/* Left arrow */}
-					{canScrollLeft && (
-						<button
-							type="button"
-							onClick={() => scroll("left")}
-							className="absolute left-0 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-background border border-border shadow-lg flex items-center justify-center hover:bg-accent transition-colors"
-							aria-label="Scroll left"
+				<div className="my-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-6 auto-rows-fr">
+					{FEATURED_INITIATIVES.map(initiative => (
+						<InitiativeCard
+							key={initiative!.title}
+							href={initiative!.url}
 						>
-							<ChevronLeft size={20} />
-						</button>
-					)}
-
-					{/* Right arrow */}
-					{canScrollRight && (
-						<button
-							type="button"
-							onClick={() => scroll("right")}
-							className="absolute right-0 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-background border border-border shadow-lg flex items-center justify-center hover:bg-accent transition-colors"
-							aria-label="Scroll right"
-						>
-							<ChevronRight size={20} />
-						</button>
-					)}
-
-					{/* Fade edges */}
-					{canScrollLeft && (
-						<div className="absolute left-0 top-0 bottom-0 w-10 bg-gradient-to-r from-background to-transparent z-[1] pointer-events-none" />
-					)}
-					{canScrollRight && (
-						<div className="absolute right-0 top-0 bottom-0 w-10 bg-gradient-to-l from-background to-transparent z-[1] pointer-events-none" />
-					)}
-
-					{/* Scrollable row */}
-					<div
-						ref={scrollRef}
-						className="overflow-x-auto overscroll-x-contain scrollbar-thin pb-4"
-					>
-						<div className="flex gap-6 w-max">
-							{initiatives.map(initiative => (
-								<div
-									key={initiative.title}
-									className="w-[320px] md:w-[360px] shrink-0"
-								>
-									<InitiativeCard href={initiative.url}>
-										<InitiativeCardImage
-											src={initiative.image}
-											alt={initiative.title}
-										/>
-										<InitiativeCardTitle>
-											{initiative.title}
-										</InitiativeCardTitle>
-										<InitiativeCardDescription>
-											{initiative.description}
-										</InitiativeCardDescription>
-									</InitiativeCard>
-								</div>
-							))}
-						</div>
-					</div>
+							<InitiativeCardImage
+								src={initiative!.image}
+								alt={initiative!.title}
+							/>
+							<InitiativeCardTitle>
+								{initiative!.title}
+							</InitiativeCardTitle>
+							<InitiativeCardDescription>
+								{initiative!.description}
+							</InitiativeCardDescription>
+						</InitiativeCard>
+					))}
+					<InitiativeLastCard />
 				</div>
 			</ViewContainer>
 		</section>
