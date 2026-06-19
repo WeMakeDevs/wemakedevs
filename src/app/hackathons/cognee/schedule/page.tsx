@@ -18,12 +18,6 @@ const HackathonSchedule = async () => {
 							slug={DATA.slug}
 							page="schedule"
 							links={navLinks}
-							navCta={{
-								label: DATA.cta.label,
-								href: DATA.cta.href,
-								openInNewTab: DATA.cta.openInNewTab,
-								disabled: DATA.cta.disabled,
-							}}
 						/>
 					</div>
 				</ViewContainer>

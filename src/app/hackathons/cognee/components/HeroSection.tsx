@@ -5,7 +5,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { ArrowUpRight, BrainCircuit } from "lucide-react";
 import Link from "next/link";
 import { useRef } from "react";
-import { AlanCartoon, ChickenCartoon, Dice, TigerCartoon } from "./Characters";
+import { ChickenCartoon, Dice, TigerCartoon } from "./Characters";
 
 type HeroSectionProps = {
 	title: string;
@@ -122,19 +122,7 @@ const HeroSection = ({
 				className="absolute inset-0 pointer-events-none z-10 hidden lg:block"
 			>
 				<motion.div
-					className="absolute top-[14%] right-[6%] w-[230px] xl:w-[280px] float-bob"
-					initial={{ x: 120, opacity: 0, rotate: 4 }}
-					animate={{ x: 0, opacity: 1, rotate: 0 }}
-					transition={{
-						duration: 1.4,
-						ease: [0.16, 1, 0.3, 1],
-						delay: 0.4,
-					}}
-				>
-					<AlanCartoon className="w-full h-auto drop-shadow-[0_10px_24px_rgba(120,80,30,0.35)]" />
-				</motion.div>
-				<motion.div
-					className="absolute bottom-[16%] right-[30%] w-[150px] xl:w-[180px] float-bob"
+					className="absolute bottom-[16%] right-[10%] w-[170px] xl:w-[210px] float-bob"
 					style={{ animationDelay: "1.2s" }}
 					initial={{ y: 80, opacity: 0 }}
 					animate={{ y: 0, opacity: 1 }}
@@ -143,7 +131,7 @@ const HeroSection = ({
 					<TigerCartoon className="w-full h-auto drop-shadow-[0_10px_24px_rgba(120,80,30,0.3)]" />
 				</motion.div>
 				<motion.div
-					className="absolute top-[20%] right-[33%] w-[90px] xl:w-[110px] float-bob"
+					className="absolute top-[20%] right-[14%] w-[100px] xl:w-[120px] float-bob"
 					style={{ animationDelay: "0.6s" }}
 					initial={{ y: -60, opacity: 0 }}
 					animate={{ y: 0, opacity: 1 }}

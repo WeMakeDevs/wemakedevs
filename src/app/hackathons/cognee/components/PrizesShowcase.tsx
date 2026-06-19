@@ -91,58 +91,6 @@ const IPadIcon = () => (
 		<ellipse cx="35" cy="50" rx="5" ry="6" fill="#0e8a80" opacity="0.85" />
 	</svg>
 );
-const KeychronIcon = () => (
-	<svg
-		viewBox="0 0 140 50"
-		className="w-full h-full"
-		fill="none"
-		aria-hidden="true"
-		xmlns="http://www.w3.org/2000/svg"
-	>
-		<defs>
-			<linearGradient id="cgKbBody" x1="0" y1="0" x2="0" y2="1">
-				<stop offset="0%" stopColor="#cbb48f" />
-				<stop offset="100%" stopColor="#a8916b" />
-			</linearGradient>
-		</defs>
-		<rect
-			x="5"
-			y="10"
-			width="130"
-			height="35"
-			rx="5"
-			fill="url(#cgKbBody)"
-		/>
-		{[0, 1, 2].map(row => (
-			<g key={`kb-row-${row}`}>
-				{Array.from({ length: 14 }).map((_, i) => {
-					const kx = 10 + i * 9;
-					const ky = 15 + row * 10;
-					return (
-						<rect
-							key={`kb-${kx}-${ky}`}
-							x={kx}
-							y={ky}
-							width="7"
-							height="7"
-							rx="1.5"
-							fill={
-								row === 0 && i === 0
-									? "#c33124"
-									: row === 0 && i === 13
-										? "#0e8a80"
-										: row === 1 && i === 0
-											? "#e7a92b"
-											: "#fffdf6"
-							}
-						/>
-					);
-				})}
-			</g>
-		))}
-		<rect x="35" y="38" width="50" height="5" rx="2" fill="#fffdf6" />
-	</svg>
-);
 
 type PrizeCardProps = {
 	place: string;
@@ -244,14 +192,14 @@ const PrizesShowcase = () => {
 								<PrizeCard
 									place="Best Use of Open Source"
 									title="Apple MacBook Neo"
-									subtitle="One per team member · for the best build on the open-source Cognee"
+									subtitle="One per team member, or the equivalent cash amount, for the best build on the open-source Cognee"
 									icon={<MacBookIcon />}
 									accentColor="#c33124"
 								/>
 								<PrizeCard
 									place="Best Use of Cognee Cloud"
 									title="Apple iPad"
-									subtitle="One per team member · for the best build on Cognee Cloud"
+									subtitle="One per team member, or the equivalent cash amount, for the best build on Cognee Cloud"
 									icon={<IPadIcon />}
 									accentColor="#0e8a80"
 								/>
@@ -324,11 +272,6 @@ const PrizesShowcase = () => {
 								<h3 className="text-xl md:text-2xl font-bold text-[#c8901a]">
 									Side Track · Best Blogs
 								</h3>
-							</div>
-							<div className="w-full h-16 mb-5 flex items-center justify-start">
-								<div className="w-40">
-									<KeychronIcon />
-								</div>
 							</div>
 							<p className="text-[#5a4632] leading-relaxed mb-6">
 								Write about your build, your journey, or how
