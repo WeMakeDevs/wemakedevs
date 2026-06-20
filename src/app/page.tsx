@@ -1,3 +1,4 @@
+import CogneeRegisterBar from "@/components/CogneeRegisterBar";
 import Faq from "@/components/Faq";
 import Footer from "@/components/Footer";
 import Hackathons from "@/components/Hackathons";
@@ -27,6 +28,7 @@ export default function Home() {
 			<Faq FAQS={FAQS} />
 			<Partners />
 			<Footer />
+			<CogneeRegisterBar />
 		</div>
 	);
 }

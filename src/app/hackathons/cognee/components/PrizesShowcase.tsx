@@ -8,88 +8,31 @@ import {
 	Star,
 	Trophy,
 } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
+import { images } from "../images";
 
-// ─── Product icons ────────────────────────────────────────────────────────────
-const MacBookIcon = () => (
-	<svg
-		viewBox="0 0 120 80"
-		className="w-full h-full"
-		fill="none"
-		aria-hidden="true"
-		xmlns="http://www.w3.org/2000/svg"
-	>
-		<defs>
-			<linearGradient id="cgMbScreen" x1="0" y1="0" x2="0" y2="1">
-				<stop offset="0%" stopColor="#5a4632" />
-				<stop offset="100%" stopColor="#3a2a1c" />
-			</linearGradient>
-			<linearGradient id="cgMbBody" x1="0" y1="0" x2="0" y2="1">
-				<stop offset="0%" stopColor="#cbb48f" />
-				<stop offset="100%" stopColor="#a8916b" />
-			</linearGradient>
-		</defs>
-		<rect
-			x="10"
-			y="5"
-			width="100"
-			height="58"
-			rx="4"
-			fill="url(#cgMbBody)"
-		/>
-		<rect
-			x="14"
-			y="9"
-			width="92"
-			height="50"
-			rx="2"
-			fill="url(#cgMbScreen)"
-		/>
-		<ellipse cx="60" cy="34" rx="6" ry="7" fill="#e7a92b" opacity="0.85" />
-		<path
-			d="M5 63 L115 63 L118 72 C118 74 116 76 114 76 L6 76 C4 76 2 74 2 72 L5 63Z"
-			fill="url(#cgMbBody)"
-		/>
-		<rect x="45" y="66" width="30" height="4" rx="2" fill="#8a7350" />
-	</svg>
+// ─── Product images ───────────────────────────────────────────────────────────
+const MacBookImg = () => (
+	<Image
+		src={images.macbook}
+		alt="Apple MacBook"
+		className="max-h-full w-auto object-contain drop-shadow-[0_8px_16px_rgba(120,80,30,0.25)]"
+	/>
 );
-const IPadIcon = () => (
-	<svg
-		viewBox="0 0 70 100"
-		className="w-full h-full"
-		fill="none"
-		aria-hidden="true"
-		xmlns="http://www.w3.org/2000/svg"
-	>
-		<defs>
-			<linearGradient id="cgPadBody" x1="0" y1="0" x2="0" y2="1">
-				<stop offset="0%" stopColor="#cbb48f" />
-				<stop offset="100%" stopColor="#a8916b" />
-			</linearGradient>
-			<linearGradient id="cgPadScreen" x1="0" y1="0" x2="0" y2="1">
-				<stop offset="0%" stopColor="#5a4632" />
-				<stop offset="100%" stopColor="#3a2a1c" />
-			</linearGradient>
-		</defs>
-		<rect
-			x="5"
-			y="5"
-			width="60"
-			height="90"
-			rx="6"
-			fill="url(#cgPadBody)"
-		/>
-		<rect
-			x="9"
-			y="12"
-			width="52"
-			height="76"
-			rx="3"
-			fill="url(#cgPadScreen)"
-		/>
-		<circle cx="35" cy="8" r="2" fill="#8a7350" />
-		<ellipse cx="35" cy="50" rx="5" ry="6" fill="#0e8a80" opacity="0.85" />
-	</svg>
+const IPhoneImg = () => (
+	<Image
+		src={images.iphone}
+		alt="Apple iPhone 17"
+		className="max-h-full w-auto object-contain drop-shadow-[0_8px_16px_rgba(120,80,30,0.25)]"
+	/>
+);
+const KeychronImg = () => (
+	<Image
+		src={images.keychron}
+		alt="Keychron mechanical keyboard"
+		className="max-h-full w-auto object-contain drop-shadow-[0_8px_16px_rgba(120,80,30,0.25)]"
+	/>
 );
 
 type PrizeCardProps = {
@@ -193,14 +136,14 @@ const PrizesShowcase = () => {
 									place="Best Use of Open Source"
 									title="Apple MacBook Neo"
 									subtitle="One per team member, or the equivalent cash amount, for the best build on the open-source Cognee"
-									icon={<MacBookIcon />}
+									icon={<MacBookImg />}
 									accentColor="#c33124"
 								/>
 								<PrizeCard
 									place="Best Use of Cognee Cloud"
-									title="Apple iPad"
+									title="Apple iPhone 17"
 									subtitle="One per team member, or the equivalent cash amount, for the best build on Cognee Cloud"
-									icon={<IPadIcon />}
+									icon={<IPhoneImg />}
 									accentColor="#0e8a80"
 								/>
 							</div>
@@ -273,6 +216,9 @@ const PrizesShowcase = () => {
 									Side Track · Best Blogs
 								</h3>
 							</div>
+							<div className="h-28 mb-5 flex items-center justify-center">
+								<KeychronImg />
+							</div>
 							<p className="text-[#5a4632] leading-relaxed mb-6">
 								Write about your build, your journey, or how
 								Cognee gives AI a memory. The best blogs win a{" "}
@@ -305,9 +251,14 @@ const PrizesShowcase = () => {
 									@wemakedevs
 								</span>{" "}
 								and{" "}
-								<span className="text-[#c33124] font-semibold">
+								<Link
+									href="https://x.com/cognee_"
+									target="_blank"
+									rel="noopener noreferrer"
+									className="text-[#c33124] font-semibold underline hover:text-[#931f15]"
+								>
 									Cognee
-								</span>
+								</Link>
 								. The top 10 social media posts get exclusive
 								swag shipped to them.
 							</p>
