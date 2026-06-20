@@ -289,14 +289,6 @@ const HackathonResources = async () => {
 								Full list of integrations &amp; guides
 							</Link>
 						</li>
-					</ul>
-				</HackathonContentBody>
-
-				<HackathonContentTitle className="text-[#c33124]">
-					Need Help? Join the Community
-				</HackathonContentTitle>
-				<HackathonContentBody className="text-[#4a3624]">
-					<ul className="space-y-2 list-disc list-inside">
 						<li>
 							For other queries, contact us at{" "}
 							<Link
