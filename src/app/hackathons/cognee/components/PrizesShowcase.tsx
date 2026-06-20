@@ -31,7 +31,7 @@ const KeychronImg = () => (
 	<Image
 		src={images.keychron}
 		alt="Keychron mechanical keyboard"
-		className="max-h-full w-auto object-contain drop-shadow-[0_8px_16px_rgba(120,80,30,0.25)]"
+		className="w-full h-auto object-contain drop-shadow-[0_8px_16px_rgba(120,80,30,0.25)]"
 	/>
 );
 
@@ -216,7 +216,7 @@ const PrizesShowcase = () => {
 									Side Track · Best Blogs
 								</h3>
 							</div>
-							<div className="h-28 mb-5 flex items-center justify-center">
+							<div className="mb-5 flex items-center justify-center">
 								<KeychronImg />
 							</div>
 							<p className="text-[#5a4632] leading-relaxed mb-6">
