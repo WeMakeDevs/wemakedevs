@@ -29,6 +29,21 @@ const HackathonResources = async () => {
 				</ViewContainer>
 			</div>
 			<ViewContainer>
+				<div className="mt-6 mb-2 flex flex-col sm:flex-row items-center gap-4 bg-[#fffdf6] rounded-2xl px-6 py-5 border-2 border-[#5865F2]/40 shadow-sm text-center sm:text-left">
+					<SiDiscord size={32} className="text-[#5865F2] shrink-0" />
+					<p className="flex-1 font-medium text-[#4a3624]">
+						The fastest way to get help, find teammates, and stay
+						updated. Join the WeMakeDevs Discord.
+					</p>
+					<Link
+						href={DATA.discordUrl}
+						target="_blank"
+						rel="noopener noreferrer"
+						className="shrink-0 inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-[#5865F2] hover:bg-[#4752c4] transition-colors text-white font-bold"
+					>
+						<SiDiscord size={18} /> Join the Discord
+					</Link>
+				</div>
 				<HackathonContentTitle className="text-[#c33124]">
 					Claim Your Free Cognee Cloud Credit
 				</HackathonContentTitle>
@@ -281,38 +296,7 @@ const HackathonResources = async () => {
 					Need Help? Join the Community
 				</HackathonContentTitle>
 				<HackathonContentBody className="text-[#4a3624]">
-					<div className="mb-5 flex flex-col sm:flex-row items-center gap-4 bg-[#fffdf6] rounded-2xl px-6 py-5 border-2 border-[#5865F2]/40 shadow-sm text-center sm:text-left">
-						<SiDiscord
-							size={32}
-							className="text-[#5865F2] shrink-0"
-						/>
-						<p className="flex-1 font-medium">
-							The fastest way to get help, find teammates, and
-							stay updated. Join the WeMakeDevs Discord.
-						</p>
-						<Link
-							href={DATA.discordUrl}
-							target="_blank"
-							rel="noopener noreferrer"
-							className="shrink-0 inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-[#5865F2] hover:bg-[#4752c4] transition-colors text-white font-bold"
-						>
-							<SiDiscord size={18} /> Join the Discord
-						</Link>
-					</div>
 					<ul className="space-y-2 list-disc list-inside">
-						<li>
-							Join the{" "}
-							<Link
-								href={DATA.discordUrl}
-								className={linkClass}
-								target="_blank"
-								rel="noopener noreferrer"
-							>
-								Discord
-							</Link>{" "}
-							for technical support, doubts, and community
-							discussion
-						</li>
 						<li>
 							For other queries, contact us at{" "}
 							<Link

@@ -180,7 +180,7 @@ const HackathonPage = () => {
 											<ArrowUpRight size={18} />
 										</Link>
 									</div>
-									<div className="shrink-0 w-full md:w-[320px]">
+									<div className="shrink-0 w-full md:w-[440px]">
 										<Image
 											src={images.signup}
 											alt="How to sign up for Cognee Cloud"
