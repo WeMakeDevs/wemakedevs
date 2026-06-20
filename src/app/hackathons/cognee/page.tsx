@@ -1,7 +1,9 @@
 import Faq from "@/components/Faq";
 import { HackathonNav } from "@/components/hackathon-content";
 import { ViewContainer } from "@/components/ui/view-container";
+import { SiDiscord } from "@icons-pack/react-simple-icons";
 import { ArrowUpRight, Star } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 import HeroSection from "./components/HeroSection";
 import Integrations from "./components/Integrations";
@@ -10,6 +12,7 @@ import PrizesShowcase from "./components/PrizesShowcase";
 import ProblemSolution from "./components/ProblemSolution";
 import Tracks from "./components/Tracks";
 import { DATA, faqs, navLinks } from "./data";
+import { images } from "./images";
 
 const judgingCriteria = [
 	{
@@ -109,6 +112,14 @@ const HackathonPage = () => {
 									<Star size={18} className="fill-white" />{" "}
 									Star Cognee on GitHub
 								</Link>
+								<Link
+									href={DATA.discordUrl}
+									target="_blank"
+									rel="noopener noreferrer"
+									className="px-6 py-3 rounded-xl flex gap-2 items-center bg-[#5865F2] hover:bg-[#4752c4] transition-colors duration-300 text-white font-bold shadow-md"
+								>
+									<SiDiscord size={18} /> Join the Discord
+								</Link>
 							</div>
 						</div>
 						<div className="p-8">
@@ -139,34 +150,47 @@ const HackathonPage = () => {
 
 							{/* Cognee Cloud free credit offer */}
 							<div className="mt-6 rounded-2xl border-2 border-[#0e8a80]/30 bg-[#0e8a80]/8 px-6 py-5">
-								<div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-									<div className="flex items-start gap-3">
-										<span className="text-2xl">🎁</span>
-										<div>
-											<p className="text-[#0e8a80] font-bold text-lg">
-												Free Cognee Cloud Developer plan
-												($35 value)
-											</p>
-											<p className="text-[#5a4632] text-sm">
-												Sign up to Cognee Cloud for free
-												and unlock the Developer plan
-												with code{" "}
-												<code className="font-mono font-bold text-[#8a5a00] bg-[#b07d12]/15 border border-[#b07d12]/30 rounded px-1.5 py-0.5">
-													COGNEE-35
-												</code>{" "}
-												for free access.
-											</p>
+								<div className="flex flex-col md:flex-row md:items-center gap-6">
+									<div className="flex-1">
+										<div className="flex items-start gap-3 mb-4">
+											<span className="text-2xl">🎁</span>
+											<div>
+												<p className="text-[#0e8a80] font-bold text-lg">
+													Free Cognee Cloud Developer
+													plan ($35 value)
+												</p>
+												<p className="text-[#5a4632] text-sm">
+													Sign up to Cognee Cloud for
+													free and unlock the
+													Developer plan with code{" "}
+													<code className="font-mono font-bold text-[#8a5a00] bg-[#b07d12]/15 border border-[#b07d12]/30 rounded px-1.5 py-0.5">
+														COGNEE-35
+													</code>{" "}
+													for free access.
+												</p>
+											</div>
 										</div>
+										<Link
+											href="https://platform.cognee.ai/sign-in"
+											target="_blank"
+											rel="noopener noreferrer"
+											className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-lg bg-gradient-to-r from-[#0e8a80] to-[#0c736b] text-white font-bold hover:opacity-90 transition-opacity"
+										>
+											Claim free credit{" "}
+											<ArrowUpRight size={18} />
+										</Link>
 									</div>
-									<Link
-										href="https://platform.cognee.ai/sign-in"
-										target="_blank"
-										rel="noopener noreferrer"
-										className="shrink-0 inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-lg bg-gradient-to-r from-[#0e8a80] to-[#0c736b] text-white font-bold hover:opacity-90 transition-opacity"
-									>
-										Claim free credit{" "}
-										<ArrowUpRight size={18} />
-									</Link>
+									<div className="shrink-0 w-full md:w-[320px]">
+										<Image
+											src={images.signup}
+											alt="How to sign up for Cognee Cloud"
+											unoptimized
+											className="w-full h-auto rounded-lg border border-[#0e8a80]/25 shadow-md"
+										/>
+										<p className="mt-2 text-center text-xs text-[#6b513a]">
+											How to sign up
+										</p>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -228,6 +252,28 @@ const HackathonPage = () => {
 				<ViewContainer>
 					<div className="[&_h2]:text-[#c33124] [&_h2]:font-bold">
 						<Faq FAQS={faqs} />
+					</div>
+
+					{/* Discord call-to-action */}
+					<div className="mt-10 flex justify-center">
+						<div className="inline-flex flex-col sm:flex-row items-center gap-4 bg-[#fffdf6] rounded-2xl px-8 py-5 border-2 border-[#5865F2]/40 shadow-md text-center sm:text-left">
+							<SiDiscord
+								size={28}
+								className="text-[#5865F2] shrink-0"
+							/>
+							<p className="text-[#5a4632] font-medium">
+								Still have questions? Join the community and get
+								help in real time.
+							</p>
+							<Link
+								href={DATA.discordUrl}
+								target="_blank"
+								rel="noopener noreferrer"
+								className="shrink-0 inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-[#5865F2] hover:bg-[#4752c4] transition-colors text-white font-bold"
+							>
+								<SiDiscord size={18} /> Join the Discord
+							</Link>
+						</div>
 					</div>
 				</ViewContainer>
 			</div>
