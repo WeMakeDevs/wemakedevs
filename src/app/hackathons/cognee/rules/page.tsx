@@ -102,13 +102,6 @@ const HackathonRules = async () => {
 							guarantee a position or offer of employment.
 						</li>
 						<li>
-							All projects must be built from scratch after the
-							hackathon begins. Starter templates, boilerplates,
-							Cognee&apos;s APIs, and its integrations are
-							permitted, but submitting a pre-existing project
-							with minimal changes is not allowed.
-						</li>
-						<li>
 							You may use templates, third-party tools,
 							frameworks, open-source libraries, public APIs, and
 							publicly available assets (e.g. Creative Commons
