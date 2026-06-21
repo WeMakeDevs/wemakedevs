@@ -200,6 +200,43 @@ const PrizesShowcase = () => {
 										Browse issues
 									</Link>
 								</div>
+
+								{/* How it works */}
+								<div className="mt-5 pt-5 border-t border-[#0e8a80]/20">
+									<p className="text-[#0e8a80] font-bold text-sm uppercase tracking-wide mb-3">
+										How it works
+									</p>
+									<ol className="list-decimal list-outside space-y-2 pl-5 text-[#5a4632] text-sm">
+										<li>
+											Find an issue you want to work on in
+											the Cognee GitHub repository.
+										</li>
+										<li>
+											Comment on the issue saying
+											you&apos;d like to work on it and
+											tag the maintainers.
+										</li>
+										<li>
+											Wait until the issue is assigned to
+											you.
+										</li>
+										<li>
+											Work on it and submit a pull
+											request. Do not spam the maintainers
+											to review it, they will get to it.
+										</li>
+									</ol>
+								</div>
+
+								{/* Disclaimer */}
+								<div className="mt-4 rounded-xl border border-[#c33124]/30 bg-[#c33124]/8 px-4 py-3">
+									<p className="text-[#c33124] text-sm font-semibold">
+										⚠️ Spamming the GitHub repo with
+										AI-generated PRs or issues will get you
+										permanently banned from WeMakeDevs
+										events and disqualified.
+									</p>
+								</div>
 							</div>
 						</div>
 					</div>

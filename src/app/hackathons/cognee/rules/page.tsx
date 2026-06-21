@@ -76,16 +76,23 @@ const HackathonRules = async () => {
 								Cognee GitHub repository
 							</Link>{" "}
 							and contribute to the open-source project. The top
-							20 PR submissions earn $100 each. Get an issue
-							assigned to you before starting work by commenting
-							on it and tagging the maintainer.
+							20 PR submissions earn $100 each. The process is:
+							(1) find an issue you want to work on, (2) comment
+							on the issue saying you&apos;d like to work on it
+							and tag the maintainers, (3) wait until it is
+							assigned to you, (4) work on it and submit a pull
+							request. Do not spam the maintainers to review your
+							PR, they will get to it.
 						</li>
 						<li>
 							<strong className="text-[#c33124]">
 								Zero tolerance for spam.
 							</strong>{" "}
-							Low-effort PRs (typo-only fixes, whitespace changes,
-							README reformatting, duplicate or auto-generated
+							Spamming the GitHub repository with AI-generated PRs
+							or issues will get you permanently banned from
+							WeMakeDevs events and disqualified. Low-effort PRs
+							(typo-only fixes, whitespace changes, README
+							reformatting, duplicate or auto-generated
 							submissions) will be rejected without review.
 							Repeated spam or attempts to game the bounty will
 							result in disqualification and a ban from future
