@@ -188,6 +188,8 @@ const PrizesShowcase = () => {
 												repository and contribute to the
 												open-source project. The top 20
 												PR submissions earn $100 each.
+												You can start now, no need to
+												wait for the hackathon to begin.
 											</p>
 										</div>
 									</div>

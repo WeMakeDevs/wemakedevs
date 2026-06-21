@@ -76,13 +76,14 @@ const HackathonRules = async () => {
 								Cognee GitHub repository
 							</Link>{" "}
 							and contribute to the open-source project. The top
-							20 PR submissions earn $100 each. The process is:
-							(1) find an issue you want to work on, (2) comment
-							on the issue saying you&apos;d like to work on it
-							and tag the maintainers, (3) wait until it is
-							assigned to you, (4) work on it and submit a pull
-							request. Do not spam the maintainers to review your
-							PR, they will get to it.
+							20 PR submissions earn $100 each. You can start now,
+							there is no need to wait for the hackathon to begin.
+							The process is: (1) find an issue you want to work
+							on, (2) comment on the issue saying you&apos;d like
+							to work on it and tag the maintainers, (3) wait
+							until it is assigned to you, (4) work on it and
+							submit a pull request. Do not spam the maintainers
+							to review your PR, they will get to it.
 						</li>
 						<li>
 							<strong className="text-[#c33124]">
