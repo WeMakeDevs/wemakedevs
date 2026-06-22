@@ -150,6 +150,18 @@ const HackathonResources = async () => {
 							: a real example of Cognee turning content into a
 							queryable knowledge graph
 						</li>
+						<li>
+							<Link
+								href="https://github.com/topoteretes/cognee-hackathons/tree/main/cognee-companybrain-hackathon-2026-06-16"
+								className={linkClass}
+								target="_blank"
+								rel="noopener noreferrer"
+							>
+								Company Brain
+							</Link>
+							: hackathon guide and reference for building a
+							company-wide memory with Cognee
+						</li>
 					</ul>
 				</HackathonContentBody>
 
