@@ -107,11 +107,14 @@
 	display: none;
 	padding: 5vh 7vw;
 	flex-direction: column;
-	justify-content: center;
+	/* `safe center` keeps short slides centered but pins overflowing
+	   content to the top so it stays scrollable on small screens */
+	justify-content: safe center;
 	opacity: 0;
 	transition: opacity 0.4s ease;
 	z-index: 1;
 	overflow-y: auto;
+	-webkit-overflow-scrolling: touch;
 }
 .prospects .slide.active {
 	display: flex;
@@ -122,6 +125,7 @@
 	position: relative;
 	width: 100%;
 	height: calc(100vh - 80px);
+	height: calc(100dvh - 80px);
 	overflow: hidden;
 }
 
@@ -842,5 +846,109 @@
 	}
 	.prospects .event-stats {
 		grid-template-columns: 1fr 1fr;
+	}
+}
+
+/* ── Phones ─────────────────────────────────────────────────────── */
+@media (max-width: 640px) {
+	/* Give slides room to clear the top strip and the bottom nav,
+	   and let tall slides scroll from the top instead of clipping */
+	.prospects .slide {
+		padding: 84px 6vw 92px;
+	}
+
+	/* Top strip: smaller + tighter so it doesn't wrap or overlap */
+	.prospects .strip {
+		top: 18px;
+		left: 6vw;
+		right: 6vw;
+		font-size: 10px;
+		letter-spacing: 0.08em;
+		gap: 1rem;
+	}
+	.prospects .strip .meta {
+		gap: 0.75rem;
+		text-align: right;
+	}
+
+	.prospects .stats-grid {
+		margin-top: 2.5rem;
+		gap: 1.5rem;
+	}
+
+	/* Founder photo shouldn't dominate the viewport */
+	.prospects .founder-photo-wrap {
+		max-height: 48vh;
+		margin: 0 auto;
+		max-width: 320px;
+	}
+	.prospects .socials {
+		gap: 0.6rem;
+	}
+	.prospects .social {
+		padding: 0.9rem;
+	}
+
+	/* Event stat cards stack to two compact columns */
+	.prospects .event-stats {
+		gap: 0.85rem;
+	}
+	.prospects .ev-stat {
+		padding: 1.1rem 1.1rem 1rem;
+	}
+
+	/* Don't clip stacked testimonials on short screens */
+	.prospects .testimonial-stack {
+		max-height: none;
+		overflow: visible;
+	}
+	.prospects .testimonial {
+		padding: 1.5rem 1.4rem;
+	}
+
+	/* Value banner stacks vertically */
+	.prospects .value-banner {
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 1rem;
+		padding: 1.25rem;
+	}
+
+	.prospects .included-grid,
+	.prospects .pricing-grid {
+		gap: 1rem;
+	}
+	.prospects .price-card {
+		padding: 1.75rem;
+	}
+	.prospects .pack {
+		padding: 1.5rem;
+	}
+
+	.prospects .cover-footer {
+		bottom: 96px;
+		gap: 1rem;
+	}
+
+	/* Bottom nav controls: lift the dots above the arrows/counter row
+	   so the three groups never overlap on narrow screens */
+	.prospects .nav-arrows {
+		bottom: 18px;
+		left: 6vw;
+	}
+	.prospects .counter {
+		bottom: 26px;
+		right: 6vw;
+	}
+	.prospects .dots {
+		bottom: 64px;
+		gap: 5px;
+	}
+	.prospects .dot {
+		width: 5px;
+		height: 5px;
+	}
+	.prospects .dot.active {
+		width: 18px;
 	}
 }
