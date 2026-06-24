@@ -1,3 +1,4 @@
+import { hackersquadLogo } from "@/assets/images/communityPartners";
 import Faq from "@/components/Faq";
 import { HackathonNav } from "@/components/hackathon-content";
 import { ViewContainer } from "@/components/ui/view-container";
@@ -194,6 +195,25 @@ const HackathonPage = () => {
 								</div>
 							</div>
 						</div>
+					</div>
+
+					{/* Community partner — subtle mention */}
+					<div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3 text-center">
+						<span className="text-sm font-medium uppercase tracking-wide text-[#6b513a]/70">
+							Community Partner
+						</span>
+						<Link
+							href="https://hackersquad.io"
+							target="_blank"
+							rel="noopener noreferrer"
+							className="inline-flex items-center opacity-80 hover:opacity-100 transition-opacity"
+						>
+							<Image
+								src={hackersquadLogo}
+								alt="HackerSquad"
+								className="h-7 w-auto object-contain"
+							/>
+						</Link>
 					</div>
 				</ViewContainer>
 			</div>

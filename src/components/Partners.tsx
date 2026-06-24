@@ -7,6 +7,7 @@ import { images as accomplishImages } from "@/app/hackathons/accomplish/images";
 import { orHiltch } from "@/app/hackathons/accomplish/images/testimonials";
 import {
 	draperHouseLogo,
+	hackersquadLogo,
 	hackThisFallLogo,
 	kubesimplifyLogo,
 	theApiCommunityLogo,
@@ -245,6 +246,18 @@ const Partners = () => {
 								src={kubesimplifyLogo}
 								alt="Kubesimplify"
 								className="object-contain w-[140px] md:w-[156px] lg:w-52"
+							/>
+						</Link>
+						<Link
+							href="https://hackersquad.io"
+							target="_blank"
+							rel="noopener noreferrer"
+							className="flex items-center justify-center p-4"
+						>
+							<Image
+								src={hackersquadLogo}
+								alt="HackerSquad"
+								className="object-contain w-[120px] md:w-[140px] lg:w-[160px]"
 							/>
 						</Link>
 					</div>

@@ -1,5 +1,6 @@
 import c4gtLogo from "./c4gt.png";
 import draperHouseLogo from "./draperHouse.svg";
+import hackersquadLogo from "./hackersquad.png";
 import hackThisFallLogo from "./hackThisFall.png";
 import indehubLogo from "./indehub-logo.png";
 import idcLogo from "./indian-data-club-logo.png";
@@ -16,4 +17,5 @@ export {
 	idcLogo,
 	punedaoLogo,
 	indehubLogo,
+	hackersquadLogo,
 };
