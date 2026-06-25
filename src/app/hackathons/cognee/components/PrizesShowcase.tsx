@@ -227,6 +227,13 @@ const PrizesShowcase = () => {
 											request. Do not spam the maintainers
 											to review it, they will get to it.
 										</li>
+										<li>
+											Keep it to a maximum of 5 PRs per
+											person. Anyone who opens more than 5
+											PRs will be banned, this keeps out
+											AI-generated PR spam and gives
+											everyone a fair chance to contribute.
+										</li>
 									</ol>
 								</div>
 
@@ -234,7 +241,8 @@ const PrizesShowcase = () => {
 								<div className="mt-4 rounded-xl border border-[#c33124]/30 bg-[#c33124]/8 px-4 py-3">
 									<p className="text-[#c33124] text-sm font-semibold">
 										⚠️ Spamming the GitHub repo with
-										AI-generated PRs or issues will get you
+										AI-generated PRs or issues, or opening
+										more than 5 PRs, will get you
 										permanently banned from WeMakeDevs
 										events and disqualified.
 									</p>

@@ -83,20 +83,26 @@ const HackathonRules = async () => {
 							to work on it and tag the maintainers, (3) wait
 							until it is assigned to you, (4) work on it and
 							submit a pull request. Do not spam the maintainers
-							to review your PR, they will get to it.
+							to review your PR, they will get to it.{" "}
+							<strong className="text-[#c33124]">
+								Each person may open a maximum of 5 PRs.
+							</strong>{" "}
+							Anyone who opens more than 5 PRs will be banned, this
+							keeps out AI-generated PR spam and ensures everyone
+							gets a fair chance to contribute.
 						</li>
 						<li>
 							<strong className="text-[#c33124]">
 								Zero tolerance for spam.
 							</strong>{" "}
 							Spamming the GitHub repository with AI-generated PRs
-							or issues will get you permanently banned from
-							WeMakeDevs events and disqualified. Low-effort PRs
-							(typo-only fixes, whitespace changes, README
-							reformatting, duplicate or auto-generated
-							submissions) will be rejected without review.
-							Repeated spam or attempts to game the bounty will
-							result in disqualification and a ban from future
+							or issues, or opening more than 5 PRs, will get you
+							permanently banned from WeMakeDevs events and
+							disqualified. Low-effort PRs (typo-only fixes,
+							whitespace changes, README reformatting, duplicate or
+							auto-generated submissions) will be rejected without
+							review. Repeated spam or attempts to game the bounty
+							will result in disqualification and a ban from future
 							WeMakeDevs events.
 						</li>
 						<li>
