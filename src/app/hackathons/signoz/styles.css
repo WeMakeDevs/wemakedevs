@@ -1,0 +1,277 @@
+/* ═══════════════════════════════════════════════════════════════════════════════
+   Agents of SigNoz — "Men in Black" Agency Theme (Dark / Night-ops)
+   Palette: deep ink black, agency silver, neuralyzer green, SigNoz orange, amber
+   ═══════════════════════════════════════════════════════════════════════════════ */
+
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap");
+
+/* ── Neuralyzer flash ─────────────────────────────────────────────────────────── */
+@keyframes neuralyze-flash {
+	0%,
+	92%,
+	100% {
+		opacity: 0;
+	}
+	94%,
+	97% {
+		opacity: 0.9;
+	}
+}
+.signoz-hackathon .neuralyze-flash {
+	animation: neuralyze-flash 9s ease-in-out infinite;
+}
+
+/* ── Radar / scan sweep ──────────────────────────────────────────────────────── */
+@keyframes scan-sweep {
+	0% {
+		transform: translateX(-120%);
+	}
+	100% {
+		transform: translateX(220%);
+	}
+}
+.signoz-hackathon .scan-sweep {
+	animation: scan-sweep 9s linear infinite;
+}
+
+/* ── Slow radar dish spin ────────────────────────────────────────────────────── */
+@keyframes radar-spin {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+.signoz-hackathon .radar-spin {
+	animation: radar-spin 8s linear infinite;
+}
+
+/* ── Float bob ───────────────────────────────────────────────────────────────── */
+@keyframes float-bob {
+	0%,
+	100% {
+		transform: translateY(0);
+	}
+	50% {
+		transform: translateY(-14px);
+	}
+}
+.signoz-hackathon .float-bob {
+	animation: float-bob 6s ease-in-out infinite;
+}
+
+/* ── Telemetry node pulse + edge draw ────────────────────────────────────────── */
+@keyframes sig-pulse {
+	0%,
+	100% {
+		opacity: 1;
+		transform: scale(1);
+	}
+	50% {
+		opacity: 0.5;
+		transform: scale(1.4);
+	}
+}
+@keyframes drawEdge {
+	to {
+		stroke-dashoffset: 0;
+	}
+}
+
+/* ── Status light blink (red alert) ──────────────────────────────────────────── */
+@keyframes alert-blink {
+	0%,
+	100% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 0.25;
+	}
+}
+.signoz-hackathon .alert-blink {
+	animation: alert-blink 1.6s ease-in-out infinite;
+}
+
+/* ── CTA button glow ─────────────────────────────────────────────────────────── */
+@keyframes ctaPulse {
+	0%,
+	100% {
+		box-shadow: 0 6px 18px rgba(229, 80, 42, 0.35);
+	}
+	50% {
+		box-shadow: 0 10px 32px rgba(229, 80, 42, 0.6);
+	}
+}
+.signoz-hackathon .agent-btn {
+	position: relative;
+	display: inline-flex;
+	align-items: center;
+	gap: 0.5rem;
+	padding: 0.9rem 2rem;
+	font-size: 1.0625rem;
+	font-weight: 800;
+	color: #fff;
+	background: linear-gradient(135deg, #ea6e4a 0%, #e5502a 100%);
+	border-radius: 0.75rem;
+	text-decoration: none;
+	transition: transform 0.2s ease, box-shadow 0.2s ease;
+	animation: ctaPulse 2.6s ease-in-out infinite;
+	border: 1px solid rgba(255, 205, 86, 0.5);
+	letter-spacing: 0.02em;
+	box-shadow: 0 6px 18px rgba(229, 80, 42, 0.35);
+}
+.signoz-hackathon .agent-btn:hover {
+	transform: scale(1.05) translateY(-2px);
+	box-shadow: 0 12px 34px rgba(229, 80, 42, 0.5);
+}
+
+/* ── Faint surveillance grid ─────────────────────────────────────────────────── */
+.signoz-hackathon .agency-grid {
+	background-image: linear-gradient(
+			rgba(124, 132, 152, 0.07) 1px,
+			transparent 1px
+		),
+		linear-gradient(90deg, rgba(124, 132, 152, 0.07) 1px, transparent 1px);
+	background-size: 40px 40px;
+}
+
+/* ── Text glow ───────────────────────────────────────────────────────────────── */
+.signoz-hackathon .glow-orange {
+	text-shadow: 0 0 22px rgba(229, 80, 42, 0.45);
+}
+.signoz-hackathon .glow-green {
+	text-shadow: 0 0 20px rgba(43, 227, 139, 0.5);
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════════
+   Cards (dark agency dossier)
+   ═══════════════════════════════════════════════════════════════════════════════ */
+.signoz-hackathon .dossier-card {
+	background: linear-gradient(180deg, #16181d, #121317);
+	border: 1px solid rgba(60, 65, 82, 0.6);
+	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+	transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s
+		ease;
+}
+.signoz-hackathon .dossier-card:hover {
+	border-color: rgba(229, 80, 42, 0.6);
+	box-shadow: 0 16px 38px rgba(0, 0, 0, 0.6);
+	transform: translateY(-3px);
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════════
+   Navbar & layout overrides (light text on dark page)
+   ═══════════════════════════════════════════════════════════════════════════════ */
+.signoz-hackathon nav#nav {
+	pointer-events: none;
+}
+.signoz-hackathon nav#nav > * {
+	pointer-events: auto;
+}
+
+.signoz-hackathon nav a,
+.signoz-hackathon nav span,
+.signoz-hackathon header,
+.signoz-hackathon header a {
+	color: #f5f5f5 !important;
+}
+
+/* When the top navbar gains its scrolled white background, restore dark text */
+.signoz-hackathon nav > div.bg-white a,
+.signoz-hackathon nav > div.bg-white span,
+.signoz-hackathon nav > div[class*="bg-white"] a,
+.signoz-hackathon nav > div[class*="bg-white"] span {
+	color: #16181d !important;
+}
+
+.signoz-hackathon nav a:hover,
+.signoz-hackathon header a:hover {
+	color: #ea6e4a !important;
+}
+
+.signoz-hackathon nav[aria-label="secondary nav"] {
+	background-color: rgba(18, 19, 23, 0.96) !important;
+	backdrop-filter: blur(10px);
+	-webkit-backdrop-filter: blur(10px);
+	border-color: rgba(60, 65, 82, 0.6) !important;
+}
+
+/* Sticky section nav bar — agency black → orange */
+.signoz-hackathon .signoz-sticky-nav {
+	background: linear-gradient(135deg, #16181d 0%, #2c1410 100%);
+	box-shadow: 0 6px 22px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(229, 80, 42, 0.4)
+		inset;
+	border-radius: 0.75rem;
+	overflow: clip;
+	border: 1px solid rgba(229, 80, 42, 0.45);
+}
+.signoz-hackathon .signoz-sticky-nav nav[aria-label="secondary nav"],
+.signoz-hackathon .signoz-sticky-nav nav[aria-label="section nav"] {
+	background: transparent !important;
+	border: none !important;
+}
+.signoz-hackathon .signoz-sticky-nav a,
+.signoz-hackathon .signoz-sticky-nav button {
+	color: #f5f5f5 !important;
+}
+.signoz-hackathon .signoz-sticky-nav a:hover,
+.signoz-hackathon .signoz-sticky-nav button:hover {
+	color: #ffd778 !important;
+	background-color: rgba(229, 80, 42, 0.18) !important;
+}
+
+/* Register button in the top header — SigNoz orange */
+.signoz-hackathon nav a[class*="bg-primary"],
+.signoz-hackathon nav a[class*="bg-primary"]:hover {
+	background-color: #e5502a !important;
+	color: #fff !important;
+	border: 1px solid rgba(255, 205, 86, 0.5);
+}
+.signoz-hackathon nav a[class*="bg-primary"]:hover {
+	background-color: #c4421f !important;
+}
+
+.signoz-hackathon h2 {
+	color: #f5f5f5;
+}
+
+/* ── FAQ on dark ─────────────────────────────────────────────────────────────── */
+.signoz-hackathon #faq h2 {
+	color: #f5f5f5;
+}
+.signoz-hackathon #faq [data-state] {
+	background: #16181d !important;
+	border: 1px solid rgba(60, 65, 82, 0.6);
+	border-radius: 0.75rem;
+}
+.signoz-hackathon #faq button {
+	color: #f5f5f5 !important;
+}
+.signoz-hackathon #faq [class*="pb-4"],
+.signoz-hackathon #faq [class*="pb-4"] * {
+	color: #c0c1c3 !important;
+}
+.signoz-hackathon #faq [class*="pb-4"] a {
+	color: #ea6e4a !important;
+}
+.signoz-hackathon #faq [class*="pb-4"] a:hover {
+	color: #ffd778 !important;
+}
+.signoz-hackathon #faq code {
+	background: rgba(229, 80, 42, 0.16);
+	border: 1px solid rgba(229, 80, 42, 0.35);
+	border-radius: 4px;
+	padding: 1px 5px;
+	font-size: 0.85em;
+	color: #ffd778;
+}
+
+/* Hide scrollbar on the horizontal section nav (mobile) */
+.signoz-hackathon .no-scrollbar {
+	-ms-overflow-style: none;
+	scrollbar-width: none;
+}
+.signoz-hackathon .no-scrollbar::-webkit-scrollbar {
+	display: none;
+}
