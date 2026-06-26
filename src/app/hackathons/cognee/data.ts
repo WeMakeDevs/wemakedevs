@@ -97,17 +97,6 @@ const faqs: FaqType[] = [
 
 const schedule = [
 	{
-		date: "2026-06-26T00:00:00Z",
-		items: [
-			{
-				title: "Kickoff Livestream: Giving Your AI a Memory with Cognee",
-				description:
-					"Join us for the official kickoff where we introduce Cognee, walk through the memory lifecycle APIs, and reveal the hackathon objectives. The night is about to begin.",
-				time: "2026-06-26T15:00:00Z",
-			},
-		],
-	},
-	{
 		date: "2026-06-29T00:00:00Z",
 		items: [
 			{
@@ -115,6 +104,12 @@ const schedule = [
 				description:
 					"The lights of Vegas are on. Fire up Cognee, give your agents a memory, and start building AI that doesn't forget.",
 				time: "2026-06-29T00:00:00Z",
+			},
+			{
+				title: "Livestream: Building with Cognee",
+				description:
+					"Tune in to the livestream for a deep dive into building with Cognee, live demos, and your questions answered as the hackathon gets underway.",
+				time: "2026-06-29T15:00:00Z",
 			},
 		],
 	},
