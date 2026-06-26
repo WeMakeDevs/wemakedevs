@@ -110,6 +110,16 @@ const schedule = [
 				description:
 					"Tune in to the livestream for a deep dive into building with Cognee, live demos, and your questions answered as the hackathon gets underway.",
 				time: "2026-06-29T15:00:00Z",
+				links: [
+					{
+						platform: "youtube",
+						url: "https://www.youtube.com/live/mYZ3BzrFvFI",
+					},
+					{
+						platform: "linkedin",
+						url: "https://www.linkedin.com/events/7476338883547435008",
+					},
+				],
 			},
 		],
 	},
