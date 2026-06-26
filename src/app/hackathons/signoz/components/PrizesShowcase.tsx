@@ -66,7 +66,7 @@ const PrizeCard = ({
 			style={{ background: accentColor }}
 		/>
 		<div
-			className="absolute top-4 right-4 text-xs font-bold px-3 py-1 rounded-full border"
+			className="inline-block text-xs font-bold px-3 py-1 rounded-full border mb-5"
 			style={{
 				color: accentColor,
 				borderColor: accentColor,

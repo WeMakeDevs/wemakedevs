@@ -1,7 +1,7 @@
 import Faq from "@/components/Faq";
 import { HackathonNav } from "@/components/hackathon-content";
 import { ViewContainer } from "@/components/ui/view-container";
-import { SiDiscord, SiGithub } from "@icons-pack/react-simple-icons";
+import { SiGithub, SiSlack } from "@icons-pack/react-simple-icons";
 import { Star } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -138,12 +138,12 @@ const HackathonPage = () => {
 									Star SigNoz on GitHub
 								</Link>
 								<Link
-									href={DATA.discordUrl}
+									href={DATA.slackUrl}
 									target="_blank"
 									rel="noopener noreferrer"
-									className="px-6 py-3 rounded-xl flex gap-2 items-center bg-[#5865F2] hover:bg-[#4752c4] transition-colors duration-300 text-white font-bold shadow-md"
+									className="px-6 py-3 rounded-xl flex gap-2 items-center bg-[#4A154B] hover:bg-[#611f5f] transition-colors duration-300 text-white font-bold shadow-md"
 								>
-									<SiDiscord size={18} /> Join the Discord
+									<SiSlack size={18} /> Join SigNoz Slack
 								</Link>
 							</div>
 						</div>
@@ -268,22 +268,22 @@ const HackathonPage = () => {
 					</div>
 
 					<div className="mt-10 flex justify-center">
-						<div className="inline-flex flex-col sm:flex-row items-center gap-4 bg-[#16181d] rounded-2xl px-8 py-5 border border-[#5865F2]/40 shadow-md text-center sm:text-left">
-							<SiDiscord
+						<div className="inline-flex flex-col sm:flex-row items-center gap-4 bg-[#16181d] rounded-2xl px-8 py-5 border border-[#4A154B]/50 shadow-md text-center sm:text-left">
+							<SiSlack
 								size={28}
-								className="text-[#5865F2] shrink-0"
+								className="text-[#ECB22E] shrink-0"
 							/>
 							<p className="text-[#c0c1c3] font-medium">
-								Still have questions? Join the community and get
-								help in real time.
+								Still have questions? Join the SigNoz Slack and
+								get help in real time.
 							</p>
 							<Link
-								href={DATA.discordUrl}
+								href={DATA.slackUrl}
 								target="_blank"
 								rel="noopener noreferrer"
-								className="shrink-0 inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-[#5865F2] hover:bg-[#4752c4] transition-colors text-white font-bold"
+								className="shrink-0 inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-[#4A154B] hover:bg-[#611f5f] transition-colors text-white font-bold"
 							>
-								<SiDiscord size={18} /> Join the Discord
+								<SiSlack size={18} /> Join SigNoz Slack
 							</Link>
 						</div>
 					</div>

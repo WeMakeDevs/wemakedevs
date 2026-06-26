@@ -18,7 +18,7 @@ const DATA = {
 		disabled: false,
 	},
 	submissionFormUrl: "",
-	discordUrl: "https://discord.com/invite/m63hxKsp4p",
+	slackUrl: "https://signoz.io/slack/",
 	githubUrl: "https://github.com/SigNoz/signoz",
 };
 
@@ -52,7 +52,7 @@ const faqs: FaqType[] = [
 	},
 	{
 		question: "Do I need prior experience with SigNoz?",
-		answer: "Nope. SigNoz is open source and well documented. Start with the <a href='https://signoz.io/docs/introduction/' target='_blank' rel='noopener noreferrer' class='text-amber-300 underline hover:text-amber-200'>introduction</a>, read the <a href='https://signoz.io/docs/' target='_blank' rel='noopener noreferrer' class='text-amber-300 underline hover:text-amber-200'>docs</a>, and join the <a href='https://discord.com/invite/m63hxKsp4p' target='_blank' rel='noopener noreferrer' class='text-amber-300 underline hover:text-amber-200'>Discord</a> for help. You'll have traces, metrics, and logs flowing in minutes.",
+		answer: "Nope. SigNoz is open source and well documented. Start with the <a href='https://signoz.io/docs/introduction/' target='_blank' rel='noopener noreferrer' class='text-amber-300 underline hover:text-amber-200'>introduction</a>, read the <a href='https://signoz.io/docs/' target='_blank' rel='noopener noreferrer' class='text-amber-300 underline hover:text-amber-200'>docs</a>, and join the <a href='https://signoz.io/slack/' target='_blank' rel='noopener noreferrer' class='text-amber-300 underline hover:text-amber-200'>SigNoz Slack</a> for help. You'll have traces, metrics, and logs flowing in minutes.",
 	},
 	{
 		question: "Is the theme really open-ended?",
@@ -84,7 +84,7 @@ const faqs: FaqType[] = [
 	},
 	{
 		question: "Where can I get help during the hackathon?",
-		answer: "Join the <a href='https://discord.com/invite/m63hxKsp4p' target='_blank' rel='noopener noreferrer' class='text-amber-300 underline hover:text-amber-200'>Discord</a> for technical support and community discussion. You can also reach WeMakeDevs at <a href='mailto:contact@wemakedevs.org' class='text-amber-300 underline hover:text-amber-200'>contact@wemakedevs.org</a>.",
+		answer: "Join the <a href='https://signoz.io/slack/' target='_blank' rel='noopener noreferrer' class='text-amber-300 underline hover:text-amber-200'>SigNoz Slack</a> for technical support and community discussion. You can also reach WeMakeDevs at <a href='mailto:contact@wemakedevs.org' class='text-amber-300 underline hover:text-amber-200'>contact@wemakedevs.org</a>.",
 	},
 	{
 		question: "Do the job interviews guarantee a job?",
@@ -120,7 +120,7 @@ const schedule = [
 			{
 				title: "Mid-Hackathon Check-in",
 				description:
-					"Share your progress, get feedback from the SigNoz team, and connect with fellow agents in the Discord.",
+					"Share your progress, get feedback from the SigNoz team, and connect with fellow agents in the SigNoz Slack.",
 				time: "2026-07-23T15:00:00Z",
 			},
 		],

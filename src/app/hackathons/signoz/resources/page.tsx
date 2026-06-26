@@ -5,7 +5,7 @@ import {
 } from "@/components/hackathon-content";
 import HackathonContentBody from "@/components/hackathon-content/HackathonContentBody";
 import { ViewContainer } from "@/components/ui/view-container";
-import { SiDiscord } from "@icons-pack/react-simple-icons";
+import { SiSlack } from "@icons-pack/react-simple-icons";
 import Link from "next/link";
 import { DATA, navLinks } from "../data";
 import { images } from "../images";
@@ -29,19 +29,19 @@ const HackathonResources = async () => {
 				</ViewContainer>
 			</div>
 			<ViewContainer>
-				<div className="mt-6 mb-2 flex flex-col sm:flex-row items-center gap-4 bg-[#16181d] rounded-2xl px-6 py-5 border border-[#5865F2]/40 shadow-sm text-center sm:text-left">
-					<SiDiscord size={32} className="text-[#5865F2] shrink-0" />
+				<div className="mt-6 mb-2 flex flex-col sm:flex-row items-center gap-4 bg-[#16181d] rounded-2xl px-6 py-5 border border-[#4A154B]/50 shadow-sm text-center sm:text-left">
+					<SiSlack size={32} className="text-[#ECB22E] shrink-0" />
 					<p className="flex-1 font-medium text-[#c0c1c3]">
 						The fastest way to get help, find teammates, and stay
-						updated. Join the WeMakeDevs Discord.
+						updated. Join the SigNoz Slack.
 					</p>
 					<Link
-						href={DATA.discordUrl}
+						href={DATA.slackUrl}
 						target="_blank"
 						rel="noopener noreferrer"
-						className="shrink-0 inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-[#5865F2] hover:bg-[#4752c4] transition-colors text-white font-bold"
+						className="shrink-0 inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-[#4A154B] hover:bg-[#611f5f] transition-colors text-white font-bold"
 					>
-						<SiDiscord size={18} /> Join the Discord
+						<SiSlack size={18} /> Join SigNoz Slack
 					</Link>
 				</div>
 

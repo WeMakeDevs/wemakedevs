@@ -3,9 +3,7 @@
 import { ViewContainer } from "@/components/ui/view-container";
 import { motion } from "framer-motion";
 import { ArrowUpRight, Radar } from "lucide-react";
-import Image from "next/image";
 import Link from "next/link";
-import { images } from "../images";
 
 type HeroSectionProps = {
 	title: string;
@@ -182,27 +180,23 @@ const HeroSection = ({
 							transition={{ duration: 0.5 }}
 						>
 							<span className="w-2 h-2 rounded-full bg-[#2be38b] shadow-[0_0_10px_#2be38b]" />
-							Online + In-person · San Francisco
+							Online · Global
 						</motion.span>
 
-						{/* Title image */}
-						<motion.div
-							className="mb-6 w-full max-w-[560px]"
-							initial={{ opacity: 0, scale: 0.9, y: 24 }}
-							animate={{ opacity: 1, scale: 1, y: 0 }}
+						{/* Title */}
+						<motion.h1
+							className="mb-4 text-5xl md:text-7xl font-black uppercase tracking-tight text-[#f5f5f5] glow-orange"
+							initial={{ opacity: 0, y: 24 }}
+							animate={{ opacity: 1, y: 0 }}
 							transition={{
 								duration: 0.9,
 								delay: 0.15,
 								ease: [0.16, 1, 0.3, 1],
 							}}
 						>
-							<Image
-								src={images.title}
-								alt="Agents of SigNoz"
-								className="w-full h-auto drop-shadow-[0_10px_30px_rgba(229,80,42,0.3)]"
-								priority
-							/>
-						</motion.div>
+							Agents of{" "}
+							<span className="text-[#e5502a]">SigNoz</span>
+						</motion.h1>
 
 						<motion.p
 							className="text-xl font-semibold text-[#e5502a] mb-4"

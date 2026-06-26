@@ -71,7 +71,7 @@ const tracks: {
 		bg: "rgba(43,227,139,0.12)",
 		builds: [
 			{
-				name: "Observability for a Discord/Telegram bot or IoT fleet",
+				name: "Observability for a Slack/Telegram bot or IoT fleet",
 				level: "starter",
 			},
 			{
