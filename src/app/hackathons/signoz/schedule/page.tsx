@@ -30,7 +30,9 @@ const HackathonSchedule = async () => {
 					Mark these dates. The hackathon runs July 20 – July 26,
 					2026. Don&apos;t miss the kickoff livestream on July 20.
 				</p>
-				<HackathonScheduleComponent schedule={schedule} />
+				<div className="signoz-schedule">
+					<HackathonScheduleComponent schedule={schedule} />
+				</div>
 			</ViewContainer>
 		</div>
 	);

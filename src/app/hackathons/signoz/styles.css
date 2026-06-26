@@ -240,10 +240,10 @@
 .signoz-hackathon #faq h2 {
 	color: #f5f5f5;
 }
-.signoz-hackathon #faq [data-state] {
+/* Recolor only the accordion item card (keeps its own border, radius & padding) */
+.signoz-hackathon #faq [class*="bg-white"] {
 	background: #16181d !important;
-	border: 1px solid rgba(60, 65, 82, 0.6);
-	border-radius: 0.75rem;
+	border-color: rgba(60, 65, 82, 0.6) !important;
 }
 .signoz-hackathon #faq button {
 	color: #f5f5f5 !important;
@@ -265,6 +265,21 @@
 	padding: 1px 5px;
 	font-size: 0.85em;
 	color: #ffd778;
+}
+
+/* ── Schedule (shared component) text on dark ────────────────────────────────── */
+.signoz-hackathon .signoz-schedule h3 {
+	color: #f5f5f5 !important;
+}
+.signoz-hackathon .signoz-schedule p,
+.signoz-hackathon .signoz-schedule span {
+	color: #c0c1c3 !important;
+}
+.signoz-hackathon .signoz-schedule a {
+	color: #ea6e4a !important;
+}
+.signoz-hackathon .signoz-schedule .ring-2 {
+	--tw-ring-color: rgba(60, 65, 82, 0.6) !important;
 }
 
 /* Hide scrollbar on the horizontal section nav (mobile) */

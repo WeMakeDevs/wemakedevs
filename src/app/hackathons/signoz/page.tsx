@@ -6,7 +6,6 @@ import { Star } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import HeroSection from "./components/HeroSection";
-import Integrations from "./components/Integrations";
 import PrizesShowcase from "./components/PrizesShowcase";
 import ProblemSolution from "./components/ProblemSolution";
 import Signals from "./components/Signals";
@@ -97,14 +96,14 @@ const HackathonPage = () => {
 				</ViewContainer>
 			</div>
 
-			{/* ── Why we're doing this (Problem / Solution) ─────────────────────── */}
-			<div id="why" className="scroll-mt-44">
-				<ProblemSolution />
-			</div>
-
 			{/* ── Prizes ────────────────────────────────────────────────────────── */}
 			<div id="prizes" className="scroll-mt-44 agency-grid">
 				<PrizesShowcase />
+			</div>
+
+			{/* ── Why we're doing this (Problem / Solution) ─────────────────────── */}
+			<div id="why" className="scroll-mt-44">
+				<ProblemSolution />
 			</div>
 
 			{/* ── Sponsor ───────────────────────────────────────────────────────── */}
@@ -195,6 +194,34 @@ const HackathonPage = () => {
 									</div>
 								</div>
 							</div>
+
+							<div className="mt-4 rounded-2xl border border-[#ffcd56]/30 bg-[#ffcd56]/8 px-6 py-5">
+								<div className="flex items-start gap-3">
+									<span className="text-2xl">🔌</span>
+									<div>
+										<p className="text-[#ffcd56] font-bold text-lg">
+											Don&apos;t build it alone
+										</p>
+										<p className="text-[#c0c1c3] text-sm">
+											SigNoz is OpenTelemetry-native, with
+											integrations for cloud providers
+											(AWS, GCP, Azure), databases,
+											message queues, web frameworks, and
+											more. Browse the{" "}
+											<Link
+												href="https://signoz.io/docs/integrations/integrations-list/"
+												target="_blank"
+												rel="noopener noreferrer"
+												className="text-[#ffd778] underline hover:text-[#ffcd56]"
+											>
+												full integrations list
+											</Link>{" "}
+											to find yours and ship instrumented
+											systems faster.
+										</p>
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
 
@@ -219,11 +246,6 @@ const HackathonPage = () => {
 			{/* ── Tracks ────────────────────────────────────────────────────────── */}
 			<div id="projects" className="scroll-mt-44">
 				<Tracks />
-			</div>
-
-			{/* ── Ecosystem Integrations ────────────────────────────────────────── */}
-			<div className="agency-grid">
-				<Integrations />
 			</div>
 
 			{/* ── Judging Criteria ──────────────────────────────────────────────── */}
