@@ -64,49 +64,6 @@ const HackathonRules = async () => {
 						</li>
 						<li>
 							<strong className="text-[#ea6e4a]">
-								Open Source Track ($100 per PR · top 20):
-							</strong>{" "}
-							Find issues on the{" "}
-							<Link
-								href="https://github.com/SigNoz/signoz/issues"
-								className="text-[#ffd778] hover:text-[#ea6e4a] underline"
-								target="_blank"
-								rel="noopener noreferrer"
-							>
-								SigNoz GitHub repository
-							</Link>{" "}
-							and contribute to the open-source project. The top
-							20 PR submissions earn $100 each. You can start now,
-							there is no need to wait for the hackathon to begin.
-							The process is: (1) find an issue you want to work
-							on, (2) comment on the issue saying you&apos;d like
-							to work on it and tag the maintainers, (3) wait
-							until it is assigned to you, (4) work on it and
-							submit a pull request. Do not spam the maintainers
-							to review your PR, they will get to it.{" "}
-							<strong className="text-[#ea6e4a]">
-								Each person may open a maximum of 5 PRs.
-							</strong>{" "}
-							Anyone who opens more than 5 PRs will be banned,
-							this keeps out AI-generated PR spam and ensures
-							everyone gets a fair chance to contribute.
-						</li>
-						<li>
-							<strong className="text-[#ea6e4a]">
-								Zero tolerance for spam.
-							</strong>{" "}
-							Spamming the GitHub repository with AI-generated PRs
-							or issues, or opening more than 5 PRs, will get you
-							permanently banned from WeMakeDevs events and
-							disqualified. Low-effort PRs (typo-only fixes,
-							whitespace changes, README reformatting, duplicate
-							or auto-generated submissions) will be rejected
-							without review. Repeated spam or attempts to game
-							the bounty will result in disqualification and a ban
-							from future WeMakeDevs events.
-						</li>
-						<li>
-							<strong className="text-[#ea6e4a]">
 								Job interviews do not guarantee a job.
 							</strong>{" "}
 							Top winners get interview opportunities at SigNoz.

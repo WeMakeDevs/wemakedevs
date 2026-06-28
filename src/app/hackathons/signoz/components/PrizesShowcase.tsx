@@ -3,7 +3,6 @@
 import {
 	Award,
 	Briefcase,
-	GitPullRequest,
 	Share2,
 	Star,
 	Trophy,
@@ -189,82 +188,6 @@ const PrizesShowcase = () => {
 								</div>
 							</div>
 
-							{/* PR bounty */}
-							<div className="mt-5 rounded-2xl border border-[#2be38b]/40 bg-[#2be38b]/10 px-6 py-5">
-								<div className="flex flex-col md:flex-row md:items-center md:justify-between gap-3">
-									<div className="flex items-start gap-3">
-										<GitPullRequest className="w-6 h-6 text-[#2be38b] shrink-0 mt-0.5" />
-										<div>
-											<p className="text-[#2be38b] font-bold text-lg">
-												Open Source Track: $100 per PR ·
-												Top 20 submissions
-											</p>
-											<p className="text-[#c0c1c3] text-sm">
-												Find issues on the SigNoz GitHub
-												repository and contribute to the
-												open-source project. The top 20
-												PR submissions earn $100 each.
-												You can start now, no need to
-												wait for the hackathon to begin.
-											</p>
-										</div>
-									</div>
-									<Link
-										href="https://github.com/SigNoz/signoz/issues"
-										target="_blank"
-										rel="noopener noreferrer"
-										className="inline-flex items-center justify-center px-4 py-2 rounded-lg border border-[#2be38b]/50 text-[#2be38b] hover:bg-[#2be38b] hover:text-[#0b0c0e] transition-colors font-semibold text-sm shrink-0"
-									>
-										Browse issues
-									</Link>
-								</div>
-
-								{/* How it works */}
-								<div className="mt-5 pt-5 border-t border-[#2be38b]/20">
-									<p className="text-[#2be38b] font-bold text-sm uppercase tracking-wide mb-3">
-										How it works
-									</p>
-									<ol className="list-decimal list-outside space-y-2 pl-5 text-[#c0c1c3] text-sm">
-										<li>
-											Find an issue you want to work on in
-											the SigNoz GitHub repository.
-										</li>
-										<li>
-											Comment on the issue saying
-											you&apos;d like to work on it and
-											tag the maintainers.
-										</li>
-										<li>
-											Wait until the issue is assigned to
-											you.
-										</li>
-										<li>
-											Work on it and submit a pull
-											request. Do not spam the maintainers
-											to review it, they will get to it.
-										</li>
-										<li>
-											Keep it to a maximum of 5 PRs per
-											person. Anyone who opens more than 5
-											PRs will be banned, this keeps out
-											AI-generated PR spam and gives
-											everyone a fair chance to
-											contribute.
-										</li>
-									</ol>
-								</div>
-
-								{/* Disclaimer */}
-								<div className="mt-4 rounded-xl border border-[#e5484d]/40 bg-[#e5484d]/10 px-4 py-3">
-									<p className="text-[#ea6d71] text-sm font-semibold">
-										⚠️ Spamming the GitHub repo with
-										AI-generated PRs or issues, or opening
-										more than 5 PRs, will get you
-										permanently banned from WeMakeDevs
-										events and disqualified.
-									</p>
-								</div>
-							</div>
 						</div>
 					</div>
 
