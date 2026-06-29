@@ -1,3 +1,4 @@
+import background from "./background.png";
 import cover from "./cover.png";
 import hero from "./hero.png";
 import iphone from "./iPhone.png";
@@ -9,6 +10,7 @@ import title from "./title.png";
 
 export const images = {
 	cover,
+	background,
 	hero,
 	ipad,
 	iphone,

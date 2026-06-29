@@ -103,6 +103,21 @@ const HeroSection = ({
 }: HeroSectionProps) => {
 	return (
 		<div className="relative overflow-hidden">
+			{/* ── Hero background image ── */}
+			<div className="absolute inset-0 z-0 pointer-events-none">
+				<Image
+					src={images.background}
+					alt=""
+					fill
+					priority
+					sizes="100vw"
+					className="object-cover object-center"
+				/>
+				{/* blend the background into the page — soft top/bottom + side fade */}
+				<div className="absolute inset-0 bg-gradient-to-b from-[#08090b]/80 via-[#08090b]/55 to-[#08090b]" />
+				<div className="absolute inset-0 bg-gradient-to-r from-[#08090b] via-transparent to-[#08090b] opacity-80" />
+			</div>
+
 			<TelemetryGraph />
 
 			<ViewContainer className="relative z-20 pt-16 md:pt-20 pb-12">
