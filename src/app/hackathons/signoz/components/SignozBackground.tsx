@@ -14,6 +14,60 @@ const SignozBackground = () => {
 			{/* ── Whisper-fine surveillance grid ── */}
 			<div className="absolute inset-0 agency-grid opacity-[0.35]" />
 
+			{/* ── Slow agency radar dish (top-right, subtle metallic/cyan) ── */}
+			<div className="absolute top-[9%] right-[7%] hidden md:block">
+				<svg
+					aria-hidden="true"
+					className="radar-spin opacity-[0.18]"
+					width="260"
+					height="260"
+					viewBox="0 0 220 220"
+					xmlns="http://www.w3.org/2000/svg"
+				>
+					<circle
+						cx="110"
+						cy="110"
+						r="100"
+						fill="none"
+						stroke="#c7ccd6"
+						strokeWidth="1"
+						opacity="0.5"
+					/>
+					<circle
+						cx="110"
+						cy="110"
+						r="66"
+						fill="none"
+						stroke="#c7ccd6"
+						strokeWidth="1"
+						opacity="0.35"
+					/>
+					<circle
+						cx="110"
+						cy="110"
+						r="32"
+						fill="none"
+						stroke="#c7ccd6"
+						strokeWidth="1"
+						opacity="0.35"
+					/>
+					<path
+						d="M110 110 L110 10 A100 100 0 0 1 200 90 Z"
+						fill="#5fe9ff"
+						opacity="0.1"
+					/>
+					<line
+						x1="110"
+						y1="110"
+						x2="110"
+						y2="10"
+						stroke="#5fe9ff"
+						strokeWidth="1.5"
+						opacity="0.55"
+					/>
+				</svg>
+			</div>
+
 			{/* ── Focusing vignette — keeps the edges clean & premium ── */}
 			<div
 				className="absolute inset-0"

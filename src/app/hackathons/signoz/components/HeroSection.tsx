@@ -128,6 +128,20 @@ const HeroSection = ({
 							/>
 						</motion.div>
 
+						<motion.div
+							className="flex flex-wrap items-baseline gap-x-3 gap-y-1 mb-5"
+							initial={{ opacity: 0, y: 20 }}
+							animate={{ opacity: 1, y: 0 }}
+							transition={{ duration: 0.65, delay: 0.4 }}
+						>
+							<span className="text-5xl md:text-7xl font-black text-[#e5502a] glow-orange">
+								$10,000
+							</span>
+							<span className="text-lg md:text-xl text-[#c0c1c3] font-semibold">
+								in prizes + job interviews at SigNoz
+							</span>
+						</motion.div>
+
 						<motion.p
 							className="text-base md:text-lg text-[#c0c1c3] max-w-xl leading-relaxed mb-7"
 							initial={{ opacity: 0, y: 16 }}
@@ -137,21 +151,13 @@ const HeroSection = ({
 							{description}
 						</motion.p>
 
-						{/* Prize + dates */}
+						{/* Dates */}
 						<motion.div
 							className="mb-7"
 							initial={{ opacity: 0, y: 20 }}
 							animate={{ opacity: 1, y: 0 }}
 							transition={{ duration: 0.65, delay: 0.7 }}
 						>
-							<div className="flex flex-wrap items-baseline gap-x-3 gap-y-1 mb-4">
-								<span className="text-5xl md:text-7xl font-black text-[#e5502a] glow-orange">
-									$10,000
-								</span>
-								<span className="text-lg md:text-xl text-[#c0c1c3] font-semibold">
-									in prizes + job interviews at SigNoz
-								</span>
-							</div>
 							<div className="grid grid-cols-1 sm:grid-cols-2 gap-3 max-w-2xl">
 								<div className="dossier-card rounded-xl p-4">
 									<div className="text-[11px] uppercase tracking-[0.18em] text-[#e5502a] mb-1 font-bold">
