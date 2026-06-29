@@ -106,7 +106,7 @@ const HeroSection = ({
 			<TelemetryGraph />
 
 			<ViewContainer className="relative z-20 pt-16 md:pt-20 pb-12">
-				<div className="grid grid-cols-1 lg:grid-cols-[1fr_1fr] gap-12 items-center">
+				<div className="grid grid-cols-1 lg:grid-cols-[0.85fr_1.15fr] gap-10 items-center">
 					{/* ── Left column ── */}
 					<div>
 						{/* Title */}
@@ -226,12 +226,11 @@ const HeroSection = ({
 						}}
 						className="mib-hero-frame"
 					>
-						<div className="absolute inset-0 mib-scanlines opacity-30 pointer-events-none z-10" />
 						<Image
 							src={images.hero}
 							alt={title}
 							priority
-							className="w-full h-auto lg:scale-110 origin-right"
+							className="mib-hero-img w-full h-auto lg:scale-[1.28] origin-center"
 						/>
 					</motion.div>
 				</div>

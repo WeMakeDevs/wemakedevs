@@ -328,42 +328,20 @@
 .signoz-hackathon .mib-hero-frame {
 	position: relative;
 }
-.signoz-hackathon .mib-hero-frame::after {
-	content: "";
-	position: absolute;
-	inset: 0;
-	pointer-events: none;
-	background: radial-gradient(
-			120% 120% at 60% 40%,
-			transparent 45%,
-			rgba(8, 9, 11, 0.55) 78%,
-			var(--mib-ink-900) 100%
-		),
-		linear-gradient(
-			90deg,
-			var(--mib-ink-900) 0%,
-			transparent 16%,
-			transparent 84%,
-			var(--mib-ink-900) 100%
-		),
-		linear-gradient(
-			0deg,
-			var(--mib-ink-900) 0%,
-			transparent 22%,
-			transparent 86%,
-			rgba(8, 9, 11, 0.7) 100%
-		);
-}
-
-/* faint HUD scanlines layered over the hero */
-.signoz-hackathon .mib-scanlines {
-	background-image: repeating-linear-gradient(
-		0deg,
-		rgba(148, 163, 184, 0.05) 0px,
-		rgba(148, 163, 184, 0.05) 1px,
-		transparent 1px,
-		transparent 4px
+.signoz-hackathon .mib-hero-img {
+	-webkit-mask-image: radial-gradient(
+		120% 120% at 50% 45%,
+		#000 58%,
+		rgba(0, 0, 0, 0.35) 80%,
+		transparent 100%
 	);
+	mask-image: radial-gradient(
+		120% 120% at 50% 45%,
+		#000 58%,
+		rgba(0, 0, 0, 0.35) 80%,
+		transparent 100%
+	);
+	filter: drop-shadow(0 24px 55px rgba(0, 0, 0, 0.5));
 }
 
 /* ═══════════════════════════════════════════════════════════════════════════════
