@@ -106,7 +106,7 @@ const HeroSection = ({
 			<TelemetryGraph />
 
 			<ViewContainer className="relative z-20 pt-16 md:pt-20 pb-12">
-				<div className="grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] gap-12 items-center">
+				<div className="grid grid-cols-1 lg:grid-cols-[1fr_1fr] gap-12 items-center">
 					{/* ── Left column ── */}
 					<div>
 						{/* Title */}
@@ -124,18 +124,9 @@ const HeroSection = ({
 								src={images.title}
 								alt={title}
 								priority
-								className="w-full max-w-xl h-auto"
+								className="w-full max-w-lg h-auto"
 							/>
 						</motion.div>
-
-						<motion.p
-							className="text-xl font-semibold text-[#e5502a] mb-4"
-							initial={{ opacity: 0 }}
-							animate={{ opacity: 1 }}
-							transition={{ duration: 0.6, delay: 0.45 }}
-						>
-							Observe your AI solutions using SigNoz
-						</motion.p>
 
 						<motion.p
 							className="text-base md:text-lg text-[#c0c1c3] max-w-xl leading-relaxed mb-7"
@@ -238,7 +229,7 @@ const HeroSection = ({
 							src={images.hero}
 							alt={title}
 							priority
-							className="w-full h-auto"
+							className="w-full h-auto lg:scale-110 origin-right"
 						/>
 					</motion.div>
 				</div>
