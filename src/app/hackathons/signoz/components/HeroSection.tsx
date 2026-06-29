@@ -27,9 +27,9 @@ const HeroSection = ({
 	submissionFormUrl,
 }: HeroSectionProps) => {
 	return (
-		<div className="relative overflow-hidden">
-			{/* ── Hero background image ── */}
-			<div className="absolute inset-0 z-0 pointer-events-none">
+		<div className="relative overflow-x-clip">
+			{/* ── Hero background image (extends up behind the navbar) ── */}
+			<div className="absolute -top-24 inset-x-0 bottom-0 z-0 pointer-events-none overflow-hidden">
 				<Image
 					src={images.background}
 					alt=""
@@ -41,8 +41,9 @@ const HeroSection = ({
 				{/* blend the background into the page — keep image visible, fade for text & page */}
 				<div className="absolute inset-0 bg-gradient-to-r from-[#08090b]/90 via-[#08090b]/35 to-transparent" />
 				<div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#08090b]" />
-				{/* fade the top edge into the black header — no hard seam */}
-				<div className="absolute inset-x-0 top-0 h-32 md:h-44 bg-gradient-to-b from-[#08090b] via-[#08090b]/70 to-transparent" />
+				{/* solid black behind the navbar, then a smooth fade into the image */}
+				<div className="absolute inset-x-0 top-0 h-24 bg-[#08090b]" />
+				<div className="absolute inset-x-0 top-24 h-40 bg-gradient-to-b from-[#08090b] to-transparent" />
 			</div>
 
 			<ViewContainer className="relative z-20 pt-16 md:pt-20 pb-12">
