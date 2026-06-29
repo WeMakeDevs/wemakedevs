@@ -3,7 +3,9 @@
 import { ViewContainer } from "@/components/ui/view-container";
 import { motion } from "framer-motion";
 import { ArrowUpRight, Radar } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
+import { images } from "../images";
 
 type HeroSectionProps = {
 	title: string;
@@ -93,72 +95,6 @@ const TelemetryGraph = () => (
 	</div>
 );
 
-const QueryTerminal = () => (
-	<motion.div
-		className="rounded-2xl overflow-hidden border border-[#3c4152] bg-[#121317] shadow-[0_30px_80px_rgba(0,0,0,0.55)]"
-		initial={{ opacity: 0, y: 30 }}
-		animate={{ opacity: 1, y: 0 }}
-		transition={{ duration: 0.8, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
-	>
-		<div className="flex items-center gap-2 px-4 py-3 border-b border-[#3c4152] bg-[#16181d]">
-			<span className="w-3 h-3 rounded-full bg-[#e5484d]" />
-			<span className="w-3 h-3 rounded-full bg-[#ffcd56]" />
-			<span className="w-3 h-3 rounded-full bg-[#2be38b]" />
-			<span className="ml-3 font-mono text-xs text-[#62687c]">
-				mission-brief.sql · SigNoz Query Builder
-			</span>
-		</div>
-		<pre className="p-5 overflow-x-auto text-[13px] leading-[1.85] font-mono">
-			<code>
-				<span className="text-[#62687c]">
-					-- P99 latency by operation for an AI agent
-				</span>
-				{"\n"}
-				<span className="text-[#ea6e4a]">SELECT</span>
-				{"\n  serviceName,\n  name "}
-				<span className="text-[#ea6e4a]">AS</span>
-				{" operation,\n  "}
-				<span className="text-[#2be38b]">quantile</span>
-				{"(0.99)(durationNano) / "}
-				<span className="text-[#ffcd56]">1e6</span>{" "}
-				<span className="text-[#ea6e4a]">AS</span>
-				{" p99_ms,\n  "}
-				<span className="text-[#2be38b]">count</span>
-				{"() "}
-				<span className="text-[#ea6e4a]">AS</span>
-				{" total_spans\n"}
-				<span className="text-[#ea6e4a]">FROM</span>
-				{" signoz_traces.distributed_signoz_index_v3\n"}
-				<span className="text-[#ea6e4a]">WHERE</span>
-				{" serviceName = "}
-				<span className="text-[#ffcd56]">'agent-orchestrator'</span>
-				{"\n  "}
-				<span className="text-[#ea6e4a]">AND</span>
-				{" timestamp > "}
-				<span className="text-[#2be38b]">now</span>
-				{"() - "}
-				<span className="text-[#ea6e4a]">INTERVAL</span>{" "}
-				<span className="text-[#ffcd56]">1</span>
-				{" HOUR\n"}
-				<span className="text-[#ea6e4a]">GROUP BY</span>
-				{" serviceName, name\n"}
-				<span className="text-[#ea6e4a]">ORDER BY</span>
-				{" p99_ms "}
-				<span className="text-[#ea6e4a]">DESC LIMIT</span>{" "}
-				<span className="text-[#ffcd56]">10</span>
-				{";"}
-			</code>
-		</pre>
-		<div className="px-5 py-3 border-t border-[#3c4152] font-mono text-xs text-[#62687c]">
-			→ SigNoz Query Builder.{" "}
-			<span className="text-[#2be38b]">
-				Real query. 0 vendor lock-in.
-			</span>{" "}
-			▊
-		</div>
-	</motion.div>
-);
-
 const HeroSection = ({
 	title,
 	description,
@@ -173,19 +109,9 @@ const HeroSection = ({
 				<div className="grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] gap-12 items-center">
 					{/* ── Left column ── */}
 					<div>
-						<motion.span
-							className="inline-flex items-center gap-2 text-xs font-bold tracking-[0.18em] uppercase text-[#2be38b] border border-[#3c4152] bg-[#16181d] px-4 py-1.5 rounded-full mb-6"
-							initial={{ opacity: 0, y: -10 }}
-							animate={{ opacity: 1, y: 0 }}
-							transition={{ duration: 0.5 }}
-						>
-							<span className="w-2 h-2 rounded-full bg-[#2be38b] shadow-[0_0_10px_#2be38b]" />
-							Online · Global
-						</motion.span>
-
 						{/* Title */}
-						<motion.h1
-							className="mb-4 text-5xl md:text-7xl font-black uppercase tracking-tight text-[#f5f5f5] glow-orange"
+						<motion.div
+							className="mb-4"
 							initial={{ opacity: 0, y: 24 }}
 							animate={{ opacity: 1, y: 0 }}
 							transition={{
@@ -194,9 +120,13 @@ const HeroSection = ({
 								ease: [0.16, 1, 0.3, 1],
 							}}
 						>
-							Agents of{" "}
-							<span className="text-[#e5502a]">SigNoz</span>
-						</motion.h1>
+							<Image
+								src={images.title}
+								alt={title}
+								priority
+								className="w-full max-w-xl h-auto"
+							/>
+						</motion.div>
 
 						<motion.p
 							className="text-xl font-semibold text-[#e5502a] mb-4"
@@ -294,8 +224,23 @@ const HeroSection = ({
 						</motion.div>
 					</div>
 
-					{/* ── Right column: query terminal ── */}
-					<QueryTerminal />
+					{/* ── Right column: hero image ── */}
+					<motion.div
+						initial={{ opacity: 0, y: 30 }}
+						animate={{ opacity: 1, y: 0 }}
+						transition={{
+							duration: 0.8,
+							delay: 0.5,
+							ease: [0.16, 1, 0.3, 1],
+						}}
+					>
+						<Image
+							src={images.hero}
+							alt={title}
+							priority
+							className="w-full h-auto"
+						/>
+					</motion.div>
 				</div>
 			</ViewContainer>
 		</div>
