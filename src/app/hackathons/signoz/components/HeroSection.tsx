@@ -41,6 +41,8 @@ const HeroSection = ({
 				{/* blend the background into the page — keep image visible, fade for text & page */}
 				<div className="absolute inset-0 bg-gradient-to-r from-[#08090b]/90 via-[#08090b]/35 to-transparent" />
 				<div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#08090b]" />
+				{/* fade the top edge into the black header — no hard seam */}
+				<div className="absolute inset-x-0 top-0 h-32 md:h-44 bg-gradient-to-b from-[#08090b] via-[#08090b]/70 to-transparent" />
 			</div>
 
 			<ViewContainer className="relative z-20 pt-16 md:pt-20 pb-12">
