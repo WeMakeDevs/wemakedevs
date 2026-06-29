@@ -112,13 +112,13 @@ const Signals = () => {
 
 					{/* Code window */}
 					<motion.div
-						className="rounded-2xl overflow-hidden border border-[#3c4152] bg-[#121317] shadow-[0_14px_32px_rgba(0,0,0,0.5)]"
+						className="rounded-2xl overflow-hidden border border-[#3c4152] mib-glass-bg shadow-[0_18px_40px_rgba(0,0,0,0.6)]"
 						initial={{ opacity: 0, scale: 0.96 }}
 						whileInView={{ opacity: 1, scale: 1 }}
 						viewport={{ once: true }}
 						transition={{ duration: 0.6 }}
 					>
-						<div className="flex items-center gap-2 px-4 py-3 border-b border-[#3c4152] bg-[#16181d]">
+						<div className="flex items-center gap-2 px-4 py-3 border-b border-[#3c4152] bg-[#0e0f13]/80">
 							<span className="w-3 h-3 rounded-full bg-[#e5484d]" />
 							<span className="w-3 h-3 rounded-full bg-[#ffcd56]" />
 							<span className="w-3 h-3 rounded-full bg-[#2be38b]" />

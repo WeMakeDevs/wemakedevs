@@ -68,12 +68,12 @@ export default function RootLayout({
 	];
 
 	return (
-		<div className="signoz-hackathon bg-[#0b0c0e] text-[#e5e7eb] min-h-screen relative">
+		<div className="signoz-hackathon bg-[#08090b] text-[#e5e7eb] min-h-screen relative">
 			<SignozBackground />
 			<div className="relative z-10">
 				<HackathonNavbar customNavLinks={hackathonNavLinks} />
 				{children}
-				<div className="border-t border-[#3c4152]/60 bg-[#0e1014]">
+				<div className="border-t border-[#3c4152]/60 bg-[#0a0b0e]">
 					<div className="max-w-4xl mx-auto px-6 py-6 text-center">
 						<p className="text-xs leading-relaxed text-[#62687c]">
 							Disclaimer: &ldquo;Agents of SigNoz&rdquo; is an

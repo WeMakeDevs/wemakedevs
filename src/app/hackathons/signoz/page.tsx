@@ -290,7 +290,7 @@ const HackathonPage = () => {
 					</div>
 
 					<div className="mt-10 flex justify-center">
-						<div className="inline-flex flex-col sm:flex-row items-center gap-4 bg-[#16181d] rounded-2xl px-8 py-5 border border-[#4A154B]/50 shadow-md text-center sm:text-left">
+						<div className="inline-flex flex-col sm:flex-row items-center gap-4 mib-glass-bg rounded-2xl px-8 py-5 border border-[#4A154B]/50 shadow-md text-center sm:text-left">
 							<SiSlack
 								size={28}
 								className="text-[#ECB22E] shrink-0"

@@ -1,12 +1,6 @@
 "use client";
 
-import {
-	Award,
-	Briefcase,
-	Share2,
-	Star,
-	Trophy,
-} from "lucide-react";
+import { Award, Briefcase, Share2, Star, Trophy } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { images } from "../images";
@@ -57,7 +51,7 @@ const PrizeCard = ({
 	accentColor,
 }: PrizeCardProps) => (
 	<div
-		className="group relative bg-[#16181d] rounded-2xl p-6 border transition-all duration-300 overflow-hidden"
+		className="mib-glass-bg group relative rounded-2xl p-6 border transition-all duration-300 overflow-hidden hover:-translate-y-1"
 		style={{ borderColor: `${accentColor}55` }}
 	>
 		<div
@@ -107,7 +101,7 @@ const PrizesShowcase = () => {
 						$10,000 in prizes. Complete the mission, collect the
 						reward.
 					</p>
-					<div className="inline-flex max-w-full items-center gap-3 px-5 py-3 rounded-2xl bg-[#16181d] border border-[#ffcd56]/50 shadow-md">
+					<div className="inline-flex max-w-full items-center gap-3 px-5 py-3 rounded-2xl mib-glass-bg border border-[#ffcd56]/50 shadow-md">
 						<span className="text-2xl shrink-0">🕶️</span>
 						<span className="text-base md:text-xl font-bold text-[#ffcd56] text-left">
 							Every member of a winning team receives the full
@@ -118,7 +112,7 @@ const PrizesShowcase = () => {
 
 				<div className="space-y-8">
 					{/* Main prizes */}
-					<div className="relative rounded-3xl p-6 md:p-10 overflow-hidden bg-[#121317] border border-[#3c4152] shadow-[0_12px_30px_rgba(0,0,0,0.5)]">
+					<div className="relative rounded-3xl p-6 md:p-10 overflow-hidden mib-glass-bg border border-[#3c4152] shadow-[0_18px_44px_rgba(0,0,0,0.6)]">
 						<div className="pointer-events-none absolute -top-24 -right-24 w-72 h-72 bg-[#e5502a]/15 rounded-full blur-3xl" />
 						<div className="pointer-events-none absolute -bottom-20 -left-20 w-56 h-56 bg-[#2be38b]/10 rounded-full blur-3xl" />
 
@@ -187,7 +181,6 @@ const PrizesShowcase = () => {
 									</div>
 								</div>
 							</div>
-
 						</div>
 					</div>
 

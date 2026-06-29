@@ -124,7 +124,7 @@ const HeroSection = ({
 								src={images.title}
 								alt={title}
 								priority
-								className="w-full max-w-lg h-auto"
+								className="w-full max-w-lg h-auto mib-title-glow"
 							/>
 						</motion.div>
 
@@ -206,7 +206,7 @@ const HeroSection = ({
 									href={submissionFormUrl}
 									target="_blank"
 									rel="noopener noreferrer"
-									className="inline-flex items-center gap-2 px-6 py-3 rounded-xl border border-[#3c4152] text-[#f5f5f5] font-bold hover:border-[#e5502a] hover:text-[#ea6e4a] transition-all duration-300 text-base"
+									className="mib-ghost-btn inline-flex items-center gap-2 px-6 py-3 rounded-xl border border-[#3c4152] text-[#f5f7fa] font-bold hover:border-[#5fe9ff] hover:text-[#5fe9ff] transition-all duration-300 text-base"
 								>
 									Submit Project
 									<ArrowUpRight className="w-5 h-5" />
@@ -224,7 +224,9 @@ const HeroSection = ({
 							delay: 0.5,
 							ease: [0.16, 1, 0.3, 1],
 						}}
+						className="mib-hero-frame"
 					>
+						<div className="absolute inset-0 mib-scanlines opacity-30 pointer-events-none z-10" />
 						<Image
 							src={images.hero}
 							alt={title}

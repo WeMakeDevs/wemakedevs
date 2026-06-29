@@ -22,14 +22,15 @@ const SignozBackground = () => {
 	return (
 		<div className="fixed inset-0 pointer-events-none overflow-hidden z-0">
 			{/* ── Night-ops sky gradient ── */}
-			<div className="absolute inset-0 bg-gradient-to-b from-[#0b0c0e] via-[#0e1014] to-[#16181d]" />
+			<div className="absolute inset-0 bg-gradient-to-b from-[#08090b] via-[#0b0c0e] to-[#101116]" />
 
 			{/* ── Surveillance grid ── */}
-			<div className="absolute inset-0 agency-grid opacity-40" />
+			<div className="absolute inset-0 agency-grid opacity-50" />
 
-			{/* ── Orange / green ambient glows ── */}
-			<div className="absolute top-[6%] right-[8%] w-[520px] h-[520px] rounded-full bg-[#e5502a]/15 blur-[140px]" />
-			<div className="absolute top-[30%] left-[4%] w-[420px] h-[420px] rounded-full bg-[#2be38b]/10 blur-[140px]" />
+			{/* ── Signature orange + sparing neuralyzer-cyan ambient glows ── */}
+			<div className="absolute top-[6%] right-[8%] w-[520px] h-[520px] rounded-full bg-[#e5502a]/12 blur-[150px]" />
+			<div className="absolute top-[34%] left-[2%] w-[460px] h-[460px] rounded-full bg-[#5fe9ff]/8 blur-[160px]" />
+			<div className="absolute bottom-[10%] right-[20%] w-[380px] h-[380px] rounded-full bg-[#2be38b]/7 blur-[150px]" />
 
 			{/* ── Star field ── */}
 			<svg
@@ -111,7 +112,7 @@ const SignozBackground = () => {
 
 			{/* ── Heat / scan shimmer sweep ── */}
 			<div className="absolute inset-0 overflow-hidden">
-				<div className="absolute top-0 left-0 h-full w-[18%] bg-gradient-to-r from-transparent via-[#2be38b]/10 to-transparent scan-sweep" />
+				<div className="absolute top-0 left-0 h-full w-[18%] bg-gradient-to-r from-transparent via-[#5fe9ff]/8 to-transparent scan-sweep" />
 			</div>
 
 			{/* ── City skyline silhouette (the agency watches over the city) ── */}
@@ -173,7 +174,7 @@ const SignozBackground = () => {
 			</svg>
 
 			{/* ── Subtle neuralyzer flash overlay ── */}
-			<div className="absolute inset-0 bg-[#2be38b]/8 neuralyze-flash" />
+			<div className="absolute inset-0 bg-[#5fe9ff]/8 neuralyze-flash" />
 		</div>
 	);
 };
