@@ -5,6 +5,8 @@ import { motion } from "framer-motion";
 import { ArrowUpRight, Radar } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect, useState } from "react";
+import { DATA } from "../data";
 import { images } from "../images";
 
 type HeroSectionProps = {
@@ -26,6 +28,25 @@ const HeroSection = ({
 	cta,
 	submissionFormUrl,
 }: HeroSectionProps) => {
+	const [countdown, setCountdown] = useState<string | null>(null);
+
+	useEffect(() => {
+		const start = new Date(DATA.startDate).getTime();
+		const end = new Date(DATA.endDate).getTime();
+		const now = Date.now();
+
+		if (now > end) {
+			setCountdown("Mission complete");
+		} else if (now >= start) {
+			setCountdown("Live now");
+		} else {
+			const days = Math.ceil((start - now) / 86_400_000);
+			setCountdown(
+				days <= 1 ? "Starts in 1 day" : `Starts in ${days} days`,
+			);
+		}
+	}, []);
+
 	return (
 		<div className="relative overflow-x-clip">
 			{/* ── Hero background image (extends up behind the navbar) ── */}
@@ -92,6 +113,24 @@ const HeroSection = ({
 							{description}
 						</motion.p>
 
+						{/* Countdown */}
+						{countdown && (
+							<motion.div
+								className="mb-5"
+								initial={{ opacity: 0, y: 12 }}
+								animate={{ opacity: 1, y: 0 }}
+								transition={{ duration: 0.5, delay: 0.6 }}
+							>
+								<span className="inline-flex items-center gap-2.5 rounded-full border border-[#5fe9ff]/40 bg-[#5fe9ff]/10 px-4 py-2 font-mono text-sm font-bold uppercase tracking-[0.16em] text-[#aef3ff]">
+									<span className="relative flex h-2.5 w-2.5">
+										<span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#5fe9ff] opacity-75" />
+										<span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-[#5fe9ff]" />
+									</span>
+									{countdown}
+								</span>
+							</motion.div>
+						)}
+
 						{/* Dates + Register */}
 						<motion.div
 							className="mb-7"
@@ -99,7 +138,7 @@ const HeroSection = ({
 							animate={{ opacity: 1, y: 0 }}
 							transition={{ duration: 0.65, delay: 0.7 }}
 						>
-							<div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-xl">
+							<div className="grid grid-cols-1 sm:grid-cols-[1.4fr_1fr] gap-4 max-w-xl">
 								<div className="dossier-card rounded-xl px-5 py-4 flex flex-col justify-center">
 									<div className="text-xs uppercase tracking-[0.18em] text-[#e5502a] mb-1.5 font-bold">
 										Dates
