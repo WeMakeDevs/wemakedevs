@@ -68,7 +68,7 @@ const faqs: FaqType[] = [
 	},
 	{
 		question: "How do I set up SigNoz?",
-		answer: "SigNoz is open source and self-hostable, or you can use SigNoz Cloud. Follow the <a href='https://signoz.io/docs/install/' target='_blank' rel='noopener noreferrer' class='text-amber-300 underline hover:text-amber-200'>install guide</a> to spin it up, then instrument your app with OpenTelemetry to start streaming traces, metrics, and logs.",
+		answer: "The easiest way is Foundry, which installs both SigNoz and its MCP server in one step. Follow the <a href='https://signoz.io/docs/install/docker/' target='_blank' rel='noopener noreferrer' class='text-amber-300 underline hover:text-amber-200'>Foundry quickstart</a> to spin it up with Docker, then instrument your app with OpenTelemetry to start streaming traces, metrics, and logs.",
 	},
 	{
 		question: "Are AI assistants like ChatGPT or Copilot permitted?",
@@ -92,7 +92,7 @@ const faqs: FaqType[] = [
 	},
 	{
 		question: "What are the judging criteria?",
-		answer: "Projects are evaluated on Potential Impact, Creativity & Innovation, Technical Excellence, Best Use of SigNoz, User Experience, and Presentation Quality. The deeper you lean on SigNoz and OpenTelemetry, the better.",
+		answer: "Projects are evaluated on Potential Impact, Creativity & Innovation, Technical Excellence, Best Use of SigNoz, User Experience, and Presentation Quality. The deeper you lean on SigNoz, the better.",
 	},
 ];
 

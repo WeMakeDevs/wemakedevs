@@ -32,7 +32,7 @@ const judgingCriteria = [
 	{
 		title: "Best Use of SigNoz",
 		description:
-			"How deeply and effectively does the project lean on SigNoz and OpenTelemetry, traces, metrics, logs, dashboards, and alerts?",
+			"How deeply and effectively does the project lean on SigNoz, traces, metrics, logs, dashboards, and alerts?",
 	},
 	{
 		title: "User Experience",
@@ -89,8 +89,8 @@ const HackathonPage = () => {
 							Your mission in this hackathon is to build
 							agent-native observability workflows, SRE copilots,
 							and AI/LLM observability dashboards powered by
-							SigNoz and OpenTelemetry. It&apos;s not about how
-							fast you code, it&apos;s about how deep you can see.
+							SigNoz. It&apos;s not about how fast you code,
+							it&apos;s about how deep you can see.
 						</p>
 					</div>
 				</ViewContainer>
@@ -110,7 +110,7 @@ const HackathonPage = () => {
 			<div id="sponsor" className="py-20 scroll-mt-44">
 				<ViewContainer>
 					<h2 className="text-3xl md:text-4xl font-black uppercase text-[#f5f5f5] glow-orange mb-8">
-						Powered By SigNoz
+						Powered By <span className="normal-case">SigNoz</span>
 					</h2>
 					<div className="dossier-card rounded-2xl overflow-hidden">
 						<div className="flex items-center justify-between p-8 border-b border-[#3c4152] flex-col md:flex-row gap-6">
@@ -148,8 +148,9 @@ const HackathonPage = () => {
 						</div>
 						<div className="p-8">
 							<p className="text-lg text-[#c0c1c3] leading-relaxed">
-								SigNoz is an open-source, OpenTelemetry-native
-								observability platform. It unifies{" "}
+								SigNoz is the one-stop open observability
+								platform built for the AI era. Instrument your
+								agents, LLMs, and the tools they call to see{" "}
 								<span className="text-[#e5502a] font-semibold">
 									traces
 								</span>
@@ -157,15 +158,19 @@ const HackathonPage = () => {
 								<span className="text-[#2be38b] font-semibold">
 									metrics
 								</span>
-								, and{" "}
+								,{" "}
 								<span className="text-[#ffcd56] font-semibold">
 									logs
+								</span>
+								, and{" "}
+								<span className="text-[#5fe9ff] font-semibold">
+									token cost
 								</span>{" "}
-								in a single pane, so you can instrument real
-								systems, build powerful dashboards, and set up
-								alerts that make AI infrastructure fully
-								debuggable. Your mission: build AI you can
-								actually see inside, with zero vendor lock-in.
+								in one place. Then point your coding agent at
+								MCP, and your agents debug with the same data.
+								Open source, built on OpenTelemetry, the
+								standard your agents already speak, with no
+								proprietary agents or lock-in.
 							</p>
 
 							<div className="mt-6 rounded-2xl border border-[#2be38b]/30 bg-[#2be38b]/8 px-6 py-5">
@@ -173,21 +178,20 @@ const HackathonPage = () => {
 									<span className="text-2xl">🛰️</span>
 									<div>
 										<p className="text-[#2be38b] font-bold text-lg">
-											Self-host free, or start on SigNoz
-											Cloud
+											Self-host SigNoz, free and open
+											source
 										</p>
 										<p className="text-[#c0c1c3] text-sm">
 											Run SigNoz yourself with Docker or
-											Kubernetes, or spin up SigNoz Cloud
-											and start ingesting telemetry in
-											minutes.{" "}
+											Kubernetes and start ingesting
+											telemetry in minutes.{" "}
 											<Link
-												href="https://signoz.io/docs/install/"
+												href="https://signoz.io/docs/install/self-host/"
 												target="_blank"
 												rel="noopener noreferrer"
 												className="text-[#ffd778] underline hover:text-[#2be38b]"
 											>
-												See the install guide
+												See the self-host install guide
 											</Link>
 											.
 										</p>

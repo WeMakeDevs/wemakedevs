@@ -31,22 +31,6 @@ const signals = [
 	},
 ];
 
-const codeSample = `from opentelemetry import trace
-from opentelemetry.instrumentation.openai import OpenAIInstrumentor
-
-# Point OTel at your SigNoz collector — that's it.
-# OTEL_EXPORTER_OTLP_ENDPOINT=https://ingest.signoz.io
-OpenAIInstrumentor().instrument()
-
-tracer = trace.get_tracer("agent-orchestrator")
-
-with tracer.start_as_current_span("plan_and_act") as span:
-    span.set_attribute("agent.tool", "vector_search")
-    result = agent.run(task)             # every LLM call is traced
-    span.set_attribute("llm.tokens", result.usage.total_tokens)
-
-# Traces, metrics & logs now stream into SigNoz. You see everything.`;
-
 const Signals = () => {
 	return (
 		<div className="py-20">
@@ -56,12 +40,12 @@ const Signals = () => {
 						📡 One Platform, Every Signal
 					</span>
 					<h2 className="text-3xl md:text-5xl font-black uppercase text-[#f5f5f5] glow-orange">
-						Traces. Metrics. Logs. Total Recall.
+						One Stop Observability Platform. Total Recall.
 					</h2>
 					<p className="text-lg text-[#c0c1c3] max-w-3xl mx-auto mt-4">
-						SigNoz unifies the three pillars of observability under
-						one OpenTelemetry-native roof. Instrument once, see
-						everything, with zero vendor lock-in.
+						SigNoz helps you observe every signal your systems and
+						agents emit, such as traces, metrics, logs, and token
+						costs, on one open platform.
 					</p>
 				</div>
 
@@ -110,7 +94,7 @@ const Signals = () => {
 						})}
 					</div>
 
-					{/* Code window */}
+					{/* Demo video */}
 					<motion.div
 						className="rounded-2xl overflow-hidden border border-[#3c4152] mib-glass-bg shadow-[0_18px_40px_rgba(0,0,0,0.6)]"
 						initial={{ opacity: 0, scale: 0.96 }}
@@ -123,12 +107,22 @@ const Signals = () => {
 							<span className="w-3 h-3 rounded-full bg-[#ffcd56]" />
 							<span className="w-3 h-3 rounded-full bg-[#2be38b]" />
 							<span className="ml-3 font-mono text-xs text-[#62687c]">
-								instrument_agent.py
+								agents-of-signoz.mov
 							</span>
 						</div>
-						<pre className="p-5 overflow-x-auto text-[13px] leading-relaxed font-mono text-[#dfe3ea]">
-							<code>{codeSample}</code>
-						</pre>
+						<video
+							className="w-full h-auto block"
+							autoPlay
+							muted
+							loop
+							playsInline
+							preload="metadata"
+						>
+							<source
+								src="/hackathons/signoz/movie.mov"
+								type="video/quicktime"
+							/>
+						</video>
 					</motion.div>
 				</div>
 			</ViewContainer>

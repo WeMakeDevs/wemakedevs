@@ -19,6 +19,8 @@ import { DATA as motiahackData } from "@/app/hackathons/motiahack25/data";
 import { images as motiahackImages } from "@/app/hackathons/motiahack25/images";
 import { DATA as openmetadataData } from "@/app/hackathons/openmetadata/data";
 import { images as openmetadataImages } from "@/app/hackathons/openmetadata/images";
+import { DATA as signozData } from "@/app/hackathons/signoz/data";
+import { images as signozImages } from "@/app/hackathons/signoz/images";
 import { DATA as tamboData } from "@/app/hackathons/tambo/data";
 import { images as tamboImages } from "@/app/hackathons/tambo/images";
 import { DATA as visionData } from "@/app/hackathons/vision/data";
@@ -44,6 +46,15 @@ type HackathonType = {
 };
 
 const hackathons: HackathonType[] = [
+	{
+		slug: signozData.slug,
+		title: signozData.titleCard,
+		description: signozData.descriptionCard,
+		thumbnail: signozImages.thumbnail,
+		startDate: signozData.startDate,
+		endDate: signozData.endDate,
+		listAs: "upcoming",
+	},
 	{
 		slug: cogneeData.slug,
 		title: cogneeData.titleCard,

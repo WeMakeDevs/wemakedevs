@@ -6,6 +6,7 @@ import ipad from "./ipad.png";
 import keychron from "./keychron.png";
 import logo from "./logo.svg";
 import macbook from "./macbook.webp";
+import thumbnail from "./thumbnail.png";
 import title from "./title.png";
 
 export const images = {
@@ -17,5 +18,6 @@ export const images = {
 	keychron,
 	logo,
 	macbook,
+	thumbnail,
 	title,
 } as const;

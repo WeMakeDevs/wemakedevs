@@ -109,6 +109,59 @@ const HackathonRules = async () => {
 						</li>
 					</ol>
 				</HackathonContentBody>
+
+				<h2 className="text-3xl font-bold text-[#f5f5f5] glow-orange mt-12 mb-6">
+					SigNoz Field Requirements
+				</h2>
+				<HackathonContentBody className="text-[#c0c1c3]">
+					<ol className="list-decimal list-outside space-y-4 pl-6">
+						<li>
+							<strong className="text-[#ea6e4a]">
+								Install SigNoz using Foundry.
+							</strong>{" "}
+							Foundry installs both SigNoz and its MCP server in
+							one step. Follow the{" "}
+							<Link
+								href="https://signoz.io/docs/install/docker/"
+								className="text-[#ffd778] hover:text-[#ea6e4a] underline"
+								target="_blank"
+								rel="noopener noreferrer"
+							>
+								Foundry quickstart
+							</Link>{" "}
+							to get started.
+						</li>
+						<li>
+							<strong className="text-[#ea6e4a]">
+								The more SigNoz features you use, the better
+								your chances.
+							</strong>{" "}
+							Using the SigNoz MCP server, Query Builder,
+							dashboards, and alerts is recommended to maximize
+							your chances of winning. Check out the{" "}
+							<Link
+								href="/hackathons/signoz/resources"
+								className="text-[#ffd778] hover:text-[#ea6e4a] underline"
+							>
+								resources section
+							</Link>
+							.
+						</li>
+						<li>
+							<strong className="text-[#ea6e4a]">
+								Make your deployment reproducible.
+							</strong>{" "}
+							Your repo must include the{" "}
+							<code className="text-[#ffd778]">casting.yaml</code>{" "}
+							and{" "}
+							<code className="text-[#ffd778]">
+								casting.yaml.lock
+							</code>
+							. Judges may re-run Foundry against them to
+							reproduce your deployment.
+						</li>
+					</ol>
+				</HackathonContentBody>
 			</ViewContainer>
 		</div>
 	);

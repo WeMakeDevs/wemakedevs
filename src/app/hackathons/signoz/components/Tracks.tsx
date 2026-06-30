@@ -66,7 +66,7 @@ const tracks: {
 		id: "03",
 		title: "Build Your Own",
 		icon: Globe,
-		tag: "Build anything with SigNoz",
+		tag: "Observe anything with SigNoz",
 		accent: "#2be38b",
 		bg: "rgba(43,227,139,0.12)",
 		builds: [
@@ -93,17 +93,6 @@ const tracks: {
 		],
 	},
 ];
-
-const levelStyles: Record<Level, string> = {
-	starter: "bg-[#2be38b]/15 text-[#2be38b]",
-	intermediate: "bg-[#ffcd56]/15 text-[#ffcd56]",
-	advanced: "bg-[#e5484d]/15 text-[#ea6d71]",
-};
-const levelLabel: Record<Level, string> = {
-	starter: "Starter",
-	intermediate: "Intermediate",
-	advanced: "Advanced",
-};
 
 const containerVariants = {
 	hidden: {},
@@ -217,11 +206,6 @@ const Tracks = () => {
 											<span className="text-[#d4d6da] text-sm leading-snug flex-1">
 												{b.name}
 											</span>
-											<span
-												className={`text-[10px] font-bold uppercase tracking-wide px-2 py-0.5 rounded shrink-0 ${levelStyles[b.level]}`}
-											>
-												{levelLabel[b.level]}
-											</span>
 										</div>
 									))}
 								</div>
@@ -232,7 +216,7 @@ const Tracks = () => {
 
 				<div className="text-center mt-10">
 					<Link
-						href={DATA.githubUrl}
+						href="https://github.com/orgs/SigNoz/projects/65"
 						target="_blank"
 						rel="noopener noreferrer"
 						className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl bg-[#e5502a]/10 border border-[#e5502a]/40 hover:bg-[#e5502a]/20 transition-colors text-[#ea6e4a] font-bold"

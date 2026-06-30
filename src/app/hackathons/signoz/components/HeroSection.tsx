@@ -92,63 +92,57 @@ const HeroSection = ({
 							{description}
 						</motion.p>
 
-						{/* Dates */}
+						{/* Dates + Register */}
 						<motion.div
 							className="mb-7"
 							initial={{ opacity: 0, y: 20 }}
 							animate={{ opacity: 1, y: 0 }}
 							transition={{ duration: 0.65, delay: 0.7 }}
 						>
-							<div className="grid grid-cols-1 sm:grid-cols-2 gap-3 max-w-2xl">
-								<div className="dossier-card rounded-xl p-4">
-									<div className="text-[11px] uppercase tracking-[0.18em] text-[#e5502a] mb-1 font-bold">
+							<div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-xl">
+								<div className="dossier-card rounded-xl px-5 py-4 flex flex-col justify-center">
+									<div className="text-xs uppercase tracking-[0.18em] text-[#e5502a] mb-1.5 font-bold">
 										Dates
 									</div>
-									<div className="font-mono text-sm font-bold text-[#f5f5f5]">
+									<div className="font-mono text-base md:text-lg font-bold text-[#f5f5f5]">
 										Jul 20 – Jul 26, 2026
 									</div>
 								</div>
-								<div className="dossier-card rounded-xl p-4">
-									<div className="text-[11px] uppercase tracking-[0.18em] text-[#2be38b] mb-1 font-bold">
-										The Mission
+								{cta.disabled ? (
+									<div className="agent-btn justify-center text-center text-base opacity-60 cursor-not-allowed pointer-events-none">
+										<Radar className="w-5 h-5" />
+										{cta.label}
 									</div>
-									<div className="font-mono text-sm font-bold text-[#f5f5f5]">
-										See inside everything you ship
-									</div>
-								</div>
+								) : (
+									<Link
+										href={cta.href}
+										target={
+											cta.openInNewTab
+												? "_blank"
+												: undefined
+										}
+										rel={
+											cta.openInNewTab
+												? "noopener noreferrer"
+												: undefined
+										}
+										className="agent-btn justify-center text-center text-base"
+									>
+										<Radar className="w-5 h-5" />
+										{cta.label}
+									</Link>
+								)}
 							</div>
 						</motion.div>
 
-						{/* CTA */}
-						<motion.div
-							className="flex items-center gap-4 flex-wrap"
-							initial={{ opacity: 0, scale: 0.9 }}
-							animate={{ opacity: 1, scale: 1 }}
-							transition={{ duration: 0.5, delay: 0.9 }}
-						>
-							{cta.disabled ? (
-								<div className="agent-btn opacity-60 cursor-not-allowed pointer-events-none">
-									<Radar className="w-5 h-5" />
-									{cta.label}
-								</div>
-							) : (
-								<Link
-									href={cta.href}
-									target={
-										cta.openInNewTab ? "_blank" : undefined
-									}
-									rel={
-										cta.openInNewTab
-											? "noopener noreferrer"
-											: undefined
-									}
-									className="agent-btn"
-								>
-									<Radar className="w-5 h-5" />
-									{cta.label}
-								</Link>
-							)}
-							{submissionFormUrl && (
+						{/* Secondary CTA */}
+						{submissionFormUrl && (
+							<motion.div
+								className="flex items-center gap-4 flex-wrap"
+								initial={{ opacity: 0, scale: 0.9 }}
+								animate={{ opacity: 1, scale: 1 }}
+								transition={{ duration: 0.5, delay: 0.9 }}
+							>
 								<Link
 									href={submissionFormUrl}
 									target="_blank"
@@ -158,8 +152,8 @@ const HeroSection = ({
 									Submit Project
 									<ArrowUpRight className="w-5 h-5" />
 								</Link>
-							)}
-						</motion.div>
+							</motion.div>
+						)}
 					</div>
 
 					{/* ── Right column: hero image ── */}
