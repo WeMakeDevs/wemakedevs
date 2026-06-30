@@ -49,7 +49,7 @@ const Signals = () => {
 					</p>
 				</div>
 
-				<div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start max-w-6xl mx-auto">
+				<div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center max-w-6xl mx-auto">
 					{/* Signals */}
 					<div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
 						{signals.map((op, i) => {
@@ -96,20 +96,12 @@ const Signals = () => {
 
 					{/* Demo video */}
 					<motion.div
-						className="rounded-2xl overflow-hidden border border-[#3c4152] mib-glass-bg shadow-[0_18px_40px_rgba(0,0,0,0.6)]"
+						className="rounded-xl overflow-hidden shadow-[0_18px_40px_rgba(0,0,0,0.6)]"
 						initial={{ opacity: 0, scale: 0.96 }}
 						whileInView={{ opacity: 1, scale: 1 }}
 						viewport={{ once: true }}
 						transition={{ duration: 0.6 }}
 					>
-						<div className="flex items-center gap-2 px-4 py-3 border-b border-[#3c4152] bg-[#0e0f13]/80">
-							<span className="w-3 h-3 rounded-full bg-[#e5484d]" />
-							<span className="w-3 h-3 rounded-full bg-[#ffcd56]" />
-							<span className="w-3 h-3 rounded-full bg-[#2be38b]" />
-							<span className="ml-3 font-mono text-xs text-[#62687c]">
-								agents-of-signoz.mov
-							</span>
-						</div>
 						<video
 							className="w-full h-auto block"
 							autoPlay

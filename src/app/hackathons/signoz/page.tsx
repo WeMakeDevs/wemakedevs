@@ -1,7 +1,7 @@
 import Faq from "@/components/Faq";
 import { HackathonNav } from "@/components/hackathon-content";
 import { ViewContainer } from "@/components/ui/view-container";
-import { SiGithub, SiSlack } from "@icons-pack/react-simple-icons";
+import { SiSlack } from "@icons-pack/react-simple-icons";
 import { Star } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -227,17 +227,6 @@ const HackathonPage = () => {
 								</div>
 							</div>
 						</div>
-					</div>
-
-					<div className="mt-8 flex items-center justify-center gap-3 text-center">
-						<Link
-							href={DATA.githubUrl}
-							target="_blank"
-							rel="noopener noreferrer"
-							className="inline-flex items-center gap-2 text-sm text-[#62687c] hover:text-[#ea6e4a] transition-colors"
-						>
-							<SiGithub size={16} /> github.com/SigNoz/signoz
-						</Link>
 					</div>
 				</ViewContainer>
 			</div>
