@@ -12,7 +12,7 @@ const DATA = {
 		"Observe your AI solutions using SigNoz. The agency is recruiting, build agent-native observability with OpenTelemetry.",
 	slug: "signoz",
 	cta: {
-		label: "Accept the Mission",
+		label: "Register",
 		href: "https://forms.gle/uxaLXAXmtKwz8uYh9",
 		openInNewTab: true,
 		disabled: false,

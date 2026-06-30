@@ -104,7 +104,7 @@ const HeroSection = ({
 									<div className="text-xs uppercase tracking-[0.18em] text-[#e5502a] mb-1.5 font-bold">
 										Dates
 									</div>
-									<div className="font-mono text-base md:text-lg font-bold text-[#f5f5f5]">
+									<div className="font-mono text-base md:text-lg font-bold text-[#f5f5f5] whitespace-nowrap">
 										Jul 20 – Jul 26, 2026
 									</div>
 								</div>

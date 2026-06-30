@@ -2,32 +2,32 @@
 
 import { ViewContainer } from "@/components/ui/view-container";
 import { motion } from "framer-motion";
-import { Activity, GitBranch, ScrollText, TriangleAlert } from "lucide-react";
+import { Bot, Layers, Network, Server } from "lucide-react";
 
 const signals = [
 	{
-		fn: "Traces",
-		icon: GitBranch,
+		fn: "AI Agent Tracing",
+		icon: Bot,
 		color: "#e5502a",
-		desc: "Follow every request across services and agent steps. See exactly where latency hides with distributed tracing built on OpenTelemetry.",
+		desc: "Trace every step of your AI agent: tool calls, LLM requests, retrieval hops, and decision chains in one view.",
 	},
 	{
-		fn: "Metrics",
-		icon: Activity,
+		fn: "One-Stop Observability",
+		icon: Layers,
 		color: "#2be38b",
-		desc: "Track latency, throughput, error rates, token costs, and custom business metrics with the Query Builder, PromQL, or ClickHouse SQL.",
+		desc: "Traces, metrics, and logs in a single platform. Correlate signals across your entire stack without switching tools.",
 	},
 	{
-		fn: "Logs",
-		icon: ScrollText,
+		fn: "Flexible Deployment",
+		icon: Server,
 		color: "#ffcd56",
-		desc: "Ingest logs at scale and correlate them with traces and metrics in a single pane, so a spike always tells you its story.",
+		desc: "Self-host SigNoz on your own infrastructure for full control, or use SigNoz Cloud to get started in minutes.",
 	},
 	{
-		fn: "Alerts & Exceptions",
-		icon: TriangleAlert,
-		color: "#ea6e4a",
-		desc: "Set alerts on any signal and catch exceptions before users do. The agency gets notified the moment something goes dark.",
+		fn: "OpenTelemetry Native",
+		icon: Network,
+		color: "#5fe9ff",
+		desc: "Built on OpenTelemetry from day one. Instrument any language, any framework. Your telemetry data stays yours forever.",
 	},
 ];
 
