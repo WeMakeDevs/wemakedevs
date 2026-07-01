@@ -33,38 +33,35 @@ const Hackathons = ({ className, ...props }: GeneralComponent) => {
 				</div>
 
 				<div className="my-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-6 auto-rows-fr">
-					{hackathons
-						.filter(hackathon => hackathon.slug !== "signoz")
-						.slice(0, 1)
-						.map(hackathon => (
-							<HackathonCard
-								key={hackathon.slug}
-								href={hackathon.slug}
-								hrefType={hackathon.hrefType}
-							>
-								<HackathonCardImage
-									src={hackathon.thumbnail}
-									alt={hackathon.title}
+					{hackathons.slice(0, 2).map(hackathon => (
+						<HackathonCard
+							key={hackathon.slug}
+							href={hackathon.slug}
+							hrefType={hackathon.hrefType}
+						>
+							<HackathonCardImage
+								src={hackathon.thumbnail}
+								alt={hackathon.title}
+							/>
+							<HackathonCardTitle>
+								{hackathon.title}
+							</HackathonCardTitle>
+							<div className="flex justify-between items-center">
+								<HackathonStatus
+									startDate={hackathon.startDate}
+									endDate={hackathon.endDate}
 								/>
-								<HackathonCardTitle>
-									{hackathon.title}
-								</HackathonCardTitle>
-								<div className="flex justify-between items-center">
-									<HackathonStatus
-										startDate={hackathon.startDate}
-										endDate={hackathon.endDate}
-									/>
-									<HackathonCardDates
-										startDate={hackathon.startDate}
-										endDate={hackathon.endDate}
-										showDate={hackathon.showDate}
-									/>
-								</div>
-								<HackathonCardDescription>
-									{hackathon.description}
-								</HackathonCardDescription>
-							</HackathonCard>
-						))}
+								<HackathonCardDates
+									startDate={hackathon.startDate}
+									endDate={hackathon.endDate}
+									showDate={hackathon.showDate}
+								/>
+							</div>
+							<HackathonCardDescription>
+								{hackathon.description}
+							</HackathonCardDescription>
+						</HackathonCard>
+					))}
 					<HackathonLastCard />
 				</div>
 			</ViewContainer>
