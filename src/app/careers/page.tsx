@@ -9,27 +9,6 @@ import Link from "next/link";
 
 const jobs: JobCardType[] = [
 	{
-		title: "Social Media Manager",
-		description:
-			"Manage and grow our online presence by crafting engaging content and building relationships with our audience.",
-		location: "Remote",
-		salary: "₹10,000 - ₹15,000 per month (based on performance)",
-		prerequisites: [
-			"Proven experience in social media management",
-			"Excellent communication and copywriting skills",
-			"Creativity in content creation",
-		],
-		type: "Freelance",
-		postedDate: "2024-12-08",
-		applicationDeadline: "2024-12-31",
-		benefits: [
-			"Flexible working hours",
-			"Professional development opportunities",
-			"Remote work allowance",
-		],
-		applyLink: "https://example.com/apply/social-media-manager",
-	},
-	{
 		title: "Graphic Designer",
 		description:
 			"Create visually compelling designs that align with our brand identity and resonate with our audience.",
@@ -40,14 +19,15 @@ const jobs: JobCardType[] = [
 			"Ability to meet deadlines in a fast-paced environment",
 			"Good communication and teamwork skills",
 		],
-		type: "Freelance",
+		type: "Internship",
 		postedDate: "2024-12-08",
 		applicationDeadline: "2024-12-20",
 		benefits: [
 			"Opportunity to work with a creative team",
 			"Access to design resources",
 		],
-		applyLink: "https://example.com/apply/graphic-designer",
+		applyLink:
+			"https://docs.google.com/document/d/18rzz9LVnteJcU2PXLLruhKdKwt3ISR3PPh-728mzWZw/edit?usp=sharing",
 	},
 ];
 const Careers = () => {
