@@ -46,37 +46,6 @@ const HackathonResources = async () => {
 				</div>
 
 				<HackathonContentTitle className="text-[#f5f5f5]">
-					The Three Pillars of Observability
-				</HackathonContentTitle>
-				<HackathonContentBody className="text-[#c0c1c3]">
-					<ul className="space-y-3 list-disc list-inside">
-						<li>
-							<strong className="text-[#ea6e4a]">Traces</strong>:
-							follow every request across services and agent steps
-							with distributed tracing built on OpenTelemetry
-						</li>
-						<li>
-							<strong className="text-[#ea6e4a]">Metrics</strong>:
-							track latency, throughput, error rates, and token
-							costs with the Query Builder, PromQL, or ClickHouse
-							SQL
-						</li>
-						<li>
-							<strong className="text-[#ea6e4a]">Logs</strong>:
-							ingest logs at scale and correlate them with traces
-							and metrics in a single pane
-						</li>
-						<li>
-							<strong className="text-[#ea6e4a]">
-								Alerts &amp; Exceptions
-							</strong>
-							: set alerts on any signal and catch exceptions
-							before your users do
-						</li>
-					</ul>
-				</HackathonContentBody>
-
-				<HackathonContentTitle className="text-[#f5f5f5]">
 					Foundry
 				</HackathonContentTitle>
 				<HackathonContentBody className="text-[#c0c1c3]">
