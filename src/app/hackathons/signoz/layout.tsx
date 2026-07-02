@@ -13,18 +13,11 @@ export const metadata: Metadata = {
 		title: `${DATA.title} | WeMakeDevs`,
 		description: DATA.description,
 		url: `https://wemakedevs.org/hackathons/${DATA.slug}`,
-		images: {
-			url: `/hackathons/${DATA.slug}/opengraph-image`,
-			width: 1200,
-			height: 630,
-			alt: `${DATA.title} - WeMakeDevs Hackathon`,
-		},
 	},
 	twitter: {
 		card: "summary_large_image",
 		title: `${DATA.title} | WeMakeDevs`,
 		description: DATA.descriptionCard,
-		images: [`/hackathons/${DATA.slug}/opengraph-image`],
 	},
 };
 

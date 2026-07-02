@@ -148,8 +148,8 @@ const HeroSection = ({
 									</div>
 								</div>
 								{cta.disabled ? (
-									<div className="agent-btn justify-center text-center text-base opacity-60 cursor-not-allowed pointer-events-none">
-										<Radar className="w-5 h-5" />
+									<div className="agent-btn justify-center text-center text-lg md:text-xl opacity-60 cursor-not-allowed pointer-events-none">
+										<Radar className="w-6 h-6" />
 										{cta.label}
 									</div>
 								) : (
@@ -165,9 +165,9 @@ const HeroSection = ({
 												? "noopener noreferrer"
 												: undefined
 										}
-										className="agent-btn justify-center text-center text-base"
+										className="agent-btn justify-center text-center text-lg md:text-xl"
 									>
-										<Radar className="w-5 h-5" />
+										<Radar className="w-6 h-6" />
 										{cta.label}
 									</Link>
 								)}

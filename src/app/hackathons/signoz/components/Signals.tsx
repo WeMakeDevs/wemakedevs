@@ -111,6 +111,10 @@ const Signals = () => {
 							preload="metadata"
 						>
 							<source
+								src="/hackathons/signoz/movie.mp4"
+								type="video/mp4"
+							/>
+							<source
 								src="/hackathons/signoz/movie.mov"
 								type="video/quicktime"
 							/>
