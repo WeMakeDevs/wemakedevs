@@ -229,11 +229,11 @@ const HackathonPage = () => {
 						</div>
 					</div>
 
-					{/* ── Infrastructure sponsor: AWS ── */}
+					{/* ── Cloud sponsor: AWS ── */}
 					<div className="mt-12">
 						<div className="flex items-center gap-3 mb-5">
 							<span className="font-mono text-[11px] uppercase tracking-[0.2em] text-[#ff9900] border border-[#ff9900]/40 bg-[#ff9900]/10 px-2.5 py-1 rounded">
-								Infrastructure Sponsor
+								Cloud Sponsor
 							</span>
 							<div className="h-px flex-1 bg-[#3c4152]/60" />
 						</div>

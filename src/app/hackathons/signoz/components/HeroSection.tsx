@@ -174,7 +174,7 @@ const HeroSection = ({
 							</div>
 						</motion.div>
 
-						{/* Infrastructure partner lockup */}
+						{/* Cloud sponsor lockup */}
 						<motion.div
 							className="mb-7 flex items-center gap-3"
 							initial={{ opacity: 0, y: 12 }}
@@ -182,7 +182,7 @@ const HeroSection = ({
 							transition={{ duration: 0.6, delay: 0.85 }}
 						>
 							<span className="text-[11px] font-mono uppercase tracking-[0.18em] text-[#8b93a7]">
-								Infrastructure Partner
+								Cloud Sponsor
 							</span>
 							<span className="h-4 w-px bg-[#3c4152]" />
 							<Image
