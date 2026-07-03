@@ -97,7 +97,7 @@ const HeroSection = ({
 							transition={{ duration: 0.65, delay: 0.4 }}
 						>
 							<span className="text-5xl md:text-7xl font-black text-[#e5502a] glow-orange">
-								$10,000
+								$20,000
 							</span>
 							<span className="text-lg md:text-xl text-[#c0c1c3] font-semibold">
 								in prizes + job interviews at SigNoz

@@ -98,7 +98,7 @@ const PrizesShowcase = () => {
 						The Bounty
 					</h2>
 					<p className="text-lg text-[#c0c1c3] max-w-2xl mx-auto mb-6">
-						$10,000 in prizes. Complete the mission, collect the
+						$20,000 in prizes. Complete the mission, collect the
 						reward.
 					</p>
 					<div className="inline-flex max-w-full items-center gap-3 px-5 py-3 rounded-2xl mib-glass-bg border border-[#ffcd56]/50 shadow-md">

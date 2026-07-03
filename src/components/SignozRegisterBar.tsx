@@ -34,7 +34,7 @@ const SignozRegisterBar = () => {
 			<p className="flex-1 text-sm md:text-base text-[#f5f7fa] font-semibold font-title truncate">
 				<span className="hidden sm:inline">
 					🕶️ Agents of SigNoz hackathon is open! See inside everything
-					you ship. $10,000 in prizes.
+					you ship. $20,000 in prizes.
 				</span>
 				<span className="sm:hidden">
 					🕶️ Agents of SigNoz hackathon is open!

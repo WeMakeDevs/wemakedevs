@@ -81,7 +81,7 @@ const faqs: FaqType[] = [
 	},
 	{
 		question: "What can I win?",
-		answer: "$10,000 in prizes across three tracks. Win the AI & Agent Observability track and every team member gets a MacBook, win Signals & Dashboards and each member gets an iPad, and win Build Your Own and each member gets an iPhone 17. Top winners also get job interviews at SigNoz. The top 20 PRs earn $100 each, the best blogs win a Keychron mechanical keyboard, and the top 10 social posts get exclusive swag shipped to them.",
+		answer: "$20,000 in prizes across three tracks, including AWS credits for top teams. Win the AI & Agent Observability track and every team member gets a MacBook, win Signals & Dashboards and each member gets an iPad, and win Build Your Own and each member gets an iPhone 17. Top winners also get job interviews at SigNoz. The top 20 PRs earn $100 each, the best blogs win a Keychron mechanical keyboard, and the top 10 social posts get exclusive swag shipped to them.",
 	},
 	{
 		question: "Where can I get help during the hackathon?",
