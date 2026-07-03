@@ -1,4 +1,3 @@
-import CogneeRegisterBar from "@/components/CogneeRegisterBar";
 import Faq from "@/components/Faq";
 import Footer from "@/components/Footer";
 import Hackathons from "@/components/Hackathons";
@@ -9,6 +8,7 @@ import Navbar from "@/components/Navbar";
 import Newsletter from "@/components/Newsletter";
 import Numbers from "@/components/Numbers";
 import Partners from "@/components/Partners";
+import SignozRegisterBar from "@/components/SignozRegisterBar";
 import SponsorTestimonialsScroll from "@/components/SponsorTestimonialsScroll";
 import Testimonials from "@/components/Testimonials";
 import { FAQS } from "@/constants";
@@ -28,7 +28,7 @@ export default function Home() {
 			<Faq FAQS={FAQS} />
 			<Partners />
 			<Footer />
-			<CogneeRegisterBar />
+			<SignozRegisterBar />
 		</div>
 	);
 }
