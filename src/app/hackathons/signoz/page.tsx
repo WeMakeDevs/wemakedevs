@@ -242,9 +242,11 @@ const HackathonPage = () => {
 							<div className="flex items-center justify-between p-8 border-b border-[#3c4152] flex-col md:flex-row gap-6">
 								<div className="flex items-center gap-4">
 									<div className="bg-[#232f3e] px-5 py-3 rounded-xl border border-[#3c4152]">
-										<span className="text-2xl font-black lowercase text-[#ff9900]">
-											aws
-										</span>
+										<Image
+											src={images.awsWhite}
+											alt="AWS"
+											className="h-8 w-auto"
+										/>
 									</div>
 									<span className="text-[#c0c1c3] text-lg">
 										Host your applications on AWS

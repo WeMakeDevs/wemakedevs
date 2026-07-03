@@ -190,9 +190,11 @@ const PrizesShowcase = () => {
 						<div className="relative z-10">
 							<div className="flex items-center gap-4 mb-8">
 								<div className="bg-[#232f3e] border border-[#ff9900]/40 px-4 py-3 rounded-xl">
-									<span className="text-xl font-black lowercase text-[#ff9900]">
-										aws
-									</span>
+									<Image
+										src={images.awsWhite}
+										alt="AWS"
+										className="h-7 w-auto"
+									/>
 								</div>
 								<div>
 									<h3 className="text-2xl md:text-3xl font-bold text-[#f5f5f5]">
