@@ -2,7 +2,7 @@ import Faq from "@/components/Faq";
 import { HackathonNav } from "@/components/hackathon-content";
 import { ViewContainer } from "@/components/ui/view-container";
 import { SiSlack } from "@icons-pack/react-simple-icons";
-import { Star } from "lucide-react";
+import { ArrowUpRight, Star } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import HeroSection from "./components/HeroSection";
@@ -223,6 +223,77 @@ const HackathonPage = () => {
 											to find yours and ship instrumented
 											systems faster.
 										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					{/* ── Infrastructure sponsor: AWS ── */}
+					<div className="mt-12">
+						<div className="flex items-center gap-3 mb-5">
+							<span className="font-mono text-[11px] uppercase tracking-[0.2em] text-[#ff9900] border border-[#ff9900]/40 bg-[#ff9900]/10 px-2.5 py-1 rounded">
+								Infrastructure Sponsor
+							</span>
+							<div className="h-px flex-1 bg-[#3c4152]/60" />
+						</div>
+
+						<div className="dossier-card rounded-2xl overflow-hidden">
+							<div className="flex items-center justify-between p-8 border-b border-[#3c4152] flex-col md:flex-row gap-6">
+								<div className="flex items-center gap-4">
+									<div className="bg-[#232f3e] px-5 py-3 rounded-xl border border-[#3c4152]">
+										<span className="text-2xl font-black lowercase text-[#ff9900]">
+											aws
+										</span>
+									</div>
+									<span className="text-[#c0c1c3] text-lg">
+										Host your applications on AWS
+									</span>
+								</div>
+								<Link
+									href="https://builder.aws.com"
+									target="_blank"
+									rel="noopener noreferrer"
+									className="px-6 py-3 rounded-xl flex gap-2 items-center bg-[#ff9900] hover:bg-[#ec8b00] transition-colors duration-300 text-[#232f3e] font-bold shadow-md"
+								>
+									Explore the Builder Center
+									<ArrowUpRight size={18} />
+								</Link>
+							</div>
+							<div className="p-8">
+								<p className="text-lg text-[#c0c1c3] leading-relaxed">
+									Deploy and scale your hackathon build on{" "}
+									<span className="text-[#ff9900] font-semibold">
+										AWS
+									</span>
+									. Level up with hands-on tutorials, guides,
+									and community resources at the{" "}
+									<Link
+										href="https://builder.aws.com"
+										target="_blank"
+										rel="noopener noreferrer"
+										className="text-[#ffd778] underline hover:text-[#ff9900]"
+									>
+										AWS Builder Center
+									</Link>{" "}
+									to learn, build, and ship faster.
+								</p>
+
+								<div className="mt-6 rounded-2xl border border-[#ff9900]/30 bg-[#ff9900]/8 px-6 py-5">
+									<div className="flex items-start gap-3">
+										<span className="text-2xl">🎁</span>
+										<div>
+											<p className="text-[#ff9900] font-bold text-lg">
+												$100 in free AWS credits for
+												everyone
+											</p>
+											<p className="text-[#c0c1c3] text-sm">
+												Every participant gets $100 in
+												AWS credits to host and run
+												their projects, no matter which
+												track you pick.
+											</p>
+										</div>
 									</div>
 								</div>
 							</div>

@@ -184,6 +184,64 @@ const PrizesShowcase = () => {
 						</div>
 					</div>
 
+					{/* AWS credits */}
+					<div className="relative rounded-3xl p-6 md:p-10 overflow-hidden mib-glass-bg border border-[#ff9900]/30 shadow-[0_18px_44px_rgba(0,0,0,0.6)]">
+						<div className="pointer-events-none absolute -top-24 -right-24 w-72 h-72 bg-[#ff9900]/12 rounded-full blur-3xl" />
+						<div className="relative z-10">
+							<div className="flex items-center gap-4 mb-8">
+								<div className="bg-[#232f3e] border border-[#ff9900]/40 px-4 py-3 rounded-xl">
+									<span className="text-xl font-black lowercase text-[#ff9900]">
+										aws
+									</span>
+								</div>
+								<div>
+									<h3 className="text-2xl md:text-3xl font-bold text-[#f5f5f5]">
+										AWS Credits for Top Teams
+									</h3>
+									<p className="text-[#c0c1c3] text-sm mt-1">
+										Extra cloud credits to keep building and
+										scaling after the hackathon
+									</p>
+								</div>
+							</div>
+
+							<div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
+								{[
+									{
+										place: "1st Place",
+										amount: "$5,000",
+										emoji: "🥇",
+									},
+									{
+										place: "2nd Place",
+										amount: "$3,000",
+										emoji: "🥈",
+									},
+									{
+										place: "3rd Place",
+										amount: "$2,000",
+										emoji: "🥉",
+									},
+								].map(tier => (
+									<div
+										key={tier.place}
+										className="rounded-2xl border border-[#ff9900]/25 bg-[#ff9900]/[0.06] p-6 text-center"
+									>
+										<div className="text-3xl mb-2">
+											{tier.emoji}
+										</div>
+										<div className="text-3xl md:text-4xl font-black text-[#ff9900]">
+											{tier.amount}
+										</div>
+										<div className="text-[#c0c1c3] text-sm font-semibold mt-1">
+											{tier.place} · AWS credits
+										</div>
+									</div>
+								))}
+							</div>
+						</div>
+					</div>
+
 					{/* Side tracks */}
 					<div className="grid grid-cols-1 md:grid-cols-2 gap-6">
 						{/* Best blogs */}
