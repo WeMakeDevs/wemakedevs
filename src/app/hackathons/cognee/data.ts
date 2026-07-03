@@ -17,7 +17,7 @@ const DATA = {
 		openInNewTab: true,
 		disabled: false,
 	},
-	submissionFormUrl: "",
+	submissionFormUrl: "https://forms.gle/KXFatNScKAqAvCyM8",
 	discordUrl: "https://discord.com/invite/m63hxKsp4p",
 };
 
@@ -68,6 +68,10 @@ const faqs: FaqType[] = [
 	{
 		question: "How do I set up Cognee?",
 		answer: "Cognee is self-hosted and pip-installable. Follow the <a href='https://docs.cognee.ai/guides/self-improvement-quickstart' target='_blank' rel='noopener noreferrer' class='text-amber-300 underline hover:text-amber-200'>quickstart</a> to spin up your memory layer locally, then call <code>remember()</code> and <code>recall()</code> to give your agent permanent context.",
+	},
+	{
+		question: "How do I submit my project?",
+		answer: "Submit your project through the <a href='https://forms.gle/KXFatNScKAqAvCyM8' target='_blank' rel='noopener noreferrer' class='text-amber-300 underline hover:text-amber-200'>project submission form</a> before the deadline on July 5, 2026. Make sure your repo is public and your demo is ready.",
 	},
 	{
 		question: "Are AI assistants like ChatGPT or Copilot permitted?",
@@ -142,6 +146,10 @@ const schedule = [
 				description:
 					"Submit your project before the deadline. Don't let your memory of the deadline slip away.",
 				time: "2026-07-05T23:59:00Z",
+				link: {
+					name: "Submit Project",
+					url: "https://forms.gle/KXFatNScKAqAvCyM8",
+				},
 			},
 		],
 	},

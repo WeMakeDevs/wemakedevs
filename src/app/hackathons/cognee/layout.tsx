@@ -1,7 +1,9 @@
 import HackathonFooter from "@/components/HackathonFooter";
 import HackathonNavbar from "@/components/HackathonNavbar";
 import type { navLinksType } from "@/types";
+import { ArrowUpRight } from "lucide-react";
 import type { Metadata } from "next";
+import Link from "next/link";
 import VegasBackground from "./components/VegasBackground";
 import { DATA } from "./data";
 import "./styles.css";
@@ -59,8 +61,8 @@ export default function RootLayout({
 			type: "link",
 		},
 		{
-			name: "Register",
-			url: DATA.cta.href,
+			name: "Submit Project",
+			url: DATA.submissionFormUrl,
 			type: "button",
 			openInNewTab: true,
 		},
@@ -72,6 +74,31 @@ export default function RootLayout({
 			<div className="relative z-10">
 				<HackathonNavbar customNavLinks={hackathonNavLinks} />
 				{children}
+
+				{/* ── Submit your projects banner ── */}
+				<div className="bg-gradient-to-r from-[#e23b2d] to-[#c33124] border-y-2 border-[#f6c453]">
+					<div className="max-w-5xl mx-auto px-6 py-8 flex flex-col md:flex-row items-center justify-between gap-5 text-center md:text-left">
+						<div>
+							<h3 className="text-2xl md:text-3xl font-black italic uppercase text-white">
+								Submit Your Projects Now
+							</h3>
+							<p className="text-[#ffe6c7] font-medium mt-1">
+								Built something unforgettable? Send it in before
+								the deadline.
+							</p>
+						</div>
+						<Link
+							href={DATA.submissionFormUrl}
+							target="_blank"
+							rel="noopener noreferrer"
+							className="shrink-0 inline-flex items-center gap-2 px-7 py-3.5 rounded-xl bg-[#fffdf6] text-[#c33124] font-black text-lg hover:bg-[#fff1d6] transition-colors shadow-lg border-2 border-[#f6c453]"
+						>
+							Submit Project
+							<ArrowUpRight className="w-5 h-5" />
+						</Link>
+					</div>
+				</div>
+
 				<div className="border-t border-[#b07d12]/20 bg-[#f1dcb4]/50">
 					<div className="max-w-4xl mx-auto px-6 py-6 text-center">
 						<p className="text-xs leading-relaxed text-[#7c6244]">

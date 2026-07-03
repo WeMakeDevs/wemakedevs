@@ -21,7 +21,7 @@ const signals = [
 		fn: "Flexible Deployment",
 		icon: Server,
 		color: "#ffcd56",
-		desc: "Self-host SigNoz on your own infrastructure for full control, or use SigNoz Cloud to get started in minutes.",
+		desc: "Self-host SigNoz on your own infrastructure for full control, or use SigNoz to get started in minutes.",
 	},
 	{
 		fn: "OpenTelemetry Native",
