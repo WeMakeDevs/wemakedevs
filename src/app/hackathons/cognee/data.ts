@@ -5,7 +5,7 @@ const DATA = {
 	titleCard: "The Hangover Part AI",
 	prize: "MacBooks, iPads, Keychron Keyboards & Job Interviews",
 	startDate: "2026-06-29T00:00:00Z",
-	endDate: "2026-07-05T23:59:00Z",
+	endDate: "2026-07-05T23:59:00+05:30",
 	description:
 		"Your AI woke up in Vegas with no memory of last night. Build AI that doesn't forget with Cognee's self-hosted, hybrid graph-vector memory layer.",
 	descriptionCard:
