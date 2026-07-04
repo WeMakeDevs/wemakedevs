@@ -144,8 +144,8 @@ const schedule = [
 			{
 				title: "Final Submissions Due",
 				description:
-					"Submit your project before the deadline. Don't let your memory of the deadline slip away.",
-				time: "2026-07-05T23:59:00Z",
+					"Submit your project before the deadline, 11:59 PM IST on July 5. Don't let your memory of the deadline slip away.",
+				time: "2026-07-05T23:59:00+05:30",
 				link: {
 					name: "Submit Project",
 					url: "https://forms.gle/KXFatNScKAqAvCyM8",
