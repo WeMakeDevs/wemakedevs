@@ -108,10 +108,10 @@ const schedule = [
 				time: "2026-07-20T00:00:00Z",
 			},
 			{
-				title: "Livestream: Building with SigNoz",
+				title: "Kickoff Livestream",
 				description:
-					"Tune in for a deep dive into building with SigNoz and OpenTelemetry, live demos, and your questions answered as the hackathon gets underway.",
-				time: "2026-07-20T15:00:00Z",
+					"Join the kickoff livestream for a deep dive into building with SigNoz and OpenTelemetry, live demos, and your questions answered as the hackathon gets underway.",
+				time: "2026-07-20T19:30:00+05:30",
 			},
 		],
 	},
