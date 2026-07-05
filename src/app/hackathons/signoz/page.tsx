@@ -253,7 +253,7 @@ const HackathonPage = () => {
 									</span>
 								</div>
 								<Link
-									href="https://builder.aws.com"
+									href="https://bit.ly/aws-wmd"
 									target="_blank"
 									rel="noopener noreferrer"
 									className="px-6 py-3 rounded-xl flex gap-2 items-center bg-[#ff9900] hover:bg-[#ec8b00] transition-colors duration-300 text-[#232f3e] font-bold shadow-md"
@@ -271,7 +271,7 @@ const HackathonPage = () => {
 									. Level up with hands-on tutorials, guides,
 									and community resources at the{" "}
 									<Link
-										href="https://builder.aws.com"
+										href="https://bit.ly/aws-wmd"
 										target="_blank"
 										rel="noopener noreferrer"
 										className="text-[#ffd778] underline hover:text-[#ff9900]"
