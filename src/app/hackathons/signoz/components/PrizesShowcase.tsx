@@ -27,11 +27,11 @@ const IPadImg = () => (
 		className="max-h-full w-auto object-contain drop-shadow-[0_8px_20px_rgba(0,0,0,0.5)]"
 	/>
 );
-const KeychronImg = () => (
+const LegoFerrariImg = () => (
 	<Image
-		src={images.keychron}
-		alt="Keychron mechanical keyboard"
-		className="w-full h-full object-cover object-center"
+		src={images.legoFerrari}
+		alt="LEGO Ferrari SF-24 set"
+		className="max-h-full w-auto object-contain"
 	/>
 );
 
@@ -257,21 +257,21 @@ const PrizesShowcase = () => {
 								</h3>
 							</div>
 							<div className="mb-5 w-[70%] mx-auto aspect-[5/2] overflow-hidden flex items-center justify-center rounded-lg drop-shadow-[0_8px_20px_rgba(0,0,0,0.5)]">
-								<KeychronImg />
+								<LegoFerrariImg />
 							</div>
 							<p className="text-[#c0c1c3] leading-relaxed mb-6">
 								Write about your build, your journey, or how
 								SigNoz gives your systems total observability.
 								The best blogs win a{" "}
 								<span className="text-[#ffcd56] font-semibold">
-									Keychron mechanical keyboard worth $120
+									LEGO Ferrari SF-24 set worth $250
 								</span>
 								.
 							</p>
 							<div className="flex items-center gap-3 bg-[#0b0c0e] rounded-xl px-4 py-3 border border-[#ffcd56]/25">
 								<Star className="w-5 h-5 text-[#ffcd56] shrink-0" />
 								<span className="font-semibold text-[#ffcd56]">
-									Keychron Mechanical Keyboard ($120)
+									LEGO Ferrari SF-24 Set ($250)
 								</span>
 							</div>
 						</div>

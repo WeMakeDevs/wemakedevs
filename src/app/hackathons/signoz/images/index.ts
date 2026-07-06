@@ -5,6 +5,7 @@ import hero from "./hero.png";
 import iphone from "./iPhone.png";
 import ipad from "./ipad.png";
 import keychron from "./keychron.png";
+import legoFerrari from "./lego.png.webp";
 import logo from "./logo.svg";
 import macbook from "./macbook.webp";
 import thumbnail from "./thumbnail.png";
@@ -18,6 +19,7 @@ export const images = {
 	ipad,
 	iphone,
 	keychron,
+	legoFerrari,
 	logo,
 	macbook,
 	thumbnail,
