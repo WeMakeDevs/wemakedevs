@@ -160,25 +160,6 @@ const HackathonRules = async () => {
 							. Judges may re-run Foundry against them to
 							reproduce your deployment.
 						</li>
-						<li>
-							<strong className="text-[#ea6e4a]">
-								AWS track requirements.
-							</strong>{" "}
-							To be eligible for the AWS track prizes, signing up
-							to the{" "}
-							<Link
-								href="https://bit.ly/aws-wmd"
-								className="text-[#ffd778] hover:text-[#ea6e4a] underline"
-								target="_blank"
-								rel="noopener noreferrer"
-							>
-								AWS Builder Center
-							</Link>{" "}
-							is mandatory, and you must build with AWS. Projects
-							that don&apos;t sign up to the AWS Builder Center or
-							don&apos;t build on AWS are not eligible for the AWS
-							track prizes.
-						</li>
 					</ol>
 				</HackathonContentBody>
 			</ViewContainer>

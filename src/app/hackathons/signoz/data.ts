@@ -3,7 +3,7 @@ import type { FaqType } from "@/types";
 const DATA = {
 	title: "Agents of SigNoz",
 	titleCard: "Agents of SigNoz",
-	prize: "MacBooks, iPads, iPhones, LEGO Ferrari SF-24 & Job Interviews",
+	prize: "MacBook Air, iPad Air, iPhone Air, LEGO Ferrari SF-24 & Job Interviews",
 	startDate: "2026-07-20T00:00:00Z",
 	endDate: "2026-07-26T23:59:00Z",
 	description:
@@ -81,7 +81,7 @@ const faqs: FaqType[] = [
 	},
 	{
 		question: "What can I win?",
-		answer: "$20,000 in prizes across three tracks, including AWS credits for top teams. Win the AI & Agent Observability track and every team member gets a MacBook, win Signals & Dashboards and each member gets an iPad, and win Build Your Own and each member gets an iPhone 17. Top winners also get job interviews at SigNoz. The top 20 PRs earn $100 each, the best blogs win a LEGO Ferrari SF-24 set worth $250, and the top 10 social posts get exclusive swag shipped to them.",
+		answer: "$20,000 in prizes across three tracks. Win the AI & Agent Observability track and every team member gets a MacBook Air, win Signals & Dashboards and each member gets an iPad Air, and win Build Your Own and each member gets an iPhone Air. Top winners also get job interviews at SigNoz. The top 20 PRs earn $100 each, the best blogs win a LEGO Ferrari SF-24 set worth $250, and the top 10 social posts get exclusive swag shipped to them.",
 	},
 	{
 		question: "Where can I get help during the hackathon?",

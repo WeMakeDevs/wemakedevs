@@ -9,21 +9,21 @@ import { images } from "../images";
 const MacBookImg = () => (
 	<Image
 		src={images.macbook}
-		alt="Apple MacBook"
+		alt="Apple MacBook Air"
 		className="max-h-full w-auto object-contain drop-shadow-[0_8px_20px_rgba(0,0,0,0.5)]"
 	/>
 );
 const IPhoneImg = () => (
 	<Image
 		src={images.iphone}
-		alt="Apple iPhone 17"
+		alt="Apple iPhone Air"
 		className="max-h-full w-auto object-contain drop-shadow-[0_8px_20px_rgba(0,0,0,0.5)]"
 	/>
 );
 const IPadImg = () => (
 	<Image
 		src={images.ipad}
-		alt="Apple iPad"
+		alt="Apple iPad Air"
 		className="max-h-full w-auto object-contain drop-shadow-[0_8px_20px_rgba(0,0,0,0.5)]"
 	/>
 );
@@ -123,7 +123,7 @@ const PrizesShowcase = () => {
 								</div>
 								<div>
 									<h3 className="text-2xl md:text-3xl font-bold text-[#f5f5f5]">
-										Grand Prizes for All Team Members
+										Get the Apple Air Ecosystem
 									</h3>
 									<p className="text-[#c0c1c3] text-sm mt-1">
 										One prize per track · maximum team size
@@ -136,21 +136,21 @@ const PrizesShowcase = () => {
 							<div className="grid grid-cols-1 md:grid-cols-3 gap-5">
 								<PrizeCard
 									place="Track 01 · AI & Agent Observability"
-									title="Apple MacBook"
+									title="MacBook Air"
 									subtitle="One per team member, or the equivalent cash amount, for the best AI & agent observability build on SigNoz"
 									icon={<MacBookImg />}
 									accentColor="#ea6e4a"
 								/>
 								<PrizeCard
 									place="Track 02 · Signals & Dashboards"
-									title="Apple iPad"
+									title="iPad Air"
 									subtitle="One per team member, or the equivalent cash amount, for the best OpenTelemetry instrumentation & dashboard build"
 									icon={<IPadImg />}
 									accentColor="#ffcd56"
 								/>
 								<PrizeCard
 									place="Track 03 · Build Your Own"
-									title="Apple iPhone 17"
+									title="iPhone Air"
 									subtitle="One per team member, or the equivalent cash amount, for the best build-anything project powered by SigNoz"
 									icon={<IPhoneImg />}
 									accentColor="#2be38b"
@@ -180,66 +180,6 @@ const PrizesShowcase = () => {
 										</p>
 									</div>
 								</div>
-							</div>
-						</div>
-					</div>
-
-					{/* AWS credits */}
-					<div className="relative rounded-3xl p-6 md:p-10 overflow-hidden mib-glass-bg border border-[#ff9900]/30 shadow-[0_18px_44px_rgba(0,0,0,0.6)]">
-						<div className="pointer-events-none absolute -top-24 -right-24 w-72 h-72 bg-[#ff9900]/12 rounded-full blur-3xl" />
-						<div className="relative z-10">
-							<div className="flex items-center gap-4 mb-8">
-								<div className="bg-[#232f3e] border border-[#ff9900]/40 px-4 py-3 rounded-xl">
-									<Image
-										src={images.awsWhite}
-										alt="AWS"
-										className="h-7 w-auto"
-									/>
-								</div>
-								<div>
-									<h3 className="text-2xl md:text-3xl font-bold text-[#f5f5f5]">
-										AWS Credits for Top Teams
-									</h3>
-									<p className="text-[#c0c1c3] text-sm mt-1">
-										Extra cloud credits to keep building and
-										scaling after the hackathon
-									</p>
-								</div>
-							</div>
-
-							<div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
-								{[
-									{
-										place: "1st Place",
-										amount: "$5,000",
-										emoji: "🥇",
-									},
-									{
-										place: "2nd Place",
-										amount: "$3,000",
-										emoji: "🥈",
-									},
-									{
-										place: "3rd Place",
-										amount: "$2,000",
-										emoji: "🥉",
-									},
-								].map(tier => (
-									<div
-										key={tier.place}
-										className="rounded-2xl border border-[#ff9900]/25 bg-[#ff9900]/[0.06] p-6 text-center"
-									>
-										<div className="text-3xl mb-2">
-											{tier.emoji}
-										</div>
-										<div className="text-3xl md:text-4xl font-black text-[#ff9900]">
-											{tier.amount}
-										</div>
-										<div className="text-[#c0c1c3] text-sm font-semibold mt-1">
-											{tier.place} · AWS credits
-										</div>
-									</div>
-								))}
 							</div>
 						</div>
 					</div>
