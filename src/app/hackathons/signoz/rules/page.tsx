@@ -4,9 +4,27 @@ import {
 } from "@/components/hackathon-content";
 import HackathonContentBody from "@/components/hackathon-content/HackathonContentBody";
 import { ViewContainer } from "@/components/ui/view-container";
+import Image from "next/image";
 import Link from "next/link";
 import { DATA, navLinks } from "../data";
 import { images } from "../images";
+
+const CloudSponsor = () => (
+	<div className="mt-12 flex items-center justify-center gap-3">
+		<span className="text-[11px] font-mono uppercase tracking-[0.18em] text-[#62687c]">
+			Cloud Sponsor
+		</span>
+		<span className="h-4 w-px bg-[#3c4152]" />
+		<a
+			href="https://bit.ly/aws-wmd"
+			target="_blank"
+			rel="noopener noreferrer"
+			className="opacity-80 hover:opacity-100 transition-opacity"
+		>
+			<Image src={images.awsWhite} alt="AWS" className="h-6 w-auto" />
+		</a>
+	</div>
+);
 
 const HackathonRules = async () => {
 	return (
@@ -188,6 +206,7 @@ const HackathonRules = async () => {
 						</li>
 					</ol>
 				</HackathonContentBody>
+				<CloudSponsor />
 			</ViewContainer>
 		</div>
 	);
