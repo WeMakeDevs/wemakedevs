@@ -182,9 +182,9 @@ const HackathonRules = async () => {
 							<strong className="text-[#ea6e4a]">
 								AWS track eligibility.
 							</strong>{" "}
-							To be eligible for the AWS track prizes ($1,000 in
-							credits for each of the top 3 teams), signing up to
-							the{" "}
+							To be eligible for the best use of AWS prize (an
+							Amazon Echo Dot for every member of the winning
+							team), signing up to the{" "}
 							<Link
 								href="https://bit.ly/aws-wmd"
 								className="text-[#ffd778] hover:text-[#ea6e4a] underline"
