@@ -38,6 +38,10 @@ type ScheduleItem = {
 		name: string;
 		url: string;
 	};
+	links?: Array<{
+		platform: string;
+		url: string;
+	}>;
 	// Note: If link is present, it's an event; if not, it's text
 };
 

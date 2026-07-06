@@ -2,7 +2,7 @@
 
 import { cn } from "@/lib/utils";
 import type { ScheduleElement } from "@/types";
-import { Clock, Link2 } from "lucide-react";
+import { Clock, Link2, Linkedin, Youtube } from "lucide-react";
 import Link from "next/link";
 import type React from "react";
 import { useState } from "react";
@@ -97,6 +97,24 @@ const HackathonScheduleComponent = ({
 										{item.link.name}
 									</Link>
 								)}
+								{item.links?.map(l => (
+									<Link
+										key={l.url}
+										href={l.url}
+										className="hover:underline no-underline text-blue-600 flex items-center gap-2"
+										target="_blank"
+										rel="noopener noreferrer"
+										title={l.platform}
+									>
+										{l.platform === "youtube" ? (
+											<Youtube size={18} />
+										) : l.platform === "linkedin" ? (
+											<Linkedin size={18} />
+										) : (
+											<Link2 size={16} />
+										)}
+									</Link>
+								))}
 							</div>
 							<p className="max-w-2xl text-base md:text-lg font-medium leading-snug md:leading-snug mt-2 text-black/75">
 								{item.description && item.description}

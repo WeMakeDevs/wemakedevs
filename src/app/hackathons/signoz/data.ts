@@ -108,10 +108,20 @@ const schedule = [
 				time: "2026-07-20T00:00:00Z",
 			},
 			{
-				title: "Kickoff Livestream",
+				title: "Streamlining AI Agent Observability",
 				description:
 					"Join the kickoff livestream for a deep dive into building with SigNoz and OpenTelemetry, live demos, and your questions answered as the hackathon gets underway.",
 				time: "2026-07-20T19:30:00+05:30",
+				links: [
+					{
+						platform: "linkedin",
+						url: "https://www.linkedin.com/events/7479842316539736065",
+					},
+					{
+						platform: "youtube",
+						url: "https://youtube.com/live/rr9YHSV5bj0",
+					},
+				],
 			},
 		],
 	},
