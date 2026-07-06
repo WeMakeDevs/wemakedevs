@@ -174,6 +174,24 @@ const HeroSection = ({
 							</div>
 						</motion.div>
 
+						{/* Cloud sponsor lockup */}
+						<motion.div
+							className="mb-7 flex items-center gap-3"
+							initial={{ opacity: 0, y: 12 }}
+							animate={{ opacity: 1, y: 0 }}
+							transition={{ duration: 0.6, delay: 0.85 }}
+						>
+							<span className="text-[11px] font-mono uppercase tracking-[0.18em] text-[#8b93a7]">
+								Cloud Sponsor
+							</span>
+							<span className="h-4 w-px bg-[#3c4152]" />
+							<Image
+								src={images.awsWhite}
+								alt="AWS"
+								className="h-6 w-auto opacity-90"
+							/>
+						</motion.div>
+
 						{/* Secondary CTA */}
 						{submissionFormUrl && (
 							<motion.div

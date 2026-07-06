@@ -1,3 +1,4 @@
+import awsWhite from "./aws-white.png";
 import background from "./background.png";
 import cover from "./cover.png";
 import hero from "./hero.png";
@@ -11,6 +12,7 @@ import thumbnail from "./thumbnail.png";
 import title from "./title.png";
 
 export const images = {
+	awsWhite,
 	cover,
 	background,
 	hero,

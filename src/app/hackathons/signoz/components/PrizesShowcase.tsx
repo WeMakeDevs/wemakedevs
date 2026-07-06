@@ -184,6 +184,69 @@ const PrizesShowcase = () => {
 						</div>
 					</div>
 
+					{/* AWS credits */}
+					<div className="relative rounded-3xl p-6 md:p-10 overflow-hidden mib-glass-bg border border-[#ff9900]/30 shadow-[0_18px_44px_rgba(0,0,0,0.6)]">
+						<div className="pointer-events-none absolute -top-24 -right-24 w-72 h-72 bg-[#ff9900]/12 rounded-full blur-3xl" />
+						<div className="relative z-10">
+							<div className="flex items-center gap-4 mb-8">
+								<div className="bg-[#232f3e] border border-[#ff9900]/40 px-4 py-3 rounded-xl">
+									<Image
+										src={images.awsWhite}
+										alt="AWS"
+										className="h-7 w-auto"
+									/>
+								</div>
+								<div>
+									<h3 className="text-2xl md:text-3xl font-bold text-[#f5f5f5]">
+										AWS Credits for Top Teams
+									</h3>
+									<p className="text-[#c0c1c3] text-sm mt-1">
+										Top 3 winning teams each get $1,000 in
+										AWS credits, plus $100 in free credits
+										for every participant
+									</p>
+								</div>
+							</div>
+
+							<div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
+								{[
+									{ place: "1st Place", emoji: "🥇" },
+									{ place: "2nd Place", emoji: "🥈" },
+									{ place: "3rd Place", emoji: "🥉" },
+								].map(tier => (
+									<div
+										key={tier.place}
+										className="rounded-2xl border border-[#ff9900]/25 bg-[#ff9900]/[0.06] p-6 text-center"
+									>
+										<div className="text-3xl mb-2">
+											{tier.emoji}
+										</div>
+										<div className="text-3xl md:text-4xl font-black text-[#ff9900]">
+											$1,000
+										</div>
+										<div className="text-[#c0c1c3] text-sm font-semibold mt-1">
+											{tier.place} · AWS credits
+										</div>
+									</div>
+								))}
+							</div>
+
+							<div className="mt-6 rounded-2xl border border-[#ff9900]/25 bg-[#ff9900]/[0.06] px-6 py-4 text-sm text-[#c0c1c3]">
+								Sign up to the{" "}
+								<Link
+									href="https://bit.ly/aws-wmd"
+									target="_blank"
+									rel="noopener noreferrer"
+									className="text-[#ffd778] underline hover:text-[#ff9900]"
+								>
+									AWS Builder Center
+								</Link>{" "}
+								and build with AWS to be eligible for the AWS
+								track prizes.
+							</div>
+						</div>
+					</div>
+
 					{/* Side tracks */}
 					<div className="grid grid-cols-1 md:grid-cols-2 gap-6">
 						{/* Best blogs */}

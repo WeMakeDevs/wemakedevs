@@ -160,6 +160,32 @@ const HackathonRules = async () => {
 							. Judges may re-run Foundry against them to
 							reproduce your deployment.
 						</li>
+						<li>
+							<strong className="text-[#ea6e4a]">
+								AWS track eligibility.
+							</strong>{" "}
+							To be eligible for the AWS track prizes ($1,000 in
+							credits for each of the top 3 teams), signing up to
+							the{" "}
+							<Link
+								href="https://bit.ly/aws-wmd"
+								className="text-[#ffd778] hover:text-[#ea6e4a] underline"
+								target="_blank"
+								rel="noopener noreferrer"
+							>
+								AWS Builder Center
+							</Link>{" "}
+							is mandatory and you must build with AWS. Every
+							participant can also claim $100 in free AWS credits,
+							request yours by emailing{" "}
+							<Link
+								href="mailto:contact@wemakedevs.org"
+								className="text-[#ffd778] hover:text-[#ea6e4a] underline"
+							>
+								contact@wemakedevs.org
+							</Link>
+							.
+						</li>
 					</ol>
 				</HackathonContentBody>
 			</ViewContainer>
