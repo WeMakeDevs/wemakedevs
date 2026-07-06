@@ -256,7 +256,7 @@ const PrizesShowcase = () => {
 									Side Track · Best Blogs
 								</h3>
 							</div>
-							<div className="mb-5 w-[70%] mx-auto aspect-[5/2] overflow-hidden flex items-center justify-center rounded-lg drop-shadow-[0_8px_20px_rgba(0,0,0,0.5)]">
+							<div className="mb-5 w-full mx-auto h-52 flex items-center justify-center rounded-lg drop-shadow-[0_8px_20px_rgba(0,0,0,0.5)]">
 								<LegoFerrariImg />
 							</div>
 							<p className="text-[#c0c1c3] leading-relaxed mb-6">
