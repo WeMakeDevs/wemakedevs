@@ -1,7 +1,5 @@
-import awsWhite from "./aws-white.png";
 import background from "./background.png";
 import cover from "./cover.png";
-import echoDot from "./echo.webp";
 import hero from "./hero.png";
 import ipad from "./ipad.png";
 import iphone from "./iphone.png";
@@ -13,10 +11,8 @@ import thumbnail from "./thumbnail.png";
 import title from "./title.png";
 
 export const images = {
-	awsWhite,
 	cover,
 	background,
-	echoDot,
 	hero,
 	ipad,
 	iphone,

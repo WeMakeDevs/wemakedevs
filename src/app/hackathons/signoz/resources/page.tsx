@@ -6,30 +6,12 @@ import {
 import HackathonContentBody from "@/components/hackathon-content/HackathonContentBody";
 import { ViewContainer } from "@/components/ui/view-container";
 import { SiSlack } from "@icons-pack/react-simple-icons";
-import Image from "next/image";
 import Link from "next/link";
 import { DATA, navLinks } from "../data";
 import { images } from "../images";
 
 const linkClass =
 	"text-[#ffd778] underline hover:no-underline hover:text-[#ea6e4a]";
-
-const CloudSponsor = () => (
-	<div className="mt-12 flex items-center justify-center gap-3">
-		<span className="text-[11px] font-mono uppercase tracking-[0.18em] text-[#62687c]">
-			Cloud Sponsor
-		</span>
-		<span className="h-4 w-px bg-[#3c4152]" />
-		<a
-			href="https://bit.ly/aws-wmd"
-			target="_blank"
-			rel="noopener noreferrer"
-			className="opacity-80 hover:opacity-100 transition-opacity"
-		>
-			<Image src={images.awsWhite} alt="AWS" className="h-6 w-auto" />
-		</a>
-	</div>
-);
 
 const HackathonResources = async () => {
 	return (
@@ -481,40 +463,6 @@ const HackathonResources = async () => {
 						</li>
 					</ul>
 				</HackathonContentBody>
-
-				<HackathonContentTitle className="text-[#f5f5f5]">
-					AWS
-				</HackathonContentTitle>
-				<HackathonContentBody className="text-[#c0c1c3]">
-					<ul className="space-y-3 list-disc list-inside">
-						<li>
-							<Link
-								href="https://bit.ly/aws-wmd"
-								className={linkClass}
-								target="_blank"
-								rel="noopener noreferrer"
-							>
-								AWS Builder Center
-							</Link>
-							: sign up to learn, build, and find resources
-							(required to be eligible for the AWS track prizes)
-						</li>
-						<li>
-							Every participant can claim $100 in free AWS
-							credits, request yours by emailing{" "}
-							<Link
-								href="mailto:contact@wemakedevs.org"
-								className={linkClass}
-								target="_blank"
-								rel="noopener noreferrer"
-							>
-								contact@wemakedevs.org
-							</Link>
-						</li>
-					</ul>
-				</HackathonContentBody>
-
-				<CloudSponsor />
 			</ViewContainer>
 		</div>
 	);

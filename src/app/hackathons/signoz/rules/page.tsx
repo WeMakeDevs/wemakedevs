@@ -4,27 +4,9 @@ import {
 } from "@/components/hackathon-content";
 import HackathonContentBody from "@/components/hackathon-content/HackathonContentBody";
 import { ViewContainer } from "@/components/ui/view-container";
-import Image from "next/image";
 import Link from "next/link";
 import { DATA, navLinks } from "../data";
 import { images } from "../images";
-
-const CloudSponsor = () => (
-	<div className="mt-12 flex items-center justify-center gap-3">
-		<span className="text-[11px] font-mono uppercase tracking-[0.18em] text-[#62687c]">
-			Cloud Sponsor
-		</span>
-		<span className="h-4 w-px bg-[#3c4152]" />
-		<a
-			href="https://bit.ly/aws-wmd"
-			target="_blank"
-			rel="noopener noreferrer"
-			className="opacity-80 hover:opacity-100 transition-opacity"
-		>
-			<Image src={images.awsWhite} alt="AWS" className="h-6 w-auto" />
-		</a>
-	</div>
-);
 
 const HackathonRules = async () => {
 	return (
@@ -178,51 +160,8 @@ const HackathonRules = async () => {
 							. Judges may re-run Foundry against them to
 							reproduce your deployment.
 						</li>
-						<li>
-							<strong className="text-[#ea6e4a]">
-								AWS track eligibility.
-							</strong>{" "}
-							To be eligible for the best use of AWS prize (an
-							Amazon Echo Dot for every member of the winning
-							team), signing up to the{" "}
-							<Link
-								href="https://bit.ly/aws-wmd"
-								className="text-[#ffd778] hover:text-[#ea6e4a] underline"
-								target="_blank"
-								rel="noopener noreferrer"
-							>
-								AWS Builder Center
-							</Link>{" "}
-							is mandatory and you must build with AWS. Every
-							participant can also claim $100 in free AWS credits,
-							request yours by emailing{" "}
-							<Link
-								href="mailto:contact@wemakedevs.org"
-								className="text-[#ffd778] hover:text-[#ea6e4a] underline"
-							>
-								contact@wemakedevs.org
-							</Link>
-							.
-						</li>
-						<li>
-							<strong className="text-[#ea6e4a]">
-								Blog track requirement.
-							</strong>{" "}
-							To be eligible for the best blogs prize, your blog
-							must be published on the{" "}
-							<Link
-								href="https://bit.ly/aws-wmd"
-								className="text-[#ffd778] hover:text-[#ea6e4a] underline"
-								target="_blank"
-								rel="noopener noreferrer"
-							>
-								AWS Builder Center
-							</Link>
-							.
-						</li>
 					</ol>
 				</HackathonContentBody>
-				<CloudSponsor />
 			</ViewContainer>
 		</div>
 	);

@@ -184,62 +184,6 @@ const PrizesShowcase = () => {
 						</div>
 					</div>
 
-					{/* Best use of AWS */}
-					<div className="relative rounded-3xl p-6 md:p-10 overflow-hidden mib-glass-bg border border-[#ff9900]/30 shadow-[0_18px_44px_rgba(0,0,0,0.6)]">
-						<div className="pointer-events-none absolute -top-24 -right-24 w-72 h-72 bg-[#ff9900]/12 rounded-full blur-3xl" />
-						<div className="relative z-10 flex flex-col md:flex-row items-center gap-8">
-							<div className="flex-1">
-								<div className="flex items-center gap-4 mb-6">
-									<div className="bg-[#232f3e] border border-[#ff9900]/40 px-4 py-3 rounded-xl">
-										<Image
-											src={images.awsWhite}
-											alt="AWS"
-											className="h-7 w-auto"
-										/>
-									</div>
-									<div>
-										<h3 className="text-2xl md:text-3xl font-bold text-[#f5f5f5]">
-											Best Use of AWS
-										</h3>
-										<p className="text-[#c0c1c3] text-sm mt-1">
-											Plus $100 in free credits for every
-											participant
-										</p>
-									</div>
-								</div>
-
-								<p className="text-lg text-[#c0c1c3]">
-									The team with the{" "}
-									<span className="text-[#ff9900] font-bold">
-										best use of AWS
-									</span>{" "}
-									wins an{" "}
-									<span className="text-[#ff9900] font-bold">
-										Amazon Echo Dot for every team member
-									</span>
-									. Sign up to the{" "}
-									<Link
-										href="https://bit.ly/aws-wmd"
-										target="_blank"
-										rel="noopener noreferrer"
-										className="text-[#ffd778] underline hover:text-[#ff9900]"
-									>
-										AWS Builder Center
-									</Link>{" "}
-									and build with AWS to be eligible.
-								</p>
-							</div>
-
-							<div className="shrink-0 w-full md:w-60 h-44 flex items-center justify-center">
-								<Image
-									src={images.echoDot}
-									alt="Amazon Echo Dot"
-									className="max-h-full w-auto object-contain drop-shadow-[0_8px_20px_rgba(0,0,0,0.5)]"
-								/>
-							</div>
-						</div>
-					</div>
-
 					{/* Side tracks */}
 					<div className="grid grid-cols-1 md:grid-cols-2 gap-6">
 						{/* Best blogs */}
@@ -258,16 +202,7 @@ const PrizesShowcase = () => {
 							<p className="text-[#c0c1c3] leading-relaxed mb-6">
 								Write about your build, your journey, or how
 								SigNoz gives your systems total observability.
-								Blogs must be published on the{" "}
-								<Link
-									href="https://bit.ly/aws-wmd"
-									target="_blank"
-									rel="noopener noreferrer"
-									className="text-[#ffd778] underline hover:text-[#ffcd56]"
-								>
-									AWS Builder Center
-								</Link>{" "}
-								to qualify. The best blogs win a{" "}
+								The best blogs win a{" "}
 								<span className="text-[#ffcd56] font-semibold">
 									LEGO Ferrari SF-24 set worth $250
 								</span>

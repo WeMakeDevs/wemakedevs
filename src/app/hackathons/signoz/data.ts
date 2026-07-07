@@ -3,7 +3,7 @@ import type { FaqType } from "@/types";
 const DATA = {
 	title: "Agents of SigNoz",
 	titleCard: "Agents of SigNoz",
-	prize: "MacBook Air, iPad Air, iPhone Air, AWS Credits, LEGO Ferrari SF-24 & Job Interviews",
+	prize: "MacBook Air, iPad Air, iPhone Air, LEGO Ferrari SF-24 & Job Interviews",
 	startDate: "2026-07-20T00:00:00Z",
 	endDate: "2026-07-26T23:59:00Z",
 	description:
@@ -81,12 +81,9 @@ const faqs: FaqType[] = [
 	},
 	{
 		question: "What can I win?",
-		answer: "$20,000 in prizes across three tracks. Win the AI & Agent Observability track and every team member gets a MacBook Air, win Signals & Dashboards and each member gets an iPad Air, and win Build Your Own and each member gets an iPhone Air. Top winners also get job interviews at SigNoz. Our cloud sponsor AWS is giving the team with the best use of AWS an Amazon Echo Dot for every team member, and every participant can claim $100 in free AWS credits. The top 20 PRs earn $100 each, the best blogs published on the <a href='https://bit.ly/aws-wmd' target='_blank' rel='noopener noreferrer' class='text-amber-300 underline hover:text-amber-200'>AWS Builder Center</a> win a LEGO Ferrari SF-24 set worth $250, and the top 10 social posts get exclusive swag shipped to them.",
+		answer: "$20,000 in prizes across three tracks. Win the AI & Agent Observability track and every team member gets a MacBook Air, win Signals & Dashboards and each member gets an iPad Air, and win Build Your Own and each member gets an iPhone Air. Top winners also get job interviews at SigNoz. The top 20 PRs earn $100 each, the best blogs win a LEGO Ferrari SF-24 set worth $250, and the top 10 social posts get exclusive swag shipped to them.",
 	},
-	{
-		question: "How do I get my AWS credits?",
-		answer: "Every participant can claim $100 in free AWS credits from our cloud sponsor, AWS. Sign up to the <a href='https://bit.ly/aws-wmd' target='_blank' rel='noopener noreferrer' class='text-amber-300 underline hover:text-amber-200'>AWS Builder Center</a>, then request your credits by emailing <a href='mailto:contact@wemakedevs.org' class='text-amber-300 underline hover:text-amber-200'>contact@wemakedevs.org</a>. Signing up to the Builder Center and building with AWS is also required to be eligible for the best use of AWS prize, an Amazon Echo Dot for every member of the winning team.",
-	},
+
 	{
 		question: "Where can I get help during the hackathon?",
 		answer: "Join the <a href='https://signoz-community.slack.com/join/shared_invite/zt-3x7z8ihiq-CJ6dU~OCOgp5nS1gTqwFTw#/shared-invite/email' target='_blank' rel='noopener noreferrer' class='text-amber-300 underline hover:text-amber-200'>SigNoz Slack</a> for technical support and community discussion. You can also reach WeMakeDevs at <a href='mailto:contact@wemakedevs.org' class='text-amber-300 underline hover:text-amber-200'>contact@wemakedevs.org</a>.",
