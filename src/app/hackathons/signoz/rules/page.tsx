@@ -204,6 +204,22 @@ const HackathonRules = async () => {
 							</Link>
 							.
 						</li>
+						<li>
+							<strong className="text-[#ea6e4a]">
+								Blog track requirement.
+							</strong>{" "}
+							To be eligible for the best blogs prize, your blog
+							must be published on the{" "}
+							<Link
+								href="https://bit.ly/aws-wmd"
+								className="text-[#ffd778] hover:text-[#ea6e4a] underline"
+								target="_blank"
+								rel="noopener noreferrer"
+							>
+								AWS Builder Center
+							</Link>
+							.
+						</li>
 					</ol>
 				</HackathonContentBody>
 				<CloudSponsor />

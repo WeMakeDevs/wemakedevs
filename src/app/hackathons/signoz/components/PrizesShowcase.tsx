@@ -258,7 +258,16 @@ const PrizesShowcase = () => {
 							<p className="text-[#c0c1c3] leading-relaxed mb-6">
 								Write about your build, your journey, or how
 								SigNoz gives your systems total observability.
-								The best blogs win a{" "}
+								Blogs must be published on the{" "}
+								<Link
+									href="https://bit.ly/aws-wmd"
+									target="_blank"
+									rel="noopener noreferrer"
+									className="text-[#ffd778] underline hover:text-[#ffcd56]"
+								>
+									AWS Builder Center
+								</Link>{" "}
+								to qualify. The best blogs win a{" "}
 								<span className="text-[#ffcd56] font-semibold">
 									LEGO Ferrari SF-24 set worth $250
 								</span>
