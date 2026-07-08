@@ -20,6 +20,7 @@ type HeroSectionProps = {
 		openInNewTab?: boolean;
 	};
 	submissionFormUrl?: string;
+	submissionsClosed?: boolean;
 };
 
 // ─── Memory graph (graph-vector hybrid) backdrop ──────────────────────────────
@@ -102,6 +103,7 @@ const HeroSection = ({
 	description,
 	cta,
 	submissionFormUrl,
+	submissionsClosed,
 }: HeroSectionProps) => {
 	const containerRef = useRef<HTMLDivElement>(null);
 	const { scrollYProgress } = useScroll({
@@ -256,17 +258,25 @@ const HeroSection = ({
 							{cta.label}
 						</Link>
 					)}
-					{submissionFormUrl && (
-						<Link
-							href={submissionFormUrl}
-							target="_blank"
-							rel="noopener noreferrer"
-							className="inline-flex items-center gap-2 px-6 py-3 rounded-xl border-2 border-[#c33124]/50 text-[#c33124] font-bold hover:bg-[#c33124]/10 transition-all duration-300 text-base"
-						>
-							Submit Project
-							<ArrowUpRight className="w-5 h-5" />
-						</Link>
-					)}
+					{submissionFormUrl &&
+						(submissionsClosed ? (
+							<div
+								aria-disabled="true"
+								className="inline-flex items-center gap-2 px-6 py-3 rounded-xl border-2 border-[#c33124]/30 text-[#c33124]/60 font-bold cursor-not-allowed opacity-60 pointer-events-none text-base"
+							>
+								Submissions Closed
+							</div>
+						) : (
+							<Link
+								href={submissionFormUrl}
+								target="_blank"
+								rel="noopener noreferrer"
+								className="inline-flex items-center gap-2 px-6 py-3 rounded-xl border-2 border-[#c33124]/50 text-[#c33124] font-bold hover:bg-[#c33124]/10 transition-all duration-300 text-base"
+							>
+								Submit Project
+								<ArrowUpRight className="w-5 h-5" />
+							</Link>
+						))}
 					<Dice className="w-20 h-auto hidden sm:block drop-shadow-[0_6px_12px_rgba(120,80,30,0.25)]" />
 				</motion.div>
 

@@ -22,7 +22,7 @@ import { winningProjects } from "../projects";
 const filters = [
 	{
 		key: "prs",
-		title: "237 PRs",
+		title: "270+ PRs",
 		description:
 			"Pirates who built source specs and sent pull requests to withcoral/coral.",
 		showCount: false,

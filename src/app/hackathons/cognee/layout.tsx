@@ -60,12 +60,16 @@ export default function RootLayout({
 			url: `/hackathons/${DATA.slug}#ideas`,
 			type: "link",
 		},
-		{
-			name: "Submit Project",
-			url: DATA.submissionFormUrl,
-			type: "button",
-			openInNewTab: true,
-		},
+		...(DATA.submissionsClosed
+			? []
+			: [
+					{
+						name: "Submit Project",
+						url: DATA.submissionFormUrl,
+						type: "button" as const,
+						openInNewTab: true,
+					},
+				]),
 	];
 
 	return (
@@ -80,22 +84,34 @@ export default function RootLayout({
 					<div className="max-w-5xl mx-auto px-6 py-8 flex flex-col md:flex-row items-center justify-between gap-5 text-center md:text-left">
 						<div>
 							<h3 className="text-2xl md:text-3xl font-black italic uppercase text-white">
-								Submit Your Projects Now
+								{DATA.submissionsClosed
+									? "Submissions Are Closed"
+									: "Submit Your Projects Now"}
 							</h3>
 							<p className="text-[#ffe6c7] font-medium mt-1">
-								Built something unforgettable? Send it in before
-								the deadline.
+								{DATA.submissionsClosed
+									? "The submission deadline has passed. Thanks to everyone who took part!"
+									: "Built something unforgettable? Send it in before the deadline."}
 							</p>
 						</div>
-						<Link
-							href={DATA.submissionFormUrl}
-							target="_blank"
-							rel="noopener noreferrer"
-							className="shrink-0 inline-flex items-center gap-2 px-7 py-3.5 rounded-xl bg-[#fffdf6] text-[#c33124] font-black text-lg hover:bg-[#fff1d6] transition-colors shadow-lg border-2 border-[#f6c453]"
-						>
-							Submit Project
-							<ArrowUpRight className="w-5 h-5" />
-						</Link>
+						{DATA.submissionsClosed ? (
+							<div
+								aria-disabled="true"
+								className="shrink-0 inline-flex items-center gap-2 px-7 py-3.5 rounded-xl bg-[#fffdf6]/60 text-[#c33124]/70 font-black text-lg cursor-not-allowed opacity-75 shadow-lg border-2 border-[#f6c453]"
+							>
+								Submissions Closed
+							</div>
+						) : (
+							<Link
+								href={DATA.submissionFormUrl}
+								target="_blank"
+								rel="noopener noreferrer"
+								className="shrink-0 inline-flex items-center gap-2 px-7 py-3.5 rounded-xl bg-[#fffdf6] text-[#c33124] font-black text-lg hover:bg-[#fff1d6] transition-colors shadow-lg border-2 border-[#f6c453]"
+							>
+								Submit Project
+								<ArrowUpRight className="w-5 h-5" />
+							</Link>
+						)}
 					</div>
 				</div>
 
