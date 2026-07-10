@@ -1,0 +1,121 @@
+/* ===== AWS Next Gen Hacks — scoped theme + custom styles ===== */
+.aws-root {
+  --aws-canvas: 11 12 14;    /* #0B0C0E */
+  --aws-surface: 18 19 22;   /* #121316 */
+  --aws-panel: 22 26 32;     /* #161A20 */
+  --aws-line: 42 47 56;      /* #2A2F38 */
+  --aws-hair: 255 255 255;   /* hairline at low alpha */
+  --aws-heading: 255 255 255;
+  --aws-body: 198 198 205;   /* #C6C6CD */
+  --aws-ash: 144 150 146;    /* #909692 */
+  --aws-aura: 26 19 16;      /* #1A1310 */
+
+  background-color: rgb(var(--aws-canvas));
+  color: rgb(var(--aws-body));
+  font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+  -webkit-tap-highlight-color: transparent;
+  transition: background-color .4s ease, color .4s ease;
+}
+html.light .aws-root {
+  --aws-canvas: 245 246 249;
+  --aws-surface: 255 255 255;
+  --aws-panel: 248 249 251;
+  --aws-line: 224 227 233;
+  --aws-hair: 17 20 26;
+  --aws-heading: 15 18 24;
+  --aws-body: 52 60 72;
+  --aws-ash: 98 106 118;
+  --aws-aura: 255 236 214;
+}
+
+.aws-root .font-heading { font-family: "Public Sans", ui-sans-serif, system-ui, sans-serif; }
+.aws-root .font-body { font-family: Inter, ui-sans-serif, system-ui, sans-serif; }
+.aws-root .font-mono { font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace; }
+
+.aws-root .aura {
+  position: fixed; inset: 0; z-index: 0; pointer-events: none;
+  background:
+    radial-gradient(60% 45% at 50% -5%, rgb(var(--aws-aura) / .9) 0%, rgb(var(--aws-canvas) / 0) 60%),
+    radial-gradient(40% 30% at 85% 10%, rgba(255,153,0,.06) 0%, rgb(var(--aws-canvas) / 0) 60%),
+    radial-gradient(40% 30% at 12% 20%, rgba(184,66,46,.07) 0%, rgb(var(--aws-canvas) / 0) 60%);
+}
+
+.aws-root .glass {
+  background: rgb(var(--aws-surface) / .9);
+  border: 1px solid rgb(var(--aws-hair) / .07);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+html.light .aws-root .glass { border-color: rgb(var(--aws-hair) / .10); }
+
+/* Logo + toggle icon visibility */
+.aws-root .logo-light, html.light .aws-root .logo-dark { display: none; }
+html.light .aws-root .logo-light { display: block; }
+
+/* Nav underline slide */
+.aws-root .navlink { position: relative; }
+.aws-root .navlink::after {
+  content: ""; position: absolute; left: 0; bottom: -4px; height: 2px; width: 100%;
+  background: linear-gradient(90deg, #FF9900, #B8422E);
+  transform: scaleX(0); transform-origin: left; transition: transform .3s ease;
+}
+.aws-root .navlink:hover::after { transform: scaleX(1); }
+
+/* Route (flight) map */
+.aws-root .flight-path-base { stroke: rgba(255,255,255,0.06); stroke-linecap: round; fill: none; }
+.aws-root .flight-path-animated { fill: none; stroke: url(#gradient-arc); stroke-linecap: round; stroke-dasharray: 8 12; animation: flowPattern 3s linear infinite; opacity: .85; }
+@keyframes flowPattern { to { stroke-dashoffset: -40; } }
+.aws-root .pulse-ring { transform-origin: center; animation: pulseAnimation 2s cubic-bezier(.25,0,0,1) infinite; fill: none; stroke: #FF9900; stroke-width: 1.5; }
+@keyframes pulseAnimation { 0% { r: 4px; opacity: 1; stroke-width: 1.5; } 100% { r: 18px; opacity: 0; stroke-width: .5; } }
+.aws-root .map-node { cursor: pointer; transition: transform .3s cubic-bezier(.4,0,.2,1); }
+.aws-root .map-node:hover { transform: scale(1.25); }
+.aws-root .map-node:hover .city-label, .aws-root .map-node.is-active .city-label { fill: #FFFFFF; font-weight: 700; }
+.aws-root .map-node:hover .node-dot, .aws-root .map-node.is-active .node-dot { fill: #FF9900; filter: url(#glow-orange); }
+.aws-root .city-label { font-family: "JetBrains Mono", monospace; font-size: 11px; fill: #909692; transition: fill .3s ease; user-select: none; }
+
+/* Timeline India map */
+.aws-root #india-zoom { transform-origin: 0 0; transition: transform 1s cubic-bezier(.65,0,.35,1); }
+.aws-root .india-land { fill: rgb(var(--aws-panel)); stroke: rgba(255,153,0,.28); stroke-width: 1.2; }
+.aws-root .cm .dot { fill: #B8422E; transition: fill .4s ease; }
+.aws-root .cm .ring { fill: none; stroke: #FF9900; stroke-width: 1.5; opacity: 0; transform-box: fill-box; transform-origin: center; }
+.aws-root .cm .lbl { font-family: "JetBrains Mono", monospace; font-size: 9px; fill: rgb(var(--aws-ash)); transition: fill .4s ease; user-select: none; }
+.aws-root .cm.on .dot { fill: #FF9900; filter: url(#glow-city); }
+.aws-root .cm.on .ring { opacity: 1; animation: mppulse 2s ease-out infinite; }
+.aws-root .cm.on .lbl { fill: #FFFFFF; font-weight: 700; }
+.aws-root .cm.dim { opacity: .2; }
+@keyframes mppulse { 0% { transform: scale(1); opacity: .9; } 100% { transform: scale(2.6); opacity: 0; } }
+.aws-root .vegas-layer { opacity: 0; transition: opacity .6s ease; }
+.aws-root #india-map.show-vegas .vegas-layer { opacity: 1; }
+.aws-root .vegas-arc { fill: none; stroke: url(#arc-grad); stroke-width: 2; stroke-dasharray: 6 8; animation: vflow 1s linear infinite; }
+@keyframes vflow { to { stroke-dashoffset: -28; } }
+.aws-root .tl-card { opacity: .4; transition: opacity .5s ease, transform .5s ease, border-color .4s ease, box-shadow .4s ease; }
+.aws-root .tl-step.active .tl-card { opacity: 1; }
+
+/* Finale gradient border */
+.aws-root .finale-card { position: relative; }
+.aws-root .finale-card::before {
+  content:""; position:absolute; inset:-1.5px; border-radius:1rem; padding:1.5px;
+  background: linear-gradient(130deg, #FF9900, #B8422E, #FF9900); background-size: 300% 300%;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor; mask-composite: exclude; animation: goldshift 4s ease infinite; pointer-events:none;
+}
+@keyframes goldshift { 0%{background-position:0% 50%;} 50%{background-position:100% 50%;} 100%{background-position:0% 50%;} }
+
+/* Pulsing badge */
+@keyframes softpulse { 0%,100%{ box-shadow: 0 0 0 0 rgba(255,153,0,.35);} 50%{ box-shadow: 0 0 22px 2px rgba(255,153,0,.20);} }
+.aws-root .pulse-badge { animation: softpulse 2.6s ease-in-out infinite; }
+
+/* Hero load animation */
+@keyframes fadeInUp { from { opacity:0; transform: translateY(26px);} to { opacity:1; transform:none; } }
+.aws-root .animate-fadeup { opacity:0; animation: fadeInUp .9s cubic-bezier(.16,1,.3,1) forwards; }
+
+.aws-root ::selection { background: #FF9900; color: #0B0C0E; }
+
+@media (prefers-reduced-motion: reduce) {
+  .aws-root #india-zoom { transition: none; }
+  .aws-root .animate-fadeup { animation: none; opacity: 1; }
+  .aws-root .flight-path-animated, .aws-root .pulse-ring, .aws-root .cm.on .ring,
+  .aws-root .vegas-arc, .aws-root .finale-card::before, .aws-root .pulse-badge { animation: none; }
+}
+
+.aws-root section[id] { scroll-margin-top: 5rem; }

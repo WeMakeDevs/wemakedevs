@@ -4,12 +4,12 @@ import createMDX from "@next/mdx";
 const nextConfig = {
 	// Configure `pageExtensions` to include markdown and MDX files
 	pageExtensions: ["js", "jsx", "md", "mdx", "ts", "tsx"],
-	// Serve the static AWS Next Gen Hacks landing page at /aws
+	// Keep the short /aws URL pointing at the AWS Next Gen Hacks hackathon route
 	async rewrites() {
 		return [
 			{
 				source: "/aws",
-				destination: "/aws/index.html",
+				destination: "/hackathons/aws",
 			},
 		];
 	},
