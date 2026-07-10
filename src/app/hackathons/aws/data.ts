@@ -30,7 +30,7 @@ export const timeline: TimelineStop[] = [
 		stop: "Stop 01",
 		city: "Bangalore",
 		subtitle: "India's startup capital",
-		date: "Jul 27 to Aug 2, 2026",
+		date: "Aug 3 to 9, 2026",
 		blurb:
 			"Kick off the tour in Bangalore, building with AWS alongside the city's startup community. Join on site or fully online.",
 	},
