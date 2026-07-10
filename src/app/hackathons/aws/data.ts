@@ -32,8 +32,7 @@ export const timeline: TimelineStop[] = [
 		subtitle: "India's startup capital",
 		date: "Jul 27 to Aug 2, 2026",
 		blurb:
-			"Kick off the tour with a GenAI and serverless focused build sprint alongside Bangalore's startup community.",
-		tags: ["GenAI track", "Startup demo day"],
+			"Kick off the tour in Bangalore, building with AWS alongside the city's startup community. Join on site or fully online.",
 	},
 	{
 		id: "delhi",
@@ -42,8 +41,7 @@ export const timeline: TimelineStop[] = [
 		subtitle: "The capital hub",
 		date: "Aug 17 to 23, 2026",
 		blurb:
-			"Builders from across North India converge for tracks spanning fintech, public sector scale, and cloud security.",
-		tags: ["Fintech track", "Scale and security"],
+			"Builders from across North India come together to build with AWS, on site at the venue or fully online.",
 	},
 	{
 		id: "mumbai",
@@ -52,8 +50,7 @@ export const timeline: TimelineStop[] = [
 		subtitle: "Finance and media capital",
 		date: "Sep 7 to 13, 2026",
 		blurb:
-			"Ship for high throughput fintech and media streaming workloads with mentors from Mumbai's enterprise scene.",
-		tags: ["Media and streaming", "High scale APIs"],
+			"Build with AWS alongside Mumbai's enterprise and developer community. Take part on site or fully online.",
 	},
 	{
 		id: "hyderabad",
@@ -62,8 +59,7 @@ export const timeline: TimelineStop[] = [
 		subtitle: "Cyberabad",
 		date: "Oct 5 to 11, 2026",
 		blurb:
-			"A data and machine learning heavy stop, with deep dives into analytics pipelines and model deployment on AWS.",
-		tags: ["Data and ML", "MLOps labs"],
+			"Head to Hyderabad to build with AWS and its developer community, on site or fully online.",
 	},
 	{
 		id: "chennai",
@@ -72,8 +68,7 @@ export const timeline: TimelineStop[] = [
 		subtitle: "SaaS and IoT hub",
 		date: "Nov 16 to 22, 2026",
 		blurb:
-			"Close out the Indian leg building for IoT, manufacturing, and SaaS, with a strong hardware plus cloud crossover.",
-		tags: ["IoT and edge", "SaaS builds"],
+			"Close out the Indian leg in Chennai, building with AWS on site at the venue or fully online.",
 	},
 	{
 		id: "vegas",
@@ -88,13 +83,13 @@ export const timeline: TimelineStop[] = [
 	},
 ];
 
-// City coordinates in the India map viewBox (0 0 400 460)
+// City coordinates in the India map viewBox (0 0 420 460), equirectangular
 export const cityCoords: Record<string, [number, number]> = {
-	delhi: [188, 150],
-	mumbai: [128, 262],
-	hyderabad: [182, 288],
-	bangalore: [172, 350],
-	chennai: [205, 342],
+	delhi: [114, 123],
+	mumbai: [63, 272],
+	hyderabad: [130, 298],
+	bangalore: [119, 367],
+	chennai: [151, 365],
 };
 
 export const builderSteps: BuilderStep[] = [

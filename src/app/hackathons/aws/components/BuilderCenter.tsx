@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { builderSteps } from "../data";
 import Reveal from "./Reveal";
 
@@ -29,6 +29,7 @@ export default function BuilderCenter() {
 	const [voted, setVoted] = useState(false);
 	const [votes, setVotes] = useState(342);
 	const [step, setStep] = useState(1);
+	const stepRefs = useRef<Array<HTMLDivElement | null>>([]);
 
 	const upvote = () => {
 		setVoted((v) => {
@@ -36,6 +37,23 @@ export default function BuilderCenter() {
 			return !v;
 		});
 	};
+
+	useEffect(() => {
+		if (typeof IntersectionObserver === "undefined") return;
+		const io = new IntersectionObserver(
+			(entries) => {
+				entries.forEach((e) => {
+					if (e.isIntersecting) {
+						const n = Number((e.target as HTMLElement).dataset.step);
+						if (n) setStep(n);
+					}
+				});
+			},
+			{ rootMargin: "-45% 0px -45% 0px", threshold: 0 },
+		);
+		stepRefs.current.forEach((el) => el && io.observe(el));
+		return () => io.disconnect();
+	}, []);
 
 	return (
 		<section id="builder" className="relative py-20 sm:py-28">
@@ -195,62 +213,104 @@ export default function BuilderCenter() {
 					</Reveal>
 				</div>
 
-				{/* Stepper */}
-				<Reveal className="mt-20">
-					<div className="text-center">
-						<h3 className="font-heading font-extrabold text-heading text-2xl sm:text-3xl tracking-tight">
-							Learn. Build. Share. Grow.
-						</h3>
-						<p className="mt-3 text-body">
-							Become an AWS community member and sharpen your cloud and AI skills
-							with hands on projects.
-						</p>
-					</div>
+				{/* Scroll-driven stepper */}
+				<Reveal className="mt-24 text-center">
+					<h3 className="font-heading font-extrabold text-heading text-2xl sm:text-3xl tracking-tight">
+						Learn. Build. Share. Grow.
+					</h3>
+					<p className="mx-auto mt-3 max-w-2xl text-body">
+						Become an AWS community member and sharpen your cloud and AI skills
+						with hands on projects.
+					</p>
+				</Reveal>
 
-					<div className="relative mt-12">
-						<div className="hidden md:block absolute left-0 right-0 top-7 h-1 rounded-full bg-line" />
-						<div
-							className="hidden md:block absolute left-0 top-7 h-1 rounded-full bg-gradient-to-r from-orange to-rust transition-all duration-500 ease-out"
-							style={{ width: `${12.5 + (step - 1) * 25}%` }}
-						/>
-						<div className="relative grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 md:gap-4">
+				<div className="relative mt-12 lg:grid lg:grid-cols-2 lg:gap-12 lg:items-start">
+					{/* Sticky vertical rail */}
+					<div className="hidden lg:block sticky top-24 self-start">
+						<ol className="relative">
 							{builderSteps.map((s, idx) => {
 								const n = idx + 1;
+								const on = step >= n;
+								const active = step === n;
 								return (
-									<button
-										type="button"
-										key={s.key}
-										onClick={() => setStep(n)}
-										className="flex md:flex-col items-center md:text-center gap-4 md:gap-3 text-left"
-									>
-										<span
-											className={`relative z-10 shrink-0 inline-flex h-14 w-14 items-center justify-center rounded-full border-2 bg-panel transition-all duration-300 ${step >= n ? "border-orange text-orange shadow-[0_0_20px_-4px_rgba(255,153,0,0.7)]" : "border-line text-ash"}`}
-										>
-											<svg className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth={1.7} viewBox="0 0 24 24">
-												{stepIcons[s.key]}
-											</svg>
-										</span>
-										<div>
-											<p className={`font-heading font-bold tracking-wide transition-colors ${step === n ? "text-orange" : "text-heading"}`}>
+									<li key={s.key} className="relative flex gap-5">
+										<div className="flex flex-col items-center">
+											<button
+												type="button"
+												onClick={() =>
+													stepRefs.current[idx]?.scrollIntoView({
+														behavior: "smooth",
+														block: "center",
+													})
+												}
+												className={`relative z-10 shrink-0 inline-flex h-14 w-14 items-center justify-center rounded-full border-2 bg-panel transition-all duration-300 ${on ? "border-orange text-orange" : "border-line text-ash"} ${active ? "shadow-[0_0_20px_-4px_rgba(255,153,0,0.7)] scale-105" : ""}`}
+												aria-label={s.key}
+											>
+												<svg className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth={1.7} viewBox="0 0 24 24">
+													{stepIcons[s.key]}
+												</svg>
+											</button>
+											{idx < builderSteps.length - 1 && (
+												<span className="relative my-1 w-0.5 flex-1 min-h-[70px] overflow-hidden rounded-full bg-line">
+													<span
+														className="absolute inset-x-0 top-0 bg-gradient-to-b from-orange to-rust transition-all duration-500"
+														style={{ height: step > n ? "100%" : "0%" }}
+													/>
+												</span>
+											)}
+										</div>
+										<div className="pb-10 pt-3">
+											<p className={`font-heading font-bold tracking-wide transition-colors ${active ? "text-orange" : "text-heading"}`}>
 												{s.key}
 											</p>
-											<p className="md:hidden text-sm text-ash mt-1">{s.desc}</p>
 										</div>
-									</button>
+									</li>
 								);
 							})}
-						</div>
+						</ol>
 					</div>
 
-					<div className="hidden md:block mt-10">
-						<div className="relative mx-auto max-w-3xl glass rounded-2xl p-8 text-center min-h-[128px] flex flex-col items-center justify-center">
-							<span className="font-mono text-xs uppercase tracking-[0.3em] text-orange">
-								{builderSteps[step - 1].key}
-							</span>
-							<p className="mt-3 text-lg text-body">{builderSteps[step - 1].desc}</p>
-						</div>
+					{/* Scrolling step cards */}
+					<div>
+						{builderSteps.map((s, idx) => {
+							const n = idx + 1;
+							const active = step === n;
+							return (
+								<div
+									key={s.key}
+									data-step={n}
+									ref={(el) => {
+										stepRefs.current[idx] = el;
+									}}
+									className="min-h-[64vh] flex items-center"
+								>
+									<div
+										className={`w-full glass rounded-2xl p-7 sm:p-8 transition-all duration-500 ${active ? "opacity-100 border-orange/40" : "opacity-45"}`}
+									>
+										<div className="flex items-center gap-4">
+											<span
+												className={`inline-flex h-12 w-12 items-center justify-center rounded-xl transition-colors ${active ? "bg-orange/15 text-orange" : "bg-panel text-ash"}`}
+											>
+												<svg className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth={1.7} viewBox="0 0 24 24">
+													{stepIcons[s.key]}
+												</svg>
+											</span>
+											<div>
+												<p className="font-mono text-[11px] uppercase tracking-[0.3em] text-ash">
+													Step 0{n}
+												</p>
+												<p className="font-heading text-2xl font-bold text-heading tracking-tight">
+													{s.key}
+												</p>
+											</div>
+										</div>
+										<p className="mt-5 text-lg text-body leading-relaxed">{s.desc}</p>
+									</div>
+								</div>
+							);
+						})}
 					</div>
-				</Reveal>
+				</div>
 			</div>
 		</section>
 	);

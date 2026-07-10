@@ -19,11 +19,11 @@ const captions: Record<string, string> = {
 
 const markerLabels: Record<string, [number, number, string, "start" | "middle" | "end", number, number]> = {
 	// cx, cy, label, anchor, lx, ly
-	delhi: [188, 150, "DELHI", "middle", 188, 138],
-	mumbai: [128, 262, "MUMBAI", "end", 120, 266],
-	hyderabad: [182, 288, "HYDERABAD", "start", 192, 285],
-	bangalore: [172, 350, "BANGALORE", "end", 164, 365],
-	chennai: [205, 342, "CHENNAI", "start", 214, 356],
+	delhi: [114, 123, "DELHI", "start", 124, 121],
+	mumbai: [63, 272, "MUMBAI", "end", 54, 276],
+	hyderabad: [130, 298, "HYDERABAD", "start", 140, 296],
+	bangalore: [119, 367, "BANGALORE", "end", 110, 382],
+	chennai: [151, 365, "CHENNAI", "start", 161, 379],
 };
 
 export default function Timeline() {
@@ -49,7 +49,7 @@ export default function Timeline() {
 
 	const coords = cityCoords[active];
 	const zoomTransform = coords
-		? `translate(${200 - S * coords[0]}px, ${230 - S * coords[1]}px) scale(${S})`
+		? `translate(${210 - S * coords[0]}px, ${230 - S * coords[1]}px) scale(${S})`
 		: "translate(0px, 0px) scale(1)";
 	const allOn = active === "all" || active === "vegas";
 
@@ -83,7 +83,7 @@ export default function Timeline() {
 							<svg
 								id="india-map"
 								className={`relative z-10 w-full h-auto max-h-[62vh]${active === "vegas" ? " show-vegas" : ""}`}
-								viewBox="0 0 400 460"
+								viewBox="0 0 420 460"
 								role="img"
 								aria-label="Map of India highlighting the host cities"
 							>
@@ -101,7 +101,7 @@ export default function Timeline() {
 								<g id="india-zoom" style={{ transform: zoomTransform }}>
 									<path
 										className="india-land"
-										d="M175 52 C205 44 232 58 244 86 C258 96 280 92 292 112 C286 140 262 150 262 176 C266 214 258 258 232 306 C216 344 200 384 184 414 C176 428 168 424 162 408 C150 372 140 342 126 302 C112 262 96 232 102 200 C108 168 122 150 122 120 C126 92 150 60 175 52 Z"
+										d="M77 31 L122 16 L148 94 L183 140 L242 148 L262 153 L289 136 L330 133 L353 140 L342 195 L319 195 L307 226 L277 210 L254 226 L230 234 L207 265 L183 296 L151 323 L151 365 L145 409 L118 443 L100 429 L83 374 L65 328 L63 273 L30 245 L12 218 L24 195 L35 133 L77 86 Z"
 									/>
 									{CITY_IDS.map((id) => {
 										const [cx, cy, label, anchor, lx, ly] = markerLabels[id];
@@ -123,12 +123,12 @@ export default function Timeline() {
 								</g>
 
 								<g className="vegas-layer">
-									<path className="vegas-arc" d="M188 150 Q 300 40 360 70" />
-									<circle cx={360} cy={70} r={7} fill="#FF9900" filter="url(#glow-city)" />
-									<circle cx={360} cy={70} r={2.5} fill="#FFFFFF" />
+									<path className="vegas-arc" d="M114 123 Q 280 30 398 84" />
+									<circle cx={398} cy={84} r={7} fill="#FF9900" filter="url(#glow-city)" />
+									<circle cx={398} cy={84} r={2.5} fill="#FFFFFF" />
 									<text
-										x={360}
-										y={52}
+										x={398}
+										y={66}
 										textAnchor="middle"
 										fontFamily="'JetBrains Mono', monospace"
 										fontSize={9}
@@ -204,13 +204,6 @@ export default function Timeline() {
 												<p className="mt-1 text-sm text-ash">{stop.subtitle}</p>
 												<p className="mt-3 font-mono text-sm text-orange">{stop.date}</p>
 												<p className="mt-4 text-body leading-relaxed">{stop.blurb}</p>
-												<div className="mt-5 flex flex-wrap gap-2">
-													{stop.tags?.map((t) => (
-														<span key={t} className="rounded-lg border border-hair/10 bg-panel px-3 py-1.5 text-xs font-mono text-body">
-															{t}
-														</span>
-													))}
-												</div>
 											</>
 										)}
 									</div>

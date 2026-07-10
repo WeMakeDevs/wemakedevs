@@ -36,12 +36,12 @@ export default function Hero() {
 					className="mx-auto mt-5 max-w-2xl text-lg sm:text-xl text-body animate-fadeup"
 					style={{ animationDelay: ".25s" }}
 				>
-					Six hybrid hackathons across India. Build with AWS online or on site,
-					and top teams win a{" "}
+					Five hybrid hackathons across India, and a sixth stop in Las Vegas for
+					the top teams. Every event is hybrid, so you can{" "}
 					<span className="text-heading font-semibold">
-						sponsored trip to Las Vegas
-					</span>
-					.
+						take part fully online
+					</span>{" "}
+					or join on site.
 				</p>
 
 				<div className="mt-12 animate-fadeup" style={{ animationDelay: ".35s" }}>
@@ -116,7 +116,7 @@ export default function Hero() {
 				</div>
 
 				<div
-					className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-4 animate-fadeup"
+					className="mt-12 flex items-center justify-center animate-fadeup"
 					style={{ animationDelay: ".55s" }}
 				>
 					<a
@@ -135,27 +135,6 @@ export default function Hero() {
 								strokeLinecap="round"
 								strokeLinejoin="round"
 								d="M5 12h14M13 6l6 6-6 6"
-							/>
-						</svg>
-					</a>
-					<a
-						href="https://wemakedevs.org"
-						target="_blank"
-						rel="noopener noreferrer"
-						className="group inline-flex items-center gap-2 px-4 py-3.5 font-semibold text-body transition-colors hover:text-orange"
-					>
-						Join the WeMakeDevs Community
-						<svg
-							className="h-4 w-4 transition-transform group-hover:translate-x-1"
-							fill="none"
-							stroke="currentColor"
-							strokeWidth={2}
-							viewBox="0 0 24 24"
-						>
-							<path
-								strokeLinecap="round"
-								strokeLinejoin="round"
-								d="M7 17 17 7M9 7h8v8"
 							/>
 						</svg>
 					</a>
