@@ -237,13 +237,67 @@ const Prospects = () => {
 					</p>
 				</section>
 
-				{/* SLIDE 5: OpenMetadata */}
+				{/* SLIDE 5: cognee */}
 				<section className={isActive(4)}>
 					<div className="strip">
 						<div className="brand">
 							<span>03 /</span> Past Events
 						</div>
-						<div className="meta">01 of 10 · OpenMetadata</div>
+						<div className="meta">01 of 11 · cognee</div>
+					</div>
+					<span className="event-tag">
+						The Hangover Part AI × cognee
+					</span>
+					<h2 className="event-title">
+						The Hangover{" "}
+						<span style={{ color: "var(--cyan)" }}>Part AI</span>
+					</h2>
+					<p className="event-sub">
+						<a
+							href="https://www.wemakedevs.org/hackathons/cognee"
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							wemakedevs.org/hackathons/cognee
+						</a>
+					</p>
+					<div className="event-body">
+						<div className="event-stats">
+							<div className="ev-stat featured">
+								<div className="num">
+									8K<span className="plus">+</span>
+								</div>
+								<div className="label">Participants</div>
+							</div>
+							<div className="ev-stat featured">
+								<div className="num">
+									1.2K<span className="plus">+</span>
+								</div>
+								<div className="label">Projects Built</div>
+							</div>
+							<div className="ev-stat">
+								<div className="num">
+									7.5K<span className="plus">+</span>
+								</div>
+								<div className="label">Cloud Signups</div>
+							</div>
+							<div className="ev-stat">
+								<div className="num">
+									30<span className="plus">+</span>
+								</div>
+								<div className="label">Countries</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				{/* SLIDE 6: OpenMetadata */}
+				<section className={isActive(5)}>
+					<div className="strip">
+						<div className="brand">
+							<span>03 /</span> Past Events
+						</div>
+						<div className="meta">02 of 11 · OpenMetadata</div>
 					</div>
 					<span className="event-tag">
 						Back to the Metadata × Collate
@@ -313,13 +367,13 @@ const Prospects = () => {
 					</div>
 				</section>
 
-				{/* SLIDE 6: Accomplish */}
-				<section className={isActive(5)}>
+				{/* SLIDE 7: Accomplish */}
+				<section className={isActive(6)}>
 					<div className="strip">
 						<div className="brand">
 							<span>03 /</span> Past Events
 						</div>
-						<div className="meta">02 of 10 · Accomplish.ai</div>
+						<div className="meta">03 of 11 · Accomplish.ai</div>
 					</div>
 					<span className="event-tag">
 						Automate Me If You Can × Accomplish.ai
@@ -386,13 +440,13 @@ const Prospects = () => {
 					</div>
 				</section>
 
-				{/* SLIDE 7: Vision Possible */}
-				<section className={isActive(6)}>
+				{/* SLIDE 8: Vision Possible */}
+				<section className={isActive(7)}>
 					<div className="strip">
 						<div className="brand">
 							<span>03 /</span> Past Events
 						</div>
-						<div className="meta">03 of 10 · Agent Protocol</div>
+						<div className="meta">04 of 11 · Agent Protocol</div>
 					</div>
 					<span className="event-tag">
 						Vision Possible × Agent Protocol
@@ -477,13 +531,13 @@ const Prospects = () => {
 					</div>
 				</section>
 
-				{/* SLIDE 8: Tambo */}
-				<section className={isActive(7)}>
+				{/* SLIDE 9: Tambo */}
+				<section className={isActive(8)}>
 					<div className="strip">
 						<div className="brand">
 							<span>03 /</span> Past Events
 						</div>
-						<div className="meta">04 of 10 · Tambo</div>
+						<div className="meta">05 of 11 · Tambo</div>
 					</div>
 					<span className="event-tag">
 						The UI Strikes Back × Tambo
@@ -547,13 +601,13 @@ const Prospects = () => {
 					</div>
 				</section>
 
-				{/* SLIDE 9: Archestra */}
-				<section className={isActive(8)}>
+				{/* SLIDE 10: Archestra */}
+				<section className={isActive(9)}>
 					<div className="strip">
 						<div className="brand">
 							<span>03 /</span> Past Events
 						</div>
-						<div className="meta">05 of 10 · Archestra</div>
+						<div className="meta">06 of 11 · Archestra</div>
 					</div>
 					<span className="event-tag">2 Fast 2 MCP × Archestra</span>
 					<h2 className="event-title">
@@ -612,14 +666,14 @@ const Prospects = () => {
 					</div>
 				</section>
 
-				{/* SLIDE 10: AI Agents Assemble */}
-				<section className={isActive(9)}>
+				{/* SLIDE 11: AI Agents Assemble */}
+				<section className={isActive(10)}>
 					<div className="strip">
 						<div className="brand">
 							<span>03 /</span> Past Events
 						</div>
 						<div className="meta">
-							06 of 10 · Cline + CodeRabbit + Together AI
+							07 of 11 · Cline + CodeRabbit + Together AI
 						</div>
 					</div>
 					<span className="event-tag">
@@ -689,13 +743,13 @@ const Prospects = () => {
 					</div>
 				</section>
 
-				{/* SLIDE 11: Motia */}
-				<section className={isActive(10)}>
+				{/* SLIDE 12: Motia */}
+				<section className={isActive(11)}>
 					<div className="strip">
 						<div className="brand">
 							<span>03 /</span> Past Events
 						</div>
-						<div className="meta">07 of 10 · Motia</div>
+						<div className="meta">08 of 11 · Motia</div>
 					</div>
 					<span className="event-tag">Backend Reloaded × Motia</span>
 					<h2 className="event-title">
@@ -755,13 +809,13 @@ const Prospects = () => {
 					</div>
 				</section>
 
-				{/* SLIDE 12: FutureStack */}
-				<section className={isActive(11)}>
+				{/* SLIDE 13: FutureStack */}
+				<section className={isActive(12)}>
 					<div className="strip">
 						<div className="brand">
 							<span>03 /</span> Past Events
 						</div>
-						<div className="meta">08 of 10 · Cerebras + Meta</div>
+						<div className="meta">09 of 11 · Cerebras + Meta</div>
 					</div>
 					<span className="event-tag">
 						FutureStack GenAI × Cerebras + Meta
@@ -823,13 +877,13 @@ const Prospects = () => {
 					</div>
 				</section>
 
-				{/* SLIDE 13: Portia */}
-				<section className={isActive(12)}>
+				{/* SLIDE 14: Portia */}
+				<section className={isActive(13)}>
 					<div className="strip">
 						<div className="brand">
 							<span>03 /</span> Past Events
 						</div>
-						<div className="meta">09 of 10 · Portia AI</div>
+						<div className="meta">10 of 11 · Portia AI</div>
 					</div>
 					<span className="event-tag">
 						AgentHack 2025 × Portia AI
@@ -892,13 +946,13 @@ const Prospects = () => {
 					</div>
 				</section>
 
-				{/* SLIDE 14: HackFrost */}
-				<section className={isActive(13)}>
+				{/* SLIDE 15: HackFrost */}
+				<section className={isActive(14)}>
 					<div className="strip">
 						<div className="brand">
 							<span>03 /</span> Past Events
 						</div>
-						<div className="meta">10 of 10 · Kestra</div>
+						<div className="meta">11 of 11 · Kestra</div>
 					</div>
 					<span className="event-tag">HackFrost × Kestra</span>
 					<h2 className="event-title">
@@ -957,8 +1011,8 @@ const Prospects = () => {
 					</div>
 				</section>
 
-				{/* SLIDE 15: WHAT'S INCLUDED */}
-				<section className={isActive(14)}>
+				{/* SLIDE 16: WHAT'S INCLUDED */}
+				<section className={isActive(15)}>
 					<div className="strip">
 						<div className="brand">
 							<span>04 /</span> The Package
@@ -1018,77 +1072,6 @@ const Prospects = () => {
 						We handle everything. You get the developers, the stars,
 						the PRs, and the movement.
 					</p>
-				</section>
-
-				{/* SLIDE 16: PRICING */}
-				<section className={isActive(15)}>
-					<div className="strip">
-						<div className="brand">
-							<span>05 /</span> Pricing
-						</div>
-						<div className="meta">Investment</div>
-					</div>
-					<div className="eyebrow">Investment</div>
-					<h2 className="title" style={{ marginBottom: "1.25rem" }}>
-						Pick your <span className="grad">format.</span>
-					</h2>
-					<div className="value-banner">
-						<div className="value-num">
-							5,000<span className="plus">+</span>
-						</div>
-						<div className="value-copy">
-							<div className="value-headline">
-								developers try your product &amp; give real
-								feedback
-							</div>
-							<div className="value-sub">
-								Every package includes thousands of engaged
-								builders shipping with your tool, the exact kind
-								of feedback that has shaped many of the products
-								we&apos;ve worked with.
-							</div>
-						</div>
-					</div>
-					<div className="pricing-grid">
-						<div className="price-card">
-							<div className="price-format">Online Event</div>
-							<div className="price-num">
-								<span className="currency">$</span>35,000
-							</div>
-							<ul className="price-list">
-								<li>
-									5,000+ devs trying your product &amp; giving
-									feedback
-								</li>
-								<li>Full hackathon package</li>
-								<li>Global reach &amp; promotion</li>
-								<li>End-to-end management</li>
-								<li>Post-event content &amp; showcase</li>
-							</ul>
-						</div>
-						<div className="price-card featured">
-							<div className="price-format">Hybrid Event</div>
-							<div className="price-num">
-								<span className="currency">$</span>45,000
-							</div>
-							<ul className="price-list">
-								<li>Everything in Online, plus:</li>
-								<li>In-person presence in SF (or your city)</li>
-								<li>
-									Curated high-quality in-person attendees
-								</li>
-								<li>
-									Local dev community feedback &amp; social
-									buzz
-								</li>
-								<li>
-									Dedicated tutorial video, newsletter, blog
-									&amp; social posts on Kunal&apos;s personal
-									channels (1.6M+ reach)
-								</li>
-							</ul>
-						</div>
-					</div>
 				</section>
 
 				{/* SLIDE 17: CTA */}
