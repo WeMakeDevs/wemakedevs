@@ -86,6 +86,10 @@ const faqs: FaqType[] = [
 		answer: "Submissions are via blogs this time. Each team writes a blog about their project, what you built, what you learnt, and how you used SigNoz, the more detailed the better, then submits it through the <a href='https://forms.gle/wf9tFYcksrk6P4Zy8' target='_blank' rel='noopener noreferrer' class='text-amber-300 underline hover:text-amber-200'>blog submission form</a> before the deadline.",
 	},
 	{
+		question: "Where should I write and publish my blog?",
+		answer: "Anywhere you like. Use your own platform or any publishing site, Substack, LinkedIn, dev.to, Medium, Hashnode, and so on. Just make sure the blog is public and drop the link in the submission form.",
+	},
+	{
 		question: "What can I win?",
 		answer: "$20,000 in prizes across three tracks. Win the AI & Agent Observability track and every team member gets a MacBook Air, win Signals & Dashboards and each member gets an iPad Air, and win Build Your Own and each member gets an iPhone Air. Top winners also get job interviews at SigNoz. The top 20 PRs earn $100 each, the best blogs win your choice of AirPods Pro 3 or Beats Powerbeats Pro 2, and the top 10 social posts get exclusive swag shipped to them.",
 	},
