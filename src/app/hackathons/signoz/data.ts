@@ -3,7 +3,7 @@ import type { FaqType } from "@/types";
 const DATA = {
 	title: "Agents of SigNoz",
 	titleCard: "Agents of SigNoz",
-	prize: "MacBook Air, iPad Air, iPhone Air, LEGO Ferrari SF-24 & Job Interviews",
+	prize: "MacBook Air, iPad Air, iPhone Air, AirPods Pro 3 / Beats Powerbeats Pro 2 & Job Interviews",
 	startDate: "2026-07-20T00:00:00Z",
 	endDate: "2026-07-26T23:59:00Z",
 	description:
@@ -18,6 +18,8 @@ const DATA = {
 		disabled: false,
 	},
 	submissionFormUrl: "",
+	blogSubmissionUrl: "https://forms.gle/wf9tFYcksrk6P4Zy8",
+	blogWinnersDate: "July 19, 2026",
 	slackUrl:
 		"https://signoz-community.slack.com/join/shared_invite/zt-3x7z8ihiq-CJ6dU~OCOgp5nS1gTqwFTw#/shared-invite/email",
 	githubUrl: "https://github.com/SigNoz/signoz",
@@ -80,8 +82,12 @@ const faqs: FaqType[] = [
 		answer: "Your project must use or integrate with <a href='https://github.com/SigNoz/signoz' target='_blank' rel='noopener noreferrer' class='text-amber-300 underline hover:text-amber-200'>SigNoz</a> for observability. Beyond that you're free to use any language, framework, or tool. SigNoz is OpenTelemetry-native, so your instrumentation works everywhere with zero vendor lock-in.",
 	},
 	{
+		question: "How do I submit my project?",
+		answer: "Submissions are via blogs this time. Each team writes a blog about their project, what you built, what you learnt, and how you used SigNoz, the more detailed the better, then submits it through the <a href='https://forms.gle/wf9tFYcksrk6P4Zy8' target='_blank' rel='noopener noreferrer' class='text-amber-300 underline hover:text-amber-200'>blog submission form</a> before the deadline.",
+	},
+	{
 		question: "What can I win?",
-		answer: "$20,000 in prizes across three tracks. Win the AI & Agent Observability track and every team member gets a MacBook Air, win Signals & Dashboards and each member gets an iPad Air, and win Build Your Own and each member gets an iPhone Air. Top winners also get job interviews at SigNoz. The top 20 PRs earn $100 each, the best blogs win a LEGO Ferrari SF-24 set worth $250, and the top 10 social posts get exclusive swag shipped to them.",
+		answer: "$20,000 in prizes across three tracks. Win the AI & Agent Observability track and every team member gets a MacBook Air, win Signals & Dashboards and each member gets an iPad Air, and win Build Your Own and each member gets an iPhone Air. Top winners also get job interviews at SigNoz. The top 20 PRs earn $100 each, the best blogs win your choice of AirPods Pro 3 or Beats Powerbeats Pro 2, and the top 10 social posts get exclusive swag shipped to them.",
 	},
 
 	{
@@ -99,6 +105,21 @@ const faqs: FaqType[] = [
 ];
 
 const schedule = [
+	{
+		date: "2026-07-19T00:00:00Z",
+		items: [
+			{
+				title: "Blog Challenge Winners Announced",
+				description:
+					"The 'write a blog about SigNoz' challenge wraps up today. You have until now to publish and submit your blog. The best blogs win their choice of AirPods Pro 3 or Beats Powerbeats Pro 2, announced right before the hackathon kicks off.",
+				time: "2026-07-19T23:59:00+05:30",
+				link: {
+					name: "Submit Your Blog",
+					url: "https://forms.gle/wf9tFYcksrk6P4Zy8",
+				},
+			},
+		],
+	},
 	{
 		date: "2026-07-20T00:00:00Z",
 		items: [
@@ -143,8 +164,12 @@ const schedule = [
 			{
 				title: "Final Submissions Due",
 				description:
-					"Submit your project before the deadline. The agency does not accept late field reports.",
+					"Submit your project as a blog before the deadline. Write about what you built, what you learnt, and how you used SigNoz, the more detailed the better. The agency does not accept late field reports.",
 				time: "2026-07-26T23:59:00Z",
+				link: {
+					name: "Submit Your Blog",
+					url: "https://forms.gle/wf9tFYcksrk6P4Zy8",
+				},
 			},
 		],
 	},

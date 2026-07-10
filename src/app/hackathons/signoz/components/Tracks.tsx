@@ -2,7 +2,7 @@
 
 import { ViewContainer } from "@/components/ui/view-container";
 import { motion } from "framer-motion";
-import { ArrowUpRight, Bot, Globe, Radio } from "lucide-react";
+import { ArrowUpRight, Bot, Globe, NotebookPen, Radio } from "lucide-react";
 import Link from "next/link";
 import { DATA } from "../data";
 
@@ -157,6 +157,49 @@ const Tracks = () => {
 						, not requirements.
 					</motion.p>
 				</div>
+
+				{/* ── Blog-based submission callout ─────────────────────── */}
+				<motion.div
+					className="mb-12 rounded-2xl border border-[#ffcd56]/30 bg-[#ffcd56]/8 p-6 md:p-8"
+					initial={{ opacity: 0, y: 16 }}
+					whileInView={{ opacity: 1, y: 0 }}
+					viewport={{ once: true }}
+					transition={{ duration: 0.5 }}
+				>
+					<div className="flex flex-col md:flex-row md:items-center gap-6">
+						<div className="flex items-start gap-4 flex-1">
+							<div className="w-12 h-12 shrink-0 rounded-xl grid place-items-center border border-[#ffcd56]/40 bg-[#ffcd56]/12 text-[#ffcd56]">
+								<NotebookPen className="w-6 h-6" />
+							</div>
+							<div>
+								<h3 className="text-xl font-bold text-[#ffcd56] mb-1">
+									Submissions are via blogs this time
+								</h3>
+								<p className="text-[#c0c1c3] leading-relaxed">
+									For all three tracks, each team submits their
+									project as a blog. Write about what you
+									built, what you learnt, and how you used
+									SigNoz for observability.{" "}
+									<span className="text-[#ffcd56] font-semibold">
+										The more detailed, the better
+									</span>
+									, so cover your architecture, the
+									instrumentation, and the challenges you
+									solved along the way.
+								</p>
+							</div>
+						</div>
+						<Link
+							href={DATA.blogSubmissionUrl || "#"}
+							target="_blank"
+							rel="noopener noreferrer"
+							className="shrink-0 inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl bg-gradient-to-r from-[#ffcd56] to-[#d5aa45] hover:opacity-90 transition-opacity text-[#16181d] font-bold shadow-md"
+						>
+							Submit Your Blog
+							<ArrowUpRight className="w-5 h-5" />
+						</Link>
+					</div>
+				</motion.div>
 
 				<motion.div
 					className="grid grid-cols-1 md:grid-cols-3 gap-6"

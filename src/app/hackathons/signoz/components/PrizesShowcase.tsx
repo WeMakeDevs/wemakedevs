@@ -1,8 +1,17 @@
 "use client";
 
-import { Award, Briefcase, Share2, Star, Trophy } from "lucide-react";
+import {
+	ArrowUpRight,
+	Award,
+	Briefcase,
+	CalendarCheck,
+	Share2,
+	Star,
+	Trophy,
+} from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { DATA } from "../data";
 import { images } from "../images";
 
 // ─── Product images ───────────────────────────────────────────────────────────
@@ -27,11 +36,18 @@ const IPadImg = () => (
 		className="max-h-full w-auto object-contain drop-shadow-[0_8px_20px_rgba(0,0,0,0.5)]"
 	/>
 );
-const LegoFerrariImg = () => (
+const AirPodsImg = () => (
 	<Image
-		src={images.legoFerrari}
-		alt="LEGO Ferrari SF-24 set"
-		className="max-h-full w-auto object-contain"
+		src={images.airpods}
+		alt="Apple AirPods Pro 3"
+		className="max-h-full w-auto object-contain drop-shadow-[0_8px_20px_rgba(0,0,0,0.5)]"
+	/>
+);
+const BeatsImg = () => (
+	<Image
+		src={images.beats}
+		alt="Beats Powerbeats Pro 2"
+		className="max-h-full w-auto object-contain drop-shadow-[0_8px_20px_rgba(0,0,0,0.5)]"
 	/>
 );
 
@@ -162,7 +178,7 @@ const PrizesShowcase = () => {
 									<Briefcase className="w-6 h-6 text-[#ea6e4a] shrink-0 mt-0.5" />
 									<div>
 										<p className="text-[#ea6e4a] font-bold text-lg">
-											Top winners get job interviews at
+											Top blogs get job interviews at
 											SigNoz
 										</p>
 										<p className="text-[#c0c1c3] text-sm">
@@ -196,24 +212,45 @@ const PrizesShowcase = () => {
 									Side Track · Best Blogs
 								</h3>
 							</div>
-							<div className="mb-5 w-full mx-auto h-52 flex items-center justify-center rounded-lg drop-shadow-[0_8px_20px_rgba(0,0,0,0.5)]">
-								<LegoFerrariImg />
+							<div className="mb-5 w-full mx-auto h-52 flex items-center justify-center gap-4 rounded-lg">
+								<AirPodsImg />
+								<BeatsImg />
 							</div>
 							<p className="text-[#c0c1c3] leading-relaxed mb-6">
 								Write about your build, your journey, or how
 								SigNoz gives your systems total observability.
-								The best blogs win a{" "}
+								The more detailed, the better. You have until{" "}
 								<span className="text-[#ffcd56] font-semibold">
-									LEGO Ferrari SF-24 set worth $250
+									{DATA.blogWinnersDate}
+								</span>{" "}
+								to write and submit your blog, and the best blogs
+								win your choice of{" "}
+								<span className="text-[#ffcd56] font-semibold">
+									AirPods Pro 3 or Beats Powerbeats Pro 2
 								</span>
 								.
 							</p>
-							<div className="flex items-center gap-3 bg-[#0b0c0e] rounded-xl px-4 py-3 border border-[#ffcd56]/25">
+							<div className="flex items-center gap-3 bg-[#0b0c0e] rounded-xl px-4 py-3 border border-[#ffcd56]/25 mb-3">
 								<Star className="w-5 h-5 text-[#ffcd56] shrink-0" />
 								<span className="font-semibold text-[#ffcd56]">
-									LEGO Ferrari SF-24 Set ($250)
+									AirPods Pro 3 or Beats Powerbeats Pro 2
 								</span>
 							</div>
+							<div className="flex items-center gap-3 bg-[#0b0c0e] rounded-xl px-4 py-3 border border-[#ffcd56]/25 mb-5">
+								<CalendarCheck className="w-5 h-5 text-[#ffcd56] shrink-0" />
+								<span className="font-semibold text-[#ffcd56]">
+									Winners announced {DATA.blogWinnersDate}
+								</span>
+							</div>
+							<Link
+								href={DATA.blogSubmissionUrl || "#"}
+								target="_blank"
+								rel="noopener noreferrer"
+								className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-[#ffcd56] to-[#d5aa45] hover:opacity-90 transition-opacity text-[#16181d] font-bold shadow-md"
+							>
+								Submit Your Blog
+								<ArrowUpRight className="w-5 h-5" />
+							</Link>
 						</div>
 
 						{/* Social posts */}
