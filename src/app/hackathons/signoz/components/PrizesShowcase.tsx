@@ -133,26 +133,30 @@ const PrizesShowcase = () => {
 						<div className="relative z-10 flex flex-col md:flex-row gap-8 md:items-center">
 							<div className="flex-1">
 								<div className="inline-flex items-center gap-2 bg-[#ffcd56]/12 border border-[#ffcd56]/50 text-[#ffcd56] px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wide mb-5">
-									<Star className="w-3.5 h-3.5" /> Pre-Event
-									Prize · Best Blogs
+									<Star className="w-3.5 h-3.5" /> Early Win ·
+									Pre-Event Blog Prize
 								</div>
 								<h3 className="text-2xl md:text-3xl font-bold text-[#f5f5f5] mb-3">
-									Kick things off with the blog challenge
+									Warm up before you build
 								</h3>
 								<p className="text-[#c0c1c3] leading-relaxed mb-6">
-									Write about your build, your journey, or how
-									SigNoz gives your systems total
-									observability. The more detailed, the
-									better. You have until{" "}
+									Get an early win before the project sprint
+									begins. Self-host SigNoz, wire it up as your
+									observability backend, send data, and
+									explore what it can do, traces, metrics,
+									logs, dashboards, and alerts. Then write about
+									the feature you like the most and submit your
+									blog before{" "}
 									<span className="text-[#ffcd56] font-semibold">
 										{DATA.blogWinnersDate}
 									</span>{" "}
-									to write and submit your blog, and the best
-									blogs win your choice of{" "}
+									to win your choice of{" "}
 									<span className="text-[#ffcd56] font-semibold">
 										AirPods Pro 3 or Beats Powerbeats Pro 2
 									</span>
-									.
+									. It is the perfect way to get hands-on with
+									SigNoz before you start building your actual
+									project.
 								</p>
 								<div className="flex flex-wrap gap-3 mb-6">
 									<div className="flex items-center gap-3 bg-[#0b0c0e] rounded-xl px-4 py-3 border border-[#ffcd56]/25">

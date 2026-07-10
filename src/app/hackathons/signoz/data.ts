@@ -115,7 +115,7 @@ const schedule = [
 			{
 				title: "Blog Challenge Winners Announced",
 				description:
-					"The 'write a blog about SigNoz' challenge wraps up today. You have until now to publish and submit your blog. The best blogs win their choice of AirPods Pro 3 or Beats Powerbeats Pro 2, announced right before the hackathon kicks off.",
+					"The pre-event blog challenge wraps up today. Self-host SigNoz, send data, explore its features, and write about the one you like the most before now for an early win. The best blogs take their choice of AirPods Pro 3 or Beats Powerbeats Pro 2, announced right before the hackathon kicks off.",
 				time: "2026-07-19T23:59:00+05:30",
 				link: {
 					name: "Submit Your Blog",
