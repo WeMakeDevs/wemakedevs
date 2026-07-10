@@ -2,11 +2,12 @@ import Image from "next/image";
 import { images } from "../images";
 
 const links = [
-	{ label: "About", href: "#top" },
-	{ label: "Hackathons", href: "#hubs" },
-	{ label: "Resources", href: "#builder" },
-	{ label: "Register", href: "#register" },
-	{ label: "FAQ", href: "#faqs" },
+	{ label: "About", href: "#top", newTab: false },
+	{ label: "Hackathons", href: "#hubs", newTab: false },
+	{ label: "Resources", href: "#builder", newTab: false },
+	{ label: "Register", href: "#register", newTab: false },
+	{ label: "FAQ", href: "#faqs", newTab: false },
+	{ label: "Rules", href: "/aws/rules", newTab: true },
 ];
 
 export default function Footer() {
@@ -24,20 +25,42 @@ export default function Footer() {
 						<span className="h-6 w-px bg-hair/10" />
 						<Image src={images.awsWhite} alt="AWS" className="logo-dark h-6 w-auto" />
 						<Image src={images.awsBlack} alt="AWS" className="logo-light h-6 w-auto" />
-						<span className="font-heading font-bold text-heading">
-							Next Gen Hacks 2026
-						</span>
 					</div>
-					<div className="flex items-center gap-6 text-sm text-body">
-						{links.map((l) => (
-							<a
-								key={l.href}
-								href={l.href}
-								className="hover:text-orange transition-colors"
-							>
-								{l.label}
-							</a>
-						))}
+					<div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm text-body">
+						{links.map((l) =>
+							l.newTab ? (
+								<a
+									key={l.href}
+									href={l.href}
+									target="_blank"
+									rel="noopener noreferrer"
+									className="inline-flex items-center gap-1.5 rounded-lg border border-orange/40 bg-orange/10 px-3 py-1.5 font-medium text-orange transition-colors hover:bg-orange hover:text-ink"
+								>
+									{l.label}
+									<svg
+										className="h-3.5 w-3.5"
+										fill="none"
+										stroke="currentColor"
+										strokeWidth={2}
+										viewBox="0 0 24 24"
+									>
+										<path
+											strokeLinecap="round"
+											strokeLinejoin="round"
+											d="M7 17 17 7M9 7h8v8"
+										/>
+									</svg>
+								</a>
+							) : (
+								<a
+									key={l.href}
+									href={l.href}
+									className="hover:text-orange transition-colors"
+								>
+									{l.label}
+								</a>
+							),
+						)}
 					</div>
 				</div>
 				<div className="mt-8 border-t border-hair/10 pt-6 text-center sm:text-left">

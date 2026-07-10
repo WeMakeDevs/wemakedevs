@@ -19,7 +19,31 @@ export default function Faq() {
 					</h2>
 				</Reveal>
 
-				<div className="mt-12 space-y-4">
+				<Reveal className="mt-8 flex justify-center">
+					<a
+						href="/aws/rules"
+						target="_blank"
+						rel="noopener noreferrer"
+						className="inline-flex items-center gap-2 rounded-lg border border-orange/40 bg-orange/10 px-5 py-2.5 text-sm font-semibold text-orange transition-all duration-200 hover:bg-orange hover:text-ink hover:scale-[1.03] active:scale-[0.98]"
+					>
+						Read the full Rules &amp; Terms
+						<svg
+							className="h-4 w-4"
+							fill="none"
+							stroke="currentColor"
+							strokeWidth={2}
+							viewBox="0 0 24 24"
+						>
+							<path
+								strokeLinecap="round"
+								strokeLinejoin="round"
+								d="M7 17 17 7M9 7h8v8"
+							/>
+						</svg>
+					</a>
+				</Reveal>
+
+				<div className="mt-8 space-y-4">
 					{faqs.map((faq, i) => {
 						const isOpen = open === i;
 						return (
