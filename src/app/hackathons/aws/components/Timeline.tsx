@@ -8,7 +8,7 @@ const CITY_IDS = ["delhi", "mumbai", "hyderabad", "bangalore", "chennai"] as con
 const S = 2.6;
 
 const captions: Record<string, string> = {
-	all: "All six host cities across India",
+	all: "Five host cities across India",
 	bangalore: "Bangalore, stop 01",
 	delhi: "Delhi, stop 02",
 	mumbai: "Mumbai, stop 03",
