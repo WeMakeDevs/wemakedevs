@@ -127,6 +127,66 @@ const PrizesShowcase = () => {
 				</div>
 
 				<div className="space-y-8">
+					{/* Pre-event prize · Best Blogs (highlighted first) */}
+					<div className="relative rounded-3xl p-6 md:p-10 overflow-hidden mib-glass-bg border-2 border-[#ffcd56]/60 shadow-[0_18px_44px_rgba(255,205,86,0.18)]">
+						<div className="pointer-events-none absolute -top-24 -right-24 w-72 h-72 bg-[#ffcd56]/20 rounded-full blur-3xl" />
+						<div className="relative z-10 flex flex-col md:flex-row gap-8 md:items-center">
+							<div className="flex-1">
+								<div className="inline-flex items-center gap-2 bg-[#ffcd56]/12 border border-[#ffcd56]/50 text-[#ffcd56] px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wide mb-5">
+									<Star className="w-3.5 h-3.5" /> Pre-Event
+									Prize · Best Blogs
+								</div>
+								<h3 className="text-2xl md:text-3xl font-bold text-[#f5f5f5] mb-3">
+									Kick things off with the blog challenge
+								</h3>
+								<p className="text-[#c0c1c3] leading-relaxed mb-6">
+									Write about your build, your journey, or how
+									SigNoz gives your systems total
+									observability. The more detailed, the
+									better. You have until{" "}
+									<span className="text-[#ffcd56] font-semibold">
+										{DATA.blogWinnersDate}
+									</span>{" "}
+									to write and submit your blog, and the best
+									blogs win your choice of{" "}
+									<span className="text-[#ffcd56] font-semibold">
+										AirPods Pro 3 or Beats Powerbeats Pro 2
+									</span>
+									.
+								</p>
+								<div className="flex flex-wrap gap-3 mb-6">
+									<div className="flex items-center gap-3 bg-[#0b0c0e] rounded-xl px-4 py-3 border border-[#ffcd56]/25">
+										<Star className="w-5 h-5 text-[#ffcd56] shrink-0" />
+										<span className="font-semibold text-[#ffcd56]">
+											AirPods Pro 3 or Beats Powerbeats
+											Pro 2
+										</span>
+									</div>
+									<div className="flex items-center gap-3 bg-[#0b0c0e] rounded-xl px-4 py-3 border border-[#ffcd56]/25">
+										<CalendarCheck className="w-5 h-5 text-[#ffcd56] shrink-0" />
+										<span className="font-semibold text-[#ffcd56]">
+											Winners announced{" "}
+											{DATA.blogWinnersDate}
+										</span>
+									</div>
+								</div>
+								<Link
+									href={DATA.blogSubmissionUrl || "#"}
+									target="_blank"
+									rel="noopener noreferrer"
+									className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-[#ffcd56] to-[#d5aa45] hover:opacity-90 transition-opacity text-[#16181d] font-bold shadow-md"
+								>
+									Submit Your Blog
+									<ArrowUpRight className="w-5 h-5" />
+								</Link>
+							</div>
+							<div className="w-full md:w-80 shrink-0 h-52 flex items-center justify-center gap-4">
+								<AirPodsImg />
+								<BeatsImg />
+							</div>
+						</div>
+					</div>
+
 					{/* Main prizes */}
 					<div className="relative rounded-3xl p-6 md:p-10 overflow-hidden mib-glass-bg border border-[#3c4152] shadow-[0_18px_44px_rgba(0,0,0,0.6)]">
 						<div className="pointer-events-none absolute -top-24 -right-24 w-72 h-72 bg-[#e5502a]/15 rounded-full blur-3xl" />
@@ -200,92 +260,38 @@ const PrizesShowcase = () => {
 						</div>
 					</div>
 
-					{/* Side tracks */}
-					<div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-						{/* Best blogs */}
-						<div className="dossier-card rounded-2xl p-8">
-							<div className="flex items-center gap-4 mb-6">
-								<div className="bg-gradient-to-br from-[#ffcd56] to-[#d5aa45] p-3 rounded-xl shadow-md">
-									<Star className="w-6 h-6 text-[#16181d]" />
-								</div>
-								<h3 className="text-xl md:text-2xl font-bold text-[#ffcd56]">
-									Side Track · Best Blogs
-								</h3>
+					{/* Social posts */}
+					<div className="dossier-card rounded-2xl p-8">
+						<div className="flex items-center gap-4 mb-6">
+							<div className="bg-gradient-to-br from-[#ea6e4a] to-[#e5502a] p-3 rounded-xl shadow-md">
+								<Share2 className="w-6 h-6 text-white" />
 							</div>
-							<div className="mb-5 w-full mx-auto h-52 flex items-center justify-center gap-4 rounded-lg">
-								<AirPodsImg />
-								<BeatsImg />
-							</div>
-							<p className="text-[#c0c1c3] leading-relaxed mb-6">
-								Write about your build, your journey, or how
-								SigNoz gives your systems total observability.
-								The more detailed, the better. You have until{" "}
-								<span className="text-[#ffcd56] font-semibold">
-									{DATA.blogWinnersDate}
-								</span>{" "}
-								to write and submit your blog, and the best blogs
-								win your choice of{" "}
-								<span className="text-[#ffcd56] font-semibold">
-									AirPods Pro 3 or Beats Powerbeats Pro 2
-								</span>
-								.
-							</p>
-							<div className="flex items-center gap-3 bg-[#0b0c0e] rounded-xl px-4 py-3 border border-[#ffcd56]/25 mb-3">
-								<Star className="w-5 h-5 text-[#ffcd56] shrink-0" />
-								<span className="font-semibold text-[#ffcd56]">
-									AirPods Pro 3 or Beats Powerbeats Pro 2
-								</span>
-							</div>
-							<div className="flex items-center gap-3 bg-[#0b0c0e] rounded-xl px-4 py-3 border border-[#ffcd56]/25 mb-5">
-								<CalendarCheck className="w-5 h-5 text-[#ffcd56] shrink-0" />
-								<span className="font-semibold text-[#ffcd56]">
-									Winners announced {DATA.blogWinnersDate}
-								</span>
-							</div>
+							<h3 className="text-xl md:text-2xl font-bold text-[#ea6e4a]">
+								Side Track · Social Buzz
+							</h3>
+						</div>
+						<p className="text-[#c0c1c3] leading-relaxed mb-6">
+							Share your progress on socials and tag{" "}
+							<span className="text-[#ea6e4a] font-semibold">
+								@wemakedevs
+							</span>{" "}
+							and{" "}
 							<Link
-								href={DATA.blogSubmissionUrl || "#"}
+								href="https://x.com/SigNozHQ"
 								target="_blank"
 								rel="noopener noreferrer"
-								className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-[#ffcd56] to-[#d5aa45] hover:opacity-90 transition-opacity text-[#16181d] font-bold shadow-md"
+								className="text-[#ea6e4a] font-semibold underline hover:text-[#ffd778]"
 							>
-								Submit Your Blog
-								<ArrowUpRight className="w-5 h-5" />
+								SigNoz
 							</Link>
-						</div>
-
-						{/* Social posts */}
-						<div className="dossier-card rounded-2xl p-8">
-							<div className="flex items-center gap-4 mb-6">
-								<div className="bg-gradient-to-br from-[#ea6e4a] to-[#e5502a] p-3 rounded-xl shadow-md">
-									<Share2 className="w-6 h-6 text-white" />
-								</div>
-								<h3 className="text-xl md:text-2xl font-bold text-[#ea6e4a]">
-									Side Track · Social Buzz
-								</h3>
-							</div>
-							<p className="text-[#c0c1c3] leading-relaxed mb-6">
-								Share your progress on socials and tag{" "}
-								<span className="text-[#ea6e4a] font-semibold">
-									@wemakedevs
-								</span>{" "}
-								and{" "}
-								<Link
-									href="https://x.com/SigNozHQ"
-									target="_blank"
-									rel="noopener noreferrer"
-									className="text-[#ea6e4a] font-semibold underline hover:text-[#ffd778]"
-								>
-									SigNoz
-								</Link>
-								. The top 10 social media posts get exclusive
-								swag shipped to them.
-							</p>
-							<div className="flex items-center gap-3 bg-[#0b0c0e] rounded-xl px-4 py-3 border border-[#e5502a]/25">
-								<Share2 className="w-5 h-5 text-[#ea6e4a] shrink-0" />
-								<span className="font-semibold text-[#ea6e4a]">
-									Top 10 Posts → Exclusive Swag
-								</span>
-							</div>
+							. The top 10 social media posts get exclusive swag
+							shipped to them.
+						</p>
+						<div className="flex items-center gap-3 bg-[#0b0c0e] rounded-xl px-4 py-3 border border-[#e5502a]/25">
+							<Share2 className="w-5 h-5 text-[#ea6e4a] shrink-0" />
+							<span className="font-semibold text-[#ea6e4a]">
+								Top 10 Posts → Exclusive Swag
+							</span>
 						</div>
 					</div>
 				</div>
