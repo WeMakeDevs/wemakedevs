@@ -6,6 +6,15 @@
   <title>AWS Next Gen Hacks 2026 · WeMakeDevs</title>
   <meta name="description" content="AWS Next Gen Hacks 2026 — 6 Cities. 1 Grand Arena. Build with AWS and claim your spot in the Vegas Final. Hosted in partnership with WeMakeDevs." />
 
+  <!-- Apply saved theme before paint to avoid flash -->
+  <script>
+    try {
+      if (localStorage.getItem('theme') === 'light') {
+        document.documentElement.classList.add('light');
+      }
+    } catch (e) {}
+  </script>
+
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -18,11 +27,21 @@
       theme: {
         extend: {
           colors: {
-            ink: '#1A1C1E',
-            ebony: '#232F3E',
+            // Constant accents (readable on both themes)
             orange: '#FF9900',
             rust: '#B8422E',
-            slate: '#424650',
+            ink: '#1A1C1E', // constant dark, used for text on orange surfaces
+            // Theme-aware tokens (driven by CSS variables)
+            canvas:  'rgb(var(--canvas) / <alpha-value>)',
+            surface: 'rgb(var(--surface) / <alpha-value>)',
+            ebony:   'rgb(var(--surface) / <alpha-value>)',
+            line:    'rgb(var(--line) / <alpha-value>)',
+            slate:   'rgb(var(--line) / <alpha-value>)',
+            land:    'rgb(var(--land) / <alpha-value>)',
+            heading: 'rgb(var(--heading) / <alpha-value>)',
+            body:    'rgb(var(--body) / <alpha-value>)',
+            muted:   'rgb(var(--muted) / <alpha-value>)',
+            subtle:  'rgb(var(--subtle) / <alpha-value>)',
           },
           fontFamily: {
             heading: ['"Public Sans"', 'sans-serif'],
@@ -38,13 +57,47 @@
   <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
   <style>
+    /* ---- Theme tokens (RGB channels for Tailwind alpha support) ---- */
+    :root {
+      --canvas:  26 28 30;    /* #1A1C1E */
+      --surface: 35 47 62;    /* #232F3E */
+      --line:    66 70 80;    /* #424650 */
+      --land:    44 58 77;    /* #2C3A4D */
+      --heading: 255 255 255; /* #FFFFFF */
+      --body:    203 213 225; /* slate-300 */
+      --muted:   148 163 184; /* slate-400 */
+      --subtle:  100 116 139; /* slate-500 */
+    }
+    html.light {
+      --canvas:  244 246 249; /* #F4F6F9 */
+      --surface: 255 255 255; /* #FFFFFF */
+      --line:    224 227 233; /* #E0E3E9 */
+      --land:    228 233 240; /* #E4E9F0 */
+      --heading: 22 25 31;    /* #16191F */
+      --body:    55 65 75;    /* #37414B */
+      --muted:   90 100 114;  /* #5A6472 */
+      --subtle:  130 140 155; /* #828C9B */
+    }
+
     html { -webkit-tap-highlight-color: transparent; }
-    body { background-color: #1A1C1E; }
+    body {
+      background-color: rgb(var(--canvas));
+      transition: background-color .35s ease, color .35s ease;
+    }
     [x-cloak] { display: none !important; }
+
+    /* Theme-aware logo + toggle icon visibility */
+    .logo-light, html.light .logo-dark { display: none; }
+    html.light .logo-light { display: block; }
+    .icon-moon, html.light .icon-sun { display: none; }
+    html.light .icon-moon { display: block; }
+
+    /* Map landmass adapts to theme */
+    .map-land { fill: rgb(var(--land)); stroke: rgb(var(--line)); transition: fill .35s ease, stroke .35s ease; }
 
     /* Flowing dashed connector */
     .connector {
-      stroke: #424650;
+      stroke: rgb(var(--muted));
       stroke-width: 2;
       stroke-dasharray: 6 8;
       fill: none;
@@ -110,55 +163,70 @@
 
     ::selection { background: #FF9900; color: #1A1C1E; }
     ::-webkit-scrollbar { width: 10px; }
-    ::-webkit-scrollbar-track { background: #1A1C1E; }
-    ::-webkit-scrollbar-thumb { background: #424650; border-radius: 5px; }
+    ::-webkit-scrollbar-track { background: rgb(var(--canvas)); }
+    ::-webkit-scrollbar-thumb { background: rgb(var(--line)); border-radius: 5px; }
     ::-webkit-scrollbar-thumb:hover { background: #FF9900; }
   </style>
 </head>
 
-<body class="font-body text-slate-200 bg-ink antialiased selection:bg-orange">
+<body class="font-body text-body bg-canvas antialiased selection:bg-orange">
 
 <div
   x-data="{
     active: null,
     mobileMenu: false,
+    theme: (function(){ try { return localStorage.getItem('theme') || 'dark'; } catch(e){ return 'dark'; } })(),
     setActive(id) { this.active = id; },
     clearActive() { this.active = null; },
-    toggle(id) { this.active = this.active === id ? null : id; }
+    toggle(id) { this.active = this.active === id ? null : id; },
+    toggleTheme() {
+      this.theme = this.theme === 'dark' ? 'light' : 'dark';
+      document.documentElement.classList.toggle('light', this.theme === 'light');
+      try { localStorage.setItem('theme', this.theme); } catch(e) {}
+    }
   }"
 >
 
   <!-- ============ NAVBAR ============ -->
-  <header class="fixed top-0 inset-x-0 z-50 border-b border-slate/60 bg-ink/80 backdrop-blur-md">
+  <header class="fixed top-0 inset-x-0 z-50 border-b border-slate/60 bg-canvas/80 backdrop-blur-md">
     <nav class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       <div class="flex h-16 items-center justify-between">
         <!-- Brand -->
         <a href="#top" class="flex items-center gap-3 shrink-0">
-          <img src="/aws/images/aws-white.png" alt="AWS" class="h-7 w-auto" />
+          <img src="/aws/images/aws-white.png" alt="AWS" class="logo-dark h-7 w-auto" />
+          <img src="/aws/images/aws-black.png" alt="AWS" class="logo-light h-7 w-auto" />
           <span class="hidden sm:block h-6 w-px bg-slate"></span>
           <span class="hidden sm:flex flex-col leading-tight">
-            <span class="font-heading font-extrabold text-white text-sm tracking-tight">Next Gen Hacks</span>
+            <span class="font-heading font-extrabold text-heading text-sm tracking-tight">Next Gen Hacks</span>
             <span class="text-[10px] font-mono uppercase tracking-widest text-orange">× WeMakeDevs</span>
           </span>
         </a>
 
         <!-- Center links -->
-        <div class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
+        <div class="hidden md:flex items-center gap-8 text-sm font-medium text-body">
           <a href="#map" class="hover:text-orange transition-colors">Interactive Map</a>
           <a href="#hubs" class="hover:text-orange transition-colors">Hackathon Hubs</a>
           <a href="#perks" class="hover:text-orange transition-colors">Developer Perks</a>
+          <a href="#builder" class="hover:text-orange transition-colors">Builder Center</a>
           <a href="#faqs" class="hover:text-orange transition-colors">FAQs</a>
         </div>
 
         <!-- Right CTA -->
         <div class="flex items-center gap-3">
+          <!-- Theme toggle -->
+          <button @click="toggleTheme()"
+                  class="inline-flex h-9 w-9 items-center justify-center rounded-lg border border-slate text-muted transition-colors hover:text-orange hover:border-orange/60"
+                  aria-label="Toggle light and dark theme">
+            <svg class="icon-sun h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path stroke-linecap="round" d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+            <svg class="icon-moon h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 12.8A9 9 0 1111.2 3a7 7 0 009.8 9.8z"/></svg>
+          </button>
           <a href="#hubs"
              class="hidden sm:inline-flex items-center gap-2 rounded-lg bg-orange px-4 py-2 text-sm font-semibold text-ink transition-all duration-300 hover:bg-rust hover:text-white hover:shadow-lg hover:shadow-orange/20">
             Register Now
             <svg class="h-4 w-4" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 10h12M11 5l5 5-5 5" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </a>
           <!-- Mobile toggle -->
-          <button @click="mobileMenu = !mobileMenu" class="md:hidden p-2 text-slate-200" aria-label="Menu">
+          <button @click="mobileMenu = !mobileMenu" class="md:hidden p-2 text-body" aria-label="Menu">
             <svg x-show="!mobileMenu" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
             <svg x-show="mobileMenu" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" d="M6 6l12 12M18 6L6 18"/></svg>
           </button>
@@ -166,10 +234,11 @@
       </div>
 
       <!-- Mobile menu -->
-      <div x-show="mobileMenu" x-transition x-cloak class="md:hidden pb-4 flex flex-col gap-2 text-sm font-medium text-slate-300">
+      <div x-show="mobileMenu" x-transition x-cloak class="md:hidden pb-4 flex flex-col gap-2 text-sm font-medium text-body">
         <a @click="mobileMenu=false" href="#map" class="py-2 hover:text-orange">Interactive Map</a>
         <a @click="mobileMenu=false" href="#hubs" class="py-2 hover:text-orange">Hackathon Hubs</a>
         <a @click="mobileMenu=false" href="#perks" class="py-2 hover:text-orange">Developer Perks</a>
+        <a @click="mobileMenu=false" href="#builder" class="py-2 hover:text-orange">Builder Center</a>
         <a @click="mobileMenu=false" href="#faqs" class="py-2 hover:text-orange">FAQs</a>
         <a @click="mobileMenu=false" href="#hubs" class="mt-2 inline-flex justify-center rounded-lg bg-orange px-4 py-2 font-semibold text-ink">Register Now</a>
       </div>
@@ -190,13 +259,13 @@
         The 2026 Builder Series
       </span>
 
-      <h1 class="mt-6 font-heading font-black text-white text-4xl sm:text-6xl lg:text-7xl tracking-tight">
+      <h1 class="mt-6 font-heading font-black text-heading text-4xl sm:text-6xl lg:text-7xl tracking-tight">
         AWS Next Gen Hacks <span class="text-orange">2026</span>
       </h1>
 
-      <p class="mx-auto mt-5 max-w-2xl text-lg sm:text-xl text-slate-300">
+      <p class="mx-auto mt-5 max-w-2xl text-lg sm:text-xl text-body">
         6 Cities. 1 Grand Arena. Build with AWS and claim your spot in the
-        <span class="text-white font-semibold">Vegas Final</span>.
+        <span class="text-heading font-semibold">Vegas Final</span>.
       </p>
 
       <!-- Metric badges -->
@@ -206,7 +275,7 @@
             <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8c-1.66 0-3 .9-3 2s1.34 2 3 2 3 .9 3 2-1.34 2-3 2m0-8V6m0 12v-2m0-8c1.11 0 2.08.4 2.6 1M12 16c-1.11 0-2.08-.4-2.6-1"/></svg>
           </div>
           <p class="font-mono text-2xl font-bold text-orange">$100,000+</p>
-          <p class="mt-1 text-sm text-slate-400">1 Crore INR+ in cash, prizes, and resources across the series.</p>
+          <p class="mt-1 text-sm text-muted">1 Crore INR+ in cash, prizes, and resources across the series.</p>
         </div>
 
         <div class="rounded-xl border border-slate bg-ebony p-6 transition-transform duration-300 hover:-translate-y-1">
@@ -214,7 +283,7 @@
             <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3.6 9h16.8M3.6 15h16.8M11.5 3a17 17 0 000 18M12.5 3a17 17 0 010 18"/><circle cx="12" cy="12" r="9"/></svg>
           </div>
           <p class="font-mono text-2xl font-bold text-orange">Las Vegas</p>
-          <p class="mt-1 text-sm text-slate-400">Top Indian teams flown directly to Las Vegas for the Grand Showdown.</p>
+          <p class="mt-1 text-sm text-muted">Top Indian teams flown directly to Las Vegas for the Grand Showdown.</p>
         </div>
 
         <div class="rounded-xl border border-slate bg-ebony p-6 transition-transform duration-300 hover:-translate-y-1">
@@ -222,7 +291,7 @@
             <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 2L4.5 12.5H11l-1 7.5 8.5-10.5H12l1-7.5z"/></svg>
           </div>
           <p class="font-mono text-2xl font-bold text-orange">Acceleration</p>
-          <p class="mt-1 text-sm text-slate-400">Turn prototype hacks into funded projects with direct AWS Cloud Credit grants.</p>
+          <p class="mt-1 text-sm text-muted">Turn prototype hacks into funded projects with direct AWS Cloud Credit grants.</p>
         </div>
       </div>
 
@@ -234,7 +303,7 @@
           <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></svg>
         </a>
         <a href="https://wemakedevs.org" target="_blank" rel="noopener"
-           class="group inline-flex items-center gap-2 px-4 py-3.5 font-semibold text-slate-300 transition-colors hover:text-orange">
+           class="group inline-flex items-center gap-2 px-4 py-3.5 font-semibold text-body transition-colors hover:text-orange">
           Join the WeMakeDevs Community
           <svg class="h-4 w-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M9 7h8v8"/></svg>
         </a>
@@ -247,8 +316,8 @@
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       <div class="text-center">
         <p class="font-mono text-xs uppercase tracking-[0.3em] text-orange">The Journey</p>
-        <h2 class="mt-3 font-heading font-extrabold text-white text-3xl sm:text-4xl">From India's Hubs to the Vegas Arena</h2>
-        <p class="mx-auto mt-4 max-w-2xl text-slate-400">
+        <h2 class="mt-3 font-heading font-extrabold text-heading text-3xl sm:text-4xl">From India's Hubs to the Vegas Arena</h2>
+        <p class="mx-auto mt-4 max-w-2xl text-muted">
           Hover or tap a city to trace its route to the Las Vegas Grand Finale — and spotlight its qualifier below.
         </p>
       </div>
@@ -257,12 +326,12 @@
         <svg viewBox="0 0 1000 520" class="w-full h-auto" role="img" aria-label="Route map from Indian cities to Las Vegas">
           <!-- India stylized landmass -->
           <path d="M170 130 L300 125 L322 172 L300 222 L286 272 L256 352 L236 402 L214 352 L184 300 L150 250 L156 188 Z"
-                fill="#232F3E" stroke="#424650" stroke-width="1.5" />
+                class="map-land" stroke-width="1.5" />
           <text x="150" y="115" class="font-mono" fill="#5b6472" font-size="15" letter-spacing="3">INDIA</text>
 
           <!-- US stylized landmass -->
           <path d="M600 168 L722 150 L860 160 L912 188 L882 252 L822 292 L720 302 L640 282 L610 232 Z"
-                fill="#232F3E" stroke="#424650" stroke-width="1.5" />
+                class="map-land" stroke-width="1.5" />
           <text x="770" y="140" class="font-mono" fill="#5b6472" font-size="15" letter-spacing="3">USA</text>
 
           <!-- Connectors -->
@@ -310,7 +379,7 @@
           </g>
         </svg>
 
-        <p class="mt-4 text-center text-xs font-mono text-slate-500" x-text="active ? ('Tracing route: ' + active.charAt(0).toUpperCase() + active.slice(1) + ' → Las Vegas') : 'Select a city node to trace its route'"></p>
+        <p class="mt-4 text-center text-xs font-mono text-subtle" x-text="active ? ('Tracing route: ' + active.charAt(0).toUpperCase() + active.slice(1) + ' → Las Vegas') : 'Select a city node to trace its route'"></p>
       </div>
     </div>
   </section>
@@ -320,8 +389,8 @@
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       <div class="text-center">
         <p class="font-mono text-xs uppercase tracking-[0.3em] text-orange">The Circuit</p>
-        <h2 class="mt-3 font-heading font-extrabold text-white text-3xl sm:text-4xl">Six Stops. One Grand Finale.</h2>
-        <p class="mx-auto mt-4 max-w-2xl text-slate-400">Five regional qualifiers across India feed the ultimate showdown in Las Vegas.</p>
+        <h2 class="mt-3 font-heading font-extrabold text-heading text-3xl sm:text-4xl">Six Stops. One Grand Finale.</h2>
+        <p class="mx-auto mt-4 max-w-2xl text-muted">Five regional qualifiers across India feed the ultimate showdown in Las Vegas.</p>
       </div>
 
       <div class="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -331,13 +400,13 @@
              class="rounded-2xl border bg-ebony p-6 transition-all duration-300"
              :class="active === 'bangalore' ? 'border-orange shadow-lg shadow-orange/10 scale-[1.02]' : (active ? 'border-slate opacity-50' : 'border-slate hover:border-slate/80')">
           <div class="flex items-center justify-between">
-            <span class="inline-flex items-center gap-1.5 rounded-full bg-slate/40 px-3 py-1 text-[10px] font-mono uppercase tracking-widest text-slate-300">
+            <span class="inline-flex items-center gap-1.5 rounded-full bg-slate/40 px-3 py-1 text-[10px] font-mono uppercase tracking-widest text-body">
               <span class="h-1.5 w-1.5 rounded-full bg-orange animate-pulse"></span> Coming Soon
             </span>
-            <span class="font-mono text-xs text-slate-500">Q1</span>
+            <span class="font-mono text-xs text-subtle">Q1</span>
           </div>
-          <h3 class="mt-5 font-heading text-2xl font-bold text-white">Bangalore</h3>
-          <p class="mt-1 text-sm text-slate-400">Regional Qualifier</p>
+          <h3 class="mt-5 font-heading text-2xl font-bold text-heading">Bangalore</h3>
+          <p class="mt-1 text-sm text-muted">Regional Qualifier</p>
           <p class="mt-4 font-mono text-sm text-orange">Jul 27 – Aug 2, 2026</p>
         </div>
 
@@ -346,13 +415,13 @@
              class="rounded-2xl border bg-ebony p-6 transition-all duration-300"
              :class="active === 'delhi' ? 'border-orange shadow-lg shadow-orange/10 scale-[1.02]' : (active ? 'border-slate opacity-50' : 'border-slate hover:border-slate/80')">
           <div class="flex items-center justify-between">
-            <span class="inline-flex items-center gap-1.5 rounded-full bg-slate/40 px-3 py-1 text-[10px] font-mono uppercase tracking-widest text-slate-300">
+            <span class="inline-flex items-center gap-1.5 rounded-full bg-slate/40 px-3 py-1 text-[10px] font-mono uppercase tracking-widest text-body">
               <span class="h-1.5 w-1.5 rounded-full bg-orange animate-pulse"></span> Coming Soon
             </span>
-            <span class="font-mono text-xs text-slate-500">Q2</span>
+            <span class="font-mono text-xs text-subtle">Q2</span>
           </div>
-          <h3 class="mt-5 font-heading text-2xl font-bold text-white">Delhi</h3>
-          <p class="mt-1 text-sm text-slate-400">Regional Qualifier</p>
+          <h3 class="mt-5 font-heading text-2xl font-bold text-heading">Delhi</h3>
+          <p class="mt-1 text-sm text-muted">Regional Qualifier</p>
           <p class="mt-4 font-mono text-sm text-orange">Aug 17 – 23, 2026</p>
         </div>
 
@@ -361,13 +430,13 @@
              class="rounded-2xl border bg-ebony p-6 transition-all duration-300"
              :class="active === 'mumbai' ? 'border-orange shadow-lg shadow-orange/10 scale-[1.02]' : (active ? 'border-slate opacity-50' : 'border-slate hover:border-slate/80')">
           <div class="flex items-center justify-between">
-            <span class="inline-flex items-center gap-1.5 rounded-full bg-slate/40 px-3 py-1 text-[10px] font-mono uppercase tracking-widest text-slate-300">
+            <span class="inline-flex items-center gap-1.5 rounded-full bg-slate/40 px-3 py-1 text-[10px] font-mono uppercase tracking-widest text-body">
               <span class="h-1.5 w-1.5 rounded-full bg-orange animate-pulse"></span> Coming Soon
             </span>
-            <span class="font-mono text-xs text-slate-500">Q3</span>
+            <span class="font-mono text-xs text-subtle">Q3</span>
           </div>
-          <h3 class="mt-5 font-heading text-2xl font-bold text-white">Mumbai</h3>
-          <p class="mt-1 text-sm text-slate-400">Regional Qualifier</p>
+          <h3 class="mt-5 font-heading text-2xl font-bold text-heading">Mumbai</h3>
+          <p class="mt-1 text-sm text-muted">Regional Qualifier</p>
           <p class="mt-4 font-mono text-sm text-orange">Sep 7 – 13, 2026</p>
         </div>
 
@@ -376,13 +445,13 @@
              class="rounded-2xl border bg-ebony p-6 transition-all duration-300"
              :class="active === 'hyderabad' ? 'border-orange shadow-lg shadow-orange/10 scale-[1.02]' : (active ? 'border-slate opacity-50' : 'border-slate hover:border-slate/80')">
           <div class="flex items-center justify-between">
-            <span class="inline-flex items-center gap-1.5 rounded-full bg-slate/40 px-3 py-1 text-[10px] font-mono uppercase tracking-widest text-slate-300">
+            <span class="inline-flex items-center gap-1.5 rounded-full bg-slate/40 px-3 py-1 text-[10px] font-mono uppercase tracking-widest text-body">
               <span class="h-1.5 w-1.5 rounded-full bg-orange animate-pulse"></span> Coming Soon
             </span>
-            <span class="font-mono text-xs text-slate-500">Q4</span>
+            <span class="font-mono text-xs text-subtle">Q4</span>
           </div>
-          <h3 class="mt-5 font-heading text-2xl font-bold text-white">Hyderabad</h3>
-          <p class="mt-1 text-sm text-slate-400">Regional Qualifier</p>
+          <h3 class="mt-5 font-heading text-2xl font-bold text-heading">Hyderabad</h3>
+          <p class="mt-1 text-sm text-muted">Regional Qualifier</p>
           <p class="mt-4 font-mono text-sm text-orange">Oct 5 – 11, 2026</p>
         </div>
 
@@ -391,19 +460,19 @@
              class="rounded-2xl border bg-ebony p-6 transition-all duration-300"
              :class="active === 'chennai' ? 'border-orange shadow-lg shadow-orange/10 scale-[1.02]' : (active ? 'border-slate opacity-50' : 'border-slate hover:border-slate/80')">
           <div class="flex items-center justify-between">
-            <span class="inline-flex items-center gap-1.5 rounded-full bg-slate/40 px-3 py-1 text-[10px] font-mono uppercase tracking-widest text-slate-300">
+            <span class="inline-flex items-center gap-1.5 rounded-full bg-slate/40 px-3 py-1 text-[10px] font-mono uppercase tracking-widest text-body">
               <span class="h-1.5 w-1.5 rounded-full bg-orange animate-pulse"></span> Coming Soon
             </span>
-            <span class="font-mono text-xs text-slate-500">Q5</span>
+            <span class="font-mono text-xs text-subtle">Q5</span>
           </div>
-          <h3 class="mt-5 font-heading text-2xl font-bold text-white">Chennai</h3>
-          <p class="mt-1 text-sm text-slate-400">Regional Qualifier</p>
+          <h3 class="mt-5 font-heading text-2xl font-bold text-heading">Chennai</h3>
+          <p class="mt-1 text-sm text-muted">Regional Qualifier</p>
           <p class="mt-4 font-mono text-sm text-orange">Nov 16 – 22, 2026</p>
         </div>
 
         <!-- Las Vegas Grand Finale -->
-        <div class="finale-card rounded-2xl bg-gradient-to-br from-ebony to-[#2a1c14] p-6 transition-all duration-300"
-             :class="active ? 'opacity-100' : 'opacity-100'">
+        <!-- Always dark/premium regardless of theme -->
+        <div class="finale-card rounded-2xl bg-gradient-to-br from-[#232F3E] to-[#2a1c14] p-6 transition-all duration-300">
           <div class="flex items-center justify-between">
             <span class="inline-flex items-center gap-1.5 rounded-full bg-orange px-3 py-1 text-[10px] font-mono font-bold uppercase tracking-widest text-ink">
               ★ The Grand Finale
@@ -437,8 +506,8 @@
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       <div class="text-center">
         <p class="font-mono text-xs uppercase tracking-[0.3em] text-orange">Why Build With Us</p>
-        <h2 class="mt-3 font-heading font-extrabold text-white text-3xl sm:text-4xl">Developer-First Perks</h2>
-        <p class="mx-auto mt-4 max-w-2xl text-slate-400">Everything you need to ship fast, get noticed, and keep building after the buzzer.</p>
+        <h2 class="mt-3 font-heading font-extrabold text-heading text-3xl sm:text-4xl">Developer-First Perks</h2>
+        <p class="mx-auto mt-4 max-w-2xl text-muted">Everything you need to ship fast, get noticed, and keep building after the buzzer.</p>
       </div>
 
       <div class="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -447,8 +516,8 @@
           <div class="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-orange/10 text-orange transition-colors group-hover:bg-orange group-hover:text-ink">
             <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 10h18M3 10l1-4a2 2 0 012-2h12a2 2 0 012 2l1 4M5 10v8a2 2 0 002 2h10a2 2 0 002-2v-8"/></svg>
           </div>
-          <h3 class="mt-5 font-heading text-lg font-bold text-white">Free AWS Credits</h3>
-          <p class="mt-2 text-sm text-slate-400">Immediate platform access to run production-grade architectures from day one.</p>
+          <h3 class="mt-5 font-heading text-lg font-bold text-heading">Free AWS Credits</h3>
+          <p class="mt-2 text-sm text-muted">Immediate platform access to run production-grade architectures from day one.</p>
         </div>
 
         <!-- Expert Mentorship -->
@@ -456,8 +525,8 @@
           <div class="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-orange/10 text-orange transition-colors group-hover:bg-orange group-hover:text-ink">
             <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-1a4 4 0 00-4-4h-1m-6 5H2v-1a4 4 0 014-4h1m5-4a4 4 0 100-8 4 4 0 000 8zm7-4a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
           </div>
-          <h3 class="mt-5 font-heading text-lg font-bold text-white">Expert Mentorship</h3>
-          <p class="mt-2 text-sm text-slate-400">Direct consultation paths with AWS Solutions Architects throughout the build.</p>
+          <h3 class="mt-5 font-heading text-lg font-bold text-heading">Expert Mentorship</h3>
+          <p class="mt-2 text-sm text-muted">Direct consultation paths with AWS Solutions Architects throughout the build.</p>
         </div>
 
         <!-- Global Networking -->
@@ -465,8 +534,8 @@
           <div class="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-orange/10 text-orange transition-colors group-hover:bg-orange group-hover:text-ink">
             <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path stroke-linecap="round" stroke-linejoin="round" d="M3.6 9h16.8M3.6 15h16.8M12 3a17 17 0 000 18M12 3a17 17 0 010 18"/></svg>
           </div>
-          <h3 class="mt-5 font-heading text-lg font-bold text-white">Global Networking</h3>
-          <p class="mt-2 text-sm text-slate-400">Access to WeMakeDevs core networks and industry hiring leads.</p>
+          <h3 class="mt-5 font-heading text-lg font-bold text-heading">Global Networking</h3>
+          <p class="mt-2 text-sm text-muted">Access to WeMakeDevs core networks and industry hiring leads.</p>
         </div>
 
         <!-- Verifiable Credentials -->
@@ -474,8 +543,8 @@
           <div class="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-orange/10 text-orange transition-colors group-hover:bg-orange group-hover:text-ink">
             <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m-3-6a9 9 0 100 18 9 9 0 000-18z"/></svg>
           </div>
-          <h3 class="mt-5 font-heading text-lg font-bold text-white">Verifiable Credentials</h3>
-          <p class="mt-2 text-sm text-slate-400">Brand-signed certificates of participation and achievement.</p>
+          <h3 class="mt-5 font-heading text-lg font-bold text-heading">Verifiable Credentials</h3>
+          <p class="mt-2 text-sm text-muted">Brand-signed certificates of participation and achievement.</p>
         </div>
 
         <!-- Project Funding -->
@@ -483,8 +552,225 @@
           <div class="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-orange/10 text-orange transition-colors group-hover:bg-orange group-hover:text-ink">
             <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 2L4.5 12.5H11l-1 7.5 8.5-10.5H12l1-7.5z"/></svg>
           </div>
-          <h3 class="mt-5 font-heading text-lg font-bold text-white">Project Funding Acceleration</h3>
-          <p class="mt-2 text-sm text-slate-400">Submit your prototype to qualify for extended cloud credit packages and launch your product.</p>
+          <h3 class="mt-5 font-heading text-lg font-bold text-heading">Project Funding Acceleration</h3>
+          <p class="mt-2 text-sm text-muted">Submit your prototype to qualify for extended cloud credit packages and launch your product.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ AWS BUILDER CENTER ECOSYSTEM ============ -->
+  <section id="builder" class="relative py-20 sm:py-28 bg-ebony border-t border-slate/40"
+           x-data="{
+             step: 1,
+             votes: 342,
+             voted: false,
+             upvote() { this.voted = !this.voted; this.votes += this.voted ? 1 : -1; },
+             steps: {
+               1: { k: 'LEARN', d: 'Explore 600+ courses and workshops curated by AWS Solutions Architects and industry experts.' },
+               2: { k: 'BUILD', d: 'Turn theoretical cloud concepts into scalable, live production-ready code with step-by-step guides.' },
+               3: { k: 'SHARE', d: 'Write articles, document your architecture diagrams, and publish your setup stories to build developer authority.' },
+               4: { k: 'GROW',  d: 'Secure invitations to AWS Summits, join regional Cloud Clubs, and network with AWS Community Builders and Heroes.' }
+             }
+           }">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <!-- Header -->
+      <div class="max-w-3xl">
+        <p class="font-mono text-xs uppercase tracking-[0.3em] text-orange">Beyond the Hackathon</p>
+        <h2 class="mt-3 font-heading font-extrabold text-heading text-3xl sm:text-4xl leading-tight">
+          Elevate Your Cloud Journey: The AWS Builder Center
+        </h2>
+        <p class="mt-4 text-lg text-muted">
+          Don't just write code—join a global developer movement. Build your permanent cloud portfolio, learn from industry experts, and direct-line your feedback to AWS product teams.
+        </p>
+      </div>
+
+      <!-- Value pillar cards -->
+      <div class="mt-14 grid grid-cols-1 lg:grid-cols-3 gap-6">
+
+        <!-- Card 1: Verified Cloud Portfolio -->
+        <div class="group rounded-2xl border border-slate bg-canvas p-6 transition-all duration-300 hover:border-orange/60 hover:shadow-[0_0_30px_-8px_rgba(255,153,0,0.35)]">
+          <div class="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-orange/10 text-orange">
+            <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.7" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 7a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 20a7.5 7.5 0 0115 0"/></svg>
+          </div>
+          <h3 class="mt-5 font-heading text-xl font-bold text-heading">Claim Your Cloud Identity</h3>
+          <p class="mt-3 text-sm text-muted leading-relaxed">
+            Set up a free, lifetime AWS Builder ID to secure your custom profile alias (e.g., <span class="font-mono text-orange break-all">builder.aws.com/community/@youralias</span>). Your public profile auto-tracks your technical accomplishments, published tutorials, and course progress into a beautiful, shareable QR-coded developer portfolio.
+          </p>
+
+          <!-- Developer profile pass mock-up -->
+          <div class="mt-5 rounded-xl border border-slate bg-ebony p-4">
+            <div class="flex items-center gap-4">
+              <div class="relative shrink-0">
+                <div class="h-14 w-14 rounded-full bg-gradient-to-br from-orange to-rust flex items-center justify-center font-heading font-black text-ink text-lg">AB</div>
+                <span class="absolute -bottom-0.5 -right-0.5 h-4 w-4 rounded-full bg-orange border-2 border-ebony"></span>
+              </div>
+              <div class="min-w-0">
+                <p class="font-heading font-bold text-heading text-sm truncate">Alex Builder</p>
+                <p class="font-mono text-[11px] text-orange truncate">@alexbuilds</p>
+                <p class="font-mono text-[10px] text-subtle mt-0.5">AWS Builder ID · Verified</p>
+              </div>
+              <!-- QR placeholder -->
+              <div class="ml-auto shrink-0 rounded-md bg-white p-1.5">
+                <svg viewBox="0 0 40 40" class="h-12 w-12" shape-rendering="crispEdges" fill="#1A1C1E">
+                  <path d="M0 0h12v12H0zM4 4v4h4V4z" fill-rule="evenodd"/>
+                  <path d="M28 0h12v12H28zM32 4v4h4V4z" fill-rule="evenodd"/>
+                  <path d="M0 28h12v12H0zM4 32v4h4v-4z" fill-rule="evenodd"/>
+                  <rect x="16" y="0" width="4" height="4"/><rect x="20" y="4" width="4" height="4"/><rect x="16" y="8" width="4" height="4"/>
+                  <rect x="24" y="16" width="4" height="4"/><rect x="16" y="16" width="4" height="4"/><rect x="20" y="20" width="4" height="4"/>
+                  <rect x="0" y="16" width="4" height="4"/><rect x="8" y="20" width="4" height="4"/>
+                  <rect x="28" y="20" width="4" height="4"/><rect x="36" y="16" width="4" height="4"/>
+                  <rect x="16" y="28" width="4" height="4"/><rect x="24" y="28" width="4" height="4"/><rect x="20" y="32" width="4" height="4"/>
+                  <rect x="28" y="32" width="4" height="4"/><rect x="36" y="28" width="4" height="4"/><rect x="32" y="24" width="4" height="4"/>
+                </svg>
+              </div>
+            </div>
+            <div class="mt-3 flex items-center justify-between border-t border-slate pt-3">
+              <span class="font-mono text-[10px] text-subtle">CERTS · 12</span>
+              <span class="font-mono text-[10px] text-subtle">ARTICLES · 8</span>
+              <span class="font-mono text-[10px] text-subtle">RANK · GOLD</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2: Free Courses & Labs -->
+        <div class="group rounded-2xl border border-slate bg-canvas p-6 transition-all duration-300 hover:border-orange/60 hover:shadow-[0_0_30px_-8px_rgba(255,153,0,0.35)]">
+          <div class="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-orange/10 text-orange">
+            <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.7" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 14l9-5-9-5-9 5 9 5z"/><path stroke-linecap="round" stroke-linejoin="round" d="M12 14l6.16-3.42A12 12 0 0112 21a12 12 0 01-6.16-10.42L12 14z"/></svg>
+          </div>
+          <h3 class="mt-5 font-heading text-xl font-bold text-heading">Learn By Doing, Not Just Reading</h3>
+          <p class="mt-3 text-sm text-muted leading-relaxed">
+            Get unrestricted access to hundreds of interactive learning games (like Cloud Quest) and hands-on workshops. Practice deploying serverless architectures, machine learning models, and security layers in real-world scenarios—no credit cards or paid subscriptions required.
+          </p>
+
+          <!-- Topic badges -->
+          <div class="mt-5 flex flex-wrap gap-2">
+            <span class="inline-flex items-center gap-1.5 rounded-lg border border-slate bg-ebony px-3 py-1.5 text-xs font-mono text-body">
+              <svg class="h-3.5 w-3.5 text-orange" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 3v4M3 5h4M6 17v4M4 19h4M13 3l2.5 6.5L22 12l-6.5 2.5L13 21l-2.5-6.5L4 12l6.5-2.5L13 3z"/></svg>
+              Generative AI
+            </span>
+            <span class="inline-flex items-center gap-1.5 rounded-lg border border-slate bg-ebony px-3 py-1.5 text-xs font-mono text-body">
+              <svg class="h-3.5 w-3.5 text-orange" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 2L4.5 12.5H11l-1 7.5 8.5-10.5H12l1-7.5z"/></svg>
+              Serverless
+            </span>
+            <span class="inline-flex items-center gap-1.5 rounded-lg border border-slate bg-ebony px-3 py-1.5 text-xs font-mono text-body">
+              <svg class="h-3.5 w-3.5 text-orange" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3z"/></svg>
+              Security
+            </span>
+            <span class="inline-flex items-center gap-1.5 rounded-lg border border-slate bg-ebony px-3 py-1.5 text-xs font-mono text-body">
+              <svg class="h-3.5 w-3.5 text-orange" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M18.4 5.6l-2.1 2.1M7.7 16.3l-2.1 2.1"/></svg>
+              Machine Learning
+            </span>
+          </div>
+          <p class="mt-4 font-mono text-xs text-subtle">600+ interactive courses · $0 · No credit card</p>
+        </div>
+
+        <!-- Card 3: Global Wishlist -->
+        <div class="group rounded-2xl border border-slate bg-canvas p-6 transition-all duration-300 hover:border-orange/60 hover:shadow-[0_0_30px_-8px_rgba(255,153,0,0.35)]">
+          <div class="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-orange/10 text-orange">
+            <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.7" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 12h4l3 8 4-16 3 8h4"/></svg>
+          </div>
+          <h3 class="mt-5 font-heading text-xl font-bold text-heading">Direct Line to AWS Product Engineers</h3>
+          <p class="mt-3 text-sm text-muted leading-relaxed">
+            Have an idea for a feature or a way to improve an existing AWS service? The community Wishlist lets you submit product feedback directly to AWS engineering teams, upvote ideas from other builders, and influence the global cloud roadmap.
+          </p>
+
+          <!-- Wishlist sandbox -->
+          <div class="mt-5 rounded-xl border border-slate bg-ebony p-4">
+            <div class="flex items-center justify-between">
+              <span class="inline-flex items-center gap-1.5 rounded-full bg-orange/10 px-2.5 py-1 text-[10px] font-mono uppercase tracking-widest text-orange">Feature Request</span>
+              <span class="font-mono text-[10px] text-subtle">#WL-2048</span>
+            </div>
+            <p class="mt-3 font-heading font-semibold text-heading text-sm leading-snug">
+              Add one-click multi-region failover to Lambda
+            </p>
+            <p class="mt-1 text-xs text-muted">Submitted by <span class="font-mono text-body">@cloudnova</span> · Under review</p>
+
+            <div class="mt-4 flex items-center gap-3">
+              <button @click="upvote()"
+                      class="inline-flex items-center gap-2 rounded-lg border px-3 py-2 text-sm font-semibold transition-all duration-200 active:scale-95"
+                      :class="voted ? 'border-orange bg-orange/15 text-orange' : 'border-slate bg-canvas text-body hover:border-orange/60 hover:text-orange'">
+                <svg class="h-4 w-4 transition-transform" :class="voted ? '-translate-y-0.5' : ''" :fill="voted ? 'currentColor' : 'none'" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7"/></svg>
+                <span x-text="voted ? 'Upvoted' : 'Upvote'"></span>
+              </button>
+              <span class="font-mono text-sm text-heading"><span x-text="votes"></span> <span class="text-subtle">votes</span></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== LEARN, BUILD, SHARE, GROW STEPPER ===== -->
+      <div class="mt-20">
+        <div class="text-center">
+          <h3 class="font-heading font-extrabold text-heading text-2xl sm:text-3xl">Learn. Build. Share. Grow.</h3>
+          <p class="mt-3 text-muted">The developer flywheel that turns beginners into AWS Community Builders and Heroes.</p>
+        </div>
+
+        <!-- Stepper nodes -->
+        <div class="relative mt-12">
+          <!-- Horizontal track (desktop) -->
+          <div class="hidden md:block absolute left-0 right-0 top-7 h-1 rounded-full bg-slate/70"></div>
+          <div class="hidden md:block absolute left-0 top-7 h-1 rounded-full bg-gradient-to-r from-orange to-rust transition-all duration-500 ease-out"
+               :style="`width: ${12.5 + (step - 1) * 25}%`"></div>
+
+          <div class="relative grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 md:gap-4">
+            <!-- Step 1 -->
+            <button @click="step = 1" class="group flex md:flex-col items-center md:text-center gap-4 md:gap-3 text-left">
+              <span class="relative z-10 shrink-0 inline-flex h-14 w-14 items-center justify-center rounded-full border-2 bg-ebony transition-all duration-300"
+                    :class="step >= 1 ? 'border-orange text-orange shadow-[0_0_20px_-4px_rgba(255,153,0,0.7)]' : 'border-slate text-muted'">
+                <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.7" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.5C10.5 5 8 4.5 4 5v13c4-.5 6.5 0 8 1.5 1.5-1.5 4-2 8-1.5V5c-4-.5-6.5 0-8 1.5z"/></svg>
+              </span>
+              <div>
+                <p class="font-heading font-bold tracking-wide transition-colors" :class="step === 1 ? 'text-orange' : 'text-heading'">LEARN</p>
+                <p class="md:hidden text-sm text-muted mt-1" x-text="steps[1].d"></p>
+              </div>
+            </button>
+            <!-- Step 2 -->
+            <button @click="step = 2" class="group flex md:flex-col items-center md:text-center gap-4 md:gap-3 text-left">
+              <span class="relative z-10 shrink-0 inline-flex h-14 w-14 items-center justify-center rounded-full border-2 bg-ebony transition-all duration-300"
+                    :class="step >= 2 ? 'border-orange text-orange shadow-[0_0_20px_-4px_rgba(255,153,0,0.7)]' : 'border-slate text-muted'">
+                <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.7" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M14.7 6.3a4 4 0 00-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 005.4-5.4l-2.6 2.6-2.4-2.4 2.6-2.6z"/></svg>
+              </span>
+              <div>
+                <p class="font-heading font-bold tracking-wide transition-colors" :class="step === 2 ? 'text-orange' : 'text-heading'">BUILD</p>
+                <p class="md:hidden text-sm text-muted mt-1" x-text="steps[2].d"></p>
+              </div>
+            </button>
+            <!-- Step 3 -->
+            <button @click="step = 3" class="group flex md:flex-col items-center md:text-center gap-4 md:gap-3 text-left">
+              <span class="relative z-10 shrink-0 inline-flex h-14 w-14 items-center justify-center rounded-full border-2 bg-ebony transition-all duration-300"
+                    :class="step >= 3 ? 'border-orange text-orange shadow-[0_0_20px_-4px_rgba(255,153,0,0.7)]' : 'border-slate text-muted'">
+                <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.7" viewBox="0 0 24 24"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path stroke-linecap="round" d="M8.6 10.6l6.8-4M8.6 13.4l6.8 4"/></svg>
+              </span>
+              <div>
+                <p class="font-heading font-bold tracking-wide transition-colors" :class="step === 3 ? 'text-orange' : 'text-heading'">SHARE</p>
+                <p class="md:hidden text-sm text-muted mt-1" x-text="steps[3].d"></p>
+              </div>
+            </button>
+            <!-- Step 4 -->
+            <button @click="step = 4" class="group flex md:flex-col items-center md:text-center gap-4 md:gap-3 text-left">
+              <span class="relative z-10 shrink-0 inline-flex h-14 w-14 items-center justify-center rounded-full border-2 bg-ebony transition-all duration-300"
+                    :class="step >= 4 ? 'border-orange text-orange shadow-[0_0_20px_-4px_rgba(255,153,0,0.7)]' : 'border-slate text-muted'">
+                <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.7" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 17l6-6 4 4 8-8M21 7h-5M21 7v5"/></svg>
+              </span>
+              <div>
+                <p class="font-heading font-bold tracking-wide transition-colors" :class="step === 4 ? 'text-orange' : 'text-heading'">GROW</p>
+                <p class="md:hidden text-sm text-muted mt-1" x-text="steps[4].d"></p>
+              </div>
+            </button>
+          </div>
+        </div>
+
+        <!-- Active step content (desktop) -->
+        <div class="hidden md:block mt-10">
+          <div class="relative mx-auto max-w-3xl rounded-2xl border border-slate bg-canvas p-8 text-center min-h-[120px]">
+            <template x-for="i in 4" :key="i">
+              <div x-show="step === i" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0 translate-y-2" x-transition:enter-end="opacity-100 translate-y-0" class="absolute inset-0 flex flex-col items-center justify-center px-8">
+                <span class="font-mono text-xs uppercase tracking-[0.3em] text-orange" x-text="steps[i].k"></span>
+                <p class="mt-3 text-lg text-body" x-text="steps[i].d"></p>
+              </div>
+            </template>
+          </div>
         </div>
       </div>
     </div>
@@ -496,7 +782,7 @@
     <div class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
       <div class="text-center">
         <p class="font-mono text-xs uppercase tracking-[0.3em] text-orange">Got Questions?</p>
-        <h2 class="mt-3 font-heading font-extrabold text-white text-3xl sm:text-4xl">Frequently Asked</h2>
+        <h2 class="mt-3 font-heading font-extrabold text-heading text-3xl sm:text-4xl">Frequently Asked</h2>
       </div>
 
       <div class="mt-12 space-y-4">
@@ -510,11 +796,11 @@
           <div class="rounded-xl border border-slate bg-ebony overflow-hidden transition-colors"
                :class="open === i ? 'border-orange/60' : ''">
             <button @click="toggle(i)" class="flex w-full items-center justify-between gap-4 px-6 py-5 text-left">
-              <span class="font-heading font-semibold text-white" x-text="faq.q"></span>
+              <span class="font-heading font-semibold text-heading" x-text="faq.q"></span>
               <svg class="h-5 w-5 shrink-0 text-orange transition-transform duration-300" :class="open === i ? 'rotate-45' : ''" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" d="M12 5v14M5 12h14"/></svg>
             </button>
             <div class="accordion-body px-6" :style="open === i ? 'max-height: 200px' : 'max-height: 0'">
-              <p class="pb-5 text-sm text-slate-400 leading-relaxed" x-text="faq.a"></p>
+              <p class="pb-5 text-sm text-muted leading-relaxed" x-text="faq.a"></p>
             </div>
           </div>
         </template>
@@ -523,23 +809,25 @@
   </section>
 
   <!-- ============ FOOTER ============ -->
-  <footer class="border-t border-slate/40 bg-ink">
+  <footer class="border-t border-slate/40 bg-canvas">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
       <div class="flex flex-col sm:flex-row items-center justify-between gap-6">
         <div class="flex items-center gap-3">
-          <img src="/aws/images/aws-white.png" alt="AWS" class="h-7 w-auto" />
+          <img src="/aws/images/aws-white.png" alt="AWS" class="logo-dark h-7 w-auto" />
+          <img src="/aws/images/aws-black.png" alt="AWS" class="logo-light h-7 w-auto" />
           <span class="h-6 w-px bg-slate"></span>
-          <span class="font-heading font-bold text-white">Next Gen Hacks 2026</span>
+          <span class="font-heading font-bold text-heading">Next Gen Hacks 2026</span>
         </div>
-        <div class="flex items-center gap-6 text-sm text-slate-400">
+        <div class="flex items-center gap-6 text-sm text-muted">
           <a href="#map" class="hover:text-orange transition-colors">Map</a>
           <a href="#hubs" class="hover:text-orange transition-colors">Hubs</a>
           <a href="#perks" class="hover:text-orange transition-colors">Perks</a>
+          <a href="#builder" class="hover:text-orange transition-colors">Builder Center</a>
           <a href="#faqs" class="hover:text-orange transition-colors">FAQs</a>
         </div>
       </div>
       <div class="mt-8 border-t border-slate/40 pt-6 text-center sm:text-left">
-        <p class="text-xs font-mono text-slate-500">
+        <p class="text-xs font-mono text-subtle">
           © 2026 AWS Next Gen Hacks · Hosted in partnership with
           <a href="https://wemakedevs.org" target="_blank" rel="noopener" class="text-orange hover:underline">WeMakeDevs</a>. Built for developers.
         </p>
