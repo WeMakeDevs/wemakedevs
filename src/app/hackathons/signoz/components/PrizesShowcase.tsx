@@ -3,6 +3,7 @@
 import {
 	ArrowUpRight,
 	Award,
+	BookOpen,
 	Briefcase,
 	CalendarCheck,
 	Share2,
@@ -174,15 +175,24 @@ const PrizesShowcase = () => {
 										</span>
 									</div>
 								</div>
-								<Link
-									href={DATA.blogSubmissionUrl || "#"}
-									target="_blank"
-									rel="noopener noreferrer"
-									className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-[#ffcd56] to-[#d5aa45] hover:opacity-90 transition-opacity text-[#16181d] font-bold shadow-md"
-								>
-									Submit Your Blog
-									<ArrowUpRight className="w-5 h-5" />
-								</Link>
+								<div className="flex flex-wrap gap-3">
+									<Link
+										href={DATA.blogSubmissionUrl || "#"}
+										target="_blank"
+										rel="noopener noreferrer"
+										className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-[#ffcd56] to-[#d5aa45] hover:opacity-90 transition-opacity text-[#16181d] font-bold shadow-md"
+									>
+										Submit Your Blog
+										<ArrowUpRight className="w-5 h-5" />
+									</Link>
+									<Link
+										href="/hackathons/signoz/blog-guide"
+										className="inline-flex items-center gap-2 px-6 py-3 rounded-xl border border-[#ffcd56]/60 text-[#ffcd56] font-bold hover:bg-[#ffcd56]/10 transition-colors"
+									>
+										<BookOpen className="w-5 h-5" />
+										Read the Blog Guide
+									</Link>
+								</div>
 							</div>
 							<div className="w-full md:w-80 shrink-0 h-52 flex items-center justify-center gap-4">
 								<AirPodsImg />

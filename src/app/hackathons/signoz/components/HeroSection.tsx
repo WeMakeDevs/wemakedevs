@@ -2,7 +2,7 @@
 
 import { ViewContainer } from "@/components/ui/view-container";
 import { motion } from "framer-motion";
-import { ArrowUpRight, Radar } from "lucide-react";
+import { ArrowUpRight, BookOpen, Radar } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
@@ -172,6 +172,16 @@ const HeroSection = ({
 									</Link>
 								)}
 							</div>
+
+							{/* Blog Guide highlight */}
+							<Link
+								href="/hackathons/signoz/blog-guide"
+								className="mt-4 inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-gradient-to-r from-[#ffcd56] to-[#d5aa45] text-[#16181d] font-bold shadow-[0_8px_24px_rgba(255,205,86,0.28)] hover:opacity-90 transition-opacity text-base"
+							>
+								<BookOpen className="w-5 h-5" />
+								Read the Blog Guide · Win AirPods / Beats
+								<ArrowUpRight className="w-4 h-4" />
+							</Link>
 						</motion.div>
 
 						{/* Secondary CTA */}

@@ -42,6 +42,11 @@ const navLinks = [
 		page: "resources",
 	},
 	{
+		href: "/hackathons/signoz/blog-guide",
+		label: "Blog Guide",
+		page: "blog-guide",
+	},
+	{
 		href: "/hackathons/signoz/schedule",
 		label: "Schedule",
 		page: "schedule",
