@@ -238,12 +238,18 @@ export type JobCardType = {
 	description: string;
 	location: string;
 	salary?: string;
+	workingHours?: string;
+	responsibilities?: string[];
 	prerequisites: string[];
+	goodToHave?: string[];
 	type: "Full-time" | "Part-time" | "Contract" | "Internship" | "Freelance";
 	postedDate: string;
 	applicationDeadline?: string;
 	benefits?: string[];
 	applyLink: string;
+	applyEmail?: string;
+	applySubject?: string;
+	applyDetails?: string[];
 };
 
 export interface InitiativeData {
