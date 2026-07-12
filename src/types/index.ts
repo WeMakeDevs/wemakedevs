@@ -154,6 +154,7 @@ export type PageType =
 	| "register"
 	| "submit"
 	| "resources"
+	| "blog-guide"
 	| "rules"
 	| "projects"
 	| "contributors"
