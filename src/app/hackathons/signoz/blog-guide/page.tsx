@@ -292,10 +292,26 @@ const HackathonBlogGuide = () => {
 				</HackathonContentTitle>
 				<HackathonContentBody className="text-[#c0c1c3]">
 					<ul className="space-y-3 list-disc list-inside">
-						<li>LinkedIn posts are not blogs.</li>
 						<li>
-							Make sure to publish your blog on platforms like
-							Medium or Dev.to.
+							<span className="font-semibold text-[#f5f5f5]">
+								A LinkedIn social post is not a blog.
+							</span>{" "}
+							Don&apos;t submit one.
+						</li>
+						<li>
+							Publish your blog on a proper blogging platform,{" "}
+							<span className="text-[#ffcd56] font-semibold">
+								Medium
+							</span>
+							,{" "}
+							<span className="text-[#ffcd56] font-semibold">
+								Dev.to
+							</span>
+							, or{" "}
+							<span className="text-[#ffcd56] font-semibold">
+								Substack
+							</span>{" "}
+							are all great choices.
 						</li>
 						<li>
 							How to avoid AI writing:{" "}

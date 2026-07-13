@@ -158,7 +158,7 @@ const Tracks = () => {
 					</motion.p>
 				</div>
 
-				{/* ── Blog-based submission callout ─────────────────────── */}
+				{/* ── Project submission callout ────────────────────────── */}
 				<motion.div
 					className="mb-12 rounded-2xl border border-[#ffcd56]/30 bg-[#ffcd56]/8 p-6 md:p-8"
 					initial={{ opacity: 0, y: 16 }}
@@ -173,19 +173,20 @@ const Tracks = () => {
 							</div>
 							<div>
 								<h3 className="text-xl font-bold text-[#ffcd56] mb-1">
-									Submissions are via blogs this time
+									Submit your project through the form
 								</h3>
 								<p className="text-[#c0c1c3] leading-relaxed">
-									For all three tracks, each team submits their
-									project as a blog. Write about what you
-									built, what you learnt, and how you used
-									SigNoz for observability.{" "}
-									<span className="text-[#ffcd56] font-semibold">
-										The more detailed, the better
-									</span>
-									, so cover your architecture, the
-									instrumentation, and the challenges you
-									solved along the way.
+									For all three tracks, submit your project
+									through the submission form. Everything you
+									need to include is listed there. Not sure how
+									to present your work? Read the{" "}
+									<Link
+										href="/hackathons/signoz/blog-guide"
+										className="text-[#ffd778] underline hover:text-[#ea6e4a]"
+									>
+										blog guide
+									</Link>{" "}
+									first.
 								</p>
 							</div>
 						</div>
@@ -195,9 +196,39 @@ const Tracks = () => {
 							rel="noopener noreferrer"
 							className="shrink-0 inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl bg-gradient-to-r from-[#ffcd56] to-[#d5aa45] hover:opacity-90 transition-opacity text-[#16181d] font-bold shadow-md"
 						>
-							Submit Your Blog
+							Submit Your Project
 							<ArrowUpRight className="w-5 h-5" />
 						</Link>
+					</div>
+
+					{/* Disclaimer */}
+					<div className="mt-6 pt-6 border-t border-[#ffcd56]/20 text-[#c0c1c3] leading-relaxed text-sm">
+						<p>
+							<span className="text-[#ffcd56] font-semibold">
+								A kind note on the write-up:
+							</span>{" "}
+							Publish your blog on a proper blogging platform,{" "}
+							<span className="text-[#ffcd56] font-semibold">
+								Medium
+							</span>
+							,{" "}
+							<span className="text-[#ffcd56] font-semibold">
+								Dev.to
+							</span>
+							, or{" "}
+							<span className="text-[#ffcd56] font-semibold">
+								Substack
+							</span>{" "}
+							are all great choices. A{" "}
+							<span className="text-[#f5f5f5] font-semibold">
+								LinkedIn social post is not a blog
+							</span>
+							, so please don&apos;t submit one. Put genuine effort
+							into it. AI slop and rushed, low-effort blogs will not
+							win any prizes. We want to hear about your real
+							experience, what you built, what broke, and what you
+							learned along the way.
+						</p>
 					</div>
 				</motion.div>
 

@@ -159,6 +159,26 @@ const PrizesShowcase = () => {
 									SigNoz before you start building your actual
 									project.
 								</p>
+								<p className="text-[#c0c1c3] leading-relaxed mb-6">
+									Publish your blog on a proper blogging
+									platform,{" "}
+									<span className="text-[#ffcd56] font-semibold">
+										Medium
+									</span>
+									,{" "}
+									<span className="text-[#ffcd56] font-semibold">
+										Dev.to
+									</span>
+									, or{" "}
+									<span className="text-[#ffcd56] font-semibold">
+										Substack
+									</span>{" "}
+									are all great choices. A{" "}
+									<span className="text-[#f5f5f5] font-semibold">
+										LinkedIn social post is not a blog
+									</span>
+									, so please don&apos;t submit one.
+								</p>
 								<div className="flex flex-wrap gap-3 mb-6">
 									<div className="flex items-center gap-3 bg-[#0b0c0e] rounded-xl px-4 py-3 border border-[#ffcd56]/25">
 										<Star className="w-5 h-5 text-[#ffcd56] shrink-0" />
