@@ -21,7 +21,7 @@ const DATA = {
 	blogSubmissionUrl: "https://forms.gle/wf9tFYcksrk6P4Zy8",
 	blogWinnersDate: "July 19, 2026",
 	slackUrl:
-		"https://signoz-community.slack.com/join/shared_invite/zt-3x7z8ihiq-CJ6dU~OCOgp5nS1gTqwFTw#/shared-invite/email",
+		"https://join.slack.com/t/signoz-community/shared_invite/zt-43qik5rno-imADzii3sqNzFab7wig0LQ",
 	githubUrl: "https://github.com/SigNoz/signoz",
 };
 
@@ -60,7 +60,7 @@ const faqs: FaqType[] = [
 	},
 	{
 		question: "Do I need prior experience with SigNoz?",
-		answer: "Nope. SigNoz is open source and well documented. Start with the <a href='https://signoz.io/docs/introduction/' target='_blank' rel='noopener noreferrer' class='text-amber-300 underline hover:text-amber-200'>introduction</a>, read the <a href='https://signoz.io/docs/' target='_blank' rel='noopener noreferrer' class='text-amber-300 underline hover:text-amber-200'>docs</a>, and join the <a href='https://signoz-community.slack.com/join/shared_invite/zt-3x7z8ihiq-CJ6dU~OCOgp5nS1gTqwFTw#/shared-invite/email' target='_blank' rel='noopener noreferrer' class='text-amber-300 underline hover:text-amber-200'>SigNoz Slack</a> for help. You'll have traces, metrics, and logs flowing in minutes.",
+		answer: "Nope. SigNoz is open source and well documented. Start with the <a href='https://signoz.io/docs/introduction/' target='_blank' rel='noopener noreferrer' class='text-amber-300 underline hover:text-amber-200'>introduction</a>, read the <a href='https://signoz.io/docs/' target='_blank' rel='noopener noreferrer' class='text-amber-300 underline hover:text-amber-200'>docs</a>, and join the <a href='https://join.slack.com/t/signoz-community/shared_invite/zt-43qik5rno-imADzii3sqNzFab7wig0LQ' target='_blank' rel='noopener noreferrer' class='text-amber-300 underline hover:text-amber-200'>SigNoz Slack</a> for help. You'll have traces, metrics, and logs flowing in minutes.",
 	},
 	{
 		question: "Is the theme really open-ended?",
@@ -101,7 +101,7 @@ const faqs: FaqType[] = [
 
 	{
 		question: "Where can I get help during the hackathon?",
-		answer: "Join the <a href='https://signoz-community.slack.com/join/shared_invite/zt-3x7z8ihiq-CJ6dU~OCOgp5nS1gTqwFTw#/shared-invite/email' target='_blank' rel='noopener noreferrer' class='text-amber-300 underline hover:text-amber-200'>SigNoz Slack</a> for technical support and community discussion. You can also reach WeMakeDevs at <a href='mailto:contact@wemakedevs.org' class='text-amber-300 underline hover:text-amber-200'>contact@wemakedevs.org</a>.",
+		answer: "Join the <a href='https://join.slack.com/t/signoz-community/shared_invite/zt-43qik5rno-imADzii3sqNzFab7wig0LQ' target='_blank' rel='noopener noreferrer' class='text-amber-300 underline hover:text-amber-200'>SigNoz Slack</a> for technical support and community discussion. You can also reach WeMakeDevs at <a href='mailto:contact@wemakedevs.org' class='text-amber-300 underline hover:text-amber-200'>contact@wemakedevs.org</a>.",
 	},
 	{
 		question: "Do the job interviews guarantee a job?",
