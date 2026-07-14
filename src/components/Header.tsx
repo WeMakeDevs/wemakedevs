@@ -38,8 +38,8 @@ function HeroTestimonialCard({ item }: { item: SponsorTestimonialItem }) {
 				alt={item.company}
 				className="h-8 w-auto max-w-[120px] object-contain object-left mb-3"
 			/>
-			<blockquote className="text-sm leading-relaxed text-slate-600 line-clamp-3 dark:text-slate-300">
-				&quot;{item.quote}&quot;
+			<blockquote className="text-sm leading-relaxed text-slate-600 dark:text-slate-300">
+				&quot;{item.summary}&quot;
 			</blockquote>
 			<figcaption className="mt-4 flex items-center gap-2.5">
 				<Image
