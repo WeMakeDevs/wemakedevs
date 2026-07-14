@@ -130,9 +130,11 @@ const Header = ({ className, ...props }: GeneralComponent) => {
 									key={label}
 									className="flex flex-col items-center lg:items-start"
 								>
-									<span className="mb-2.5 inline-flex h-9 w-9 items-center justify-center rounded-lg bg-slate-100 text-slate-700 dark:bg-slate-800 dark:text-slate-200">
-										<Icon size={18} strokeWidth={2} />
-									</span>
+									<Icon
+										size={22}
+										strokeWidth={2}
+										className="mb-2.5 text-slate-700 dark:text-slate-200"
+									/>
 									<dt className="sr-only">{label}</dt>
 									<dd className="text-3xl lg:text-4xl font-extrabold text-slate-900 dark:text-white">
 										<CountUp
