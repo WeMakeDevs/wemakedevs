@@ -98,9 +98,9 @@ const Header = ({ className, ...props }: GeneralComponent) => {
 							hackathons
 						</h1>
 
-						<p className="mt-5 text-lg text-slate-600 dark:text-slate-300 max-w-md mx-auto lg:mx-0">
-							Trusted by enterprises and startups alike. GTM like never
-							before.
+						<p className="mt-5 text-lg text-slate-600 dark:text-slate-300 max-w-xl mx-auto lg:mx-0">
+							Trusted by enterprises and startups alike to accelerate
+							developer GTM and scale tool adoption by thousands.
 						</p>
 
 						<div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
