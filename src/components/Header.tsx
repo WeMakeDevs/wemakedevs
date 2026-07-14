@@ -124,7 +124,7 @@ const Header = ({ className, ...props }: GeneralComponent) => {
 					</div>
 
 					{/* ── Right column: dual vertical testimonial marquee ── */}
-					<div className="relative h-[440px] lg:h-[600px] overflow-hidden [mask-image:linear-gradient(to_bottom,transparent,black_12%,black_88%,transparent)]">
+					<div className="relative h-[560px] lg:h-[760px] overflow-hidden [mask-image:linear-gradient(to_bottom,transparent,black_12%,black_88%,transparent)]">
 						<div className="grid grid-cols-1 sm:grid-cols-2 gap-5 items-start">
 							<MarqueeColumn items={columnA} />
 							<MarqueeColumn
