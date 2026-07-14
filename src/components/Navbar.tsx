@@ -36,11 +36,6 @@ const Navbar = ({ className }: { className?: string }) => {
 
 	const navLinks: navLinksType = [
 		{
-			name: "Join",
-			url: "/#join",
-			type: "link",
-		},
-		{
 			name: "Hackathons",
 			url: "/#hackathons",
 			type: "link",
@@ -53,6 +48,11 @@ const Navbar = ({ className }: { className?: string }) => {
 		{
 			name: "Initiatives",
 			url: "/#initiatives",
+			type: "link",
+		},
+		{
+			name: "Join",
+			url: "/#join",
 			type: "link",
 		},
 		{

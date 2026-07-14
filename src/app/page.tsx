@@ -15,10 +15,10 @@ export default function Home() {
 		<div>
 			<Navbar />
 			<Header />
-			<Newsletter />
 			<Hackathons />
 			<Meetups />
 			<Initiatives />
+			<Newsletter />
 			<Faq FAQS={FAQS} />
 			<Partners />
 			<Footer />

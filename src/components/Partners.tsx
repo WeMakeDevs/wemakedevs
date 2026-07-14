@@ -6,13 +6,6 @@ import { matveyKukuy } from "@/app/hackathons/2fast2mcp/images/testimonials";
 import { images as accomplishImages } from "@/app/hackathons/accomplish/images";
 import { orHiltch } from "@/app/hackathons/accomplish/images/testimonials";
 import {
-	draperHouseLogo,
-	hackersquadLogo,
-	hackThisFallLogo,
-	kubesimplifyLogo,
-	theApiCommunityLogo,
-} from "@/assets/images/communityPartners";
-import {
 	kestraAuthor,
 	kestraLogo,
 	kodecloudAuthor,
@@ -27,7 +20,6 @@ import {
 import { cn } from "@/lib/utils";
 import type { PartnerData } from "@/types";
 import { Mail } from "lucide-react";
-import Image from "next/image";
 import Link from "next/link";
 import {
 	PartnerCard,
@@ -186,94 +178,17 @@ const Partners = () => {
 					</div>
 				</div>
 
-				{/* Community Partners Section */}
-				<div className="space-y-8">
-					<div className="text-center space-y-4">
-						<h3 className="text-3xl md:text-4xl font-semibold">
-							Community Partners
-						</h3>
-						<p className="text-lg leading-snug font-medium text-foreground/80 max-w-3xl mx-auto">
-							Expand your impact, tap into thousands of active
-							builders while we spotlight your community
-						</p>
-					</div>
-
-					{/* Community Partner Logos */}
-					<div className="flex flex-wrap justify-center gap-6 md:gap-x-20 md:gap-y-10 items-center justify-items-center">
-						<Link
-							href="https://www.postman.com/"
-							target="_blank"
-							rel="noopener noreferrer"
-							className="flex items-center justify-center p-4"
-						>
-							<Image
-								src={theApiCommunityLogo}
-								alt="The API Community"
-								className="object-contain w-[90px] md:w-[110px] lg:w-[130px]"
-							/>
-						</Link>
-						<Link
-							href="https://hackthisfall.tech/"
-							target="_blank"
-							rel="noopener noreferrer"
-							className="flex items-center justify-center p-4"
-						>
-							<Image
-								src={hackThisFallLogo}
-								alt="HackThisFall"
-								className="object-contain w-24 md:w-28 lg:w-32"
-							/>
-						</Link>
-						<Link
-							href="https://draperstartuphouse.com/"
-							target="_blank"
-							rel="noopener noreferrer"
-							className="flex items-center justify-center p-4"
-						>
-							<Image
-								src={draperHouseLogo}
-								alt="Draper House India"
-								className="object-contain w-[100px] md:w-[132px] lg:w-[156px]"
-							/>
-						</Link>
-						<Link
-							href="https://kubesimplify.com/"
-							target="_blank"
-							rel="noopener noreferrer"
-							className="flex items-center justify-center p-4"
-						>
-							<Image
-								src={kubesimplifyLogo}
-								alt="Kubesimplify"
-								className="object-contain w-[140px] md:w-[156px] lg:w-52"
-							/>
-						</Link>
-						<Link
-							href="https://hackersquad.io"
-							target="_blank"
-							rel="noopener noreferrer"
-							className="flex items-center justify-center p-4"
-						>
-							<Image
-								src={hackersquadLogo}
-								alt="HackerSquad"
-								className="object-contain w-[120px] md:w-[140px] lg:w-[160px]"
-							/>
-						</Link>
-					</div>
-
-					{/* Get in Touch Button */}
-					<div className="flex justify-center pt-4">
-						<Link
-							className={cn(
-								buttonVariants({}),
-								"text-white w-fit flex items-center gap-4 text-lg px-8 py-3",
-							)}
-							href="mailto:contact@wemakedevs.org"
-						>
-							Get in touch <Mail size={20} />
-						</Link>
-					</div>
+				{/* Get in Touch Button */}
+				<div className="flex justify-center pt-4">
+					<Link
+						className={cn(
+							buttonVariants({}),
+							"text-white w-fit flex items-center gap-4 text-lg px-8 py-3",
+						)}
+						href="mailto:contact@wemakedevs.org"
+					>
+						Get in touch <Mail size={20} />
+					</Link>
 				</div>
 			</ViewContainer>
 		</section>
