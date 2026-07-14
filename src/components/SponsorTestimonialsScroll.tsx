@@ -27,7 +27,7 @@ export interface SponsorTestimonialItem {
 	authorImage: StaticImageData;
 }
 
-const sponsorTestimonials: SponsorTestimonialItem[] = [
+export const sponsorTestimonials: SponsorTestimonialItem[] = [
 	// Cline - Juan Pa (AssembleHack)
 	{
 		quote:

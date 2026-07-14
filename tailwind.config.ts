@@ -85,6 +85,10 @@ const config = {
 					"0%": { transform: "translateX(0)" },
 					"100%": { transform: "translateX(-50%)" },
 				},
+				"vertical-scroll": {
+					"0%": { transform: "translateY(0)" },
+					"100%": { transform: "translateY(-50%)" },
+				},
 				cycleText: {
 					"0%, 4%": {
 						opacity: "0",
@@ -124,6 +128,7 @@ const config = {
 				"accordion-down": "accordion-down 0.2s ease-out",
 				"accordion-up": "accordion-up 0.2s ease-out",
 				"sponsor-scroll": "sponsor-scroll 45s linear infinite",
+				"vertical-scroll": "vertical-scroll 40s linear infinite",
 				fade1: "cycleText 3s ease-in-out infinite 0s",
 				fade2: "cycleText 3s ease-in-out infinite -2s",
 				fade3: "cycleText 3s ease-in-out infinite -1s",
