@@ -6,11 +6,8 @@ import Initiatives from "@/components/Initiatives";
 import Meetups from "@/components/Meetups";
 import Navbar from "@/components/Navbar";
 import Newsletter from "@/components/Newsletter";
-import Numbers from "@/components/Numbers";
 import Partners from "@/components/Partners";
 import SignozRegisterBar from "@/components/SignozRegisterBar";
-import SponsorTestimonialsScroll from "@/components/SponsorTestimonialsScroll";
-import Testimonials from "@/components/Testimonials";
 import { FAQS } from "@/constants";
 
 export default function Home() {
@@ -18,9 +15,6 @@ export default function Home() {
 		<div>
 			<Navbar />
 			<Header />
-			<SponsorTestimonialsScroll />
-			<Numbers />
-			<Testimonials />
 			<Newsletter />
 			<Hackathons />
 			<Meetups />
