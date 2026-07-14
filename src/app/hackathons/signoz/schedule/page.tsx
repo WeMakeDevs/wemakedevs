@@ -27,8 +27,9 @@ const HackathonSchedule = async () => {
 					Mission Timeline
 				</h2>
 				<p className="text-center text-[#c0c1c3] mb-8 max-w-2xl mx-auto">
-					Mark these dates. The hackathon runs July 20 – July 26,
-					2026. Don&apos;t miss the kickoff livestream on July 20.
+					Mark these dates. Daily office hours run July 15 – July 19 at
+					7:30 PM IST, and the hackathon runs July 20 – July 26, 2026.
+					Don&apos;t miss the kickoff livestream on July 20.
 				</p>
 				<div className="signoz-schedule">
 					<HackathonScheduleComponent schedule={schedule} />

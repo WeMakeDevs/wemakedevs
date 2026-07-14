@@ -115,8 +115,58 @@ const faqs: FaqType[] = [
 
 const schedule = [
 	{
+		date: "2026-07-15T00:00:00Z",
+		items: [
+			{
+				title: "Office Hours: Blog Outline Workshop",
+				description:
+					"Daily office hours kick off. Bring your blog idea and leave with a solid outline, get help structuring your write-up, picking an angle, and deciding what to show.",
+				time: "2026-07-15T19:30:00+05:30",
+			},
+		],
+	},
+	{
+		date: "2026-07-16T00:00:00Z",
+		items: [
+			{
+				title: "Office Hours: Dashboard Building Challenge",
+				description:
+					"Build SigNoz dashboards live with the team. Learn the Query Builder and panel design hands-on as you turn traces, metrics, and logs into insight.",
+				time: "2026-07-16T19:30:00+05:30",
+			},
+		],
+	},
+	{
+		date: "2026-07-17T00:00:00Z",
+		items: [
+			{
+				title: "Office Hours: SigNoz MCP Challenge",
+				description:
+					"Put the SigNoz MCP server to work. Query telemetry, automate dashboards, and debug with your coding agent using the same observability data.",
+				time: "2026-07-17T19:30:00+05:30",
+			},
+		],
+	},
+	{
+		date: "2026-07-18T00:00:00Z",
+		items: [
+			{
+				title: "Office Hours: Blog Reviews",
+				description:
+					"Get live feedback on your draft blog before you publish and submit. We'll help you tighten the story and make your experience shine.",
+				time: "2026-07-18T19:30:00+05:30",
+			},
+		],
+	},
+	{
 		date: "2026-07-19T00:00:00Z",
 		items: [
+			{
+				title: "Office Hours: AI Agent Observability Labs",
+				description:
+					"Hands-on labs instrumenting AI agents and LLM apps with OpenTelemetry and SigNoz. The final office hours session before the hackathon begins.",
+				time: "2026-07-19T19:30:00+05:30",
+			},
 			{
 				title: "Blog Challenge Winners Announced",
 				description:
