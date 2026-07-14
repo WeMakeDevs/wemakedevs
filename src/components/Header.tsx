@@ -5,7 +5,7 @@ import Link from "next/link";
 import {
 	type SponsorTestimonialItem,
 	sponsorTestimonials,
-} from "./SponsorTestimonialsScroll";
+} from "./sponsorTestimonials";
 import { buttonVariants } from "./ui/button";
 import { ViewContainer } from "./ui/view-container";
 
