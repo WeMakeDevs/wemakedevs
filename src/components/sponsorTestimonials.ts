@@ -21,7 +21,7 @@ import type { StaticImageData } from "next/image";
 
 export interface SponsorTestimonialItem {
 	quote: string;
-	/** Short, crisp snippet for compact cards — surfaces key number metrics where present. */
+	/** Short, crisp snippet for compact cards. Surfaces key number metrics where present. */
 	summary: string;
 	author: string;
 	company: string;
