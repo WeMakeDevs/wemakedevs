@@ -7,7 +7,6 @@ import {
 	sponsorTestimonials,
 } from "./sponsorTestimonials";
 import { buttonVariants } from "./ui/button";
-import { ViewContainer } from "./ui/view-container";
 
 const stats: { value: string; label: string }[] = [
 	{ value: "200k", label: "Members" },
@@ -15,6 +14,10 @@ const stats: { value: string; label: string }[] = [
 	{ value: "40+", label: "Countries" },
 	{ value: "60+", label: "Partners" },
 ];
+
+const midpoint = Math.ceil(sponsorTestimonials.length / 2);
+const columnA = sponsorTestimonials.slice(0, midpoint);
+const columnB = sponsorTestimonials.slice(midpoint);
 
 function HeroTestimonialCard({ item }: { item: SponsorTestimonialItem }) {
 	return (
@@ -44,11 +47,36 @@ function HeroTestimonialCard({ item }: { item: SponsorTestimonialItem }) {
 	);
 }
 
+function MarqueeColumn({
+	items,
+	className,
+}: {
+	items: SponsorTestimonialItem[];
+	className?: string;
+}) {
+	return (
+		<div
+			className={cn(
+				"flex flex-col gap-5 animate-vertical-scroll hover:[animation-play-state:paused]",
+				className,
+			)}
+		>
+			{items.map((item, index) => (
+				<HeroTestimonialCard key={`${item.company}-${index}`} item={item} />
+			))}
+			{/* Duplicate set for a seamless infinite loop */}
+			{items.map((item, index) => (
+				<HeroTestimonialCard key={`${item.company}-dup-${index}`} item={item} />
+			))}
+		</div>
+	);
+}
+
 const Header = ({ className, ...props }: GeneralComponent) => {
 	return (
 		<header {...props} className={cn(className, "pb-10 lg:pb-14 pt-20 lg:pt-32")}>
-			<ViewContainer>
-				<div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+			<div className="mx-auto w-full max-w-[1500px] px-5 lg:px-8">
+				<div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
 					{/* ── Left column: copy, CTAs, stats ── */}
 					<div className="text-center lg:text-left">
 						<h1 className="font-title text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-extrabold leading-[1.05] tracking-tight text-slate-900 dark:text-white">
@@ -95,26 +123,18 @@ const Header = ({ className, ...props }: GeneralComponent) => {
 						</dl>
 					</div>
 
-					{/* ── Right column: vertical testimonial marquee ── */}
-					<div className="relative h-[420px] lg:h-[560px] overflow-hidden [mask-image:linear-gradient(to_bottom,transparent,black_12%,black_88%,transparent)]">
-						<div className="group absolute inset-x-0 top-0 flex flex-col gap-5 animate-vertical-scroll hover:[animation-play-state:paused]">
-							{sponsorTestimonials.map((item, index) => (
-								<HeroTestimonialCard
-									key={`${item.company}-${index}`}
-									item={item}
-								/>
-							))}
-							{/* Duplicate set for a seamless infinite loop */}
-							{sponsorTestimonials.map((item, index) => (
-								<HeroTestimonialCard
-									key={`${item.company}-dup-${index}`}
-									item={item}
-								/>
-							))}
+					{/* ── Right column: dual vertical testimonial marquee ── */}
+					<div className="relative h-[440px] lg:h-[600px] overflow-hidden [mask-image:linear-gradient(to_bottom,transparent,black_12%,black_88%,transparent)]">
+						<div className="grid grid-cols-1 sm:grid-cols-2 gap-5 items-start">
+							<MarqueeColumn items={columnA} />
+							<MarqueeColumn
+								items={columnB}
+								className="hidden sm:flex [animation-duration:52s]"
+							/>
 						</div>
 					</div>
 				</div>
-			</ViewContainer>
+			</div>
 		</header>
 	);
 };
