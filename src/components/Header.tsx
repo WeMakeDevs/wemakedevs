@@ -36,7 +36,10 @@ function HeroTestimonialCard({ item }: { item: SponsorTestimonialItem }) {
 			<Image
 				src={item.logo}
 				alt={item.company}
-				className="h-8 w-auto max-w-[120px] object-contain object-left mb-3"
+				className={cn(
+					"h-8 w-auto max-w-[120px] object-contain object-left mb-3",
+					item.logoClassName,
+				)}
 			/>
 			<blockquote className="text-sm leading-relaxed text-slate-600 dark:text-slate-300">
 				&quot;{item.summary}&quot;

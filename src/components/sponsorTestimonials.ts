@@ -27,6 +27,8 @@ export interface SponsorTestimonialItem {
 	company: string;
 	logo: StaticImageData;
 	authorImage: StaticImageData;
+	/** Optional per-logo sizing override for visual balance in compact cards. */
+	logoClassName?: string;
 }
 
 export const sponsorTestimonials: SponsorTestimonialItem[] = [
@@ -40,6 +42,7 @@ export const sponsorTestimonials: SponsorTestimonialItem[] = [
 		company: "Developer Relations, Cline",
 		logo: assembleImages.clineLogo,
 		authorImage: juanPa,
+		logoClassName: "h-7",
 	},
 	// CodeRabbit - Aravind (AssembleHack)
 	{
@@ -84,6 +87,7 @@ export const sponsorTestimonials: SponsorTestimonialItem[] = [
 		company: "Partner Engineer, GenAI, Meta",
 		logo: futurestackImages.metaLogo,
 		authorImage: futurestackImages.yashKhare,
+		logoClassName: "h-7",
 	},
 	// Cerebras - Sarah (FutureStack)
 	{
@@ -106,6 +110,7 @@ export const sponsorTestimonials: SponsorTestimonialItem[] = [
 		company: "Founder, Motia",
 		logo: motiaImages.motiaLogo,
 		authorImage: mikePiccolo,
+		logoClassName: "h-7",
 	},
 	// Lingo (LingoHack)
 	{
@@ -161,5 +166,6 @@ export const sponsorTestimonials: SponsorTestimonialItem[] = [
 		company: "CEO, Kestra",
 		logo: kestraLogo,
 		authorImage: emmanuel,
+		logoClassName: "h-7",
 	},
 ];
