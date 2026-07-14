@@ -37,19 +37,19 @@ export const sponsorTestimonials: SponsorTestimonialItem[] = [
 		quote:
 			"Working with WeMakeDevs on our hackathon was one of the best partnership decisions we made. The turnout exceeded anything we expected, with real, engaged builders who showed up ready to create. From a sponsor perspective, they made our involvement effortless.",
 		summary:
-			"Turnout exceeded expectations — real, engaged builders showed up ready to create.",
+			"Turnout exceeded expectations — real, engaged builders showed up ready to create. One of the best partnership decisions we made, and they made our involvement completely effortless.",
 		author: "Juan Pa",
 		company: "Developer Relations, Cline",
 		logo: assembleImages.clineLogo,
 		authorImage: juanPa,
-		logoClassName: "h-7",
+		logoClassName: "h-6",
 	},
 	// CodeRabbit - Aravind (AssembleHack)
 	{
 		quote:
 			"Working with Kunal and WeMakeDevs was incredible. The community genuinely cared about what we're building at CodeRabbit, developers tried the product, they loved it, and told others about it. The awareness we gained in the developer community was beyond what we expected.",
 		summary:
-			"Developers tried CodeRabbit, loved it, and spread the word — awareness beyond expectations.",
+			"Developers tried CodeRabbit, loved it, and told others about it. The awareness we gained in the developer community was beyond anything we expected — the community genuinely cared about what we're building.",
 		author: "Aravind Putrevu",
 		company: "VP of Growth, CodeRabbit",
 		logo: assembleImages.coderabbitLogo,
@@ -60,7 +60,7 @@ export const sponsorTestimonials: SponsorTestimonialItem[] = [
 		quote:
 			"Presenting this webinar was a fantastic experience. The audience was highly engaged throughout, with thoughtful questions and active discussion around LLM and coding agents.",
 		summary:
-			"A highly engaged audience with thoughtful questions on LLMs and coding agents.",
+			"A highly engaged audience with thoughtful questions and active discussion around LLMs and coding agents. A fantastic experience from start to finish.",
 		author: "Zain",
 		company: "Together AI",
 		logo: assembleImages.togetheraiLogo,
@@ -71,7 +71,7 @@ export const sponsorTestimonials: SponsorTestimonialItem[] = [
 		quote:
 			"What an incredible journey AgentHack 2025 has been! Seeing developers from around the world come together to build innovative AI agents using Portia was truly inspiring. The creativity and technical excellence displayed by all participants exceeded our expectations.",
 		summary:
-			"Developers worldwide built innovative AI agents with Portia — creativity beyond expectations.",
+			"Developers worldwide came together to build innovative AI agents with Portia. The creativity and technical excellence on display truly exceeded all of our expectations.",
 		author: "Mounir Mouawad",
 		company: "CEO, Portia AI",
 		logo: agenthackImages.portiaLogo,
@@ -82,19 +82,19 @@ export const sponsorTestimonials: SponsorTestimonialItem[] = [
 		quote:
 			"The WeMakeDevs hackathon provided a fantastic platform for developers to showcase their skills and learn from each other. It was an amazing experience to be invited for a QA session covering hackathon strategies and AI career advice. Great opportunity to share knowledge.",
 		summary:
-			"A fantastic platform for developers to showcase skills and share knowledge.",
+			"A fantastic platform for developers to showcase their skills and learn from each other. A great opportunity to share hackathon strategies and AI career advice with an eager community.",
 		author: "Yash Khare",
 		company: "Partner Engineer, GenAI, Meta",
 		logo: futurestackImages.metaLogo,
 		authorImage: futurestackImages.yashKhare,
-		logoClassName: "h-7",
+		logoClassName: "h-6",
 	},
 	// Cerebras - Sarah (FutureStack)
 	{
 		quote:
 			"Working with WeMakeDevs was such a great experience! The energy from the community was unreal, over 5,500 participants and 7,000+ API signups in just one hackathon. We loved seeing how creative the projects were and how quickly developers picked up Cerebras tech.",
 		summary:
-			"5,500+ participants and 7,000+ API signups in a single hackathon.",
+			"5,500+ participants and 7,000+ API signups in a single hackathon. The energy from the community was unreal, and developers picked up Cerebras tech incredibly fast.",
 		author: "Sarah Chieng",
 		company: "Head of DevX, Cerebras Systems",
 		logo: futurestackImages.cerebrasLogo,
@@ -105,19 +105,19 @@ export const sponsorTestimonials: SponsorTestimonialItem[] = [
 		quote:
 			"Working with WeMakeDevs for #MotiaHack25 was amazing! This partnership went way beyond what we expected. The quality of projects was impressive, thousands of developers actually understood what we were building and shipped real solutions.",
 		summary:
-			"Thousands of developers understood our product and shipped real solutions.",
+			"Thousands of developers actually understood what we were building and shipped real solutions. This partnership went way beyond anything we expected.",
 		author: "Mike Piccolo",
 		company: "Founder, Motia",
 		logo: motiaImages.motiaLogo,
 		authorImage: mikePiccolo,
-		logoClassName: "h-7",
+		logoClassName: "h-6",
 	},
 	// Lingo (LingoHack)
 	{
 		quote:
 			"The hackathon we organised with WeMakeDevs was immensely successful. Not only did it bring us thousands of users, community members and GitHub stars but we were also very impressed with the projects participants submitted and what they built.",
 		summary:
-			"Thousands of new users, community members, and GitHub stars.",
+			"Thousands of new users, community members, and GitHub stars. We were genuinely impressed by the quality of the projects participants submitted and everything they built.",
 		author: "Sumit Saurabh",
 		company: "Lingo.dev",
 		logo: lingohackImages.lingoLogo,
@@ -128,7 +128,7 @@ export const sponsorTestimonials: SponsorTestimonialItem[] = [
 		quote:
 			"Working with WeMakeDevs was a game-changer for Tambo. What we imagined, Kunal and his team delivered, and then some. The results from our hackathon were staggering: we gained over 7,000 GitHub stars in just one week and saw thousands of developers actively building and engaging in our Discord. The quality of the projects produced was incredible. If you are looking to tap into a global developer ecosystem, gather real-world feedback, and discover innovative use cases for your product, I highly recommend partnering with WeMakeDevs. They don't just run events; they build movements.",
 		summary:
-			"7,000+ GitHub stars in a single week and thousands of active builders.",
+			"7,000+ GitHub stars in a single week and thousands of active builders in our Discord. The quality of projects was incredible — they don't just run events, they build movements.",
 		author: "Michael Magan",
 		company: "CEO, Tambo",
 		logo: tamboImages.tamboLogo,
@@ -139,7 +139,7 @@ export const sponsorTestimonials: SponsorTestimonialItem[] = [
 		quote:
 			"Kunal and his team didn't just host a hackathon; they built a bridge between our tech and thousands of high-level developers. The results spoke for themselves: 3,000+ GitHub stars and a community of builders actually orchestrating MCP agents in real-time. The sophisticated projects we saw come out of this event proved that WeMakeDevs attracts a higher tier of talent. If you're looking to get your AI tools into the hands of global builders and see what they can really do, look no further.",
 		summary:
-			"3,000+ GitHub stars and builders orchestrating MCP agents in real time.",
+			"3,000+ GitHub stars and builders orchestrating MCP agents in real time. The sophisticated projects proved that WeMakeDevs attracts a genuinely higher tier of talent.",
 		author: "Matvey Kukuy",
 		company: "CEO, Archestra",
 		logo: twoFastTwoMcpImages.archestraLogo,
@@ -150,7 +150,7 @@ export const sponsorTestimonials: SponsorTestimonialItem[] = [
 		quote:
 			"We expected a hackathon; we got a high-octane engineering sprint. Kunal and the WeMakeDevs team didn't just bring us visibility, they brought us contributors. For Accomplish.ai, the impact was immediate: 5,000+ GitHub stars in a week and thousands of developers diving into our actual issues. The volume of PRs was staggering; we saw bugs squashed and new features shipped faster than we ever imagined. Beyond the code, the cultural ripple effect has been huge, people are sharing their Accomplish setups across social media, and we've gained long-term contributors who are still active in our Discord today. If you want to move the needle on your product development while building a global brand, WeMakeDevs is the ultimate partner.",
 		summary:
-			"5,000+ GitHub stars in a week and a flood of PRs from real contributors.",
+			"5,000+ GitHub stars in a week and a flood of PRs from real contributors. Bugs squashed and new features shipped faster than we ever imagined — visibility and contributors both.",
 		author: "Or Hiltch",
 		company: "CEO, Accomplish.ai",
 		logo: accomplishImages.accomplishLogo,
@@ -161,11 +161,11 @@ export const sponsorTestimonials: SponsorTestimonialItem[] = [
 		quote:
 			"Huge thanks to Kunal Kushwaha and the amazing team at WeMakeDevs for organizing the very first Hackathon around Kestra! With over 2,000 participants all around the world, it was an incredible success and a true honor to see such brilliant developers using Kestra to create innovative and original projects.",
 		summary:
-			"2,000+ participants worldwide building innovative projects with Kestra.",
+			"2,000+ participants worldwide building innovative projects with Kestra. An incredible success and a true honor to see such brilliant developers create original work.",
 		author: "Emmanuel Darras",
 		company: "CEO, Kestra",
 		logo: kestraLogo,
 		authorImage: emmanuel,
-		logoClassName: "h-7",
+		logoClassName: "h-6",
 	},
 ];
