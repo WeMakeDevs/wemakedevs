@@ -5,11 +5,13 @@ import { mikePiccolo } from "../images/testimonials";
 const MotiaSpecialTestimonial = () => {
 	return (
 		<div className="space-y-10 my-10 md:my-20">
-			<Image
-				src={images.motiaLogo}
-				alt="Motia Logo"
-				className="w-32 mx-auto"
-			/>
+			<div className="bg-white rounded-lg px-4 py-3 flex w-fit mx-auto">
+				<Image
+					src={images.motiaLogo}
+					alt="Motia Logo"
+					className="w-32"
+				/>
+			</div>
 			<div className="space-y-4 text-lg md:text-xl font-medium max-w-4xl mx-auto text-center text-slate-200 font-mono">
 				<p>
 					Working with WeMakeDevs for #MotiaHack25 was amazing! This

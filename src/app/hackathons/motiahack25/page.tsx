@@ -72,11 +72,13 @@ const HackathonPage = () => {
 					</HackathonContentTitle>
 					<div className="bg-[#0a0f11]/80 rounded-[12px] border border-green-500/20 overflow-hidden shadow-[0_20px_40px_rgba(5,8,9,0.55)] mt-6">
 						<div className="flex items-center justify-between p-6 bg-[#0f181c]/80 flex-col md:flex-row gap-4 border-b border-green-500/15">
-							<Image
-								src={images.motiaLogo}
-								alt="Motia Logo"
-								className="w-36"
-							/>
+							<div className="bg-white rounded-lg px-4 py-3 inline-flex">
+								<Image
+									src={images.motiaLogo}
+									alt="Motia Logo"
+									className="w-36"
+								/>
+							</div>
 							<Link
 								href="https://motia.dev"
 								className="px-5 py-2.5 rounded-[6px] border-green-400/40 border flex gap-2 items-center bg-green-500/15 hover:bg-green-500/20 text-slate-100 transition-colors duration-300 shadow-[0_0_18px_rgba(0,255,65,0.18)] font-mono"
