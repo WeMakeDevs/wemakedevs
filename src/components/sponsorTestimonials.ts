@@ -37,7 +37,7 @@ export const sponsorTestimonials: SponsorTestimonialItem[] = [
 		quote:
 			"Working with WeMakeDevs on our hackathon was one of the best partnership decisions we made. The turnout exceeded anything we expected, with real, engaged builders who showed up ready to create. From a sponsor perspective, they made our involvement effortless.",
 		summary:
-			"Turnout exceeded expectations — real, engaged builders showed up ready to create. One of the best partnership decisions we made, and they made our involvement completely effortless.",
+			"Turnout exceeded expectations, with real, engaged builders who showed up ready to create. One of the best partnership decisions we made, and they made our involvement completely effortless.",
 		author: "Juan Pa",
 		company: "Developer Relations, Cline",
 		logo: assembleImages.clineLogo,
@@ -49,7 +49,7 @@ export const sponsorTestimonials: SponsorTestimonialItem[] = [
 		quote:
 			"Working with Kunal and WeMakeDevs was incredible. The community genuinely cared about what we're building at CodeRabbit, developers tried the product, they loved it, and told others about it. The awareness we gained in the developer community was beyond what we expected.",
 		summary:
-			"Developers tried CodeRabbit, loved it, and told others about it. The awareness we gained in the developer community was beyond anything we expected — the community genuinely cared about what we're building.",
+			"Developers tried CodeRabbit, loved it, and told others about it. The awareness we gained in the developer community was beyond anything we expected. The community genuinely cared about what we're building.",
 		author: "Aravind Putrevu",
 		company: "VP of Growth, CodeRabbit",
 		logo: assembleImages.coderabbitLogo,
@@ -128,7 +128,7 @@ export const sponsorTestimonials: SponsorTestimonialItem[] = [
 		quote:
 			"Working with WeMakeDevs was a game-changer for Tambo. What we imagined, Kunal and his team delivered, and then some. The results from our hackathon were staggering: we gained over 7,000 GitHub stars in just one week and saw thousands of developers actively building and engaging in our Discord. The quality of the projects produced was incredible. If you are looking to tap into a global developer ecosystem, gather real-world feedback, and discover innovative use cases for your product, I highly recommend partnering with WeMakeDevs. They don't just run events; they build movements.",
 		summary:
-			"7,000+ GitHub stars in a single week and thousands of active builders in our Discord. The quality of projects was incredible — they don't just run events, they build movements.",
+			"7,000+ GitHub stars in a single week and thousands of active builders in our Discord. The quality of projects was incredible. They don't just run events, they build movements.",
 		author: "Michael Magan",
 		company: "CEO, Tambo",
 		logo: tamboImages.tamboLogo,
@@ -150,7 +150,7 @@ export const sponsorTestimonials: SponsorTestimonialItem[] = [
 		quote:
 			"We expected a hackathon; we got a high-octane engineering sprint. Kunal and the WeMakeDevs team didn't just bring us visibility, they brought us contributors. For Accomplish.ai, the impact was immediate: 5,000+ GitHub stars in a week and thousands of developers diving into our actual issues. The volume of PRs was staggering; we saw bugs squashed and new features shipped faster than we ever imagined. Beyond the code, the cultural ripple effect has been huge, people are sharing their Accomplish setups across social media, and we've gained long-term contributors who are still active in our Discord today. If you want to move the needle on your product development while building a global brand, WeMakeDevs is the ultimate partner.",
 		summary:
-			"5,000+ GitHub stars in a week and a flood of PRs from real contributors. Bugs squashed and new features shipped faster than we ever imagined — visibility and contributors both.",
+			"5,000+ GitHub stars in a week and a flood of PRs from real contributors. Bugs squashed and new features shipped faster than we ever imagined, delivering visibility and contributors both.",
 		author: "Or Hiltch",
 		company: "CEO, Accomplish.ai",
 		logo: accomplishImages.accomplishLogo,
