@@ -7,6 +7,7 @@ import {
 	sponsorTestimonials,
 } from "./sponsorTestimonials";
 import { buttonVariants } from "./ui/button";
+import { NavContainer } from "./ui/nav-container";
 
 const stats: { value: string; label: string }[] = [
 	{ value: "200k", label: "Members" },
@@ -75,7 +76,7 @@ function MarqueeColumn({
 const Header = ({ className, ...props }: GeneralComponent) => {
 	return (
 		<header {...props} className={cn(className, "pb-10 lg:pb-14 pt-20 lg:pt-32")}>
-			<div className="mx-auto w-full max-w-[1500px] px-5 lg:px-8">
+			<NavContainer>
 				<div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
 					{/* ── Left column: copy, CTAs, stats ── */}
 					<div className="text-center lg:text-left">
@@ -134,7 +135,7 @@ const Header = ({ className, ...props }: GeneralComponent) => {
 						</div>
 					</div>
 				</div>
-			</div>
+			</NavContainer>
 		</header>
 	);
 };
