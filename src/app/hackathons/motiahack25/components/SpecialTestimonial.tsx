@@ -5,7 +5,7 @@ import { mikePiccolo } from "../images/testimonials";
 const MotiaSpecialTestimonial = () => {
 	return (
 		<div className="space-y-10 my-10 md:my-20">
-			<div className="bg-white rounded-lg px-4 py-3 flex w-fit mx-auto">
+			<div className="bg-white rounded-2xl px-4 py-3 flex w-fit mx-auto">
 				<Image
 					src={images.motiaLogo}
 					alt="Motia Logo"
