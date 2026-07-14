@@ -1,7 +1,12 @@
+"use client";
+
 import { cn } from "@/lib/utils";
 import type { GeneralComponent } from "@/types";
+import { Globe, Handshake, UserPlus, Users } from "lucide-react";
+import type { LucideIcon } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import CountUp from "react-countup";
 import {
 	type SponsorTestimonialItem,
 	sponsorTestimonials,
@@ -9,11 +14,16 @@ import {
 import { buttonVariants } from "./ui/button";
 import { NavContainer } from "./ui/nav-container";
 
-const stats: { value: string; label: string }[] = [
-	{ value: "200k", label: "Members" },
-	{ value: "120k+", label: "Signups" },
-	{ value: "40+", label: "Countries" },
-	{ value: "60+", label: "Partners" },
+const stats: {
+	value: number;
+	suffix: string;
+	label: string;
+	icon: LucideIcon;
+}[] = [
+	{ value: 200, suffix: "k", label: "Members", icon: Users },
+	{ value: 120, suffix: "k+", label: "Signups", icon: UserPlus },
+	{ value: 40, suffix: "+", label: "Countries", icon: Globe },
+	{ value: 60, suffix: "+", label: "Partners", icon: Handshake },
 ];
 
 const midpoint = Math.ceil(sponsorTestimonials.length / 2);
@@ -88,6 +98,11 @@ const Header = ({ className, ...props }: GeneralComponent) => {
 							hackathons
 						</h1>
 
+						<p className="mt-5 text-lg text-slate-600 dark:text-slate-300 max-w-md mx-auto lg:mx-0">
+							Trusted by enterprises and startups alike. GTM like never
+							before.
+						</p>
+
 						<div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
 							<Link
 								href="#join"
@@ -110,14 +125,26 @@ const Header = ({ className, ...props }: GeneralComponent) => {
 						</div>
 
 						<dl className="mt-12 grid grid-cols-2 sm:grid-cols-4 gap-y-8 gap-x-6 max-w-lg mx-auto lg:mx-0">
-							{stats.map(stat => (
-								<div key={stat.label} className="text-center lg:text-left">
-									<dt className="sr-only">{stat.label}</dt>
+							{stats.map(({ value, suffix, label, icon: Icon }) => (
+								<div
+									key={label}
+									className="flex flex-col items-center lg:items-start"
+								>
+									<span className="mb-2.5 inline-flex h-9 w-9 items-center justify-center rounded-lg bg-slate-100 text-slate-700 dark:bg-slate-800 dark:text-slate-200">
+										<Icon size={18} strokeWidth={2} />
+									</span>
+									<dt className="sr-only">{label}</dt>
 									<dd className="text-3xl lg:text-4xl font-extrabold text-slate-900 dark:text-white">
-										{stat.value}
+										<CountUp
+											end={value}
+											suffix={suffix}
+											duration={2.5}
+											enableScrollSpy
+											scrollSpyOnce
+										/>
 									</dd>
 									<p className="mt-1.5 text-xs tracking-wider text-slate-500 uppercase font-medium">
-										{stat.label}
+										{label}
 									</p>
 								</div>
 							))}
