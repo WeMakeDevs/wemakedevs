@@ -122,6 +122,16 @@ const schedule = [
 				description:
 					"Daily office hours kick off. Bring your blog idea and leave with a solid outline, get help structuring your write-up, picking an angle, and deciding what to show.",
 				time: "2026-07-15T19:30:00+05:30",
+				links: [
+					{
+						platform: "linkedin",
+						url: "https://www.linkedin.com/events/7483068952382889984",
+					},
+					{
+						platform: "youtube",
+						url: "https://www.youtube.com/live/1OiN39v1lFo",
+					},
+				],
 			},
 		],
 	},
