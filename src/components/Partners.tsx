@@ -17,9 +17,16 @@ import {
 	wilcoAuthor,
 	wilcoLogo,
 } from "@/assets/images/partners";
+import {
+	assetmerkleLogo,
+	founderLogo,
+	kubesimplifyLogo,
+	theApiCommunityLogo,
+} from "@/assets/images/communityPartners";
 import { cn } from "@/lib/utils";
 import type { PartnerData } from "@/types";
 import { Mail } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 import {
 	PartnerCard,
@@ -178,17 +185,82 @@ const Partners = () => {
 					</div>
 				</div>
 
-				{/* Get in Touch Button */}
-				<div className="flex justify-center pt-4">
-					<Link
-						className={cn(
-							buttonVariants({}),
-							"text-white w-fit flex items-center gap-4 text-lg px-8 py-3",
-						)}
-						href="mailto:contact@wemakedevs.org"
-					>
-						Get in touch <Mail size={20} />
-					</Link>
+				{/* Community Partners Section */}
+				<div className="space-y-8">
+					<div className="text-center space-y-4">
+						<h3 className="text-3xl md:text-4xl font-semibold">
+							Community Partners
+						</h3>
+						<p className="text-lg leading-snug font-medium text-foreground/80 max-w-3xl mx-auto">
+							Expand your impact, tap into thousands of active
+							builders while we spotlight your community
+						</p>
+					</div>
+
+					{/* Community Partner Logos */}
+					<div className="flex flex-wrap justify-center gap-6 md:gap-x-20 md:gap-y-10 items-center justify-items-center">
+						<Link
+							href="https://kubesimplify.com/"
+							target="_blank"
+							rel="noopener noreferrer"
+							className="flex items-center justify-center p-4"
+						>
+							<Image
+								src={kubesimplifyLogo}
+								alt="Kubesimplify"
+								className="object-contain w-[140px] md:w-[156px] lg:w-52"
+							/>
+						</Link>
+						<Link
+							href="https://www.founderstartuphouse.com/"
+							target="_blank"
+							rel="noopener noreferrer"
+							className="flex items-center justify-center p-4"
+						>
+							<Image
+								src={founderLogo}
+								alt="Founder Startup House"
+								className="object-contain w-[110px] md:w-[132px] lg:w-[156px]"
+							/>
+						</Link>
+						<Link
+							href="https://www.theapicommunity.org/"
+							target="_blank"
+							rel="noopener noreferrer"
+							className="flex items-center justify-center p-4"
+						>
+							<Image
+								src={theApiCommunityLogo}
+								alt="The API Community"
+								className="object-contain w-[90px] md:w-[110px] lg:w-[130px]"
+							/>
+						</Link>
+						<Link
+							href="https://assetmerkleigdtuw.vercel.app/"
+							target="_blank"
+							rel="noopener noreferrer"
+							className="flex items-center justify-center p-4"
+						>
+							<Image
+								src={assetmerkleLogo}
+								alt="AssetMerkle IGDTUW"
+								className="object-contain w-[110px] md:w-[132px] lg:w-[156px]"
+							/>
+						</Link>
+					</div>
+
+					{/* Get in Touch Button */}
+					<div className="flex justify-center pt-4">
+						<Link
+							className={cn(
+								buttonVariants({}),
+								"text-white w-fit flex items-center gap-4 text-lg px-8 py-3",
+							)}
+							href="mailto:contact@wemakedevs.org"
+						>
+							Get in touch <Mail size={20} />
+						</Link>
+					</div>
 				</div>
 			</ViewContainer>
 		</section>

@@ -1,5 +1,7 @@
+import assetmerkleLogo from "./assetmerkle_igdtuw.jpg";
 import c4gtLogo from "./c4gt.png";
 import draperHouseLogo from "./draperHouse.svg";
+import founderLogo from "./founder.png";
 import hackersquadLogo from "./hackersquad.png";
 import hackThisFallLogo from "./hackThisFall.png";
 import indehubLogo from "./indehub-logo.png";
@@ -18,4 +20,6 @@ export {
 	punedaoLogo,
 	indehubLogo,
 	hackersquadLogo,
+	assetmerkleLogo,
+	founderLogo,
 };
