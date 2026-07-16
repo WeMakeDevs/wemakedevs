@@ -1,4 +1,3 @@
-import { hackersquadLogo } from "@/assets/images/communityPartners";
 import Faq from "@/components/Faq";
 import { HackathonNav } from "@/components/hackathon-content";
 import { ViewContainer } from "@/components/ui/view-container";
@@ -207,13 +206,9 @@ const HackathonPage = () => {
 							href="https://hackersquad.io"
 							target="_blank"
 							rel="noopener noreferrer"
-							className="inline-flex items-center opacity-80 hover:opacity-100 transition-opacity"
+							className="inline-flex items-center font-semibold text-[#6b513a] opacity-80 hover:opacity-100 transition-opacity"
 						>
-							<Image
-								src={hackersquadLogo}
-								alt="HackerSquad"
-								className="h-7 w-auto object-contain"
-							/>
+							HackerSquad
 						</Link>
 					</div>
 				</ViewContainer>
