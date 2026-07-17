@@ -19,6 +19,7 @@ import {
 } from "@/assets/images/partners";
 import {
 	assetmerkleLogo,
+	awsugblrLogo,
 	founderLogo,
 	kubesimplifyLogo,
 	theApiCommunityLogo,
@@ -244,6 +245,18 @@ const Partners = () => {
 							<Image
 								src={assetmerkleLogo}
 								alt="AssetMerkle IGDTUW"
+								className="object-contain w-[110px] md:w-[132px] lg:w-[156px]"
+							/>
+						</Link>
+						<Link
+							href="https://www.meetup.com/awsugblr/"
+							target="_blank"
+							rel="noopener noreferrer"
+							className="flex items-center justify-center p-4"
+						>
+							<Image
+								src={awsugblrLogo}
+								alt="AWS User Group Bengaluru"
 								className="object-contain w-[110px] md:w-[132px] lg:w-[156px]"
 							/>
 						</Link>

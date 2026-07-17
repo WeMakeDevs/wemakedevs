@@ -143,17 +143,16 @@ const schedule = [
 				description:
 					"Build SigNoz dashboards live with the team. Learn the Query Builder and panel design hands-on as you turn traces, metrics, and logs into insight.",
 				time: "2026-07-16T19:30:00+05:30",
-			},
-		],
-	},
-	{
-		date: "2026-07-17T00:00:00Z",
-		items: [
-			{
-				title: "Office Hours: SigNoz MCP Challenge",
-				description:
-					"Put the SigNoz MCP server to work. Query telemetry, automate dashboards, and debug with your coding agent using the same observability data.",
-				time: "2026-07-17T19:30:00+05:30",
+				links: [
+					{
+						platform: "linkedin",
+						url: "https://www.linkedin.com/events/7483412214830346240",
+					},
+					{
+						platform: "youtube",
+						url: "https://www.youtube.com/live/-tDZIPRxFJw",
+					},
+				],
 			},
 		],
 	},
@@ -172,9 +171,9 @@ const schedule = [
 		date: "2026-07-19T00:00:00Z",
 		items: [
 			{
-				title: "Office Hours: AI Agent Observability Labs",
+				title: "SigNoz MCP Overview",
 				description:
-					"Hands-on labs instrumenting AI agents and LLM apps with OpenTelemetry and SigNoz. The final office hours session before the hackathon begins.",
+					"Put the SigNoz MCP server to work. Query telemetry, automate dashboards, and debug with your coding agent using the same observability data.",
 				time: "2026-07-19T19:30:00+05:30",
 			},
 			{
@@ -213,6 +212,17 @@ const schedule = [
 						url: "https://youtube.com/live/rr9YHSV5bj0",
 					},
 				],
+			},
+		],
+	},
+	{
+		date: "2026-07-22T00:00:00Z",
+		items: [
+			{
+				title: "AI Agent Observability using SigNoz",
+				description:
+					"Hands-on labs instrumenting AI agents and LLM apps with OpenTelemetry and SigNoz.",
+				time: "2026-07-22T19:30:00+05:30",
 			},
 		],
 	},

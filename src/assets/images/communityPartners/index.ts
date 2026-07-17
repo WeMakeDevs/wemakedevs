@@ -1,4 +1,5 @@
 import assetmerkleLogo from "./assetmerkle_igdtuw.jpg";
+import awsugblrLogo from "./awsugblr.png";
 import c4gtLogo from "./c4gt.png";
 import draperHouseLogo from "./draperHouse.svg";
 import founderLogo from "./founder.png";
@@ -20,4 +21,5 @@ export {
 	indehubLogo,
 	assetmerkleLogo,
 	founderLogo,
+	awsugblrLogo,
 };
