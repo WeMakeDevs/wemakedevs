@@ -194,6 +194,13 @@ const PrizesShowcase = () => {
 											{DATA.blogWinnersDate}
 										</span>
 									</div>
+									<div className="flex items-center gap-3 bg-[#0b0c0e] rounded-xl px-4 py-3 border border-[#ffcd56]/25">
+										<Star className="w-5 h-5 text-[#ffcd56] shrink-0" />
+										<span className="font-semibold text-[#ffcd56]">
+											Top blogs featured on the SigNoz
+											website
+										</span>
+									</div>
 								</div>
 								<div className="flex flex-wrap gap-3">
 									<Link

@@ -164,6 +164,16 @@ const schedule = [
 				description:
 					"Get live feedback on your draft blog before you publish and submit. We'll help you tighten the story and make your experience shine.",
 				time: "2026-07-18T19:30:00+05:30",
+				links: [
+					{
+						platform: "linkedin",
+						url: "https://www.linkedin.com/events/7484156541533679616",
+					},
+					{
+						platform: "youtube",
+						url: "https://www.youtube.com/live/EzKyA43AqGg",
+					},
+				],
 			},
 		],
 	},
@@ -175,6 +185,16 @@ const schedule = [
 				description:
 					"Put the SigNoz MCP server to work. Query telemetry, automate dashboards, and debug with your coding agent using the same observability data.",
 				time: "2026-07-19T19:30:00+05:30",
+				links: [
+					{
+						platform: "linkedin",
+						url: "https://www.linkedin.com/events/7484157531485872128",
+					},
+					{
+						platform: "youtube",
+						url: "https://www.youtube.com/live/c0bvA5Q9n2U",
+					},
+				],
 			},
 			{
 				title: "Blog Challenge Winners Announced",
@@ -223,6 +243,16 @@ const schedule = [
 				description:
 					"Hands-on labs instrumenting AI agents and LLM apps with OpenTelemetry and SigNoz.",
 				time: "2026-07-22T19:30:00+05:30",
+				links: [
+					{
+						platform: "linkedin",
+						url: "https://www.linkedin.com/events/7484158060647706624",
+					},
+					{
+						platform: "youtube",
+						url: "https://www.youtube.com/live/cLrTsNRAwGk",
+					},
+				],
 			},
 		],
 	},
