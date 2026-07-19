@@ -173,32 +173,26 @@ const Tracks = () => {
 							</div>
 							<div>
 								<h3 className="text-xl font-bold text-[#ffcd56] mb-1">
-									Submit your project through the form
+									Submission form coming soon
 								</h3>
 								<p className="text-[#c0c1c3] leading-relaxed">
-									For all three tracks, submit your project
-									through the submission form. Everything you
-									need to include is listed there. Not sure how
-									to present your work? Read the{" "}
+									The project submission form will be updated
+									soon. For now, just start building across any
+									of the three tracks. Not sure how to present
+									your work? Read the{" "}
 									<Link
 										href="/hackathons/signoz/blog-guide"
 										className="text-[#ffd778] underline hover:text-[#ea6e4a]"
 									>
 										blog guide
 									</Link>{" "}
-									first.
+									in the meantime.
 								</p>
 							</div>
 						</div>
-						<Link
-							href={DATA.blogSubmissionUrl || "#"}
-							target="_blank"
-							rel="noopener noreferrer"
-							className="shrink-0 inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl bg-gradient-to-r from-[#ffcd56] to-[#d5aa45] hover:opacity-90 transition-opacity text-[#16181d] font-bold shadow-md"
-						>
-							Submit Your Project
-							<ArrowUpRight className="w-5 h-5" />
-						</Link>
+						<span className="shrink-0 inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl border border-[#ffcd56]/40 bg-[#ffcd56]/10 text-[#ffcd56] font-bold">
+							Form updated soon
+						</span>
 					</div>
 
 					{/* Disclaimer */}
