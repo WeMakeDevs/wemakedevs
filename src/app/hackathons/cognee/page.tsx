@@ -10,6 +10,7 @@ import Integrations from "./components/Integrations";
 import MemoryApi from "./components/MemoryApi";
 import PrizesShowcase from "./components/PrizesShowcase";
 import ProblemSolution from "./components/ProblemSolution";
+import CogneeTestimonials from "./components/Testimonials";
 import Tracks from "./components/Tracks";
 import { DATA, faqs, navLinks } from "./data";
 import { images } from "./images";
@@ -227,6 +228,11 @@ const HackathonPage = () => {
 			{/* ── Ecosystem Integrations ────────────────────────────────────────── */}
 			<div className="bg-[#f7ead0] desert-grid">
 				<Integrations />
+			</div>
+
+			{/* ── Participant Testimonials ──────────────────────────────────────── */}
+			<div className="bg-[#f1dcb4]/60">
+				<CogneeTestimonials />
 			</div>
 
 			{/* ── Judging Criteria ──────────────────────────────────────────────── */}
