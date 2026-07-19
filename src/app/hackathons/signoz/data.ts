@@ -95,21 +95,12 @@ const faqs: FaqType[] = [
 		answer: "Anywhere you like. Use your own platform or any publishing site, Substack, LinkedIn, dev.to, Medium, Hashnode, and so on. Just make sure the blog is public and drop the link in the submission form.",
 	},
 	{
-		question: "What can I win?",
-		answer: "$20,000 in prizes across three tracks. Win the AI & Agent Observability track and every team member gets a MacBook Air, win Signals & Dashboards and each member gets an iPad Air, and win Build Your Own and each member gets an iPhone Air. Top winners also get job interviews at SigNoz. The top 20 PRs earn $100 each, the best blogs win your choice of AirPods Pro 3 or Beats Powerbeats Pro 2, and the top 10 social posts get exclusive swag shipped to them.",
-	},
-
-	{
 		question: "Where can I get help during the hackathon?",
 		answer: "Join the <a href='https://join.slack.com/t/signoz-community/shared_invite/zt-43qik5rno-imADzii3sqNzFab7wig0LQ' target='_blank' rel='noopener noreferrer' class='text-amber-300 underline hover:text-amber-200'>SigNoz Slack</a> for technical support and community discussion. You can also reach WeMakeDevs at <a href='mailto:contact@wemakedevs.org' class='text-amber-300 underline hover:text-amber-200'>contact@wemakedevs.org</a>.",
 	},
 	{
 		question: "Do the job interviews guarantee a job?",
 		answer: "No. Interview opportunities at SigNoz do not guarantee a position, but they're a genuine chance to showcase your skills directly to the team building the open-source observability platform.",
-	},
-	{
-		question: "What are the judging criteria?",
-		answer: "Projects are evaluated on Potential Impact, Creativity & Innovation, Technical Excellence, Best Use of SigNoz, User Experience, and Presentation Quality. The deeper you lean on SigNoz, the better.",
 	},
 ];
 
