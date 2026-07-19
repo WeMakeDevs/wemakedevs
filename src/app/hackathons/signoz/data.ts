@@ -88,11 +88,7 @@ const faqs: FaqType[] = [
 	},
 	{
 		question: "How do I submit my project?",
-		answer: "Submissions are via blogs this time. Each team writes a blog about their project, what you built, what you learnt, and how you used SigNoz, the more detailed the better, then submits it through the <a href='https://forms.gle/wf9tFYcksrk6P4Zy8' target='_blank' rel='noopener noreferrer' class='text-amber-300 underline hover:text-amber-200'>blog submission form</a> before the deadline.",
-	},
-	{
-		question: "Where should I write and publish my blog?",
-		answer: "Anywhere you like. Use your own platform or any publishing site, Substack, LinkedIn, dev.to, Medium, Hashnode, and so on. Just make sure the blog is public and drop the link in the submission form.",
+		answer: "The project submission form will be updated soon. For now, just focus on building your project across any of the three tracks, full submission details will be shared here shortly.",
 	},
 	{
 		question: "Where can I get help during the hackathon?",
@@ -264,12 +260,8 @@ const schedule = [
 			{
 				title: "Final Submissions Due",
 				description:
-					"Submit your project as a blog before the deadline. Write about what you built, what you learnt, and how you used SigNoz, the more detailed the better. The agency does not accept late field reports.",
+					"Submit your project before the deadline. The submission form will be updated soon with everything you need to include. The agency does not accept late field reports.",
 				time: "2026-07-26T23:59:00Z",
-				link: {
-					name: "Submit Your Blog",
-					url: "https://forms.gle/wf9tFYcksrk6P4Zy8",
-				},
 			},
 		],
 	},

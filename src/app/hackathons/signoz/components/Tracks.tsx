@@ -178,51 +178,14 @@ const Tracks = () => {
 								<p className="text-[#c0c1c3] leading-relaxed">
 									The project submission form will be updated
 									soon. For now, just start building across any
-									of the three tracks. Not sure how to present
-									your work? Read the{" "}
-									<Link
-										href="/hackathons/signoz/blog-guide"
-										className="text-[#ffd778] underline hover:text-[#ea6e4a]"
-									>
-										blog guide
-									</Link>{" "}
-									in the meantime.
+									of the three tracks, more details on how to
+									submit will be shared here shortly.
 								</p>
 							</div>
 						</div>
 						<span className="shrink-0 inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl border border-[#ffcd56]/40 bg-[#ffcd56]/10 text-[#ffcd56] font-bold">
 							Form updated soon
 						</span>
-					</div>
-
-					{/* Disclaimer */}
-					<div className="mt-6 pt-6 border-t border-[#ffcd56]/20 text-[#c0c1c3] leading-relaxed text-sm">
-						<p>
-							<span className="text-[#ffcd56] font-semibold">
-								A kind note on the write-up:
-							</span>{" "}
-							Publish your blog on a proper blogging platform,{" "}
-							<span className="text-[#ffcd56] font-semibold">
-								Medium
-							</span>
-							,{" "}
-							<span className="text-[#ffcd56] font-semibold">
-								Dev.to
-							</span>
-							, or{" "}
-							<span className="text-[#ffcd56] font-semibold">
-								Substack
-							</span>{" "}
-							are all great choices. A{" "}
-							<span className="text-[#f5f5f5] font-semibold">
-								LinkedIn social post is not a blog
-							</span>
-							, so please don&apos;t submit one. Put genuine effort
-							into it. AI slop and rushed, low-effort blogs will not
-							win any prizes. We want to hear about your real
-							experience, what you built, what broke, and what you
-							learned along the way.
-						</p>
 					</div>
 				</motion.div>
 

@@ -83,31 +83,10 @@ const HackathonRules = async () => {
 							<strong className="text-[#ea6e4a]">
 								How to submit:
 							</strong>{" "}
-							The project submission form will be updated soon,
-							so just focus on building for now. Once it&apos;s
-							live, everything you need to include will be listed
-							in the form. As part of your submission you will
-							write a blog about your project on a proper blogging
-							platform,{" "}
-							<strong className="text-[#ffd778]">Medium</strong>,{" "}
-							<strong className="text-[#ffd778]">Dev.to</strong>, or{" "}
-							<strong className="text-[#ffd778]">Substack</strong>{" "}
-							are all great choices. A{" "}
-							<strong className="text-[#ea6e4a]">
-								LinkedIn social post is not a blog
-							</strong>
-							, so please don&apos;t submit one. Please put genuine
-							effort into it. AI slop and rushed, low-effort blogs
-							will not win any prizes; we want to hear about your
-							real experience. Need help?
-							Read the{" "}
-							<Link
-								href="/hackathons/signoz/blog-guide"
-								className="text-[#ffd778] hover:text-[#ea6e4a] underline"
-							>
-								blog guide
-							</Link>
-							.
+							The project submission form will be updated soon, so
+							just focus on building for now. Once it&apos;s live,
+							everything you need to include will be listed in the
+							form and shared here.
 						</li>
 						<li>
 							Use of AI assistants (ChatGPT, Copilot, etc.) is
