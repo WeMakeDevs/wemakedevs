@@ -40,6 +40,47 @@ const HackathonPage = () => {
 				</ViewContainer>
 			</div>
 
+			{/* Featured sponsor testimonial */}
+			<div className="pt-16 md:pt-20">
+				<div className="max-w-4xl mx-auto px-4 md:px-8">
+					<h2 className="text-2xl md:text-3xl font-bold gold-shimmer-text mb-8 text-center">
+						From Our Sponsor
+					</h2>
+					<figure className="parchment-bg rounded-2xl border border-[#d4af37]/15 p-6 md:p-10">
+						<blockquote className="text-[#93a1a1] text-base md:text-lg leading-relaxed">
+							&ldquo;Sponsoring a hackathon with WeMakeDevs has been
+							one of our most successful GTM initiatives to date.
+							Kunal delivered exactly what he promised, and then
+							some. We didn&apos;t just get passive sign-ups; we saw
+							genuine, high-quality engineering engagement. With
+							over 5,000 participants diving into our ecosystem, the
+							hackathon drove a massive spike in our GitHub stars and
+							resulted in 270 merged PRs, meaning real,
+							production-ready features are now part of our platform.
+							Beyond the code, the true value was in the community
+							building. Seeing actual people interacting daily with
+							our maintainers and truly becoming a part of our
+							ecosystem was incredible.&rdquo;
+						</blockquote>
+						<figcaption className="mt-6 flex items-center gap-4">
+							<Image
+								src={images.james}
+								alt="James Summerfield"
+								className="w-14 h-14 rounded-full object-cover border border-[#d4af37]/30"
+							/>
+							<div>
+								<p className="text-[#fdf6e3] font-semibold">
+									James Summerfield
+								</p>
+								<p className="text-[#586e75] text-sm">
+									Co-founder &amp; CTO, Coral
+								</p>
+							</div>
+						</figcaption>
+					</figure>
+				</div>
+			</div>
+
 			<WaveDivider />
 
 			{/* Stats & Testimonials */}

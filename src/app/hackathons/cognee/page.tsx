@@ -76,6 +76,11 @@ const HackathonPage = () => {
 				</ViewContainer>
 			</div>
 
+			{/* ── Participant Testimonials ──────────────────────────────────────── */}
+			<div className="bg-[#f7ead0]">
+				<CogneeTestimonials />
+			</div>
+
 			{/* ── Prizes ────────────────────────────────────────────────────────── */}
 			<div id="prizes" className="scroll-mt-44 bg-[#f1dcb4]/60">
 				<PrizesShowcase />
@@ -228,11 +233,6 @@ const HackathonPage = () => {
 			{/* ── Ecosystem Integrations ────────────────────────────────────────── */}
 			<div className="bg-[#f7ead0] desert-grid">
 				<Integrations />
-			</div>
-
-			{/* ── Participant Testimonials ──────────────────────────────────────── */}
-			<div className="bg-[#f1dcb4]/60">
-				<CogneeTestimonials />
 			</div>
 
 			{/* ── Judging Criteria ──────────────────────────────────────────────── */}
