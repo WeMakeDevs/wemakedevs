@@ -20,8 +20,7 @@ const DATA = {
 	submissionFormUrl: "",
 	blogSubmissionUrl: "https://forms.gle/wf9tFYcksrk6P4Zy8",
 	blogWinnersDate: "July 19, 2026",
-	slackUrl:
-		"https://join.slack.com/t/signoz-community/shared_invite/zt-43qik5rno-imADzii3sqNzFab7wig0LQ",
+	slackUrl: "http://signoz.io/slack",
 	githubUrl: "https://github.com/SigNoz/signoz",
 };
 
@@ -60,7 +59,7 @@ const faqs: FaqType[] = [
 	},
 	{
 		question: "Do I need prior experience with SigNoz?",
-		answer: "Nope. SigNoz is open source and well documented. Start with the <a href='https://signoz.io/docs/introduction/' target='_blank' rel='noopener noreferrer' class='text-amber-300 underline hover:text-amber-200'>introduction</a>, read the <a href='https://signoz.io/docs/' target='_blank' rel='noopener noreferrer' class='text-amber-300 underline hover:text-amber-200'>docs</a>, and join the <a href='https://join.slack.com/t/signoz-community/shared_invite/zt-43qik5rno-imADzii3sqNzFab7wig0LQ' target='_blank' rel='noopener noreferrer' class='text-amber-300 underline hover:text-amber-200'>SigNoz Slack</a> for help. You'll have traces, metrics, and logs flowing in minutes.",
+		answer: "Nope. SigNoz is open source and well documented. Start with the <a href='https://signoz.io/docs/introduction/' target='_blank' rel='noopener noreferrer' class='text-amber-300 underline hover:text-amber-200'>introduction</a>, read the <a href='https://signoz.io/docs/' target='_blank' rel='noopener noreferrer' class='text-amber-300 underline hover:text-amber-200'>docs</a>, and join the <a href='http://signoz.io/slack' target='_blank' rel='noopener noreferrer' class='text-amber-300 underline hover:text-amber-200'>SigNoz Slack</a> for help. You'll have traces, metrics, and logs flowing in minutes.",
 	},
 	{
 		question: "Is the theme really open-ended?",
@@ -92,7 +91,7 @@ const faqs: FaqType[] = [
 	},
 	{
 		question: "Where can I get help during the hackathon?",
-		answer: "Join the <a href='https://join.slack.com/t/signoz-community/shared_invite/zt-43qik5rno-imADzii3sqNzFab7wig0LQ' target='_blank' rel='noopener noreferrer' class='text-amber-300 underline hover:text-amber-200'>SigNoz Slack</a> for technical support and community discussion. You can also reach WeMakeDevs at <a href='mailto:contact@wemakedevs.org' class='text-amber-300 underline hover:text-amber-200'>contact@wemakedevs.org</a>.",
+		answer: "Join the <a href='http://signoz.io/slack' target='_blank' rel='noopener noreferrer' class='text-amber-300 underline hover:text-amber-200'>SigNoz Slack</a> for technical support and community discussion. You can also reach WeMakeDevs at <a href='mailto:contact@wemakedevs.org' class='text-amber-300 underline hover:text-amber-200'>contact@wemakedevs.org</a>.",
 	},
 	{
 		question: "Do the job interviews guarantee a job?",
@@ -217,27 +216,6 @@ const schedule = [
 					{
 						platform: "youtube",
 						url: "https://youtube.com/live/rr9YHSV5bj0",
-					},
-				],
-			},
-		],
-	},
-	{
-		date: "2026-07-22T00:00:00Z",
-		items: [
-			{
-				title: "AI Agent Observability using SigNoz",
-				description:
-					"Hands-on labs instrumenting AI agents and LLM apps with OpenTelemetry and SigNoz.",
-				time: "2026-07-22T19:30:00+05:30",
-				links: [
-					{
-						platform: "linkedin",
-						url: "https://www.linkedin.com/events/7484158060647706624",
-					},
-					{
-						platform: "youtube",
-						url: "https://www.youtube.com/live/cLrTsNRAwGk",
 					},
 				],
 			},
