@@ -43,6 +43,7 @@ export const sponsorTestimonials: SponsorTestimonialItem[] = [
 		company: "Co-founder & CTO, Coral",
 		logo: coralImages.coralLogo,
 		authorImage: coralImages.james,
+		logoClassName: "h-10 bg-[#0b1220] rounded-md px-2.5 py-1.5",
 	},
 	// Cline - Juan Pa (AssembleHack)
 	{
