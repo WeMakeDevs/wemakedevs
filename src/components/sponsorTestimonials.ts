@@ -7,6 +7,7 @@ import {
 	juanPa,
 	zain,
 } from "@/app/hackathons/assemblehack25/images/testimonials";
+import { images as coralImages } from "@/app/hackathons/coral/images";
 import { images as futurestackImages } from "@/app/hackathons/futurestack25/images";
 import { images as lingohackImages } from "@/app/hackathons/lingohack25/images";
 import { sumit } from "@/app/hackathons/lingohack25/images/testimonials";
@@ -32,6 +33,17 @@ export interface SponsorTestimonialItem {
 }
 
 export const sponsorTestimonials: SponsorTestimonialItem[] = [
+	// Coral - James Summerfield (Pirates of the Coral-Bean)
+	{
+		quote:
+			"Sponsoring a hackathon with WeMakeDevs has been one of our most successful GTM initiatives to date. Kunal delivered exactly what he promised, and then some. We didn't just get passive sign-ups; we saw genuine, high-quality engineering engagement. With over 5,000 participants diving into our ecosystem, the hackathon drove a massive spike in our GitHub stars and resulted in 270 merged PRs, meaning real, production-ready features are now part of our platform. Beyond the code, the true value was in the community building. Seeing actual people interacting daily with our maintainers and truly becoming a part of our ecosystem was incredible.",
+		summary:
+			"5,000+ participants, a spike in GitHub stars, and 270 merged PRs, real production-ready features shipped to our platform. One of our most successful GTM initiatives to date.",
+		author: "James Summerfield",
+		company: "Co-founder & CTO, Coral",
+		logo: coralImages.coralLogo,
+		authorImage: coralImages.james,
+	},
 	// Cline - Juan Pa (AssembleHack)
 	{
 		quote:
