@@ -9,6 +9,14 @@ const nextConfig = {
 	async rewrites() {
 		return [
 			{
+				source: "/",
+				destination: "https://wmd.frontend.vercel.app/",
+			},
+			{
+				source: "/founder",
+				destination: "https://wmd.frontend.vercel.app/founder",
+			},
+			{
 				source: "/aws",
 				destination: "/hackathons/aws",
 			},
