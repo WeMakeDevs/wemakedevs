@@ -19,6 +19,10 @@ const nextConfig = {
 					source: "/founder",
 					destination: "https://wmd-frontend.vercel.app/founder",
 				},
+				{
+					source: "/llms.txt",
+					destination: "https://wmd-frontend.vercel.app/llms.txt",
+				},
 			],
 			afterFiles: [
 				{
