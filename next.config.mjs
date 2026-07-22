@@ -7,24 +7,30 @@ const nextConfig = {
 	// Keep the short /aws URL (and its subpages like /aws/rules) pointing at the
 	// AWS Next Gen Hacks hackathon route
 	async rewrites() {
-		return [
-			{
-				source: "/",
-				destination: "https://wmd.frontend.vercel.app/",
-			},
-			{
-				source: "/founder",
-				destination: "https://wmd.frontend.vercel.app/founder",
-			},
-			{
-				source: "/aws",
-				destination: "/hackathons/aws",
-			},
-			{
-				source: "/aws/:path*",
-				destination: "/hackathons/aws/:path*",
-			},
-		];
+		return {
+			// beforeFiles runs before filesystem routes are checked, so these win
+			// even when a local page (like the home page) matches the same path.
+			beforeFiles: [
+				{
+					source: "/",
+					destination: "https://wmd-frontend.vercel.app/",
+				},
+				{
+					source: "/founder",
+					destination: "https://wmd-frontend.vercel.app/founder",
+				},
+			],
+			afterFiles: [
+				{
+					source: "/aws",
+					destination: "/hackathons/aws",
+				},
+				{
+					source: "/aws/:path*",
+					destination: "/hackathons/aws/:path*",
+				},
+			],
+		};
 	},
 	// Optionally, add any other Next.js config below
 };
