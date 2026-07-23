@@ -83,10 +83,17 @@ const HackathonRules = async () => {
 							<strong className="text-[#ea6e4a]">
 								How to submit:
 							</strong>{" "}
-							The project submission form will be updated soon, so
-							just focus on building for now. Once it&apos;s live,
-							everything you need to include will be listed in the
-							form and shared here.
+							Once your project is ready, submit it through the{" "}
+							<Link
+								href={DATA.cta.href}
+								target="_blank"
+								rel="noopener noreferrer"
+								className="text-amber-300 underline hover:text-amber-200"
+							>
+								project submission form
+							</Link>{" "}
+							before the deadline. Everything you need to include
+							is listed in the form.
 						</li>
 						<li>
 							Use of AI assistants (ChatGPT, Copilot, etc.) is

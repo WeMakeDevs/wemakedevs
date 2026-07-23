@@ -12,8 +12,8 @@ const DATA = {
 		"Observe your AI solutions using SigNoz. The agency is recruiting, build agent-native observability with OpenTelemetry.",
 	slug: "signoz",
 	cta: {
-		label: "Register",
-		href: "https://forms.gle/uxaLXAXmtKwz8uYh9",
+		label: "Submit Project",
+		href: "https://forms.gle/xv1TXSiC54MEWujRA",
 		openInNewTab: true,
 		disabled: false,
 	},
@@ -87,7 +87,7 @@ const faqs: FaqType[] = [
 	},
 	{
 		question: "How do I submit my project?",
-		answer: "The project submission form will be updated soon. For now, just focus on building your project across any of the three tracks, full submission details will be shared here shortly.",
+		answer: "The project submission form is now live. Once your project is ready, submit it through the <a href='https://forms.gle/xv1TXSiC54MEWujRA' target='_blank' rel='noopener noreferrer' class='text-amber-300 underline hover:text-amber-200'>submission form</a> before the deadline. Make sure to include your demo, README, and any required details.",
 	},
 	{
 		question: "Where can I get help during the hackathon?",
@@ -238,7 +238,7 @@ const schedule = [
 			{
 				title: "Final Submissions Due",
 				description:
-					"Submit your project before the deadline. The submission form will be updated soon with everything you need to include. The agency does not accept late field reports.",
+					"Submit your project before the deadline through the submission form, including everything required. The agency does not accept late field reports.",
 				time: "2026-07-26T23:59:00Z",
 			},
 		],
