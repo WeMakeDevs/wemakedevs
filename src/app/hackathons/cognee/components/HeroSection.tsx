@@ -2,7 +2,7 @@
 
 import { ViewContainer } from "@/components/ui/view-container";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { ArrowUpRight, BrainCircuit } from "lucide-react";
+import { ArrowUpRight, BrainCircuit, Trophy } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useRef } from "react";
@@ -238,45 +238,51 @@ const HeroSection = ({
 					animate={{ opacity: 1, scale: 1 }}
 					transition={{ duration: 0.5, delay: 1 }}
 				>
-					{cta.disabled ? (
-						<div className="vegas-btn opacity-60 cursor-not-allowed pointer-events-none">
-							<BrainCircuit className="w-5 h-5" />
-							{cta.label}
-						</div>
-					) : (
+					{submissionsClosed ? (
 						<Link
-							href={cta.href}
-							target={cta.openInNewTab ? "_blank" : undefined}
-							rel={
-								cta.openInNewTab
-									? "noopener noreferrer"
-									: undefined
-							}
+							href="/hackathons/cognee/projects"
 							className="vegas-btn"
 						>
-							<BrainCircuit className="w-5 h-5" />
-							{cta.label}
+							<Trophy className="w-5 h-5" />
+							View Winners &amp; Projects
 						</Link>
+					) : (
+						<>
+							{cta.disabled ? (
+								<div className="vegas-btn opacity-60 cursor-not-allowed pointer-events-none">
+									<BrainCircuit className="w-5 h-5" />
+									{cta.label}
+								</div>
+							) : (
+								<Link
+									href={cta.href}
+									target={
+										cta.openInNewTab ? "_blank" : undefined
+									}
+									rel={
+										cta.openInNewTab
+											? "noopener noreferrer"
+											: undefined
+									}
+									className="vegas-btn"
+								>
+									<BrainCircuit className="w-5 h-5" />
+									{cta.label}
+								</Link>
+							)}
+							{submissionFormUrl && (
+								<Link
+									href={submissionFormUrl}
+									target="_blank"
+									rel="noopener noreferrer"
+									className="inline-flex items-center gap-2 px-6 py-3 rounded-xl border-2 border-[#c33124]/50 text-[#c33124] font-bold hover:bg-[#c33124]/10 transition-all duration-300 text-base"
+								>
+									Submit Project
+									<ArrowUpRight className="w-5 h-5" />
+								</Link>
+							)}
+						</>
 					)}
-					{submissionFormUrl &&
-						(submissionsClosed ? (
-							<div
-								aria-disabled="true"
-								className="inline-flex items-center gap-2 px-6 py-3 rounded-xl border-2 border-[#c33124]/30 text-[#c33124]/60 font-bold cursor-not-allowed opacity-60 pointer-events-none text-base"
-							>
-								Submissions Closed
-							</div>
-						) : (
-							<Link
-								href={submissionFormUrl}
-								target="_blank"
-								rel="noopener noreferrer"
-								className="inline-flex items-center gap-2 px-6 py-3 rounded-xl border-2 border-[#c33124]/50 text-[#c33124] font-bold hover:bg-[#c33124]/10 transition-all duration-300 text-base"
-							>
-								Submit Project
-								<ArrowUpRight className="w-5 h-5" />
-							</Link>
-						))}
 					<Dice className="w-20 h-auto hidden sm:block drop-shadow-[0_6px_12px_rgba(120,80,30,0.25)]" />
 				</motion.div>
 

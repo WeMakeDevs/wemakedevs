@@ -85,22 +85,23 @@ export default function RootLayout({
 						<div>
 							<h3 className="text-2xl md:text-3xl font-black italic uppercase text-white">
 								{DATA.submissionsClosed
-									? "Submissions Are Closed"
+									? "The Winners Are In"
 									: "Submit Your Projects Now"}
 							</h3>
 							<p className="text-[#ffe6c7] font-medium mt-1">
 								{DATA.submissionsClosed
-									? "The submission deadline has passed. Thanks to everyone who took part!"
+									? "The hackathon has wrapped. Explore the winning builds, top projects, PRs, and blog."
 									: "Built something unforgettable? Send it in before the deadline."}
 							</p>
 						</div>
 						{DATA.submissionsClosed ? (
-							<div
-								aria-disabled="true"
-								className="shrink-0 inline-flex items-center gap-2 px-7 py-3.5 rounded-xl bg-[#fffdf6]/60 text-[#c33124]/70 font-black text-lg cursor-not-allowed opacity-75 shadow-lg border-2 border-[#f6c453]"
+							<Link
+								href={`/hackathons/${DATA.slug}/projects`}
+								className="shrink-0 inline-flex items-center gap-2 px-7 py-3.5 rounded-xl bg-[#fffdf6] text-[#c33124] font-black text-lg hover:bg-[#fff1d6] transition-colors shadow-lg border-2 border-[#f6c453]"
 							>
-								Submissions Closed
-							</div>
+								View Winners &amp; Projects
+								<ArrowUpRight className="w-5 h-5" />
+							</Link>
 						) : (
 							<Link
 								href={DATA.submissionFormUrl}
