@@ -11,7 +11,7 @@ import Link from "next/link";
 const tabs = [
 	{
 		key: "top",
-		label: "Top 18",
+		label: "Special Highlights",
 		href: "/hackathons/cognee/projects/top",
 		icon: Trophy,
 		activeColor: "border-[#c33124] text-[#c33124] bg-[#c33124]/10",
@@ -32,7 +32,7 @@ const tabs = [
 	},
 	{
 		key: "all",
-		label: "All Projects",
+		label: "Top Projects",
 		href: "/hackathons/cognee/projects/all",
 		icon: Layers,
 		activeColor: "border-[#e0762a] text-[#cf5f1c] bg-[#e0762a]/10",

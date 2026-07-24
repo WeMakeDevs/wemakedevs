@@ -10,12 +10,7 @@ import {
 	Youtube,
 } from "lucide-react";
 import Link from "next/link";
-import {
-	blogWinner,
-	prWinners,
-	submittedProjects,
-	trackWinners,
-} from "../projects";
+import { blogWinner, prWinners, trackWinners } from "../projects";
 import ProjectsShell from "./ProjectsShell";
 
 const isUrl = (v: string) => /^https?:\/\//i.test(v.trim());
@@ -55,7 +50,7 @@ const trackAccent: Record<
 const filters = [
 	{
 		key: "top",
-		title: "Top 18 Projects",
+		title: "Special Highlights",
 		description:
 			"The eighteen standout builds the judges loved, right behind the grand winners.",
 		href: "/hackathons/cognee/projects/top",
@@ -77,8 +72,9 @@ const filters = [
 	},
 	{
 		key: "all",
-		title: "All Projects",
-		description: `Every one of the ${submittedProjects.length} builds submitted during the hackathon.`,
+		title: "Top Projects",
+		description:
+			"Top 500+ builds submitted during the hackathon, all in one place.",
 		href: "/hackathons/cognee/projects/all",
 		icon: Layers,
 		iconColor: "text-[#cf5f1c]",

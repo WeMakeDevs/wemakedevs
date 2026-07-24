@@ -57,7 +57,7 @@ export const TopProjectsSection = () => (
 		<div className="flex items-center gap-3 mb-2 flex-wrap">
 			<Trophy className="w-6 h-6 text-[#c33124]" />
 			<h2 className="text-2xl md:text-3xl font-black italic uppercase text-[#c33124]">
-				Top 18 Projects
+				Special Highlights
 			</h2>
 			<span className="inline-flex items-center justify-center text-xs font-mono font-semibold bg-[#c33124]/10 border border-[#c33124]/30 text-[#c33124] rounded-full px-3 py-1">
 				Judges&apos; picks
@@ -132,15 +132,15 @@ export const AllProjectsSection = () => (
 	<>
 		<div className="flex items-center gap-3 mb-2 flex-wrap">
 			<h2 className="text-2xl md:text-3xl font-black italic uppercase text-[#c33124]">
-				All Projects
+				Top Projects
 			</h2>
 			<span className="inline-flex items-center justify-center text-xs font-mono font-semibold bg-[#c33124]/10 border border-[#c33124]/30 text-[#c33124] rounded-full px-3 py-1">
-				{submittedProjects.length} builds
+				500+ builds
 			</span>
 		</div>
 		<p className="text-[#6b513a] text-sm md:text-base mb-6">
-			Every project shipped during The Hangover Part AI hackathon. Browse
-			the full crew and their memory-powered builds.
+			Top 500+ projects shipped during The Hangover Part AI hackathon.
+			Browse the full crew and their memory-powered builds.
 		</p>
 		<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
 			{submittedProjects.map(project => {

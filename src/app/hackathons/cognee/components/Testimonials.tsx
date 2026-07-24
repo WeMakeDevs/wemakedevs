@@ -24,6 +24,27 @@ const CogneeTestimonials = () => {
 					</h2>
 				</div>
 
+				{/* ── By the numbers ── */}
+				<div className="grid grid-cols-1 sm:grid-cols-3 gap-5 max-w-4xl mx-auto mb-14">
+					{[
+						{ value: "8,500", label: "Participants" },
+						{ value: "30+", label: "Countries" },
+						{ value: "1,200+", label: "Projects" },
+					].map(stat => (
+						<div
+							key={stat.label}
+							className="paper-card rounded-2xl px-6 py-7 text-center"
+						>
+							<div className="text-4xl md:text-5xl font-black text-[#c33124] glow-red">
+								{stat.value}
+							</div>
+							<div className="mt-2 text-xs md:text-sm uppercase tracking-[0.18em] font-bold text-[#6b513a]">
+								{stat.label}
+							</div>
+						</div>
+					))}
+				</div>
+
 				<Carousel
 					className="overflow-clip md:overflow-visible"
 					opts={{ align: "start", loop: true }}
