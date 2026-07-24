@@ -29,6 +29,11 @@ const navLinks = [
 		page: "overview",
 	},
 	{
+		href: "/hackathons/cognee/projects",
+		label: "Winners & Projects",
+		page: "projects",
+	},
+	{
 		href: "/hackathons/cognee/rules",
 		label: "Rules",
 		page: "rules",
