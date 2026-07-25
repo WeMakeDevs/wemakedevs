@@ -23,6 +23,10 @@ const nextConfig = {
 					source: "/llms.txt",
 					destination: "https://wmd-frontend.vercel.app/llms.txt",
 				},
+				{
+					source: "/aws",
+					destination: "https://wmd-frontend.vercel.app/aws",
+				},
 			],
 			afterFiles: [
 				{
