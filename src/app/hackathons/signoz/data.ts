@@ -239,7 +239,7 @@ const schedule = [
 				title: "Final Submissions Due",
 				description:
 					"Submit your project before the deadline through the submission form, including everything required. The agency does not accept late field reports.",
-				time: "2026-07-26T23:59:00Z",
+				time: "2026-07-26T23:59:00+05:30",
 			},
 		],
 	},
