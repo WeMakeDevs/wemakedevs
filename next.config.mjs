@@ -27,6 +27,19 @@ const nextConfig = {
 					source: "/aws",
 					destination: "https://wmd-frontend.vercel.app/aws",
 				},
+				{
+					source: "/blogs",
+					destination: "https://wmd-frontend.vercel.app/blogs",
+				},
+				// Catches every blog subpath: individual posts (/blogs/:slug),
+				// the feed (/blogs/rss.xml) and the per-post metadata images
+				// Next generates (/blogs/:slug/opengraph-image,
+				// /blogs/:slug/twitter-image). Query strings — the cache-busting
+				// hash Next appends to those image URLs — are forwarded as-is.
+				{
+					source: "/blogs/:path*",
+					destination: "https://wmd-frontend.vercel.app/blogs/:path*",
+				},
 			],
 			afterFiles: [
 				{
