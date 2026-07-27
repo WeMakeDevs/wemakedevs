@@ -133,6 +133,7 @@ const speakers: Speaker[] = [
 		org: "SigNoz",
 		photo: aayush,
 		talk: "Observe Your AI Agents with SigNoz",
+		link: "https://www.linkedin.com/in/superaayush/",
 	},
 	{
 		name: "Goutham Karthi",
