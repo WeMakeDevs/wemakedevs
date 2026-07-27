@@ -79,43 +79,6 @@ export default function RootLayout({
 				<HackathonNavbar customNavLinks={hackathonNavLinks} />
 				{children}
 
-				{/* ── Submit your projects banner ── */}
-				<div className="bg-gradient-to-r from-[#e23b2d] to-[#c33124] border-y-2 border-[#f6c453]">
-					<div className="max-w-5xl mx-auto px-6 py-8 flex flex-col md:flex-row items-center justify-between gap-5 text-center md:text-left">
-						<div>
-							<h3 className="text-2xl md:text-3xl font-black italic uppercase text-white">
-								{DATA.submissionsClosed
-									? "The Winners Are In"
-									: "Submit Your Projects Now"}
-							</h3>
-							<p className="text-[#ffe6c7] font-medium mt-1">
-								{DATA.submissionsClosed
-									? "The hackathon has wrapped. Explore the winning builds, top projects, PRs, and blog."
-									: "Built something unforgettable? Send it in before the deadline."}
-							</p>
-						</div>
-						{DATA.submissionsClosed ? (
-							<Link
-								href={`/hackathons/${DATA.slug}/projects`}
-								className="shrink-0 inline-flex items-center gap-2 px-7 py-3.5 rounded-xl bg-[#fffdf6] text-[#c33124] font-black text-lg hover:bg-[#fff1d6] transition-colors shadow-lg border-2 border-[#f6c453]"
-							>
-								View Winners &amp; Projects
-								<ArrowUpRight className="w-5 h-5" />
-							</Link>
-						) : (
-							<Link
-								href={DATA.submissionFormUrl}
-								target="_blank"
-								rel="noopener noreferrer"
-								className="shrink-0 inline-flex items-center gap-2 px-7 py-3.5 rounded-xl bg-[#fffdf6] text-[#c33124] font-black text-lg hover:bg-[#fff1d6] transition-colors shadow-lg border-2 border-[#f6c453]"
-							>
-								Submit Project
-								<ArrowUpRight className="w-5 h-5" />
-							</Link>
-						)}
-					</div>
-				</div>
-
 				<div className="border-t border-[#b07d12]/20 bg-[#f1dcb4]/50">
 					<div className="max-w-4xl mx-auto px-6 py-6 text-center">
 						<p className="text-xs leading-relaxed text-[#7c6244]">
