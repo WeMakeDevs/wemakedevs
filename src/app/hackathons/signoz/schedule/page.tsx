@@ -1,6 +1,6 @@
 import { HackathonNav } from "@/components/hackathon-content";
 import { ViewContainer } from "@/components/ui/view-container";
-import Agenda from "../components/Agenda";
+import Schedule from "../components/Schedule";
 import { DATA, navLinks } from "../data";
 
 const HackathonSchedule = async () => {
@@ -17,7 +17,7 @@ const HackathonSchedule = async () => {
 					</div>
 				</ViewContainer>
 			</div>
-			<Agenda />
+			<Schedule />
 		</div>
 	);
 };

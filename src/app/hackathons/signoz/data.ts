@@ -2,7 +2,6 @@ import type { FaqType } from "@/types";
 import type { StaticImageData } from "next/image";
 import aayush from "./images/speakers/aayush.jpg";
 import adarsh from "./images/speakers/adarsh.jpg";
-import ankit from "./images/speakers/ankit.jpg";
 import goutham from "./images/speakers/goutham.jpg";
 import kunal from "./images/speakers/kunal.jpg";
 import pranay from "./images/speakers/pranay.jpg";
@@ -13,16 +12,16 @@ const DATA = {
 	titleCard: "Agents of SigNoz Edition 2",
 	greeting: "Hello San Francisco",
 	tagline: "AI Observability Conference",
-	// Doors 08:30 PT → drinks until 19:30 PT on Aug 29, 2026 (UTC-7)
+	// Doors 08:30 PT, close 19:30 PT on Aug 29, 2026 (UTC-7)
 	startDate: "2026-08-29T15:30:00Z",
 	endDate: "2026-08-30T02:30:00Z",
 	description:
-		"A single day on the hard part of shipping AI: seeing inside it. Traces, metrics, logs and token cost for agents, LLM apps and the infrastructure underneath, in one room with the people running it in production.",
+		"The industry learned to build with AI far faster than it learned to operate it. This conference is where it gets opened, by the engineers instrumenting agents, LLM apps and the infrastructure beneath them.",
 	descriptionCard:
 		"One day, one room, one problem. The AI Observability Conference by WeMakeDevs, sponsored by SigNoz and Bright Data.",
 	slug: "signoz",
 	cta: {
-		label: "Register Now",
+		label: "Apply Now",
 		href: "#register",
 		openInNewTab: false,
 		disabled: false,
@@ -46,14 +45,10 @@ const venue = {
 	shortAddress: "625 2nd St, San Francisco",
 	dateLabel: "Saturday, August 29, 2026",
 	dateShort: "Aug 29, 2026",
-	lat: "37.7816889",
-	lng: "-122.3908867",
-	get mapEmbedUrl() {
-		return `https://maps.google.com/maps?q=${this.lat},${this.lng}&z=16&output=embed`;
-	},
-	get directionsUrl() {
-		return `https://www.google.com/maps/search/?api=1&query=${this.lat}%2C${this.lng}`;
-	},
+	mapEmbedUrl:
+		"https://maps.google.com/maps?q=Bright+Data+625+2nd+St+Suite+101+San+Francisco+CA+94107&z=16&output=embed",
+	/** Bright Data's SF office on Google Maps. */
+	directionsUrl: "https://maps.app.goo.gl/PbDn3UxLUWU4jzSXA",
 	description:
 		"Bright Data's community space for developers and AI builders in San Francisco. One room, one day, everyone shipping.",
 	travel: [
@@ -82,7 +77,7 @@ const venue = {
 		{ title: "Doors", detail: "08:30 registration, 09:15 first session." },
 		{
 			title: "Food",
-			detail: "Breakfast, lunch, snacks and an open bar from 17:30. Dietary needs collected in the form.",
+			detail: "Breakfast, lunch and snacks are provided. Dietary needs are collected in the form.",
 		},
 		{
 			title: "Wifi & power",
@@ -105,7 +100,6 @@ const marqueeTopics = [
 	"Dashboards & SLOs",
 	"Observability Clinic",
 	"Open Source",
-	"300 Engineers",
 ];
 
 type Speaker = {
@@ -123,7 +117,7 @@ const speakers: Speaker[] = [
 		role: "Founder",
 		org: "WeMakeDevs",
 		photo: kunal,
-		talk: "Keynote — The Skills That Survive: Engineering When AI Writes the Code",
+		talk: "Keynote: The Skills That Survive: Engineering When AI Writes the Code",
 		link: "https://www.linkedin.com/in/kunal-kushwaha/",
 	},
 	{
@@ -131,16 +125,8 @@ const speakers: Speaker[] = [
 		role: "Co-founder",
 		org: "SigNoz",
 		photo: pranay,
-		talk: "Keynote — Every Signal in One Place: Observability Built for the AI Era",
+		talk: "Keynote: Every Signal in One Place: Observability Built for the AI Era",
 		link: "https://www.linkedin.com/in/pranay01/",
-	},
-	{
-		name: "Ankit Nayan",
-		role: "Co-founder & CTO",
-		org: "SigNoz",
-		photo: ankit,
-		talk: "Observability clinic",
-		link: "https://www.linkedin.com/in/ankitnayan/",
 	},
 	{
 		name: "Aayush Sharma",
@@ -154,7 +140,7 @@ const speakers: Speaker[] = [
 		role: "Engineering",
 		org: "SigNoz",
 		photo: goutham,
-		talk: "Workshop — Using SigNoz to Debug Your Applications",
+		talk: "Workshop: Using SigNoz to Debug Your Applications",
 		link: "https://www.linkedin.com/in/goutham-karthi-6b0468186/",
 	},
 	{
@@ -167,25 +153,25 @@ const speakers: Speaker[] = [
 	{
 		name: "Adarsh Dubey",
 		role: "Software Developer",
-		org: "WeMakeDevs",
+		org: "Google DeepMind",
 		photo: adarsh,
 		talk: "Shipping AI You Can Actually Debug",
 	},
 ];
 
-type AgendaKind = "main" | "work" | "clinic" | "break";
+type ScheduleKind = "main" | "work" | "clinic" | "break";
 
-type AgendaSlot = {
+type ScheduleSlot = {
 	time: string;
-	kind: AgendaKind;
+	kind: ScheduleKind;
 	format?: string;
 	title: string;
 	who?: string;
 	duration?: string;
 };
 
-/** Saturday, August 29, 2026 — all times Pacific. */
-const agenda: AgendaSlot[] = [
+/** Saturday, August 29, 2026. All times Pacific. */
+const schedule: ScheduleSlot[] = [
 	{
 		time: "08:30",
 		kind: "break",
@@ -218,7 +204,7 @@ const agenda: AgendaSlot[] = [
 		time: "11:05",
 		kind: "main",
 		format: "Open",
-		title: "Lightning talks — five 5-min talks, sign-up sheet at registration",
+		title: "Lightning talks: five 5-min slots, sign-up sheet at registration",
 		who: "Community",
 	},
 	{
@@ -235,7 +221,7 @@ const agenda: AgendaSlot[] = [
 		kind: "work",
 		format: "Workshop",
 		title: "Using SigNoz to Debug Your Applications",
-		who: "Goutham",
+		who: "Goutham Karthi · Engineering, SigNoz",
 		duration: "90 min, laptops out",
 	},
 	{ time: "14:30", kind: "break", title: "Break" },
@@ -252,7 +238,7 @@ const agenda: AgendaSlot[] = [
 		kind: "main",
 		format: "Talk",
 		title: "Shipping AI You Can Actually Debug",
-		who: "Adarsh",
+		who: "Adarsh Dubey · Software Developer, Google DeepMind",
 		duration: "40 min",
 	},
 	{ time: "16:00", kind: "break", title: "Break" },
@@ -260,7 +246,7 @@ const agenda: AgendaSlot[] = [
 		time: "16:15",
 		kind: "clinic",
 		format: "Open",
-		title: "Observability clinic — bring your stack, get it instrumented with the SigNoz team",
+		title: "Observability clinic: bring your stack, get it instrumented with the SigNoz team",
 		who: "All speakers",
 		duration: "50 min",
 	},
@@ -273,11 +259,11 @@ const agenda: AgendaSlot[] = [
 	{
 		time: "17:30",
 		kind: "break",
-		title: "Networking and drinks until 19:30",
+		title: "Networking until 19:30",
 	},
 ];
 
-const agendaLegend: { kind: AgendaKind; label: string }[] = [
+const scheduleLegend: { kind: ScheduleKind; label: string }[] = [
 	{ kind: "main", label: "Main stage" },
 	{ kind: "work", label: "Workshop room" },
 	{ kind: "clinic", label: "Observability clinic" },
@@ -299,7 +285,7 @@ const sponsors = [
 	{
 		tier: "Venue & Host Sponsor",
 		name: "Bright Data",
-		accent: "#5fe9ff",
+		accent: "#9fc0ff",
 		blurb: "Bright Data hosts the conference at The Web Data Loft, their community space for developers and AI builders in SF. The Loft provides the main stage, the workshop room and the space used for the afternoon observability clinic.",
 		links: [
 			{ label: "brightdata.com", href: "https://brightdata.com" },
@@ -350,7 +336,7 @@ const navLinks = [
 	},
 	{
 		href: "/hackathons/signoz/schedule",
-		label: "Agenda",
+		label: "Schedule",
 		page: "schedule",
 	},
 	{
@@ -372,11 +358,11 @@ const faqs: FaqType[] = [
 	},
 	{
 		question: "Is it really free?",
-		answer: "Yes. Entry is free and includes food, drinks and swag. Because capacity at the Loft is capped at 300, you register rather than buy a ticket. There is no paid tier and no upsell.",
+		answer: "Yes. Entry is free and includes food and swag. Seats at the Loft are limited, so you apply for a place rather than buy a ticket. There is no paid tier and no upsell.",
 	},
 	{
-		question: "Registration is full. Can I still come?",
-		answer: "The 300 seats are gone, but drop your name on the waitlist at the bottom of this page. Spots open up as people drop out and we release them in order, so it is genuinely worth joining.",
+		question: "What happens after I apply?",
+		answer: "We read applications in batches and email you either way, so there is nothing to check back on. If the room fills before we reach yours, you stay on the list and we release seats as plans change.",
 	},
 	{
 		question: "Do I need to know SigNoz or OpenTelemetry already?",
@@ -384,7 +370,7 @@ const faqs: FaqType[] = [
 	},
 	{
 		question: "What is the observability clinic?",
-		answer: "An open session at 16:15 where the SigNoz team sits down with whatever you brought — your service, your agent, your pipeline — and helps you get it instrumented. It is entirely optional and you can drop in for as long as you like.",
+		answer: "An open session at 16:15 where the SigNoz team sits down with whatever you brought, whether that is your service, your agent or your pipeline, and helps you get it instrumented. It is entirely optional and you can drop in for as long as you like.",
 	},
 	{
 		question: "What should I bring?",
@@ -415,9 +401,9 @@ export {
 	venue,
 	marqueeTopics,
 	speakers,
-	agenda,
-	agendaLegend,
+	schedule,
+	scheduleLegend,
 	sponsors,
 	previousWebinars,
 };
-export type { Speaker, AgendaSlot, AgendaKind };
+export type { Speaker, ScheduleSlot, ScheduleKind };

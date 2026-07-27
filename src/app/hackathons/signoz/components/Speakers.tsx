@@ -29,7 +29,7 @@ const SpeakerCard = ({ speaker }: { speaker: Speaker }) => (
 				{speaker.name}
 			</span>
 			<span className="text-[13.5px] text-[#8b93a7]">{speaker.role}</span>
-			<span className="text-[13px] font-semibold text-[#2be38b]">
+			<span className="text-[13px] font-semibold text-[#c7ccd6]">
 				{speaker.org}
 			</span>
 			{speaker.talk && (
@@ -46,16 +46,14 @@ const Speakers = () => {
 		<div className="py-20">
 			<ViewContainer>
 				<div className="text-center max-w-2xl mx-auto mb-12">
-					<span className="inline-flex items-center gap-2 rounded-full border border-[#2be38b]/30 bg-[#2be38b]/10 px-5 py-2 text-sm font-semibold text-[#2be38b]">
-						🎤 Featured Speakers
-					</span>
-					<h2 className="mt-6 text-3xl md:text-5xl font-black uppercase text-[#f5f7fa] glow-orange">
+					<span className="sz-eyebrow">Speakers</span>
+					<h2 className="mt-6 text-3xl md:text-5xl font-black uppercase text-[#f5f7fa]">
 						The People on Stage
 					</h2>
 					<p className="mt-4 text-lg text-[#c0c1c3]">
-						Practitioners from SigNoz and WeMakeDevs who run this in
-						production, plus a community lightning-talk track. More
-						names announced closer to the day.
+						Everyone on this list works on the problem daily. Five
+						community lightning-talk slots open at registration, and
+						more names go up as they are confirmed.
 					</p>
 				</div>
 

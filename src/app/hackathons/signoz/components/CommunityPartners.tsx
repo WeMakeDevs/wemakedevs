@@ -43,10 +43,8 @@ const CommunityPartners = () => {
 		<div className="py-20">
 			<ViewContainer>
 				<div className="max-w-2xl mb-12">
-					<span className="inline-flex items-center gap-2 rounded-full border border-[#2be38b]/30 bg-[#2be38b]/10 px-5 py-2 text-sm font-semibold text-[#2be38b]">
-						◆ Community Partners
-					</span>
-					<h2 className="mt-6 text-3xl md:text-5xl font-black uppercase text-[#f5f7fa] glow-orange">
+					<span className="sz-eyebrow">Community partners</span>
+					<h2 className="mt-6 text-3xl md:text-5xl font-black uppercase text-[#f5f7fa]">
 						Communities bringing their people
 					</h2>
 					<p className="mt-4 text-lg text-[#c0c1c3]">
@@ -80,7 +78,7 @@ const CommunityPartners = () => {
 				<div className="mt-8 flex flex-wrap items-center gap-4">
 					<Link
 						href="mailto:contact@wemakedevs.org?subject=Community%20partner%20%E2%80%94%20Agents%20of%20SigNoz%20Edition%202"
-						className="sz-ghost-btn inline-flex items-center gap-2 rounded-xl border border-[#3c4152] px-6 py-3 font-bold text-[#f5f7fa] transition-all hover:border-[#5fe9ff] hover:text-[#5fe9ff]"
+						className="sz-ghost-btn inline-flex items-center gap-2 rounded-xl border border-[#3c4152] px-6 py-3 font-bold text-[#f5f7fa] transition-all hover:border-[#8b93a7] hover:text-[#f5f7fa]"
 					>
 						Become a community partner
 						<Mail className="h-4 w-4" />

@@ -2,18 +2,18 @@ import Faq from "@/components/Faq";
 import { ViewContainer } from "@/components/ui/view-container";
 import { SiSlack } from "@icons-pack/react-simple-icons";
 import Link from "next/link";
-import Agenda from "./components/Agenda";
 import CommunityPartners from "./components/CommunityPartners";
 import ConferenceHero from "./components/ConferenceHero";
 import Marquee from "./components/Marquee";
 import MissionSpotlight from "./components/MissionSpotlight";
 import PreviousWebinars from "./components/PreviousWebinars";
 import ProblemSolution from "./components/ProblemSolution";
+import RegistrationForm from "./components/RegistrationForm";
+import Schedule from "./components/Schedule";
 import Signals from "./components/Signals";
 import Speakers from "./components/Speakers";
 import Sponsors from "./components/Sponsors";
 import Venue from "./components/Venue";
-import WaitlistForm from "./components/WaitlistForm";
 import { DATA, faqs } from "./data";
 
 const ConferencePage = () => {
@@ -37,6 +37,11 @@ const ConferencePage = () => {
 				<ProblemSolution />
 			</div>
 
+			{/* ── Previous edition webinars ─────────────────────────────────────── */}
+			<div id="archives" className="scroll-mt-32">
+				<PreviousWebinars />
+			</div>
+
 			{/* ── Observability signals ─────────────────────────────────────────── */}
 			<div className="agency-grid">
 				<Signals />
@@ -47,9 +52,9 @@ const ConferencePage = () => {
 				<Speakers />
 			</div>
 
-			{/* ── Agenda ────────────────────────────────────────────────────────── */}
-			<div id="agenda" className="scroll-mt-32 agency-grid">
-				<Agenda />
+			{/* ── Schedule ──────────────────────────────────────────────────────── */}
+			<div id="schedule" className="scroll-mt-32 agency-grid">
+				<Schedule />
 			</div>
 
 			{/* ── Venue ─────────────────────────────────────────────────────────── */}
@@ -57,9 +62,9 @@ const ConferencePage = () => {
 				<Venue />
 			</div>
 
-			{/* ── Previous edition webinars ─────────────────────────────────────── */}
-			<div id="archives" className="scroll-mt-32">
-				<PreviousWebinars />
+			{/* ── Apply ─────────────────────────────────────────────────────────── */}
+			<div id="register" className="scroll-mt-32">
+				<RegistrationForm />
 			</div>
 
 			{/* ── Sponsors ──────────────────────────────────────────────────────── */}
@@ -100,11 +105,6 @@ const ConferencePage = () => {
 						</div>
 					</div>
 				</ViewContainer>
-			</div>
-
-			{/* ── Waitlist ──────────────────────────────────────────────────────── */}
-			<div id="register" className="scroll-mt-32">
-				<WaitlistForm />
 			</div>
 		</main>
 	);

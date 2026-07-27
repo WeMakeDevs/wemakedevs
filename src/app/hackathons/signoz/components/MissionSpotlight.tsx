@@ -10,7 +10,7 @@ const takeaways = [
 	"Straight answers on cost and latency from people running this at scale",
 	"A full hands-on workshop, from zero to end-to-end traces",
 	"An open observability clinic where the SigNoz team instruments your stack",
-	"Food, drinks and a networking hour at the Loft",
+	"Breakfast, lunch and a networking hour at the Loft",
 	"No vendor-pitch keynotes",
 ];
 
@@ -26,11 +26,11 @@ const MissionSpotlight = () => {
 						viewport={{ once: true }}
 						transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
 					>
-						<span className="inline-flex items-center gap-2 rounded-full border border-[#e5502a]/30 bg-[#e5502a]/10 px-4 py-2 font-mono text-[11px] font-bold uppercase tracking-[0.16em] text-[#ea6e4a]">
-							◆ Agents of SigNoz · AI Observability Conference
+						<span className="sz-eyebrow">
+							Agents of SigNoz · AI Observability Conference
 						</span>
 
-						<h2 className="mt-6 text-3xl md:text-[2.75rem] leading-[1.08] font-black uppercase tracking-[-0.02em] text-[#f5f7fa] glow-orange">
+						<h2 className="mt-6 text-3xl md:text-[2.75rem] leading-[1.08] font-black uppercase tracking-[-0.02em] text-[#f5f7fa]">
 							See Inside{" "}
 							<span className="text-[#e5502a]">Everything</span>{" "}
 							You Ship
@@ -40,31 +40,26 @@ const MissionSpotlight = () => {
 							<p>
 								AI became easy to build and hard to explain. One
 								request now fans out across model calls, tool
-								invocations and retrieval hops &mdash; and when
-								it slows down, triples in cost, or quietly
-								returns nonsense, the stack trace tells you
-								nothing.
+								invocations and retrieval hops, and when it
+								slows, triples in cost, or quietly returns
+								nonsense, the stack trace tells you nothing.
 							</p>
 							<p>
-								Spend a day with the people who solved this in
-								production, then put it to work on your own
-								stack. Keynotes and talks on the main stage, a
-								hands-on workshop after lunch and an open
-								observability clinic in the afternoon. Same
-								building, same day, same problem.
-							</p>
-							<p className="text-[#ffcd56] font-bold italic">
-								It&apos;s not about how fast you code. It&apos;s
-								about how deep you can see.
+								This is a day with the engineers who solved that
+								in production. You will see how they instrument
+								agents, what they actually alert on, and what
+								token spend did to their budgets. Then bring
+								your own stack to the afternoon clinic and leave
+								with it instrumented.
 							</p>
 						</div>
 
 						<Link
-							href="#agenda"
-							className="mt-8 inline-flex items-center gap-2 rounded-xl bg-[#2be38b] px-6 py-3.5 font-bold text-[#04120c] transition-opacity duration-300 hover:opacity-90"
+							href="#schedule"
+							className="sz-ghost-btn mt-8 inline-flex items-center gap-2 rounded-lg border border-[#3c4152] px-6 py-3.5 font-semibold text-[#e8eaee] transition-all hover:border-[#8b93a7] hover:text-[#f5f7fa]"
 						>
-							Learn More
-							<ArrowUpRight className="w-5 h-5" />
+							View the schedule
+							<ArrowUpRight className="w-4 h-4" />
 						</Link>
 					</motion.div>
 

@@ -36,10 +36,10 @@ const Signals = () => {
 		<div className="py-20">
 			<ViewContainer>
 				<div className="text-center mb-12">
-					<span className="inline-flex items-center gap-2 bg-[#2be38b]/10 border border-[#2be38b]/30 text-[#2be38b] px-5 py-2 rounded-full text-sm font-semibold mb-6">
-						📡 One Platform, Every Signal
+					<span className="sz-eyebrow mb-6">
+						One platform, every signal
 					</span>
-					<h2 className="text-3xl md:text-5xl font-black uppercase text-[#f5f5f5] glow-orange">
+					<h2 className="text-3xl md:text-5xl font-black uppercase text-[#f5f5f5]">
 						One Stop Observability Platform. Total Recall.
 					</h2>
 					<p className="text-lg text-[#c0c1c3] max-w-3xl mx-auto mt-4">

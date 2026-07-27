@@ -2,16 +2,15 @@ import { ViewContainer } from "@/components/ui/view-container";
 import { ArrowUpRight, Check } from "lucide-react";
 import Link from "next/link";
 import { venue } from "../data";
+import { BrightDataLogo } from "./BrandLogos";
 
 const Venue = () => {
 	return (
 		<div className="py-20">
 			<ViewContainer>
 				<div className="text-center max-w-2xl mx-auto mb-12">
-					<span className="inline-flex items-center gap-2 rounded-full border border-[#ffcd56]/30 bg-[#ffcd56]/10 px-5 py-2 text-sm font-semibold text-[#ffcd56]">
-						📍 Venue
-					</span>
-					<h2 className="mt-6 text-3xl md:text-5xl font-black uppercase text-[#f5f7fa] glow-orange">
+					<span className="sz-eyebrow">Venue</span>
+					<h2 className="mt-6 text-3xl md:text-5xl font-black uppercase text-[#f5f7fa]">
 						{venue.name}
 					</h2>
 					<p className="mt-4 text-lg text-[#c0c1c3]">
@@ -51,7 +50,7 @@ const Venue = () => {
 									href={venue.directionsUrl}
 									target="_blank"
 									rel="noopener noreferrer"
-									className="inline-flex items-center gap-2 rounded-xl border border-[#ffcd56]/45 bg-[#ffcd56]/10 px-5 py-2.5 font-bold text-[#ffcd56] transition-colors hover:bg-[#ffcd56]/20"
+									className="inline-flex items-center gap-2 rounded-lg border border-[#e5502a]/50 bg-[#e5502a]/10 px-5 py-2.5 font-semibold text-[#ea6e4a] transition-colors hover:bg-[#e5502a]/20"
 								>
 									Get Directions
 									<ArrowUpRight className="w-4 h-4" />
@@ -60,26 +59,22 @@ const Venue = () => {
 									href="https://brightdata.com"
 									target="_blank"
 									rel="noopener noreferrer"
-									className="sz-ghost-btn inline-flex items-center gap-2 rounded-xl border border-[#3c4152] px-5 py-2.5 font-bold text-[#f5f7fa] transition-all hover:border-[#5fe9ff] hover:text-[#5fe9ff]"
+									className="sz-ghost-btn inline-flex items-center gap-2.5 rounded-lg border border-[#3c4152] px-5 py-2.5 font-semibold text-[#e8eaee] transition-all hover:border-[#8b93a7] hover:text-[#f5f7fa]"
 								>
-									About Bright Data
+									About
+									<BrightDataLogo className="h-[15px] w-auto" />
 									<ArrowUpRight className="w-4 h-4" />
 								</Link>
 							</div>
 						</div>
 
 						<div className="dossier-card rounded-2xl p-7">
-							<div className="font-mono text-[11px] uppercase tracking-[0.18em] text-[#2be38b]">
+							<div className="font-mono text-[11px] uppercase tracking-[0.18em] text-[#8b93a7]">
 								Event day
 							</div>
 							<div className="mt-2.5 font-mono text-lg md:text-xl font-bold text-[#f5f7fa]">
 								{venue.dateLabel}
 							</div>
-							<p className="mt-3 text-[15px] leading-relaxed text-[#c0c1c3]">
-								In person, single day. Doors, schedule and
-								check-in details go out to registered
-								participants by email.
-							</p>
 						</div>
 					</div>
 				</div>

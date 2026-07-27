@@ -1,8 +1,8 @@
 import { ViewContainer } from "@/components/ui/view-container";
-import { type AgendaKind, agenda, agendaLegend, venue } from "../data";
+import { type ScheduleKind, schedule, scheduleLegend, venue } from "../data";
 
 const kindStyles: Record<
-	AgendaKind,
+	ScheduleKind,
 	{ border: string; dot: string; time: string }
 > = {
 	main: {
@@ -16,9 +16,9 @@ const kindStyles: Record<
 		time: "text-[#ffcd56]",
 	},
 	clinic: {
-		border: "border-l-[#5fe9ff]",
-		dot: "bg-[#5fe9ff]",
-		time: "text-[#5fe9ff]",
+		border: "border-l-[#7f9dc9]",
+		dot: "bg-[#7f9dc9]",
+		time: "text-[#9fc0ff]",
 	},
 	break: {
 		border: "border-l-[#62687c]",
@@ -27,28 +27,20 @@ const kindStyles: Record<
 	},
 };
 
-const Agenda = () => {
+const Schedule = () => {
 	return (
 		<div className="py-20">
 			<ViewContainer>
 				<div className="max-w-2xl mb-10">
-					<span className="inline-flex items-center gap-2 rounded-full border border-[#e5502a]/30 bg-[#e5502a]/10 px-5 py-2 text-sm font-semibold text-[#ea6e4a]">
-						🗓️ Agenda
-					</span>
-					<h2 className="mt-6 text-3xl md:text-5xl font-black uppercase text-[#f5f7fa] glow-orange">
+					<span className="sz-eyebrow">Schedule</span>
+					<h2 className="mt-6 text-3xl md:text-5xl font-black uppercase text-[#f5f7fa]">
 						{venue.dateLabel}
 					</h2>
-					<p className="mt-4 text-lg text-[#c0c1c3]">
-						Doors at 08:30, closing remarks at 17:15, drinks until
-						19:30. All times Pacific. The workshop room and
-						observability clinic run alongside the main stage. Times
-						may shift slightly as speakers are confirmed.
-					</p>
 				</div>
 
 				{/* Legend */}
 				<div className="flex flex-wrap gap-5 mb-7">
-					{agendaLegend.map(item => (
+					{scheduleLegend.map(item => (
 						<span
 							key={item.kind}
 							className="inline-flex items-center gap-2 text-[13px] font-semibold text-[#c0c1c3]"
@@ -63,7 +55,7 @@ const Agenda = () => {
 
 				{/* Slots */}
 				<div className="grid gap-2.5">
-					{agenda.map(slot => {
+					{schedule.map(slot => {
 						const style = kindStyles[slot.kind];
 						return (
 							<div
@@ -108,4 +100,4 @@ const Agenda = () => {
 	);
 };
 
-export default Agenda;
+export default Schedule;

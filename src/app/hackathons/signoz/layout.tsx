@@ -45,8 +45,8 @@ export default function RootLayout({
 			type: "link",
 		},
 		{
-			name: "Agenda",
-			url: `/hackathons/${DATA.slug}#agenda`,
+			name: "Schedule",
+			url: `/hackathons/${DATA.slug}#schedule`,
 			type: "link",
 		},
 		{
