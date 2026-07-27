@@ -31,7 +31,7 @@ const RegistrationForm = () => {
 						Apply to attend
 					</h2>
 					<p className="mt-4 text-lg text-[#c0c1c3]">
-						The Loft holds a fixed number of people, so places are
+						The venue holds a fixed number of people, so places are
 						reviewed rather than sold. Tell us who you are and what
 						you work on, and we will email you either way.
 					</p>

@@ -111,7 +111,7 @@ const Sponsors = () => {
 						</p>
 						<p className="mt-4 text-base leading-relaxed text-[#c0c1c3]">
 							Sponsorship covers stage time, workshop slots, booth
-							space in the Loft and logo placement. Tiers and
+							space at the venue and logo placement. Tiers and
 							pricing on request.
 						</p>
 						<Link

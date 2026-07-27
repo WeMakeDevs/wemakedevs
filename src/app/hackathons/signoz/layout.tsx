@@ -77,8 +77,7 @@ export default function RootLayout({
 						<p className="text-xs leading-relaxed text-[#62687c]">
 							Agents of SigNoz Edition 2 is an independent
 							developer conference run by WeMakeDevs in
-							partnership with SigNoz, hosted at The Web Data Loft
-							by Bright Data.
+							partnership with SigNoz, hosted at Bright Data.
 						</p>
 					</div>
 				</div>

@@ -10,7 +10,7 @@ const takeaways = [
 	"Straight answers on cost and latency from people running this at scale",
 	"A full hands-on workshop, from zero to end-to-end traces",
 	"An open observability clinic where the SigNoz team instruments your stack",
-	"Breakfast, lunch and a networking hour at the Loft",
+	"Breakfast, lunch and a networking hour at the venue",
 	"No vendor-pitch keynotes",
 ];
 

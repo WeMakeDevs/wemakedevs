@@ -35,8 +35,7 @@ const DATA = {
 };
 
 const venue = {
-	name: "The Web Data Loft",
-	host: "Bright Data",
+	name: "Bright Data",
 	addressLines: [
 		"625 2nd St, Suite 101",
 		"San Francisco, CA 94107",
@@ -70,7 +69,7 @@ const venue = {
 		},
 		{
 			mode: "Access",
-			detail: "Photo ID needed for building access. The Loft is on one level and step-free from the street entrance.",
+			detail: "Photo ID needed for building access. The venue is on one level and step-free from the street entrance.",
 		},
 	],
 	facilities: [
@@ -149,6 +148,7 @@ const speakers: Speaker[] = [
 		org: "WeMakeDevs",
 		photo: sachin,
 		talk: "Scaling Developer Products and Building Right DevEx",
+		link: "https://www.linkedin.com/in/sachin-sharma-648b1b200/",
 	},
 	{
 		name: "Adarsh Dubey",
@@ -156,6 +156,7 @@ const speakers: Speaker[] = [
 		org: "Google DeepMind",
 		photo: adarsh,
 		talk: "Shipping AI You Can Actually Debug",
+		link: "https://www.linkedin.com/in/dubeyadarsh/",
 	},
 ];
 
@@ -286,7 +287,7 @@ const sponsors = [
 		tier: "Venue & Host Sponsor",
 		name: "Bright Data",
 		accent: "#9fc0ff",
-		blurb: "Bright Data hosts the conference at The Web Data Loft, their community space for developers and AI builders in SF. The Loft provides the main stage, the workshop room and the space used for the afternoon observability clinic.",
+		blurb: "Bright Data hosts the conference at their community space for developers and AI builders in SF. The venue provides the main stage, the workshop room and the space used for the afternoon observability clinic.",
 		links: [
 			{ label: "brightdata.com", href: "https://brightdata.com" },
 			{ label: "See the venue", href: "#venue" },
@@ -358,7 +359,7 @@ const faqs: FaqType[] = [
 	},
 	{
 		question: "Is it really free?",
-		answer: "Yes. Entry is free and includes food and swag. Seats at the Loft are limited, so you apply for a place rather than buy a ticket. There is no paid tier and no upsell.",
+		answer: "Yes. Entry is free and includes food and swag. Seats at the venue are limited, so you apply for a place rather than buy a ticket. There is no paid tier and no upsell.",
 	},
 	{
 		question: "What happens after I apply?",
@@ -386,7 +387,7 @@ const faqs: FaqType[] = [
 	},
 	{
 		question: "How do I get there, and is there parking?",
-		answer: "The Loft is at 625 2nd St, a short walk from Caltrain 4th &amp; King and several Muni lines. Street parking in South Beach is limited on event days; nearby garages are the safer bet. Full details in the venue section above.",
+		answer: "Bright Data is at 625 2nd St, a short walk from Caltrain 4th &amp; King and several Muni lines. Street parking in South Beach is limited on event days; nearby garages are the safer bet. Full details in the venue section above.",
 	},
 	{
 		question: "Can my company sponsor, or can my community partner?",

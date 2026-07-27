@@ -39,7 +39,7 @@ const Venue = () => {
 							<address className="mt-3 not-italic font-mono text-[15px] leading-[1.85] text-[#f5f7fa]">
 								{venue.name}
 								<br />
-								{venue.host} · {venue.addressLines[0]}
+								{venue.addressLines[0]}
 								<br />
 								{venue.addressLines[1]}
 								<br />
