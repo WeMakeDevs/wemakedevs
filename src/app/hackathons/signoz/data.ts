@@ -13,12 +13,11 @@ const DATA = {
 	titleCard: "Agents of SigNoz Edition 2",
 	greeting: "Hello San Francisco",
 	tagline: "AI Observability Conference",
-	prize: "A full day of talks, workshops and a hackathon in the same room",
 	// Doors 08:30 PT → drinks until 19:30 PT on Aug 29, 2026 (UTC-7)
 	startDate: "2026-08-29T15:30:00Z",
 	endDate: "2026-08-30T02:30:00Z",
 	description:
-		"A single day on the hard part of shipping AI: seeing inside it. Traces, metrics, logs and token cost for agents, LLM apps and the infrastructure underneath, plus a one-day hackathon running in the same room.",
+		"A single day on the hard part of shipping AI: seeing inside it. Traces, metrics, logs and token cost for agents, LLM apps and the infrastructure underneath, in one room with the people running it in production.",
 	descriptionCard:
 		"One day, one room, one problem. The AI Observability Conference by WeMakeDevs, sponsored by SigNoz and Bright Data.",
 	slug: "signoz",
@@ -87,7 +86,7 @@ const venue = {
 		},
 		{
 			title: "Wifi & power",
-			detail: "Venue wifi and power at the workshop and hack tables. Bring your own adapter.",
+			detail: "Venue wifi and power at the workshop and clinic tables. Bring your own adapter.",
 		},
 		{
 			title: "Quiet space",
@@ -95,13 +94,6 @@ const venue = {
 		},
 	],
 };
-
-const stats = [
-	{ value: "300", label: "Attendees" },
-	{ value: "1", label: "Day" },
-	{ value: "7", label: "Speakers" },
-	{ value: "2", label: "Stages + Hack Room" },
-];
 
 const marqueeTopics = [
 	"OpenTelemetry",
@@ -111,7 +103,7 @@ const marqueeTopics = [
 	"SRE Copilots",
 	"Self-Hosted Inference",
 	"Dashboards & SLOs",
-	"One-Day Hackathon",
+	"Observability Clinic",
 	"Open Source",
 	"300 Engineers",
 ];
@@ -181,7 +173,7 @@ const speakers: Speaker[] = [
 	},
 ];
 
-type AgendaKind = "main" | "work" | "hack" | "break";
+type AgendaKind = "main" | "work" | "clinic" | "break";
 
 type AgendaSlot = {
 	time: string;
@@ -266,7 +258,7 @@ const agenda: AgendaSlot[] = [
 	{ time: "16:00", kind: "break", title: "Break" },
 	{
 		time: "16:15",
-		kind: "hack",
+		kind: "clinic",
 		format: "Open",
 		title: "Observability clinic — bring your stack, get it instrumented with the SigNoz team",
 		who: "All speakers",
@@ -288,7 +280,7 @@ const agenda: AgendaSlot[] = [
 const agendaLegend: { kind: AgendaKind; label: string }[] = [
 	{ kind: "main", label: "Main stage" },
 	{ kind: "work", label: "Workshop room" },
-	{ kind: "hack", label: "Clinic / hack room" },
+	{ kind: "clinic", label: "Observability clinic" },
 	{ kind: "break", label: "Break / social" },
 ];
 
@@ -308,7 +300,7 @@ const sponsors = [
 		tier: "Venue & Host Sponsor",
 		name: "Bright Data",
 		accent: "#5fe9ff",
-		blurb: "Bright Data hosts the conference at The Web Data Loft, their community space for developers and AI builders in SF. The Loft provides the main stage, the workshop room and the dedicated hack room used for the one-day hackathon.",
+		blurb: "Bright Data hosts the conference at The Web Data Loft, their community space for developers and AI builders in SF. The Loft provides the main stage, the workshop room and the space used for the afternoon observability clinic.",
 		links: [
 			{ label: "brightdata.com", href: "https://brightdata.com" },
 			{ label: "See the venue", href: "#venue" },
@@ -362,11 +354,6 @@ const navLinks = [
 		page: "schedule",
 	},
 	{
-		href: "/hackathons/signoz/rules",
-		label: "Rules",
-		page: "rules",
-	},
-	{
 		href: "/hackathons/signoz/resources",
 		label: "Resources",
 		page: "resources",
@@ -396,16 +383,12 @@ const faqs: FaqType[] = [
 		answer: "No. The afternoon workshop starts from zero and gets you to a working trace. Main-stage talks are designed to be followable either way. If you want a head start, read the <a href='https://signoz.io/docs/introduction/' target='_blank' rel='noopener noreferrer' class='text-amber-300 underline hover:text-amber-200'>SigNoz introduction</a> beforehand.",
 	},
 	{
-		question: "What is the hackathon and do I have to take part?",
-		answer: "It is entirely optional. A hackathon runs in a dedicated room alongside the talks. You can attend the conference and ignore it completely, dip in and out, or spend the whole day building. Every project has to use or integrate with SigNoz; beyond that the brief is wide open.",
-	},
-	{
-		question: "Can I join the hackathon solo?",
-		answer: "Yes. Teams are up to four people and there is a team-forming board at registration, but solo entries are accepted and judged on the same criteria.",
+		question: "What is the observability clinic?",
+		answer: "An open session at 16:15 where the SigNoz team sits down with whatever you brought — your service, your agent, your pipeline — and helps you get it instrumented. It is entirely optional and you can drop in for as long as you like.",
 	},
 	{
 		question: "What should I bring?",
-		answer: "A laptop and charger if you want to do the workshop or the hackathon. Photo ID for building access at 625 2nd St. That is it.",
+		answer: "A laptop and charger if you want to do the workshop or the observability clinic. Photo ID for building access at 625 2nd St. That is it.",
 	},
 	{
 		question: "Will talks be recorded?",
@@ -430,7 +413,6 @@ export {
 	navLinks,
 	faqs,
 	venue,
-	stats,
 	marqueeTopics,
 	speakers,
 	agenda,

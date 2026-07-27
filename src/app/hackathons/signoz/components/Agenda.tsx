@@ -15,7 +15,7 @@ const kindStyles: Record<
 		dot: "bg-[#ffcd56]",
 		time: "text-[#ffcd56]",
 	},
-	hack: {
+	clinic: {
 		border: "border-l-[#5fe9ff]",
 		dot: "bg-[#5fe9ff]",
 		time: "text-[#5fe9ff]",
@@ -40,7 +40,7 @@ const Agenda = () => {
 					</h2>
 					<p className="mt-4 text-lg text-[#c0c1c3]">
 						Doors at 08:30, closing remarks at 17:15, drinks until
-						19:30. All times Pacific. The hack room and
+						19:30. All times Pacific. The workshop room and
 						observability clinic run alongside the main stage. Times
 						may shift slightly as speakers are confirmed.
 					</p>

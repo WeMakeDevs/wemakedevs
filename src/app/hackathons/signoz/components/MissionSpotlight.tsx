@@ -9,7 +9,7 @@ const takeaways = [
 	"Working instrumentation for an AI system you can take back to your own stack",
 	"Straight answers on cost and latency from people running this at scale",
 	"A full hands-on workshop, from zero to end-to-end traces",
-	"An optional hackathon with live judging in the room next door",
+	"An open observability clinic where the SigNoz team instruments your stack",
 	"Food, drinks and a networking hour at the Loft",
 	"No vendor-pitch keynotes",
 ];
@@ -47,10 +47,11 @@ const MissionSpotlight = () => {
 							</p>
 							<p>
 								Spend a day with the people who solved this in
-								production, then stay and build it yourself.
-								Talks and workshops on the main stage, a
-								hackathon running in the next room from 11:00.
-								Same building, same day, same problem.
+								production, then put it to work on your own
+								stack. Keynotes and talks on the main stage, a
+								hands-on workshop after lunch and an open
+								observability clinic in the afternoon. Same
+								building, same day, same problem.
 							</p>
 							<p className="text-[#ffcd56] font-bold italic">
 								It&apos;s not about how fast you code. It&apos;s

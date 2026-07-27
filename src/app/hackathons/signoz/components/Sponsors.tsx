@@ -11,8 +11,8 @@ const perks = [
 	},
 	{
 		num: "02",
-		title: "Sponsor a hackathon track",
-		body: "Put your product in front of builders for a full day and judge the projects that come out of it.",
+		title: "Sponsor a session",
+		body: "Put your product in front of builders for a full day, on the main stage or in the workshop room.",
 	},
 	{
 		num: "03",
@@ -110,8 +110,8 @@ const Sponsors = () => {
 						</p>
 						<p className="mt-4 text-base leading-relaxed text-[#c0c1c3]">
 							Sponsorship covers stage time, workshop slots, booth
-							space in the Loft, hackathon prize categories and
-							logo placement. Tiers and pricing on request.
+							space in the Loft and logo placement. Tiers and
+							pricing on request.
 						</p>
 						<Link
 							href="mailto:contact@wemakedevs.org?subject=Sponsorship%20%E2%80%94%20Agents%20of%20SigNoz%20Edition%202"

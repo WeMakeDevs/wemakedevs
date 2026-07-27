@@ -5,8 +5,6 @@ import Link from "next/link";
 import Agenda from "./components/Agenda";
 import CommunityPartners from "./components/CommunityPartners";
 import ConferenceHero from "./components/ConferenceHero";
-import ConferenceStats from "./components/ConferenceStats";
-import HackathonCallout from "./components/HackathonCallout";
 import Marquee from "./components/Marquee";
 import MissionSpotlight from "./components/MissionSpotlight";
 import PreviousWebinars from "./components/PreviousWebinars";
@@ -14,7 +12,6 @@ import ProblemSolution from "./components/ProblemSolution";
 import Signals from "./components/Signals";
 import Speakers from "./components/Speakers";
 import Sponsors from "./components/Sponsors";
-import Tracks from "./components/Tracks";
 import Venue from "./components/Venue";
 import WaitlistForm from "./components/WaitlistForm";
 import { DATA, faqs } from "./data";
@@ -29,9 +26,6 @@ const ConferencePage = () => {
 
 			{/* ── Topic marquee ─────────────────────────────────────────────────── */}
 			<Marquee />
-
-			{/* ── Stats ─────────────────────────────────────────────────────────── */}
-			<ConferenceStats />
 
 			{/* ── See inside everything you ship ────────────────────────────────── */}
 			<div id="overview" className="scroll-mt-32 agency-grid">
@@ -56,14 +50,6 @@ const ConferencePage = () => {
 			{/* ── Agenda ────────────────────────────────────────────────────────── */}
 			<div id="agenda" className="scroll-mt-32 agency-grid">
 				<Agenda />
-			</div>
-
-			{/* ── Hackathon inside the conference ───────────────────────────────── */}
-			<HackathonCallout />
-
-			{/* ── Hackathon tracks ──────────────────────────────────────────────── */}
-			<div id="tracks" className="scroll-mt-32">
-				<Tracks />
 			</div>
 
 			{/* ── Venue ─────────────────────────────────────────────────────────── */}

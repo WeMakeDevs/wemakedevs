@@ -32,7 +32,7 @@ const facts = [
 const ConferenceHero = () => {
 	return (
 		<div className="relative overflow-x-clip">
-			{/* ── Backdrop: the venue itself, dimmed so text stays readable ── */}
+			{/* ── Backdrop: the venue itself, lightly dimmed so text stays readable ── */}
 			<div className="absolute -top-24 inset-x-0 bottom-0 z-0 pointer-events-none overflow-hidden">
 				<Image
 					src={images.venue}
@@ -42,12 +42,11 @@ const ConferenceHero = () => {
 					sizes="100vw"
 					className="object-cover object-center"
 				/>
-				{/* The photo is shot in full daylight, so it needs a heavy scrim. */}
-				<div className="absolute inset-0 bg-[#08090b]/80" />
-				<div className="absolute inset-0 bg-gradient-to-r from-[#08090b] via-[#08090b]/85 to-[#08090b]/55" />
-				<div className="absolute inset-0 bg-gradient-to-b from-[#08090b]/70 via-transparent to-[#08090b]" />
+				{/* Just enough scrim behind the copy; the photo stays visible on the right. */}
+				<div className="absolute inset-0 bg-gradient-to-r from-[#08090b]/85 via-[#08090b]/45 to-transparent" />
+				<div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#08090b]" />
 				<div className="absolute inset-x-0 top-0 h-24 bg-[#08090b]" />
-				<div className="absolute inset-x-0 top-24 h-40 bg-gradient-to-b from-[#08090b] to-transparent" />
+				<div className="absolute inset-x-0 top-24 h-24 bg-gradient-to-b from-[#08090b] to-transparent" />
 			</div>
 
 			<ViewContainer className="relative z-20 pt-14 md:pt-16 pb-14">
