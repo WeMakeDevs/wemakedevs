@@ -76,7 +76,7 @@ const ConferenceHero = () => {
 				>
 					Agents of SigNoz
 					<br />
-					<span className="text-[#e5502a]">Edition 2</span>
+					<span className="text-[#e5502a]">Edition II</span>
 				</motion.h1>
 
 				{/* ── Sub ── */}
