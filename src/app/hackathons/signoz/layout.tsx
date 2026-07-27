@@ -14,17 +14,17 @@ export const metadata: Metadata = {
 		description: DATA.description,
 		url: `https://wemakedevs.org/hackathons/${DATA.slug}`,
 		images: {
-			url: `/hackathons/${DATA.slug}/opengraph-image.png`,
+			url: `/hackathons/${DATA.slug}/opengraph-image.jpg`,
 			width: 1200,
-			height: 675,
-			alt: `${DATA.title} - WeMakeDevs Hackathon`,
+			height: 630,
+			alt: `${DATA.title} - AI Observability Conference by WeMakeDevs`,
 		},
 	},
 	twitter: {
 		card: "summary_large_image",
 		title: `${DATA.title} | WeMakeDevs`,
 		description: DATA.descriptionCard,
-		images: [`/hackathons/${DATA.slug}/opengraph-image.png`],
+		images: [`/hackathons/${DATA.slug}/opengraph-image.jpg`],
 	},
 };
 
@@ -35,35 +35,34 @@ export default function RootLayout({
 }>) {
 	const hackathonNavLinks: navLinksType = [
 		{
-			name: "About",
-			url: `/hackathons/${DATA.slug}#about`,
+			name: "Overview",
+			url: `/hackathons/${DATA.slug}#overview`,
 			type: "link",
 		},
 		{
-			name: "Prizes",
-			url: `/hackathons/${DATA.slug}#prizes`,
+			name: "Speakers",
+			url: `/hackathons/${DATA.slug}#speakers`,
 			type: "link",
 		},
 		{
-			name: "The Problem",
-			url: `/hackathons/${DATA.slug}#why`,
+			name: "Agenda",
+			url: `/hackathons/${DATA.slug}#agenda`,
 			type: "link",
 		},
 		{
-			name: "Sponsor",
-			url: `/hackathons/${DATA.slug}#sponsor`,
+			name: "Venue",
+			url: `/hackathons/${DATA.slug}#venue`,
 			type: "link",
 		},
 		{
-			name: "Tracks",
-			url: `/hackathons/${DATA.slug}#projects`,
+			name: "Sponsors",
+			url: `/hackathons/${DATA.slug}#sponsors`,
 			type: "link",
 		},
 		{
-			name: "Submit Project",
-			url: DATA.cta.href,
+			name: DATA.cta.label,
+			url: `/hackathons/${DATA.slug}${DATA.cta.href}`,
 			type: "button",
-			openInNewTab: true,
 		},
 	];
 
@@ -76,13 +75,10 @@ export default function RootLayout({
 				<div className="border-t border-[#3c4152]/60 bg-[#0a0b0e]">
 					<div className="max-w-4xl mx-auto px-6 py-6 text-center">
 						<p className="text-xs leading-relaxed text-[#62687c]">
-							Disclaimer: &ldquo;Agents of SigNoz&rdquo; is an
-							independent developer hackathon run by WeMakeDevs in
-							partnership with SigNoz. The &ldquo;Men in
-							Black&rdquo; aesthetic is used purely for fun and is
-							not affiliated with, endorsed by, or associated with
-							the &ldquo;Men in Black&rdquo; films, Sony Pictures,
-							or any of their rights holders.
+							Agents of SigNoz Edition 2 is an independent
+							developer conference and hackathon run by WeMakeDevs
+							in partnership with SigNoz, hosted at The Web Data
+							Loft by Bright Data.
 						</p>
 					</div>
 				</div>

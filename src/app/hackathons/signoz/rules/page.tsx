@@ -25,14 +25,14 @@ const HackathonRules = async () => {
 			</div>
 			<ViewContainer className="my-10">
 				<h2 className="text-3xl font-bold text-[#f5f5f5] glow-orange mb-6">
-					Agency Protocols
+					Hackathon Rules
 				</h2>
 				<HackathonContentBody className="text-[#c0c1c3]">
 					<ol className="list-decimal list-outside space-y-4 pl-6">
 						<li>
-							You can operate solo or assemble your own agency of
-							up to 4 members. Teams can change composition at any
-							time before the hackathon begins.
+							You can enter solo or build a team of up to 4
+							members. Teams can change composition at any time
+							before the hackathon begins.
 						</li>
 						<li>
 							<strong className="text-[#ea6e4a]">

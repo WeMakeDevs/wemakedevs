@@ -173,23 +173,21 @@ const Tracks = () => {
 							</div>
 							<div>
 								<h3 className="text-xl font-bold text-[#ffcd56] mb-1">
-									Submit your project
+									Pick a track on the day
 								</h3>
 								<p className="text-[#c0c1c3] leading-relaxed">
-									The project submission form is now live.
-									Build across any of the three tracks, then
-									submit your project before the deadline
-									using the form.
+									Problem statements, rules and judging
+									criteria go out at the hack-room kickoff.
+									Come with an idea or pick one up there, then
+									demo it before the closing.
 								</p>
 							</div>
 						</div>
 						<Link
-							href={DATA.cta.href}
-							target="_blank"
-							rel="noopener noreferrer"
+							href="/hackathons/signoz/rules"
 							className="shrink-0 inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl border border-[#ffcd56]/40 bg-[#ffcd56]/10 text-[#ffcd56] font-bold hover:bg-[#ffcd56]/20 transition-colors whitespace-nowrap"
 						>
-							Submit Project
+							Read the rules
 							<ArrowUpRight className="w-5 h-5" />
 						</Link>
 					</div>
