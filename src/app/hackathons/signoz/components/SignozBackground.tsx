@@ -1,84 +1,39 @@
-// ─── Men in Black "classified" backdrop — clean, minimal, professional ───────
+// ─── Ambient page backdrop ────────────────────────────────────────────────────
+// Static, low-contrast layers only: a deep neutral base, two very soft colour
+// washes and a fine blueprint grid. Nothing moves, so it reads as a printed
+// surface rather than an effect.
 
 const SignozBackground = () => {
 	return (
 		<div className="fixed inset-0 pointer-events-none overflow-hidden z-0">
-			{/* ── Deep classified-black base gradient ── */}
-			<div className="absolute inset-0 bg-[#08090b]" />
-			<div className="absolute inset-0 bg-gradient-to-b from-[#0b0c10] via-[#08090b] to-[#070709]" />
+			{/* ── Deep neutral base ── */}
+			<div className="absolute inset-0 bg-[#0a0b0d]" />
+			<div className="absolute inset-0 bg-gradient-to-b from-[#0e1013] via-[#0a0b0d] to-[#08090b]" />
 
-			{/* ── Soft signature ambient glows (sparingly) ── */}
-			<div className="absolute -top-[12%] right-[6%] w-[640px] h-[640px] rounded-full bg-[#e5502a]/10 blur-[180px]" />
-			<div className="absolute top-[42%] -left-[6%] w-[560px] h-[560px] rounded-full bg-[#5fe9ff]/[0.06] blur-[190px]" />
+			{/* ── Two soft colour washes, well below the copy ── */}
+			<div className="absolute -top-[18%] right-[-8%] h-[720px] w-[720px] rounded-full bg-[#e5502a]/[0.055] blur-[200px]" />
+			<div className="absolute top-[48%] left-[-12%] h-[640px] w-[640px] rounded-full bg-[#7f9dc9]/[0.05] blur-[210px]" />
 
-			{/* ── Whisper-fine surveillance grid ── */}
-			<div className="absolute inset-0 agency-grid opacity-[0.35]" />
+			{/* ── Fine blueprint grid ── */}
+			<div className="absolute inset-0 agency-grid opacity-40" />
 
-			{/* ── Slow agency radar dish (top-right, subtle metallic/cyan) ── */}
-			<div className="absolute top-[9%] right-[7%] hidden md:block">
-				<svg
-					aria-hidden="true"
-					className="radar-spin opacity-[0.18]"
-					width="260"
-					height="260"
-					viewBox="0 0 220 220"
-					xmlns="http://www.w3.org/2000/svg"
-				>
-					<circle
-						cx="110"
-						cy="110"
-						r="100"
-						fill="none"
-						stroke="#c7ccd6"
-						strokeWidth="1"
-						opacity="0.5"
-					/>
-					<circle
-						cx="110"
-						cy="110"
-						r="66"
-						fill="none"
-						stroke="#c7ccd6"
-						strokeWidth="1"
-						opacity="0.35"
-					/>
-					<circle
-						cx="110"
-						cy="110"
-						r="32"
-						fill="none"
-						stroke="#c7ccd6"
-						strokeWidth="1"
-						opacity="0.35"
-					/>
-					<path
-						d="M110 110 L110 10 A100 100 0 0 1 200 90 Z"
-						fill="#5fe9ff"
-						opacity="0.1"
-					/>
-					<line
-						x1="110"
-						y1="110"
-						x2="110"
-						y2="10"
-						stroke="#5fe9ff"
-						strokeWidth="1.5"
-						opacity="0.55"
-					/>
-				</svg>
-			</div>
+			{/* ── Faint overhead light, so the top of the page lifts slightly ── */}
+			<div
+				className="absolute inset-x-0 top-0 h-[55vh]"
+				style={{
+					background:
+						"radial-gradient(70% 100% at 50% 0%, rgba(199,204,214,0.045), transparent 70%)",
+				}}
+			/>
 
-			{/* ── Focusing vignette — keeps the edges clean & premium ── */}
+			{/* ── Vignette to settle the edges ── */}
 			<div
 				className="absolute inset-0"
 				style={{
 					background:
-						"radial-gradient(120% 90% at 50% 30%, transparent 55%, rgba(5,5,7,0.55) 85%, #050507 100%)",
+						"radial-gradient(125% 95% at 50% 32%, transparent 58%, rgba(6,6,8,0.5) 86%, #060608 100%)",
 				}}
 			/>
-
-			{/* ── Barely-there neuralyzer flash ── */}
-			<div className="absolute inset-0 bg-[#5fe9ff]/[0.04] neuralyze-flash" />
 		</div>
 	);
 };

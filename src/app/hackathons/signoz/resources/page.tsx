@@ -32,8 +32,8 @@ const HackathonResources = async () => {
 				<div className="mt-6 mb-2 flex flex-col sm:flex-row items-center gap-4 bg-[#16181d] rounded-2xl px-6 py-5 border border-[#4A154B]/50 shadow-sm text-center sm:text-left">
 					<SiSlack size={32} className="text-[#ECB22E] shrink-0" />
 					<p className="flex-1 font-medium text-[#c0c1c3]">
-						The fastest way to get help, find teammates, and stay
-						updated. Join the SigNoz Slack.
+						The fastest way to get help, meet other attendees, and
+						stay updated. Join the SigNoz Slack.
 					</p>
 					<Link
 						href={DATA.slackUrl}

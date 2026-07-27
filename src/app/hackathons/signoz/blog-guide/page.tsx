@@ -26,7 +26,8 @@ const angles = [
 	},
 	{
 		title: "What I learned",
-		description: "A concept, gotcha, or debugging story from the hackathon.",
+		description:
+			"A concept, gotcha, or debugging story from your own work.",
 	},
 	{
 		title: "Why / my take",
@@ -105,7 +106,7 @@ const HackathonBlogGuide = () => {
 						<Star className="w-8 h-8 text-[#ffcd56] shrink-0" />
 						<div className="flex-1">
 							<h1 className="text-2xl md:text-3xl font-bold text-[#f5f5f5]">
-								Hackathon Blog Guide and Checklist
+								Blog Guide and Checklist
 							</h1>
 							<p className="text-[#c0c1c3] mt-2">
 								A short guide to help you write something people
@@ -135,9 +136,9 @@ const HackathonBlogGuide = () => {
 				<HackathonContentBody className="text-[#c0c1c3]">
 					<p>
 						You don&apos;t need to be a professional writer. Good
-						writing reflects honesty, specificity, and usefulness. If
-						a reader finishes your post and thinks &ldquo;I could go
-						do this now&rdquo; or &ldquo;I didn&apos;t know
+						writing reflects honesty, specificity, and usefulness.
+						If a reader finishes your post and thinks &ldquo;I could
+						go do this now&rdquo; or &ldquo;I didn&apos;t know
 						that,&rdquo; you&apos;ve done it right.
 					</p>
 				</HackathonContentBody>
@@ -147,16 +148,16 @@ const HackathonBlogGuide = () => {
 				</HackathonContentTitle>
 				<HackathonContentBody className="text-[#c0c1c3]">
 					<p>
-						The strongest posts come from something you actually did,
-						hit, or figured out and NOT a topic you googled and
-						summarized. Whether you&apos;re writing about the project
-						you built, an observability concept, or a topic of your
-						choice, ground it in your own experience.
+						The strongest posts come from something you actually
+						did, hit, or figured out and NOT a topic you googled and
+						summarized. Whether you&apos;re writing about the
+						project you built, an observability concept, or a topic
+						of your choice, ground it in your own experience.
 					</p>
 					<p className="mt-4">
-						Ask yourself: &ldquo;What did I learn that I couldn&apos;t
-						have gotten by just reading the docs?&rdquo; That&apos;s
-						your post.
+						Ask yourself: &ldquo;What did I learn that I
+						couldn&apos;t have gotten by just reading the
+						docs?&rdquo; That&apos;s your post.
 					</p>
 				</HackathonContentBody>
 
@@ -282,7 +283,8 @@ const HackathonBlogGuide = () => {
 								Don&apos;t overstate:
 							</span>{" "}
 							It&apos;s fine to say &ldquo;this worked for my
-							setup&rdquo; instead of claiming it works everywhere.
+							setup&rdquo; instead of claiming it works
+							everywhere.
 						</li>
 					</ul>
 				</HackathonContentBody>
@@ -330,18 +332,18 @@ const HackathonBlogGuide = () => {
 							link sources instead of copying.
 						</li>
 						<li>
-							Don&apos;t submit raw AI output. Using AI to help edit
-							is fine, but submitting generic AI text with no real
-							experience behind it is not.
+							Don&apos;t submit raw AI output. Using AI to help
+							edit is fine, but submitting generic AI text with no
+							real experience behind it is not.
 						</li>
 						<li>
-							Don&apos;t turn it into an ad. Even if SigNoz is part
-							of your story, focus on being useful. Genuine
+							Don&apos;t turn it into an ad. Even if SigNoz is
+							part of your story, focus on being useful. Genuine
 							usefulness is more persuasive than a sales pitch.
 						</li>
 						<li>
-							Don&apos;t bury the point. If your best insight is in
-							paragraph 9, move it up.
+							Don&apos;t bury the point. If your best insight is
+							in paragraph 9, move it up.
 						</li>
 					</ul>
 				</HackathonContentBody>

@@ -8,11 +8,10 @@ const ProblemSolution = () => {
 	return (
 		<ViewContainer className="py-20">
 			<div className="text-center mb-12">
-				<span className="inline-flex items-center gap-2 bg-[#e5502a]/10 border border-[#e5502a]/30 text-[#ea6e4a] px-5 py-2 rounded-full text-sm font-semibold mb-6">
-					<span className="w-2 h-2 bg-[#e5502a] rounded-full alert-blink" />
+				<span className="sz-eyebrow mb-6">
 					Why we&apos;re doing this
 				</span>
-				<h2 className="text-3xl md:text-5xl font-black uppercase text-[#f5f5f5] glow-orange">
+				<h2 className="text-3xl md:text-5xl font-black uppercase text-[#f5f5f5]">
 					Your AI Agents Are a{" "}
 					<span className="text-[#e5502a]">Black Box</span>
 				</h2>
@@ -82,18 +81,6 @@ const ProblemSolution = () => {
 					</p>
 				</motion.div>
 			</div>
-
-			<motion.div
-				className="max-w-3xl mx-auto mt-10 text-center"
-				initial={{ opacity: 0 }}
-				whileInView={{ opacity: 1 }}
-				viewport={{ once: true }}
-				transition={{ duration: 0.6 }}
-			>
-				<p className="text-[#ffcd56] font-bold italic text-lg">
-					One platform. Every AI signal. Total observability. 🔍
-				</p>
-			</motion.div>
 		</ViewContainer>
 	);
 };
