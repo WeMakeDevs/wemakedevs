@@ -8,8 +8,8 @@ import pranay from "./images/speakers/pranay.jpg";
 import sachin from "./images/speakers/sachin.jpg";
 
 const DATA = {
-	title: "Agents of SigNoz Edition 2",
-	titleCard: "Agents of SigNoz Edition 2",
+	title: "Agents of SigNoz Edition II",
+	titleCard: "Agents of SigNoz Edition II",
 	greeting: "Hello San Francisco",
 	tagline: "AI Observability Conference",
 	// Doors 08:30 PT, close 19:30 PT on Aug 29, 2026 (UTC-7)

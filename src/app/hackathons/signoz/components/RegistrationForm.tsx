@@ -133,7 +133,7 @@ const RegistrationForm = () => {
 							</div>
 							<p className="mt-4 text-center text-[13px] text-[#62687c]">
 								We will only use this to contact you about a
-								seat at Edition 2.
+								seat at Edition II.
 							</p>
 						</form>
 					)}

@@ -75,7 +75,7 @@ export default function RootLayout({
 				<div className="border-t border-[#3c4152]/60 bg-[#0a0b0e]">
 					<div className="max-w-4xl mx-auto px-6 py-6 text-center">
 						<p className="text-xs leading-relaxed text-[#62687c]">
-							Agents of SigNoz Edition 2 is an independent
+							Agents of SigNoz Edition II is an independent
 							developer conference run by WeMakeDevs in
 							partnership with SigNoz, hosted at Bright Data.
 						</p>
