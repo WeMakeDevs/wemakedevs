@@ -50,6 +50,11 @@ const nextConfig = {
 					source: "/aws/:path*",
 					destination: "/hackathons/aws/:path*",
 				},
+				// Serve the Oracle partnership proposal (static HTML in /public) at /oracle
+				{
+					source: "/oracle",
+					destination: "/oracle.html",
+				},
 			],
 		};
 	},
