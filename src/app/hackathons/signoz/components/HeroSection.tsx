@@ -19,15 +19,9 @@ type HeroSectionProps = {
 		disabled?: boolean;
 		openInNewTab?: boolean;
 	};
-	submissionFormUrl?: string;
 };
 
-const HeroSection = ({
-	title,
-	description,
-	cta,
-	submissionFormUrl,
-}: HeroSectionProps) => {
+const HeroSection = ({ title, description, cta }: HeroSectionProps) => {
 	const [countdown, setCountdown] = useState<string | null>(null);
 
 	useEffect(() => {
@@ -185,24 +179,20 @@ const HeroSection = ({
 						</motion.div>
 
 						{/* Secondary CTA */}
-						{submissionFormUrl && (
-							<motion.div
-								className="flex items-center gap-4 flex-wrap"
-								initial={{ opacity: 0, scale: 0.9 }}
-								animate={{ opacity: 1, scale: 1 }}
-								transition={{ duration: 0.5, delay: 0.9 }}
+						<motion.div
+							className="flex items-center gap-4 flex-wrap"
+							initial={{ opacity: 0, scale: 0.9 }}
+							animate={{ opacity: 1, scale: 1 }}
+							transition={{ duration: 0.5, delay: 0.9 }}
+						>
+							<Link
+								href={DATA.blogsHref}
+								className="mib-ghost-btn inline-flex items-center gap-2 px-6 py-3 rounded-xl border border-[#3c4152] text-[#f5f7fa] font-bold hover:border-[#5fe9ff] hover:text-[#5fe9ff] transition-all duration-300 text-base"
 							>
-								<Link
-									href={submissionFormUrl}
-									target="_blank"
-									rel="noopener noreferrer"
-									className="mib-ghost-btn inline-flex items-center gap-2 px-6 py-3 rounded-xl border border-[#3c4152] text-[#f5f7fa] font-bold hover:border-[#5fe9ff] hover:text-[#5fe9ff] transition-all duration-300 text-base"
-								>
-									Submit Project
-									<ArrowUpRight className="w-5 h-5" />
-								</Link>
-							</motion.div>
-						)}
+								See Blogs
+								<ArrowUpRight className="w-5 h-5" />
+							</Link>
+						</motion.div>
 					</div>
 
 					{/* ── Right column: hero image ── */}

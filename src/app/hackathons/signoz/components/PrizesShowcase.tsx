@@ -204,12 +204,10 @@ const PrizesShowcase = () => {
 								</div>
 								<div className="flex flex-wrap gap-3">
 									<Link
-										href={DATA.blogSubmissionUrl || "#"}
-										target="_blank"
-										rel="noopener noreferrer"
+										href={DATA.blogsHref}
 										className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-[#ffcd56] to-[#d5aa45] hover:opacity-90 transition-opacity text-[#16181d] font-bold shadow-md"
 									>
-										Submit Your Blog
+										See Blogs
 										<ArrowUpRight className="w-5 h-5" />
 									</Link>
 									<Link

@@ -119,12 +119,10 @@ const HackathonBlogGuide = () => {
 							</p>
 						</div>
 						<Link
-							href={DATA.blogSubmissionUrl || "#"}
-							target="_blank"
-							rel="noopener noreferrer"
+							href={DATA.blogsHref}
 							className="shrink-0 inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-gradient-to-r from-[#ffcd56] to-[#d5aa45] hover:opacity-90 transition-opacity text-[#16181d] font-bold"
 						>
-							Submit Your Blog
+							See Blogs
 							<ArrowUpRight className="w-5 h-5" />
 						</Link>
 					</div>
@@ -373,12 +371,10 @@ const HackathonBlogGuide = () => {
 						Pro 2.
 					</p>
 					<Link
-						href={DATA.blogSubmissionUrl || "#"}
-						target="_blank"
-						rel="noopener noreferrer"
+						href={DATA.blogsHref}
 						className="shrink-0 inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-gradient-to-r from-[#ffcd56] to-[#d5aa45] hover:opacity-90 transition-opacity text-[#16181d] font-bold"
 					>
-						Submit Your Blog
+						See Blogs
 						<ArrowUpRight className="w-5 h-5" />
 					</Link>
 				</div>

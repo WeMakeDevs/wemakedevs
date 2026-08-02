@@ -1,0 +1,1026 @@
+// Auto-generated from the "Agents of SigNoz" blog challenge submission sheets.
+// Source: top-3-blogs.csv, high-quality.csv, average-quality.csv
+// Do not edit rows by hand — regenerate from the CSVs.
+
+export type Blog = {
+	name: string;
+	title: string;
+	url: string;
+	platform: string;
+};
+
+export type FeaturedBlog = Blog & {
+	linkedin: string;
+	description: string;
+};
+
+// Winner of the pre-event blog challenge, featured on her own.
+export const preEventWinner: FeaturedBlog = {
+	name: "Pooja Bhavani",
+	title: "How I self-hosted SigNoz on AWS EC2 to monitor Claude, one sneaky IP timeout",
+	url: "https://medium.com/@poojabhavani19/how-i-self-hosted-signoz-on-aws-ec2-to-monitor-claude-one-sneaky-ip-timeout-965984f5dc92",
+	platform: "Medium",
+	linkedin: "https://www.linkedin.com/in/poojabhavani08-devops/",
+	description:
+		"Pooja took the pre-event brief literally: stand SigNoz up yourself, point something real at it, and write down exactly what happened. Her dispatch walks through self-hosting SigNoz on an AWS EC2 instance to monitor Claude, end to end, and it does not skip the part where things broke. One sneaky IP timeout quietly held the whole setup up until the telemetry pointed straight at it. That is the honest, reproducible, start-to-finish account the challenge was asking for, and it is the one that won.",
+};
+
+// The three blog-challenge winners.
+export const winningBlogs: Blog[] = [
+	{
+		name: "VinayKumar V A",
+		title: "Debugging a slow Go microservice with SigNoz",
+		url: "https://vinaycharlie07.medium.com/debugging-a-slow-golang-microservice-with-signoz-855c2bfac136",
+		platform: "Medium",
+	},
+	{
+		name: "Manjunath Patil",
+		title: "From exit 139 to HTTP 402 following one payment failure across SigNoz",
+		url: "https://dev.to/tyson1234/from-exit-139-to-http-402-following-one-payment-failure-across-signoz-3196",
+		platform: "Dev.to",
+	},
+	{
+		name: "Aakash Nagpal",
+		title: "Self hosting SigNoz on Kubernetes for compliance from setup to alerts metrics traces and logs",
+		url: "https://medium.com/@aakashnagpal4567/self-hosting-signoz-on-kubernetes-for-compliance-from-setup-to-alerts-metrics-traces-and-logs-830b8b77fe53",
+		platform: "Medium",
+	},
+];
+
+// Field reports the SigNoz team singled out.
+export const standoutBlogs: Blog[] = [
+	{
+		name: "Abdul Talha",
+		title: "Instrument BookStack with OpenTelemetry and SigNoz using Docker",
+		url: "https://dev.to/abdultalha08/instrument-bookstack-with-opentelemetry-and-signoz-using-docker-2191",
+		platform: "Dev.to",
+	},
+	{
+		name: "Abhishek Anand",
+		title: "What actually happens after you click buy now",
+		url: "https://medium.com/@anandabhishek007a1/what-actually-happens-after-you-click-buy-now-51b0bd48b92f",
+		platform: "Medium",
+	},
+	{
+		name: "Abhishek Gupta",
+		title: "My AI agent took 21 seconds to answer what is 2 2 SigNoz found out why in two clicks",
+		url: "https://dev.to/abhishek_gupta_b7379457d6/my-ai-agent-took-21-seconds-to-answer-what-is-2-2-signoz-found-out-why-in-two-clicks-e3h",
+		platform: "Dev.to",
+	},
+	{
+		name: "Abhishek Gupta",
+		title: "I ran Foundry and got 6 Docker containers so I broke into all of them",
+		url: "https://dev.to/agp_marka_62a62d1cdadad70/i-ran-foundry-and-got-6-docker-containers-so-i-broke-into-all-of-them-118h",
+		platform: "Dev.to",
+	},
+	{
+		name: "Agastya Khati",
+		title: "1 75 Seconds is an eternity profiling a satellite AI pipeline with SigNoz waterfalls",
+		url: "https://medium.com/@krishk7/1-75-seconds-is-an-eternity-profiling-a-satellite-ai-pipeline-with-signoz-waterfalls-3dcc7517ebe3?sharedUserId=krishk7",
+		platform: "Medium",
+	},
+	{
+		name: "Akarsh Kushwaha",
+		title: "I added observability to my AI PR agent and it was silently failing the whole time",
+		url: "https://medium.com/@akarshkushwaha593/i-added-observability-to-my-ai-pr-agent-and-it-was-silently-failing-the-whole-time-456b7b966375?sharedUserId=akarshkushwaha593",
+		platform: "Medium",
+	},
+	{
+		name: "Akash Goyal",
+		title: "Custom metrics dashboard for GenAI apps with SigNoz and OpenTelemetry",
+		url: "https://dev.to/akash_goyal/custom-metrics-dashboard-for-genai-apps-with-signoz-and-opentelemetry-1lg",
+		platform: "Dev.to",
+	},
+	{
+		name: "Akshay Mehta",
+		title: "I self hosted SigNoz and fell in love with distributed tracing",
+		url: "https://dev.to/akshay_mehta_d11430adc73b/i-self-hosted-signoz-and-fell-in-love-with-distributed-tracing-2nnc",
+		platform: "Dev.to",
+	},
+	{
+		name: "Anand Mishra",
+		title: "I put OpenTelemetry SigNoz on my 6 microservice Spring Boot app and my 6gb laptop nearly gave up",
+		url: "https://dev.to/godl_am/i-put-opentelemetry-signoz-on-my-6-microservice-spring-boot-app-and-my-6gb-laptop-nearly-gave-up-2edk",
+		platform: "Dev.to",
+	},
+	{
+		name: "Ankur Gupta",
+		title: "Every container was healthy my traces went nowhere",
+		url: "https://dev.to/ankurgupta255/every-container-was-healthy-my-traces-went-nowhere-5g8l",
+		platform: "Dev.to",
+	},
+	{
+		name: "Ansh Gandhi",
+		title: "I let SigNoz watch my AI agent for one evening and the first thing it caught was me",
+		url: "https://medium.com/@anshgandhi512/i-let-signoz-watch-my-ai-agent-for-one-evening-and-the-first-thing-it-caught-was-me-236fceff3154",
+		platform: "Medium",
+	},
+	{
+		name: "Anurag Sati",
+		title: "Gbgfbgf",
+		url: "https://dev.to/anurag_sati_5b77a6578f780/gbgfbgf-5c8j",
+		platform: "Dev.to",
+	},
+	{
+		name: "Aravind Kannan Rathinasabapathi",
+		title: "Every token leaves a trace benchmarking Ollama with SigNoz",
+		url: "https://dev.to/aravindkannan01/every-token-leaves-a-trace-benchmarking-ollama-with-signoz-g53",
+		platform: "Dev.to",
+	},
+	{
+		name: "Arjun Sabu",
+		title: "Blog foresight",
+		url: "https://dev.to/greninja-op/blog-foresight-oi2",
+		platform: "Dev.to",
+	},
+	{
+		name: "Arya Revuru Revuru",
+		title: "How I used SigNoz to stop debugging in the dark",
+		url: "https://dev.to/arya_revuru_c0655c8ab67de/how-i-used-signoz-to-stop-debugging-in-the-dark-5a9o",
+		platform: "Dev.to",
+	},
+	{
+		name: "Aryan Rai",
+		title: "Medium post",
+		url: "https://medium.com/p/abb898abe825?postPublishedType=initial",
+		platform: "Medium",
+	},
+	{
+		name: "Aryan Saket",
+		title: "The job finished the trace didn't",
+		url: "https://dev.to/aryanba50cdaec38a2/the-job-finished-the-trace-didnt-509i",
+		platform: "Dev.to",
+	},
+	{
+		name: "Ashutosh Badapanda",
+		title: "Medium post",
+		url: "https://medium.com/@ashutoshbadapanda02/4bc95ba20083",
+		platform: "Medium",
+	},
+	{
+		name: "Atikur Satter Mondal",
+		title: "Your AI agent passed every test then",
+		url: "https://atikur786.substack.com/p/your-ai-agent-passed-every-test-then",
+		platform: "Substack",
+	},
+	{
+		name: "Avish Maniar",
+		title: "Observing a multi agent LLM system what I learned instrumenting 8 agents with OpenTelemetry",
+		url: "https://dev.to/avish_maniar_0b4d32e2c2ad/observing-a-multi-agent-llm-system-what-i-learned-instrumenting-8-agents-with-opentelemetry-1176",
+		platform: "Dev.to",
+	},
+	{
+		name: "Ayush Milan",
+		title: "I broke my LangChain agent on purpose here's what SigNoz s traces and noz actually caught",
+		url: "https://medium.com/@ayushmilan000/i-broke-my-langchain-agent-on-purpose-heres-what-signoz-s-traces-and-noz-actually-caught-792742105c20?sharedUserId=ayushmilan000",
+		platform: "Medium",
+	},
+	{
+		name: "Bavya Sakthivel",
+		title: "The agent that lied I traced an AI agent with SigNoz",
+		url: "https://medium.com/@bavyasakthivel21/the-agent-that-lied-i-traced-an-ai-agent-with-signoz-bcced02696ca",
+		platform: "Medium",
+	},
+	{
+		name: "Bhavye Kathuria",
+		title: "Tracing a browser only algorithm with SigNoz",
+		url: "https://medium.com/@bhavyekathuria/tracing-a-browser-only-algorithm-with-signoz-4b5aec888a90",
+		platform: "Medium",
+	},
+	{
+		name: "Chethan M",
+		title: "From logprintf to trace context what I learned debugging a Go checkout service with OpenTelemetry",
+		url: "https://dev.to/chethanblgs99/from-logprintf-to-trace-context-what-i-learned-debugging-a-go-checkout-service-with-opentelemetry-5478",
+		platform: "Dev.to",
+	},
+	{
+		name: "Chirayu Rajgarhia",
+		title: "How I instrumented my node js",
+		url: "https://medium.com/@chirayugreat/how-i-instrumented-my-node-js-3ea1414fb7a9",
+		platform: "Medium",
+	},
+	{
+		name: "Dani Muhammad",
+		title: "I put SigNoz on my AI agent to see why it was slow then I found out what it was saving about my",
+		url: "https://dev.to/daaaneh30/i-put-signoz-on-my-ai-agent-to-see-why-it-was-slow-then-i-found-out-what-it-was-saving-about-my-57ck",
+		platform: "Dev.to",
+	},
+	{
+		name: "Deepam Jha",
+		title: "I broke my own API on purpose",
+		url: "https://medium.com/@deepamjha619/i-broke-my-own-api-on-purpose-e57f29a6b4d5",
+		platform: "Medium",
+	},
+	{
+		name: "Devanshu Koli",
+		title: "My login endpoint had a 54 second P99 I was sure I knew why I was wrong",
+		url: "https://dev.to/devanshukoli/my-login-endpoint-had-a-54-second-p99-i-was-sure-i-knew-why-i-was-wrong-4j6e",
+		platform: "Dev.to",
+	},
+	{
+		name: "Devashish Mudigonda",
+		title: "Agent blog",
+		url: "https://devashishmudigonda.github.io/agent-blog/",
+		platform: "GitHub Pages",
+	},
+	{
+		name: "Dhevika M",
+		title: "I built an AI observability platform to understand what happens inside LLM applications",
+		url: "https://dev.to/dhevika_m/i-built-an-ai-observability-platform-to-understand-what-happens-inside-llm-applications-1d66",
+		platform: "Dev.to",
+	},
+	{
+		name: "Dhyaneesh Ds",
+		title: "How whitenoise avoided an estimated",
+		url: "https://dhyaneesh.substack.com/p/how-whitenoise-avoided-an-estimated",
+		platform: "Substack",
+	},
+	{
+		name: "Disha Sonowal",
+		title: "We traced a fake AI agent before building a real one here's what broke",
+		url: "https://dev.to/dishasonowal/we-traced-a-fake-ai-agent-before-building-a-real-one-heres-what-broke-1e7d",
+		platform: "Dev.to",
+	},
+	{
+		name: "Divyansh Singh",
+		title: "Instrumenting a multi stage ML pipeline with OpenTelemetry and SigNoz",
+		url: "https://dev.to/devkvt/instrumenting-a-multi-stage-ml-pipeline-with-opentelemetry-and-signoz-5alj",
+		platform: "Dev.to",
+	},
+	{
+		name: "Divyanshu Anand",
+		title: "95 Seconds to root cause Claude code meets the SigNoz MCP",
+		url: "https://dev.to/divyanshu9151/95-seconds-to-root-cause-claude-code-meets-the-signoz-mcp-2p8n",
+		platform: "Dev.to",
+	},
+	{
+		name: "Divyanshu Kumar",
+		title: "Nobody can tell you why your AI broke here's why",
+		url: "https://dev.to/venom22/nobody-can-tell-you-why-your-ai-broke-heres-why-6k9",
+		platform: "Dev.to",
+	},
+	{
+		name: "Etette Etok",
+		title: "How I instrumented my Flask app with OpenTelemetry in 30 minutes",
+		url: "https://medium.com/@etette/how-i-instrumented-my-flask-app-with-opentelemetry-in-30-minutes-940f67e5aed5",
+		platform: "Medium",
+	},
+	{
+		name: "Gajanan Gitte",
+		title: "I gave my local Llama agent the SigNoz MCP server and asked it to debug itself",
+		url: "https://dev.to/gajanangitte/i-gave-my-local-llama-agent-the-signoz-mcp-server-and-asked-it-to-debug-itself-5909",
+		platform: "Dev.to",
+	},
+	{
+		name: "Gajanan Gitte",
+		title: "The retry tax what a local Llama agents silent retries actually cost measured in self hosted",
+		url: "https://dev.to/gajanangitte/the-retry-tax-what-a-local-llama-agents-silent-retries-actually-cost-measured-in-self-hosted-3io2",
+		platform: "Dev.to",
+	},
+	{
+		name: "Himanshu",
+		title: "We built an air traffic controller",
+		url: "https://furyfist.substack.com/p/we-built-an-air-traffic-controller?r=4xdp4r",
+		platform: "Substack",
+	},
+	{
+		name: "Himanshu Kumar",
+		title: "I traced a multi step LLM agent with self hosted SigNoz one feature sold me",
+		url: "https://dev.to/himanshu_748/i-traced-a-multi-step-llm-agent-with-self-hosted-signoz-one-feature-sold-me-4k71",
+		platform: "Dev.to",
+	},
+	{
+		name: "Ifeoluwa Michael",
+		title: "I self hosted SigNoz on AWS EC2 from scratch every wall I hit and how I fixed it",
+		url: "https://dev.to/ifeoluwa_afolabiafoxcut/i-self-hosted-signoz-on-aws-ec2-from-scratch-every-wall-i-hit-and-how-i-fixed-it-5d72",
+		platform: "Dev.to",
+	},
+	{
+		name: "Ishaan Gupta",
+		title: "I gave my agent an x ray and hit the one SigNoz gotcha nobody warns you about",
+		url: "https://medium.com/@ishaangupta1201/i-gave-my-agent-an-x-ray-and-hit-the-one-signoz-gotcha-nobody-warns-you-about-1b0e0b48fee7",
+		platform: "Medium",
+	},
+	{
+		name: "Ishant Gupta",
+		title: "Everything was green the AI was still wrong",
+		url: "https://dev.to/ishantgupta/everything-was-green-the-ai-was-still-wrong-44j2",
+		platform: "Dev.to",
+	},
+	{
+		name: "James Gururng",
+		title: "How I used SigNoz to prove my AI incident triage fallback actually worked",
+		url: "https://dev.to/james_gurung_f0757b082535/how-i-used-signoz-to-prove-my-ai-incident-triage-fallback-actually-worked-p3e",
+		platform: "Dev.to",
+	},
+	{
+		name: "Jay Bamroliya",
+		title: "My registration endpoint took 53 seconds the insert took 38 ms",
+		url: "https://dev.to/jay_bamroliya_402b72cf784/my-registration-endpoint-took-53-seconds-the-insert-took-38-ms-3go8",
+		platform: "Dev.to",
+	},
+	{
+		name: "Jesutofunmi Mayowa",
+		title: "The 500 that told me nothing until I self hosted SigNoz",
+		url: "https://dev.to/codebreak_er/the-500-that-told-me-nothing-until-i-self-hosted-signoz-3mk9",
+		platform: "Dev.to",
+	},
+	{
+		name: "Jinkumar Ninama",
+		title: "Pushing SigNoz Foundry as a complete devops beginner until my RAM broke",
+		url: "https://dev.to/just_kidding_973ff1ca549b/pushing-signoz-foundry-as-a-complete-devops-beginner-until-my-ram-broke-3blp",
+		platform: "Dev.to",
+	},
+	{
+		name: "Kareena Kumari",
+		title: "From a slow API to a visible bottleneck a hands on experiment with distributed tracing using",
+		url: "https://medium.com/@kareenaan029/from-a-slow-api-to-a-visible-bottleneck-a-hands-on-experiment-with-distributed-tracing-using-1855a6ed0474",
+		platform: "Medium",
+	},
+	{
+		name: "Krishna Kalani",
+		title: "Tracing invisible AI spend with SigNoz OpenTelemetry and Temporal",
+		url: "https://medium.com/@krishnakalani7/tracing-invisible-ai-spend-with-signoz-opentelemetry-and-temporal-d6d85509c4f1",
+		platform: "Medium",
+	},
+	{
+		name: "Manju Vasanth",
+		title: "My API was 4 seconds slow the fix was 9 characters",
+		url: "https://dev.to/manju_vasanth/my-api-was-4-seconds-slow-the-fix-was-9-characters-51pl",
+		platform: "Dev.to",
+	},
+	{
+		name: "Manthan Kadu",
+		title: "What actually happens inside an AI agent I watched it in SigNoz",
+		url: "https://medium.com/@kadumanthan05/what-actually-happens-inside-an-ai-agent-i-watched-it-in-signoz-3eefd8f85a3c",
+		platform: "Medium",
+	},
+	{
+		name: "Mathavan Elango",
+		title: "From broken images to blazing fast traces how I debugged and connected the OpenTelemetry demo to",
+		url: "https://dev.to/mathavan_e_1ceb4e22a8cdb9/from-broken-images-to-blazing-fast-traces-how-i-debugged-and-connected-the-opentelemetry-demo-to-1mc7",
+		platform: "Dev.to",
+	},
+	{
+		name: "Md Abid Hussain",
+		title: "I built an AI agent to learn observability then let another AI read its telemetry and catch the",
+		url: "https://medium.com/@Abid_/i-built-an-ai-agent-to-learn-observability-then-let-another-ai-read-its-telemetry-and-catch-the-06d02d7fdf2b",
+		platform: "Medium",
+	},
+	{
+		name: "Mehraan A",
+		title: "Catching API attacks in real time a penetration testers guide to SigNoz",
+		url: "https://dev.to/codewithmehru/catching-api-attacks-in-real-time-a-penetration-testers-guide-to-signoz-1973",
+		platform: "Dev.to",
+	},
+	{
+		name: "Metta Surendhar",
+		title: "Installing SigNoz on Windows the fastest way 5 minutes no Docker desktop",
+		url: "https://medium.com/@mettasurendhar/installing-signoz-on-windows-the-fastest-way-5-minutes-no-docker-desktop-eb7c581ff246",
+		platform: "Medium",
+	},
+	{
+		name: "Mohammad Mudassir",
+		title: "My first 3 hours with SigNoz",
+		url: "https://dev.to/mohammad_mudassir_8dc0d0f/my-first-3-hours-with-signoz-1d86",
+		platform: "Dev.to",
+	},
+	{
+		name: "Mohammed Sohail Shaikh",
+		title: "I self hosted SigNoz from my phone fa0",
+		url: "https://open.substack.com/pub/sohailforsure/p/i-self-hosted-signoz-from-my-phone-fa0?utm_source=share&utm_medium=android&r=4otx87",
+		platform: "Substack",
+	},
+	{
+		name: "Mohan Arora",
+		title: "Medium post",
+		url: "https://medium.com/p/df1f4b3f55d2?postPublishedType=initial",
+		platform: "Medium",
+	},
+	{
+		name: "Mohit Raj Sinha",
+		title: "Why every AI agent needs observability a practical guide with SigNoz",
+		url: "https://marstech.hashnode.dev/why-every-ai-agent-needs-observability-a-practical-guide-with-signoz",
+		platform: "Hashnode",
+	},
+	{
+		name: "Mukund Heda",
+		title: "203 AI agents ate my Claude quota with no meter running so I built one and the next agent read it",
+		url: "https://dev.to/mukund_heda_a611dea95c944/203-ai-agents-ate-my-claude-quota-with-no-meter-running-so-i-built-one-and-the-next-agent-read-it-204b",
+		platform: "Dev.to",
+	},
+	{
+		name: "Nikhil Pradhan",
+		title: "I added observability to a Flask app I built two internships ago and found a dead code block while",
+		url: "https://medium.com/@pradhannnikhil446/i-added-observability-to-a-flask-app-i-built-two-internships-ago-and-found-a-dead-code-block-while-6f8656801ecc",
+		platform: "Medium",
+	},
+	{
+		name: "Nikhilesh Kavali",
+		title: "I found a timing gap in AI agent tool calling here's how I traced it with SigNoz",
+		url: "https://dev.to/nikhilesh_k/i-found-a-timing-gap-in-ai-agent-tool-calling-heres-how-i-traced-it-with-signoz-33bd",
+		platform: "Dev.to",
+	},
+	{
+		name: "Nirmal Bam",
+		title: "Self hosting SigNoz on a bare VPS from a Foundry deploy to tracing my own N 1 query",
+		url: "https://medium.com/@codernirmalbam/self-hosting-signoz-on-a-bare-vps-from-a-foundry-deploy-to-tracing-my-own-n-1-query-0e1a569656cd?sharedUserId=codernirmalbam",
+		platform: "Medium",
+	},
+	{
+		name: "Opeyemi Afolabi",
+		title: "How I self hosted SigNoz on a Linux server and everything that went wrong",
+		url: "https://dev.to/opeyemi_afolabi_a9480b0b6/how-i-self-hosted-signoz-on-a-linux-server-and-everything-that-went-wrong-4phm",
+		platform: "Dev.to",
+	},
+	{
+		name: "Oscar Kandir",
+		title: "My AI agent was waiting in line how I traced and fixed hidden sequential LLM calls with SigNoz on",
+		url: "https://dev.to/oscar_kandir_4ce4f97c3d43/my-ai-agent-was-waiting-in-line-how-i-traced-and-fixed-hidden-sequential-llm-calls-with-signoz-on-ia9",
+		platform: "Dev.to",
+	},
+	{
+		name: "Prabin Kumar Nayak",
+		title: "How tracking apps like SigNoz tracks",
+		url: "https://open.substack.com/pub/pknayak556719/p/how-tracking-apps-like-signoz-tracks?utm_campaign=post-expanded-share&utm_medium=web",
+		platform: "Substack",
+	},
+	{
+		name: "Praneeth V P",
+		title: "My AI agent was hallucinating 38 of the time here's how I caught it with SigNoz",
+		url: "https://medium.com/@praneeth.vedalaveni/my-ai-agent-was-hallucinating-38-of-the-time-heres-how-i-caught-it-with-signoz-3a4cef9158b1?postPublishedType=repub",
+		platform: "Medium",
+	},
+	{
+		name: "Prashant Yadav",
+		title: "The N 1 bug that logs can't see my SigNoz flame graph warm up",
+		url: "https://medium.com/@devprashantkyadav/the-n-1-bug-that-logs-cant-see-my-signoz-flame-graph-warm-up-715c7ef0fcaa",
+		platform: "Medium",
+	},
+	{
+		name: "Prateek Kanurkar",
+		title: "I replayed 5 years of git history into SigNoz it silently drops any span older than 15 days",
+		url: "https://dev.to/kanurkarprateek/i-replayed-5-years-of-git-history-into-signoz-it-silently-drops-any-span-older-than-15-days-57hb",
+		platform: "Dev.to",
+	},
+	{
+		name: "Priya Shahi",
+		title: "From 10⁵ iterations to live operations a pre college c java students footprint inside the",
+		url: "https://medium.com/@priyashahimdp2007/from-10%E2%81%B5-iterations-to-live-operations-a-pre-college-c-java-students-footprint-inside-the-fb3acb145b3d",
+		platform: "Medium",
+	},
+	{
+		name: "Protyoya Datta",
+		title: "I self hosted SigNoz built my own instrumented AI agent and broke my laptop along the way",
+		url: "https://medium.com/@meetpro.datta/i-self-hosted-signoz-built-my-own-instrumented-ai-agent-and-broke-my-laptop-along-the-way-59f994e38b12",
+		platform: "Medium",
+	},
+	{
+		name: "Rahul Chandra Padamuttam",
+		title: "Visualizing deep trace hierarchies self hosting SigNoz via Foundry on Windows",
+		url: "https://dev.to/rahulchandra2004/visualizing-deep-trace-hierarchies-self-hosting-signoz-via-foundry-on-windows-5b13",
+		platform: "Dev.to",
+	},
+	{
+		name: "Rahul Madawalkar",
+		title: "I self hosted SigNoz the week its Docker compose died here's the map",
+		url: "https://dev.to/cryptomanrahul/i-self-hosted-signoz-the-week-its-docker-compose-died-heres-the-map-2o1n",
+		platform: "Dev.to",
+	},
+	{
+		name: "Rajdeep Singh",
+		title: "How I self hosted SigNoz on Windows one nasty segfault and all",
+		url: "https://rajdeep01.medium.com/how-i-self-hosted-signoz-on-windows-one-nasty-segfault-and-all-d8ae3e8b0914",
+		platform: "Medium",
+	},
+	{
+		name: "Ritesh Malik",
+		title: "Why my Flask endpoint looked fine until I checked P99",
+		url: "https://medium.com/@riteshmalik21092005/why-my-flask-endpoint-looked-fine-until-i-checked-p99-18dc6d632621",
+		platform: "Medium",
+	},
+	{
+		name: "Rohan Redkar",
+		title: "How I traced a post deployment checkout failure with SigNoz",
+		url: "https://medium.com/@iamrohan2606/how-i-traced-a-post-deployment-checkout-failure-with-signoz-3c5ed69f4e19",
+		platform: "Medium",
+	},
+	{
+		name: "S.Skandha Roshan",
+		title: "I traced my first AI agent with SigNoz and caught a bug hiding in plain sight",
+		url: "https://dev.to/skandha_roshan/i-traced-my-first-ai-agent-with-signoz-and-caught-a-bug-hiding-in-plain-sight-2j7f",
+		platform: "Dev.to",
+	},
+	{
+		name: "Sagar Maurya",
+		title: "We asked SigNoz a question and it actually answered",
+		url: "https://dev.to/sagarmaurya/we-asked-signoz-a-question-and-it-actually-answered-p6o",
+		platform: "Dev.to",
+	},
+	{
+		name: "Sahil Rane",
+		title: "Finding performance bottlenecks before your users do a deep dive into SigNoz OpenTelemetry",
+		url: "https://medium.com/@sahilrane132007/finding-performance-bottlenecks-before-your-users-do-a-deep-dive-into-signoz-opentelemetry-3a8f415d8bcb",
+		platform: "Medium",
+	},
+	{
+		name: "Sakshi Singh",
+		title: "I built a trace funnel over my AI agent the conversion rate came back nan",
+		url: "https://medium.com/@sakshisinghh0101/i-built-a-trace-funnel-over-my-ai-agent-the-conversion-rate-came-back-nan-dabefbd0a5c9",
+		platform: "Medium",
+	},
+	{
+		name: "Samip Ghimire",
+		title: "Jumping from a log line to the exact trace that caused it with self hosted SigNoz",
+		url: "https://dev.to/samip_ghimire_5263151b464/jumping-from-a-log-line-to-the-exact-trace-that-caused-it-with-self-hosted-signoz-4bcj",
+		platform: "Dev.to",
+	},
+	{
+		name: "Samuel Dahunsi",
+		title: "What a corrupted ClickHouse binary taught me about self hosting SigNoz",
+		url: "https://dev.to/psalmuel1st/what-a-corrupted-clickhouse-binary-taught-me-about-self-hosting-signoz-15f2",
+		platform: "Dev.to",
+	},
+	{
+		name: "Sarthak Kumar",
+		title: "I thought SigNoz was just a dashboard",
+		url: "https://medium.com/@realsarthakkumar/i-thought-signoz-was-just-a-dashboard-acc4c0d099ad?sharedUserId=realsarthakkumar",
+		platform: "Medium",
+	},
+	{
+		name: "Sarthak Rawat",
+		title: "My AI support bot was slow then SigNoz told me my alert would fire in 158 years",
+		url: "https://dev.to/shogun_the_grt/my-ai-support-bot-was-slow-then-signoz-told-me-my-alert-would-fire-in-158-years-1f5f",
+		platform: "Dev.to",
+	},
+	{
+		name: "Shahnoor Mahesar",
+		title: "Don't wait for users to report outages build a real time alerting pipeline with SigNoz",
+		url: "https://dev.to/shahnoor_mahesar/dont-wait-for-users-to-report-outages-build-a-real-time-alerting-pipeline-with-signoz-8bm",
+		platform: "Dev.to",
+	},
+	{
+		name: "Shivam Singh",
+		title: "What broke when I self hosted SigNoz on Windows",
+		url: "https://dev.to/shivcodez/what-broke-when-i-self-hosted-signoz-on-windows-4noj",
+		platform: "Dev.to",
+	},
+	{
+		name: "Shobhit Kapoor Kapoor",
+		title: "The 12 ms failure that changed how I observe my AI tax agent",
+		url: "https://medium.com/@shobhit1kapoor/the-12-ms-failure-that-changed-how-i-observe-my-ai-tax-agent-2079305a522e?sharedUserId=shobhit1kapoor",
+		platform: "Medium",
+	},
+	{
+		name: "Shubham Singh",
+		title: "How I spotted a slow release in SigNoz using one OTel attribute",
+		url: "https://dev.to/1shubham7/how-i-spotted-a-slow-release-in-signoz-using-one-otel-attribute-3nb",
+		platform: "Dev.to",
+	},
+	{
+		name: "Siddhant Rai",
+		title: "SigNoz OpenTelemetry hidden HTTP 200 failure",
+		url: "https://siddhantt.hashnode.dev/signoz-opentelemetry-hidden-http-200-failure",
+		platform: "Hashnode",
+	},
+	{
+		name: "Siddhant Shivam",
+		title: "31 Spans and not a single token instrumenting an AI agent memory with SigNoz",
+		url: "https://medium.com/@siddhant.shivam.05/31-spans-and-not-a-single-token-instrumenting-an-ai-agent-memory-with-signoz-60a6f2729883?sharedUserId=siddhant.shivam.05",
+		platform: "Medium",
+	},
+	{
+		name: "Siddhartha Bhattarai",
+		title: "Our AI agent looked fine SigNoz showed us it was not",
+		url: "https://dev.to/siddhartha_bhattarai_a084/our-ai-agent-looked-fine-signoz-showed-us-it-was-not-19la",
+		platform: "Dev.to",
+	},
+	{
+		name: "Srinivasa Rithik Ghantasala",
+		title: "I started preparing for a hackathon",
+		url: "https://rithikengineering.substack.com/p/i-started-preparing-for-a-hackathon",
+		platform: "Substack",
+	},
+	{
+		name: "Srinjoy Roy",
+		title: "Tracing what my LLM app actually sends and spends self hosting SigNoz for GenAI observability",
+		url: "https://medium.com/@srinjoy356/tracing-what-my-llm-app-actually-sends-and-spends-self-hosting-signoz-for-genai-observability-b555adb7203d",
+		platform: "Medium",
+	},
+	{
+		name: "Sufiyan Khan S",
+		title: "Two of the three bugs I found with SigNoz weren't in my code",
+		url: "https://dev.to/sufiyan799/two-of-the-three-bugs-i-found-with-signoz-werent-in-my-code-4hhc",
+		platform: "Dev.to",
+	},
+	{
+		name: "Sumit Mishra",
+		title: "My headless LinkedIn bot fails silently until I point SigNoz at it",
+		url: "https://dev.to/sumit_mishra_cb22d5be5f02/my-headless-linkedin-bot-fails-silently-until-i-point-signoz-at-it-4ce6",
+		platform: "Dev.to",
+	},
+	{
+		name: "Sushant Pargaonkar",
+		title: "Your evals are lying to you",
+		url: "https://open.substack.com/pub/sushant7/p/your-evals-are-lying-to-you?r=1iscmy&utm_campaign=post-expanded-share&utm_medium=post%20viewer",
+		platform: "Substack",
+	},
+	{
+		name: "Sushma Koteswari Marri",
+		title: "Traces logs dashboards alerts what I actually learned self hosting SigNoz",
+		url: "https://medium.com/@sushmakoteswari/traces-logs-dashboards-alerts-what-i-actually-learned-self-hosting-signoz-053a38b79b6f?sharedUserId=sushmakoteswari",
+		platform: "Medium",
+	},
+	{
+		name: "Tanmay Hathile",
+		title: "How I cut AuthZ P99 latency from 42s to 120ms using OpenTelemetry",
+		url: "https://dev.to/yobodance/how-i-cut-authz-p99-latency-from-42s-to-120ms-using-opentelemetry-1ckd",
+		platform: "Dev.to",
+	},
+	{
+		name: "Trushna Purohit",
+		title: "How I monitored LLM token usage in a Go AI service using OpenTelemetry with MCP",
+		url: "https://dev.to/bhavesh_az/how-i-monitored-llm-token-usage-in-a-go-ai-service-using-opentelemetry-with-mcp-cme",
+		platform: "Dev.to",
+	},
+	{
+		name: "Utkarsh Ranjan",
+		title: "The silent war in your database how I uncovered why migrations get stuck",
+		url: "https://medium.com/@uk.ranjan101/the-silent-war-in-your-database-how-i-uncovered-why-migrations-get-stuck-d60bd8235eb0",
+		platform: "Medium",
+	},
+	{
+		name: "Uzair",
+		title: "Cracking the black box how I caught a runaway AI agent using self hosted SigNoz and OpenTelemetry",
+		url: "https://dev.to/uzair_43482468fbde1f12452/cracking-the-black-box-how-i-caught-a-runaway-ai-agent-using-self-hosted-signoz-and-opentelemetry-24ph",
+		platform: "Dev.to",
+	},
+	{
+		name: "Vaibhav Arora",
+		title: "Observing 100s of AI agent conversations in real time with SigNoz",
+		url: "https://medium.com/@aroravaibhav102/observing-100s-of-ai-agent-conversations-in-real-time-with-signoz-edc58d4ba12a",
+		platform: "Medium",
+	},
+	{
+		name: "Vaibhav Mittal",
+		title: "Self hosting SigNoz notes from a day of actually running it",
+		url: "https://dev.to/vaibhav_mittal_ac22a2c5d6/self-hosting-signoz-notes-from-a-day-of-actually-running-it-14ph",
+		platform: "Dev.to",
+	},
+	{
+		name: "Vaishnav Verma",
+		title: "How I caught a silent payment outage across 7 microservices using SigNoz OpenTelemetry",
+		url: "https://dev.to/vaishnavxblog/how-i-caught-a-silent-payment-outage-across-7-microservices-using-signoz-opentelemetry-2afg",
+		platform: "Dev.to",
+	},
+	{
+		name: "Vicky Avhad",
+		title: "I already had Grafana Loki Prometheus here's what clicked when I self hosted SigNoz anyway",
+		url: "https://dev.to/vickyavh7/i-already-had-grafana-loki-prometheus-heres-what-clicked-when-i-self-hosted-signoz-anyway-h2d",
+		platform: "Dev.to",
+	},
+	{
+		name: "Vinayak Sonthalia",
+		title: "I let Claude code investigate a payment failure through SigNoz MCP and it flagged my fake data",
+		url: "https://vinayaksonthalia.medium.com/i-let-claude-code-investigate-a-payment-failure-through-signoz-mcp-and-it-flagged-my-fake-data-a3515f80f636",
+		platform: "Medium",
+	},
+	{
+		name: "Vishruth Vayu Rodda",
+		title: "Debugging the black box my first week with SigNoz",
+		url: "https://dev.to/vishruthvayu/debugging-the-black-box-my-first-week-with-signoz-1gn2",
+		platform: "Dev.to",
+	},
+	{
+		name: "Yahid Basha Thippaluri",
+		title: "My model got punished for writing better I found out three months later in one query",
+		url: "https://dev.to/yahid_basha/my-model-got-punished-for-writing-better-i-found-out-three-months-later-in-one-query-1edg",
+		platform: "Dev.to",
+	},
+	{
+		name: "Yaman Sarabariya",
+		title: "Our AI examiner was a black box SigNoz told us what a student actually costs",
+		url: "https://blog.yamansarabariya.com.np/our-ai-examiner-was-a-black-box-signoz-told-us-what-a-student-actually-costs",
+		platform: "blog.yamansarabariya.com.np",
+	},
+	{
+		name: "Yash Parwani",
+		title: "I broke my own payments service on purpose then asked an AI to snitch on it",
+		url: "https://medium.com/@parwaniy6/i-broke-my-own-payments-service-on-purpose-then-asked-an-ai-to-snitch-on-it-102b20797582",
+		platform: "Medium",
+	},
+	{
+		name: "Yash Sakhare",
+		title: "How I tracked down a database latency anomaly in a FastAPI app using SigNoz OTel",
+		url: "https://dev.to/yash_sakhare_95b487bbca54/how-i-tracked-down-a-database-latency-anomaly-in-a-fastapi-app-using-signoz-otel-3bhg",
+		platform: "Dev.to",
+	},
+	{
+		name: "Yashi Gupta",
+		title: "The service that looked perfectly healthy and was screaming into the void",
+		url: "https://medium.com/@yashig406/the-service-that-looked-perfectly-healthy-and-was-screaming-into-the-void-1179dd47287a?sharedUserId=yashig406",
+		platform: "Medium",
+	},
+	{
+		name: "Yogita Vohra",
+		title: "I had no idea what observability meant then I added it to my own cybersecurity project",
+		url: "https://medium.com/@krystalthoughts/i-had-no-idea-what-observability-meant-then-i-added-it-to-my-own-cybersecurity-project-3aa76d604366?sharedUserId=krystalthoughts",
+		platform: "Medium",
+	},
+	{
+		name: "Yug Bhatia",
+		title: "I had open telemetry I still couldn't explain my AI agent s failures",
+		url: "https://medium.com/@bhatiayug175/i-had-open-telemetry-i-still-couldnt-explain-my-ai-agent-s-failures-b49cae9050b4?sharedUserId=bhatiayug175",
+		platform: "Medium",
+	},
+];
+
+// Every other published dispatch from the challenge.
+export const communityBlogs: Blog[] = [
+	{
+		name: "Abhishek Vishwakarma",
+		title: "Peek inside the black box why your AI agent needs OpenTelemetry and SigNoz",
+		url: "https://dev.to/abhishek_vishwakarma_8951/peek-inside-the-black-box-why-your-ai-agent-needs-opentelemetry-and-signoz-2koa",
+		platform: "Dev.to",
+	},
+	{
+		name: "Abrar Ahmed",
+		title: "I didn't write a single line of tracing code and SigNoz still told me why my API was slow",
+		url: "https://dev.to/abrar_ahmed_583e13ae94f75/i-didnt-write-a-single-line-of-tracing-code-and-signoz-still-told-me-why-my-api-was-slow-1bgl",
+		platform: "Dev.to",
+	},
+	{
+		name: "Aishwary Gupta",
+		title: "Solution for a slow Spring Boot application",
+		url: "https://medium.com/@aish042004/solution-for-a-slow-spring-boot-application-951926cd3034?sharedUserId=aish042004",
+		platform: "Medium",
+	},
+	{
+		name: "Akshama",
+		title: "From logs to answers my journey self hosting SigNoz",
+		url: "https://medium.com/@chauhanaskhama/from-logs-to-answers-my-journey-self-hosting-signoz-8d0d20e5eaac",
+		platform: "Medium",
+	},
+	{
+		name: "Amandeep Singh",
+		title: "From prompt to output tracking every step of an AI agent with tracey and SigNoz",
+		url: "https://medium.com/@amandeepxsingh/from-prompt-to-output-tracking-every-step-of-an-ai-agent-with-tracey-and-signoz-6374e3070d72",
+		platform: "Medium",
+	},
+	{
+		name: "Anup Bhar",
+		title: "Medium post",
+		url: "https://medium.com/p/c10e62e85702",
+		platform: "Medium",
+	},
+	{
+		name: "Avani Joshi",
+		title: "Scaling beyond code how I built my first AI observability dashboard and made it production ready",
+		url: "https://annujoshi.hashnode.dev/scaling-beyond-code-how-i-built-my-first-ai-observability-dashboard-and-made-it-production-ready",
+		platform: "Hashnode",
+	},
+	{
+		name: "Bilal Feroz",
+		title: "The dashboard said my AI team finished one agent never even started",
+		url: "https://dev.to/bilalferoz/the-dashboard-said-my-ai-team-finished-one-agent-never-even-started-1e0l",
+		platform: "Dev.to",
+	},
+	{
+		name: "Bishal Singh",
+		title: "I added OpenTelemetry to my MERN chat app and finally understood what happens inside every API",
+		url: "https://medium.com/@bishalsinghofcp/i-added-opentelemetry-to-my-mern-chat-app-and-finally-understood-what-happens-inside-every-api-2de16e74063a?postPublishedType=initial",
+		platform: "Medium",
+	},
+	{
+		name: "Darshan Kumar",
+		title: "What my SigNoz dashboard taught me",
+		url: "https://open.substack.com/pub/darshankumar07/p/what-my-signoz-dashboard-taught-me?utm_source=share&utm_medium=android&r=8jj4oc",
+		platform: "Substack",
+	},
+	{
+		name: "Dhiraj Bhor",
+		title: "Monitor your node js app with OpenTelemetry and self hosted SigNoz",
+		url: "https://medium.com/@dhirajbhor11/monitor-your-node-js-app-with-opentelemetry-and-self-hosted-signoz-a4c17fe4cfe2",
+		platform: "Medium",
+	},
+	{
+		name: "Dhruv Sachdev",
+		title: "Instrumenting 5minpastebin com with OpenTelemetry and SigNoz",
+		url: "https://medium.com/@dhruvhsachdev/instrumenting-5minpastebin-com-with-opentelemetry-and-signoz-4dc17228b560?sharedUserId=dhruvhsachdev",
+		platform: "Medium",
+	},
+	{
+		name: "Divesh Yadav",
+		title: "How I hooked up my first Node.js app to SigNoz cloud in 5 minutes without Docker",
+		url: "https://dev.to/divesh_yadav_981d3bfe8adc/how-i-hooked-up-my-first-nodejs-app-to-signoz-cloud-in-5-minutes-without-docker-14jd",
+		platform: "Dev.to",
+	},
+	{
+		name: "Gautam Raj",
+		title: "Studying SigNoz changed how I think about debugging AI systems",
+		url: "https://medium.com/@ashragautam25/studying-signoz-changed-how-i-think-about-debugging-ai-systems-4175d747d5cb?sharedUserId=ashragautam25",
+		platform: "Medium",
+	},
+	{
+		name: "Harish K",
+		title: "My code review bot was silently eating tokens for breakfast",
+		url: "https://ai-by-harish.hashnode.dev/my-code-review-bot-was-silently-eating-tokens-for-breakfast",
+		platform: "Hashnode",
+	},
+	{
+		name: "Harshiya Saxena",
+		title: "Medium post",
+		url: "https://medium.com/p/0a104a3e5172?postPublishedType=initial",
+		platform: "Medium",
+	},
+	{
+		name: "Jatin Kumar",
+		title: "The trace made it in my AI couldn't read it back a real session with the SigNoz MCP server",
+		url: "https://medium.com/@jatinkumar97511/the-trace-made-it-in-my-ai-couldnt-read-it-back-a-real-session-with-the-signoz-mcp-server-efb8b73c49b8",
+		platform: "Medium",
+	},
+	{
+		name: "Jugal Brahmkshatriya",
+		title: "Why print statements cannot save your AI agent mapping asynchronous Chrome to FastAPI lifecycles",
+		url: "https://medium.com/@creativeideas202015/why-print-statements-cannot-save-your-ai-agent-mapping-asynchronous-chrome-to-fastapi-lifecycles-6017437b90f7?sharedUserId=creativeideas202015",
+		platform: "Medium",
+	},
+	{
+		name: "Kavita Malik",
+		title: "My payment API was working but SigNoz",
+		url: "https://open.substack.com/pub/yakshit/p/my-payment-api-was-working-but-signoz?r=6v9ugd&utm_campaign=post-expanded-share&utm_medium=web",
+		platform: "Substack",
+	},
+	{
+		name: "Khush Dave",
+		title: "Building sitepulse how I instrumented my FastAPI app with OpenTelemetry and SigNoz",
+		url: "https://dev.to/khush_dave_18s/building-sitepulse-how-i-instrumented-my-fastapi-app-with-opentelemetry-and-signoz-1c4",
+		platform: "Dev.to",
+	},
+	{
+		name: "Likitha A",
+		title: "My journey setting up SigNoz and OpenTelemetry learning observability through hands on practice",
+		url: "https://medium.com/@likitha1192006/my-journey-setting-up-signoz-and-opentelemetry-learning-observability-through-hands-on-practice-59f2415cf80d",
+		platform: "Medium",
+	},
+	{
+		name: "Lochan Gowda T M",
+		title: "Getting started with SigNoz a beginners journey into observability",
+		url: "https://dev.to/lochangowda10/getting-started-with-signoz-a-beginners-journey-into-observability-4fg0",
+		platform: "Dev.to",
+	},
+	{
+		name: "Mahmadmafaz Ameenbeg",
+		title: "I added an 800ms bug to my Flutter app then traced it with SigNoz",
+		url: "https://medium.com/@mdmafazameenbeg/i-added-an-800ms-bug-to-my-flutter-app-then-traced-it-with-signoz-a01d6aac5aea?sharedUserId=mdmafazameenbeg",
+		platform: "Medium",
+	},
+	{
+		name: "Manisha Patel",
+		title: "Monitor AI app",
+		url: "https://signoz-opentelemetry-guide.blogspot.com/2026/07/monitor-ai-app.html",
+		platform: "Blogger",
+	},
+	{
+		name: "Manpreet Singh",
+		title: "Agents of SigNoz",
+		url: "https://dev.to/manpreet_ss/agents-of-signoz-4d2d",
+		platform: "Dev.to",
+	},
+	{
+		name: "Mohan",
+		title: "Built a broken backend on purpose here's what SigNoz taught me about observability",
+		url: "https://dev.to/mohandotdev/built-a-broken-backend-on-purpose-heres-what-signoz-taught-me-about-observability-5ang",
+		platform: "Dev.to",
+	},
+	{
+		name: "Mohit Jeswani",
+		title: "Self hosting SigNoz on Windows WSL a port fight and a feature that's making me rethink my next",
+		url: "https://medium.com/@jeswanimohit959/self-hosting-signoz-on-windows-wsl-a-port-fight-and-a-feature-thats-making-me-rethink-my-next-75216a55a380",
+		platform: "Medium",
+	},
+	{
+		name: "Nevan R G",
+		title: "In this article ill be using OpenTelemetry to instrument FastAPI and SigNoz to handle monitoring I",
+		url: "https://medium.com/@nevanrg456/in-this-article-ill-be-using-opentelemetry-to-instrument-fastapi-and-signoz-to-handle-monitoring-i-e7004fd43930?sharedUserId=nevanrg456",
+		platform: "Medium",
+	},
+	{
+		name: "Nuthana Sri Ruthvik Vezzu",
+		title: "I gave my AI agent pipeline a nervous system with SigNoz",
+		url: "https://dev.to/vezzu_ruthvik/i-gave-my-ai-agent-pipeline-a-nervous-system-with-signoz-2l1f",
+		platform: "Dev.to",
+	},
+	{
+		name: "Pranjal Singh",
+		title: "Agents of SigNoz my honest hands on experience setting up an open source observability stack",
+		url: "https://agentsofsignoz.hashnode.dev/agents-of-signoz-my-honest-hands-on-experience-setting-up-an-open-source-observability-stack",
+		platform: "Hashnode",
+	},
+	{
+		name: "Prem Maheshwari",
+		title: "Tracking the ghosts in the machine instrumenting asynchronous AI agent workflows with",
+		url: "https://dev.to/scoops/-tracking-the-ghosts-in-the-machine-instrumenting-asynchronous-ai-agent-workflows-with-3bi2",
+		platform: "Dev.to",
+	},
+	{
+		name: "Priyansh Narang",
+		title: "How we self hosted SigNoz to catch a 3 second e commerce silent killer and why trace funnels is",
+		url: "https://medium.com/@priyanshnarang23/how-we-self-hosted-signoz-to-catch-a-3-second-e-commerce-silent-killer-and-why-trace-funnels-is-b904fc06bd9f?sharedUserId=priyanshnarang23",
+		platform: "Medium",
+	},
+	{
+		name: "Priyanshu Jha",
+		title: "From AI black boxes to observable workflows what I learned while building AI observability with",
+		url: "https://medium.com/@Codewithjha/from-ai-black-boxes-to-observable-workflows-what-i-learned-while-building-ai-observability-with-b205bac50b66?sharedUserId=Codewithjha",
+		platform: "Medium",
+	},
+	{
+		name: "Rishabsingh Bhadoriya",
+		title: "My app crashed at 2 am and that's when I understood why distributed tracing matters",
+		url: "https://medium.com/@rishabsinghrajput1912/my-app-crashed-at-2-am-and-thats-when-i-understood-why-distributed-tracing-matters-fcb1f927b91f",
+		platform: "Medium",
+	},
+	{
+		name: "Ritika Saini",
+		title: "Fable 5 just landed in Claude code I instrumented it using SigNoz to see what changed",
+		url: "https://ritikasaini123456.medium.com/fable-5-just-landed-in-claude-code-i-instrumented-it-using-signoz-to-see-what-changed-e4943283197c",
+		platform: "Medium",
+	},
+	{
+		name: "Rohan Jain",
+		title: "Self hosting SigNoz taught me my AI agent needed eyes not a prompt",
+		url: "https://medium.com/@rohanjain200461/self-hosting-signoz-taught-me-my-ai-agent-needed-eyes-not-a-prompt-45a1b8f3adcb",
+		platform: "Medium",
+	},
+	{
+		name: "Sahil Kumar",
+		title: "The alert that woke an agent",
+		url: "https://dev.to/archie_btw/the-alert-that-woke-an-agent-39ll",
+		platform: "Dev.to",
+	},
+	{
+		name: "Sairaamm Bharadwaj Porella",
+		title: "Your AI agent is a distributed system in disguise instrument it with OpenTelemetry and SigNoz",
+		url: "https://dev.to/sairaammbharadwaj/-your-ai-agent-is-a-distributed-system-in-disguise-instrument-it-with-opentelemetry-and-signoz-2e1d",
+		platform: "Dev.to",
+	},
+	{
+		name: "Sanidhya Joshi",
+		title: "From console logs to distributed traces instrumenting my AI PDF chatbot with SigNoz",
+		url: "https://medium.com/@sanidhya.20xx/from-console-logs-to-distributed-traces-instrumenting-my-ai-pdf-chatbot-with-signoz-ad3e62f91b43",
+		platform: "Medium",
+	},
+	{
+		name: "Sharath Reddy",
+		title: "How I instrumented kaiross causal AI LLM on Modal with SigNoz LLM observability in 30 minutes",
+		url: "https://medium.com/@mr.sharath.7/how-i-instrumented-kaiross-causal-ai-llm-on-modal-with-signoz-llm-observability-in-30-minutes-15bff5a645b1",
+		platform: "Medium",
+	},
+	{
+		name: "Siddharth Shukla",
+		title: "Overcoming Docker timeouts deploying SigNoz locally with foundryctl",
+		url: "https://siddharthshukla.hashnode.dev/overcoming-docker-timeouts-deploying-signoz-locally-with-foundryctl",
+		platform: "Hashnode",
+	},
+	{
+		name: "Tanya Garg",
+		title: "Beyond logs building reliable AI agents with SigNoz LLM observability",
+		url: "https://dev.to/tanya_garg_5315/beyond-logs-building-reliable-ai-agents-with-signoz-llm-observability-57k1",
+		platform: "Dev.to",
+	},
+	{
+		name: "Tarun Mhanta",
+		title: "My laptop fought me for an hour before SigNoz finally loaded",
+		url: "https://dev.to/tarunmhanta30/my-laptop-fought-me-for-an-hour-before-signoz-finally-loaded-4g0o",
+		platform: "Dev.to",
+	},
+	{
+		name: "Thirumalaiboobathi B",
+		title: "Everything was green nothing was listening self hosting SigNoz for MCP tool error traces",
+		url: "https://dev.to/thirumalaiboobathi_b_2b20/everything-was-green-nothing-was-listening-self-hosting-signoz-for-mcp-tool-error-traces-148p",
+		platform: "Dev.to",
+	},
+	{
+		name: "Velaga Akshaya",
+		title: "AI incident commander turning observability into intelligent incident response with SigNoz",
+		url: "https://aisystemslab.hashnode.dev/ai-incident-commander-turning-observability-into-intelligent-incident-response-with-signoz",
+		platform: "Hashnode",
+	},
+	{
+		name: "Vivek Jami",
+		title: "A 70x slower query and what tracing",
+		url: "https://vivekjami.substack.com/p/a-70x-slower-query-and-what-tracing",
+		platform: "Substack",
+	},
+];
+
+export const blogCount =
+	1 + winningBlogs.length + standoutBlogs.length + communityBlogs.length;
+
+// Every blog outside the pre-event winner and the top 3 — shown as one flat,
+// equal-weight archive on the blogs page.
+export const otherBlogs: Blog[] = [...standoutBlogs, ...communityBlogs];
+
+// Rounded-off count used in copy, so the exact number is never on the page.
+export const blogCountLabel = "100+";

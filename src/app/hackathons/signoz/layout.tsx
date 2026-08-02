@@ -60,10 +60,10 @@ export default function RootLayout({
 			type: "link",
 		},
 		{
-			name: "Submit Project",
+			name: DATA.cta.label,
 			url: DATA.cta.href,
 			type: "button",
-			openInNewTab: true,
+			openInNewTab: DATA.cta.openInNewTab,
 		},
 	];
 

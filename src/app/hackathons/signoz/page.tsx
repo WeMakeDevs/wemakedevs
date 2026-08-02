@@ -56,7 +56,6 @@ const HackathonPage = () => {
 					description={DATA.description}
 					prize={DATA.prize}
 					cta={DATA.cta}
-					submissionFormUrl={DATA.submissionFormUrl}
 				/>
 			</div>
 

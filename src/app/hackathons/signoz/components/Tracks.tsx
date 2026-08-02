@@ -173,23 +173,21 @@ const Tracks = () => {
 							</div>
 							<div>
 								<h3 className="text-xl font-bold text-[#ffcd56] mb-1">
-									Submit your project
+									See all projects
 								</h3>
 								<p className="text-[#c0c1c3] leading-relaxed">
-									The project submission form is now live.
-									Build across any of the three tracks, then
-									submit your project before the deadline
-									using the form.
+									Submissions are in. Browse everything the
+									agents built across the three tracks, from
+									agent-native workflows to SRE copilots and
+									LLM observability dashboards.
 								</p>
 							</div>
 						</div>
 						<Link
 							href={DATA.cta.href}
-							target="_blank"
-							rel="noopener noreferrer"
 							className="shrink-0 inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl border border-[#ffcd56]/40 bg-[#ffcd56]/10 text-[#ffcd56] font-bold hover:bg-[#ffcd56]/20 transition-colors whitespace-nowrap"
 						>
-							Submit Project
+							See All Projects
 							<ArrowUpRight className="w-5 h-5" />
 						</Link>
 					</div>

@@ -85,7 +85,7 @@ const HackathonRules = async () => {
 							</strong>{" "}
 							Once your project is ready, submit it through the{" "}
 							<Link
-								href={DATA.cta.href}
+								href={DATA.submissionFormUrl}
 								target="_blank"
 								rel="noopener noreferrer"
 								className="text-amber-300 underline hover:text-amber-200"
