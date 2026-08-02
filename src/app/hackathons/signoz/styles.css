@@ -1,38 +1,38 @@
 /* ═══════════════════════════════════════════════════════════════════════════════
-   Agents of SigNoz Edition II — AI Observability Conference theme
+   Agents of SigNoz — "Men in Black" Agency Theme  ·  Premium Classified Edition
    ───────────────────────────────────────────────────────────────────────────────
    Palette
-     ink        deep neutral blacks         #08090B · #0B0C0E · #101116 · #16181d
-     steel      metallic silver             #C7CCD6 · #8b93a7 · rgba(148,163,184,*)
-     white      stark white                 #F5F7FA
-     neon-cyan  cool accent (sparing)       #5FE9FF
-     neon-green signal accent (sparing)     #2BE38B
+     ink        deep classified blacks      #08090B · #0B0C0E · #101116 · #16181d
+     steel      sleek metallic silver       #C7CCD6 · #8b93a7 · rgba(148,163,184,*)
+     white      stark agency white          #F5F7FA
+     neon-cyan  neuralyzer flash (sparing)  #5FE9FF
+     neon-green alien-tech accent (sparing) #2BE38B
      signoz     signature brand orange      #E5502A · #EA6E4A · #FFCD56
    ═══════════════════════════════════════════════════════════════════════════════ */
 
 @import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@400;500;600;700;800;900&display=swap");
 
 .signoz-hackathon {
-	--sz-ink-900: #08090b;
-	--sz-ink-850: #0b0c0e;
-	--sz-ink-800: #101116;
-	--sz-ink-750: #16181d;
-	--sz-steel: #c7ccd6;
-	--sz-steel-dim: #8b93a7;
-	--sz-white: #f5f7fa;
-	--sz-cyan: #5fe9ff;
-	--sz-green: #2be38b;
-	--sz-orange: #e5502a;
-	--sz-amber: #ffcd56;
-	--sz-hairline: rgba(148, 163, 184, 0.16);
-	--sz-hairline-bright: rgba(199, 204, 214, 0.35);
+	--mib-ink-900: #08090b;
+	--mib-ink-850: #0b0c0e;
+	--mib-ink-800: #101116;
+	--mib-ink-750: #16181d;
+	--mib-steel: #c7ccd6;
+	--mib-steel-dim: #8b93a7;
+	--mib-white: #f5f7fa;
+	--mib-cyan: #5fe9ff;
+	--mib-green: #2be38b;
+	--mib-orange: #e5502a;
+	--mib-amber: #ffcd56;
+	--mib-hairline: rgba(148, 163, 184, 0.16);
+	--mib-hairline-bright: rgba(199, 204, 214, 0.35);
 
 	font-family: "Inter", ui-sans-serif, system-ui, -apple-system, sans-serif;
 	-webkit-font-smoothing: antialiased;
 	text-rendering: optimizeLegibility;
 }
 
-/* Telemetry-data feel for small labels, dates & code */
+/* Classified-data feel for small labels, dates & code */
 .signoz-hackathon .font-mono,
 .signoz-hackathon code,
 .signoz-hackathon pre {
@@ -41,88 +41,194 @@
 }
 
 /* ═══════════════════════════════════════════════════════════════════════════════
-   Section eyebrow — one restrained label style shared by every section
-   ═══════════════════════════════════════════════════════════════════════════════ */
-.signoz-hackathon .sz-eyebrow {
-	display: inline-flex;
-	align-items: center;
-	gap: 0.55rem;
-	padding: 0.4rem 0.9rem;
-	border: 1px solid var(--sz-hairline);
-	border-radius: 0.4rem;
-	background: rgba(16, 17, 22, 0.7);
-	font-family: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
-	font-size: 0.6875rem;
-	font-weight: 600;
-	letter-spacing: 0.16em;
-	text-transform: uppercase;
-	color: var(--sz-steel-dim);
-}
-.signoz-hackathon .sz-eyebrow::before {
-	content: "";
-	width: 0.3rem;
-	height: 0.3rem;
-	border-radius: 999px;
-	background: var(--sz-orange);
-	flex-shrink: 0;
-}
-
-/* ═══════════════════════════════════════════════════════════════════════════════
    Keyframes
    ═══════════════════════════════════════════════════════════════════════════════ */
 
-/* ── Conference topic marquee ────────────────────────────────────────────────── */
-@keyframes signoz-marquee {
+/* ── Neuralyzer flash (full-screen subtle) ─────────────────────────────────────── */
+@keyframes neuralyze-flash {
+	0%,
+	92%,
+	100% {
+		opacity: 0;
+	}
+	94%,
+	97% {
+		opacity: 0.9;
+	}
+}
+.signoz-hackathon .neuralyze-flash {
+	animation: neuralyze-flash 11s ease-in-out infinite;
+}
+
+/* ── Radar / scan sweep ──────────────────────────────────────────────────────── */
+@keyframes scan-sweep {
+	0% {
+		transform: translateX(-120%);
+	}
+	100% {
+		transform: translateX(220%);
+	}
+}
+.signoz-hackathon .scan-sweep {
+	animation: scan-sweep 11s linear infinite;
+}
+
+/* ── Slow radar dish spin ────────────────────────────────────────────────────── */
+@keyframes radar-spin {
 	from {
-		transform: translateX(0);
+		transform: rotate(0deg);
 	}
 	to {
-		/* the track renders the topic list twice, so -50% is one seamless loop */
-		transform: translateX(-50%);
+		transform: rotate(360deg);
 	}
 }
-.signoz-hackathon .signoz-marquee-track {
-	animation: signoz-marquee 34s linear infinite;
+.signoz-hackathon .radar-spin {
+	animation: radar-spin 9s linear infinite;
+}
+
+/* ── Float bob ───────────────────────────────────────────────────────────────── */
+@keyframes float-bob {
+	0%,
+	100% {
+		transform: translateY(0);
+	}
+	50% {
+		transform: translateY(-14px);
+	}
+}
+.signoz-hackathon .float-bob {
+	animation: float-bob 6s ease-in-out infinite;
+}
+
+/* ── Telemetry node pulse + edge draw ────────────────────────────────────────── */
+@keyframes sig-pulse {
+	0%,
+	100% {
+		opacity: 1;
+		transform: scale(1);
+	}
+	50% {
+		opacity: 0.5;
+		transform: scale(1.4);
+	}
+}
+@keyframes drawEdge {
+	to {
+		stroke-dashoffset: 0;
+	}
+}
+
+/* ── Status light blink (red alert) ──────────────────────────────────────────── */
+@keyframes alert-blink {
+	0%,
+	100% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 0.25;
+	}
+}
+.signoz-hackathon .alert-blink {
+	animation: alert-blink 1.6s ease-in-out infinite;
+}
+
+/* ── Premium component entrance ──────────────────────────────────────────────── */
+@keyframes mib-rise {
+	from {
+		opacity: 0;
+		transform: translateY(18px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+.signoz-hackathon .mib-rise {
+	animation: mib-rise 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+/* ── Metallic border shimmer ─────────────────────────────────────────────────── */
+@keyframes steel-shimmer {
+	0% {
+		background-position: -200% 0;
+	}
+	100% {
+		background-position: 200% 0;
+	}
 }
 
 /* ═══════════════════════════════════════════════════════════════════════════════
-   Buttons — solid, quiet, no pulse or shine
+   Buttons — sleek metallic shine + neuralyzer cyan flash on hover
    ═══════════════════════════════════════════════════════════════════════════════ */
+@keyframes ctaPulse {
+	0%,
+	100% {
+		box-shadow: 0 6px 20px rgba(229, 80, 42, 0.28), 0 0 0 1px
+			rgba(255, 205, 86, 0.35) inset;
+	}
+	50% {
+		box-shadow: 0 10px 34px rgba(229, 80, 42, 0.45), 0 0 0 1px
+			rgba(255, 205, 86, 0.5) inset;
+	}
+}
 .signoz-hackathon .agent-btn {
+	position: relative;
 	display: inline-flex;
 	align-items: center;
-	justify-content: center;
 	gap: 0.5rem;
-	padding: 0.9rem 1.9rem;
-	font-size: 1rem;
-	font-weight: 600;
+	padding: 0.95rem 2.1rem;
+	font-size: 1.0625rem;
+	font-weight: 800;
 	color: #fff;
-	background: var(--sz-orange);
-	border: 1px solid var(--sz-orange);
-	border-radius: 0.5rem;
+	background: linear-gradient(135deg, #f0764f 0%, #e5502a 55%, #c4421f 100%);
+	border-radius: 0.8rem;
 	text-decoration: none;
-	letter-spacing: 0.01em;
-	box-shadow: 0 2px 10px rgba(229, 80, 42, 0.2);
-	transition: background-color 0.2s ease, border-color 0.2s ease, box-shadow
-		0.2s ease;
+	overflow: hidden;
+	isolation: isolate;
+	transition: transform 0.25s ease, box-shadow 0.25s ease;
+	animation: ctaPulse 2.8s ease-in-out infinite;
+	border: 1px solid rgba(255, 205, 86, 0.5);
+	letter-spacing: 0.02em;
+}
+/* metallic shine that sweeps across on hover */
+.signoz-hackathon .agent-btn::before {
+	content: "";
+	position: absolute;
+	inset: 0;
+	background: linear-gradient(
+		120deg,
+		transparent 20%,
+		rgba(255, 255, 255, 0.55) 50%,
+		transparent 80%
+	);
+	transform: translateX(-130%) skewX(-20deg);
+	transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+	z-index: -1;
 }
 .signoz-hackathon .agent-btn:hover {
-	background: #c4421f;
-	border-color: #c4421f;
-	box-shadow: 0 4px 16px rgba(229, 80, 42, 0.28);
+	transform: scale(1.04) translateY(-2px);
+	box-shadow: 0 14px 38px rgba(229, 80, 42, 0.5), 0 0 22px
+		rgba(95, 233, 255, 0.35), 0 0 0 1px rgba(95, 233, 255, 0.6) inset;
+	border-color: rgba(95, 233, 255, 0.7);
+}
+.signoz-hackathon .agent-btn:hover::before {
+	transform: translateX(130%) skewX(-20deg);
 }
 
-/* Secondary / ghost button: border and colour shift only */
-.signoz-hackathon .sz-ghost-btn {
-	transition: border-color 0.2s ease, color 0.2s ease, background-color 0.2s
-		ease;
+/* Generic premium secondary / ghost button polish (does not alter behavior) */
+.signoz-hackathon .mib-ghost-btn {
+	position: relative;
+	overflow: hidden;
+	transition: border-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease,
+		transform 0.3s ease;
 }
-.signoz-hackathon .sz-ghost-btn:hover {
-	background-color: rgba(199, 204, 214, 0.05);
+.signoz-hackathon .mib-ghost-btn:hover {
+	transform: translateY(-2px);
+	box-shadow: 0 0 18px rgba(95, 233, 255, 0.18);
 }
 
 /* ═══════════════════════════════════════════════════════════════════════════════
-   Blueprint grid — finer, more premium
+   Surveillance grid — finer, more premium
    ═══════════════════════════════════════════════════════════════════════════════ */
 .signoz-hackathon .agency-grid {
 	background-image: linear-gradient(
@@ -134,20 +240,36 @@
 }
 
 /* ═══════════════════════════════════════════════════════════════════════════════
-   Cards — dark surface with a razor-thin metallic hairline
+   Text glow
+   ═══════════════════════════════════════════════════════════════════════════════ */
+.signoz-hackathon .glow-orange {
+	text-shadow: 0 0 26px rgba(229, 80, 42, 0.4), 0 1px 0 rgba(0, 0, 0, 0.4);
+	letter-spacing: 0.01em;
+}
+.signoz-hackathon .glow-green {
+	text-shadow: 0 0 22px rgba(43, 227, 139, 0.45);
+}
+.signoz-hackathon .glow-cyan {
+	text-shadow: 0 0 22px rgba(95, 233, 255, 0.5);
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════════
+   Cards — dark glassmorphism dossier with razor-thin metallic hairline
    ═══════════════════════════════════════════════════════════════════════════════ */
 .signoz-hackathon .dossier-card {
 	position: relative;
 	background: linear-gradient(
 		180deg,
-		rgba(24, 27, 33, 0.78),
-		rgba(15, 16, 20, 0.78)
+		rgba(28, 31, 38, 0.72),
+		rgba(16, 17, 22, 0.72)
 	);
-	backdrop-filter: blur(12px);
-	-webkit-backdrop-filter: blur(12px);
-	border: 1px solid var(--sz-hairline);
-	box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
-	transition: border-color 0.25s ease, box-shadow 0.25s ease;
+	backdrop-filter: blur(14px) saturate(120%);
+	-webkit-backdrop-filter: blur(14px) saturate(120%);
+	border: 1px solid var(--mib-hairline);
+	box-shadow: 0 12px 34px rgba(0, 0, 0, 0.5), 0 1px 0
+		rgba(255, 255, 255, 0.04) inset;
+	transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s
+		ease, border-color 0.35s ease;
 }
 /* top metallic hairline highlight */
 .signoz-hackathon .dossier-card::before {
@@ -158,19 +280,33 @@
 	background: linear-gradient(
 		90deg,
 		transparent,
-		var(--sz-hairline-bright),
+		var(--mib-hairline-bright),
 		transparent
 	);
-	opacity: 0.55;
+	opacity: 0.7;
 	pointer-events: none;
 }
 .signoz-hackathon .dossier-card:hover {
-	border-color: var(--sz-hairline-bright);
-	box-shadow: 0 12px 30px rgba(0, 0, 0, 0.48);
+	transform: translateY(-4px) scale(1.012);
+	border-color: rgba(95, 233, 255, 0.45);
+	box-shadow: 0 22px 48px rgba(0, 0, 0, 0.6), 0 0 24px
+		rgba(95, 233, 255, 0.12), 0 1px 0 rgba(255, 255, 255, 0.06) inset;
+}
+
+/* Reusable glass surface for inline-styled containers */
+.signoz-hackathon .mib-glass {
+	background: linear-gradient(
+		180deg,
+		rgba(24, 27, 34, 0.66),
+		rgba(13, 14, 18, 0.66)
+	) !important;
+	backdrop-filter: blur(14px) saturate(120%);
+	-webkit-backdrop-filter: blur(14px) saturate(120%);
+	border-color: var(--mib-hairline) !important;
 }
 
 /* Glass background only — keeps any existing (often accent-colored) border */
-.signoz-hackathon .sz-glass-bg {
+.signoz-hackathon .mib-glass-bg {
 	background: linear-gradient(
 		180deg,
 		rgba(24, 27, 34, 0.66),
@@ -178,6 +314,34 @@
 	) !important;
 	backdrop-filter: blur(14px) saturate(120%);
 	-webkit-backdrop-filter: blur(14px) saturate(120%);
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════════
+   Hero — title & group-image treatment
+   ═══════════════════════════════════════════════════════════════════════════════ */
+.signoz-hackathon .mib-title-glow {
+	filter: drop-shadow(0 6px 30px rgba(0, 0, 0, 0.6))
+		drop-shadow(0 0 24px rgba(95, 233, 255, 0.12));
+}
+
+/* group/agents image blends to black on every edge (no hard border) */
+.signoz-hackathon .mib-hero-frame {
+	position: relative;
+}
+.signoz-hackathon .mib-hero-img {
+	-webkit-mask-image: radial-gradient(
+		120% 120% at 50% 45%,
+		#000 58%,
+		rgba(0, 0, 0, 0.35) 80%,
+		transparent 100%
+	);
+	mask-image: radial-gradient(
+		120% 120% at 50% 45%,
+		#000 58%,
+		rgba(0, 0, 0, 0.35) 80%,
+		transparent 100%
+	);
+	filter: drop-shadow(0 24px 55px rgba(0, 0, 0, 0.5));
 }
 
 /* ═══════════════════════════════════════════════════════════════════════════════
@@ -207,17 +371,17 @@
 
 .signoz-hackathon nav a:hover,
 .signoz-hackathon header a:hover {
-	color: #ea6e4a !important;
+	color: #5fe9ff !important;
 }
 
 .signoz-hackathon nav[aria-label="secondary nav"] {
 	background-color: rgba(11, 12, 14, 0.82) !important;
 	backdrop-filter: blur(14px) saturate(120%);
 	-webkit-backdrop-filter: blur(14px) saturate(120%);
-	border-color: var(--sz-hairline) !important;
+	border-color: var(--mib-hairline) !important;
 }
 
-/* Sticky section nav bar — premium glass */
+/* Sticky section nav bar — premium classified glass */
 .signoz-hackathon .signoz-sticky-nav {
 	background: linear-gradient(
 		135deg,
@@ -226,11 +390,11 @@
 	);
 	backdrop-filter: blur(16px) saturate(130%);
 	-webkit-backdrop-filter: blur(16px) saturate(130%);
-	box-shadow: 0 8px 28px rgba(0, 0, 0, 0.55), 0 0 0 1px var(--sz-hairline)
+	box-shadow: 0 8px 28px rgba(0, 0, 0, 0.55), 0 0 0 1px var(--mib-hairline)
 		inset;
 	border-radius: 0.85rem;
 	overflow: clip;
-	border: 1px solid var(--sz-hairline-bright);
+	border: 1px solid var(--mib-hairline-bright);
 }
 .signoz-hackathon .signoz-sticky-nav nav[aria-label="secondary nav"],
 .signoz-hackathon .signoz-sticky-nav nav[aria-label="section nav"] {
@@ -244,20 +408,22 @@
 }
 .signoz-hackathon .signoz-sticky-nav a:hover,
 .signoz-hackathon .signoz-sticky-nav button:hover {
-	color: #f5f7fa !important;
-	background-color: rgba(199, 204, 214, 0.08) !important;
+	color: #5fe9ff !important;
+	background-color: rgba(95, 233, 255, 0.1) !important;
 }
 
-/* Apply button in the top header, in SigNoz orange */
+/* Register button in the top header — SigNoz orange with cyan hover edge */
 .signoz-hackathon nav a[class*="bg-primary"] {
 	background-color: #e5502a !important;
 	color: #fff !important;
-	border: 1px solid #e5502a;
-	transition: background-color 0.2s ease, border-color 0.2s ease;
+	border: 1px solid rgba(255, 205, 86, 0.5);
+	transition: background-color 0.25s ease, box-shadow 0.25s ease, border-color
+		0.25s ease;
 }
 .signoz-hackathon nav a[class*="bg-primary"]:hover {
 	background-color: #c4421f !important;
-	border-color: #c4421f;
+	border-color: rgba(95, 233, 255, 0.6);
+	box-shadow: 0 0 18px rgba(95, 233, 255, 0.3);
 }
 
 .signoz-hackathon h2 {
@@ -277,11 +443,12 @@
 	) !important;
 	backdrop-filter: blur(12px);
 	-webkit-backdrop-filter: blur(12px);
-	border-color: var(--sz-hairline) !important;
+	border-color: var(--mib-hairline) !important;
 	transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 .signoz-hackathon #faq [class*="bg-white"]:hover {
-	border-color: var(--sz-hairline-bright) !important;
+	border-color: rgba(95, 233, 255, 0.35) !important;
+	box-shadow: 0 0 20px rgba(95, 233, 255, 0.08);
 }
 .signoz-hackathon #faq button {
 	color: #f5f7fa !important;
@@ -291,18 +458,18 @@
 	color: #c0c5cf !important;
 }
 .signoz-hackathon #faq [class*="pb-4"] a {
-	color: #ea6e4a !important;
+	color: #5fe9ff !important;
 }
 .signoz-hackathon #faq [class*="pb-4"] a:hover {
-	color: #f0906f !important;
+	color: #ffd778 !important;
 }
 .signoz-hackathon #faq code {
-	background: rgba(199, 204, 214, 0.1);
-	border: 1px solid var(--sz-hairline);
+	background: rgba(95, 233, 255, 0.12);
+	border: 1px solid rgba(95, 233, 255, 0.3);
 	border-radius: 4px;
 	padding: 1px 5px;
 	font-size: 0.85em;
-	color: #dde1e8;
+	color: #aef3ff;
 }
 
 /* ── Schedule (shared component) text on dark ────────────────────────────────── */
@@ -314,10 +481,10 @@
 	color: #c0c5cf !important;
 }
 .signoz-hackathon .signoz-schedule a {
-	color: #ea6e4a !important;
+	color: #5fe9ff !important;
 }
 .signoz-hackathon .signoz-schedule .ring-2 {
-	--tw-ring-color: var(--sz-hairline) !important;
+	--tw-ring-color: var(--mib-hairline) !important;
 }
 
 /* Hide scrollbar on the horizontal section nav (mobile) */
@@ -331,7 +498,13 @@
 
 /* Respect reduced-motion preferences */
 @media (prefers-reduced-motion: reduce) {
-	.signoz-hackathon .signoz-marquee-track {
+	.signoz-hackathon .agent-btn,
+	.signoz-hackathon .neuralyze-flash,
+	.signoz-hackathon .scan-sweep,
+	.signoz-hackathon .radar-spin,
+	.signoz-hackathon .float-bob,
+	.signoz-hackathon .alert-blink,
+	.signoz-hackathon .mib-rise {
 		animation: none !important;
 	}
 }

@@ -27,7 +27,7 @@ const angles = [
 	{
 		title: "What I learned",
 		description:
-			"A concept, gotcha, or debugging story from your own work.",
+			"A concept, gotcha, or debugging story from the hackathon.",
 	},
 	{
 		title: "Why / my take",
@@ -106,7 +106,7 @@ const HackathonBlogGuide = () => {
 						<Star className="w-8 h-8 text-[#ffcd56] shrink-0" />
 						<div className="flex-1">
 							<h1 className="text-2xl md:text-3xl font-bold text-[#f5f5f5]">
-								Blog Guide and Checklist
+								Hackathon Blog Guide and Checklist
 							</h1>
 							<p className="text-[#c0c1c3] mt-2">
 								A short guide to help you write something people

@@ -1,29 +1,20 @@
 import type { FaqType } from "@/types";
-import type { StaticImageData } from "next/image";
-import aayush from "./images/speakers/aayush.jpg";
-import adarsh from "./images/speakers/adarsh.jpg";
-import goutham from "./images/speakers/goutham.jpg";
-import kunal from "./images/speakers/kunal.jpg";
-import pranay from "./images/speakers/pranay.jpg";
-import sachin from "./images/speakers/sachin.jpg";
 
 const DATA = {
-	title: "Agents of SigNoz Edition II",
-	titleCard: "Agents of SigNoz Edition II",
-	greeting: "Hello San Francisco",
-	tagline: "AI Observability Conference",
-	// Doors 08:30 PT, close 19:30 PT on Aug 29, 2026 (UTC-7)
-	startDate: "2026-08-29T15:30:00Z",
-	endDate: "2026-08-30T02:30:00Z",
+	title: "Agents of SigNoz",
+	titleCard: "Agents of SigNoz",
+	prize: "MacBook Air, iPad Air, iPhone Air, AirPods Pro 3 / Beats Powerbeats Pro 2 & Job Interviews",
+	startDate: "2026-07-20T00:00:00Z",
+	endDate: "2026-07-26T23:59:00Z",
 	description:
-		"The industry learned to build with AI far faster than it learned to operate it. This conference is where it gets opened, by the engineers instrumenting agents, LLM apps and the infrastructure beneath them.",
+		"If you can't observe your AI agents, you don't own them. Instrument real systems with SigNoz, the OpenTelemetry-native observability platform, and make AI infrastructure fully debuggable.",
 	descriptionCard:
-		"One day, one room, one problem. The AI Observability Conference by WeMakeDevs, sponsored by SigNoz and Bright Data.",
+		"Observe your AI solutions using SigNoz. The agency is recruiting, build agent-native observability with OpenTelemetry.",
 	slug: "signoz",
 	cta: {
-		label: "Apply Now",
-		href: "#register",
-		openInNewTab: false,
+		label: "Submit Project",
+		href: "https://forms.gle/xv1TXSiC54MEWujRA",
+		openInNewTab: true,
 		disabled: false,
 	},
 	submissionFormUrl: "",
@@ -31,304 +22,7 @@ const DATA = {
 	blogWinnersDate: "July 19, 2026",
 	slackUrl: "http://signoz.io/slack",
 	githubUrl: "https://github.com/SigNoz/signoz",
-	contactEmail: "contact@wemakedevs.org",
 };
-
-const venue = {
-	name: "Bright Data",
-	addressLines: [
-		"625 2nd St, Suite 101",
-		"San Francisco, CA 94107",
-		"United States",
-	],
-	shortAddress: "625 2nd St, San Francisco",
-	dateLabel: "Saturday, August 29, 2026",
-	dateShort: "Aug 29, 2026",
-	mapEmbedUrl:
-		"https://maps.google.com/maps?q=Bright+Data+625+2nd+St+Suite+101+San+Francisco+CA+94107&z=16&output=embed",
-	/** Bright Data's SF office on Google Maps. */
-	directionsUrl: "https://maps.app.goo.gl/PbDn3UxLUWU4jzSXA",
-	description:
-		"Bright Data's community space for developers and AI builders in San Francisco. One room, one day, everyone shipping.",
-	travel: [
-		{
-			mode: "Caltrain",
-			detail: "4th & King is about a 10 minute walk. Best option from the Peninsula and South Bay.",
-		},
-		{
-			mode: "Muni",
-			detail: "The T Third and N Judah both stop within a few blocks; several bus lines run along 2nd and Bryant.",
-		},
-		{
-			mode: "BART",
-			detail: "Montgomery is roughly a 15 minute walk, or one short Muni hop.",
-		},
-		{
-			mode: "Driving",
-			detail: "Street parking in South Beach is tight on weekends. Use a nearby garage rather than circling.",
-		},
-		{
-			mode: "Access",
-			detail: "Photo ID needed for building access. The venue is on one level and step-free from the street entrance.",
-		},
-	],
-	facilities: [
-		{ title: "Doors", detail: "08:30 registration, 09:15 first session." },
-		{
-			title: "Food",
-			detail: "Breakfast, lunch and snacks are provided. Dietary needs are collected in the form.",
-		},
-		{
-			title: "Wifi & power",
-			detail: "Venue wifi and power at the workshop and clinic tables. Bring your own adapter.",
-		},
-		{
-			title: "Quiet space",
-			detail: "A quiet room is available all day away from the stages.",
-		},
-	],
-};
-
-const marqueeTopics = [
-	"OpenTelemetry",
-	"AI Agent Tracing",
-	"Token Cost",
-	"LLM Observability",
-	"SRE Copilots",
-	"Self-Hosted Inference",
-	"Dashboards & SLOs",
-	"Observability Clinic",
-	"Open Source",
-];
-
-type Speaker = {
-	name: string;
-	role: string;
-	org: string;
-	photo: StaticImageData;
-	talk?: string;
-	link?: string;
-};
-
-const speakers: Speaker[] = [
-	{
-		name: "Kunal Kushwaha",
-		role: "Founder",
-		org: "WeMakeDevs",
-		photo: kunal,
-		talk: "Keynote: The Skills That Survive: Engineering When AI Writes the Code",
-		link: "https://www.linkedin.com/in/kunal-kushwaha/",
-	},
-	{
-		name: "Pranay Prateek",
-		role: "Co-founder",
-		org: "SigNoz",
-		photo: pranay,
-		talk: "Keynote: Every Signal in One Place: Observability Built for the AI Era",
-		link: "https://www.linkedin.com/in/pranay01/",
-	},
-	{
-		name: "Aayush Sharma",
-		role: "Developer Relations Engineer",
-		org: "SigNoz",
-		photo: aayush,
-		talk: "Observe Your AI Agents with SigNoz",
-		link: "https://www.linkedin.com/in/superaayush/",
-	},
-	{
-		name: "Goutham Karthi",
-		role: "Engineering",
-		org: "SigNoz",
-		photo: goutham,
-		talk: "Workshop: Using SigNoz to Debug Your Applications",
-		link: "https://www.linkedin.com/in/goutham-karthi-6b0468186/",
-	},
-	{
-		name: "Sachin Sharma",
-		role: "CMO",
-		org: "WeMakeDevs",
-		photo: sachin,
-		talk: "Scaling Developer Products and Building Right DevEx",
-		link: "https://www.linkedin.com/in/sachin-sharma-648b1b200/",
-	},
-	{
-		name: "Adarsh Dubey",
-		role: "Software Developer",
-		org: "Google DeepMind",
-		photo: adarsh,
-		talk: "Shipping AI You Can Actually Debug",
-		link: "https://www.linkedin.com/in/dubeyadarsh/",
-	},
-];
-
-type ScheduleKind = "main" | "work" | "clinic" | "break";
-
-type ScheduleSlot = {
-	time: string;
-	kind: ScheduleKind;
-	format?: string;
-	title: string;
-	who?: string;
-	duration?: string;
-};
-
-/** Saturday, August 29, 2026. All times Pacific. */
-const schedule: ScheduleSlot[] = [
-	{
-		time: "08:30",
-		kind: "break",
-		title: "Registration, coffee, breakfast",
-	},
-	{
-		time: "09:15",
-		kind: "main",
-		title: "Welcome and how the day works",
-		who: "Organiser",
-	},
-	{
-		time: "09:30",
-		kind: "main",
-		format: "Keynote",
-		title: "The Skills That Survive: Engineering When AI Writes the Code",
-		who: "Kunal Kushwaha · Founder, WeMakeDevs",
-		duration: "40 min",
-	},
-	{
-		time: "10:10",
-		kind: "main",
-		format: "Keynote",
-		title: "Every Signal in One Place: Observability Built for the AI Era",
-		who: "Pranay Prateek · Co-founder, SigNoz",
-		duration: "40 min",
-	},
-	{ time: "10:50", kind: "break", title: "Break" },
-	{
-		time: "11:05",
-		kind: "main",
-		format: "Open",
-		title: "Lightning talks: five 5-min slots, sign-up sheet at registration",
-		who: "Community",
-	},
-	{
-		time: "11:30",
-		kind: "main",
-		format: "Talk",
-		title: "Observe Your AI Agents with SigNoz",
-		who: "Aayush Sharma · Developer Relations Engineer, SigNoz",
-		duration: "35 min",
-	},
-	{ time: "12:05", kind: "break", title: "Lunch" },
-	{
-		time: "13:00",
-		kind: "work",
-		format: "Workshop",
-		title: "Using SigNoz to Debug Your Applications",
-		who: "Goutham Karthi · Engineering, SigNoz",
-		duration: "90 min, laptops out",
-	},
-	{ time: "14:30", kind: "break", title: "Break" },
-	{
-		time: "14:45",
-		kind: "main",
-		format: "Talk",
-		title: "Scaling Developer Products and Building Right DevEx",
-		who: "Sachin Sharma · CMO, WeMakeDevs",
-		duration: "35 min",
-	},
-	{
-		time: "15:20",
-		kind: "main",
-		format: "Talk",
-		title: "Shipping AI You Can Actually Debug",
-		who: "Adarsh Dubey · Software Developer, Google DeepMind",
-		duration: "40 min",
-	},
-	{ time: "16:00", kind: "break", title: "Break" },
-	{
-		time: "16:15",
-		kind: "clinic",
-		format: "Open",
-		title: "Observability clinic: bring your stack, get it instrumented with the SigNoz team",
-		who: "All speakers",
-		duration: "50 min",
-	},
-	{
-		time: "17:15",
-		kind: "main",
-		title: "Closing remarks",
-		who: "Organiser",
-	},
-	{
-		time: "17:30",
-		kind: "break",
-		title: "Networking until 19:30",
-	},
-];
-
-const scheduleLegend: { kind: ScheduleKind; label: string }[] = [
-	{ kind: "main", label: "Main stage" },
-	{ kind: "work", label: "Workshop room" },
-	{ kind: "clinic", label: "Observability clinic" },
-	{ kind: "break", label: "Break / social" },
-];
-
-const sponsors = [
-	{
-		tier: "Presenting Sponsor",
-		name: "SigNoz",
-		accent: "#e5502a",
-		blurb: "The open-source, OpenTelemetry-native observability platform. Traces, metrics, logs, dashboards and token cost in one place, self-hosted or managed, with no proprietary agents and no lock-in. SigNoz leads the main-stage programme and runs the hands-on workshop track.",
-		links: [
-			{ label: "signoz.io", href: "https://signoz.io" },
-			{ label: "GitHub", href: "https://github.com/SigNoz/signoz" },
-			{ label: "Slack", href: "http://signoz.io/slack" },
-		],
-	},
-	{
-		tier: "Venue & Host Sponsor",
-		name: "Bright Data",
-		accent: "#9fc0ff",
-		blurb: "Bright Data hosts the conference at their community space for developers and AI builders in SF. The venue provides the main stage, the workshop room and the space used for the afternoon observability clinic.",
-		links: [
-			{ label: "brightdata.com", href: "https://brightdata.com" },
-			{ label: "See the venue", href: "#venue" },
-		],
-	},
-];
-
-/** Sessions streamed during Edition 1 of Agents of SigNoz. */
-const previousWebinars = [
-	{
-		title: "Streamlining AI Agent Observability",
-		date: "Streamed live on Jul 20, 2026",
-		videoId: "rr9YHSV5bj0",
-		blurb: "The Edition 1 kickoff: a deep dive into building with SigNoz and OpenTelemetry, live demos and community questions.",
-	},
-	{
-		title: "SigNoz MCP Overview",
-		date: "Streamed live on Jul 19, 2026",
-		videoId: "c0bvA5Q9n2U",
-		blurb: "Put the SigNoz MCP server to work. Query telemetry, automate dashboards and debug with your coding agent.",
-	},
-	{
-		title: "Office Hours: Blog Reviews",
-		date: "Streamed live on Jul 18, 2026",
-		videoId: "EzKyA43AqGg",
-		blurb: "Live feedback on draft blogs before publishing, tightening the story so the experience shines.",
-	},
-	{
-		title: "Office Hours: Dashboard Building Challenge",
-		date: "Streamed live on Jul 16, 2026",
-		videoId: "-tDZIPRxFJw",
-		blurb: "Building SigNoz dashboards live: the Query Builder and panel design, turning traces, metrics and logs into insight.",
-	},
-	{
-		title: "Office Hours: Blog Outline Workshop",
-		date: "Streamed live on Jul 15, 2026",
-		videoId: "1OiN39v1lFo",
-		blurb: "Bring a blog idea, leave with an outline: structuring the write-up, picking an angle and deciding what to show.",
-	},
-];
 
 const navLinks = [
 	{
@@ -337,9 +31,9 @@ const navLinks = [
 		page: "overview",
 	},
 	{
-		href: "/hackathons/signoz/schedule",
-		label: "Schedule",
-		page: "schedule",
+		href: "/hackathons/signoz/rules",
+		label: "Rules",
+		page: "rules",
 	},
 	{
 		href: "/hackathons/signoz/resources",
@@ -351,61 +45,204 @@ const navLinks = [
 		label: "Blog Guide",
 		page: "blog-guide",
 	},
+	{
+		href: "/hackathons/signoz/schedule",
+		label: "Schedule",
+		page: "schedule",
+	},
 ];
 
 const faqs: FaqType[] = [
 	{
-		question: "Who is this conference for?",
-		answer: "Engineers who run things in production: platform and infrastructure engineers, SREs, backend and full-stack developers, and anyone building with LLMs or agents who has hit the wall of not being able to debug them. Founders and engineering leaders are welcome, but the programme is technical first.",
+		question: "What are the eligibility criteria for this hackathon?",
+		answer: "You must be above 16 years of age and follow the WeMakeDevs hackathon protocols. Teams can have 1-4 members. No neuralyzer required, just a willingness to see everything your systems are doing.",
 	},
 	{
-		question: "Is it really free?",
-		answer: "Yes. Entry is free and includes food and swag. Seats at the venue are limited, so you apply for a place rather than buy a ticket. There is no paid tier and no upsell.",
+		question: "Do I need prior experience with SigNoz?",
+		answer: "Nope. SigNoz is open source and well documented. Start with the <a href='https://signoz.io/docs/introduction/' target='_blank' rel='noopener noreferrer' class='text-amber-300 underline hover:text-amber-200'>introduction</a>, read the <a href='https://signoz.io/docs/' target='_blank' rel='noopener noreferrer' class='text-amber-300 underline hover:text-amber-200'>docs</a>, and join the <a href='http://signoz.io/slack' target='_blank' rel='noopener noreferrer' class='text-amber-300 underline hover:text-amber-200'>SigNoz Slack</a> for help. You'll have traces, metrics, and logs flowing in minutes.",
 	},
 	{
-		question: "What happens after I apply?",
-		answer: "We read applications in batches and email you either way, so there is nothing to check back on. If the room fills before we reach yours, you stay on the list and we release seats as plans change.",
+		question: "Is the theme really open-ended?",
+		answer: "Pick one of the three tracks or bring your own idea. Build anything, agents, dashboards, instrumentation libraries, SRE copilots, as long as it uses or integrates with SigNoz. The example builds on this page are just inspiration, not requirements.",
 	},
 	{
-		question: "Do I need to know SigNoz or OpenTelemetry already?",
-		answer: "No. The afternoon workshop starts from zero and gets you to a working trace. Main-stage talks are designed to be followable either way. If you want a head start, read the <a href='https://signoz.io/docs/introduction/' target='_blank' rel='noopener noreferrer' class='text-amber-300 underline hover:text-amber-200'>SigNoz introduction</a> beforehand.",
+		question: "I registered solo. Can I switch to a team?",
+		answer: "Of course. If you went solo and now want to assemble your own agency, just submit the registration form again with your team name and your profile will be updated automatically.",
 	},
 	{
-		question: "What is the observability clinic?",
-		answer: "An open session at 16:15 where the SigNoz team sits down with whatever you brought, whether that is your service, your agent or your pipeline, and helps you get it instrumented. It is entirely optional and you can drop in for as long as you like.",
+		question: "Can I use existing projects or prior work?",
+		answer: "All projects must be built from scratch after the hackathon begins. Using starter templates, SigNoz, OpenTelemetry SDKs, integrations, and boilerplates is permitted. Submitting a pre-existing project with minimal changes is not allowed.",
 	},
 	{
-		question: "What should I bring?",
-		answer: "A laptop and charger if you want to do the workshop or the observability clinic. Photo ID for building access at 625 2nd St. That is it.",
+		question: "How do I set up SigNoz?",
+		answer: "The easiest way is Foundry, which installs both SigNoz and its MCP server in one step. Follow the <a href='https://signoz.io/docs/install/docker/' target='_blank' rel='noopener noreferrer' class='text-amber-300 underline hover:text-amber-200'>Foundry quickstart</a> to spin it up with Docker, then instrument your app with OpenTelemetry to start streaming traces, metrics, and logs.",
 	},
 	{
-		question: "Will talks be recorded?",
-		answer: "Main-stage talks are recorded and published on the <a href='https://youtube.com/@WeMakeDevs' target='_blank' rel='noopener noreferrer' class='text-amber-300 underline hover:text-amber-200'>WeMakeDevs YouTube channel</a> afterwards. Workshops are not recorded, since they are hands-on.",
+		question: "Are AI assistants like ChatGPT or Copilot permitted?",
+		answer: "Use of AI tools is permitted but must be declared in your submission. Failure to disclose will result in disqualification.",
 	},
 	{
-		question: "Is there a code of conduct?",
-		answer: "Yes, and it is enforced. This is a harassment-free event for everyone. Report anything to an organiser wearing a staff badge, or email <a href='mailto:contact@wemakedevs.org' class='text-amber-300 underline hover:text-amber-200'>contact@wemakedevs.org</a>.",
+		question: "What tech stack should I use?",
+		answer: "Your project must use or integrate with <a href='https://github.com/SigNoz/signoz' target='_blank' rel='noopener noreferrer' class='text-amber-300 underline hover:text-amber-200'>SigNoz</a> for observability. Beyond that you're free to use any language, framework, or tool. SigNoz is OpenTelemetry-native, so your instrumentation works everywhere with zero vendor lock-in.",
 	},
 	{
-		question: "How do I get there, and is there parking?",
-		answer: "Bright Data is at 625 2nd St, a short walk from Caltrain 4th &amp; King and several Muni lines. Street parking in South Beach is limited on event days; nearby garages are the safer bet. Full details in the venue section above.",
+		question: "How do I submit my project?",
+		answer: "The project submission form is now live. Once your project is ready, submit it through the <a href='https://forms.gle/xv1TXSiC54MEWujRA' target='_blank' rel='noopener noreferrer' class='text-amber-300 underline hover:text-amber-200'>submission form</a> before the deadline. Make sure to include your demo, README, and any required details.",
 	},
 	{
-		question: "Can my company sponsor, or can my community partner?",
-		answer: "Both, yes. Community partners get member tickets plus a logo slot, and sponsorship covers stage time, workshop slots and booth space. Email <a href='mailto:contact@wemakedevs.org' class='text-amber-300 underline hover:text-amber-200'>contact@wemakedevs.org</a>.",
+		question: "Where can I get help during the hackathon?",
+		answer: "Join the <a href='http://signoz.io/slack' target='_blank' rel='noopener noreferrer' class='text-amber-300 underline hover:text-amber-200'>SigNoz Slack</a> for technical support and community discussion. You can also reach WeMakeDevs at <a href='mailto:contact@wemakedevs.org' class='text-amber-300 underline hover:text-amber-200'>contact@wemakedevs.org</a>.",
+	},
+	{
+		question: "Do the job interviews guarantee a job?",
+		answer: "No. Interview opportunities at SigNoz do not guarantee a position, but they're a genuine chance to showcase your skills directly to the team building the open-source observability platform.",
 	},
 ];
 
-export {
-	DATA,
-	navLinks,
-	faqs,
-	venue,
-	marqueeTopics,
-	speakers,
-	schedule,
-	scheduleLegend,
-	sponsors,
-	previousWebinars,
-};
-export type { Speaker, ScheduleSlot, ScheduleKind };
+const schedule = [
+	{
+		date: "2026-07-15T00:00:00Z",
+		items: [
+			{
+				title: "Office Hours: Blog Outline Workshop",
+				description:
+					"Daily office hours kick off. Bring your blog idea and leave with a solid outline, get help structuring your write-up, picking an angle, and deciding what to show.",
+				time: "2026-07-15T19:30:00+05:30",
+				links: [
+					{
+						platform: "linkedin",
+						url: "https://www.linkedin.com/events/7483068952382889984",
+					},
+					{
+						platform: "youtube",
+						url: "https://www.youtube.com/live/1OiN39v1lFo",
+					},
+				],
+			},
+		],
+	},
+	{
+		date: "2026-07-16T00:00:00Z",
+		items: [
+			{
+				title: "Office Hours: Dashboard Building Challenge",
+				description:
+					"Build SigNoz dashboards live with the team. Learn the Query Builder and panel design hands-on as you turn traces, metrics, and logs into insight.",
+				time: "2026-07-16T19:30:00+05:30",
+				links: [
+					{
+						platform: "linkedin",
+						url: "https://www.linkedin.com/events/7483412214830346240",
+					},
+					{
+						platform: "youtube",
+						url: "https://www.youtube.com/live/-tDZIPRxFJw",
+					},
+				],
+			},
+		],
+	},
+	{
+		date: "2026-07-18T00:00:00Z",
+		items: [
+			{
+				title: "Office Hours: Blog Reviews",
+				description:
+					"Get live feedback on your draft blog before you publish and submit. We'll help you tighten the story and make your experience shine.",
+				time: "2026-07-18T19:30:00+05:30",
+				links: [
+					{
+						platform: "linkedin",
+						url: "https://www.linkedin.com/events/7484156541533679616",
+					},
+					{
+						platform: "youtube",
+						url: "https://www.youtube.com/live/EzKyA43AqGg",
+					},
+				],
+			},
+		],
+	},
+	{
+		date: "2026-07-19T00:00:00Z",
+		items: [
+			{
+				title: "SigNoz MCP Overview",
+				description:
+					"Put the SigNoz MCP server to work. Query telemetry, automate dashboards, and debug with your coding agent using the same observability data.",
+				time: "2026-07-19T19:30:00+05:30",
+				links: [
+					{
+						platform: "linkedin",
+						url: "https://www.linkedin.com/events/7484157531485872128",
+					},
+					{
+						platform: "youtube",
+						url: "https://www.youtube.com/live/c0bvA5Q9n2U",
+					},
+				],
+			},
+			{
+				title: "Blog Challenge Winners Announced",
+				description:
+					"The pre-event blog challenge wraps up today. Self-host SigNoz, send data, explore its features, and write about the one you like the most before now for an early win. The best blogs take their choice of AirPods Pro 3 or Beats Powerbeats Pro 2, announced right before the hackathon kicks off.",
+				time: "2026-07-19T23:59:00+05:30",
+				link: {
+					name: "Submit Your Blog",
+					url: "https://forms.gle/wf9tFYcksrk6P4Zy8",
+				},
+			},
+		],
+	},
+	{
+		date: "2026-07-20T00:00:00Z",
+		items: [
+			{
+				title: "Hackathon Begins: Accept the Mission!",
+				description:
+					"The agency is live. Fire up SigNoz, instrument your systems with OpenTelemetry, and start building observability that sees everything.",
+				time: "2026-07-20T00:00:00Z",
+			},
+			{
+				title: "Streamlining AI Agent Observability",
+				description:
+					"Join the kickoff livestream for a deep dive into building with SigNoz and OpenTelemetry, live demos, and your questions answered as the hackathon gets underway.",
+				time: "2026-07-20T19:30:00+05:30",
+				links: [
+					{
+						platform: "linkedin",
+						url: "https://www.linkedin.com/events/7479842316539736065",
+					},
+					{
+						platform: "youtube",
+						url: "https://youtube.com/live/rr9YHSV5bj0",
+					},
+				],
+			},
+		],
+	},
+	{
+		date: "2026-07-23T00:00:00Z",
+		items: [
+			{
+				title: "Mid-Hackathon Check-in",
+				description:
+					"Share your progress, get feedback from the SigNoz team, and connect with fellow agents in the SigNoz Slack.",
+				time: "2026-07-23T15:00:00Z",
+			},
+		],
+	},
+	{
+		date: "2026-07-26T00:00:00Z",
+		items: [
+			{
+				title: "Final Submissions Due",
+				description:
+					"Submit your project before the deadline through the submission form, including everything required. The agency does not accept late field reports.",
+				time: "2026-07-26T23:59:00+05:30",
+			},
+		],
+	},
+];
+
+export { DATA, navLinks, faqs, schedule };
