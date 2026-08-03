@@ -4126,4 +4126,4 @@ export const submittedProjects: SubmittedProject[] = [
 export const projectCount = submittedProjects.length;
 
 // Rounded-off count used in copy, so the exact number is never on the page.
-export const projectCountLabel = "300+";
+export const projectCountLabel = "350+";

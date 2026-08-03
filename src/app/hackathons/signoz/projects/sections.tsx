@@ -56,45 +56,6 @@ export const BlogGrid = ({ blogs }: { blogs: Blog[] }) => (
 	</div>
 );
 
-// ── Winning blogs (top 3) ─────────────────────────────────────────────────────
-export const WinningBlogCard = ({
-	blog,
-	rank,
-}: {
-	blog: Blog;
-	rank: number;
-}) => (
-	<a
-		href={blog.url}
-		target="_blank"
-		rel="noopener noreferrer"
-		className="group relative flex flex-col gap-4 rounded-2xl p-7 dossier-card border-[#ffcd56]/35 hover:border-[#ffcd56]/70"
-	>
-		<div className="flex items-center justify-between gap-3">
-			<span className="inline-flex items-center justify-center w-11 h-11 rounded-xl bg-gradient-to-br from-[#ffcd56] to-[#e5a12a] text-[#08090b] font-black text-lg shadow-md">
-				{rank}
-			</span>
-			<span className="inline-flex items-center gap-1.5 text-[10px] font-mono font-semibold uppercase tracking-wider text-[#ffd778] bg-[#ffcd56]/10 border border-[#ffcd56]/30 rounded-full px-3 py-1">
-				Top Blog
-			</span>
-		</div>
-		<h3 className="text-lg font-bold text-[#f5f7fa] group-hover:text-[#ffd778] transition-colors leading-snug">
-			{blog.title}
-		</h3>
-		<div className="flex items-center gap-2 text-xs flex-wrap mt-auto">
-			<span className="text-[#c0c1c3] font-semibold">{blog.name}</span>
-			<span className="text-[#4b5162]">·</span>
-			<span className="font-mono text-[10px] text-[#8b93a7] border border-[#8b93a7]/25 rounded px-1.5 py-0.5">
-				{blog.platform}
-			</span>
-		</div>
-		<span className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#5fe9ff] group-hover:gap-2.5 transition-all">
-			<BookOpen className="w-4 h-4" /> Read the dispatch
-			<ArrowUpRight className="w-4 h-4" />
-		</span>
-	</a>
-);
-
 // ── Pre-event blog winner (featured) ──────────────────────────────────────────
 export const PreEventWinnerCard = ({ blog }: { blog: FeaturedBlog }) => (
 	<div className="relative rounded-2xl p-7 md:p-8 dossier-card border-[#ffcd56]/40 hover:translate-y-0 hover:scale-100">
@@ -153,7 +114,7 @@ export const AllProjectsSection = () => (
 	<>
 		<div className="flex items-center gap-3 mb-2 flex-wrap">
 			<h2 className="text-2xl md:text-3xl font-black uppercase text-[#f5f7fa] glow-orange">
-				All Projects
+				Top Projects
 			</h2>
 			<span className="inline-flex items-center justify-center text-xs font-mono font-semibold bg-[#e5502a]/10 border border-[#e5502a]/30 text-[#ea6e4a] rounded-full px-3 py-1">
 				{projectCountLabel} builds
@@ -161,8 +122,8 @@ export const AllProjectsSection = () => (
 		</div>
 		<p className="text-[#c0c1c3] text-sm md:text-base mb-8 max-w-3xl">
 			Every project shipped during Agents of SigNoz. Instrumented agents,
-			SRE copilots, dashboards, and telemetry pipelines — all of them
-			built on SigNoz and OpenTelemetry.
+			SRE copilots, dashboards, and telemetry pipelines, all of them built
+			on SigNoz and OpenTelemetry.
 		</p>
 		<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
 			{submittedProjects.map(project => (
@@ -218,16 +179,6 @@ export const AllProjectsSection = () => (
 								className="inline-flex items-center gap-1.5 hover:text-[#e5502a] transition-colors"
 							>
 								<Youtube className="w-3.5 h-3.5" /> Demo
-							</a>
-						)}
-						{isUrl(project.blog) && (
-							<a
-								href={project.blog}
-								target="_blank"
-								rel="noopener noreferrer"
-								className="inline-flex items-center gap-1.5 hover:text-[#ffd778] transition-colors"
-							>
-								<BookOpen className="w-3.5 h-3.5" /> Blog
 							</a>
 						)}
 					</div>

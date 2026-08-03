@@ -1,16 +1,16 @@
 import { ViewContainer } from "@/components/ui/view-container";
-import { ArrowUpRight, BookOpen, Layers, Sparkles, Trophy } from "lucide-react";
+import { ArrowUpRight, BookOpen, Layers, Trophy } from "lucide-react";
 import Link from "next/link";
-import { blogCountLabel, preEventWinner, winningBlogs } from "../blogs";
+import { blogCountLabel, preEventWinner } from "../blogs";
 import { projectCountLabel } from "../projects";
 import ProjectsShell from "./ProjectsShell";
-import { PreEventWinnerCard, WinningBlogCard } from "./sections";
+import { PreEventWinnerCard } from "./sections";
 
 const explore = [
 	{
 		key: "blogs",
-		title: "Blogs",
-		description: `${blogCountLabel} published dispatches from the blog challenge, led by the pre-event winner.`,
+		title: "Top Blogs",
+		description: `Top ${blogCountLabel} dispatches published for the blog challenge, all in one place.`,
 		href: "/hackathons/signoz/projects/blogs",
 		icon: BookOpen,
 		iconColor: "text-[#5fe9ff]",
@@ -19,8 +19,8 @@ const explore = [
 	},
 	{
 		key: "all",
-		title: "All Projects",
-		description: `${projectCountLabel} builds shipped during the hackathon.`,
+		title: "Top Projects",
+		description: `Top ${projectCountLabel} builds submitted during the hackathon, all in one place.`,
 		href: "/hackathons/signoz/projects/all",
 		icon: Layers,
 		iconColor: "text-[#ea6e4a]",
@@ -38,16 +38,10 @@ const ProjectsHubPage = () => {
 					<span className="inline-flex items-center gap-2 bg-[#2be38b]/10 border border-[#2be38b]/30 text-[#2be38b] px-5 py-2 rounded-full text-sm font-semibold mb-6">
 						⬢ Mission Debrief
 					</span>
-					<h1 className="text-4xl md:text-5xl font-black uppercase text-[#f5f7fa] glow-orange mb-4">
+					<h1 className="text-4xl md:text-5xl font-black text-[#f5f7fa] glow-orange">
 						Agents of SigNoz ·{" "}
 						<span className="text-[#e5502a]">Field Reports</span>
 					</h1>
-					<p className="text-[#c0c1c3] text-base md:text-lg max-w-2xl mx-auto">
-						The agency is back from the field. Here is everything
-						the agents shipped — the builds that instrumented real
-						systems with SigNoz, and the dispatches they wrote about
-						it.
-					</p>
 				</div>
 
 				{/* ── Stat strip ────────────────────────────────────────────── */}
@@ -71,52 +65,8 @@ const ProjectsHubPage = () => {
 				</div>
 			</ViewContainer>
 
-			{/* ── Pre-event blog winner ─────────────────────────────────────── */}
-			<ViewContainer>
-				<div className="flex items-center gap-3 mb-2 flex-wrap">
-					<Trophy className="w-6 h-6 text-[#ffcd56]" />
-					<h2 className="text-2xl md:text-3xl font-black uppercase text-[#f5f7fa] glow-orange">
-						Pre-Event Blog Winner
-					</h2>
-				</div>
-				<p className="text-[#c0c1c3] text-sm md:text-base mb-8 max-w-3xl">
-					Before the hackathon began, agents self-hosted SigNoz, sent
-					it real telemetry, and wrote up the feature that won them
-					over. This one told it best.
-				</p>
-				<div className="mb-16">
-					<PreEventWinnerCard blog={preEventWinner} />
-				</div>
-			</ViewContainer>
-
-			{/* ── Top 3 blogs ───────────────────────────────────────────────── */}
-			<ViewContainer>
-				<div className="flex items-center gap-3 mb-2 flex-wrap">
-					<Sparkles className="w-6 h-6 text-[#ffd778]" />
-					<h2 className="text-2xl md:text-3xl font-black uppercase text-[#f5f7fa] glow-orange">
-						Top 3 Blogs
-					</h2>
-				</div>
-				<p className="text-[#c0c1c3] text-sm md:text-base mb-8 max-w-3xl">
-					Three more dispatches that stood out — a real system, a real
-					problem, and the telemetry that cracked it open.
-				</p>
-				<div className="grid grid-cols-1 md:grid-cols-3 gap-5 mb-16">
-					{winningBlogs.map((blog, i) => (
-						<WinningBlogCard
-							key={blog.url}
-							blog={blog}
-							rank={i + 1}
-						/>
-					))}
-				</div>
-			</ViewContainer>
-
 			{/* ── Explore ───────────────────────────────────────────────────── */}
-			<ViewContainer>
-				<h2 className="text-2xl md:text-3xl font-black uppercase text-[#f5f7fa] glow-orange mb-6">
-					Open the Archive
-				</h2>
+			<ViewContainer className="mb-16">
 				<div className="grid grid-cols-1 md:grid-cols-2 gap-5">
 					{explore.map(item => {
 						const Icon = item.icon;
@@ -153,6 +103,24 @@ const ProjectsHubPage = () => {
 							</Link>
 						);
 					})}
+				</div>
+			</ViewContainer>
+
+			{/* ── Pre-event blog winner ─────────────────────────────────────── */}
+			<ViewContainer>
+				<div className="flex items-center gap-3 mb-2 flex-wrap">
+					<Trophy className="w-6 h-6 text-[#ffcd56]" />
+					<h2 className="text-2xl md:text-3xl font-black uppercase text-[#f5f7fa] glow-orange">
+						Pre-Event Blog Winner
+					</h2>
+				</div>
+				<p className="text-[#c0c1c3] text-sm md:text-base mb-8 max-w-3xl">
+					Before the hackathon began, agents self-hosted SigNoz, sent
+					it real telemetry, and wrote up the feature that won them
+					over. This one told it best.
+				</p>
+				<div className="mb-16">
+					<PreEventWinnerCard blog={preEventWinner} />
 				</div>
 			</ViewContainer>
 		</ProjectsShell>

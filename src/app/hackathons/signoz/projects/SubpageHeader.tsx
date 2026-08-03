@@ -5,14 +5,14 @@ import Link from "next/link";
 const tabs = [
 	{
 		key: "blogs",
-		label: "Blogs",
+		label: "Top Blogs",
 		href: "/hackathons/signoz/projects/blogs",
 		icon: BookOpen,
 		activeColor: "border-[#5fe9ff] text-[#5fe9ff] bg-[#5fe9ff]/10",
 	},
 	{
 		key: "all",
-		label: "All Projects",
+		label: "Top Projects",
 		href: "/hackathons/signoz/projects/all",
 		icon: Layers,
 		activeColor: "border-[#e5502a] text-[#ea6e4a] bg-[#e5502a]/10",
