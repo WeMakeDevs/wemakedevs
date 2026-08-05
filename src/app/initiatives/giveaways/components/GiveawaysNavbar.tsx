@@ -1,20 +1,20 @@
 "use client";
 
 import { logo } from "@/assets/images";
+import { Button } from "@/components/ui/button";
+import { NavContainer } from "@/components/ui/nav-container";
 import { cn } from "@/lib/utils";
 import { Cross2Icon, HamburgerMenuIcon } from "@radix-ui/react-icons";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { Button } from "@/components/ui/button";
-import { NavContainer } from "@/components/ui/nav-container";
 
 const GiveawaysNavbar = () => {
 	const [isScrolled, setIsScrolled] = useState(false);
 	const [isOpen, setIsOpen] = useState(false);
 
 	const handleToggle = () => {
-		setIsOpen((prev) => !prev);
+		setIsOpen(prev => !prev);
 	};
 
 	useEffect(() => {
@@ -30,7 +30,11 @@ const GiveawaysNavbar = () => {
 		{ name: "How It Works", href: "#how-it-works", external: false },
 		{ name: "Past Winners", href: "#past-winners", external: false },
 		{ name: "Join", href: "#join", external: false },
-		{ name: "Hackathons", href: "/hackathons", external: true },
+		{
+			name: "Hackathons",
+			href: "https://wemakedevs.org/hackathons",
+			external: true,
+		},
 	];
 
 	return (
@@ -42,7 +46,10 @@ const GiveawaysNavbar = () => {
 					isScrolled ? "bg-white shadow-lg" : "bg-transparent",
 				)}
 			>
-				<Link href="/" className="flex items-center gap-4">
+				<Link
+					href="https://wemakedevs.org"
+					className="flex items-center gap-4"
+				>
 					<Image src={logo} alt="WeMakeDevs Logo" className="w-12" />
 					<span
 						className={cn(
@@ -54,7 +61,7 @@ const GiveawaysNavbar = () => {
 					</span>
 				</Link>
 				<ul className="flex lg:gap-2">
-					{navLinks.map((link) =>
+					{navLinks.map(link =>
 						link.external ? (
 							<li key={link.name}>
 								<Link
@@ -101,7 +108,10 @@ const GiveawaysNavbar = () => {
 				)}
 			>
 				<div className="flex w-full justify-between items-center">
-					<Link href="/" className="flex items-center gap-4">
+					<Link
+						href="https://wemakedevs.org"
+						className="flex items-center gap-4"
+					>
 						<Image
 							src={logo}
 							alt="WeMakeDevs Logo"
@@ -139,7 +149,7 @@ const GiveawaysNavbar = () => {
 						isOpen ? "flex" : "hidden",
 					)}
 				>
-					{navLinks.map((link) =>
+					{navLinks.map(link =>
 						link.external ? (
 							<li key={link.name}>
 								<Link

@@ -37,32 +37,32 @@ const Navbar = ({ className }: { className?: string }) => {
 	const navLinks: navLinksType = [
 		{
 			name: "Hackathons",
-			url: "/#hackathons",
+			url: "https://wemakedevs.org/#hackathons",
 			type: "link",
 		},
 		{
 			name: "Meetups",
-			url: "/#meetups",
+			url: "https://wemakedevs.org/#meetups",
 			type: "link",
 		},
 		{
 			name: "Initiatives",
-			url: "/#initiatives",
+			url: "https://wemakedevs.org/#initiatives",
 			type: "link",
 		},
 		{
 			name: "Join",
-			url: "/#join",
+			url: "https://wemakedevs.org/#join",
 			type: "link",
 		},
 		{
 			name: "FAQs",
-			url: "/#faq",
+			url: "https://wemakedevs.org/#faq",
 			type: "link",
 		},
 		{
 			name: "Partner with us",
-			url: "/#partners",
+			url: "https://wemakedevs.org/#partners",
 			type: "button",
 		},
 	];
@@ -79,7 +79,10 @@ const Navbar = ({ className }: { className?: string }) => {
 					"hidden lg:flex",
 				)}
 			>
-				<Link href="/" className="flex items-center gap-4">
+				<Link
+					href="https://wemakedevs.org"
+					className="flex items-center gap-4"
+				>
 					<Image src={logo} alt="WeMakeDevs Logo" className="w-12" />
 					<span
 						className={cn(
@@ -125,7 +128,10 @@ const Navbar = ({ className }: { className?: string }) => {
 				)}
 			>
 				<div className="flex w-full justify-between items-center">
-					<Link href="/" className="flex items-center gap-4">
+					<Link
+						href="https://wemakedevs.org"
+						className="flex items-center gap-4"
+					>
 						<Image
 							src={logo}
 							alt="WeMakeDevs Logo"

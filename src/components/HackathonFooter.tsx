@@ -68,11 +68,11 @@ const footerLinks: FooterLinkSection[] = [
 		links: [
 			{
 				name: "About",
-				href: "/#about",
+				href: "https://wemakedevs.org/#about",
 			},
 			{
 				name: "Join",
-				href: "/#join",
+				href: "https://wemakedevs.org/#join",
 			},
 		],
 	},
@@ -96,7 +96,7 @@ const footerLinks: FooterLinkSection[] = [
 		links: [
 			{
 				name: "Hackathons",
-				href: "/hackathons",
+				href: "https://wemakedevs.org/hackathons",
 				opensInNewTab: true,
 			},
 			{
@@ -189,7 +189,10 @@ const HackathonFooter = ({ className, ...props }: GeneralComponent) => {
 					))}
 				</div>
 				<div className="flex items-center flex-wrap gap-10 justify-between py-6 border-t-2 border-b-2 border-white/10">
-					<Link href="/" className="flex items-center gap-4">
+					<Link
+						href="https://wemakedevs.org"
+						className="flex items-center gap-4"
+					>
 						<Image src={logo} alt="logo" className="w-12" />
 						<span
 							className={cn(

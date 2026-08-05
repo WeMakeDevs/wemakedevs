@@ -65,7 +65,10 @@ const FutureStackNavbar = () => {
 					"hidden lg:flex",
 				)}
 			>
-				<Link href="/" className="flex items-center gap-4">
+				<Link
+					href="https://wemakedevs.org"
+					className="flex items-center gap-4"
+				>
 					<Image src={logo} alt="WeMakeDevs Logo" className="w-12" />
 					<span
 						className={cn(
@@ -99,7 +102,10 @@ const FutureStackNavbar = () => {
 				)}
 			>
 				<div className="flex w-full justify-between items-center">
-					<Link href="/" className="flex items-center gap-4">
+					<Link
+						href="https://wemakedevs.org"
+						className="flex items-center gap-4"
+					>
 						<Image
 							src={logo}
 							alt="WeMakeDevs Logo"

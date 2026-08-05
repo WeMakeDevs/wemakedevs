@@ -22,7 +22,7 @@ const initiatives: InitiativeType[] = [
 	{
 		title: "Giveaways",
 		description:
-			"We regularly give away iPads, Meta Ray-Ban Smart Glasses, and more to our community members. Subscribe to the newsletter to never miss a drop!",
+			"We regularly give away iPads, Meta Ray-Ban Smart Glasses, and more to our community members. Join us on Discord to never miss a drop!",
 		image: giveawaysThumbnail,
 		url: "/initiatives/giveaways",
 	},

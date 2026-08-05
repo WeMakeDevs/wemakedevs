@@ -44,22 +44,22 @@ const HackathonNavbar = ({ customNavLinks }: HackathonNavbarProps = {}) => {
 	const defaultNavLinks: navLinksType = [
 		{
 			name: "Join",
-			url: "/#join",
+			url: "https://wemakedevs.org/#join",
 			type: "link",
 		},
 		{
 			name: "Hackathons",
-			url: "/#hackathons",
+			url: "https://wemakedevs.org/#hackathons",
 			type: "link",
 		},
 		{
 			name: "Meetups",
-			url: "/#meetups",
+			url: "https://wemakedevs.org/#meetups",
 			type: "link",
 		},
 		{
 			name: "Partner with us",
-			url: "/#partners",
+			url: "https://wemakedevs.org/#partners",
 			type: "button",
 		},
 	];
@@ -105,7 +105,7 @@ const HackathonNavbar = ({ customNavLinks }: HackathonNavbarProps = {}) => {
 				)}
 			>
 				<Link
-					href="/"
+					href="https://wemakedevs.org"
 					target="_blank"
 					rel="noopener noreferrer"
 					className="flex items-center gap-4"
@@ -167,7 +167,7 @@ const HackathonNavbar = ({ customNavLinks }: HackathonNavbarProps = {}) => {
 			>
 				<div className="flex w-full justify-between items-center">
 					<Link
-						href="/"
+						href="https://wemakedevs.org"
 						target="_blank"
 						rel="noopener noreferrer"
 						className="flex items-center gap-4"

@@ -1,5 +1,4 @@
 import Footer from "@/components/Footer";
-import Newsletter from "@/components/Newsletter";
 import { ViewContainer } from "@/components/ui/view-container";
 import { Bell, Gift, PartyPopper, Trophy } from "lucide-react";
 import type { Metadata } from "next";
@@ -278,9 +277,6 @@ const GiveawaysPage = () => {
 					</div>
 				</ViewContainer>
 			</section>
-
-			{/* Newsletter */}
-			<Newsletter />
 
 			<Footer />
 		</div>

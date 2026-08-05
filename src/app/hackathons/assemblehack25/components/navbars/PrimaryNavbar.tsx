@@ -33,12 +33,20 @@ const PrimaryNavbar = ({ customNavLinks }: HackathonNavbarProps = {}) => {
 	}, []);
 
 	const defaultNavLinks: navLinksType = [
-		{ name: "Join", url: "/#join", type: "link" },
-		{ name: "Hackathons", url: "/#hackathons", type: "link" },
-		{ name: "Meetups", url: "/#meetups", type: "link" },
+		{ name: "Join", url: "https://wemakedevs.org/#join", type: "link" },
+		{
+			name: "Hackathons",
+			url: "https://wemakedevs.org/#hackathons",
+			type: "link",
+		},
+		{
+			name: "Meetups",
+			url: "https://wemakedevs.org/#meetups",
+			type: "link",
+		},
 		{
 			name: "Partner with us",
-			url: "/#partners",
+			url: "https://wemakedevs.org/#partners",
 			type: "button",
 			openInNewTab: true,
 		},
@@ -60,7 +68,10 @@ const PrimaryNavbar = ({ customNavLinks }: HackathonNavbarProps = {}) => {
 	return (
 		<nav id="nav" className="fixed mx-auto w-full z-[100] md:py-4">
 			<NavContainer className={cn(desktopShell, "hidden lg:flex")}>
-				<Link href="/" className="flex items-center gap-4 group">
+				<Link
+					href="https://wemakedevs.org"
+					className="flex items-center gap-4 group"
+				>
 					<Image src={logo} alt="WeMakeDevs Logo" className="w-12" />
 					<span className="font-title text-xl text-gray-800 group-hover:text-blue-600 transition-colors">
 						WeMakeDevs
@@ -99,7 +110,10 @@ const PrimaryNavbar = ({ customNavLinks }: HackathonNavbarProps = {}) => {
 				)}
 			>
 				<div className="flex w-full justify-between items-center">
-					<Link href="/" className="flex items-center gap-4">
+					<Link
+						href="https://wemakedevs.org"
+						className="flex items-center gap-4"
+					>
 						<Image
 							src={logo}
 							alt="WeMakeDevs Logo"

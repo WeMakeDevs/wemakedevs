@@ -1,8 +1,8 @@
 "use client";
 
+import { logo } from "@/assets/images";
 import Faq from "@/components/Faq";
 import Footer from "@/components/Footer";
-import { logo } from "@/assets/images";
 import { buttonVariants } from "@/components/ui/button";
 import { ViewContainer } from "@/components/ui/view-container";
 import { cn } from "@/lib/utils";
@@ -10,12 +10,12 @@ import type { FaqType } from "@/types";
 import { CalendarIcon } from "@radix-ui/react-icons";
 import {
 	ArrowRight,
-	Trophy,
+	Award,
 	Briefcase,
 	Calendar,
 	Flag,
 	Share2,
-	Award,
+	Trophy,
 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -47,7 +47,8 @@ const hackathons = [
 		dates: "Feb 16 - Feb 22",
 		status: "ended",
 		slug: "accomplish",
-		description: "Automate your boring tasks with Accomplish. Think you can pull it off?",
+		description:
+			"Automate your boring tasks with Accomplish. Think you can pull it off?",
 		prize: "$3,000+",
 		registrationLink: undefined,
 	},
@@ -57,61 +58,57 @@ const hackathons = [
 		dates: "Feb 23 - Mar 1",
 		status: "ended",
 		slug: "vision",
-		description: "Build multi-modal AI agents that watch, listen, and understand video in real-time",
+		description:
+			"Build multi-modal AI agents that watch, listen, and understand video in real-time",
 		prize: "$4,000+",
 	},
 ];
 
+// The 4x4 decorative checkerboard in the corners. A real array of cell numbers
+// rather than [...Array(16)], so each cell is keyed by its own value.
+const CHECKER_CELLS = Array.from({ length: 16 }, (_, cell) => cell);
+
 const faqs: FaqType[] = [
 	{
 		question: "What is Hack All February?",
-		answer:
-			"Hack All February is a month-long hackathon program by WeMakeDevs featuring 4 consecutive weekly hackathons throughout February 2026. Participate in all 4 hackathons to be eligible for the grand prize - a Samsung Galaxy Flip 7 worth ₹1,10,000!",
+		answer: "Hack All February is a month-long hackathon program by WeMakeDevs featuring 4 consecutive weekly hackathons throughout February 2026. Participate in all 4 hackathons to be eligible for the grand prize - a Samsung Galaxy Flip 7 worth ₹1,10,000!",
 	},
 	{
 		question: "How do I win the Samsung Galaxy Flip 7?",
-		answer:
-			"To be eligible for the Galaxy Flip 7, you must register and submit a project in ALL 4 February hackathons. The winner will be chosen randomly from all eligible participants. It's that simple - no judging, just participate in all 4 events!",
+		answer: "To be eligible for the Galaxy Flip 7, you must register and submit a project in ALL 4 February hackathons. The winner will be chosen randomly from all eligible participants. It's that simple - no judging, just participate in all 4 events!",
 	},
 	{
-		question: "Can I participate in individual hackathons without joining all 4?",
-		answer:
-			"Yes! Each hackathon is independent and has its own prizes. You can participate in any hackathon individually and win prizes specific to that event. However, to be eligible for the Galaxy Flip 7 grand prize, you must participate in all 4 hackathons. Remember, you need to register for each hackathon separately before their respective registration deadlines.",
+		question:
+			"Can I participate in individual hackathons without joining all 4?",
+		answer: "Yes! Each hackathon is independent and has its own prizes. You can participate in any hackathon individually and win prizes specific to that event. However, to be eligible for the Galaxy Flip 7 grand prize, you must participate in all 4 hackathons. Remember, you need to register for each hackathon separately before their respective registration deadlines.",
 	},
 	{
 		question: "What counts as a valid submission?",
-		answer:
-			"A valid submission means you must register for the hackathon before the deadline and submit a working project that meets the hackathon's requirements. Each hackathon has its own submission guidelines - make sure to follow them!",
+		answer: "A valid submission means you must register for the hackathon before the deadline and submit a working project that meets the hackathon's requirements. Each hackathon has its own submission guidelines - make sure to follow them!",
 	},
 	{
 		question: "Can I participate solo or do I need a team?",
-		answer:
-			"You can participate either solo or with a team of up to 4 members. Teams can change per hackathon - you don't need to have the same team members for all 4 events. You can even participate solo in some hackathons and with a team in others.",
+		answer: "You can participate either solo or with a team of up to 4 members. Teams can change per hackathon - you don't need to have the same team members for all 4 events. You can even participate solo in some hackathons and with a team in others.",
 	},
 	{
 		question: "What are the total prizes across all hackathons?",
-		answer:
-			"Throughout Hack All February, there are over $40,000 in cash prizes across all 4 hackathons, plus the Samsung Galaxy Flip 7 grand prize, exclusive swag, and job/internship interview opportunities with sponsor companies!",
+		answer: "Throughout Hack All February, there are over $40,000 in cash prizes across all 4 hackathons, plus the Samsung Galaxy Flip 7 grand prize, exclusive swag, and job/internship interview opportunities with sponsor companies!",
 	},
 	{
 		question: "How will the Galaxy Flip 7 winner be selected?",
-		answer:
-			"The winner will be selected randomly from all participants who have successfully registered and submitted projects in ALL 4 February hackathons. The draw will happen after the final hackathon concludes.",
+		answer: "The winner will be selected randomly from all participants who have successfully registered and submitted projects in ALL 4 February hackathons. The draw will happen after the final hackathon concludes.",
 	},
 	{
 		question: "How can I share my journey?",
-		answer:
-			"We encourage you to share your hackathon journey on social media! Use the hashtag <span class='text-red-400 font-semibold'>#HackAllFebruary</span> and tag <span class='text-red-400 font-semibold'>@WeMakeDevs</span> on Twitter/X, LinkedIn, or Instagram. We love seeing your progress!",
+		answer: "We encourage you to share your hackathon journey on social media! Use the hashtag <span class='text-red-400 font-semibold'>#HackAllFebruary</span> and tag <span class='text-red-400 font-semibold'>@WeMakeDevs</span> on Twitter/X, LinkedIn, or Instagram. We love seeing your progress!",
 	},
 	{
 		question: "Where can I get help during the hackathons?",
-		answer:
-			"Each hackathon has its own community channel (Discord/Slack) where you can get help from mentors and fellow participants. Check the individual hackathon pages for links to their communities.",
+		answer: "Each hackathon has its own community channel (Discord/Slack) where you can get help from mentors and fellow participants. Check the individual hackathon pages for links to their communities.",
 	},
 	{
 		question: "Are there any eligibility requirements?",
-		answer:
-			"You must be at least 16 years of age to participate. There are no geographical restrictions - anyone from anywhere in the world can join!",
+		answer: "You must be at least 16 years of age to participate. There are no geographical restrictions - anyone from anywhere in the world can join!",
 	},
 ];
 
@@ -129,12 +126,21 @@ function FebruaryNavbar() {
 		<nav className="fixed top-0 left-0 right-0 z-50 bg-gray-900/95 backdrop-blur-sm border-b border-red-500/30">
 			<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 				<div className="flex items-center justify-between h-16">
-					<Link href="/" className="flex items-center gap-3">
-						<Image src={logo} alt="WeMakeDevs Logo" className="w-10 h-10" />
-						<span className="font-bold text-white text-lg">WeMakeDevs</span>
+					<Link
+						href="https://wemakedevs.org"
+						className="flex items-center gap-3"
+					>
+						<Image
+							src={logo}
+							alt="WeMakeDevs Logo"
+							className="w-10 h-10"
+						/>
+						<span className="font-bold text-white text-lg">
+							WeMakeDevs
+						</span>
 					</Link>
 					<div className="hidden md:flex items-center gap-6">
-						{navLinks.map((link) => (
+						{navLinks.map(link => (
 							<Link
 								key={link.name}
 								href={link.url}
@@ -160,7 +166,7 @@ function CircleTrack() {
 			<div className="absolute inset-4 rounded-full border-4 border-dashed border-gray-600" />
 			{/* Racing stripe */}
 			<div className="absolute inset-8 rounded-full border-2 border-red-500/50" />
-			
+
 			{/* Center content */}
 			<div className="absolute inset-0 flex items-center justify-center">
 				<div className="text-center">
@@ -175,17 +181,17 @@ function CircleTrack() {
 			<div className="absolute -top-6 left-1/2 -translate-x-1/2">
 				<TrackMarker hackathon={hackathons[0]} position="top" />
 			</div>
-			
+
 			{/* Week 2 - Right */}
 			<div className="absolute top-1/2 -right-6 -translate-y-1/2">
 				<TrackMarker hackathon={hackathons[1]} position="right" />
 			</div>
-			
+
 			{/* Week 3 - Bottom */}
 			<div className="absolute -bottom-6 left-1/2 -translate-x-1/2">
 				<TrackMarker hackathon={hackathons[2]} position="bottom" />
 			</div>
-			
+
 			{/* Week 4 - Left */}
 			<div className="absolute top-1/2 -left-6 -translate-y-1/2">
 				<TrackMarker hackathon={hackathons[3]} position="left" />
@@ -194,17 +200,17 @@ function CircleTrack() {
 	);
 }
 
-function TrackMarker({ 
-	hackathon, 
-	position 
-}: { 
-	hackathon: typeof hackathons[0];
+function TrackMarker({
+	hackathon,
+	position,
+}: {
+	hackathon: (typeof hackathons)[0];
 	position: "top" | "right" | "bottom" | "left";
 }) {
 	const isLive = hackathon.status === "live";
 	const isUpcoming = hackathon.status === "upcoming";
 	const isEnded = hackathon.status === "ended";
-	
+
 	const tooltipPosition = {
 		top: "top-full mt-2 left-1/2 -translate-x-1/2",
 		right: "left-full ml-2 top-1/2 -translate-y-1/2",
@@ -220,23 +226,29 @@ function TrackMarker({
 					isLive
 						? "bg-green-500 border-green-400 text-white animate-pulse"
 						: isUpcoming
-						? "bg-orange-500 border-orange-400 text-white"
-						: isEnded
-						? "bg-gray-500 border-gray-400 text-gray-200"
-						: "bg-gray-600 border-gray-500 text-gray-300"
+							? "bg-orange-500 border-orange-400 text-white"
+							: isEnded
+								? "bg-gray-500 border-gray-400 text-gray-200"
+								: "bg-gray-600 border-gray-500 text-gray-300",
 				)}
 			>
 				<span className="text-[10px] md:text-xs">Week</span>
 				<span className="text-lg md:text-xl">{hackathon.week}</span>
 			</div>
 			{/* Tooltip */}
-			<div className={cn(
-				"absolute hidden group-hover:block z-10 w-48",
-				tooltipPosition[position]
-			)}>
+			<div
+				className={cn(
+					"absolute hidden group-hover:block z-10 w-48",
+					tooltipPosition[position],
+				)}
+			>
 				<div className="bg-gray-800 border border-gray-600 rounded-lg p-3 shadow-xl">
-					<div className="font-bold text-white text-sm">{hackathon.title}</div>
-					<div className="text-gray-400 text-xs">{hackathon.dates}</div>
+					<div className="font-bold text-white text-sm">
+						{hackathon.title}
+					</div>
+					<div className="text-gray-400 text-xs">
+						{hackathon.dates}
+					</div>
 					{isLive && (
 						<span className="inline-block mt-1 px-2 py-0.5 bg-green-500 text-white text-xs rounded-full">
 							Live
@@ -273,7 +285,13 @@ function HackathonCard({
 		<div
 			className={cn(
 				"bg-gray-800/80 backdrop-blur-sm border-2 rounded-xl p-6 relative overflow-hidden",
-				isLive ? "border-green-500" : isUpcoming ? "border-orange-500" : isEnded ? "border-gray-500" : "border-gray-600",
+				isLive
+					? "border-green-500"
+					: isUpcoming
+						? "border-orange-500"
+						: isEnded
+							? "border-gray-500"
+							: "border-gray-600",
 			)}
 		>
 			{isLive && (
@@ -304,10 +322,10 @@ function HackathonCard({
 						isLive
 							? "bg-green-500 border-green-400 text-white"
 							: isUpcoming
-							? "bg-orange-500 border-orange-400 text-white"
-							: isEnded
-							? "bg-gray-500 border-gray-400 text-white"
-							: "bg-red-500 border-red-400 text-white",
+								? "bg-orange-500 border-orange-400 text-white"
+								: isEnded
+									? "bg-gray-500 border-gray-400 text-white"
+									: "bg-red-500 border-red-400 text-white",
 					)}
 				>
 					W{hackathon.week}
@@ -328,7 +346,9 @@ function HackathonCard({
 			<div className="flex items-center justify-between">
 				<div className="flex items-center gap-2">
 					<Trophy className="w-5 h-5 text-yellow-400" />
-					<span className="font-bold text-white">{hackathon.prize}</span>
+					<span className="font-bold text-white">
+						{hackathon.prize}
+					</span>
 				</div>
 
 				{hackathon.slug ? (
@@ -336,31 +356,41 @@ function HackathonCard({
 						<Link
 							href={`/hackathons/${hackathon.slug}`}
 							className={cn(
-								buttonVariants({ variant: "outline", size: "sm" }),
+								buttonVariants({
+									variant: "outline",
+									size: "sm",
+								}),
 								"border-gray-400 bg-white text-black hover:bg-gray-100",
 							)}
 						>
 							Details
 						</Link>
-					{"registrationLink" in hackathon && hackathon.registrationLink && (
-						<Link
-							href={hackathon.registrationLink}
-							{...((hackathon.registrationLink as string).startsWith("http")
-								? { target: "_blank", rel: "noopener noreferrer" }
-								: {})}
-							className={cn(
-								buttonVariants({ size: "sm" }),
-								"bg-red-500 hover:bg-red-600 text-white",
+						{"registrationLink" in hackathon &&
+							hackathon.registrationLink && (
+								<Link
+									href={hackathon.registrationLink}
+									{...((
+										hackathon.registrationLink as string
+									).startsWith("http")
+										? {
+												target: "_blank",
+												rel: "noopener noreferrer",
+											}
+										: {})}
+									className={cn(
+										buttonVariants({ size: "sm" }),
+										"bg-red-500 hover:bg-red-600 text-white",
+									)}
+								>
+									{String(
+										"ctaLabel" in hackathon &&
+											hackathon.ctaLabel
+											? hackathon.ctaLabel
+											: "Register",
+									)}
+									<ArrowRight className="w-4 h-4 ml-1" />
+								</Link>
 							)}
-						>
-							{String(
-								"ctaLabel" in hackathon && hackathon.ctaLabel
-									? hackathon.ctaLabel
-									: "Register",
-							)}
-							<ArrowRight className="w-4 h-4 ml-1" />
-						</Link>
-					)}
 					</div>
 				) : (
 					<span className="text-gray-400 text-sm">
@@ -384,16 +414,18 @@ export default function FebruaryPage() {
 					<div className="absolute top-0 right-[10%] w-1 h-full bg-gradient-to-b from-red-500/20 via-red-500/5 to-transparent" />
 					<div className="absolute top-0 right-[20%] w-0.5 h-full bg-gradient-to-b from-red-500/10 via-transparent to-transparent" />
 				</div>
-				
+
 				{/* Checkered pattern at corners */}
 				<div className="absolute top-0 left-0 w-32 h-32 opacity-10">
 					<div className="grid grid-cols-4 grid-rows-4 w-full h-full">
-						{[...Array(16)].map((_, i) => (
+						{CHECKER_CELLS.map(cell => (
 							<div
-								key={i}
+								key={cell}
 								className={cn(
 									"w-full h-full",
-									(Math.floor(i / 4) + i) % 2 === 0 ? "bg-white" : "bg-transparent"
+									(Math.floor(cell / 4) + cell) % 2 === 0
+										? "bg-white"
+										: "bg-transparent",
 								)}
 							/>
 						))}
@@ -401,24 +433,26 @@ export default function FebruaryPage() {
 				</div>
 				<div className="absolute top-0 right-0 w-32 h-32 opacity-10">
 					<div className="grid grid-cols-4 grid-rows-4 w-full h-full">
-						{[...Array(16)].map((_, i) => (
+						{CHECKER_CELLS.map(cell => (
 							<div
-								key={i}
+								key={cell}
 								className={cn(
 									"w-full h-full",
-									(Math.floor(i / 4) + i) % 2 === 0 ? "bg-white" : "bg-transparent"
+									(Math.floor(cell / 4) + cell) % 2 === 0
+										? "bg-white"
+										: "bg-transparent",
 								)}
 							/>
 						))}
 					</div>
 				</div>
-				
+
 				{/* Speed lines */}
 				<div className="absolute top-1/4 left-0 w-full h-px bg-gradient-to-r from-transparent via-red-500/30 to-transparent" />
 				<div className="absolute top-1/3 left-0 w-full h-px bg-gradient-to-r from-transparent via-gray-500/20 to-transparent" />
 				<div className="absolute top-2/3 left-0 w-full h-px bg-gradient-to-r from-transparent via-red-500/20 to-transparent" />
 				<div className="absolute top-3/4 left-0 w-full h-px bg-gradient-to-r from-transparent via-gray-500/20 to-transparent" />
-				
+
 				{/* Gradient overlay */}
 				<div className="absolute inset-0 bg-gradient-to-b from-gray-950/50 via-transparent to-gray-950/80" />
 			</div>
@@ -464,23 +498,39 @@ export default function FebruaryPage() {
 							<div className="grid grid-cols-2 gap-4 max-w-lg mx-auto lg:mx-0 mb-8">
 								<div className="bg-gray-800/80 backdrop-blur-sm border-2 border-red-500/50 rounded-xl p-5 text-center">
 									<Trophy className="w-8 h-8 mx-auto mb-2 text-yellow-400" />
-									<div className="text-2xl font-bold text-white">$40,000+</div>
-									<div className="text-sm text-gray-300">Cash Prizes</div>
+									<div className="text-2xl font-bold text-white">
+										$40,000+
+									</div>
+									<div className="text-sm text-gray-300">
+										Cash Prizes
+									</div>
 								</div>
 								<div className="bg-gray-800/80 backdrop-blur-sm border-2 border-red-500/50 rounded-xl p-5 text-center">
 									<CalendarIcon className="w-8 h-8 mx-auto mb-2 text-red-400" />
-									<div className="text-2xl font-bold text-white">4 Online</div>
-									<div className="text-sm text-gray-300">Hackathons</div>
+									<div className="text-2xl font-bold text-white">
+										4 Online
+									</div>
+									<div className="text-sm text-gray-300">
+										Hackathons
+									</div>
 								</div>
 								<div className="bg-gray-800/80 backdrop-blur-sm border-2 border-red-500/50 rounded-xl p-5 text-center">
 									<Briefcase className="w-8 h-8 mx-auto mb-2 text-blue-400" />
-									<div className="text-xl font-bold text-white">Job Interviews</div>
-									<div className="text-sm text-gray-300">With Top AI Companies</div>
+									<div className="text-xl font-bold text-white">
+										Job Interviews
+									</div>
+									<div className="text-sm text-gray-300">
+										With Top AI Companies
+									</div>
 								</div>
 								<div className="bg-gray-800/80 backdrop-blur-sm border-2 border-red-500/50 rounded-xl p-5 text-center">
 									<Award className="w-8 h-8 mx-auto mb-2 text-purple-400" />
-									<div className="text-xl font-bold text-white">Certificates</div>
-									<div className="text-sm text-gray-300">For All Participants</div>
+									<div className="text-xl font-bold text-white">
+										Certificates
+									</div>
+									<div className="text-sm text-gray-300">
+										For All Participants
+									</div>
 								</div>
 							</div>
 
@@ -501,14 +551,18 @@ export default function FebruaryPage() {
 			</section>
 
 			{/* Winner Section */}
-			<section id="winner" className="py-12 md:py-20 relative z-10 scroll-mt-20">
+			<section
+				id="winner"
+				className="py-12 md:py-20 relative z-10 scroll-mt-20"
+			>
 				<ViewContainer>
 					<div className="text-center mb-12">
 						<h2 className="text-3xl md:text-5xl font-bold text-white mb-4">
 							Galaxy Flip 7 Winner
 						</h2>
 						<p className="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto">
-							Congratulations to our grand prize winner! Thank you for taking part in all 4 hackathons in February.
+							Congratulations to our grand prize winner! Thank you
+							for taking part in all 4 hackathons in February.
 						</p>
 					</div>
 					<div className="flex flex-col items-center justify-center">
@@ -526,15 +580,22 @@ export default function FebruaryPage() {
 								</h3>
 								<p className="text-gray-300 mb-4">
 									Winner of the{" "}
-									<span className="text-yellow-400 font-semibold">Samsung Galaxy Flip 7</span>{" "}
-									phone (worth ₹1,10,000) — chosen at random from everyone who completed all 4 February hackathons.
+									<span className="text-yellow-400 font-semibold">
+										Samsung Galaxy Flip 7
+									</span>{" "}
+									phone (worth ₹1,10,000) — chosen at random
+									from everyone who completed all 4 February
+									hackathons.
 								</p>
 								<Link
 									href="https://x.com/Akash_how"
 									target="_blank"
 									rel="noopener noreferrer"
 									className={cn(
-										buttonVariants({ variant: "outline", size: "sm" }),
+										buttonVariants({
+											variant: "outline",
+											size: "sm",
+										}),
 										"border-gray-400 bg-white text-black hover:bg-gray-100 inline-flex items-center gap-2",
 									)}
 								>
@@ -555,7 +616,8 @@ export default function FebruaryPage() {
 							Our Sponsors
 						</h2>
 						<p className="text-lg md:text-xl text-gray-300">
-							Powering Hack All February with amazing prizes and opportunities
+							Powering Hack All February with amazing prizes and
+							opportunities
 						</p>
 					</div>
 
@@ -567,7 +629,9 @@ export default function FebruaryPage() {
 							rel="noopener noreferrer"
 							className="bg-white hover:bg-gray-100 border border-gray-200 hover:border-red-500/50 rounded-xl p-6 w-full flex flex-col items-center justify-center transition-all duration-300 group"
 						>
-							<span className="text-xs text-gray-500 mb-2">Week 1</span>
+							<span className="text-xs text-gray-500 mb-2">
+								Week 1
+							</span>
 							<Image
 								src={images.week1Logo}
 								alt="Tambo"
@@ -582,7 +646,9 @@ export default function FebruaryPage() {
 							rel="noopener noreferrer"
 							className="bg-white hover:bg-gray-100 border border-gray-200 hover:border-red-500/50 rounded-xl p-6 w-full flex flex-col items-center justify-center transition-all duration-300 group"
 						>
-							<span className="text-xs text-gray-500 mb-2">Week 2</span>
+							<span className="text-xs text-gray-500 mb-2">
+								Week 2
+							</span>
 							<Image
 								src={images.week2Logo}
 								alt="Archestra"
@@ -597,7 +663,9 @@ export default function FebruaryPage() {
 							rel="noopener noreferrer"
 							className="bg-white hover:bg-gray-100 border border-gray-200 hover:border-red-500/50 rounded-xl p-6 w-full flex flex-col items-center justify-center transition-all duration-300 group"
 						>
-							<span className="text-xs text-gray-500 mb-2">Week 3</span>
+							<span className="text-xs text-gray-500 mb-2">
+								Week 3
+							</span>
 							<Image
 								src={images.week3Logo}
 								alt="Accomplish"
@@ -612,7 +680,9 @@ export default function FebruaryPage() {
 							rel="noopener noreferrer"
 							className="bg-white hover:bg-gray-100 border border-gray-200 hover:border-red-500/50 rounded-xl p-6 w-full flex flex-col items-center justify-center transition-all duration-300 group"
 						>
-							<span className="text-xs text-gray-500 mb-2">Week 4</span>
+							<span className="text-xs text-gray-500 mb-2">
+								Week 4
+							</span>
 							<Image
 								src={images.week4Logo}
 								alt="Vision Agents"
@@ -631,7 +701,12 @@ export default function FebruaryPage() {
 							February Hackathons
 						</h2>
 						<p className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto">
-							You must register separately for each hackathon to participate. You can participate solo or with a team of up to 4 members. Teams can change per hackathon - you don't need to have the same team members for all 4 events. You can even participate solo in some hackathons and with a team in others.
+							You must register separately for each hackathon to
+							participate. You can participate solo or with a team
+							of up to 4 members. Teams can change per hackathon -
+							you don't need to have the same team members for all
+							4 events. You can even participate solo in some
+							hackathons and with a team in others.
 						</p>
 					</div>
 
@@ -654,17 +729,21 @@ export default function FebruaryPage() {
 							How to Win the Galaxy Flip 7
 						</h2>
 						<p className="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto">
-							It's simple! Follow these steps to be eligible for the
-							grand prize draw.
+							It's simple! Follow these steps to be eligible for
+							the grand prize draw.
 						</p>
 					</div>
 
 					<div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
 						<div className="bg-gray-800/80 backdrop-blur-sm border-2 border-red-500/50 rounded-xl p-8 text-center">
 							<div className="w-16 h-16 bg-red-500 rounded-full flex items-center justify-center mx-auto mb-4">
-								<span className="text-2xl font-bold text-white">1</span>
+								<span className="text-2xl font-bold text-white">
+									1
+								</span>
 							</div>
-							<h3 className="text-xl font-bold text-white mb-2">Register</h3>
+							<h3 className="text-xl font-bold text-white mb-2">
+								Register
+							</h3>
 							<p className="text-gray-300">
 								Sign up for each of the 4 February hackathons
 								before their registration deadlines
@@ -672,22 +751,32 @@ export default function FebruaryPage() {
 						</div>
 						<div className="bg-gray-800/80 backdrop-blur-sm border-2 border-red-500/50 rounded-xl p-8 text-center">
 							<div className="w-16 h-16 bg-red-500 rounded-full flex items-center justify-center mx-auto mb-4">
-								<span className="text-2xl font-bold text-white">2</span>
+								<span className="text-2xl font-bold text-white">
+									2
+								</span>
 							</div>
-							<h3 className="text-xl font-bold text-white mb-2">Build & Submit</h3>
+							<h3 className="text-xl font-bold text-white mb-2">
+								Build & Submit
+							</h3>
 							<p className="text-gray-300">
 								Create and submit a project for each hackathon.
-								You don't have to be a winner to enter the raffle.
+								You don't have to be a winner to enter the
+								raffle.
 							</p>
 						</div>
 						<div className="bg-gray-800/80 backdrop-blur-sm border-2 border-red-500/50 rounded-xl p-8 text-center">
 							<div className="w-16 h-16 bg-red-500 rounded-full flex items-center justify-center mx-auto mb-4">
-								<span className="text-2xl font-bold text-white">3</span>
+								<span className="text-2xl font-bold text-white">
+									3
+								</span>
 							</div>
-							<h3 className="text-xl font-bold text-white mb-2">Win!</h3>
+							<h3 className="text-xl font-bold text-white mb-2">
+								Win!
+							</h3>
 							<p className="text-gray-300">
-								Complete all 4 hackathons and you're automatically
-								entered into the random draw for the Galaxy Flip 7
+								Complete all 4 hackathons and you're
+								automatically entered into the random draw for
+								the Galaxy Flip 7
 							</p>
 						</div>
 					</div>
@@ -703,8 +792,9 @@ export default function FebruaryPage() {
 							Share Your Journey
 						</h2>
 						<p className="text-lg md:text-xl text-white/90 max-w-2xl mx-auto mb-8">
-							Document your Hack All February experience! Share your progress, 
-							learnings, and builds on social media. Use the hashtag and tag us!
+							Document your Hack All February experience! Share
+							your progress, learnings, and builds on social
+							media. Use the hashtag and tag us!
 						</p>
 						<div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
 							<div className="bg-white text-gray-900 px-6 py-3 rounded-lg text-xl font-bold shadow-lg">
@@ -731,9 +821,9 @@ export default function FebruaryPage() {
 							</h2>
 						</div>
 						<div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-							{faqs.map((faq, index) => (
+							{faqs.map(faq => (
 								<details
-									key={index}
+									key={faq.question}
 									className="group bg-gray-800/80 border border-gray-700 rounded-xl overflow-hidden h-fit"
 								>
 									<summary className="flex items-center justify-between cursor-pointer p-5 text-white font-semibold text-base hover:bg-gray-700/50 transition-colors">
@@ -742,8 +832,14 @@ export default function FebruaryPage() {
 											▼
 										</span>
 									</summary>
-									<div className="px-5 pb-5 text-gray-300 text-sm" 
-										dangerouslySetInnerHTML={{ __html: faq.answer }} 
+									{/* Answers carry author-written <span> highlights (see the
+									    #HackAllFebruary entry above), so they render as markup. */}
+									<div
+										className="px-5 pb-5 text-gray-300 text-sm"
+										// biome-ignore lint/security/noDangerouslySetInnerHtml: faq.answer is a static literal defined at the top of this module, never user input
+										dangerouslySetInnerHTML={{
+											__html: faq.answer,
+										}}
 									/>
 								</details>
 							))}

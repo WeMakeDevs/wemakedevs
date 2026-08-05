@@ -2,10 +2,6 @@ import type { Metadata } from "next";
 import { Space_Grotesk as FontMono } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
-import Banner from "@/components/Banner";
-import Footer from "@/components/Footer";
-import Navbar from "@/components/Navbar";
-import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { Toaster } from "sonner";
 
@@ -34,12 +30,15 @@ export const metadata: Metadata = {
 	title: "WeMakeDevs",
 	description:
 		"WeMakeDevs is an inclusive global community for anyone passionate about technology. We foster collaboration and innovation through global events.",
-	metadataBase: new URL("https://wemakedevs.org"),
+	// This app is served from the archive host, so it resolves its own relative
+	// OG/canonical URLs against that host. Claiming wemakedevs.org here would
+	// point every archived page's metadata at the live site instead.
+	metadataBase: new URL("https://archive.wemakedevs.org"),
 	openGraph: {
 		title: "WeMakeDevs",
 		description:
 			"WeMakeDevs is an inclusive global community for anyone passionate about technology. We foster collaboration and innovation through global events.",
-		url: "https://wemakedevs.org",
+		url: "https://archive.wemakedevs.org",
 		siteName: "WeMakeDevs",
 		images: {
 			url: "/opengraph-image.png",

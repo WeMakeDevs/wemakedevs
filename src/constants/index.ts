@@ -1,32 +1,5 @@
 import type { FaqType } from "@/types";
 
-export const FAQS: FaqType[] = [
-	{
-		question: "How can I join the community?",
-		answer: 'Simply head over to the "Join" section on this page, where you\'ll find links to our Discord, Telegram, and WhatsApp groups.',
-	},
-	{
-		question: "What kind of events do you host?",
-		answer: "We regularly organize hackathons and meetups to bring developers together for learning and collaboration.",
-	},
-	{
-		question: "How can I partner with WeMakeDevs?",
-		answer: "To explore partnership opportunities, send an email to contact@wemakedevs.org.",
-	},
-	{
-		question: "How do I stay updated with the latest events?",
-		answer: "Sign up for our newsletter to receive the latest news and updates on upcoming hackathons and tech events",
-	},
-	{
-		question: "Who can participate in the events?",
-		answer: "Our events are open to developers of all levels, from beginners to experts, and anyone passionate about technology.",
-	},
-	{
-		question: "Are the events free to join?",
-		answer: "Yes, all of our hackathons are free to join for community members.",
-	},
-];
-
 export const HACKATHON_FAQS: FaqType[] = [
 	{
 		question: "Eligibility criteria to participate in this hackathon?",

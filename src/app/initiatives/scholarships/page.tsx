@@ -1,6 +1,5 @@
 import Faq from "@/components/Faq";
 import Footer from "@/components/Footer";
-import Newsletter from "@/components/Newsletter";
 import Apply from "@/components/scholarships/Apply";
 import Carousel from "@/components/scholarships/Carousel";
 import Dates from "@/components/scholarships/Dates";
@@ -24,7 +23,6 @@ const Scholarships = () => {
 				FAQS={SCHOLARSHIP_FAQS}
 				className="my-0 md:my-0 py-10 bg-white"
 			/>
-			<Newsletter />
 			<Footer />
 		</div>
 	);
