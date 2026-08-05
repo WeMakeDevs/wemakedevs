@@ -1,7 +1,19 @@
 import { SiLinkedin } from "@icons-pack/react-simple-icons";
-import { ArrowUpRight, BookOpen, Globe, Youtube } from "lucide-react";
+import {
+	ArrowUpRight,
+	BookOpen,
+	ChevronDown,
+	Globe,
+	Radio,
+	Sparkles,
+	Trophy,
+	Youtube,
+} from "lucide-react";
+import Image, { type StaticImageData } from "next/image";
 import type { Blog, FeaturedBlog } from "../blogs";
+import { images } from "../images";
 import { projectCountLabel, submittedProjects } from "../projects";
+import { type TrackWinner, trackWinners } from "../winners";
 
 export const isUrl = (v: string) => /^https?:\/\//i.test(v.trim());
 
@@ -107,6 +119,136 @@ export const PreEventWinnerCard = ({ blog }: { blog: FeaturedBlog }) => (
 			</div>
 		</div>
 	</div>
+);
+
+// ── Grand track winners ───────────────────────────────────────────────────────
+const prizeImages: Record<string, StaticImageData> = {
+	"MacBook Air": images.macbook,
+	"iPad Air": images.ipad,
+	"iPhone Air": images.iphone,
+};
+
+export const TrackWinnerCard = ({ winner }: { winner: TrackWinner }) => {
+	const prizeImage = prizeImages[winner.prize];
+	return (
+		<div
+			className="relative flex flex-col h-full rounded-2xl p-6 dossier-card overflow-hidden"
+			style={{ borderColor: `${winner.accent}55` }}
+		>
+			<div
+				className="pointer-events-none absolute -top-20 -right-20 w-56 h-56 rounded-full blur-3xl opacity-20"
+				style={{ background: winner.accent }}
+			/>
+
+			{/* Prize */}
+			<div className="relative flex flex-col items-center text-center pb-5 mb-5 border-b border-[#8b93a7]/15">
+				{prizeImage && (
+					<div className="h-24 flex items-center justify-center mb-3">
+						<Image
+							src={prizeImage}
+							alt={winner.prize}
+							className="max-h-full w-auto object-contain drop-shadow-[0_8px_20px_rgba(0,0,0,0.5)]"
+						/>
+					</div>
+				)}
+				<p className="font-mono text-[10px] uppercase tracking-[0.16em] text-[#62687c] font-bold">
+					{winner.track} · {winner.trackLabel}
+				</p>
+				<p
+					className="text-xl font-black leading-tight mt-0.5"
+					style={{ color: winner.accent }}
+				>
+					{winner.prize}
+				</p>
+			</div>
+
+			{/* Dossier */}
+			<div className="relative flex flex-col flex-1 min-w-0">
+				<span className="inline-flex self-start items-center gap-1.5 text-xs font-semibold text-[#ffd778] bg-[#ffcd56]/10 border border-[#ffcd56]/30 rounded-full px-3 py-1 mb-3">
+					<Sparkles className="w-3.5 h-3.5" /> Grand Winner
+				</span>
+
+				<h3 className="text-xl font-black text-[#f5f7fa] leading-tight break-words">
+					{winner.project}
+				</h3>
+				<p className="text-sm text-[#8b93a7] mt-1 mb-3">
+					by {winner.builder}
+				</p>
+
+				<p className="text-[#c0c1c3] text-sm leading-relaxed">
+					{winner.description}
+				</p>
+
+				<details className="group mt-4 rounded-xl border border-[#8b93a7]/20 bg-[#0b0c0e]/60">
+					<summary className="flex items-center justify-between gap-2 cursor-pointer list-none px-4 py-3 text-sm font-semibold text-[#c0c1c3] hover:text-[#5fe9ff] transition-colors">
+						<span className="inline-flex items-center gap-2">
+							<Radio className="w-4 h-4 shrink-0" /> How they used
+							SigNoz
+						</span>
+						<ChevronDown className="w-4 h-4 shrink-0 transition-transform group-open:rotate-180" />
+					</summary>
+					<p className="px-4 pb-4 text-sm text-[#c0c1c3] leading-relaxed">
+						{winner.signozUsage}
+					</p>
+				</details>
+
+				<div className="flex flex-wrap items-center gap-x-4 gap-y-3 text-sm mt-auto pt-5">
+					{isUrl(winner.youtube) && (
+						<a
+							href={winner.youtube}
+							target="_blank"
+							rel="noopener noreferrer"
+							className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-gradient-to-r from-[#ea6e4a] to-[#e5502a] text-white font-bold border border-[#ffcd56]/50 hover:opacity-90 transition-opacity"
+						>
+							<Youtube className="w-4 h-4" /> Demo
+						</a>
+					)}
+					{isUrl(winner.github) && (
+						<a
+							href={winner.github}
+							target="_blank"
+							rel="noopener noreferrer"
+							className="inline-flex items-center gap-1.5 text-[#8b93a7] hover:text-[#5fe9ff] transition-colors font-medium"
+						>
+							<GithubIcon className="w-4 h-4" /> Code
+						</a>
+					)}
+					{isUrl(winner.deployed) && (
+						<a
+							href={winner.deployed}
+							target="_blank"
+							rel="noopener noreferrer"
+							className="inline-flex items-center gap-1.5 text-[#8b93a7] hover:text-[#2be38b] transition-colors font-medium"
+						>
+							<Globe className="w-4 h-4" /> Live
+						</a>
+					)}
+				</div>
+			</div>
+		</div>
+	);
+};
+
+export const TrackWinnersSection = () => (
+	<>
+		<div className="flex items-center gap-3 mb-2 flex-wrap">
+			<Trophy className="w-6 h-6 text-[#ffcd56]" />
+			<h2 className="text-2xl md:text-3xl font-black uppercase text-[#f5f7fa] glow-orange">
+				Grand Winners
+			</h2>
+		</div>
+		<p className="text-[#c0c1c3] text-sm md:text-base mb-8 max-w-3xl">
+			Three tracks, three champions. Each of them pointed SigNoz at
+			something real, agents, releases, even a hydroponic farm, and made
+			it fully observable. Every member of a winning team takes home the
+			device.
+		</p>
+		<div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+			{trackWinners.map(winner => (
+				<TrackWinnerCard key={winner.project} winner={winner} />
+			))}
+		</div>
+	</>
 );
 
 // ── All submitted projects ────────────────────────────────────────────────────

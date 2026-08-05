@@ -3,8 +3,9 @@ import { ArrowUpRight, BookOpen, Layers, Trophy } from "lucide-react";
 import Link from "next/link";
 import { blogCountLabel, preEventWinner } from "../blogs";
 import { projectCountLabel } from "../projects";
+import { trackWinners } from "../winners";
 import ProjectsShell from "./ProjectsShell";
-import { PreEventWinnerCard } from "./sections";
+import { PreEventWinnerCard, TrackWinnersSection } from "./sections";
 
 const explore = [
 	{
@@ -45,7 +46,15 @@ const ProjectsHubPage = () => {
 				</div>
 
 				{/* ── Stat strip ────────────────────────────────────────────── */}
-				<div className="grid grid-cols-2 gap-4 mb-16 max-w-2xl mx-auto">
+				<div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-16 max-w-3xl mx-auto">
+					<div className="dossier-card rounded-xl px-5 py-5 col-span-2 md:col-span-1">
+						<p className="font-mono text-[10px] uppercase tracking-wider text-[#8b93a7]">
+							Grand Winners
+						</p>
+						<p className="text-3xl font-black text-[#ffcd56] mt-1">
+							{trackWinners.length}
+						</p>
+					</div>
 					<div className="dossier-card rounded-xl px-5 py-5">
 						<p className="font-mono text-[10px] uppercase tracking-wider text-[#8b93a7]">
 							Projects
@@ -63,6 +72,11 @@ const ProjectsHubPage = () => {
 						</p>
 					</div>
 				</div>
+			</ViewContainer>
+
+			{/* ── Grand track winners ───────────────────────────────────────── */}
+			<ViewContainer className="mb-16">
+				<TrackWinnersSection />
 			</ViewContainer>
 
 			{/* ── Explore ───────────────────────────────────────────────────── */}
