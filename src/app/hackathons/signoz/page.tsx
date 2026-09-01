@@ -9,6 +9,7 @@ import HeroSection from "./components/HeroSection";
 import PrizesShowcase from "./components/PrizesShowcase";
 import ProblemSolution from "./components/ProblemSolution";
 import Signals from "./components/Signals";
+import SponsorTestimonial from "./components/SponsorTestimonial";
 import Tracks from "./components/Tracks";
 import { DATA, faqs, navLinks } from "./data";
 import { images } from "./images";
@@ -71,6 +72,9 @@ const HackathonPage = () => {
 					</div>
 				</ViewContainer>
 			</div>
+
+			{/* ── Sponsor testimonial ───────────────────────────────────────────── */}
+			<SponsorTestimonial />
 
 			{/* ── The Mission (overview) ────────────────────────────────────────── */}
 			<div id="overview" className="scroll-mt-44 py-20 agency-grid">

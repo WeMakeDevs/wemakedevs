@@ -1,4 +1,5 @@
 import airpods from "./airpods.webp";
+import ankit from "./ankit.webp";
 import background from "./background.png";
 import beats from "./beats.png";
 import cover from "./cover.png";
@@ -13,6 +14,7 @@ import title from "./title.png";
 
 export const images = {
 	airpods,
+	ankit,
 	beats,
 	cover,
 	background,
